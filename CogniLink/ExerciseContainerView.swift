@@ -10,6 +10,7 @@ struct ExerciseContainerView: View {
     @State private var currentIndex = 0
     @State private var score = 0
     @State private var isComplete = false
+    @State private var currentQuestionAnswered = false
     
     var body: some View {
         VStack {
@@ -129,6 +130,7 @@ struct ExerciseContainerView: View {
                             MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                         }
                     }
+                    .id(currentItem.id) // Forces full view recreation on question change, resetting all @State
                     .padding(.horizontal)
 
                     // LEGACY: Generic option list (kept for quick restore if needed)
@@ -169,26 +171,31 @@ struct ExerciseContainerView: View {
                         .disabled(currentIndex == 0)
                         
                         Spacer()
-                        
-                        Button(action: {
-                            // Skips or moves to the next question manually without scoring
-                            if currentIndex + 1 < sessionItems.count {
-                                withAnimation {
-                                    currentIndex += 1
-                                }
-                            } else {
-                                withAnimation {
-                                    isComplete = true
-                                }
+
+                        if currentQuestionAnswered {
+                            Button(action: {
+                                advanceToNext()
+                            }) {
+                                Text("Next Question →")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 50)
+                                    .background(Color.blue)
+                                    .cornerRadius(12)
                             }
-                        }) {
-                            HStack {
-                                Text(skipButtonText)
-                                Image(systemName: "chevron.right")
+                        } else {
+                            Button(action: {
+                                advanceToNext()
+                            }) {
+                                HStack {
+                                    Text(skipButtonText)
+                                    Image(systemName: "chevron.right")
+                                }
+                                .font(.subheadline)
+                                .foregroundColor(Color.accentColor)
+                                .frame(minWidth: 44, minHeight: 44)
                             }
-                            .font(.subheadline)
-                            .foregroundColor(Color.accentColor)
-                            .frame(minWidth: 44, minHeight: 44)
                         }
                     }
                     .padding(.horizontal)
@@ -204,6 +211,9 @@ struct ExerciseContainerView: View {
                 initializeSession()
             }
         }
+        .onChange(of: currentIndex) { _ in
+            currentQuestionAnswered = false
+        }
     }
     
     // MARK: - Core Logic Helpers
@@ -215,6 +225,7 @@ struct ExerciseContainerView: View {
         currentIndex = 0
         score = 0
         isComplete = false
+        currentQuestionAnswered = false
     }
     
     private func resetSession() {
@@ -224,9 +235,17 @@ struct ExerciseContainerView: View {
     private func handleAnswer(_ correct: Bool) {
         if correct {
             score += 1
+            currentQuestionAnswered = true
         }
-        // Advancement is handled by the dedicated views' own feedback flow
-        // and the Previous/Skip navigation buttons below.
+    }
+
+    private func advanceToNext() {
+        currentQuestionAnswered = false
+        if currentIndex + 1 < sessionItems.count {
+            withAnimation { currentIndex += 1 }
+        } else {
+            withAnimation { isComplete = true }
+        }
     }
 
     private func handleOptionSelected(_ selected: String, item: ExerciseItem) {
