@@ -211,7 +211,7 @@ struct ExerciseContainerView: View {
                 initializeSession()
             }
         }
-        .onChange(of: currentIndex) { _ in
+        .onChange(of: currentIndex) {
             currentQuestionAnswered = false
         }
     }
