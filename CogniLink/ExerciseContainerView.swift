@@ -100,132 +100,139 @@ struct ExerciseContainerView: View {
             } else {
                 // MARK: - Active Exercise Screen
                 let currentItem = sessionItems[currentIndex]
-                
-                VStack(spacing: 20) {
-                    // Progress Header (e.g. Question 1 of 5)
-                    HStack {
-                        Text("\(questionLabel) \(currentIndex + 1) \(ofLabel) \(sessionItems.count)")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .fontWeight(.medium)
-                        
-                        Spacer()
-                    }
-                    .padding(.horizontal)
-                    
-                    // Progress Bar
-                    ProgressBarView(progress: CGFloat(currentIndex + 1) / CGFloat(sessionItems.count))
-                        .frame(height: 8)
-                        .padding(.horizontal)
-                    
-                    // Exercise title and instructions header
-                    VStack(spacing: 4) {
-                        Text(exercise.title)
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                            .textCase(.uppercase)
-                            .tracking(0.5)
-                            .multilineTextAlignment(.center)
-                        Text(exercise.instructions)
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                            .foregroundColor(.primary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                    }
-                    .padding(.vertical, 8)
 
-                    // Exercise Type Dispatch
-                    Group {
-                        switch exercise.type {
-                        case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice:
-                            MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .categoryCrossOut:
-                            CategoryCrossOutView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .yesNo:
-                            YesNoView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .factOrOpinion:
-                            FactOrOpinionView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .openEnded:
-                            OpenEndedView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .sequencing:
-                            SequencingView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        case .matching:
-                            MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
-                        }
-                    }
-                    .id(currentItem.id) // Forces full view recreation on question change, resetting all @State
-                    .padding(.horizontal)
+                VStack(spacing: 0) {
+                    // MARK: Scrollable content area
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            // Progress Header (e.g. Question 1 of 5)
+                            HStack {
+                                Text("\(questionLabel) \(currentIndex + 1) \(ofLabel) \(sessionItems.count)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .fontWeight(.medium)
 
-                    // LEGACY: Generic option list (kept for quick restore if needed)
-                    // VStack(spacing: 12) {
-                    //     ForEach(currentItem.options, id: \.self) { option in
-                    //         Button(action: {
-                    //             handleOptionSelected(option, item: currentItem)
-                    //         }) {
-                    //             Text(option)
-                    //                 .font(.body)
-                    //                 .frame(maxWidth: .infinity)
-                    //                 .frame(minHeight: 50)
-                    //                 .background(Color(.secondarySystemGroupedBackground))
-                    //                 .foregroundColor(.primary)
-                    //                 .cornerRadius(10)
-                    //                 .padding(.horizontal)
-                    //         }
-                    //     }
-                    // }
-                    
-                    // Navigation Buttons (Previous / Next)
-                    HStack {
-                        Button(action: {
-                            if currentIndex > 0 {
-                                withAnimation {
-                                    currentIndex -= 1
+                                Spacer()
+                            }
+
+                            // Progress Bar
+                            ProgressBarView(progress: CGFloat(currentIndex + 1) / CGFloat(sessionItems.count))
+                                .frame(height: 8)
+
+                            // Exercise title and instructions header
+                            VStack(spacing: 4) {
+                                Text(exercise.title)
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                    .textCase(.uppercase)
+                                    .tracking(0.5)
+                                    .multilineTextAlignment(.center)
+                                Text(exercise.instructions)
+                                    .font(.subheadline)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.primary)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding(.vertical, 8)
+
+                            // Exercise Type Dispatch
+                            Group {
+                                switch exercise.type {
+                                case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice:
+                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .categoryCrossOut:
+                                    CategoryCrossOutView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .yesNo:
+                                    YesNoView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .factOrOpinion:
+                                    FactOrOpinionView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .openEnded:
+                                    OpenEndedView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .sequencing:
+                                    SequencingView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                case .matching:
+                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 }
                             }
-                        }) {
-                            HStack {
-                                Image(systemName: "chevron.left")
-                                Text(previousButtonText)
-                            }
-                            .font(.subheadline)
-                            .foregroundColor(currentIndex > 0 ? Color.accentColor : Color.secondary.opacity(0.5))
-                            .frame(minWidth: 44, minHeight: 44)
-                        }
-                        .disabled(currentIndex == 0)
-                        
-                        Spacer()
+                            .id(currentItem.id) // Forces full view recreation on question change, resetting all @State
 
-                        if currentQuestionAnswered {
+                            // LEGACY: Generic option list (kept for quick restore if needed)
+                            // VStack(spacing: 12) {
+                            //     ForEach(currentItem.options, id: \.self) { option in
+                            //         Button(action: {
+                            //             handleOptionSelected(option, item: currentItem)
+                            //         }) {
+                            //             Text(option)
+                            //                 .font(.body)
+                            //                 .frame(maxWidth: .infinity)
+                            //                 .frame(minHeight: 50)
+                            //                 .background(Color(.secondarySystemGroupedBackground))
+                            //                 .foregroundColor(.primary)
+                            //                 .cornerRadius(10)
+                            //                 .padding(.horizontal)
+                            //         }
+                            //     }
+                            // }
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                    }
+
+                    // MARK: Pinned footer — never scrolls
+                    VStack(spacing: 0) {
+                        HStack {
                             Button(action: {
-                                advanceToNext()
-                            }) {
-                                Text("Next Question →")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 50)
-                                    .background(Color.blue)
-                                    .cornerRadius(12)
-                            }
-                        } else {
-                            Button(action: {
-                                advanceToNext()
+                                if currentIndex > 0 {
+                                    withAnimation {
+                                        currentIndex -= 1
+                                    }
+                                }
                             }) {
                                 HStack {
-                                    Text(skipButtonText)
-                                    Image(systemName: "chevron.right")
+                                    Image(systemName: "chevron.left")
+                                    Text(previousButtonText)
                                 }
                                 .font(.subheadline)
-                                .foregroundColor(Color.accentColor)
+                                .foregroundColor(currentIndex > 0 ? Color.accentColor : Color.secondary.opacity(0.5))
                                 .frame(minWidth: 44, minHeight: 44)
                             }
+                            .disabled(currentIndex == 0)
+
+                            Spacer()
+
+                            if currentQuestionAnswered {
+                                Button(action: {
+                                    advanceToNext()
+                                }) {
+                                    Text("Next Question →")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 50)
+                                        .background(Color.blue)
+                                        .cornerRadius(12)
+                                }
+                            } else {
+                                Button(action: {
+                                    advanceToNext()
+                                }) {
+                                    HStack {
+                                        Text(skipButtonText)
+                                        Image(systemName: "chevron.right")
+                                    }
+                                    .font(.subheadline)
+                                    .foregroundColor(Color.accentColor)
+                                    .frame(minWidth: 44, minHeight: 44)
+                                }
+                            }
                         }
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+                        .padding(.bottom, 8)
                     }
-                    .padding(.horizontal)
-                    .padding(.top, 10)
+                    .background(Color(.systemBackground))
+                    .shadow(color: .black.opacity(0.06), radius: 4, x: 0, y: -2)
                 }
-                .padding(.vertical)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
