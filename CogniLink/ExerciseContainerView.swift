@@ -111,6 +111,23 @@ struct ExerciseContainerView: View {
                         .frame(height: 8)
                         .padding(.horizontal)
                     
+                    // Exercise title and instructions header
+                    VStack(spacing: 4) {
+                        Text(exercise.title)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .textCase(.uppercase)
+                            .tracking(0.5)
+                            .multilineTextAlignment(.center)
+                        Text(exercise.instructions)
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.primary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                    }
+                    .padding(.vertical, 8)
+
                     // Exercise Type Dispatch
                     Group {
                         switch exercise.type {

@@ -24,19 +24,6 @@ struct CategoryCrossOutView: View {
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.center)
 
-            // Instructions
-            VStack(spacing: 6) {
-                Text("Category Cross-Out")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-
-                Text("Tap the word that does NOT belong.")
-                    .font(.body) // 17pt minimum size
-                    .fontWeight(.semibold)
-                    .foregroundColor(.primary)
-                    .multilineTextAlignment(.center)
-            }
-
             // Word cards arranged in a randomized 2x2 grid
             LazyVGrid(columns: gridColumns, spacing: 16) {
                 ForEach(shuffledOptions, id: \.self) { word in
