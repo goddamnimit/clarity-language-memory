@@ -11,6 +11,7 @@ struct ExerciseContainerView: View {
     @State private var score = 0
     @State private var isComplete = false
     @State private var currentQuestionAnswered = false
+    @State private var sessionRecorded = false
     
     var body: some View {
         VStack {
@@ -90,6 +91,12 @@ struct ExerciseContainerView: View {
                     .padding(.horizontal)
                 }
                 .padding()
+                .onAppear {
+                    if !sessionRecorded {
+                        recordSessionCompletion()
+                        sessionRecorded = true
+                    }
+                }
             } else {
                 // MARK: - Active Exercise Screen
                 let currentItem = sessionItems[currentIndex]
@@ -243,12 +250,21 @@ struct ExerciseContainerView: View {
         score = 0
         isComplete = false
         currentQuestionAnswered = false
+        sessionRecorded = false
     }
     
     private func resetSession() {
         initializeSession()
     }
     
+    private func recordSessionCompletion() {
+        UserProfileStore.shared.recordCompletion(on: Date())
+        ProgressTracker.markAsCompleted(exerciseTitle: exercise.title)
+        var plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays") as? [String: Int] ?? [:]
+        plays[exercise.title] = (plays[exercise.title] ?? 0) + 1
+        UserDefaults.standard.set(plays, forKey: "CogniLink_ExercisePlays")
+    }
+
     private func handleAnswer(_ correct: Bool) {
         if correct {
             score += 1
