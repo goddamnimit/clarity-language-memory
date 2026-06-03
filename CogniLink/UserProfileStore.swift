@@ -125,7 +125,7 @@ class UserProfileStore: ObservableObject {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "CogniLink_ExercisePlays")
         defaults.removeObject(forKey: "CogniLink_AttemptedTasksCount")
-        defaults.removeObject(forKey: "completedExercises")
+        ProgressTracker.resetAllProgress()
         defaults.removeObject(forKey: "clarity_session_log")
 
         let allKeys = defaults.dictionaryRepresentation().keys
