@@ -7,6 +7,7 @@ struct FactOrOpinionView: View {
 
     @State private var selectedAnswer: String? = nil
     @State private var hasAnswered = false
+    @State private var answeredCorrectly = false
     @State private var factOnLeft = true // Controls which side the "Fact" button is displayed on
 
     var body: some View {
@@ -43,8 +44,8 @@ struct FactOrOpinionView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Try Again reset trigger
-            if hasAnswered {
+            // Try Again reset trigger — only after a wrong answer
+            if hasAnswered && !answeredCorrectly {
                 Button(action: {
                     resetQuestion()
                 }) {
@@ -115,12 +116,14 @@ struct FactOrOpinionView: View {
         selectedAnswer = answer
         hasAnswered = true
         let isCorrect = answer == item.correctAnswer
+        answeredCorrectly = isCorrect
         onAnswered(isCorrect)
     }
 
     private func resetQuestion() {
         selectedAnswer = nil
         hasAnswered = false
+        answeredCorrectly = false
     }
 
     private func buttonBackgroundColor(for title: String, themeColor: Color) -> Color {

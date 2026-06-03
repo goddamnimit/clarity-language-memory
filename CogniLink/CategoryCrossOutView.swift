@@ -7,6 +7,7 @@ struct CategoryCrossOutView: View {
 
     @State private var selectedWord: String? = nil
     @State private var hasAnswered = false
+    @State private var answeredCorrectly = false
     @State private var shuffledOptions: [String] = [] // Stores the randomized grid choices
 
     // Balanced columns for a high-contrast 2x2 layout
@@ -72,8 +73,8 @@ struct CategoryCrossOutView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Try Again reset button
-            if hasAnswered {
+            // Try Again reset button — only after a wrong answer
+            if hasAnswered && !answeredCorrectly {
                 Button(action: {
                     resetQuestion()
                 }) {
@@ -112,12 +113,14 @@ struct CategoryCrossOutView: View {
         selectedWord = word
         hasAnswered = true
         let isCorrect = isCorrectOption(word)
+        answeredCorrectly = isCorrect
         onAnswered(isCorrect)
     }
 
     private func resetQuestion() {
         selectedWord = nil
         hasAnswered = false
+        answeredCorrectly = false
     }
 
     // Value-based correct answer verification (independent of array indices)
