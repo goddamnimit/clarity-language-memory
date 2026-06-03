@@ -15,7 +15,7 @@ struct ChineseFunctionalSkillsExerciseData {
     private static let safetyScenarios = Exercise(
         id: UUID(),
         title: "安全情景",
-        instructions: "请阅读每个情景，说明您应该怎么做。点击"显示答案"查看最佳回应。",
+        instructions: "请阅读每个情景，说明您应该怎么做。点击\u{201C}显示答案\u{201D}查看最佳回应。",
         section: .functionalSkills,
         type: .openEnded,
         difficulty: .medium,
@@ -109,7 +109,7 @@ struct ChineseFunctionalSkillsExerciseData {
     private static let functionalWriting = Exercise(
         id: UUID(),
         title: "实用写作",
-        instructions: "请根据每个提示写出您的回应。点击"显示答案"查看示例答案。",
+        instructions: "请根据每个提示写出您的回应。点击\u{201C}显示答案\u{201D}查看示例答案。",
         section: .functionalSkills,
         type: .openEnded,
         difficulty: .medium,
