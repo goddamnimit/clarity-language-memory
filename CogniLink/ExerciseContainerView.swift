@@ -281,10 +281,27 @@ struct ExerciseContainerView: View {
     
     // MARK: - Core Logic Helpers
     
+    private var recentSessionKey: String {
+        "clarity_recent_\(exercise.title)"
+    }
+
+    private func loadRecentIDs() -> Set<UUID> {
+        guard let strings = UserDefaults.standard.stringArray(forKey: recentSessionKey)
+        else { return [] }
+        return Set(strings.compactMap { UUID(uuidString: $0) })
+    }
+
+    private func saveRecentIDs(_ items: [ExerciseItem]) {
+        UserDefaults.standard.set(items.map { $0.id.uuidString }, forKey: recentSessionKey)
+    }
+
     private func initializeSession() {
-        sessionItems = exercise.randomSession().map { item in
+        let recentIDs = loadRecentIDs()
+        let selected = exercise.randomSession(excluding: recentIDs)
+        sessionItems = selected.map { item in
             ExerciseItem(id: item.id, prompt: item.prompt, options: item.options.shuffled(), correctAnswer: item.correctAnswer, explanation: item.explanation)
         }
+        saveRecentIDs(sessionItems)
         currentIndex = 0
         score = 0
         isComplete = false
