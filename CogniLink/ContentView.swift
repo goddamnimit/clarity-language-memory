@@ -67,7 +67,10 @@ struct ContentView: View {
 // MARK: - Localized Home View Screen
 struct HomeView: View {
     @ObservedObject var languageManager = LanguageManager.shared
+    @ObservedObject private var profileStore = UserProfileStore.shared
     @State private var sessionsCount: Int = 0
+    @State private var surpriseExercise: Exercise? = nil
+    @State private var sectionExercise: Exercise? = nil
     
     var body: some View {
         NavigationStack {
@@ -75,7 +78,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     
                     // Welcome Title
-                    Text(welcomeText)
+                    Text(personalizedGreeting)
                         .font(.system(.title, design: .rounded))
                         .fontWeight(.bold)
                         .padding(.horizontal)
@@ -90,27 +93,63 @@ struct HomeView: View {
                     StreakWidgetView()
                         .padding(.horizontal)
 
+                    // MARK: - Surprise Me Button
+                    Button(action: {
+                        let allExercises = languageManager.exercisesForSection(.language) +
+                                          languageManager.exercisesForSection(.cognition) +
+                                          languageManager.exercisesForSection(.functionalSkills)
+                        surpriseExercise = allExercises.randomElement()
+                    }) {
+                        HStack {
+                            Image(systemName: "shuffle")
+                            Text(surpriseMeText)
+                        }
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 56)
+                        .background(
+                            LinearGradient(
+                                colors: [.orange, .pink],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .cornerRadius(16)
+                        .shadow(color: .orange.opacity(0.4), radius: 8, x: 0, y: 4)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.horizontal)
+
                     // MARK: - Section Navigation Cards
                     VStack(spacing: 16) {
-                        NavigationLink(destination: ExerciseListView(section: .language)) {
+                        Button {
+                            sectionExercise = randomExercise(for: .language)
+                        } label: {
                             sectionCard(
                                 title: languageSectionTitle,
                                 subtitle: cardSubtitle,
-                                systemImage: "bubble.left.and.bubble.right",
+                                systemImage: "text.bubble",
                                 color: .blue
                             )
                         }
-                        
-                        NavigationLink(destination: ExerciseListView(section: .cognition)) {
+                        .buttonStyle(.plain)
+
+                        Button {
+                            sectionExercise = randomExercise(for: .cognition)
+                        } label: {
                             sectionCard(
                                 title: cognitionSectionTitle,
                                 subtitle: cardSubtitle,
-                                systemImage: "brain",
+                                systemImage: "brain.head.profile",
                                 color: .purple
                             )
                         }
-                        
-                        NavigationLink(destination: ExerciseListView(section: .functionalSkills)) {
+                        .buttonStyle(.plain)
+
+                        Button {
+                            sectionExercise = randomExercise(for: .functionalSkills)
+                        } label: {
                             sectionCard(
                                 title: functionalSkillsSectionTitle,
                                 subtitle: cardSubtitle,
@@ -118,6 +157,7 @@ struct HomeView: View {
                                 color: .green
                             )
                         }
+                        .buttonStyle(.plain)
                     }
                     .padding(.horizontal)
                 }
@@ -125,6 +165,12 @@ struct HomeView: View {
             }
             .onAppear {
                 loadSessionsCount()
+            }
+            .navigationDestination(item: $surpriseExercise) { exercise in
+                ExerciseContainerView(exercise: exercise)
+            }
+            .navigationDestination(item: $sectionExercise) { exercise in
+                ExerciseContainerView(exercise: exercise)
             }
             .navigationTitle("Clarity")
             .background(Color(.systemGroupedBackground))
@@ -141,22 +187,126 @@ struct HomeView: View {
     }
     
     // MARK: - Localized Home Helpers
-    
-    private var welcomeText: String {
+
+    private var personalizedGreeting: String {
+        let name = profileStore.profile.name
+        let hasName = !name.trimmingCharacters(in: .whitespaces).isEmpty
+        let dayOfYear = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
+
         switch languageManager.currentLanguage {
-        case .english: return "Welcome to Clarity"
-        case .spanish: return "Bienvenido a Clarity"
-        case .hindi: return "Clarity में आपका स्वागत है"
-        case .gujarati: return "Clarity માં આપનું સ્વાગત છે"
+        case .english:
+            if hasName {
+                let greetings = [
+                    "Good to see you, \(name)!",
+                    "Ready to practice, \(name)?",
+                    "Welcome back, \(name)!",
+                    "Let's get started, \(name)!",
+                    "Great to have you here, \(name)!",
+                    "Time to shine, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Welcome to Clarity!",
+                    "Ready to practice?",
+                    "Let's get started!",
+                    "Good to see you!",
+                    "Time to shine!",
+                    "Let's practice today!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+
+        case .spanish:
+            if hasName {
+                let greetings = [
+                    "¡Qué bueno verte, \(name)!",
+                    "¿Listo para practicar, \(name)?",
+                    "¡Bienvenido de nuevo, \(name)!",
+                    "¡Empecemos, \(name)!",
+                    "¡Qué alegría tenerte aquí, \(name)!",
+                    "¡Hora de brillar, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "¡Bienvenido a Clarity!",
+                    "¿Listo para practicar?",
+                    "¡Bienvenido de nuevo!",
+                    "¡Empecemos!",
+                    "¡Qué alegría tenerte aquí!",
+                    "¡Hora de brillar!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+
+        case .hindi:
+            if hasName {
+                let greetings = [
+                    "\(name), आपसे मिलकर अच्छा लगा!",
+                    "\(name), क्या अभ्यास के लिए तैयार हैं?",
+                    "वापस आने पर स्वागत है, \(name)!",
+                    "चलिए शुरू करते हैं, \(name)!",
+                    "\(name), आपका यहाँ होना अच्छा लगता है!",
+                    "आज चमकने का समय है, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Clarity में आपका स्वागत है!",
+                    "क्या अभ्यास के लिए तैयार हैं?",
+                    "वापस आने पर स्वागत है!",
+                    "चलिए शुरू करते हैं!",
+                    "आपका यहाँ होना अच्छा लगता है!",
+                    "आज चमकने का समय है!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+
+        case .gujarati:
+            if hasName {
+                let greetings = [
+                    "\(name), તમને મળીને આનંદ થયો!",
+                    "\(name), શું અભ્યાસ માટે તૈયાર છો?",
+                    "પાછા આવ્યા, \(name)! સ્વાગત છે!",
+                    "ચાલો શરૂ કરીએ, \(name)!",
+                    "\(name), તમે અહીં છો તે સારું છે!",
+                    "આજે ચમકવાનો સમય છે, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Clarity માં આપનું સ્વાગત છે!",
+                    "શું અભ્યાસ માટે તૈયાર છો?",
+                    "પાછા આવ્યા! સ્વાગત છે!",
+                    "ચાલો શરૂ કરીએ!",
+                    "આજે ચમકવાનો સમય છે!",
+                    "Clarity માં આપનું સ્વાગત છે!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
+    }
+
+    private var surpriseMeText: String {
+        switch languageManager.currentLanguage {
+        case .english: return "Surprise Me! 🎲"
+        case .spanish: return "¡Sorpréndeme! 🎲"
+        case .hindi: return "कुछ भी चलेगा! 🎲"
+        case .gujarati: return "આશ્ચર્ય કરો! 🎲"
+        }
+    }
+
+    private func randomExercise(for section: AppSection) -> Exercise? {
+        languageManager.exercisesForSection(section).randomElement()
     }
 
     private var cardSubtitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Tap to start"
-        case .spanish: return "Toca para comenzar"
-        case .hindi: return "शुरू करने के लिए टैप करें"
-        case .gujarati: return "શરૂ કરવા ટૅપ કરો"
+        case .english: return "Tap for a random activity"
+        case .spanish: return "Toca para una actividad aleatoria"
+        case .hindi: return "यादृच्छिक गतिविधि के लिए टैप करें"
+        case .gujarati: return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
         }
     }
 
