@@ -12,6 +12,8 @@ struct ExerciseContainerView: View {
     @State private var isComplete = false
     @State private var currentQuestionAnswered = false
     @State private var sessionRecorded = false
+    @State private var showConfetti = false
+    @State private var confettiParticles: [ConfettiParticle] = []
     
     var body: some View {
         VStack {
@@ -29,72 +31,102 @@ struct ExerciseContainerView: View {
                 }
             } else if isComplete {
                 // MARK: - Session Complete Screen
-                VStack(spacing: 28) {
-                    Spacer()
-                    
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 80))
-                        .foregroundColor(.green)
-                    
-                    Text(sessionCompleteText)
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.bold)
-                    
-                    // Score Box using sessionItems.count (always matches sessionSize)
-                    VStack(spacing: 8) {
-                        Text("\(scoreText): \(score) / \(sessionItems.count)")
-                            .font(.title3)
-                            .fontWeight(.medium)
-                            .foregroundColor(.primary)
-                    }
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 16)
-                    .background(Color(.secondarySystemGroupedBackground))
-                    .cornerRadius(12)
-                    .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1.5)
-                    
-                    Spacer()
-                    
-                    // Control Actions
-                    VStack(spacing: 12) {
-                        Button(action: {
-                            // Generates a fresh randomized set of 5 questions
-                            withAnimation {
-                                resetSession()
+                GeometryReader { geo in
+                    ZStack {
+                        VStack(spacing: 28) {
+                            Spacer()
+
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 80))
+                                .foregroundColor(.green)
+
+                            Text(sessionCompleteText)
+                                .font(.system(.title, design: .rounded))
+                                .fontWeight(.bold)
+
+                            if score == sessionItems.count {
+                                Text(perfectScoreText)
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.orange)
                             }
-                        }) {
-                            Text(newSessionButtonText)
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(Color.accentColor)
-                                .cornerRadius(12)
+
+                            // Score Box using sessionItems.count (always matches sessionSize)
+                            VStack(spacing: 8) {
+                                Text("\(scoreText): \(score) / \(sessionItems.count)")
+                                    .font(.title3)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.primary)
+                            }
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 16)
+                            .background(Color(.secondarySystemGroupedBackground))
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1.5)
+
+                            Spacer()
+
+                            // Control Actions
+                            VStack(spacing: 12) {
+                                Button(action: {
+                                    // Generates a fresh randomized set of 5 questions
+                                    withAnimation {
+                                        resetSession()
+                                    }
+                                }) {
+                                    Text(newSessionButtonText)
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 50)
+                                        .background(Color.accentColor)
+                                        .cornerRadius(12)
+                                }
+
+                                Button(action: {
+                                    dismiss()
+                                }) {
+                                    Text(backToExercisesButtonText)
+                                        .font(.headline)
+                                        .foregroundColor(.primary)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 50)
+                                        .background(Color(.secondarySystemGroupedBackground))
+                                        .cornerRadius(12)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
+                                        )
+                                }
+                            }
+                            .padding(.horizontal)
                         }
-                        
-                        Button(action: {
-                            dismiss()
-                        }) {
-                            Text(backToExercisesButtonText)
-                                .font(.headline)
-                                .foregroundColor(.primary)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(Color(.secondarySystemGroupedBackground))
-                                .cornerRadius(12)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
-                                )
+                        .padding()
+                        .onAppear {
+                            if !sessionRecorded {
+                                recordSessionCompletion()
+                                sessionRecorded = true
+                            }
+                            if score == sessionItems.count {
+                                triggerConfetti(screenSize: geo.size)
+                            }
                         }
-                    }
-                    .padding(.horizontal)
-                }
-                .padding()
-                .onAppear {
-                    if !sessionRecorded {
-                        recordSessionCompletion()
-                        sessionRecorded = true
+
+                        // MARK: Confetti overlay — perfect score only
+                        if showConfetti {
+                            ZStack {
+                                ForEach(confettiParticles) { particle in
+                                    RoundedRectangle(cornerRadius: 2)
+                                        .fill(particle.color)
+                                        .frame(width: 8, height: 6)
+                                        .scaleEffect(particle.scale)
+                                        .rotationEffect(.degrees(particle.rotation))
+                                        .position(x: particle.x, y: particle.y)
+                                }
+                            }
+                            .ignoresSafeArea()
+                            .allowsHitTesting(false)
+                        }
                     }
                 }
             } else {
@@ -258,6 +290,8 @@ struct ExerciseContainerView: View {
         isComplete = false
         currentQuestionAnswered = false
         sessionRecorded = false
+        showConfetti = false
+        confettiParticles = []
     }
     
     private func resetSession() {
@@ -270,6 +304,35 @@ struct ExerciseContainerView: View {
         var plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays") as? [String: Int] ?? [:]
         plays[exercise.title] = (plays[exercise.title] ?? 0) + 1
         UserDefaults.standard.set(plays, forKey: "CogniLink_ExercisePlays")
+    }
+
+    private func triggerConfetti(screenSize: CGSize) {
+        let colors: [Color] = [.blue, .green, .orange, .pink, .purple, .yellow, Color(red: 0.9, green: 0.3, blue: 0.3)]
+        confettiParticles = (0..<80).map { _ in
+            ConfettiParticle(
+                x: CGFloat.random(in: 0...screenSize.width),
+                y: -20,
+                color: colors.randomElement()!,
+                rotation: Double.random(in: 0...360),
+                scale: CGFloat.random(in: 0.5...1.5),
+                velocity: CGFloat.random(in: 400...(screenSize.height + 120))
+            )
+        }
+        showConfetti = true
+        // Let initial positions render for one frame before animating
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            withAnimation(.easeIn(duration: 3.0)) {
+                for i in confettiParticles.indices {
+                    confettiParticles[i].y = confettiParticles[i].velocity
+                    confettiParticles[i].x += CGFloat.random(in: -60...60)
+                    confettiParticles[i].rotation += Double.random(in: 180...720)
+                }
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            showConfetti = false
+            confettiParticles = []
+        }
     }
 
     private func handleAnswer(_ correct: Bool) {
@@ -307,6 +370,15 @@ struct ExerciseContainerView: View {
     
     // MARK: - Localized Properties
     
+    private var perfectScoreText: String {
+        switch languageManager.currentLanguage {
+        case .english: return "Perfect Score! 🎉"
+        case .spanish: return "¡Puntuación Perfecta! 🎉"
+        case .hindi: return "शानदार! पूरे अंक! 🎉"
+        // .gujarati → "અદ્ભુત! પૂરા ગુણ! 🎉"  (add when Gujarati is wired into AppLanguage)
+        }
+    }
+
     private var sessionCompleteText: String {
         switch languageManager.currentLanguage {
         case .english: return "Session Complete!"
@@ -370,6 +442,17 @@ struct ExerciseContainerView: View {
         case .hindi: return "छोड़ें"
         }
     }
+}
+
+// MARK: - Confetti Particle Model
+struct ConfettiParticle: Identifiable {
+    let id = UUID()
+    var x: CGFloat
+    var y: CGFloat
+    var color: Color
+    var rotation: Double
+    var scale: CGFloat
+    var velocity: CGFloat
 }
 
 // MARK: - Inline ProgressBarView Helper
