@@ -7,6 +7,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case spanish = "Español"
     case hindi = "हिन्दी"
     case gujarati = "ગુજરાતી"
+    case chinese = "中文"
 
     var id: String { self.rawValue }
 
@@ -16,6 +17,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .spanish: return "Español"
         case .hindi: return "हिन्दी"
         case .gujarati: return "ગુજરાતી"
+        case .chinese: return "中文"
         }
     }
 
@@ -25,6 +27,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .spanish: return "🇪🇸"
         case .hindi: return "🇮🇳"
         case .gujarati: return "🇮🇳"
+        case .chinese: return "🇨🇳"
         }
     }
 
@@ -34,6 +37,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .spanish: return "es_ES"
         case .hindi: return "hi_IN"
         case .gujarati: return "gu_IN"
+        case .chinese: return "zh_CN"
         }
     }
 }
@@ -68,7 +72,11 @@ class LanguageManager: ObservableObject {
 
             .gujarati: GujaratiLanguageExerciseData.allExercises +
                        GujaratiCognitionExerciseData.allExercises +
-                       GujaratiFunctionalSkillsExerciseData.allExercises
+                       GujaratiFunctionalSkillsExerciseData.allExercises,
+
+            .chinese: ChineseLanguageExerciseData.allExercises +
+                      ChineseCognitionExerciseData.allExercises +
+                      ChineseFunctionalSkillsExerciseData.allExercises
         ]
     }
     
@@ -97,6 +105,12 @@ class LanguageManager: ObservableObject {
             case .language: return GujaratiLanguageExerciseData.allExercises
             case .cognition: return GujaratiCognitionExerciseData.allExercises
             case .functionalSkills: return GujaratiFunctionalSkillsExerciseData.allExercises
+            }
+        case .chinese:
+            switch section {
+            case .language: return ChineseLanguageExerciseData.allExercises
+            case .cognition: return ChineseCognitionExerciseData.allExercises
+            case .functionalSkills: return ChineseFunctionalSkillsExerciseData.allExercises
             }
         }
     }

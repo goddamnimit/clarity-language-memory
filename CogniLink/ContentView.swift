@@ -42,6 +42,7 @@ struct ContentView: View {
         case .spanish: return "Inicio"
         case .hindi: return "मुख्य"
         case .gujarati: return "ઘર"
+        case .chinese: return "主页"
         }
     }
 
@@ -51,6 +52,7 @@ struct ContentView: View {
         case .spanish: return "Actividades"
         case .hindi: return "गतिविधियाँ"
         case .gujarati: return "પ્રવૃત્તિઓ"
+        case .chinese: return "活动"
         }
     }
 
@@ -60,6 +62,7 @@ struct ContentView: View {
         case .spanish: return "Perfil"
         case .hindi: return "प्रोफ़ाइल"
         case .gujarati: return "પ્રોફાઇલ"
+        case .chinese: return "我的"
         }
     }
 }
@@ -285,6 +288,29 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+
+        case .chinese:
+            if hasName {
+                let greetings = [
+                    "很高兴见到您，\(name)！",
+                    "\(name)，准备好练习了吗？",
+                    "欢迎回来，\(name)！",
+                    "我们开始吧，\(name)！",
+                    "\(name)，很高兴有您在这里！",
+                    "是时候大放异彩了，\(name)！"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "欢迎使用 Clarity！",
+                    "准备好练习了吗？",
+                    "欢迎回来！",
+                    "我们开始吧！",
+                    "很高兴见到您！",
+                    "是时候练习了！"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -294,6 +320,7 @@ struct HomeView: View {
         case .spanish: return "¡Sorpréndeme! 🎲"
         case .hindi: return "कुछ भी चलेगा! 🎲"
         case .gujarati: return "આશ્ચર્ય કરો! 🎲"
+        case .chinese: return "随机练习！🎲"
         }
     }
 
@@ -307,6 +334,7 @@ struct HomeView: View {
         case .spanish: return "Toca para una actividad aleatoria"
         case .hindi: return "यादृच्छिक गतिविधि के लिए टैप करें"
         case .gujarati: return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
+        case .chinese: return "点击随机练习"
         }
     }
 
@@ -316,6 +344,7 @@ struct HomeView: View {
         case .spanish: return "Lenguaje"
         case .hindi: return "भाषा"
         case .gujarati: return "ભાષા"
+        case .chinese: return "语言"
         }
     }
 
@@ -325,6 +354,7 @@ struct HomeView: View {
         case .spanish: return "Cognición"
         case .hindi: return "अनुभूति"
         case .gujarati: return "સ્મૃતિ અને તર્ક"
+        case .chinese: return "认知与记忆"
         }
     }
 
@@ -334,6 +364,7 @@ struct HomeView: View {
         case .spanish: return "Habilidades Funcionales"
         case .hindi: return "कार्यात्मक कौशल"
         case .gujarati: return "દૈનિક કૌશલ્ય"
+        case .chinese: return "日常技能"
         }
     }
 
@@ -347,6 +378,8 @@ struct HomeView: View {
             return "\(sessionsCount) \(sessionsCount == 1 ? "सत्र खेला गया" : "सत्र खेले गए")"
         case .gujarati:
             return "\(sessionsCount) સત્ર રમાયા"
+        case .chinese:
+            return "\(sessionsCount) 次练习"
         }
     }
     

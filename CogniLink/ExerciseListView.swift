@@ -94,6 +94,12 @@ struct ExerciseListView: View {
             case .cognition: return "સ્મૃતિ અને તર્ક"
             case .functionalSkills: return "દૈનિક કૌશલ્ય"
             }
+        case .chinese:
+            switch section {
+            case .language: return "语言"
+            case .cognition: return "认知与记忆"
+            case .functionalSkills: return "日常技能"
+            }
         }
     }
 
@@ -122,6 +128,12 @@ struct ExerciseListView: View {
             case .language: return "શબ્દ રમત, સમાનાર્થી, રૂઢિઓ અને વધુ"
             case .cognition: return "સ્મૃતિ, સામાન્ય જ્ઞાન, તર્ક અને વિચાર"
             case .functionalSkills: return "દૈનિક જીવન, સુરક્ષા અને આયોજન"
+            }
+        case .chinese:
+            switch section {
+            case .language: return "词汇、成语、类比等"
+            case .cognition: return "记忆、常识、推理"
+            case .functionalSkills: return "日常生活、安全、计划"
             }
         }
     }
@@ -152,6 +164,12 @@ struct ExerciseListView: View {
             case .easy: return "સરળ"
             case .medium: return "મધ્યમ"
             case .hard: return "કઠિન"
+            }
+        case .chinese:
+            switch difficulty {
+            case .easy: return "简单"
+            case .medium: return "中等"
+            case .hard: return "困难"
             }
         }
     }

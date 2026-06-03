@@ -407,6 +407,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "¡Puntuación Perfecta! 🎉"
         case .hindi: return "शानदार! पूरे अंक! 🎉"
         case .gujarati: return "અદ્ભુત! પૂરા ગુણ! 🎉"
+        case .chinese: return "太棒了！满分！🎉"
         }
     }
 
@@ -416,6 +417,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "¡Sesión Completada!"
         case .hindi: return "सत्र पूर्ण!"
         case .gujarati: return "સત્ર પૂર્ણ!"
+        case .chinese: return "练习完成！"
         }
     }
 
@@ -425,6 +427,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Puntuación"
         case .hindi: return "स्कोर"
         case .gujarati: return "સ્કોર"
+        case .chinese: return "得分"
         }
     }
 
@@ -434,6 +437,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Nueva Sesión"
         case .hindi: return "नया सत्र"
         case .gujarati: return "નવું સત્ર"
+        case .chinese: return "新练习"
         }
     }
 
@@ -443,6 +447,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Volver a Ejercicios"
         case .hindi: return "अभ्यासों पर वापस जाएं"
         case .gujarati: return "કસરત પર પાછા જાઓ"
+        case .chinese: return "返回练习"
         }
     }
 
@@ -452,6 +457,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Pregunta"
         case .hindi: return "प्रश्न"
         case .gujarati: return "પ્રશ્ન"
+        case .chinese: return "第"
         }
     }
 
@@ -461,6 +467,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "de"
         case .hindi: return "का"
         case .gujarati: return "નો"
+        case .chinese: return "题，共"
         }
     }
 
@@ -470,6 +477,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Anterior"
         case .hindi: return "पीछे"
         case .gujarati: return "પાછળ"
+        case .chinese: return "上一题"
         }
     }
 
@@ -479,6 +487,7 @@ struct ExerciseContainerView: View {
         case .spanish: return "Omitir"
         case .hindi: return "छोड़ें"
         case .gujarati: return "છોડો"
+        case .chinese: return "跳过"
         }
     }
 }
