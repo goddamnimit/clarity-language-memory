@@ -12,7 +12,12 @@ struct GujaratiCognitionExerciseData {
         yesNoQuestions,
         historyKnowledge,
         geographyKnowledge,
-        entertainmentKnowledge
+        entertainmentKnowledge,
+        estimationLogic,
+        deductiveReasoning,
+        idioms,
+        personalMemory,
+        roteMemory
     ]
 
     // MARK: - Exercise 1: WH Questions — What (20 items)
@@ -307,6 +312,149 @@ struct GujaratiCognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "હૅરી પૉટર ક્યા જાદુઈ શાળામાં ભણ્યા હતા?", options: ["ડ્યૂર્મ્સ્ટ્રૅંગ", "બ્યૂક્સ્બૅટૉન", "હૉગ્વૉર્ટ્સ", "ઇલવૅરમૉર્ની"], correctAnswer: "હૉગ્વૉર્ટ્સ"),
             ExerciseItem(id: UUID(), prompt: "'ફ્રેન્ડ્સ' ટીવી શ્રેણી ક્યા શહેરમાં આધારિત છે?", options: ["લૉસ એન્જલસ", "શિકાગો", "ન્યૂયૉર્ક", "બૉસ્ટન"], correctAnswer: "ન્યૂયૉર્ક"),
             ExerciseItem(id: UUID(), prompt: "સચિન તૅંડુલકર ક્રિકેટમાં કઈ બૅટિંગ પૉઝિશન માટે જાણીતા હતા?", options: ["ઓપનર", "મિડલ ઓર્ડર", "ટેઇલ-એન્ડર", "વિકેટ-કીપર"], correctAnswer: "ઓપનર")
+        ]
+    )
+
+    // MARK: - Exercise 11: Estimation and Logic (20 items)
+    private static let estimationLogic = Exercise(
+        id: UUID(),
+        title: "અનુમાન અને તર્ક",
+        instructions: "સૌથી સાચો અને ઉચિત જવાબ પસંદ કરો.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "નરમ બાફેલા ઈંડામાં કેટલો સમય લાગે છે?", options: ["1 મિનિટ", "6 મિનિટ", "20 મિનિટ", "1 કલાક"], correctAnswer: "6 મિનિટ"),
+            ExerciseItem(id: UUID(), prompt: "એક ડબ્બામાં કેટલા ઈંડા હોય છે?", options: ["6", "12", "18", "24"], correctAnswer: "12"),
+            ExerciseItem(id: UUID(), prompt: "સામાન્ય કારમાં કેટલા પૈડા હોય છે?", options: ["2", "3", "4", "6"], correctAnswer: "4"),
+            ExerciseItem(id: UUID(), prompt: "ભરેલા બાથટબમાં લગભગ કેટલા લિટર પાણી હોય છે?", options: ["5 લિટર", "30 લિટર", "120 લિટર", "500 લિટર"], correctAnswer: "120 લિટર"),
+            ExerciseItem(id: UUID(), prompt: "હાથીને કેટલા પગ હોય છે?", options: ["2", "3", "4", "6"], correctAnswer: "4"),
+            ExerciseItem(id: UUID(), prompt: "એક સદીમાં કેટલા વર્ષ હોય છે?", options: ["10", "50", "100", "1000"], correctAnswer: "100"),
+            ExerciseItem(id: UUID(), prompt: "શું હાથી ઉંદર કરતાં મોટો છે?", options: ["હા", "ના", "બંને સરખા", "ખ્યાલ નથી"], correctAnswer: "હા"),
+            ExerciseItem(id: UUID(), prompt: "એક સૅન્ડવિચમાં કેટલા બ્રેડના ટુકડા હોય છે?", options: ["1", "2", "3", "4"], correctAnswer: "2"),
+            ExerciseItem(id: UUID(), prompt: "એક વ્યક્તિ સામાન્ય રીતે કેટલી ઝડપે ચાલે છે?", options: ["લગભગ 1 km/h", "લગભગ 5 km/h", "લગભગ 20 km/h", "લગભગ 50 km/h"], correctAnswer: "લગભગ 5 km/h"),
+            ExerciseItem(id: UUID(), prompt: "સામાન્ય વર્ષમાં કેટલા દિવસ હોય છે?", options: ["300", "356", "365", "400"], correctAnswer: "365"),
+            ExerciseItem(id: UUID(), prompt: "વર્ષના કેટલા મહિનામાં 31 દિવસ હોય છે?", options: ["5", "6", "7", "8"], correctAnswer: "7"),
+            ExerciseItem(id: UUID(), prompt: "દસ લાખમાં કેટલા શૂન્ય હોય છે?", options: ["4", "5", "6", "7"], correctAnswer: "6"),
+            ExerciseItem(id: UUID(), prompt: "એક કિલો રૂ અને એક કિલો લોઢામાં કોણ ભારે છે?", options: ["લોઢું", "રૂ", "બંને સરખા", "આધાર રાખે"], correctAnswer: "બંને સરખા"),
+            ExerciseItem(id: UUID(), prompt: "જો આપ દિવસમાં 3 વાર જમો તો એક અઠવાડિયામાં કેટલી વાર જમો?", options: ["3", "7", "14", "21"], correctAnswer: "21"),
+            ExerciseItem(id: UUID(), prompt: "એક સદીમાં કેટલા દાયકા હોય છે?", options: ["5", "8", "10", "100"], correctAnswer: "10"),
+            ExerciseItem(id: UUID(), prompt: "પાંચ કિલોના લોટના થેલાનું વજન કેટલું?", options: ["1 kg", "2 kg", "5 kg", "10 kg"], correctAnswer: "5 kg"),
+            ExerciseItem(id: UUID(), prompt: "મોટા ભાગના સ્વસ્થ વ્યક્તિઓ એ રાત્રે કેટલા કલાક ઊઘવું જોઈએ?", options: ["3 થી 4", "6 થી 8", "10 થી 12", "14 થી 16"], correctAnswer: "6 થી 8"),
+            ExerciseItem(id: UUID(), prompt: "શું કોઈ ઇન્સાન બિના સાધને આખી કાર ઉઠાવી શકે?", options: ["હા સહેલાઈથી", "હા તાલીમ સાથે", "ના કાર ઘણી ભારે છે", "હા એક હાથથી"], correctAnswer: "ના કાર ઘણી ભારે છે"),
+            ExerciseItem(id: UUID(), prompt: "એક સ્પાઇડરને કેટલા પગ હોય છે?", options: ["4", "6", "8", "10"], correctAnswer: "8"),
+            ExerciseItem(id: UUID(), prompt: "જો આપ સવારે 8 વાગ્યે દવા લો અને દર 8 કલાકે લેવાની હોય તો આગળની ક્યારે?", options: ["બપોરે 2", "બપોરે 3", "સાંજે 4", "સાંજે 5"], correctAnswer: "સાંજે 4")
+        ]
+    )
+
+    // MARK: - Exercise 12: Deductive Reasoning (15 items)
+    private static let deductiveReasoning = Exercise(
+        id: UUID(),
+        title: "તાર્કિક વિચાર",
+        instructions: "દરેક પરિસ્થિતિ વાંચો અને સૌથી ઉચિત નિષ્કર્ષ પસંદ કરો.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "કોઈ વ્યક્તિ સ્વિમસૂટ અને સનગ્લાસ પહેરીને જઈ રહ્યા છે. તેઓ કદાચ ક્યાં જઈ રહ્યા છે?", options: ["સિનેમા", "દરિયાકિનારો અથવા સ્વિમિંગ પૂલ", "લગ્ન", "કરિયાણાની દુકાન"], correctAnswer: "દરિયાકિનારો અથવા સ્વિમિંગ પૂલ"),
+            ExerciseItem(id: UUID(), prompt: "એમ્બ્યુલન્સ લાઇટ ચાલુ કરીને સાઇરન વગાડતી પસાર થઈ રહી છે. આપે શું કરવું જોઈએ?", options: ["ઝડપ વધારો", "બાજુ પર ખસો અને ઊભા રહો", "હૉર્ન વગાડો", "અવગણો"], correctAnswer: "બાજુ પર ખસો અને ઊભા રહો"),
+            ExerciseItem(id: UUID(), prompt: "એક વ્યક્તિ છત્રી અને રેઇનકોટ પહેરીને નીકળ્યા છે. હવામાન કેવું હશે?", options: ["ગરમ અને તડકો", "ઠંડો અને બરફ", "વરસાદ", "સૂકો અને પવનવાળો"], correctAnswer: "વરસાદ"),
+            ExerciseItem(id: UUID(), prompt: "રાત્રે ઘરની બધી લાઇટ અચાનક બંધ થઈ ગઈ. શું થયું હશે?", options: ["સૂરજ આથમ્યો", "વીજળી ગઈ", "આંખો બંધ કરી", "ટીવી બંધ થયું"], correctAnswer: "વીજળી ગઈ"),
+            ExerciseItem(id: UUID(), prompt: "રાત્રે ભારે હિમ વરસ્યો. સવારે ગાડી ચલાવવાની છે. પહેલાં શું કરશો?", options: ["સામાન્ય ઝડપે ચલાવીશ", "રસ્તાની સ્થિતિ ચકાસીશ અને વિન્ડશીલ્ડ સાફ કરીશ", "પોલીસને ફોન કરીશ", "ઘરે જ રહીશ"], correctAnswer: "રસ્તાની સ્થિતિ ચકાસીશ અને વિન્ડશીલ્ડ સાફ કરીશ"),
+            ExerciseItem(id: UUID(), prompt: "ડિનર માટે મીણબત્તી સળગાવી અને 20 મિનિટ માટે બીજા રૂમમાં જવું છે. શું કરશો?", options: ["સળગતી છોડી દઈશ", "જતા પહેલાં બુઝાવી દઈશ", "અવગણીશ", "બારી ખોલી દઈશ"], correctAnswer: "જતા પહેલાં બુઝાવી દઈશ"),
+            ExerciseItem(id: UUID(), prompt: "મિત્ર લાંબા સમય ઠંડીમાં રહ્યા પછી ધ્રૂજી રહ્યા છે અને ગૂંચવાયેલા છે. શું થયું હશે?", options: ["હીટ એક્ઝૉશન", "હાઇપોથર્મિયા", "ડિહાઇડ્રેશન", "સનબર્ન"], correctAnswer: "હાઇપોથર્મિયા"),
+            ExerciseItem(id: UUID(), prompt: "રસોડામાં ગૅસની વાસ આવી રહી છે. સૌ પ્રથમ શું કરશો?", options: ["માચીસ સળગાવીશ", "લાઇટ ચાલુ કરીશ", "તરત બહાર નીકળીશ અને ગૅસ કંપનીને ફોન કરીશ", "ઓવન ખોલીશ"], correctAnswer: "તરત બહાર નીકળીશ અને ગૅસ કંપનીને ફોન કરીશ"),
+            ExerciseItem(id: UUID(), prompt: "એક વ્યક્તિ ચર્ચની વેદી પર સફેદ પોશાક પહેરીને ઊભા છે. શું થઈ રહ્યું છે?", options: ["દીક્ષાંત સમારોહ", "અંતિમ સંસ્કાર", "લગ્ન", "જન્મ દિવસ"], correctAnswer: "લગ્ન"),
+            ExerciseItem(id: UUID(), prompt: "કોઈ ટોપી અને ગાઉન પહેરીને ડિપ્લોમા હાથમાં લઈને ઊભા છે. તેઓ ક્યાંથી આવ્યા?", options: ["લગ્ન", "દીક્ષાંત સમારોહ", "અંતિમ સંસ્કાર", "નોકરીનો ઇન્ટરવ્યૂ"], correctAnswer: "દીક્ષાંત સમારોહ"),
+            ExerciseItem(id: UUID(), prompt: "જમીન પર એક સિક્કો મળ્યો જેના પર અબ્રાહમ લિંકનનું ચિત્ર છે. આ કયો સિક્કો છે?", options: ["ક્વૉર્ટર", "ડાઇમ", "નિકેલ", "પૅની"], correctAnswer: "પૅની"),
+            ExerciseItem(id: UUID(), prompt: "દૂરથી ગડગડાટ સંભળાયો. કયું હવામાન આવવાનું છે?", options: ["વાવાઝોડું", "વીજળી અને વરસાદ", "ભૂકંપ", "હિમ"], correctAnswer: "વીજળી અને વરસાદ"),
+            ExerciseItem(id: UUID(), prompt: "એક વ્યક્તિ ભારે જૅકેટ, બૂટ અને દસ્તાના પહેરીને છે. કઈ ઋતુ છે?", options: ["ઉનાળો", "વસંત", "શિયાળો", "પાનખર"], correctAnswer: "શિયાળો"),
+            ExerciseItem(id: UUID(), prompt: "બિલ પર લાલ રંગે 'બાકી' લખ્યું છે. તેનો અર્થ શું છે?", options: ["આપે વહેલું ચૂકવ્યું", "ચૂકવણી સમયસર મળી", "હજુ દેવું નથી", "આપ પર બાકી રકમ છે"], correctAnswer: "આપ પર બાકી રકમ છે"),
+            ExerciseItem(id: UUID(), prompt: "હૉસ્પિટલના કૉરિડોરમાં કોઈ સ્ક્રબ પહેરીને સ્ટેથોસ્કૉપ લટકાવીને ઊભા છે. તેઓ કોણ છે?", options: ["શિક્ષક", "રસોઇયો", "ડૉક્ટર અથવા નર્સ", "પોલીસ"], correctAnswer: "ડૉક્ટર અથવા નર્સ")
+        ]
+    )
+
+    // MARK: - Exercise 13: Gujarati Idioms (15 items)
+    // NOTE: Flagged for native Gujarati speaker review before publishing.
+    private static let idioms = Exercise(
+        id: UUID(),
+        title: "ગુજરાતી રૂઢિપ્રયોગ",
+        instructions: "રૂઢિપ્રયોગનો અર્થ તમારા શબ્દોમાં કહો.",
+        section: .cognition,
+        type: .openEnded,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "ઊંટ ઉપર ઊંટ ચઢ્યો", options: [], correctAnswer: "એક મુશ્કેલી ઉપર બીજી મુશ્કેલી આવવી — પહેલેથી મુશ્કેલ સ્થિતિ વધુ ખરાબ થવી"),
+            ExerciseItem(id: UUID(), prompt: "ઘરનો ઉજ્જડ ઘાટ", options: [], correctAnswer: "ઘરની અંદરની વ્યક્તિ જ ઘરને નુકસાન કરે — ઘરનો ભેદ ઘરની બહાર જવો"),
+            ExerciseItem(id: UUID(), prompt: "દૂધ નો દૂધ, પાણી નો પાણી", options: [], correctAnswer: "સાચો ન્યાય કરવો — સત્ય અને જૂઠ અલગ કરવું"),
+            ExerciseItem(id: UUID(), prompt: "ખોદ્યો ડુંગર ને નીકળ્યો ઉંદર", options: [], correctAnswer: "ઘણી મહેનત પછી ઘણું ઓછું પરિણામ — અપેક્ષા કરતાં ઘણું ઓછું મળવું"),
+            ExerciseItem(id: UUID(), prompt: "જ્યાં ચાહ ત્યાં રાહ", options: [], correctAnswer: "જ્યાં ઇચ્છા હોય ત્યાં રસ્તો નીકળે — દૃઢ ઇચ્છાશક્તિ હોય તો ઉપાય મળે"),
+            ExerciseItem(id: UUID(), prompt: "ઘઉં સાથે ઘૂણ પણ દળાય", options: [], correctAnswer: "નિર્દોષ વ્યક્તિ ગુનેગારની સાથે સજા ભોગવે — સારા-ખરાબ બધા સાથે સહન કરે"),
+            ExerciseItem(id: UUID(), prompt: "આગ ઠારવા ઘી ન પડાય", options: [], correctAnswer: "સ્થિતિ વધુ ખરાબ ન કરવી — ખરાબ સ્થિતિમાં વધુ ઇંધણ ન ઉમેરવું"),
+            ExerciseItem(id: UUID(), prompt: "કરે તે ભરે", options: [], correctAnswer: "જે જેવું કરે તેવું ફળ મળે — જેવું વાવો તેવું લણો"),
+            ExerciseItem(id: UUID(), prompt: "ભૂખ્યો ઉંદર ભાગ કૂદે", options: [], correctAnswer: "ભૂખ અથવા જરૂરિયાત માણસ પાસે હિંમત કરાવે — ભૂખ લાગ્યે ગમે તે કરવું પડે"),
+            ExerciseItem(id: UUID(), prompt: "રાજા ભૂખ્યો ગામ ભૂખ્યું", options: [], correctAnswer: "નેતા કે મોભી જ્યારે મુશ્કેલીમાં હોય ત્યારે બધા મુશ્કેલીમાં — નેતાની અસર આખી ટીમ પર"),
+            ExerciseItem(id: UUID(), prompt: "ઊગ ત્યાં માણસ", options: [], correctAnswer: "જ્યાં તક હોય ત્યાં લોકો ભેગા થાય — સારી જગ્યા એ લોકો આવે"),
+            ExerciseItem(id: UUID(), prompt: "ભગતને ત્યાં ચોર ન આવે", options: [], correctAnswer: "પ્રામાણિક અને ધાર્મિક માણસ પાસે ખરાબ વ્યક્તિ ટકી ન શકે"),
+            ExerciseItem(id: UUID(), prompt: "વાંદરાને શું વૈભવ", options: [], correctAnswer: "જેને કિંમત ન સમજાય તેને સારી વસ્તુ આપવી નકામી — અયોગ્ય વ્યક્તિ સારી વસ્તુની કદર ન કરે"),
+            ExerciseItem(id: UUID(), prompt: "ખૂટ ભઠ્ઠી ઠારે", options: [], correctAnswer: "સાચી વ્યક્તિ કે સાચો ઉપાય કઠિન સ્થિતિ સંભાળી શકે"),
+            ExerciseItem(id: UUID(), prompt: "માગ્યા ભાગ્ય ન મળે", options: [], correctAnswer: "નસીબ કે ભાગ્ય માગ્યાથી ન મળે — ભાગ્ય પ્રયત્નથી બને, ફક્ત ઇચ્છાથી નહીં")
+        ]
+    )
+
+    // MARK: - Exercise 14: Personal Memory Reflection (20 items)
+    private static let personalMemory = Exercise(
+        id: UUID(),
+        title: "સ્વયં વિશે",
+        instructions: "આ પ્રશ્નોના કોઈ સાચા કે ખોટા જવાબ નથી. તમારી યાદો અને અનુભવો શેર કરો.",
+        section: .cognition,
+        type: .openEnded,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "તમે કઈ ગલી કે મહોલ્લામાં ઉછર્યા?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારી સૌથી જૂની બાળપણની યાદ કઈ છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "બાળપણમાં તમે મોટા થઈને શું બનવા માંગતા હતા?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારા લગ્નનો દિવસ અથવા કોઈ યાદગાર લગ્ન સમારંભ વર્ણવો.", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કયું ગીત તમને કોઈ ખાસ સમયની યાદ અપાવે છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "નવરાત્રિ ગરબા રમવાની કોઈ ખાસ યાદ છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "ઉત્તરાયણ — પતંગ ઉડાવવાની કઈ યાદ સૌથી વધુ ગમે છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "અમેરિકા પ્રથમ વખત આવ્યા ત્યારે શું અનુભવ્યું?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારી પ્રથમ નોકરી કઈ હતી?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કઈ યાત્રા અથવા રજા સૌથી વધુ ગમી?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "બાળપણમાં કઈ રમતો રમતા હતા?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારા બાળપણના ઘરનું જેટલું યાદ હોય તેટલું વર્ણવો.", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કઈ ગંધ તમને કોઈ જૂની યાદ તરફ લઈ જાય છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારી સૌથી પ્રિય ગુજરાતી વાનગી કઈ છે અને કોણ બનાવતું હતું?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કોઈ ઐતિહાસિક ઘટના — જેમ કે 2001નો ભૂકંપ અથવા 9/11 — ત્યારે તમે ક્યાં હતા?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કોઈ એવી કળા અથવા શોખ જે તમને ગૌરવ અપાવે છે.", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "કોઈ એવી ક્ષણ જ્યારે એટલું હસ્યા કે પેટ દુઃખ્યું.", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "તમારા માતા-પિતા અથવા દાદા-દાદી શું કહેતા હતા જે આજે પણ યાદ છે?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "ડ્રાઇવિંગ, રસોઈ અથવા કોઈ જરૂરી કામ કોણે શીખવ્યું?", options: [], correctAnswer: ""),
+            ExerciseItem(id: UUID(), prompt: "બાળપણનું કયું ખાવાનું આજે પણ ગમે છે?", options: [], correctAnswer: "")
+        ]
+    )
+
+    // MARK: - Exercise 15: Rote Memory Lists (12 items)
+    private static let roteMemory = Exercise(
+        id: UUID(),
+        title: "રટણ યાદી",
+        instructions: "દરેક વર્ગમાં જેટલી યાદ હોય તેટલી વસ્તુઓ કહો. પછી પૂરી યાદી જુઓ.",
+        section: .cognition,
+        type: .openEnded,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "અઠવાડિયાના સાત દિવસ ગુજરાતીમાં કહો.", options: [], correctAnswer: "સોમવાર, મંગળવાર, બુધવાર, ગુરુવાર, શુક્રવાર, શનિવાર, રવિવાર"),
+            ExerciseItem(id: UUID(), prompt: "વર્ષના બાર મહિના ગુજરાતીમાં કહો.", options: [], correctAnswer: "જાન્યુઆરી, ફેબ્રુઆરી, માર્ચ, એપ્રિલ, મે, જૂન, જુલાઈ, ઑગસ્ટ, સપ્ટેમ્બર, ઑક્ટોબર, નવેમ્બર, ડિસેમ્બર"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતીમાં 1 થી 10 સુધી ગણો.", options: [], correctAnswer: "એક, બે, ત્રણ, ચાર, પાંચ, છ, સાત, આઠ, નવ, દસ"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતના પાડોશી રાજ્યો કહો.", options: [], correctAnswer: "રાજસ્થાન, મધ્ય પ્રદેશ, મહારાષ્ટ્ર"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતના મુખ્ય તહેવારો કહો.", options: [], correctAnswer: "નવરાત્રિ, ઉત્તરાયણ, દિવાળી, હોળી, જન્માષ્ટમી, રામ નવમી, ભાઈ બીજ, ગણેશ ચતુર્થી"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતના મુખ્ય શહેરો કહો.", options: [], correctAnswer: "અમદાવાદ, સુરત, વડોદરા, રાજકોટ, ભાવનગર, જૂનાગઢ, ગાંધીનગર, આણંદ"),
+            ExerciseItem(id: UUID(), prompt: "સાત ખંડોના નામ કહો.", options: [], correctAnswer: "આફ્રિકા, એન્ટાર્કટિકા, એશિયા, ઑસ્ટ્રેલિયા, યુરોપ, ઉત્તર અમેરિકા, દક્ષિણ અમેરિકા"),
+            ExerciseItem(id: UUID(), prompt: "પાંચ ઇન્દ્રિયો કહો.", options: [], correctAnswer: "દૃષ્ટિ, શ્રવણ, ઘ્રાણ, સ્વાદ, સ્પર્શ"),
+            ExerciseItem(id: UUID(), prompt: "ભારતના પાડોશી દેશો કહો.", options: [], correctAnswer: "પાકિસ્તાન, ચીન, નેપાળ, ભૂટાન, બાંગ્લાદેશ, મ્યાનમાર, શ્રીલંકા"),
+            ExerciseItem(id: UUID(), prompt: "સૌરમંડળના આઠ ગ્રહો કહો.", options: [], correctAnswer: "બુધ, શુક્ર, પૃથ્વી, મંગળ, ગુરુ, શનિ, યુરેનસ, નેપ્ચ્યૂન"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતી પરિવારના સભ્યોના નામ કહો.", options: [], correctAnswer: "બાપા, બા, ભાઈ, બહેન, દાદા, દાદી, નાના, નાની, કાકા, કાકી, મામા, મામી, ફઈ, ફૈઇ"),
+            ExerciseItem(id: UUID(), prompt: "ગુજરાતી ખોરાકની વાનગીઓ કહો.", options: [], correctAnswer: "ઢોકળા, થેપલા, ફાફડા, જલેબી, ઊંધિયું, ખાખરા, ખીચડી, કઢી, શ્રીખંડ, ગાઠિયા, મોહનથાળ, હાંડવો")
         ]
     )
 }
