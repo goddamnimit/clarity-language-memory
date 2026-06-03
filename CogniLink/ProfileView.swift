@@ -13,6 +13,8 @@ struct ProfileView: View {
     @State private var showTherapistSheet = false
     @State private var showNotesSheet = false
     @State private var showResetAlert = false
+    @State private var showShareSheet = false
+    @State private var exportURL: URL? = nil
 
     // MARK: - Computed Stats
 
@@ -268,7 +270,46 @@ struct ProfileView: View {
                     .padding(.horizontal)
                 }
 
-                // MARK: 7. Reset Profile
+                // MARK: 7. Research Export
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Research")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("This exports anonymous performance data only. No personal information (name, photo, or contact details) is included. Share with researchers or therapists.")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
+
+                        Button {
+                            exportResearchData()
+                        } label: {
+                            HStack {
+                                Image(systemName: "square.and.arrow.up")
+                                    .foregroundColor(.blue)
+                                Text("Export Research Data")
+                                    .foregroundColor(.blue)
+                                Spacer()
+                            }
+                            .padding()
+                            .frame(minHeight: 50)
+                            .background(Color(.secondarySystemGroupedBackground))
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.horizontal)
+                    }
+                }
+                .sheet(isPresented: $showShareSheet) {
+                    if let url = exportURL {
+                        ShareSheet(items: [url])
+                    }
+                }
+
+                // MARK: 8. Reset Profile
                 Button(action: { showResetAlert = true }) {
                     Text("Reset Profile")
                         .font(.body)
@@ -433,4 +474,38 @@ struct ProfileView: View {
                 }
         }
     }
+
+    // MARK: - Research Export
+
+    private func exportResearchData() {
+        guard let data = ResearchExportManager.generateExport() else { return }
+        let dateFormatter        = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let filename = "clarity_research_export_\(dateFormatter.string(from: Date())).json"
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        do {
+            try data.write(to: url, options: .atomic)
+            exportURL      = url
+            showShareSheet = true
+        } catch {
+            // If file write fails, share raw Data as fallback
+            let fallback = FileManager.default.temporaryDirectory
+                .appendingPathComponent("clarity_export.json")
+            try? data.write(to: fallback, options: .atomic)
+            exportURL      = fallback
+            showShareSheet = true
+        }
+    }
+}
+
+// MARK: - ShareSheet (UIActivityViewController wrapper)
+
+struct ShareSheet: UIViewControllerRepresentable {
+    let items: [Any]
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }

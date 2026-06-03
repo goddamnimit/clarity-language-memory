@@ -321,6 +321,20 @@ struct ExerciseContainerView: View {
         var plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays") as? [String: Int] ?? [:]
         plays[exercise.title] = (plays[exercise.title] ?? 0) + 1
         UserDefaults.standard.set(plays, forKey: "CogniLink_ExercisePlays")
+
+        // Log this session for anonymous research export
+        let startDate = UserProfileStore.shared.profile.startDate
+        let dayOffset = Calendar.current.dateComponents([.day], from: startDate, to: Date()).day ?? 0
+        let record: [String: Any] = [
+            "dayOffset": dayOffset,
+            "score": score,
+            "total": sessionItems.count,
+            "section": ResearchExportManager.string(for: exercise.section),
+            "exerciseType": ResearchExportManager.string(for: exercise.type),
+            "difficulty": ResearchExportManager.string(for: exercise.difficulty),
+            "language": ResearchExportManager.string(for: languageManager.currentLanguage)
+        ]
+        ResearchExportManager.appendSessionRecord(record)
     }
 
     private func triggerConfetti(screenSize: CGSize) {
