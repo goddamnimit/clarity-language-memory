@@ -31,6 +31,16 @@ struct ProfileView: View {
         Calendar.current.dateComponents([.day], from: store.profile.startDate, to: Date()).day ?? 0
     }
 
+    private var firstTryAccuracyText: String {
+        let log = UserDefaults.standard.array(forKey: ResearchExportManager.sessionLogKey)
+                  as? [[String: Any]] ?? []
+        let totalItems      = log.compactMap { $0["total"]           as? Int }.reduce(0, +)
+        let firstTryCorrect = log.compactMap { $0["firstTryCorrect"] as? Int }.reduce(0, +)
+        guard totalItems > 0 else { return "—" }
+        let pct = Int((Double(firstTryCorrect) / Double(totalItems)) * 100)
+        return "\(pct)%"
+    }
+
     private var notesPreview: String {
         let notes = store.profile.notes ?? ""
         if notes.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return "Add a note" }
@@ -164,13 +174,19 @@ struct ProfileView: View {
                 .sheet(isPresented: $showTherapistSheet) { therapistSheet }
                 .sheet(isPresented: $showNotesSheet) { notesSheet }
 
-                // MARK: 4. Stats Card
-                HStack(spacing: 0) {
-                    statCell(value: "\(totalSessions)", label: "Sessions")
-                    Divider().frame(height: 40)
-                    statCell(value: "\(exercisesCompleted)", label: "Completed")
-                    Divider().frame(height: 40)
-                    statCell(value: "\(daysActive)", label: "Days Active")
+                // MARK: 4. Stats Card (2×2 grid)
+                VStack(spacing: 0) {
+                    HStack(spacing: 0) {
+                        statCell(value: "\(totalSessions)", label: "Sessions")
+                        Divider().frame(height: 40)
+                        statCell(value: "\(exercisesCompleted)", label: "Completed")
+                    }
+                    Divider()
+                    HStack(spacing: 0) {
+                        statCell(value: "\(daysActive)", label: "Days Active")
+                        Divider().frame(height: 40)
+                        statCell(value: firstTryAccuracyText, label: "Accuracy")
+                    }
                 }
                 .background(Color(.secondarySystemGroupedBackground))
                 .cornerRadius(12)

@@ -14,6 +14,7 @@ struct ExerciseContainerView: View {
     @State private var sessionRecorded = false
     @State private var showConfetti = false
     @State private var confettiParticles: [ConfettiParticle] = []
+    @State private var sessionAttempts: [[String: Any]] = []
     
     var body: some View {
         VStack {
@@ -309,6 +310,7 @@ struct ExerciseContainerView: View {
         sessionRecorded = false
         showConfetti = false
         confettiParticles = []
+        sessionAttempts = []
     }
     
     private func resetSession() {
@@ -322,6 +324,14 @@ struct ExerciseContainerView: View {
         plays[exercise.title] = (plays[exercise.title] ?? 0) + 1
         UserDefaults.standard.set(plays, forKey: "CogniLink_ExercisePlays")
 
+        // Compute attempt summary for this session
+        let totalAttempts = sessionAttempts.count
+        let wrongAttempts = sessionAttempts.filter { ($0["correct"] as? Bool) == false }.count
+        let firstTryCorrect = sessionItems.indices.filter { idx in
+            let attemptsForItem = sessionAttempts.filter { ($0["itemIndex"] as? Int) == idx }
+            return attemptsForItem.first.flatMap { $0["correct"] as? Bool } == true
+        }.count
+
         // Log this session for anonymous research export
         let startDate = UserProfileStore.shared.profile.startDate
         let dayOffset = Calendar.current.dateComponents([.day], from: startDate, to: Date()).day ?? 0
@@ -329,6 +339,9 @@ struct ExerciseContainerView: View {
             "dayOffset": dayOffset,
             "score": score,
             "total": sessionItems.count,
+            "totalAttempts": totalAttempts,
+            "wrongAttempts": wrongAttempts,
+            "firstTryCorrect": firstTryCorrect,
             "section": ResearchExportManager.string(for: exercise.section),
             "exerciseType": ResearchExportManager.string(for: exercise.type),
             "difficulty": ResearchExportManager.string(for: exercise.difficulty),
@@ -366,7 +379,17 @@ struct ExerciseContainerView: View {
         }
     }
 
+    private func attemptsForCurrentItem() -> Int {
+        sessionAttempts.filter { ($0["itemIndex"] as? Int) == currentIndex }.count + 1
+    }
+
     private func handleAnswer(_ correct: Bool) {
+        let attempt: [String: Any] = [
+            "itemIndex": currentIndex,
+            "correct": correct,
+            "attemptNumber": attemptsForCurrentItem()
+        ]
+        sessionAttempts.append(attempt)
         if correct {
             score += 1
             currentQuestionAnswered = true

@@ -53,6 +53,15 @@ struct ResearchExportManager {
         let appVersion           = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
                                    as? String ?? "1.0"
 
+        // -- Accuracy stats across all logged sessions --
+        let logTotalAttempts   = sessionLog.compactMap { $0["totalAttempts"]   as? Int }.reduce(0, +)
+        let logWrongAttempts   = sessionLog.compactMap { $0["wrongAttempts"]   as? Int }.reduce(0, +)
+        let logFirstTryCorrect = sessionLog.compactMap { $0["firstTryCorrect"] as? Int }.reduce(0, +)
+        let logTotalItems      = sessionLog.compactMap { $0["total"]           as? Int }.reduce(0, +)
+        let avgFirstTryAccuracy: Double = logTotalItems > 0
+            ? Double(logFirstTryCorrect) / Double(logTotalItems)
+            : 0.0
+
         // -- Assemble top-level dict --
         let exportDict: [String: Any] = [
             "exportDate": exportDateString,
@@ -74,7 +83,13 @@ struct ResearchExportManager {
             ],
 
             "sessionDates": sessionDates,
-            "sessionLog":   sessionLog
+            "sessionLog":   sessionLog,
+
+            "accuracyStats": [
+                "averageFirstTryAccuracy": avgFirstTryAccuracy,
+                "totalWrongAttempts":      logWrongAttempts,
+                "totalAttempts":           logTotalAttempts
+            ]
         ]
 
         guard JSONSerialization.isValidJSONObject(exportDict) else {
