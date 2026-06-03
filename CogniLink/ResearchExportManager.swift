@@ -12,6 +12,7 @@ struct ResearchExportManager {
     /// Builds the full anonymous JSON export and returns it as UTF-8 encoded Data.
     /// Returns nil only if JSON serialisation fails (should never happen in practice).
     static func generateExport() -> Data? {
+        print("[ResearchExport] generateExport() started")
         let profile  = UserProfileStore.shared.profile
         let calendar = Calendar.current
         let today    = Date()
@@ -19,22 +20,31 @@ struct ResearchExportManager {
         // -- Profile fields --
         let daysUsingApp = calendar.dateComponents([.day], from: profile.startDate, to: today).day ?? 0
         let diagnosis    = profile.diagnosisType?.rawValue ?? "Not specified"
+        print("[ResearchExport] diagnosis=\(diagnosis), daysUsingApp=\(daysUsingApp)")
 
         // -- Exercise activity --
         let plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays")
                     as? [String: Int] ?? [:]
-        let totalSessions      = plays.values.reduce(0, +)
+        let totalSessions       = plays.values.reduce(0, +)
         let totalItemsAttempted = UserProgressStore.shared.getTotalAttempts()
         let exercisesEverCompleted = ProgressTracker.getCompletedExercises().sorted()
+        print("[ResearchExport] totalSessions=\(totalSessions), exercises=\(exercisesEverCompleted.count)")
 
         // -- Session dates as day-offsets (no real calendar dates exposed) --
         let sessionDates: [Int] = profile.completionHistory
             .compactMap { calendar.dateComponents([.day], from: profile.startDate, to: $0).day }
             .sorted()
 
-        // -- Session log --
-        let sessionLog = UserDefaults.standard.array(forKey: sessionLogKey)
-                         as? [[String: Any]] ?? []
+        // -- Session log: re-encode through JSON to guarantee clean plist→JSON types --
+        let rawLog = UserDefaults.standard.array(forKey: sessionLogKey) ?? []
+        let sessionLog: [[String: Any]]
+        if let jsonData = try? JSONSerialization.data(withJSONObject: rawLog),
+           let cleaned  = try? JSONSerialization.jsonObject(with: jsonData) as? [[String: Any]] {
+            sessionLog = cleaned
+        } else {
+            sessionLog = []
+        }
+        print("[ResearchExport] sessionLog entries=\(sessionLog.count)")
 
         // -- Export date & app version --
         let dateFormatter        = DateFormatter()
@@ -50,12 +60,12 @@ struct ResearchExportManager {
             "anonymous":  true,
 
             "profile": [
-                "diagnosisCategory":       diagnosis,
-                "daysUsingApp":            daysUsingApp,
-                "currentStreak":           profile.currentStreak,
-                "longestStreak":           profile.longestStreak,
-                "totalSessionsCompleted":  totalSessions,
-                "totalItemsAttempted":     totalItemsAttempted
+                "diagnosisCategory":      diagnosis,
+                "daysUsingApp":           daysUsingApp,
+                "currentStreak":          profile.currentStreak,
+                "longestStreak":          profile.longestStreak,
+                "totalSessionsCompleted": totalSessions,
+                "totalItemsAttempted":    totalItemsAttempted
             ],
 
             "exerciseActivity": [
@@ -67,11 +77,22 @@ struct ResearchExportManager {
             "sessionLog":   sessionLog
         ]
 
-        guard JSONSerialization.isValidJSONObject(exportDict) else { return nil }
-        return try? JSONSerialization.data(
-            withJSONObject: exportDict,
-            options: [.prettyPrinted, .sortedKeys]
-        )
+        guard JSONSerialization.isValidJSONObject(exportDict) else {
+            print("[ResearchExport] ERROR: exportDict failed isValidJSONObject check")
+            return nil
+        }
+
+        do {
+            let data = try JSONSerialization.data(
+                withJSONObject: exportDict,
+                options: [.prettyPrinted, .sortedKeys]
+            )
+            print("[ResearchExport] JSON serialised successfully — \(data.count) bytes")
+            return data
+        } catch {
+            print("[ResearchExport] ERROR: JSONSerialization failed: \(error)")
+            return nil
+        }
     }
 
     /// Appends a session record to the log, capping at maxLogSize (drops oldest when over limit).

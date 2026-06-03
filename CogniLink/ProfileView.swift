@@ -303,11 +303,6 @@ struct ProfileView: View {
                         .padding(.horizontal)
                     }
                 }
-                .sheet(isPresented: $showShareSheet) {
-                    if let url = exportURL {
-                        ShareSheet(items: [url])
-                    }
-                }
 
                 // MARK: 8. Reset Profile
                 Button(action: { showResetAlert = true }) {
@@ -344,6 +339,12 @@ struct ProfileView: View {
             nameInput = store.profile.name
             therapistInput = store.profile.therapistName ?? ""
             notesInput = store.profile.notes ?? ""
+        }
+        // Sheet must live at the ScrollView level — attaching to inner views causes blank presentation
+        .sheet(isPresented: $showShareSheet) {
+            if let url = exportURL {
+                ShareSheet(items: [url])
+            }
         }
     }
 
@@ -478,22 +479,36 @@ struct ProfileView: View {
     // MARK: - Research Export
 
     private func exportResearchData() {
-        guard let data = ResearchExportManager.generateExport() else { return }
+        print("[Export] Button tapped — starting export")
+        guard let data = ResearchExportManager.generateExport() else {
+            print("[Export] ERROR: generateExport() returned nil — aborting")
+            return
+        }
+        print("[Export] Export data ready: \(data.count) bytes")
+
         let dateFormatter        = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let filename = "clarity_research_export_\(dateFormatter.string(from: Date())).json"
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        print("[Export] Writing to: \(url.path)")
+
         do {
             try data.write(to: url, options: .atomic)
+            print("[Export] File written successfully")
             exportURL      = url
+            print("[Export] exportURL set to \(url.lastPathComponent) — presenting share sheet")
             showShareSheet = true
         } catch {
-            // If file write fails, share raw Data as fallback
+            print("[Export] ERROR: File write failed: \(error) — using fallback path")
             let fallback = FileManager.default.temporaryDirectory
                 .appendingPathComponent("clarity_export.json")
-            try? data.write(to: fallback, options: .atomic)
-            exportURL      = fallback
-            showShareSheet = true
+            do {
+                try data.write(to: fallback, options: .atomic)
+                exportURL      = fallback
+                showShareSheet = true
+            } catch {
+                print("[Export] ERROR: Fallback write also failed: \(error)")
+            }
         }
     }
 }
