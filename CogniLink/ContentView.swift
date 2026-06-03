@@ -41,22 +41,25 @@ struct ContentView: View {
         case .english: return "Home"
         case .spanish: return "Inicio"
         case .hindi: return "मुख्य"
+        case .gujarati: return "ઘર"
         }
     }
-    
+
     private var activitiesTabTitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Activities"
         case .spanish: return "Actividades"
         case .hindi: return "गतिविधियाँ"
+        case .gujarati: return "પ્રવૃત્તિઓ"
         }
     }
-    
+
     private var profileTabTitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Profile"
         case .spanish: return "Perfil"
         case .hindi: return "प्रोफ़ाइल"
+        case .gujarati: return "પ્રોફાઇલ"
         }
     }
 }
@@ -144,41 +147,46 @@ struct HomeView: View {
         case .english: return "Welcome to Clarity"
         case .spanish: return "Bienvenido a Clarity"
         case .hindi: return "Clarity में आपका स्वागत है"
+        case .gujarati: return "Clarity માં આપનું સ્વાગત છે"
         }
     }
-    
+
     private var cardSubtitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Tap to start"
         case .spanish: return "Toca para comenzar"
         case .hindi: return "शुरू करने के लिए टैप करें"
+        case .gujarati: return "શરૂ કરવા ટૅપ કરો"
         }
     }
-    
+
     private var languageSectionTitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Language"
         case .spanish: return "Lenguaje"
         case .hindi: return "भाषा"
+        case .gujarati: return "ભાષા"
         }
     }
-    
+
     private var cognitionSectionTitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Cognition"
         case .spanish: return "Cognición"
         case .hindi: return "अनुभूति"
+        case .gujarati: return "સ્મૃતિ અને તર્ક"
         }
     }
-    
+
     private var functionalSkillsSectionTitle: String {
         switch languageManager.currentLanguage {
         case .english: return "Functional Skills"
         case .spanish: return "Habilidades Funcionales"
         case .hindi: return "कार्यात्मक कौशल"
+        case .gujarati: return "દૈનિક કૌશલ્ય"
         }
     }
-    
+
     private var sessionsPlayedText: String {
         switch languageManager.currentLanguage {
         case .english:
@@ -187,6 +195,8 @@ struct HomeView: View {
             return "\(sessionsCount) sesiones jugadas"
         case .hindi:
             return "\(sessionsCount) \(sessionsCount == 1 ? "सत्र खेला गया" : "सत्र खेले गए")"
+        case .gujarati:
+            return "\(sessionsCount) સત્ર રમાયા"
         }
     }
     

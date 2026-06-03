@@ -392,7 +392,7 @@ struct ExerciseContainerView: View {
         case .english: return "Perfect Score! 🎉"
         case .spanish: return "¡Puntuación Perfecta! 🎉"
         case .hindi: return "शानदार! पूरे अंक! 🎉"
-        // .gujarati → "અદ્ભુત! પૂરા ગુણ! 🎉"  (add when Gujarati is wired into AppLanguage)
+        case .gujarati: return "અદ્ભુત! પૂરા ગુણ! 🎉"
         }
     }
 
@@ -401,62 +401,70 @@ struct ExerciseContainerView: View {
         case .english: return "Session Complete!"
         case .spanish: return "¡Sesión Completada!"
         case .hindi: return "सत्र पूर्ण!"
+        case .gujarati: return "સત્ર પૂર્ણ!"
         }
     }
-    
+
     private var scoreText: String {
         switch languageManager.currentLanguage {
         case .english: return "Score"
         case .spanish: return "Puntuación"
         case .hindi: return "स्कोर"
+        case .gujarati: return "સ્કોર"
         }
     }
-    
+
     private var newSessionButtonText: String {
         switch languageManager.currentLanguage {
         case .english: return "New Session"
         case .spanish: return "Nueva Sesión"
         case .hindi: return "नया सत्र"
+        case .gujarati: return "નવું સત્ર"
         }
     }
-    
+
     private var backToExercisesButtonText: String {
         switch languageManager.currentLanguage {
         case .english: return "Back to Exercises"
         case .spanish: return "Volver a Ejercicios"
         case .hindi: return "अभ्यासों पर वापस जाएं"
+        case .gujarati: return "કસરત પર પાછા જાઓ"
         }
     }
-    
+
     private var questionLabel: String {
         switch languageManager.currentLanguage {
         case .english: return "Question"
         case .spanish: return "Pregunta"
         case .hindi: return "प्रश्न"
+        case .gujarati: return "પ્રશ્ન"
         }
     }
-    
+
     private var ofLabel: String {
         switch languageManager.currentLanguage {
         case .english: return "of"
         case .spanish: return "de"
         case .hindi: return "का"
+        case .gujarati: return "નો"
         }
     }
-    
+
     private var previousButtonText: String {
         switch languageManager.currentLanguage {
         case .english: return "Previous"
         case .spanish: return "Anterior"
         case .hindi: return "पीछे"
+        case .gujarati: return "પાછળ"
         }
     }
-    
+
     private var skipButtonText: String {
         switch languageManager.currentLanguage {
         case .english: return "Skip"
         case .spanish: return "Omitir"
         case .hindi: return "छोड़ें"
+        case .gujarati: return "છોડો"
         }
     }
 }

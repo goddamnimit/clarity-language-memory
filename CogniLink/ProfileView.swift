@@ -231,6 +231,9 @@ struct ProfileView: View {
                         Text("ऐप चयनित भाषा में सभी अभ्यास दिखाएगा।")
                             .font(.footnote)
                             .foregroundColor(.secondary)
+                        Text("એપ પસંદ કરેલી ભાષામાં બધી કસરત બતાવશે.")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
                     }
                     .padding(.horizontal)
                     .padding(.top, 8)
