@@ -3,7 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @State private var selectedTab = 0
-    
+    @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "clarity_onboarding_complete")
+
     var body: some View {
         TabView(selection: $selectedTab) {
             
@@ -32,8 +33,11 @@ struct ContentView: View {
             }
             .tag(2)
         }
+        .fullScreenCover(isPresented: $showOnboarding) {
+            OnboardingView(isPresented: $showOnboarding)
+        }
     }
-    
+
     // MARK: - Localized Tab Titles
     
     private var homeTabTitle: String {
