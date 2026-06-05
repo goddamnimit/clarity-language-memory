@@ -33,6 +33,8 @@ struct ContentView: View {
             }
             .tag(2)
         }
+        .environment(\.layoutDirection,
+            languageManager.currentLanguage == .farsi ? .rightToLeft : .leftToRight)
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
