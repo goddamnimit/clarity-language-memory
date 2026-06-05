@@ -15,6 +15,8 @@ struct ProfileView: View {
     @State private var showResetAlert = false
     @State private var showShareSheet = false
     @State private var exportURL: URL? = nil
+    @State private var showKeyboardTip = false
+    @State private var keyboardTipLanguage: AppLanguage? = nil
 
     // MARK: - Computed Stats
 
@@ -206,6 +208,14 @@ struct ProfileView: View {
                                 withAnimation {
                                     languageManager.currentLanguage = language
                                 }
+                                let nonLatin: [AppLanguage] = [.hindi, .gujarati, .chinese, .farsi]
+                                let tipKey = "clarity_keyboard_tip_shown_\(language.rawValue)"
+                                if nonLatin.contains(language) &&
+                                    !UserDefaults.standard.bool(forKey: tipKey) {
+                                    keyboardTipLanguage = language
+                                    showKeyboardTip = true
+                                    UserDefaults.standard.set(true, forKey: tipKey)
+                                }
                             }) {
                                 HStack(spacing: 16) {
                                     Text(language.flagEmoji)
@@ -361,6 +371,17 @@ struct ProfileView: View {
             nameInput = store.profile.name
             therapistInput = store.profile.therapistName ?? ""
             notesInput = store.profile.notes ?? ""
+        }
+        // Keyboard tip alert — shown once per non-Latin language selection
+        .alert("Keyboard Tip", isPresented: $showKeyboardTip) {
+            Button("Got it") { }
+            Button("Open Settings") {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        } message: {
+            Text("For the best experience with \(keyboardTipLanguage?.displayName ?? "this language"), add the keyboard in iPhone Settings → General → Keyboard → Keyboards → Add New Keyboard.")
         }
         // Sheet must live at the ScrollView level — attaching to inner views causes blank presentation
         .sheet(isPresented: $showShareSheet) {
