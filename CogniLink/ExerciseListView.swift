@@ -100,6 +100,12 @@ struct ExerciseListView: View {
             case .cognition: return "认知与记忆"
             case .functionalSkills: return "日常技能"
             }
+        case .farsi:
+            switch section {
+            case .language: return "زبان"
+            case .cognition: return "شناخت و حافظه"
+            case .functionalSkills: return "مهارت‌های روزمره"
+            }
         }
     }
 
@@ -134,6 +140,12 @@ struct ExerciseListView: View {
             case .language: return "词汇、成语、类比等"
             case .cognition: return "记忆、常识、推理"
             case .functionalSkills: return "日常生活、安全、计划"
+            }
+        case .farsi:
+            switch section {
+            case .language: return "واژگان، ضرب‌المثل، قیاس و بیشتر"
+            case .cognition: return "حافظه، دانش عمومی، استدلال"
+            case .functionalSkills: return "زندگی روزمره، ایمنی، برنامه‌ریزی"
             }
         }
     }
@@ -170,6 +182,12 @@ struct ExerciseListView: View {
             case .easy: return "简单"
             case .medium: return "中等"
             case .hard: return "困难"
+            }
+        case .farsi:
+            switch difficulty {
+            case .easy: return "آسان"
+            case .medium: return "متوسط"
+            case .hard: return "سخت"
             }
         }
     }

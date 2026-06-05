@@ -8,6 +8,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case hindi = "हिन्दी"
     case gujarati = "ગુજરાતી"
     case chinese = "中文"
+    case farsi = "فارسی"
 
     var id: String { self.rawValue }
 
@@ -18,6 +19,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .hindi: return "हिन्दी"
         case .gujarati: return "ગુજરાતી"
         case .chinese: return "中文"
+        case .farsi: return "فارسی"
         }
     }
 
@@ -28,6 +30,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .hindi: return "🇮🇳"
         case .gujarati: return "🇮🇳"
         case .chinese: return "🇨🇳"
+        case .farsi: return "🇮🇷"
         }
     }
 
@@ -38,6 +41,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .hindi: return "hi_IN"
         case .gujarati: return "gu_IN"
         case .chinese: return "zh_CN"
+        case .farsi: return "fa_IR"
         }
     }
 }
@@ -76,7 +80,11 @@ class LanguageManager: ObservableObject {
 
             .chinese: ChineseLanguageExerciseData.allExercises +
                       ChineseCognitionExerciseData.allExercises +
-                      ChineseFunctionalSkillsExerciseData.allExercises
+                      ChineseFunctionalSkillsExerciseData.allExercises,
+
+            .farsi: FarsiLanguageExerciseData.allExercises +
+                    FarsiCognitionExerciseData.allExercises +
+                    FarsiFunctionalSkillsExerciseData.allExercises
         ]
     }
     
@@ -111,6 +119,12 @@ class LanguageManager: ObservableObject {
             case .language: return ChineseLanguageExerciseData.allExercises
             case .cognition: return ChineseCognitionExerciseData.allExercises
             case .functionalSkills: return ChineseFunctionalSkillsExerciseData.allExercises
+            }
+        case .farsi:
+            switch section {
+            case .language: return FarsiLanguageExerciseData.allExercises
+            case .cognition: return FarsiCognitionExerciseData.allExercises
+            case .functionalSkills: return FarsiFunctionalSkillsExerciseData.allExercises
             }
         }
     }

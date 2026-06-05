@@ -161,6 +161,7 @@ struct ResearchExportManager {
         case .hindi:    return "hindi"
         case .gujarati: return "gujarati"
         case .chinese:  return "chinese"
+        case .farsi:    return "farsi"
         }
     }
 }

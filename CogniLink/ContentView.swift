@@ -47,6 +47,7 @@ struct ContentView: View {
         case .hindi: return "मुख्य"
         case .gujarati: return "ઘર"
         case .chinese: return "主页"
+        case .farsi: return "خانه"
         }
     }
 
@@ -57,6 +58,7 @@ struct ContentView: View {
         case .hindi: return "गतिविधियाँ"
         case .gujarati: return "પ્રવૃત્તિઓ"
         case .chinese: return "活动"
+        case .farsi: return "فعالیت‌ها"
         }
     }
 
@@ -67,6 +69,7 @@ struct ContentView: View {
         case .hindi: return "प्रोफ़ाइल"
         case .gujarati: return "પ્રોફાઇલ"
         case .chinese: return "我的"
+        case .farsi: return "پروفایل"
         }
     }
 }
@@ -315,6 +318,29 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+
+        case .farsi:
+            if hasName {
+                let greetings = [
+                    "خوش آمدید، \(name)!",
+                    "\(name)، آماده تمرین هستید؟",
+                    "خوش برگشتید، \(name)!",
+                    "بیایید شروع کنیم، \(name)!",
+                    "\(name)، خوشحالم که اینجا هستید!",
+                    "وقت درخشیدن است، \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "به Clarity خوش آمدید!",
+                    "آماده تمرین هستید؟",
+                    "خوش برگشتید!",
+                    "بیایید شروع کنیم!",
+                    "خوشحالم که اینجا هستید!",
+                    "وقت تمرین است!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -325,6 +351,7 @@ struct HomeView: View {
         case .hindi: return "कुछ भी चलेगा! 🎲"
         case .gujarati: return "આશ્ચર્ય કરો! 🎲"
         case .chinese: return "随机练习！🎲"
+        case .farsi: return "شگفتی! 🎲"
         }
     }
 
@@ -339,6 +366,7 @@ struct HomeView: View {
         case .hindi: return "यादृच्छिक गतिविधि के लिए टैप करें"
         case .gujarati: return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
         case .chinese: return "点击随机练习"
+        case .farsi: return "برای فعالیت تصادفی ضربه بزنید"
         }
     }
 
@@ -349,6 +377,7 @@ struct HomeView: View {
         case .hindi: return "भाषा"
         case .gujarati: return "ભાષા"
         case .chinese: return "语言"
+        case .farsi: return "زبان"
         }
     }
 
@@ -359,6 +388,7 @@ struct HomeView: View {
         case .hindi: return "अनुभूति"
         case .gujarati: return "સ્મૃતિ અને તર્ક"
         case .chinese: return "认知与记忆"
+        case .farsi: return "شناخت و حافظه"
         }
     }
 
@@ -369,6 +399,7 @@ struct HomeView: View {
         case .hindi: return "कार्यात्मक कौशल"
         case .gujarati: return "દૈનિક કૌશલ્ય"
         case .chinese: return "日常技能"
+        case .farsi: return "مهارت‌های روزمره"
         }
     }
 
@@ -384,6 +415,8 @@ struct HomeView: View {
             return "\(sessionsCount) સત્ર રમાયા"
         case .chinese:
             return "\(sessionsCount) 次练习"
+        case .farsi:
+            return "\(sessionsCount) جلسه"
         }
     }
     

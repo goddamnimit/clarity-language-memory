@@ -83,8 +83,6 @@ struct OnboardingView: View {
                     ForEach(AppLanguage.allCases) { language in
                         languageCard(language)
                     }
-                    // Farsi — coming soon
-                    comingSoonCard(flag: "🇮🇷", name: "فارسی")
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 24)

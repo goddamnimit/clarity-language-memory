@@ -255,6 +255,9 @@ struct ProfileView: View {
                         Text("应用将以所选语言显示所有练习。")
                             .font(.footnote)
                             .foregroundColor(.secondary)
+                        Text("اپ همه تمرین‌ها را به زبان انتخابی نمایش می‌دهد.")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
                     }
                     .padding(.horizontal)
                     .padding(.top, 8)

@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct ExerciseContainerView: View {
     let exercise: Exercise
@@ -15,6 +16,9 @@ struct ExerciseContainerView: View {
     @State private var showConfetti = false
     @State private var confettiParticles: [ConfettiParticle] = []
     @State private var sessionAttempts: [[String: Any]] = []
+    @State private var completionScale: CGFloat = 0.8
+    @State private var completionOpacity: Double = 0
+    @State private var displayedScore: Int = 0
     
     var body: some View {
         VStack {
@@ -45,8 +49,8 @@ struct ExerciseContainerView: View {
                                 .font(.system(.title, design: .rounded))
                                 .fontWeight(.bold)
 
-                            if score == sessionItems.count {
-                                Text(perfectScoreText)
+                            if let praise = praiseText {
+                                Text(praise)
                                     .font(.title3)
                                     .fontWeight(.bold)
                                     .foregroundColor(.orange)
@@ -54,7 +58,7 @@ struct ExerciseContainerView: View {
 
                             // Score Box using sessionItems.count (always matches sessionSize)
                             VStack(spacing: 8) {
-                                Text("\(scoreText): \(score) / \(sessionItems.count)")
+                                Text("\(scoreText): \(displayedScore) / \(sessionItems.count)")
                                     .font(.title3)
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
@@ -103,13 +107,31 @@ struct ExerciseContainerView: View {
                             .padding(.horizontal)
                         }
                         .padding()
+                        .scaleEffect(completionScale)
+                        .opacity(completionOpacity)
                         .onAppear {
+                            // Entrance animation
+                            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
+                                completionScale = 1.0
+                                completionOpacity = 1.0
+                            }
+                            // Animated score count-up
+                            for i in 0...max(score, 0) {
+                                DispatchQueue.main.asyncAfter(
+                                    deadline: .now() + 0.5 + Double(i) * 0.15) {
+                                    withAnimation(.spring()) {
+                                        displayedScore = i
+                                    }
+                                }
+                            }
                             if !sessionRecorded {
                                 recordSessionCompletion()
                                 sessionRecorded = true
                             }
                             if score == sessionItems.count {
-                                triggerConfetti(screenSize: geo.size)
+                                triggerConfetti(screenSize: geo.size, particleCount: 80)
+                            } else if score >= sessionItems.count - 1 && sessionItems.count > 1 {
+                                triggerConfetti(screenSize: geo.size, particleCount: 30)
                             }
                         }
 
@@ -311,6 +333,9 @@ struct ExerciseContainerView: View {
         showConfetti = false
         confettiParticles = []
         sessionAttempts = []
+        completionScale = 0.8
+        completionOpacity = 0
+        displayedScore = 0
     }
     
     private func resetSession() {
@@ -348,11 +373,18 @@ struct ExerciseContainerView: View {
             "language": ResearchExportManager.string(for: languageManager.currentLanguage)
         ]
         ResearchExportManager.appendSessionRecord(record)
+
+        // Haptic feedback on session completion
+        if score == sessionItems.count {
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
+        } else {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        }
     }
 
-    private func triggerConfetti(screenSize: CGSize) {
+    private func triggerConfetti(screenSize: CGSize, particleCount: Int = 80) {
         let colors: [Color] = [.blue, .green, .orange, .pink, .purple, .yellow, Color(red: 0.9, green: 0.3, blue: 0.3)]
-        confettiParticles = (0..<80).map { _ in
+        confettiParticles = (0..<particleCount).map { _ in
             ConfettiParticle(
                 x: CGFloat.random(in: 0...screenSize.width),
                 y: -20,
@@ -363,17 +395,25 @@ struct ExerciseContainerView: View {
             )
         }
         showConfetti = true
-        // Let initial positions render for one frame before animating
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            withAnimation(.easeIn(duration: 3.0)) {
-                for i in confettiParticles.indices {
-                    confettiParticles[i].y = confettiParticles[i].velocity
-                    confettiParticles[i].x += CGFloat.random(in: -60...60)
-                    confettiParticles[i].rotation += Double.random(in: 180...720)
+        // Staggered launch — each particle animates independently
+        for i in 0..<confettiParticles.count {
+            let delay    = Double(i) * 0.02
+            let targetY  = confettiParticles[i].velocity
+            let targetX  = confettiParticles[i].x + CGFloat.random(in: -60...60)
+            let targetR  = confettiParticles[i].rotation + Double.random(in: 180...720)
+            let duration = Double.random(in: 2.0...3.5)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05 + delay) {
+                withAnimation(.easeOut(duration: duration)) {
+                    if i < self.confettiParticles.count {
+                        self.confettiParticles[i].y        = targetY
+                        self.confettiParticles[i].x        = targetX
+                        self.confettiParticles[i].rotation = targetR
+                    }
                 }
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+        let totalDuration = 0.05 + Double(particleCount) * 0.02 + 3.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + totalDuration) {
             showConfetti = false
             confettiParticles = []
         }
@@ -424,6 +464,19 @@ struct ExerciseContainerView: View {
     
     // MARK: - Localized Properties
     
+    private var praiseText: String? {
+        switch score {
+        case sessionItems.count:
+            return perfectScoreText
+        case sessionItems.count - 1:
+            return "Almost perfect! 🌟"
+        case sessionItems.count - 2 where sessionItems.count >= 4:
+            return "Great effort! 💪"
+        default:
+            return nil
+        }
+    }
+
     private var perfectScoreText: String {
         switch languageManager.currentLanguage {
         case .english: return "Perfect Score! 🎉"
@@ -431,6 +484,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "शानदार! पूरे अंक! 🎉"
         case .gujarati: return "અદ્ભુત! પૂરા ગુણ! 🎉"
         case .chinese: return "太棒了！满分！🎉"
+        case .farsi: return "عالی! نمره کامل! 🎉"
         }
     }
 
@@ -441,6 +495,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "सत्र पूर्ण!"
         case .gujarati: return "સત્ર પૂર્ણ!"
         case .chinese: return "练习完成！"
+        case .farsi: return "تمرین کامل شد!"
         }
     }
 
@@ -451,6 +506,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "स्कोर"
         case .gujarati: return "સ્કોર"
         case .chinese: return "得分"
+        case .farsi: return "نمره"
         }
     }
 
@@ -461,6 +517,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "नया सत्र"
         case .gujarati: return "નવું સત્ર"
         case .chinese: return "新练习"
+        case .farsi: return "تمرین جدید"
         }
     }
 
@@ -471,6 +528,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "अभ्यासों पर वापस जाएं"
         case .gujarati: return "કસરત પર પાછા જાઓ"
         case .chinese: return "返回练习"
+        case .farsi: return "بازگشت به تمرین‌ها"
         }
     }
 
@@ -481,6 +539,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "प्रश्न"
         case .gujarati: return "પ્રશ્ન"
         case .chinese: return "第"
+        case .farsi: return "سوال"
         }
     }
 
@@ -491,6 +550,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "का"
         case .gujarati: return "નો"
         case .chinese: return "题，共"
+        case .farsi: return "از"
         }
     }
 
@@ -501,6 +561,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "पीछे"
         case .gujarati: return "પાછળ"
         case .chinese: return "上一题"
+        case .farsi: return "قبلی"
         }
     }
 
@@ -511,6 +572,7 @@ struct ExerciseContainerView: View {
         case .hindi: return "छोड़ें"
         case .gujarati: return "છોડો"
         case .chinese: return "跳过"
+        case .farsi: return "رد کردن"
         }
     }
 }

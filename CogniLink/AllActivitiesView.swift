@@ -124,6 +124,7 @@ struct AllActivitiesView: View {
         case .hindi: return "सभी गतिविधियाँ"
         case .gujarati: return "બધી પ્રવૃત્તિઓ"
         case .chinese: return "所有活动"
+        case .farsi: return "همه فعالیت‌ها"
         }
     }
 
@@ -134,6 +135,7 @@ struct AllActivitiesView: View {
         case .hindi: return "इस अनुभाग में कोई अभ्यास उपलब्ध नहीं है।"
         case .gujarati: return "આ વિભાગમાં કોઈ કસરત ઉપલબ્ધ નથી."
         case .chinese: return "此部分暂无练习。"
+        case .farsi: return "تمرینی در این بخش موجود نیست."
         }
     }
 
@@ -144,6 +146,7 @@ struct AllActivitiesView: View {
         case .hindi: return "मुझे आश्चर्यचकित करें!"
         case .gujarati: return "આશ્ચર્ય કરો!"
         case .chinese: return "随机练习！🎲"
+        case .farsi: return "شگفتی! 🎲"
         }
     }
 
@@ -178,6 +181,12 @@ struct AllActivitiesView: View {
             case .language: return "语言"
             case .cognition: return "认知与记忆"
             case .functionalSkills: return "日常技能"
+            }
+        case .farsi:
+            switch section {
+            case .language: return "زبان"
+            case .cognition: return "شناخت و حافظه"
+            case .functionalSkills: return "مهارت‌های روزمره"
             }
         }
     }
