@@ -1,5 +1,7 @@
 import SwiftUI
+#if os(iOS)
 import UIKit
+#endif
 
 struct ExerciseContainerView: View {
     let exercise: Exercise
@@ -28,7 +30,11 @@ struct ExerciseContainerView: View {
                     ProgressView()
                         .scaleEffect(1.2)
                     Text("सत्र की तैयारी हो रही है...")
+                        #if os(tvOS)
+                        .font(.body)
+                        #else
                         .font(.footnote)
+                        #endif
                         .foregroundColor(.secondary)
                 }
                 .onAppear {
@@ -65,7 +71,7 @@ struct ExerciseContainerView: View {
                             }
                             .padding(.horizontal, 24)
                             .padding(.vertical, 16)
-                            .background(Color(.secondarySystemGroupedBackground))
+                            .background(Color.secondaryGroupedBackground)
                             .cornerRadius(12)
                             .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1.5)
 
@@ -96,7 +102,7 @@ struct ExerciseContainerView: View {
                                         .foregroundColor(.primary)
                                         .frame(maxWidth: .infinity)
                                         .frame(height: 50)
-                                        .background(Color(.secondarySystemGroupedBackground))
+                                        .background(Color.secondaryGroupedBackground)
                                         .cornerRadius(12)
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 12)
@@ -163,7 +169,11 @@ struct ExerciseContainerView: View {
                             // Progress Header (e.g. Question 1 of 5)
                             HStack {
                                 Text("\(questionLabel) \(currentIndex + 1) \(ofLabel) \(sessionItems.count)")
+                                    #if os(tvOS)
+                                    .font(.title3)
+                                    #else
                                     .font(.subheadline)
+                                    #endif
                                     .foregroundColor(.secondary)
                                     .fontWeight(.medium)
 
@@ -177,13 +187,21 @@ struct ExerciseContainerView: View {
                             // Exercise title and instructions header
                             VStack(spacing: 4) {
                                 Text(exercise.title)
+                                    #if os(tvOS)
+                                    .font(.callout)
+                                    #else
                                     .font(.caption)
+                                    #endif
                                     .foregroundColor(.secondary)
                                     .textCase(.uppercase)
                                     .tracking(0.5)
                                     .multilineTextAlignment(.center)
                                 Text(exercise.instructions)
+                                    #if os(tvOS)
+                                    .font(.title3)
+                                    #else
                                     .font(.subheadline)
+                                    #endif
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
                                     .multilineTextAlignment(.center)
@@ -285,13 +303,15 @@ struct ExerciseContainerView: View {
                         .padding(.top, 10)
                         .padding(.bottom, 8)
                     }
-                    .background(Color(.systemBackground))
+                    .background(Color.systemBackground)
                     .shadow(color: .black.opacity(0.06), radius: 4, x: 0, y: -2)
                 }
             }
         }
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-        .background(Color(.systemGroupedBackground))
+        #endif
+        .background(Color.groupedBackground)
         .onAppear {
             if sessionItems.isEmpty {
                 initializeSession()
@@ -375,11 +395,13 @@ struct ExerciseContainerView: View {
         ResearchExportManager.appendSessionRecord(record)
 
         // Haptic feedback on session completion
+        #if os(iOS)
         if score == sessionItems.count {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         } else {
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         }
+        #endif
     }
 
     private func triggerConfetti(screenSize: CGSize, particleCount: Int = 80) {

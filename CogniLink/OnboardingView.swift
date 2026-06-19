@@ -9,6 +9,7 @@ struct OnboardingView: View {
     @State private var selectedLanguage: AppLanguage = .english
 
     var body: some View {
+        #if os(iOS)
         ZStack(alignment: .bottom) {
             TabView(selection: $currentPage) {
                 welcomePage.tag(0)
@@ -19,7 +20,23 @@ struct OnboardingView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             .animation(.easeInOut, value: currentPage)
         }
-        .background(Color(.systemBackground).ignoresSafeArea())
+        .background(Color.systemBackground.ignoresSafeArea())
+        #else
+        ZStack {
+            Color.systemBackground.ignoresSafeArea()
+            Group {
+                if currentPage == 0 { welcomePage }
+                else if currentPage == 1 { languagePage }
+                else if currentPage == 2 { namePage }
+                else { readyPage }
+            }
+            .transition(.asymmetric(
+                insertion: .move(edge: .trailing),
+                removal: .move(edge: .leading)
+            ))
+            .animation(.easeInOut(duration: 0.3), value: currentPage)
+        }
+        #endif
     }
 
     // MARK: - Screen 1: Welcome
@@ -39,12 +56,20 @@ struct OnboardingView: View {
             .padding(.bottom, 40)
 
             Text("Welcome to Clarity")
+                #if os(tvOS)
+                .font(.system(size: 52, weight: .bold))
+                #else
                 .font(.system(size: 34, weight: .bold, design: .rounded))
+                #endif
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
             Text("Language and memory exercises,\ndesigned for you — in your language.")
+                #if os(tvOS)
+                .font(.title2)
+                #else
                 .font(.system(size: 18, design: .rounded))
+                #endif
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
@@ -67,12 +92,20 @@ struct OnboardingView: View {
             Spacer().frame(height: 60)
 
             Text("Choose Your Language")
+                #if os(tvOS)
+                .font(.system(size: 52, weight: .bold))
+                #else
                 .font(.system(size: 30, weight: .bold, design: .rounded))
+                #endif
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
             Text("You can change this anytime in Settings.")
+                #if os(tvOS)
+                .font(.title2)
+                #else
                 .font(.system(size: 16, design: .rounded))
+                #endif
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
@@ -125,8 +158,8 @@ struct OnboardingView: View {
                 isSelected
                     ? LinearGradient(colors: [.orange, .pink],
                                      startPoint: .leading, endPoint: .trailing)
-                    : LinearGradient(colors: [Color(.secondarySystemGroupedBackground),
-                                              Color(.secondarySystemGroupedBackground)],
+                    : LinearGradient(colors: [Color.secondaryGroupedBackground,
+                                              Color.secondaryGroupedBackground],
                                      startPoint: .leading, endPoint: .trailing)
             )
             .cornerRadius(14)
@@ -134,6 +167,7 @@ struct OnboardingView: View {
                     radius: isSelected ? 6 : 2, x: 0, y: 2)
         }
         .buttonStyle(PlainButtonStyle())
+        .tvFocusEffect()
     }
 
     @ViewBuilder
@@ -150,12 +184,12 @@ struct OnboardingView: View {
                 .foregroundColor(.secondary)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 4)
-                .background(Color(.tertiarySystemGroupedBackground))
+                .background(Color.tertiaryGroupedBackground)
                 .cornerRadius(8)
         }
         .padding(.horizontal, 20)
         .frame(height: 60)
-        .background(Color(.secondarySystemGroupedBackground).opacity(0.5))
+        .background(Color.secondaryGroupedBackground.opacity(0.5))
         .cornerRadius(14)
     }
 
@@ -176,12 +210,20 @@ struct OnboardingView: View {
             .padding(.bottom, 32)
 
             Text("What should we call you?")
+                #if os(tvOS)
+                .font(.system(size: 52, weight: .bold))
+                #else
                 .font(.system(size: 30, weight: .bold, design: .rounded))
+                #endif
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
             Text("We'll use your name to personalize\nyour experience.")
+                #if os(tvOS)
+                .font(.title2)
+                #else
                 .font(.system(size: 16, design: .rounded))
+                #endif
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
@@ -191,7 +233,7 @@ struct OnboardingView: View {
                 .font(.system(size: 18, design: .rounded))
                 .multilineTextAlignment(.center)
                 .padding()
-                .background(Color(.secondarySystemGroupedBackground))
+                .background(Color.secondaryGroupedBackground)
                 .cornerRadius(14)
                 .padding(.horizontal, 32)
                 .padding(.top, 32)
@@ -211,6 +253,7 @@ struct OnboardingView: View {
                 }
                 .font(.system(size: 16, design: .rounded))
                 .foregroundColor(.secondary)
+                .tvFocusEffect()
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 60)
@@ -235,7 +278,11 @@ struct OnboardingView: View {
 
             let displayName = name.trimmingCharacters(in: .whitespaces)
             Text(displayName.isEmpty ? "You're all set!" : "You're all set, \(displayName)!")
+                #if os(tvOS)
+                .font(.system(size: 52, weight: .bold))
+                #else
                 .font(.system(size: 30, weight: .bold, design: .rounded))
+                #endif
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
@@ -296,7 +343,7 @@ struct OnboardingView: View {
             Spacer()
         }
         .padding(16)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(14)
     }
 
@@ -321,5 +368,6 @@ struct OnboardingView: View {
                 .shadow(color: Color.orange.opacity(0.4), radius: 8, x: 0, y: 4)
         }
         .buttonStyle(PlainButtonStyle())
+        .tvFocusEffect()
     }
 }

@@ -57,7 +57,11 @@ struct AllActivitiesView: View {
                     }
                 }
             }
+            #if os(iOS)
             .listStyle(InsetGroupedListStyle())
+            #else
+            .listStyle(.plain)
+            #endif
             
             // MARK: - "Surprise Me!" Bottom Button Bar
             VStack {
@@ -78,14 +82,16 @@ struct AllActivitiesView: View {
                     .padding(.vertical, 10)
                 }
             }
-            .background(Color(.systemGroupedBackground))
+            .background(Color.groupedBackground)
             // This is now fully valid as Exercise conforms to Hashable
             .navigationDestination(item: $surpriseExercise) { exercise in
                 ExerciseContainerView(exercise: exercise)
             }
         }
         .navigationTitle(allActivitiesTitle)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.large)
+        #endif
     }
     
     // MARK: - Row Helper

@@ -102,8 +102,10 @@ struct AppProgressView: View {
                 .padding(.bottom, 32)
             }
             .navigationTitle("My Progress")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color(.systemGroupedBackground).ignoresSafeArea())
+            #endif
+            .background(Color.groupedBackground.ignoresSafeArea())
             .onAppear { loadAllData() }
             .alert("Reset All Progress", isPresented: $showResetAlert) {
                 Button("Cancel", role: .cancel) {}
@@ -167,7 +169,7 @@ struct AppProgressView: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: color.opacity(0.12), radius: 6, x: 0, y: 3)
         .overlay(
@@ -213,7 +215,7 @@ struct AppProgressView: View {
             .foregroundColor(.secondary)
         }
         .padding(16)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
     }
@@ -251,7 +253,7 @@ struct AppProgressView: View {
                 sectionKey: "functionalSkills"
             )
         }
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
     }
@@ -335,7 +337,7 @@ struct AppProgressView: View {
                         .foregroundColor(.secondary)
                 }
                 .padding(18)
-                .background(Color(.secondarySystemGroupedBackground))
+                .background(Color.secondaryGroupedBackground)
             }
             .buttonStyle(PlainButtonStyle())
 
@@ -364,7 +366,7 @@ struct AppProgressView: View {
                         }
                     }
                 }
-                .background(Color(.secondarySystemGroupedBackground))
+                .background(Color.secondaryGroupedBackground)
             }
         }
         .cornerRadius(16)

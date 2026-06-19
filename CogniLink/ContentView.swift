@@ -97,7 +97,11 @@ struct HomeView: View {
                     
                     // Sessions Played Count Label
                     Text(sessionsPlayedText)
+                        #if os(tvOS)
+                        .font(.title3)
+                        #else
                         .font(.subheadline)
+                        #endif
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
 
@@ -131,6 +135,7 @@ struct HomeView: View {
                         .shadow(color: .orange.opacity(0.4), radius: 8, x: 0, y: 4)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
                     .padding(.horizontal)
 
                     // MARK: - Section Navigation Cards
@@ -146,6 +151,7 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        .tvFocusEffect()
 
                         Button {
                             sectionExercise = randomExercise(for: .cognition)
@@ -158,6 +164,7 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        .tvFocusEffect()
 
                         Button {
                             sectionExercise = randomExercise(for: .functionalSkills)
@@ -170,6 +177,7 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        .tvFocusEffect()
                     }
                     .padding(.horizontal)
                 }
@@ -185,8 +193,9 @@ struct HomeView: View {
                 ExerciseContainerView(exercise: exercise)
             }
             .navigationTitle("Clarity")
-            .background(Color(.systemGroupedBackground))
+            .background(Color.groupedBackground)
             .toolbar {
+                #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: ProfileView()) {
                         Text(languageManager.currentLanguage.flagEmoji)
@@ -194,6 +203,7 @@ struct HomeView: View {
                             .frame(width: 44, height: 44)
                     }
                 }
+                #endif
             }
         }
     }
@@ -363,7 +373,12 @@ struct HomeView: View {
 
     private var cardSubtitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Tap for a random activity"
+        case .english:
+            #if os(tvOS)
+            return "Select for a random activity"
+            #else
+            return "Tap for a random activity"
+            #endif
         case .spanish: return "Toca para una actividad aleatoria"
         case .hindi: return "यादृच्छिक गतिविधि के लिए टैप करें"
         case .gujarati: return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
@@ -443,7 +458,11 @@ struct HomeView: View {
                     .foregroundColor(.primary)
                 
                 Text(subtitle)
+                    #if os(tvOS)
+                    .font(.title3)
+                    #else
                     .font(.subheadline)
+                    #endif
                     .foregroundColor(.secondary)
             }
             
@@ -454,7 +473,7 @@ struct HomeView: View {
                 .foregroundColor(.secondary)
         }
         .padding()
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.02), radius: 2, x: 0, y: 1)
     }

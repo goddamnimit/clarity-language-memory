@@ -1,5 +1,7 @@
 import SwiftUI
+#if os(iOS)
 import PhotosUI
+#endif
 
 struct ProfileView: View {
     @ObservedObject var languageManager = LanguageManager.shared
@@ -8,7 +10,9 @@ struct ProfileView: View {
     @State private var nameInput: String = ""
     @State private var therapistInput: String = ""
     @State private var notesInput: String = ""
+    #if os(iOS)
     @State private var selectedPhotoItem: PhotosPickerItem? = nil
+    #endif
     @State private var showDiagnosisPicker = false
     @State private var showTherapistSheet = false
     @State private var showNotesSheet = false
@@ -79,22 +83,25 @@ struct ProfileView: View {
                             }
                         }
 
+                        #if os(iOS)
                         PhotosPicker(selection: $selectedPhotoItem, matching: .images) {
                             Image(systemName: "camera.circle.fill")
                                 .font(.system(size: 32))
                                 .foregroundColor(.accentColor)
                                 .background(
                                     Circle()
-                                        .fill(Color(.systemBackground))
+                                        .fill(Color.systemBackground)
                                         .frame(width: 28, height: 28)
                                 )
                         }
                         .offset(x: 4, y: 4)
+                        #endif
                     }
                     .frame(width: 120, height: 120)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 8)
+                #if os(iOS)
                 .onChange(of: selectedPhotoItem) {
                     Task {
                         if let data = try? await selectedPhotoItem?.loadTransferable(type: Data.self) {
@@ -102,6 +109,7 @@ struct ProfileView: View {
                         }
                     }
                 }
+                #endif
 
                 // MARK: 2. Name Section
                 TextField("Enter your name", text: $nameInput)
@@ -168,7 +176,7 @@ struct ProfileView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
-                .background(Color(.secondarySystemGroupedBackground))
+                .background(Color.secondaryGroupedBackground)
                 .cornerRadius(12)
                 .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                 .padding(.horizontal)
@@ -190,7 +198,7 @@ struct ProfileView: View {
                         statCell(value: firstTryAccuracyText, label: "Accuracy")
                     }
                 }
-                .background(Color(.secondarySystemGroupedBackground))
+                .background(Color.secondaryGroupedBackground)
                 .cornerRadius(12)
                 .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                 .padding(.horizontal)
@@ -239,7 +247,7 @@ struct ProfileView: View {
                                 .background(
                                     languageManager.currentLanguage == language
                                         ? Color.accentColor
-                                        : Color(.secondarySystemGroupedBackground)
+                                        : Color.secondaryGroupedBackground
                                 )
                                 .cornerRadius(12)
                                 .shadow(color: Color.black.opacity(0.05), radius: 2, x: 0, y: 1)
@@ -294,7 +302,7 @@ struct ProfileView: View {
                         }
                         .padding()
                         .frame(minHeight: 50)
-                        .background(Color(.secondarySystemGroupedBackground))
+                        .background(Color.secondaryGroupedBackground)
                         .cornerRadius(12)
                         .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                     }
@@ -327,7 +335,7 @@ struct ProfileView: View {
                             }
                             .padding()
                             .frame(minHeight: 50)
-                            .background(Color(.secondarySystemGroupedBackground))
+                            .background(Color.secondaryGroupedBackground)
                             .cornerRadius(12)
                             .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                         }
@@ -365,8 +373,10 @@ struct ProfileView: View {
             .padding(.vertical)
         }
         .navigationTitle("My Profile")
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
-        .background(Color(.systemGroupedBackground))
+        #endif
+        .background(Color.groupedBackground)
         .onAppear {
             nameInput = store.profile.name
             therapistInput = store.profile.therapistName ?? ""
@@ -376,19 +386,23 @@ struct ProfileView: View {
         .alert("Keyboard Tip", isPresented: $showKeyboardTip) {
             Button("Got it") { }
             Button("Open Settings") {
+                #if os(iOS)
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url)
                 }
+                #endif
             }
         } message: {
             Text("For the best experience with \(keyboardTipLanguage?.displayName ?? "this language"), add the keyboard in iPhone Settings → General → Keyboard → Keyboards → Add New Keyboard.")
         }
         // Sheet must live at the ScrollView level — attaching to inner views causes blank presentation
+        #if os(iOS)
         .sheet(isPresented: $showShareSheet) {
             if let url = exportURL {
                 ShareSheet(items: [url])
             }
         }
+        #endif
     }
 
     // MARK: - Reusable Row
@@ -461,7 +475,9 @@ struct ProfileView: View {
                 }
             }
             .navigationTitle("Diagnosis")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { showDiagnosisPicker = false }
@@ -476,14 +492,16 @@ struct ProfileView: View {
                 TextField("Therapist name", text: $therapistInput)
                     .font(.body)
                     .padding()
-                    .background(Color(.secondarySystemGroupedBackground))
+                    .background(Color.secondaryGroupedBackground)
                     .cornerRadius(12)
                     .padding(.horizontal)
                 Spacer()
             }
             .padding(.top, 24)
             .navigationTitle("Therapist")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { showTherapistSheet = false }
@@ -500,22 +518,31 @@ struct ProfileView: View {
 
     private var notesSheet: some View {
         NavigationStack {
+            #if os(iOS)
             TextEditor(text: $notesInput)
                 .font(.body)
                 .padding()
-                .navigationTitle("Notes")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
-                        Button("Cancel") { showNotesSheet = false }
-                    }
-                    ToolbarItem(placement: .confirmationAction) {
-                        Button("Save") {
-                            store.updateNotes(notesInput)
-                            showNotesSheet = false
-                        }
-                    }
+            #else
+            Text(notesInput.isEmpty ? "No notes." : notesInput)
+                .font(.body)
+                .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            #endif
+        }
+        .navigationTitle("Notes")
+        #if os(iOS)
+        .navigationBarTitleDisplayMode(.inline)
+        #endif
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") { showNotesSheet = false }
+            }
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    store.updateNotes(notesInput)
+                    showNotesSheet = false
                 }
+            }
         }
     }
 
@@ -558,6 +585,7 @@ struct ProfileView: View {
 
 // MARK: - ShareSheet (UIActivityViewController wrapper)
 
+#if os(iOS)
 struct ShareSheet: UIViewControllerRepresentable {
     let items: [Any]
 
@@ -567,3 +595,4 @@ struct ShareSheet: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
+#endif

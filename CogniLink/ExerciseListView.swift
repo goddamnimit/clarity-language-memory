@@ -63,7 +63,9 @@ struct ExerciseListView: View {
             }
         }
         .navigationTitle(sectionTitle)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
     
     // MARK: - Localized Properties

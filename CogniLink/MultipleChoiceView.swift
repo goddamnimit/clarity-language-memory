@@ -1,4 +1,7 @@
 import SwiftUI
+#if os(iOS)
+import UIKit
+#endif
 
 /// A reusable multiple-choice option selector designed with randomized choice ordering.
 struct MultipleChoiceView: View {
@@ -9,6 +12,8 @@ struct MultipleChoiceView: View {
     @State private var hasAnswered = false
     @State private var answeredCorrectly = false
     @State private var shuffledOptions: [String] = [] // Stores the randomized choice order
+    @State private var tappedOption: String? = nil
+    @State private var shakeOption: String? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -27,15 +32,23 @@ struct MultipleChoiceView: View {
                     Button(action: {
                         selectOption(option)
                     }) {
+                        #if os(tvOS)
+                        AnswerOptionCard(
+                            option: option,
+                            hasAnswered: hasAnswered,
+                            isCorrect: isCorrectOption(option),
+                            isSelected: selectedOption == option
+                        )
+                        #else
                         HStack {
                             Text(option)
-                                .font(.body) // Minimum 17pt font size
+                                .font(.body)
                                 .fontWeight(.semibold)
                                 .foregroundColor(textColor(for: option))
                                 .multilineTextAlignment(.leading)
-                            
+
                             Spacer()
-                            
+
                             // Visual feedback icons revealed post-answer
                             if hasAnswered {
                                 if isCorrectOption(option) {
@@ -51,17 +64,22 @@ struct MultipleChoiceView: View {
                         }
                         .padding(.horizontal, 20)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56) // Generous tap target height (exceeds 44pt)
+                        .frame(height: 56)
                         .background(backgroundColor(for: option))
-                        .cornerRadius(16) // Explicit 16pt rounded corners
+                        .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
                                 .stroke(borderColor(for: option), lineWidth: 2)
                         )
+                        #endif
                     }
                     .disabled(hasAnswered) // Disable further tapping after an answer is chosen
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
                     .opacity(buttonOpacity(for: option)) // Slightly fades unselected wrong buttons
+                    .scaleEffect(tappedOption == option ? 1.05 : 1.0)
+                    .modifier(ShakeEffect(animatableData: shakeOption == option ? 1 : 0))
+                    .animation(.spring(response: 0.2, dampingFraction: 0.6), value: tappedOption)
                 }
             }
 
@@ -78,7 +96,7 @@ struct MultipleChoiceView: View {
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50) // Tap target height > 44pt
-                    .background(Color(.systemBackground))
+                    .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -87,10 +105,12 @@ struct MultipleChoiceView: View {
                     .padding(.top, 10)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .tvFocusEffect()
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .padding(20) // Generous container padding
-        .background(Color(.secondarySystemGroupedBackground)) // Adaptive color for dark mode
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         // FIXED: Only onAppear is needed because the view is completely destroyed and recreated on transitions
@@ -102,10 +122,33 @@ struct MultipleChoiceView: View {
     // MARK: - State and Layout Helper Functions
 
     private func selectOption(_ option: String) {
+        // Brief scale pulse on tap
+        tappedOption = option
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            tappedOption = nil
+        }
         selectedOption = option
-        hasAnswered = true
         let isCorrect = isCorrectOption(option)
         answeredCorrectly = isCorrect
+        // Shake wrong answer
+        if !isCorrect {
+            shakeOption = option
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                shakeOption = nil
+            }
+        }
+        // Haptic feedback
+        #if os(iOS)
+        if isCorrect {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        } else {
+            UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        }
+        #endif
+        // Animate hasAnswered so Try Again slides in
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
+            hasAnswered = true
+        }
         onAnswered(isCorrect)
     }
 
@@ -123,14 +166,14 @@ struct MultipleChoiceView: View {
 
     private func backgroundColor(for option: String) -> Color {
         guard hasAnswered else {
-            return Color(.systemBackground)
+            return Color.systemBackground
         }
         if isCorrectOption(option) {
             return .green
         } else if selectedOption == option {
             return .red
         }
-        return Color(.systemBackground)
+        return Color.systemBackground
     }
 
     private func borderColor(for option: String) -> Color {
@@ -161,5 +204,85 @@ struct MultipleChoiceView: View {
             return 1.0
         }
         return 0.5 // Non-selected wrong answers fade out to highlight feedback
+    }
+}
+
+// MARK: - tvOS Answer Option Card
+
+#if os(tvOS)
+private struct AnswerOptionCard: View {
+    let option: String
+    let hasAnswered: Bool
+    let isCorrect: Bool
+    let isSelected: Bool
+
+    @Environment(\.isFocused) var isFocused
+
+    var body: some View {
+        HStack {
+            Text(option)
+                .font(.title3)
+                .fontWeight(.semibold)
+                .foregroundColor(resolvedTextColor)
+                .multilineTextAlignment(.leading)
+            Spacer()
+            if hasAnswered {
+                if isCorrect {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.white)
+                        .font(.title3)
+                } else if isSelected {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.white)
+                        .font(.title3)
+                }
+            }
+        }
+        .padding(.horizontal, 20)
+        .frame(maxWidth: .infinity)
+        .frame(minHeight: 110)
+        .background(resolvedBackground)
+        .cornerRadius(16)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(resolvedBorder, lineWidth: 2)
+        )
+    }
+
+    private var resolvedTextColor: Color {
+        if hasAnswered { return (isCorrect || isSelected) ? .white : .primary }
+        return isFocused ? .white : .primary
+    }
+
+    private var resolvedBackground: Color {
+        if hasAnswered {
+            if isCorrect { return .green }
+            if isSelected { return .red }
+            return Color.systemBackground
+        }
+        return isFocused ? Color.accentColor : Color.systemBackground
+    }
+
+    private var resolvedBorder: Color {
+        if hasAnswered {
+            if isCorrect { return .green }
+            if isSelected { return .red }
+            return Color.gray.opacity(0.2)
+        }
+        return isFocused ? Color.accentColor : Color.gray.opacity(0.3)
+    }
+}
+#endif
+
+// MARK: - Shake Effect
+
+struct ShakeEffect: GeometryEffect {
+    var animatableData: CGFloat
+
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        let translation = 6 * sin(animatableData * .pi * 3)
+        return ProjectionTransform(
+            CGAffineTransform(translationX: translation, y: 0)
+        )
     }
 }

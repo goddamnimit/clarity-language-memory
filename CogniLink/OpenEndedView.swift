@@ -22,18 +22,18 @@ struct OpenEndedView: View {
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
 
+            #if os(iOS)
             // Multiline text editor with placeholder overlay
             ZStack(alignment: .topLeading) {
                 if userInput.isEmpty {
                     Text("Type your answer here...")
-                        .font(.body) // 17pt minimum size
+                        .font(.body)
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 12)
-                        .allowsHitTesting(false) // Directs keyboard focus taps to the underlying editor
+                        .allowsHitTesting(false)
                 }
 
-                // FIXED: Used a custom Binding to capture typing, removing the deprecated .onChange modifier entirely
                 TextEditor(text: Binding(
                     get: { userInput },
                     set: { newValue in
@@ -43,8 +43,8 @@ struct OpenEndedView: View {
                 ))
                 .font(.body)
                 .padding(8)
-                .frame(minHeight: 120) // 120pt minimum height requirement
-                .background(Color(.systemBackground))
+                .frame(minHeight: 120)
+                .background(Color.systemBackground)
                 .cornerRadius(12)
                 .focused($isInputActive)
                 .environment(\.locale,
@@ -54,6 +54,18 @@ struct OpenEndedView: View {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
             )
+            #else
+            Text("Text input not available on this platform.")
+                .font(.body)
+                .foregroundColor(.secondary)
+                .frame(minHeight: 80)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(16)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
+                )
+            #endif
 
             // Action Row: Clear and Show Answer Buttons
             HStack(spacing: 16) {
@@ -124,10 +136,11 @@ struct OpenEndedView: View {
             }
         }
         .padding(20)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         // Keyboard Tool bar addition: Dismiss key
+        #if os(iOS)
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
@@ -136,6 +149,7 @@ struct OpenEndedView: View {
                 }
             }
         }
+        #endif
     }
 
     // MARK: - Logic and Helper Functions

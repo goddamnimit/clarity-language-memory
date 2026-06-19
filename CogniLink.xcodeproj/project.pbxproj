@@ -21,12 +21,29 @@
 			remoteGlobalIDString = 096B03F92FCD05D9004A96A3;
 			remoteInfo = CogniLink;
 		};
+		09987EC92FE46B5600EDF7C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09987EB62FE46B5300EDF7C1;
+			remoteInfo = ClarityTV;
+		};
+		09987ED32FE46B5600EDF7C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09987EB62FE46B5300EDF7C1;
+			remoteInfo = ClarityTV;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		096B03FA2FCD05D9004A96A3 /* CogniLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CogniLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		096B04072FCD05DC004A96A3 /* CogniLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CogniLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		096B04112FCD05DC004A96A3 /* CogniLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CogniLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09987EB72FE46B5300EDF7C1 /* ClarityTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClarityTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09987EC82FE46B5600EDF7C1 /* ClarityTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClarityTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClarityTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +60,21 @@
 		096B04142FCD05DC004A96A3 /* CogniLinkUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CogniLinkUITests;
+			sourceTree = "<group>";
+		};
+		09987EB82FE46B5300EDF7C1 /* ClarityTV */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ClarityTV;
+			sourceTree = "<group>";
+		};
+		09987ECB2FE46B5600EDF7C1 /* ClarityTVTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ClarityTVTests;
+			sourceTree = "<group>";
+		};
+		09987ED52FE46B5600EDF7C1 /* ClarityTVUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ClarityTVUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +101,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09987EB42FE46B5300EDF7C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987EC52FE46B5600EDF7C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987ECF2FE46B5600EDF7C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +131,9 @@
 				096B03FC2FCD05D9004A96A3 /* CogniLink */,
 				096B040A2FCD05DC004A96A3 /* CogniLinkTests */,
 				096B04142FCD05DC004A96A3 /* CogniLinkUITests */,
+				09987EB82FE46B5300EDF7C1 /* ClarityTV */,
+				09987ECB2FE46B5600EDF7C1 /* ClarityTVTests */,
+				09987ED52FE46B5600EDF7C1 /* ClarityTVUITests */,
 				096B03FB2FCD05D9004A96A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +144,9 @@
 				096B03FA2FCD05D9004A96A3 /* CogniLink.app */,
 				096B04072FCD05DC004A96A3 /* CogniLinkTests.xctest */,
 				096B04112FCD05DC004A96A3 /* CogniLinkUITests.xctest */,
+				09987EB72FE46B5300EDF7C1 /* ClarityTV.app */,
+				09987EC82FE46B5600EDF7C1 /* ClarityTVTests.xctest */,
+				09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +222,75 @@
 			productReference = 096B04112FCD05DC004A96A3 /* CogniLinkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		09987EB62FE46B5300EDF7C1 /* ClarityTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09987EDE2FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTV" */;
+			buildPhases = (
+				09987EB32FE46B5300EDF7C1 /* Sources */,
+				09987EB42FE46B5300EDF7C1 /* Frameworks */,
+				09987EB52FE46B5300EDF7C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				096B03FC2FCD05D9004A96A3 /* CogniLink */,
+				09987EB82FE46B5300EDF7C1 /* ClarityTV */,
+			);
+			name = ClarityTV;
+			packageProductDependencies = (
+			);
+			productName = ClarityTV;
+			productReference = 09987EB72FE46B5300EDF7C1 /* ClarityTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09987EC72FE46B5600EDF7C1 /* ClarityTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09987EDF2FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTVTests" */;
+			buildPhases = (
+				09987EC42FE46B5600EDF7C1 /* Sources */,
+				09987EC52FE46B5600EDF7C1 /* Frameworks */,
+				09987EC62FE46B5600EDF7C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09987ECA2FE46B5600EDF7C1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				09987ECB2FE46B5600EDF7C1 /* ClarityTVTests */,
+			);
+			name = ClarityTVTests;
+			packageProductDependencies = (
+			);
+			productName = ClarityTVTests;
+			productReference = 09987EC82FE46B5600EDF7C1 /* ClarityTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09987ED12FE46B5600EDF7C1 /* ClarityTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09987EE02FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTVUITests" */;
+			buildPhases = (
+				09987ECE2FE46B5600EDF7C1 /* Sources */,
+				09987ECF2FE46B5600EDF7C1 /* Frameworks */,
+				09987ED02FE46B5600EDF7C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09987ED42FE46B5600EDF7C1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				09987ED52FE46B5600EDF7C1 /* ClarityTVUITests */,
+			);
+			name = ClarityTVUITests;
+			packageProductDependencies = (
+			);
+			productName = ClarityTVUITests;
+			productReference = 09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,7 +298,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2650;
+				LastSwiftUpdateCheck = 2700;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					096B03F92FCD05D9004A96A3 = {
@@ -183,6 +311,17 @@
 					096B04102FCD05DC004A96A3 = {
 						CreatedOnToolsVersion = 26.5;
 						TestTargetID = 096B03F92FCD05D9004A96A3;
+					};
+					09987EB62FE46B5300EDF7C1 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					09987EC72FE46B5600EDF7C1 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 09987EB62FE46B5300EDF7C1;
+					};
+					09987ED12FE46B5600EDF7C1 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 09987EB62FE46B5300EDF7C1;
 					};
 				};
 			};
@@ -203,6 +342,9 @@
 				096B03F92FCD05D9004A96A3 /* CogniLink */,
 				096B04062FCD05DC004A96A3 /* CogniLinkTests */,
 				096B04102FCD05DC004A96A3 /* CogniLinkUITests */,
+				09987EB62FE46B5300EDF7C1 /* ClarityTV */,
+				09987EC72FE46B5600EDF7C1 /* ClarityTVTests */,
+				09987ED12FE46B5600EDF7C1 /* ClarityTVUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +365,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		096B040F2FCD05DC004A96A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987EB52FE46B5300EDF7C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987EC62FE46B5600EDF7C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987ED02FE46B5600EDF7C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +416,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09987EB32FE46B5300EDF7C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987EC42FE46B5600EDF7C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09987ECE2FE46B5600EDF7C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +449,16 @@
 			isa = PBXTargetDependency;
 			target = 096B03F92FCD05D9004A96A3 /* CogniLink */;
 			targetProxy = 096B04122FCD05DC004A96A3 /* PBXContainerItemProxy */;
+		};
+		09987ECA2FE46B5600EDF7C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09987EB62FE46B5300EDF7C1 /* ClarityTV */;
+			targetProxy = 09987EC92FE46B5600EDF7C1 /* PBXContainerItemProxy */;
+		};
+		09987ED42FE46B5600EDF7C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09987EB62FE46B5300EDF7C1 /* ClarityTV */;
+			targetProxy = 09987ED32FE46B5600EDF7C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,16 +594,19 @@
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Main.CogniLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -432,16 +629,19 @@
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Main.CogniLink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -538,6 +738,162 @@
 			};
 			name = Release;
 		};
+		09987ED82FE46B5600EDF7C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.6;
+			};
+			name = Debug;
+		};
+		09987ED92FE46B5600EDF7C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.6;
+			};
+			name = Release;
+		};
+		09987EDA2FE46B5600EDF7C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClarityTV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClarityTV";
+				TVOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		09987EDB2FE46B5600EDF7C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClarityTV.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ClarityTV";
+				TVOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
+		09987EDC2FE46B5600EDF7C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = ClarityTV;
+				TVOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		09987EDD2FE46B5600EDF7C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.ClarityTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = ClarityTV;
+				TVOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +929,33 @@
 			buildConfigurations = (
 				096B04222FCD05DC004A96A3 /* Debug */,
 				096B04232FCD05DC004A96A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09987EDE2FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09987ED82FE46B5600EDF7C1 /* Debug */,
+				09987ED92FE46B5600EDF7C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09987EDF2FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09987EDA2FE46B5600EDF7C1 /* Debug */,
+				09987EDB2FE46B5600EDF7C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09987EE02FE46B5600EDF7C1 /* Build configuration list for PBXNativeTarget "ClarityTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09987EDC2FE46B5600EDF7C1 /* Debug */,
+				09987EDD2FE46B5600EDF7C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

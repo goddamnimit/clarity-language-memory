@@ -28,6 +28,7 @@ struct SequencingView: View {
                 .foregroundColor(.primary)
 
             // Vertical List of Scrambled Steps
+            #if os(iOS)
             VStack(spacing: 12) {
                 ForEach(item.options, id: \.self) { step in
                     Button(action: {
@@ -48,7 +49,7 @@ struct SequencingView: View {
                                 .font(.body)
                                 .foregroundColor(.primary)
                                 .multilineTextAlignment(.leading)
-                            
+
                             Spacer()
                         }
                         .padding(14)
@@ -64,8 +65,64 @@ struct SequencingView: View {
                     .buttonStyle(PlainButtonStyle())
                 }
             }
+            #endif
+
+            #if os(tvOS)
+            VStack(spacing: 16) {
+                ForEach(item.options, id: \.self) { step in
+                    HStack(spacing: 20) {
+                        Text(step)
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+
+                        HStack(spacing: 16) {
+                            Button(action: {
+                                let current = assignments[step] ?? 1
+                                if current > 1 { assignments[step] = current - 1 }
+                            }) {
+                                Image(systemName: "minus.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.accentColor)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .tvFocusEffect()
+
+                            Text("\(assignments[step] ?? 1)")
+                                .font(.title3)
+                                .monospacedDigit()
+                                .frame(minWidth: 40, alignment: .center)
+
+                            Button(action: {
+                                let current = assignments[step] ?? 1
+                                if current < item.options.count { assignments[step] = current + 1 }
+                            }) {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.accentColor)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .tvFocusEffect()
+                        }
+                    }
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 20)
+                    .background(Color.secondaryGroupedBackground)
+                    .cornerRadius(12)
+                }
+            }
+            .padding(.horizontal, 4)
+            .onAppear {
+                for step in item.options {
+                    if assignments[step] == nil {
+                        assignments[step] = 1
+                    }
+                }
+            }
+            #endif
 
             // Selector Buttons: Numbers 1 through N
+            #if os(iOS)
             if !hasChecked {
                 VStack(alignment: .center, spacing: 8) {
                     Text("Available Positions:")
@@ -91,6 +148,7 @@ struct SequencingView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
             }
+            #endif
 
             // Check Order / Correct Order / Try Again Buttons
             VStack(spacing: 12) {
@@ -107,6 +165,7 @@ struct SequencingView: View {
                             .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
                 }
 
                 if hasChecked {
@@ -122,7 +181,7 @@ struct SequencingView: View {
                         .foregroundColor(.blue)
                         .frame(maxWidth: .infinity)
                         .frame(height: 50)
-                        .background(Color(.systemBackground))
+                        .background(Color.systemBackground)
                         .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
@@ -130,6 +189,7 @@ struct SequencingView: View {
                         )
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
 
                     // Try Again Button (Resets Everything)
                     Button(action: {
@@ -147,6 +207,7 @@ struct SequencingView: View {
                         .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
                 }
             }
 
@@ -160,7 +221,11 @@ struct SequencingView: View {
                     ForEach(0..<correctSteps.count, id: \.self) { idx in
                         HStack(spacing: 12) {
                             Text("\(idx + 1)")
+                                #if os(tvOS)
+                                .font(.title3)
+                                #else
                                 .font(.subheadline)
+                                #endif
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .frame(width: 26, height: 26)
@@ -184,7 +249,7 @@ struct SequencingView: View {
             }
         }
         .padding(20)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
     }
@@ -262,7 +327,7 @@ struct SequencingView: View {
             return val == correctIndex ? Color.green.opacity(0.08) : Color.red.opacity(0.08)
         }
         
-        return Color(.systemBackground)
+        return Color.systemBackground
     }
 
     private func stepBorderColor(for step: String) -> Color {

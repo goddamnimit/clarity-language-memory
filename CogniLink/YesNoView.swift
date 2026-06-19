@@ -5,7 +5,7 @@ struct YesNoView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
 
-    @EnvironmentObject private var languageManager: LanguageManager // Observes active app language
+    @ObservedObject private var languageManager = LanguageManager.shared
     
     @State private var selectedAnswer: String? = nil
     @State private var hasAnswered = false
@@ -68,7 +68,7 @@ struct YesNoView: View {
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50) // Accessible 50pt height
-                    .background(Color(.systemBackground))
+                    .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -77,10 +77,11 @@ struct YesNoView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .tvFocusEffect()
             }
         }
         .padding(20)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         // FIXED: Only onAppear is needed because the view is fully recreated on question transitions
@@ -108,7 +109,11 @@ struct YesNoView: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 80) // 80pt minimum height requirement
+            #if os(tvOS)
+            .frame(minHeight: 110)
+            #else
+            .frame(height: 80)
+            #endif
             .background(buttonBackgroundColor(for: title, themeColor: themeColor))
             .cornerRadius(16)
             .overlay(
@@ -118,6 +123,7 @@ struct YesNoView: View {
         }
         .disabled(hasAnswered)
         .buttonStyle(PlainButtonStyle())
+        .tvFocusEffect()
         .opacity(buttonOpacity(for: title))
     }
 
@@ -150,7 +156,7 @@ struct YesNoView: View {
         } else if isSelectedOption {
             return .red
         }
-        return Color(.systemBackground)
+        return Color.systemBackground
     }
 
     private func buttonBorderColor(for title: String, themeColor: Color) -> Color {

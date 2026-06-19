@@ -31,16 +31,23 @@ struct CategoryCrossOutView: View {
                     Button(action: {
                         selectWord(word)
                     }) {
+                        #if os(tvOS)
+                        CrossOutWordCard(
+                            word: word,
+                            hasAnswered: hasAnswered,
+                            isCorrect: isCorrectOption(word),
+                            isSelected: selectedWord == word
+                        )
+                        #else
                         HStack {
                             Spacer()
                             Text(word)
-                                .font(.title3) // Prominent bold text
+                                .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(textColor(for: word))
                                 .lineLimit(1)
-                                .minimumScaleFactor(0.6) // Gracefully prevents text clipping
+                                .minimumScaleFactor(0.6)
                             Spacer()
-                            
                             if hasAnswered {
                                 Image(systemName: iconName(for: word))
                                     .font(.headline)
@@ -48,16 +55,18 @@ struct CategoryCrossOutView: View {
                             }
                         }
                         .padding(.horizontal, 12)
-                        .frame(height: 60) // 60pt minimum height requirement
+                        .frame(height: 60)
                         .background(backgroundColor(for: word))
                         .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
                                 .stroke(borderColor(for: word), lineWidth: 3)
                         )
+                        #endif
                     }
                     .disabled(hasAnswered) // Lock options once selected
                     .buttonStyle(PlainButtonStyle())
+                    .tvFocusEffect()
                     .opacity(buttonOpacity(for: word))
                 }
             }
@@ -86,7 +95,7 @@ struct CategoryCrossOutView: View {
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
-                    .background(Color(.systemBackground))
+                    .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -95,10 +104,11 @@ struct CategoryCrossOutView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .tvFocusEffect()
             }
         }
         .padding(20)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         // FIXED: Only onAppear is needed because the view is fully recreated on question transitions
@@ -131,7 +141,7 @@ struct CategoryCrossOutView: View {
 
     private func backgroundColor(for word: String) -> Color {
         guard hasAnswered else {
-            return Color(.systemBackground)
+            return Color.systemBackground
         }
         
         if isCorrectOption(word) {
@@ -139,7 +149,7 @@ struct CategoryCrossOutView: View {
         } else if selectedWord == word {
             return .red
         }
-        return Color(.systemBackground)
+        return Color.systemBackground
     }
 
     private func borderColor(for word: String) -> Color {
@@ -178,3 +188,65 @@ struct CategoryCrossOutView: View {
         return 0.4 // Fade out unselected incorrect buttons slightly
     }
 }
+
+// MARK: - tvOS Cross-Out Word Card
+
+#if os(tvOS)
+private struct CrossOutWordCard: View {
+    let word: String
+    let hasAnswered: Bool
+    let isCorrect: Bool
+    let isSelected: Bool
+
+    @Environment(\.isFocused) var isFocused
+
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(word)
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(resolvedTextColor)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+            Spacer()
+            if hasAnswered {
+                Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .font(.headline)
+                    .foregroundColor(.white)
+            }
+        }
+        .padding(.horizontal, 12)
+        .frame(minHeight: 110)
+        .background(resolvedBackground)
+        .cornerRadius(16)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(resolvedBorder, lineWidth: 3)
+        )
+    }
+
+    private var resolvedTextColor: Color {
+        if hasAnswered { return (isCorrect || isSelected) ? .white : .secondary }
+        return isFocused ? .white : .primary
+    }
+
+    private var resolvedBackground: Color {
+        if hasAnswered {
+            if isCorrect { return .green }
+            if isSelected { return .red }
+            return Color.systemBackground
+        }
+        return isFocused ? Color.accentColor : Color.systemBackground
+    }
+
+    private var resolvedBorder: Color {
+        if hasAnswered {
+            if isCorrect { return .green }
+            if isSelected { return .red }
+            return Color.gray.opacity(0.2)
+        }
+        return isFocused ? Color.accentColor : AppTheme.languageColor
+    }
+}
+#endif

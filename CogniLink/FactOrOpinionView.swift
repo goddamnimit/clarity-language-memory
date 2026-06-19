@@ -57,7 +57,7 @@ struct FactOrOpinionView: View {
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
-                    .background(Color(.systemBackground))
+                    .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
@@ -66,10 +66,11 @@ struct FactOrOpinionView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .tvFocusEffect()
             }
         }
         .padding(20)
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         // FIXED: Only onAppear is needed because the view is fully recreated on question transitions
@@ -97,7 +98,11 @@ struct FactOrOpinionView: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 70) // 70pt minimum height requirement
+            #if os(tvOS)
+            .frame(minHeight: 110)
+            #else
+            .frame(height: 70)
+            #endif
             .background(buttonBackgroundColor(for: title, themeColor: themeColor))
             .cornerRadius(16)
             .overlay(
@@ -107,6 +112,7 @@ struct FactOrOpinionView: View {
         }
         .disabled(hasAnswered)
         .buttonStyle(PlainButtonStyle())
+        .tvFocusEffect()
         .opacity(buttonOpacity(for: title))
     }
 
@@ -139,7 +145,7 @@ struct FactOrOpinionView: View {
         } else if isSelectedOption {
             return .red
         }
-        return Color(.systemBackground)
+        return Color.systemBackground
     }
 
     private func buttonBorderColor(for title: String, themeColor: Color) -> Color {
