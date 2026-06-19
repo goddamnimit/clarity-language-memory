@@ -1,56 +1,42 @@
 #if os(tvOS)
 import SwiftUI
 
-// MARK: - Hex color helper
-
-fileprivate extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        self.init(
-            red:   Double((int >> 16) & 0xFF) / 255,
-            green: Double((int >> 8)  & 0xFF) / 255,
-            blue:  Double( int        & 0xFF) / 255
-        )
-    }
-}
-
 // MARK: - Focus enum
 
-private enum TileFocus: Hashable {
+private enum CrossOutFocus: Hashable {
     case tileA, tileB, tileC, tileD
 }
 
-private let tileFocusCases: [TileFocus] = [.tileA, .tileB, .tileC, .tileD]
+private let crossOutFocusCases: [CrossOutFocus] = [.tileA, .tileB, .tileC, .tileD]
 
 // MARK: - Reveal state
 
-private enum TileRevealState: Equatable {
+private enum CrossOutRevealState: Equatable {
     case idle, correct, wrong, dimmed
 }
 
-// MARK: - TVMultipleChoiceView
+// MARK: - TVCategoryCrossOutView
 
-struct TVMultipleChoiceView: View {
+struct TVCategoryCrossOutView: View {
     let item: ExerciseItem
-    let exerciseType: ExerciseType
     let onAnswered: (Bool) -> Void
 
-    @FocusState private var focus: TileFocus?
+    @FocusState private var focus: CrossOutFocus?
     @State private var selectedOption: String? = nil
     @State private var hasAnswered = false
+    @State private var correctRevealed = false
+    @State private var shuffledOptions: [String] = []
 
-    private var options: [String] { Array(item.options.prefix(4)) }
+    private var options: [String] { Array(shuffledOptions.prefix(4)) }
 
     var body: some View {
         GeometryReader { geo in
             VStack(spacing: 0) {
-                // Top 35% — exercise type label + question prompt
-                VStack(spacing: 20) {
+                // Top 38% — type label, question prompt, instruction
+                VStack(spacing: 16) {
                     Spacer()
 
-                    Text(typeLabel)
+                    Text("Category")
                         .font(.system(size: 28, weight: .light))
                         .foregroundColor(Color.white.opacity(0.45))
                         .tracking(3)
@@ -63,23 +49,38 @@ struct TVMultipleChoiceView: View {
                         .lineLimit(3)
                         .padding(.horizontal, 120)
 
+                    Text("Tap the word that does NOT belong")
+                        .font(.system(size: 32, weight: .light).italic())
+                        .foregroundColor(Color.white.opacity(0.55))
+                        .multilineTextAlignment(.center)
+
                     Spacer()
                 }
-                .frame(height: geo.size.height * 0.35)
+                .frame(height: geo.size.height * 0.38)
 
-                // Bottom — 2×2 answer tile grid
+                // Above-grid hint
+                Text("Find the odd one out")
+                    .font(.system(size: 22, weight: .regular))
+                    .foregroundColor(Color.white.opacity(0.35))
+                    .padding(.bottom, 12)
+
+                // 2×2 word tile grid
                 LazyVGrid(
                     columns: [GridItem(.flexible()), GridItem(.flexible())],
                     spacing: 32
                 ) {
-                    ForEach(0..<min(options.count, tileFocusCases.count), id: \.self) { index in
+                    ForEach(0..<min(options.count, crossOutFocusCases.count), id: \.self) { index in
                         let option = options[index]
-                        let focusCase = tileFocusCases[index]
+                        let focusCase = crossOutFocusCases[index]
                         Button {
                             guard !hasAnswered else { return }
                             selectOption(option)
                         } label: {
-                            AnswerTile(text: option, revealState: revealState(for: option))
+                            CrossOutTile(
+                                text: option,
+                                revealState: revealState(for: option),
+                                correctRevealed: correctRevealed
+                            )
                         }
                         .buttonStyle(.plain)
                         .focused($focus, equals: focusCase)
@@ -87,10 +88,11 @@ struct TVMultipleChoiceView: View {
                     }
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
-                .padding(.top, 16)
+                .padding(.top, 4)
             }
         }
         .onAppear {
+            shuffledOptions = item.options.shuffled()
             focus = .tileA
         }
     }
@@ -99,11 +101,16 @@ struct TVMultipleChoiceView: View {
 
     private func selectOption(_ option: String) {
         selectedOption = option
-        let isCorrect = isCorrectOption(option)
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-            hasAnswered = true
-        }
+        hasAnswered = true
         focus = nil
+
+        let isCorrect = isCorrectOption(option)
+
+        // Trigger the 0.4s scale-up on the correct tile
+        withAnimation(.easeOut(duration: 0.4)) {
+            correctRevealed = true
+        }
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             onAnswered(isCorrect)
         }
@@ -114,34 +121,20 @@ struct TVMultipleChoiceView: View {
         item.correctAnswer.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     }
 
-    private func revealState(for option: String) -> TileRevealState {
+    private func revealState(for option: String) -> CrossOutRevealState {
         guard hasAnswered else { return .idle }
         if isCorrectOption(option) { return .correct }
         if selectedOption == option { return .wrong }
         return .dimmed
     }
-
-    private var typeLabel: String {
-        switch exerciseType {
-        case .multipleChoice:     return "Multiple Choice"
-        case .yesNo:              return "Yes or No"
-        case .factOrOpinion:      return "Fact or Opinion"
-        case .sentenceCompletion: return "Fill in the Blank"
-        case .analogyChoice:      return "Analogy"
-        case .homonym:            return "Homonym"
-        case .matching:           return "Matching"
-        case .categoryCrossOut:   return "Category"
-        case .openEnded:          return "Open Ended"
-        case .sequencing:         return "Sequencing"
-        }
-    }
 }
 
-// MARK: - AnswerTile
+// MARK: - CrossOutTile
 
-private struct AnswerTile: View {
+private struct CrossOutTile: View {
     let text: String
-    let revealState: TileRevealState
+    let revealState: CrossOutRevealState
+    let correctRevealed: Bool
 
     @Environment(\.isFocused) private var isFocused
 
@@ -155,7 +148,7 @@ private struct AnswerTile: View {
                 )
 
             Text(text)
-                .font(.system(size: 38, weight: .bold, design: .rounded))
+                .font(.system(size: 42, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 16)
@@ -174,10 +167,17 @@ private struct AnswerTile: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: 160)
-        .scaleEffect(isFocused && revealState == .idle ? 1.06 : 1.0)
+        // Correct tile scales up 0.4s when revealed; focused idle tiles scale slightly
+        .scaleEffect(correctScale)
         .opacity(revealState == .dimmed ? 0.35 : 1.0)
-        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: revealState)
+        .animation(.easeOut(duration: 0.4), value: correctRevealed)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+
+    private var correctScale: CGFloat {
+        if revealState == .correct && correctRevealed { return 1.08 }
+        if isFocused && revealState == .idle { return 1.06 }
+        return 1.0
     }
 
     private var tileBackground: Color {
@@ -187,6 +187,21 @@ private struct AnswerTile: View {
         case .wrong:   return Color(hex: "E74C3C")
         case .dimmed:  return Color(hex: "2D2D44")
         }
+    }
+}
+
+// MARK: - Hex color helper
+
+fileprivate extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        self.init(
+            red:   Double((int >> 16) & 0xFF) / 255,
+            green: Double((int >> 8)  & 0xFF) / 255,
+            blue:  Double( int        & 0xFF) / 255
+        )
     }
 }
 #endif

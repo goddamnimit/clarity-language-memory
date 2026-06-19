@@ -481,38 +481,4 @@ private struct TVCompletionButton: View {
     }
 }
 
-// MARK: - Exercise View Stubs (replace progressively)
-
-struct TVCategoryCrossOutView: View {
-    let item: ExerciseItem
-    let onAnswered: (Bool) -> Void
-
-    var body: some View {
-        Text("Category Cross-Out — Coming Soon")
-            .font(.system(size: 40, weight: .medium, design: .rounded))
-            .foregroundColor(Color.white.opacity(0.6))
-    }
-}
-
-struct TVSequencingView: View {
-    let item: ExerciseItem
-    let onAnswered: (Bool) -> Void
-
-    var body: some View {
-        Text("Sequencing — Coming Soon")
-            .font(.system(size: 40, weight: .medium, design: .rounded))
-            .foregroundColor(Color.white.opacity(0.6))
-    }
-}
-
-struct TVOpenEndedView: View {
-    let item: ExerciseItem
-    let onAnswered: (Bool) -> Void
-
-    var body: some View {
-        Text("Open Ended — Coming Soon")
-            .font(.system(size: 40, weight: .medium, design: .rounded))
-            .foregroundColor(Color.white.opacity(0.6))
-    }
-}
 #endif
