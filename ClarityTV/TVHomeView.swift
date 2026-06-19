@@ -204,19 +204,4 @@ private struct TVLanguageChip: View {
     }
 }
 
-// MARK: - TVExerciseContainerView (stub)
-
-struct TVExerciseContainerView: View {
-    let section: AppSection
-    let language: AppLanguage
-
-    var body: some View {
-        ZStack {
-            Color(red: 0.1, green: 0.1, blue: 0.18).ignoresSafeArea()
-            Text("Exercises — Coming Soon")
-                .font(.system(size: 60, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
-        }
-    }
-}
 #endif
