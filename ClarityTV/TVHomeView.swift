@@ -1,5 +1,6 @@
 #if os(tvOS)
 import SwiftUI
+import AudioToolbox
 
 // MARK: - Focus tracking
 
@@ -7,6 +8,7 @@ private enum TVHomeFocus: Hashable {
     case card(AppSection)
     case surpriseMe
     case twoPlayers
+    case soundToggle
     case language(AppLanguage)
 }
 
@@ -34,6 +36,8 @@ struct TVHomeView: View {
     @State private var selectedLanguage: AppLanguage = LanguageManager.shared.currentLanguage
     @State private var destination: AppSection? = nil
     @State private var showingTwoPlayer = false
+    @State private var appeared = false
+    @AppStorage("tvSoundEnabled") private var soundEnabled: Bool = true
 
     var body: some View {
         NavigationStack {
@@ -47,11 +51,25 @@ struct TVHomeView: View {
                         surpriseMeButton
                         twoPlayersButton
                     }
+                    .opacity(appeared ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0.4), value: appeared)
                     languageSelectorView
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 60)
+                .onAppear { appeared = true }
+
+                // Sound toggle — top-right corner
+                VStack {
+                    HStack {
+                        Spacer()
+                        soundToggleButton
+                            .padding(.trailing, 80)
+                            .padding(.top, 60)
+                    }
+                    Spacer()
+                }
             }
             .navigationDestination(item: $destination) { section in
                 TVExerciseContainerView(section: section, language: selectedLanguage)
@@ -82,7 +100,7 @@ struct TVHomeView: View {
 
     private var sectionCardsView: some View {
         HStack(spacing: 40) {
-            ForEach(sectionCards) { card in
+            ForEach(Array(sectionCards.enumerated()), id: \.element.id) { index, card in
                 Button {
                     destination = card.section
                 } label: {
@@ -90,8 +108,23 @@ struct TVHomeView: View {
                 }
                 .buttonStyle(.plain)
                 .focused($focus, equals: .card(card.section))
+                .offset(y: appeared ? 0 : 20)
+                .opacity(appeared ? 1 : 0)
+                .animation(.easeOut(duration: 0.4).delay(Double(index + 1) * 0.1), value: appeared)
             }
         }
+    }
+
+    // MARK: - Sound Toggle
+
+    private var soundToggleButton: some View {
+        Button {
+            soundEnabled.toggle()
+        } label: {
+            TVSoundToggleButton(soundEnabled: soundEnabled)
+        }
+        .buttonStyle(.plain)
+        .focused($focus, equals: .soundToggle)
     }
 
     // MARK: - Two Players
@@ -228,6 +261,21 @@ private struct TVTwoPlayersLabel: View {
     }
 }
 
+// MARK: - TVSoundToggleButton
+
+private struct TVSoundToggleButton: View {
+    let soundEnabled: Bool
+    @Environment(\.isFocused) private var isFocused
+
+    var body: some View {
+        Image(systemName: soundEnabled ? "speaker.wave.3.fill" : "speaker.slash.fill")
+            .font(.system(size: 36))
+            .foregroundColor(Color.white.opacity(isFocused ? 0.9 : 0.5))
+            .scaleEffect(isFocused ? 1.15 : 1.0)
+            .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+}
+
 // MARK: - TVLanguageChip
 
 private struct TVLanguageChip: View {
@@ -255,6 +303,27 @@ private struct TVLanguageChip: View {
         )
         .scaleEffect(isFocused ? 1.08 : 1.0)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+}
+
+// MARK: - TVSound
+
+enum TVSound {
+    case correct, wrong, complete, select
+}
+
+// MARK: - TVSoundManager
+
+struct TVSoundManager {
+    static func play(_ sound: TVSound) {
+        let isEnabled = UserDefaults.standard.object(forKey: "tvSoundEnabled") as? Bool ?? true
+        guard isEnabled else { return }
+        switch sound {
+        case .correct:  AudioServicesPlaySystemSound(1057)
+        case .wrong:    AudioServicesPlaySystemSound(1053)
+        case .complete: AudioServicesPlaySystemSound(1025)
+        case .select:   AudioServicesPlaySystemSound(1104)
+        }
     }
 }
 

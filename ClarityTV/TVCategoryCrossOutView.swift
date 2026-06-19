@@ -105,6 +105,7 @@ struct TVCategoryCrossOutView: View {
         focus = nil
 
         let isCorrect = isCorrectOption(option)
+        TVSoundManager.play(isCorrect ? .correct : .wrong)
 
         // Trigger the 0.4s scale-up on the correct tile
         withAnimation(.easeOut(duration: 0.4)) {
@@ -144,7 +145,7 @@ private struct CrossOutTile: View {
                 .fill(tileBackground)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.white, lineWidth: (isFocused && revealState == .idle) ? 3 : 0)
+                        .stroke(borderColor, lineWidth: revealState == .idle ? 3 : 0)
                 )
 
             Text(text)
@@ -172,6 +173,11 @@ private struct CrossOutTile: View {
         .opacity(revealState == .dimmed ? 0.35 : 1.0)
         .animation(.easeOut(duration: 0.4), value: correctRevealed)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+
+    private var borderColor: Color {
+        guard revealState == .idle else { return .clear }
+        return isFocused ? .white : Color(hex: "FF9500")
     }
 
     private var correctScale: CGFloat {

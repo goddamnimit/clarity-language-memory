@@ -100,6 +100,7 @@ struct TVMultipleChoiceView: View {
     private func selectOption(_ option: String) {
         selectedOption = option
         let isCorrect = isCorrectOption(option)
+        TVSoundManager.play(isCorrect ? .correct : .wrong)
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             hasAnswered = true
         }
@@ -144,6 +145,8 @@ private struct AnswerTile: View {
     let revealState: TileRevealState
 
     @Environment(\.isFocused) private var isFocused
+    @State private var punchScale: CGFloat = 1.0
+    @State private var shakeOffset: CGFloat = 0
 
     var body: some View {
         ZStack {
@@ -151,7 +154,7 @@ private struct AnswerTile: View {
                 .fill(tileBackground)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.white, lineWidth: (isFocused && revealState == .idle) ? 3 : 0)
+                        .stroke(borderColor, lineWidth: revealState == .idle ? 3 : 0)
                 )
 
             Text(text)
@@ -175,9 +178,29 @@ private struct AnswerTile: View {
         .frame(maxWidth: .infinity)
         .frame(height: 160)
         .scaleEffect(isFocused && revealState == .idle ? 1.06 : 1.0)
+        .scaleEffect(punchScale)
+        .offset(x: shakeOffset)
         .opacity(revealState == .dimmed ? 0.35 : 1.0)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: revealState)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
+        .onChange(of: revealState) {
+            if revealState == .correct {
+                withAnimation(.easeOut(duration: 0.12)) { punchScale = 1.15 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+                    withAnimation(.easeIn(duration: 0.2)) { punchScale = 1.0 }
+                }
+            } else if revealState == .wrong {
+                shakeOffset = 12
+                withAnimation(.interpolatingSpring(stiffness: 500, damping: 8)) {
+                    shakeOffset = 0
+                }
+            }
+        }
+    }
+
+    private var borderColor: Color {
+        guard revealState == .idle else { return .clear }
+        return isFocused ? .white : Color(hex: "FF9500")
     }
 
     private var tileBackground: Color {
