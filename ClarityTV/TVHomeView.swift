@@ -6,6 +6,7 @@ import SwiftUI
 private enum TVHomeFocus: Hashable {
     case card(AppSection)
     case surpriseMe
+    case twoPlayers
     case language(AppLanguage)
 }
 
@@ -32,6 +33,7 @@ struct TVHomeView: View {
     @FocusState private var focus: TVHomeFocus?
     @State private var selectedLanguage: AppLanguage = LanguageManager.shared.currentLanguage
     @State private var destination: AppSection? = nil
+    @State private var showingTwoPlayer = false
 
     var body: some View {
         NavigationStack {
@@ -41,7 +43,10 @@ struct TVHomeView: View {
                 VStack(spacing: 48) {
                     headerView
                     sectionCardsView
-                    surpriseMeButton
+                    HStack(spacing: 32) {
+                        surpriseMeButton
+                        twoPlayersButton
+                    }
                     languageSelectorView
                     Spacer()
                 }
@@ -50,6 +55,12 @@ struct TVHomeView: View {
             }
             .navigationDestination(item: $destination) { section in
                 TVExerciseContainerView(section: section, language: selectedLanguage)
+            }
+            .fullScreenCover(isPresented: $showingTwoPlayer) {
+                TVTwoPlayerView(
+                    section: AppSection.allCases.randomElement()!,
+                    language: selectedLanguage
+                )
             }
         }
     }
@@ -81,6 +92,18 @@ struct TVHomeView: View {
                 .focused($focus, equals: .card(card.section))
             }
         }
+    }
+
+    // MARK: - Two Players
+
+    private var twoPlayersButton: some View {
+        Button {
+            showingTwoPlayer = true
+        } label: {
+            TVTwoPlayersLabel()
+        }
+        .buttonStyle(.plain)
+        .focused($focus, equals: .twoPlayers)
     }
 
     // MARK: - Surprise Me
@@ -169,6 +192,38 @@ private struct TVSurpriseMeLabel: View {
         )
         .scaleEffect(isFocused ? 1.08 : 1.0)
         .shadow(color: isFocused ? .orange.opacity(0.5) : .clear, radius: 20, x: 0, y: 8)
+        .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+}
+
+// MARK: - TVTwoPlayersLabel
+
+private struct TVTwoPlayersLabel: View {
+    @Environment(\.isFocused) private var isFocused
+
+    var body: some View {
+        HStack(spacing: 16) {
+            Image(systemName: "person.2.fill")
+                .font(.system(size: 32, weight: .medium))
+            Text("Two Players")
+                .font(.system(size: 36, weight: .semibold, design: .rounded))
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 60)
+        .padding(.vertical, 24)
+        .background(
+            Capsule().fill(
+                LinearGradient(
+                    colors: isFocused
+                        ? [Color(red: 0.2, green: 0.5, blue: 1.0), Color(red: 0.1, green: 0.3, blue: 0.9)]
+                        : [Color(red: 0.2, green: 0.5, blue: 1.0).opacity(0.7), Color(red: 0.1, green: 0.3, blue: 0.9).opacity(0.7)],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+            )
+        )
+        .scaleEffect(isFocused ? 1.08 : 1.0)
+        .shadow(color: isFocused ? Color.blue.opacity(0.5) : .clear, radius: 20, x: 0, y: 8)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }

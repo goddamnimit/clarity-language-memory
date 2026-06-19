@@ -6,6 +6,8 @@ import SwiftUI
 struct TVExerciseContainerView: View {
     let section: AppSection
     let language: AppLanguage
+    var questionPool: [ExerciseItem]? = nil
+    var onSessionComplete: ((Int) -> Void)? = nil
 
     @ObservedObject private var languageManager = LanguageManager.shared
     @Environment(\.dismiss) private var dismiss
@@ -19,10 +21,6 @@ struct TVExerciseContainerView: View {
     @State private var currentQuestionAnswered = false
     @State private var sessionRecorded = false
     @State private var sessionAttempts: [[String: Any]] = []
-    @State private var completionScale: CGFloat = 0.8
-    @State private var completionOpacity: Double = 0
-    @State private var displayedScore: Int = 0
-
     // MARK: tvOS-only pulse state
     @State private var dotPulse = false
 
@@ -30,17 +28,14 @@ struct TVExerciseContainerView: View {
         ZStack {
             Color(red: 0.1, green: 0.1, blue: 0.18).ignoresSafeArea()
 
-            if isComplete {
+            if isComplete && onSessionComplete == nil {
                 TVCompletionView(
                     score: score,
                     total: sessionItems.count,
-                    displayedScore: $displayedScore,
-                    completionScale: $completionScale,
-                    completionOpacity: $completionOpacity,
                     onNewSession: { withAnimation { resetSession() } },
-                    onDismiss: { dismiss() }
+                    onChangeActivity: { dismiss() }
                 )
-            } else if let exercise = currentExercise, !sessionItems.isEmpty {
+            } else if !isComplete, let exercise = currentExercise, !sessionItems.isEmpty {
                 questionView(exercise: exercise)
             } else {
                 loadingView
@@ -56,7 +51,11 @@ struct TVExerciseContainerView: View {
         }
         .onChange(of: isComplete) {
             if isComplete, !sessionRecorded {
-                recordSessionCompletion()
+                if let onComplete = onSessionComplete {
+                    onComplete(score)
+                } else {
+                    recordSessionCompletion()
+                }
                 sessionRecorded = true
             }
         }
@@ -213,33 +212,46 @@ struct TVExerciseContainerView: View {
 
     private func pickExerciseAndInit() {
         let exercises = languageManager.exercisesForSection(section)
-        guard let picked = exercises.randomElement() else { return }
+        // When a pool is injected, restrict dispatch to the TVMultipleChoiceView
+        // family so the exercise title/type shown always matches how items render.
+        let candidates: [Exercise]
+        if questionPool != nil {
+            let safe = exercises.filter {
+                $0.type != .openEnded && $0.type != .categoryCrossOut && $0.type != .sequencing
+            }
+            candidates = safe.isEmpty ? exercises : safe
+        } else {
+            candidates = exercises
+        }
+        guard let picked = candidates.randomElement() else { return }
         currentExercise = picked
         initializeSession(exercise: picked)
     }
 
     private func initializeSession(exercise: Exercise) {
-        let recentIDs = loadRecentIDs(for: exercise)
-        let selected = exercise.randomSession(excluding: recentIDs)
-        sessionItems = selected.map { item in
-            ExerciseItem(
-                id: item.id,
-                prompt: item.prompt,
-                options: item.options.shuffled(),
-                correctAnswer: item.correctAnswer,
-                explanation: item.explanation
-            )
+        if let pool = questionPool, !pool.isEmpty {
+            sessionItems = pool
+        } else {
+            let recentIDs = loadRecentIDs(for: exercise)
+            let selected = exercise.randomSession(excluding: recentIDs)
+            sessionItems = selected.map { item in
+                ExerciseItem(
+                    id: item.id,
+                    prompt: item.prompt,
+                    options: item.options.shuffled(),
+                    correctAnswer: item.correctAnswer,
+                    explanation: item.explanation
+                )
+            }
+            saveRecentIDs(sessionItems, for: exercise)
         }
-        saveRecentIDs(sessionItems, for: exercise)
         currentIndex = 0
         score = 0
         isComplete = false
         currentQuestionAnswered = false
         sessionRecorded = false
         sessionAttempts = []
-        completionScale = 0.8
-        completionOpacity = 0
-        displayedScore = 0
+
     }
 
     private func resetSession() {
@@ -329,152 +341,6 @@ private struct TVNextButton: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.white.opacity(isPrimary ? 0 : 0.3), lineWidth: 1.5)
-            )
-            .scaleEffect(isFocused ? 1.08 : 1.0)
-            .animation(.easeInOut(duration: 0.15), value: isFocused)
-    }
-}
-
-// MARK: - TVCompletionView
-
-struct TVCompletionView: View {
-    let score: Int
-    let total: Int
-    @Binding var displayedScore: Int
-    @Binding var completionScale: CGFloat
-    @Binding var completionOpacity: Double
-    let onNewSession: () -> Void
-    let onDismiss: () -> Void
-
-    @ObservedObject private var languageManager = LanguageManager.shared
-
-    var body: some View {
-        VStack(spacing: 40) {
-            Spacer()
-
-            Image(systemName: "checkmark.circle.fill")
-                .font(.system(size: 120))
-                .foregroundColor(.green)
-
-            Text(sessionCompleteText)
-                .font(.system(size: 72, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
-
-            if let praise = praiseText {
-                Text(praise)
-                    .font(.system(size: 48, weight: .bold))
-                    .foregroundColor(.orange)
-            }
-
-            Text("Score: \(displayedScore) / \(total)")
-                .font(.system(size: 48, weight: .medium, design: .rounded))
-                .foregroundColor(.white)
-                .padding(.horizontal, 48)
-                .padding(.vertical, 24)
-                .background(Color.white.opacity(0.1))
-                .cornerRadius(20)
-
-            Spacer()
-
-            HStack(spacing: 40) {
-                Button(action: onNewSession) {
-                    TVCompletionButton(label: newSessionText, isPrimary: true)
-                }
-                .buttonStyle(.plain)
-
-                Button(action: onDismiss) {
-                    TVCompletionButton(label: backText, isPrimary: false)
-                }
-                .buttonStyle(.plain)
-            }
-            .padding(.bottom, 80)
-        }
-        .scaleEffect(completionScale)
-        .opacity(completionOpacity)
-        .onAppear {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
-                completionScale = 1.0
-                completionOpacity = 1.0
-            }
-            for i in 0...max(score, 0) {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(i) * 0.15) {
-                    withAnimation(.spring()) { displayedScore = i }
-                }
-            }
-        }
-    }
-
-    private var praiseText: String? {
-        switch score {
-        case total:             return perfectScoreText
-        case total - 1:        return "Almost perfect! 🌟"
-        case total - 2 where total >= 4: return "Great effort! 💪"
-        default:               return nil
-        }
-    }
-
-    private var perfectScoreText: String {
-        switch languageManager.currentLanguage {
-        case .english:  return "Perfect Score! 🎉"
-        case .spanish:  return "¡Puntuación Perfecta! 🎉"
-        case .hindi:    return "शानदार! पूरे अंक! 🎉"
-        case .gujarati: return "અદ્ભુત! પૂરા ગુણ! 🎉"
-        case .chinese:  return "太棒了！满分！🎉"
-        case .farsi:    return "عالی! نمره کامل! 🎉"
-        }
-    }
-
-    private var sessionCompleteText: String {
-        switch languageManager.currentLanguage {
-        case .english:  return "Session Complete!"
-        case .spanish:  return "¡Sesión Completada!"
-        case .hindi:    return "सत्र पूर्ण!"
-        case .gujarati: return "સત્ર પૂર્ણ!"
-        case .chinese:  return "练习完成！"
-        case .farsi:    return "تمرین کامل شد!"
-        }
-    }
-
-    private var newSessionText: String {
-        switch languageManager.currentLanguage {
-        case .english:  return "New Session"
-        case .spanish:  return "Nueva Sesión"
-        case .hindi:    return "नया सत्र"
-        case .gujarati: return "નવું સત્ર"
-        case .chinese:  return "新练习"
-        case .farsi:    return "تمرین جدید"
-        }
-    }
-
-    private var backText: String {
-        switch languageManager.currentLanguage {
-        case .english:  return "Back to Home"
-        case .spanish:  return "Volver al Inicio"
-        case .hindi:    return "मुख्य पर वापस"
-        case .gujarati: return "ઘर પर पाछा"
-        case .chinese:  return "返回主页"
-        case .farsi:    return "بازگشت به خانه"
-        }
-    }
-}
-
-private struct TVCompletionButton: View {
-    let label: String
-    let isPrimary: Bool
-    @Environment(\.isFocused) private var isFocused
-
-    var body: some View {
-        Text(label)
-            .font(.system(size: 36, weight: .semibold, design: .rounded))
-            .foregroundColor(.white)
-            .padding(.horizontal, 60)
-            .padding(.vertical, 24)
-            .background(
-                RoundedRectangle(cornerRadius: 16).fill(
-                    isPrimary
-                        ? (isFocused ? Color.blue : Color.blue.opacity(0.75))
-                        : (isFocused ? Color.white.opacity(0.25) : Color.white.opacity(0.1))
-                )
             )
             .scaleEffect(isFocused ? 1.08 : 1.0)
             .animation(.easeInOut(duration: 0.15), value: isFocused)
