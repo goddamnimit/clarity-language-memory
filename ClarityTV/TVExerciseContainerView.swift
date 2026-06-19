@@ -113,7 +113,7 @@ struct TVExerciseContainerView: View {
                 switch exercise.type {
                 case .multipleChoice, .sentenceCompletion, .analogyChoice,
                      .homonym, .yesNo, .factOrOpinion, .matching:
-                    TVMultipleChoiceView(item: currentItem, onAnswered: handleAnswer)
+                    TVMultipleChoiceView(item: currentItem, exerciseType: exercise.type, onAnswered: handleAnswer)
                 case .categoryCrossOut:
                     TVCategoryCrossOutView(item: currentItem, onAnswered: handleAnswer)
                 case .sequencing:
@@ -482,17 +482,6 @@ private struct TVCompletionButton: View {
 }
 
 // MARK: - Exercise View Stubs (replace progressively)
-
-struct TVMultipleChoiceView: View {
-    let item: ExerciseItem
-    let onAnswered: (Bool) -> Void
-
-    var body: some View {
-        Text("Multiple Choice — Coming Soon")
-            .font(.system(size: 40, weight: .medium, design: .rounded))
-            .foregroundColor(Color.white.opacity(0.6))
-    }
-}
 
 struct TVCategoryCrossOutView: View {
     let item: ExerciseItem

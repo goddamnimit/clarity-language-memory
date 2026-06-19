@@ -45,6 +45,7 @@ struct TVHomeView: View {
                     languageSelectorView
                     Spacer()
                 }
+                .frame(maxWidth: .infinity)
                 .padding(.vertical, 60)
             }
             .navigationDestination(item: $destination) { section in
@@ -97,21 +98,19 @@ struct TVHomeView: View {
     // MARK: - Language Selector
 
     private var languageSelectorView: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 24) {
-                ForEach(AppLanguage.allCases) { lang in
-                    Button {
-                        selectedLanguage = lang
-                        languageManager.currentLanguage = lang
-                    } label: {
-                        TVLanguageChip(language: lang, isSelected: selectedLanguage == lang)
-                    }
-                    .buttonStyle(.plain)
-                    .focused($focus, equals: .language(lang))
+        HStack(spacing: 24) {
+            ForEach(AppLanguage.allCases) { lang in
+                Button {
+                    selectedLanguage = lang
+                    languageManager.currentLanguage = lang
+                } label: {
+                    TVLanguageChip(language: lang, isSelected: selectedLanguage == lang)
                 }
+                .buttonStyle(.plain)
+                .focused($focus, equals: .language(lang))
             }
-            .padding(.horizontal, 80)
         }
+        .padding(.horizontal, 60)
     }
 }
 
