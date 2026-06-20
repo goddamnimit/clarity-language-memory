@@ -19,7 +19,7 @@ fileprivate extension Color {
 // MARK: - Focus enum
 
 private enum TileFocus: Hashable {
-    case tileA, tileB, tileC, tileD
+    case tileA, tileB, tileC, tileD, nextButton
 }
 
 private let tileFocusCases: [TileFocus] = [.tileA, .tileB, .tileC, .tileD]
@@ -56,12 +56,16 @@ struct TVMultipleChoiceView: View {
                         .tracking(3)
                         .textCase(.uppercase)
 
-                    Text(item.prompt)
-                        .font(.system(size: 52, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(3)
-                        .padding(.horizontal, 120)
+                    ScrollView(.vertical) {
+                        Text(item.prompt)
+                            .font(.system(size: 42, weight: .bold, design: .rounded))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .minimumScaleFactor(0.7)
+                            .padding(.horizontal, 120)
+                    }
+                    .frame(maxHeight: 280)
 
                     Spacer()
                 }
@@ -104,8 +108,8 @@ struct TVMultipleChoiceView: View {
         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
             hasAnswered = true
         }
-        focus = nil
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            focus = .nextButton
             onAnswered(isCorrect)
         }
     }

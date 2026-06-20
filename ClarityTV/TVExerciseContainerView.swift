@@ -6,6 +6,7 @@ import SwiftUI
 struct TVExerciseContainerView: View {
     let section: AppSection
     let language: AppLanguage
+    var difficulty: Difficulty? = nil
     var questionPool: [ExerciseItem]? = nil
     var onSessionComplete: ((Int) -> Void)? = nil
 
@@ -223,7 +224,9 @@ struct TVExerciseContainerView: View {
         } else {
             candidates = exercises
         }
-        guard let picked = candidates.randomElement() else { return }
+        let diffFiltered = difficulty == nil ? candidates : candidates.filter { $0.difficulty == difficulty }
+        let pool = diffFiltered.isEmpty ? candidates : diffFiltered
+        guard let picked = pool.randomElement() else { return }
         currentExercise = picked
         initializeSession(exercise: picked)
     }

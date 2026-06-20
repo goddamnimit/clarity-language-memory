@@ -4,7 +4,7 @@ import SwiftUI
 // MARK: - Focus enum
 
 private enum CrossOutFocus: Hashable {
-    case tileA, tileB, tileC, tileD
+    case tileA, tileB, tileC, tileD, nextButton
 }
 
 private let crossOutFocusCases: [CrossOutFocus] = [.tileA, .tileB, .tileC, .tileD]
@@ -42,12 +42,16 @@ struct TVCategoryCrossOutView: View {
                         .tracking(3)
                         .textCase(.uppercase)
 
-                    Text(item.prompt)
-                        .font(.system(size: 52, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(3)
-                        .padding(.horizontal, 120)
+                    ScrollView(.vertical) {
+                        Text(item.prompt)
+                            .font(.system(size: 42, weight: .bold, design: .rounded))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .minimumScaleFactor(0.7)
+                            .padding(.horizontal, 120)
+                    }
+                    .frame(maxHeight: 280)
 
                     Text("Tap the word that does NOT belong")
                         .font(.system(size: 32, weight: .light).italic())
@@ -102,7 +106,6 @@ struct TVCategoryCrossOutView: View {
     private func selectOption(_ option: String) {
         selectedOption = option
         hasAnswered = true
-        focus = nil
 
         let isCorrect = isCorrectOption(option)
         TVSoundManager.play(isCorrect ? .correct : .wrong)
@@ -113,6 +116,7 @@ struct TVCategoryCrossOutView: View {
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            focus = .nextButton
             onAnswered(isCorrect)
         }
     }

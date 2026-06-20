@@ -8,8 +8,31 @@ private enum TVHomeFocus: Hashable {
     case card(AppSection)
     case surpriseMe
     case twoPlayers
-    case soundToggle
+    case settings
     case language(AppLanguage)
+}
+
+// MARK: - Exercise destination (section + difficulty)
+
+private struct ExerciseDestination: Identifiable {
+    var id: AppSection { section }
+    let section: AppSection
+    let difficulty: Difficulty?
+}
+
+// MARK: - Hex color helper
+
+fileprivate extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        self.init(
+            red:   Double((int >> 16) & 0xFF) / 255,
+            green: Double((int >> 8)  & 0xFF) / 255,
+            blue:  Double( int        & 0xFF) / 255
+        )
+    }
 }
 
 // MARK: - Section card metadata
@@ -34,15 +57,17 @@ struct TVHomeView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
     @FocusState private var focus: TVHomeFocus?
     @State private var selectedLanguage: AppLanguage = LanguageManager.shared.currentLanguage
-    @State private var destination: AppSection? = nil
+    @State private var destination: ExerciseDestination? = nil
+    @State private var pendingSection: AppSection? = nil
     @State private var showingTwoPlayer = false
+    @State private var showingDifficultyPicker = false
+    @State private var showingSettings = false
     @State private var appeared = false
-    @AppStorage("tvSoundEnabled") private var soundEnabled: Bool = true
 
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(red: 0.1, green: 0.1, blue: 0.18).ignoresSafeArea()
+                Color(hex: "16213E").ignoresSafeArea()
 
                 VStack(spacing: 48) {
                     headerView
@@ -60,25 +85,38 @@ struct TVHomeView: View {
                 .padding(.vertical, 60)
                 .onAppear { appeared = true }
 
-                // Sound toggle — top-right corner
+                // Settings gear — top-right corner
                 VStack {
                     HStack {
                         Spacer()
-                        soundToggleButton
+                        settingsButton
                             .padding(.trailing, 80)
                             .padding(.top, 60)
                     }
                     Spacer()
                 }
             }
-            .navigationDestination(item: $destination) { section in
-                TVExerciseContainerView(section: section, language: selectedLanguage)
+            .navigationDestination(item: $destination) { dest in
+                TVExerciseContainerView(section: dest.section, language: selectedLanguage, difficulty: dest.difficulty)
             }
             .fullScreenCover(isPresented: $showingTwoPlayer) {
                 TVTwoPlayerView(
                     section: AppSection.allCases.randomElement()!,
                     language: selectedLanguage
                 )
+            }
+            .fullScreenCover(isPresented: $showingDifficultyPicker) {
+                if let section = pendingSection {
+                    let name = sectionCards.first(where: { $0.section == section })?.title ?? ""
+                    TVDifficultyPickerView(sectionName: name) { difficulty in
+                        showingDifficultyPicker = false
+                        destination = ExerciseDestination(section: section, difficulty: difficulty)
+                    }
+                }
+            }
+            .fullScreenCover(isPresented: $showingSettings) {
+                TVSettingsView(selectedLanguage: $selectedLanguage)
+                    .onDisappear { selectedLanguage = languageManager.currentLanguage }
             }
         }
     }
@@ -102,7 +140,8 @@ struct TVHomeView: View {
         HStack(spacing: 40) {
             ForEach(Array(sectionCards.enumerated()), id: \.element.id) { index, card in
                 Button {
-                    destination = card.section
+                    pendingSection = card.section
+                    showingDifficultyPicker = true
                 } label: {
                     TVSectionCard(info: card)
                 }
@@ -115,16 +154,20 @@ struct TVHomeView: View {
         }
     }
 
-    // MARK: - Sound Toggle
+    // MARK: - Settings
 
-    private var soundToggleButton: some View {
+    private var settingsButton: some View {
         Button {
-            soundEnabled.toggle()
+            showingSettings = true
         } label: {
-            TVSoundToggleButton(soundEnabled: soundEnabled)
+            Image(systemName: "gearshape.fill")
+                .font(.system(size: 36))
+                .foregroundColor(Color.white.opacity(focus == .settings ? 0.9 : 0.5))
+                .scaleEffect(focus == .settings ? 1.15 : 1.0)
+                .animation(.easeInOut(duration: 0.15), value: focus)
         }
         .buttonStyle(.plain)
-        .focused($focus, equals: .soundToggle)
+        .focused($focus, equals: .settings)
     }
 
     // MARK: - Two Players
@@ -143,7 +186,8 @@ struct TVHomeView: View {
 
     private var surpriseMeButton: some View {
         Button {
-            destination = AppSection.allCases.randomElement()
+            pendingSection = AppSection.allCases.randomElement()
+            showingDifficultyPicker = true
         } label: {
             TVSurpriseMeLabel()
         }
@@ -191,7 +235,7 @@ private struct TVSectionCard: View {
                 .multilineTextAlignment(.center)
         }
         .frame(width: 380, height: 280)
-        .background(isFocused ? info.color : info.color.opacity(0.72))
+        .background(isFocused ? info.color : Color(hex: "1E2D4A"))
         .cornerRadius(24)
         .scaleEffect(isFocused ? 1.08 : 1.0)
         .shadow(color: isFocused ? info.color.opacity(0.6) : .clear, radius: 30, x: 0, y: 10)
@@ -258,21 +302,6 @@ private struct TVTwoPlayersLabel: View {
         .scaleEffect(isFocused ? 1.08 : 1.0)
         .shadow(color: isFocused ? Color.blue.opacity(0.5) : .clear, radius: 20, x: 0, y: 8)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
-    }
-}
-
-// MARK: - TVSoundToggleButton
-
-private struct TVSoundToggleButton: View {
-    let soundEnabled: Bool
-    @Environment(\.isFocused) private var isFocused
-
-    var body: some View {
-        Image(systemName: soundEnabled ? "speaker.wave.3.fill" : "speaker.slash.fill")
-            .font(.system(size: 36))
-            .foregroundColor(Color.white.opacity(isFocused ? 0.9 : 0.5))
-            .scaleEffect(isFocused ? 1.15 : 1.0)
-            .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }
 
