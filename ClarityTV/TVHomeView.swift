@@ -14,7 +14,7 @@ private enum TVHomeFocus: Hashable {
 
 // MARK: - Exercise destination (section + difficulty)
 
-private struct ExerciseDestination: Identifiable {
+private struct ExerciseDestination: Identifiable, Hashable {
     var id: AppSection { section }
     let section: AppSection
     let difficulty: Difficulty?

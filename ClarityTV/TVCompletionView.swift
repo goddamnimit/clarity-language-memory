@@ -82,7 +82,7 @@ struct TVCompletionView: View {
             if score == total { TVSoundManager.play(.complete) }
             focus = .newSession
         }
-        .onChange(of: focus) { newValue in
+        .onChange(of: focus) { _, newValue in
             if newValue != nil { TVSoundManager.play(.select) }
         }
     }
