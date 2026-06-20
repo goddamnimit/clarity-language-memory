@@ -69,32 +69,30 @@ struct TVHomeView: View {
             ZStack {
                 Color(hex: "16213E").ignoresSafeArea()
 
-                VStack(spacing: 48) {
-                    headerView
-                    sectionCardsView
-                    HStack(spacing: 32) {
-                        surpriseMeButton
-                        twoPlayersButton
+                VStack(spacing: 0) {
+                    // Top bar — gear icon in focus chain, right-aligned
+                    HStack {
+                        Spacer()
+                        settingsButton
                     }
-                    .opacity(appeared ? 1 : 0)
-                    .animation(.easeOut(duration: 0.4).delay(0.4), value: appeared)
-                    languageSelectorView
-                    Spacer()
+                    .padding(.horizontal, 80)
+
+                    VStack(spacing: 48) {
+                        headerView
+                        sectionCardsView
+                        HStack(spacing: 32) {
+                            surpriseMeButton
+                            twoPlayersButton
+                        }
+                        .opacity(appeared ? 1 : 0)
+                        .animation(.easeOut(duration: 0.4).delay(0.4), value: appeared)
+                        languageSelectorView
+                        Spacer()
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 60)
                 .onAppear { appeared = true }
-
-                // Settings gear — top-right corner
-                VStack {
-                    HStack {
-                        Spacer()
-                        settingsButton
-                            .padding(.trailing, 80)
-                            .padding(.top, 60)
-                    }
-                    Spacer()
-                }
             }
             .navigationDestination(item: $destination) { dest in
                 TVExerciseContainerView(section: dest.section, language: selectedLanguage, difficulty: dest.difficulty)
