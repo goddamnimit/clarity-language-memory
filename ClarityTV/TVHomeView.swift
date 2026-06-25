@@ -69,26 +69,18 @@ struct TVHomeView: View {
             ZStack {
                 Color(hex: "16213E").ignoresSafeArea()
 
-                VStack(spacing: 0) {
-                    // Top bar — gear icon in focus chain, right-aligned
-                    HStack {
-                        Spacer()
-                        settingsButton
+                VStack(spacing: 48) {
+                    headerView
+                    sectionCardsView
+                    HStack(spacing: 32) {
+                        surpriseMeButton
+                        twoPlayersButton
                     }
-                    .padding(.horizontal, 80)
-
-                    VStack(spacing: 48) {
-                        headerView
-                        sectionCardsView
-                        HStack(spacing: 32) {
-                            surpriseMeButton
-                            twoPlayersButton
-                        }
-                        .opacity(appeared ? 1 : 0)
-                        .animation(.easeOut(duration: 0.4).delay(0.4), value: appeared)
-                        languageSelectorView
-                        Spacer()
-                    }
+                    .opacity(appeared ? 1 : 0)
+                    .animation(.easeOut(duration: 0.4).delay(0.4), value: appeared)
+                    languageSelectorView
+                    settingsRowButton
+                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 60)
@@ -152,20 +144,37 @@ struct TVHomeView: View {
         }
     }
 
-    // MARK: - Settings
+    // MARK: - Settings Row
 
-    private var settingsButton: some View {
+    private var settingsRowButton: some View {
         Button {
             showingSettings = true
         } label: {
-            Image(systemName: "gearshape.fill")
-                .font(.system(size: 36))
-                .foregroundColor(Color.white.opacity(focus == .settings ? 0.9 : 0.5))
-                .scaleEffect(focus == .settings ? 1.15 : 1.0)
-                .animation(.easeInOut(duration: 0.15), value: focus)
+            HStack(spacing: 20) {
+                Image(systemName: "gearshape.fill")
+                    .font(.system(size: 36))
+                    .foregroundColor(Color.white.opacity(0.7))
+                Text("Settings")
+                    .font(.system(size: 36, weight: .medium, design: .rounded))
+                    .foregroundColor(Color.white.opacity(0.7))
+                Spacer()
+            }
+            .padding(.horizontal, 40)
+            .frame(maxWidth: .infinity, minHeight: 80)
+            .background(
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(focus == .settings ? Color.white.opacity(0.18) : Color.white.opacity(0.07))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(focus == .settings ? Color.white.opacity(0.4) : Color.clear, lineWidth: 2)
+            )
+            .scaleEffect(focus == .settings ? 1.02 : 1.0)
+            .animation(.easeInOut(duration: 0.15), value: focus)
         }
         .buttonStyle(.plain)
         .focused($focus, equals: .settings)
+        .padding(.horizontal, 80)
     }
 
     // MARK: - Two Players

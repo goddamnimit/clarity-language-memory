@@ -4,6 +4,7 @@ import SwiftUI
 // MARK: - Focus enum
 
 private enum SettingsFocus: Hashable {
+    case speech
     case sound
     case language(AppLanguage)
     case about
@@ -13,6 +14,7 @@ private enum SettingsFocus: Hashable {
 
 struct TVSettingsView: View {
     @Binding var selectedLanguage: AppLanguage
+    @AppStorage("tvSpeechEnabled") private var speechEnabled: Bool = false
     @AppStorage("tvSoundEnabled") private var soundEnabled: Bool = true
     @Environment(\.dismiss) private var dismiss
     @ObservedObject private var languageManager = LanguageManager.shared
@@ -36,6 +38,32 @@ struct TVSettingsView: View {
 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 24) {
+                        // Read Questions Aloud row
+                        SettingsRow {
+                            VStack(alignment: .leading, spacing: 8) {
+                                HStack {
+                                    Image(systemName: speechEnabled ? "waveform" : "waveform.slash")
+                                        .font(.system(size: 36))
+                                        .foregroundColor(.white)
+                                        .frame(width: 52)
+                                    Text("Read Questions Aloud")
+                                        .font(.system(size: 48, weight: .semibold, design: .rounded))
+                                        .foregroundColor(.white)
+                                    Spacer()
+                                    Text(speechEnabled ? "On" : "Off")
+                                        .font(.system(size: 36, weight: .medium))
+                                        .foregroundColor(speechEnabled ? Color(hex: "2ECC71") : Color.white.opacity(0.45))
+                                }
+                                Text("Reads each question aloud using text-to-speech")
+                                    .font(.system(size: 28, weight: .regular))
+                                    .foregroundColor(Color.white.opacity(0.55))
+                                    .padding(.leading, 52)
+                            }
+                        } action: {
+                            speechEnabled.toggle()
+                        }
+                        .focused($focus, equals: .speech)
+
                         // Sound Effects row
                         SettingsRow {
                             HStack {
@@ -107,7 +135,7 @@ struct TVSettingsView: View {
                 }
             }
         }
-        .onAppear { focus = .sound }
+        .onAppear { focus = .speech }
     }
 }
 

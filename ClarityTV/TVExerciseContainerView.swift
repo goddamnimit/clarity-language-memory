@@ -1,5 +1,6 @@
 #if os(tvOS)
 import SwiftUI
+import AVFoundation
 
 // MARK: - TVExerciseContainerView
 
@@ -10,6 +11,7 @@ struct TVExerciseContainerView: View {
     var questionPool: [ExerciseItem]? = nil
     var onSessionComplete: ((Int) -> Void)? = nil
 
+    @AppStorage("tvSpeechEnabled") private var speechEnabled: Bool = false
     @ObservedObject private var languageManager = LanguageManager.shared
     @Environment(\.dismiss) private var dismiss
 
@@ -24,6 +26,8 @@ struct TVExerciseContainerView: View {
     @State private var sessionAttempts: [[String: Any]] = []
     // MARK: tvOS-only pulse state
     @State private var dotPulse = false
+    // MARK: Text-to-speech
+    @State private var synthesizer = AVSpeechSynthesizer()
 
     var body: some View {
         ZStack {
@@ -49,6 +53,12 @@ struct TVExerciseContainerView: View {
         .onChange(of: currentIndex) {
             currentQuestionAnswered = false
             restartPulse()
+            if currentIndex < sessionItems.count {
+                speak(sessionItems[currentIndex].prompt)
+            }
+        }
+        .onDisappear {
+            synthesizer.stopSpeaking(at: .immediate)
         }
         .onChange(of: isComplete) {
             if isComplete, !sessionRecorded {
@@ -127,8 +137,12 @@ struct TVExerciseContainerView: View {
 
             Spacer()
 
-            // Footer: Next / Skip
+            // Footer: Replay (left) + Next / Skip (right)
             HStack {
+                Button(action: { speak(sessionItems[currentIndex].prompt) }) {
+                    TVReplayButton()
+                }
+                .buttonStyle(.plain)
                 Spacer()
                 Button(action: { advanceToNext() }) {
                     TVNextButton(
@@ -222,7 +236,7 @@ struct TVExerciseContainerView: View {
             }
             candidates = safe.isEmpty ? exercises : safe
         } else {
-            candidates = exercises
+            candidates = exercises.filter { $0.type != .openEnded }
         }
         let diffFiltered = difficulty == nil ? candidates : candidates.filter { $0.difficulty == difficulty }
         let pool = diffFiltered.isEmpty ? candidates : diffFiltered
@@ -254,7 +268,9 @@ struct TVExerciseContainerView: View {
         currentQuestionAnswered = false
         sessionRecorded = false
         sessionAttempts = []
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if !sessionItems.isEmpty { speak(sessionItems[0].prompt) }
+        }
     }
 
     private func resetSession() {
@@ -318,6 +334,57 @@ struct TVExerciseContainerView: View {
         } else {
             withAnimation { isComplete = true }
         }
+    }
+
+    // MARK: - Text-to-Speech
+
+    private func speak(_ text: String) {
+        guard speechEnabled else { return }
+        synthesizer.stopSpeaking(at: .immediate)
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: speechLocale)
+        utterance.rate = 0.45
+        utterance.pitchMultiplier = 1.0
+        synthesizer.speak(utterance)
+    }
+
+    private var speechLocale: String {
+        switch languageManager.currentLanguage {
+        case .english:  return "en-US"
+        case .spanish:  return "es-MX"
+        case .hindi:    return "hi-IN"
+        case .gujarati: return "gu-IN"
+        case .chinese:  return "zh-CN"
+        case .farsi:    return "fa-IR"
+        }
+    }
+}
+
+// MARK: - TVReplayButton
+
+private struct TVReplayButton: View {
+    @Environment(\.isFocused) private var isFocused
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "speaker.wave.2.fill")
+                .font(.system(size: 28, weight: .medium))
+            Text("Replay")
+                .font(.system(size: 28, weight: .semibold, design: .rounded))
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 36)
+        .padding(.vertical, 20)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(isFocused ? Color.white.opacity(0.25) : Color.white.opacity(0.1))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.white.opacity(0.3), lineWidth: 1.5)
+        )
+        .scaleEffect(isFocused ? 1.08 : 1.0)
+        .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }
 
