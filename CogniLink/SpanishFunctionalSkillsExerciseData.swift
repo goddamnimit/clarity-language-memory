@@ -47,7 +47,7 @@ struct SpanishFunctionalSkillsExerciseData {
             ExerciseItem(id: UUID(), prompt: "¿Cuántas horas hay en un día?", options: ["12", "24", "48", "36"], correctAnswer: "24", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "¿Cuántos días hay en un año bisiesto?", options: ["364", "365", "366", "367"], correctAnswer: "366", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "Si son las 3:00 p.m. y tu cita es en 2 horas y media, ¿a qué hora es la cita?", options: ["5:00 p.m.", "5:30 p.m.", "4:30 p.m.", "6:00 p.m."], correctAnswer: "5:30 p.m.", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "Si te vas a dormir a las 10:30 p.m. y te despiertas a las 6:30 a.m., ¿cuántas horas dormiste?", options: ["6 horas", "7 horas", "8 hours", "9 horas"], correctAnswer: "8 hours", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Si te vas a dormir a las 10:30 p.m. y te despiertas a las 6:30 a.m., ¿cuántas horas dormiste?", options: ["6 horas", "7 horas", "8 horas", "9 horas"], correctAnswer: "8 horas", explanation: ""),
             // pills
             ExerciseItem(id: UUID(), prompt: "Si tomas una pastilla cada 8 horas comenzando a las 8:00 a.m., ¿cuándo te toca la próxima dosis?", options: ["2:00 p.m.", "3:00 p.m.", "4:00 p.m.", "5:00 p.m."], correctAnswer: "4:00 p.m.", explanation: "8:00 a.m. más 8 horas equivale a las 4:00 p.m."),
             // dinner plan

@@ -210,21 +210,21 @@ struct SpanishCognitionExerciseData {
         type: .yesNo,
         difficulty: .easy,
         items: [
-            ExerciseItem(id: UUID(), prompt: "¿Es el sol una estrella?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "¿Flota el hielo en el agua?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "Is Paris the capital of Germany?", options: ["Sí", "No"], correctAnswer: "No", explanation: "Berlín es la capital de Alemania"),
-            ExerciseItem(id: UUID(), prompt: "¿Produce la luna su propia luz?", options: ["Sí", "No"], correctAnswer: "No", explanation: "Refleja la luz del sol"),
-            ExerciseItem(id: UUID(), prompt: "¿Es el Océano Pacífico el más grande de la Tierra?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "¿El corazón humano tiene cuatro cavidades?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "¿Los murciélagos son mamíferos?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "Los murciélagos son mamíferos, no aves"),
-            ExerciseItem(id: UUID(), prompt: "¿Fue Neil Armstrong el primer humano en caminar sobre la luna?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "El 20 de julio de 1969"),
-            ExerciseItem(id: UUID(), prompt: "¿Tiene un bebé humano más huesos que un adulto?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "Los bebés tienen de 270 a 300 huesos; los adultos tienen 206"),
-            ExerciseItem(id: UUID(), prompt: "¿Es el Sahara el desierto cálido más grande del mundo?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "¿Está Brasil ubicado en América del Sur?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "¿Es el sol una estrella?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "¿Flota el hielo en el agua?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Is Paris the capital of Germany?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Berlín es la capital de Alemania"),
+            ExerciseItem(id: UUID(), prompt: "¿Produce la luna su propia luz?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Refleja la luz del sol"),
+            ExerciseItem(id: UUID(), prompt: "¿Es el Océano Pacífico el más grande de la Tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "¿El corazón humano tiene cuatro cavidades?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "¿Los murciélagos son mamíferos?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Los murciélagos son mamíferos, no aves"),
+            ExerciseItem(id: UUID(), prompt: "¿Fue Neil Armstrong el primer humano en caminar sobre la luna?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El 20 de julio de 1969"),
+            ExerciseItem(id: UUID(), prompt: "¿Tiene un bebé humano más huesos que un adulto?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Los bebés tienen de 270 a 300 huesos; los adultos tienen 206"),
+            ExerciseItem(id: UUID(), prompt: "¿Es el Sahara el desierto cálido más grande del mundo?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "¿Está Brasil ubicado en América del Sur?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
             // pingino
-            ExerciseItem(id: UUID(), prompt: "¿Es un pingüino un ave?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "Los pingüinos son aves, aunque no vuelan"),
-            ExerciseItem(id: UUID(), prompt: "Is a dolphin classified as a mammal?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "Los delfines respiran aire y amamantan a sus crías"),
-            ExerciseItem(id: UUID(), prompt: "¿Sale el sol por el este?", options: ["Sí", "No"], correctAnswer: "Sí", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "¿Es un pingüino un ave?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Los pingüinos son aves, aunque no vuelan"),
+            ExerciseItem(id: UUID(), prompt: "Is a dolphin classified as a mammal?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Los delfines respiran aire y amamantan a sus crías"),
+            ExerciseItem(id: UUID(), prompt: "¿Sale el sol por el este?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "")
         ]
     )
     

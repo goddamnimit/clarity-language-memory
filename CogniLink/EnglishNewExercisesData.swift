@@ -2,7 +2,6 @@ import Foundation
 
 /// Holds the 14 new English exercises sourced from the New Exercises (6/27) content library.
 /// Covers the Language, Cognition, and Functional Skills sections.
-/// Not yet wired into AppLanguage.
 struct EnglishNewExercisesData {
 
     /// The complete collection of all 14 new English exercises.

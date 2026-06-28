@@ -229,7 +229,6 @@ struct GujaratiLanguageExerciseData {
     // MARK: - Exercise 8: Morphology
     // NOTE: Flagged for native Gujarati speaker review before publishing —
     // grammatical gender agreements and verb forms need verification.
-    // Item 16 has duplicate options ["પત્ની","પત્નીઓ","પત્નીઓ","પત્ની"] — also needs review.
     private static let morphology = Exercise(
         id: UUID(),
         title: "શબ્દ સ્વરૂપ",

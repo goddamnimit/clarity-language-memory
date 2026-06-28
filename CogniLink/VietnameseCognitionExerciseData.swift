@@ -23,105 +23,105 @@ struct VietnameseCognitionExerciseData {
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Ruột để ngoài da” là gì?",
                 options: ["Ruột để ngoài da là người bộc trực, không giữ bí mật", "Người bị bệnh đau dạ dày", "Người hay lo lắng xa xôi", "Người ích kỷ chỉ nghĩ cho mình"],
-                correctAnswer: "Ruột để ngoài da là người bộc trực, không giữ bí mật.",
+                correctAnswer: "Ruột để ngoài da là người bộc trực, không giữ bí mật",
                 explanation: "Bộc trực, có gì nói nấy, não nếp nhăn ít."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Trứng chọi với đá” là gì?",
                 options: ["Kẻ yếu đối đầu với kẻ mạnh quá chênh lệch", "Nấu ăn bằng trứng và đá", "Sự hợp tác bền vững", "Hành động khôn ngoan"],
-                correctAnswer: "Kẻ yếu đối đầu với kẻ mạnh quá chênh lệch.",
+                correctAnswer: "Kẻ yếu đối đầu với kẻ mạnh quá chênh lệch",
                 explanation: "Hành động vô vọng của kẻ yếu khi đối mặt với thế lực quá mạnh."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Thượng lộ bình an” là gì?",
                 options: ["Chúc chuyến đi đi lại an toàn, suôn sẻ", "Chúc mừng năm mới phát tài", "Chúc thi cử đỗ đạt cao", "Chúc sức khỏe dồi dào"],
-                correctAnswer: "Chúc chuyến đi đi lại an toàn, suôn sẻ.",
+                correctAnswer: "Chúc chuyến đi đi lại an toàn, suôn sẻ",
                 explanation: "Lời chúc an lành dành cho người sắp đi xa."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Nhẹ như lông hồng” là gì?",
                 options: ["Rất nhẹ nhàng, không đáng kể hoặc coi thường cái chết", "Trọng lượng của lông chim hồng hạc", "Việc làm vô ích", "Sự giàu sang phú quý"],
-                correctAnswer: "Rất nhẹ nhàng, không đáng kể hoặc coi thường cái chết.",
+                correctAnswer: "Rất nhẹ nhàng, không đáng kể hoặc coi thường cái chết",
                 explanation: "Xem nhẹ khó khăn hoặc cái chết vì nghĩa lớn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Như nước với lửa” là gì?",
                 options: ["Khắc khẩu, không thể hòa hợp", "Hai yếu tố cần thiết cho cuộc sống", "Mối quan hệ hỗ trợ lẫn nhau", "Sự sáng tạo vô hạn"],
-                correctAnswer: "Khắc khẩu, không thể hòa hợp.",
+                correctAnswer: "Khắc khẩu, không thể hòa hợp",
                 explanation: "Sự mâu thuẫn sâu sắc, xung khắc không thể dung hòa."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Nuôi ong tay áo” là gì?",
                 options: ["Nuôi dưỡng kẻ phản bội mình sau này", "Nuôi ong mật trong vườn", "Mặc quần áo ấm áp", "Làm việc thiện tích đức"],
-                correctAnswer: "Nuôi dưỡng kẻ phản bội mình sau này.",
+                correctAnswer: "Nuôi dưỡng kẻ phản bội mình sau này",
                 explanation: "Chăm sóc, giúp đỡ kẻ vong ơn bội nghĩa để rồi bị hại."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Khẩu phật tâm xà” là gì?",
                 options: ["Lời nói từ bi nhưng lòng dạ hiểm độc", "Người thường xuyên đi chùa", "Người có tấm lòng nhân ái", "Lời nói sắc bén răn đe"],
-                correctAnswer: "Lời nói từ bi nhưng lòng dạ hiểm độc.",
+                correctAnswer: "Lời nói từ bi nhưng lòng dạ hiểm độc",
                 explanation: "Miệng nói lời tốt đẹp nhân từ nhưng lòng dạ ác độc nham hiểm."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Chọn mặt gửi vàng” là gì?",
                 options: ["Tin tưởng giao phó việc quan trọng cho người uy tín", "Mua bán vàng bạc đá quý", "Sự lựa chọn ngẫu nhiên", "Gặp gỡ bạn bè thân thiết"],
-                correctAnswer: "Tin tưởng giao phó việc quan trọng cho người uy tín.",
+                correctAnswer: "Tin tưởng giao phó việc quan trọng cho người uy tín",
                 explanation: "Lựa chọn người có đủ độ tin cậy để nhờ vả, giao phó trách nhiệm."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Kiến bò miệng chén” là gì?",
                 options: ["Luẩn quẩn không có lối thoát", "Ăn uống không vệ sinh", "Kiên trì làm việc nhỏ", "Sự may mắn bất ngờ"],
-                correctAnswer: "Luẩn quẩn không có lối thoát.",
+                correctAnswer: "Luẩn quẩn không có lối thoát",
                 explanation: "Trạng thái bế tắc, luẩn quẩn trong khó khăn không tìm thấy lối ra."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Đắt như tôm tươi” là gì?",
                 options: ["Bán rất chạy, được nhiều người mua nhanh chóng", "Giá hải sản tăng cao", "Hàng hóa kém chất lượng", "Sự khan hiếm lương thực"],
-                correctAnswer: "Bán rất chạy, được nhiều người mua nhanh chóng.",
+                correctAnswer: "Bán rất chạy, được nhiều người mua nhanh chóng",
                 explanation: "Hàng hóa bán rất nhanh và được ưa chuộng nhiệt tình."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Đi guốc trong bụng” là gì?",
                 options: ["Hiểu rõ suy nghĩ, ý đồ của người khác", "Đau bụng khi đi giày cao gót", "Hành động thiếu lịch sự", "Giúp đỡ người nghèo khổ"],
-                correctAnswer: "Hiểu rõ suy nghĩ, ý đồ của người khác.",
+                correctAnswer: "Hiểu rõ suy nghĩ, ý đồ của người khác",
                 explanation: "Biết tỏng suy nghĩ, âm mưu của đối phương trước khi họ nói ra."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Nước đổ đầu vịt” là gì?",
                 options: ["Không chịu tiếp thu lời khuyên bảo", "Tưới nước cho động vật", "Lời nói có sức thuyết phục", "Sự kiên trì học hỏi"],
-                correctAnswer: "Không chịu tiếp thu lời khuyên bảo.",
+                correctAnswer: "Không chịu tiếp thu lời khuyên bảo",
                 explanation: "Sự bướng bỉnh, khuyên răn mãi nhưng không chịu nghe hoặc không đọng lại được gì."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Bắt cá hai tay” là gì?",
                 options: ["Cố gắng làm hai việc hoặc yêu hai người cùng lúc để trục lợi", "Kỹ năng đánh bắt cá điêu luyện", "Sự giúp đỡ nhiệt tình", "Hành động công bằng chính trực"],
-                correctAnswer: "Cố gắng làm hai việc hoặc yêu hai người cùng lúc để trục lợi.",
+                correctAnswer: "Cố gắng làm hai việc hoặc yêu hai người cùng lúc để trục lợi",
                 explanation: "Tham lam, muốn ôm đồm lợi ích từ nhiều phía cùng một lúc."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Mèo khen mèo dài đuôi” là gì?",
                 options: ["Tự khen ngợi bản thân hoặc người thân của mình", "Mèo có chiếc đuôi dài đẹp", "Người khiêm tốn nhã nhặn", "Sự khách quan trung thực"],
-                correctAnswer: "Tự khen ngợi bản thân hoặc người thân của mình.",
+                correctAnswer: "Tự khen ngợi bản thân hoặc người thân của mình",
                 explanation: "Tự cao tự đại, tự tâng bốc bản thân hoặc người nhà mình quá mức."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ý nghĩa của thành ngữ “Vắt cổ chày ra nước” là gì?",
                 options: ["Cực kỳ keo kiệt, bủn xỉn", "Ép nước thủ công", "Sự nghèo đói cùng cực", "Người tiết kiệm thông minh"],
-                correctAnswer: "Cực kỳ keo kiệt, bủn xỉn.",
+                correctAnswer: "Cực kỳ keo kiệt, bủn xỉn",
                 explanation: "Tính cách hà tiện, keo kiệt tới mức phi lý."
             )
         ]
