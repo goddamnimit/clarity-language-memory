@@ -64,7 +64,8 @@ class LanguageManager: ObservableObject {
         return [
             .english: LanguageExerciseData.allExercises +
                       CognitionExerciseData.allExercises +
-                      FunctionalSkillsExerciseData.allExercises,
+                      FunctionalSkillsExerciseData.allExercises +
+                      EnglishNewExercisesData.allExercises,
 
             .spanish: SpanishLanguageExerciseData.allExercises +
                       SpanishCognitionExerciseData.allExercises +
@@ -91,11 +92,13 @@ class LanguageManager: ObservableObject {
     func exercisesForSection(_ section: AppSection) -> [Exercise] {
         switch currentLanguage {
         case .english:
-            switch section {
-            case .language: return LanguageExerciseData.allExercises
-            case .cognition: return CognitionExerciseData.allExercises
-            case .functionalSkills: return FunctionalSkillsExerciseData.allExercises
-            }
+            // Combine the base English content with the new exercises, then route
+            // each one into its section via its own `.section` property.
+            let englishPool = LanguageExerciseData.allExercises +
+                              CognitionExerciseData.allExercises +
+                              FunctionalSkillsExerciseData.allExercises +
+                              EnglishNewExercisesData.allExercises
+            return englishPool.filter { $0.section == section }
         case .spanish:
             switch section {
             case .language: return SpanishLanguageExerciseData.allExercises
