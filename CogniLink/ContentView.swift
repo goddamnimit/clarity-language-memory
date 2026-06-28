@@ -34,7 +34,7 @@ struct ContentView: View {
             .tag(2)
         }
         .environment(\.layoutDirection,
-            languageManager.currentLanguage == .farsi ? .rightToLeft : .leftToRight)
+            [.farsi, .arabic].contains(languageManager.currentLanguage) ? .rightToLeft : .leftToRight)
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
@@ -44,34 +44,43 @@ struct ContentView: View {
     
     private var homeTabTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Home"
-        case .spanish: return "Inicio"
-        case .hindi: return "मुख्य"
-        case .gujarati: return "ઘર"
-        case .chinese: return "主页"
-        case .farsi: return "خانه"
+        case .english:    return "Home"
+        case .spanish:    return "Inicio"
+        case .hindi:      return "मुख्य"
+        case .gujarati:   return "ઘર"
+        case .chinese:    return "主页"
+        case .farsi:      return "خانه"
+        case .korean:     return "홈"
+        case .vietnamese: return "Trang chủ"
+        case .arabic:     return "الرئيسية"
         }
     }
 
     private var activitiesTabTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Activities"
-        case .spanish: return "Actividades"
-        case .hindi: return "गतिविधियाँ"
-        case .gujarati: return "પ્રવૃત્તિઓ"
-        case .chinese: return "活动"
-        case .farsi: return "فعالیت‌ها"
+        case .english:    return "Activities"
+        case .spanish:    return "Actividades"
+        case .hindi:      return "गतिविधियाँ"
+        case .gujarati:   return "પ્રવૃત્તિઓ"
+        case .chinese:    return "活动"
+        case .farsi:      return "فعالیت‌ها"
+        case .korean:     return "활동"
+        case .vietnamese: return "Hoạt động"
+        case .arabic:     return "الأنشطة"
         }
     }
 
     private var profileTabTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Profile"
-        case .spanish: return "Perfil"
-        case .hindi: return "प्रोफ़ाइल"
-        case .gujarati: return "પ્રોફાઇલ"
-        case .chinese: return "我的"
-        case .farsi: return "پروفایل"
+        case .english:    return "Profile"
+        case .spanish:    return "Perfil"
+        case .hindi:      return "प्रोफ़ाइल"
+        case .gujarati:   return "પ્રોફાઇલ"
+        case .chinese:    return "我的"
+        case .farsi:      return "پروفایل"
+        case .korean:     return "프로필"
+        case .vietnamese: return "Hồ sơ"
+        case .arabic:     return "الملف"
         }
     }
 }
@@ -353,17 +362,89 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+
+        case .korean:
+            if hasName {
+                let greetings = [
+                    "반갑습니다, \(name)!",
+                    "연습 준비됐나요, \(name)?",
+                    "어서오세요, \(name)!",
+                    "시작해 봐요, \(name)!",
+                    "\(name), 함께해서 기뻐요!",
+                    "빛날 시간이에요, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Clarity에 오신 걸 환영합니다!",
+                    "연습 준비됐나요?",
+                    "어서오세요!",
+                    "시작해 봐요!",
+                    "잘 하고 있어요!",
+                    "함께 연습해요!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+
+        case .vietnamese:
+            if hasName {
+                let greetings = [
+                    "Rất vui được gặp bạn, \(name)!",
+                    "\(name), sẵn sàng luyện tập chưa?",
+                    "Chào mừng trở lại, \(name)!",
+                    "Hãy bắt đầu nào, \(name)!",
+                    "Vui vì có bạn ở đây, \(name)!",
+                    "Tỏa sáng thôi, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Chào mừng đến với Clarity!",
+                    "Sẵn sàng luyện tập chưa?",
+                    "Chào mừng trở lại!",
+                    "Hãy bắt đầu nào!",
+                    "Vui vì bạn ở đây!",
+                    "Luyện tập hôm nay thôi!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+
+        case .arabic:
+            if hasName {
+                let greetings = [
+                    "سعيد برؤيتك، \(name)!",
+                    "\(name)، هل أنت مستعد للتدريب؟",
+                    "مرحباً بعودتك، \(name)!",
+                    "لنبدأ، \(name)!",
+                    "\(name)، يسعدني وجودك هنا!",
+                    "حان وقت التألق، \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "مرحباً بك في Clarity!",
+                    "هل أنت مستعد للتدريب؟",
+                    "مرحباً بعودتك!",
+                    "لنبدأ!",
+                    "يسعدني وجودك هنا!",
+                    "حان وقت الممارسة!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
     private var surpriseMeText: String {
         switch languageManager.currentLanguage {
-        case .english: return "Surprise Me! 🎲"
-        case .spanish: return "¡Sorpréndeme! 🎲"
-        case .hindi: return "कुछ भी चलेगा! 🎲"
-        case .gujarati: return "આશ્ચર્ય કરો! 🎲"
-        case .chinese: return "随机练习！🎲"
-        case .farsi: return "شگفتی! 🎲"
+        case .english:    return "Surprise Me! 🎲"
+        case .spanish:    return "¡Sorpréndeme! 🎲"
+        case .hindi:      return "कुछ भी चलेगा! 🎲"
+        case .gujarati:   return "આશ્ચર્ય કરો! 🎲"
+        case .chinese:    return "随机练习！🎲"
+        case .farsi:      return "شگفتی! 🎲"
+        case .korean:     return "깜짝 놀라게 해봐! 🎲"
+        case .vietnamese: return "Thử ngẫu nhiên! 🎲"
+        case .arabic:     return "فاجئني! 🎲"
         }
     }
 
@@ -379,44 +460,56 @@ struct HomeView: View {
             #else
             return "Tap for a random activity"
             #endif
-        case .spanish: return "Toca para una actividad aleatoria"
-        case .hindi: return "यादृच्छिक गतिविधि के लिए टैप करें"
-        case .gujarati: return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
-        case .chinese: return "点击随机练习"
-        case .farsi: return "برای فعالیت تصادفی ضربه بزنید"
+        case .spanish:    return "Toca para una actividad aleatoria"
+        case .hindi:      return "यादृच्छिक गतिविधि के लिए टैप करें"
+        case .gujarati:   return "રેન્ડમ પ્રવૃત્તિ માટે ટૅپ કરો"
+        case .chinese:    return "点击随机练习"
+        case .farsi:      return "برای فعالیت تصادفی ضربه بزنید"
+        case .korean:     return "랜덤 활동을 위해 탭하세요"
+        case .vietnamese: return "Nhấn để chọn ngẫu nhiên"
+        case .arabic:     return "اضغط لنشاط عشوائي"
         }
     }
 
     private var languageSectionTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Language"
-        case .spanish: return "Lenguaje"
-        case .hindi: return "भाषा"
-        case .gujarati: return "ભાષા"
-        case .chinese: return "语言"
-        case .farsi: return "زبان"
+        case .english:    return "Language"
+        case .spanish:    return "Lenguaje"
+        case .hindi:      return "भाषा"
+        case .gujarati:   return "ભાષા"
+        case .chinese:    return "语言"
+        case .farsi:      return "زبان"
+        case .korean:     return "언어"
+        case .vietnamese: return "Ngôn ngữ"
+        case .arabic:     return "اللغة"
         }
     }
 
     private var cognitionSectionTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Cognition"
-        case .spanish: return "Cognición"
-        case .hindi: return "अनुभूति"
-        case .gujarati: return "સ્મૃતિ અને તર્ક"
-        case .chinese: return "认知与记忆"
-        case .farsi: return "شناخت و حافظه"
+        case .english:    return "Cognition"
+        case .spanish:    return "Cognición"
+        case .hindi:      return "अनुभूति"
+        case .gujarati:   return "સ્મૃતિ અને તર્ક"
+        case .chinese:    return "认知与记忆"
+        case .farsi:      return "شناخت و حافظه"
+        case .korean:     return "인지력"
+        case .vietnamese: return "Nhận thức"
+        case .arabic:     return "الإدراك والذاكرة"
         }
     }
 
     private var functionalSkillsSectionTitle: String {
         switch languageManager.currentLanguage {
-        case .english: return "Functional Skills"
-        case .spanish: return "Habilidades Funcionales"
-        case .hindi: return "कार्यात्मक कौशल"
-        case .gujarati: return "દૈનિક કૌશલ્ય"
-        case .chinese: return "日常技能"
-        case .farsi: return "مهارت‌های روزمره"
+        case .english:    return "Functional Skills"
+        case .spanish:    return "Habilidades Funcionales"
+        case .hindi:      return "कार्यात्मक कौशल"
+        case .gujarati:   return "દૈનિક કૌશલ્ય"
+        case .chinese:    return "日常技能"
+        case .farsi:      return "مهارت‌های روزمره"
+        case .korean:     return "일상 기술"
+        case .vietnamese: return "Kỹ năng hàng ngày"
+        case .arabic:     return "المهارات اليومية"
         }
     }
 
@@ -434,9 +527,15 @@ struct HomeView: View {
             return "\(sessionsCount) 次练习"
         case .farsi:
             return "\(sessionsCount) جلسه"
+        case .korean:
+            return "\(sessionsCount)번 플레이"
+        case .vietnamese:
+            return "\(sessionsCount) phiên đã chơi"
+        case .arabic:
+            return "\(sessionsCount) جلسة"
         }
     }
-    
+
     private func loadSessionsCount() {
         let plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays") as? [String: Int] ?? [:]
         sessionsCount = plays.values.reduce(0, +)

@@ -350,12 +350,15 @@ struct TVExerciseContainerView: View {
 
     private var speechLocale: String {
         switch languageManager.currentLanguage {
-        case .english:  return "en-US"
-        case .spanish:  return "es-MX"
-        case .hindi:    return "hi-IN"
-        case .gujarati: return "gu-IN"
-        case .chinese:  return "zh-CN"
-        case .farsi:    return "fa-IR"
+        case .english:    return "en-US"
+        case .spanish:    return "es-MX"
+        case .hindi:      return "hi-IN"
+        case .gujarati:   return "gu-IN"
+        case .chinese:    return "zh-CN"
+        case .farsi:      return "fa-IR"
+        case .korean:     return "ko-KR"
+        case .vietnamese: return "vi-VN"
+        case .arabic:     return "ar-SA"
         }
     }
 }

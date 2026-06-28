@@ -157,12 +157,15 @@ struct ResearchExportManager {
 
     static func string(for language: AppLanguage) -> String {
         switch language {
-        case .english:  return "english"
-        case .spanish:  return "spanish"
-        case .hindi:    return "hindi"
-        case .gujarati: return "gujarati"
-        case .chinese:  return "chinese"
-        case .farsi:    return "farsi"
+        case .english:    return "english"
+        case .spanish:    return "spanish"
+        case .hindi:      return "hindi"
+        case .gujarati:   return "gujarati"
+        case .chinese:    return "chinese"
+        case .farsi:      return "farsi"
+        case .korean:     return "korean"
+        case .vietnamese: return "vietnamese"
+        case .arabic:     return "arabic"
         }
     }
 }

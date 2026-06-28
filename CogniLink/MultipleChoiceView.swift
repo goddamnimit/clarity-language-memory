@@ -7,19 +7,77 @@ import UIKit
 struct MultipleChoiceView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
+    var exerciseTitle: String = ""
 
     @State private var selectedOption: String? = nil
     @State private var hasAnswered = false
     @State private var answeredCorrectly = false
-    @State private var shuffledOptions: [String] = [] // Stores the randomized choice order
+    @State private var shuffledOptions: [String] = []
     @State private var tappedOption: String? = nil
     @State private var shakeOption: String? = nil
+    @State private var memoryPhase: MemoryPhase = .words
+
+    private enum MemoryPhase { case words, ready, choices }
+
+    private var isMemoryExercise: Bool {
+        exerciseTitle == "Memory: Repeat the List"
+    }
 
     var body: some View {
+        Group {
+            if isMemoryExercise && memoryPhase != .choices {
+                memoryRevealOverlay
+            } else {
+                choiceContent
+            }
+        }
+        .onAppear {
+            shuffledOptions = item.options.shuffled()
+            if isMemoryExercise {
+                memoryPhase = .words
+                startMemoryTimer()
+            }
+        }
+    }
+
+    // MARK: - Memory Reveal Overlay
+
+    @ViewBuilder
+    private var memoryRevealOverlay: some View {
+        VStack(spacing: 28) {
+            if memoryPhase == .words {
+                Text("Remember these words:")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+
+                VStack(spacing: 12) {
+                    ForEach(extractMemoryWords(from: item.prompt), id: \.self) { word in
+                        Text(word)
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .foregroundColor(.primary)
+                    }
+                }
+            } else {
+                Text("Ready?")
+                    .font(.system(size: 42, weight: .bold, design: .rounded))
+                    .foregroundColor(.accentColor)
+            }
+        }
+        .frame(maxWidth: .infinity, minHeight: 220)
+        .padding(20)
+        .background(Color.secondaryGroupedBackground)
+        .cornerRadius(16)
+        .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
+    }
+
+    // MARK: - Normal Choice Content
+
+    @ViewBuilder
+    private var choiceContent: some View {
         VStack(alignment: .leading, spacing: 20) {
             // Large question prompt text at top
             Text(item.prompt)
-                .font(.title3) // Highly legible font size
+                .font(.title3)
                 .fontWeight(.bold)
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.leading)
@@ -73,10 +131,10 @@ struct MultipleChoiceView: View {
                         )
                         #endif
                     }
-                    .disabled(hasAnswered) // Disable further tapping after an answer is chosen
+                    .disabled(hasAnswered)
                     .buttonStyle(PlainButtonStyle())
                     .tvFocusEffect()
-                    .opacity(buttonOpacity(for: option)) // Slightly fades unselected wrong buttons
+                    .opacity(buttonOpacity(for: option))
                     .scaleEffect(tappedOption == option ? 1.05 : 1.0)
                     .modifier(ShakeEffect(animatableData: shakeOption == option ? 1 : 0))
                     .animation(.spring(response: 0.2, dampingFraction: 0.6), value: tappedOption)
@@ -95,7 +153,7 @@ struct MultipleChoiceView: View {
                     .font(.headline)
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50) // Tap target height > 44pt
+                    .frame(height: 50)
                     .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(
@@ -109,14 +167,45 @@ struct MultipleChoiceView: View {
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
-        .padding(20) // Generous container padding
+        .padding(20)
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
-        // FIXED: Only onAppear is needed because the view is completely destroyed and recreated on transitions
-        .onAppear {
-            shuffledOptions = item.options.shuffled()
+    }
+
+    // MARK: - Memory Timer
+
+    private func startMemoryTimer() {
+        let capturedID = item.id
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            guard item.id == capturedID else { return }
+            withAnimation(.easeInOut(duration: 0.25)) {
+                memoryPhase = .ready
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                guard item.id == capturedID else { return }
+                withAnimation(.easeInOut(duration: 0.25)) {
+                    memoryPhase = .choices
+                }
+            }
         }
+    }
+
+    private func extractMemoryWords(from prompt: String) -> [String] {
+        guard let labelRange = prompt.range(of: "Words shown: ") else { return [] }
+        let after = String(prompt[labelRange.upperBound...])
+        let wordSection: String
+        if let dashRange = after.range(of: " —") {
+            wordSection = String(after[..<dashRange.lowerBound])
+        } else if let newlineRange = after.range(of: "\n") {
+            wordSection = String(after[..<newlineRange.lowerBound])
+        } else {
+            wordSection = after
+        }
+        return wordSection
+            .components(separatedBy: " / ")
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
     }
 
     // MARK: - State and Layout Helper Functions
@@ -178,7 +267,7 @@ struct MultipleChoiceView: View {
 
     private func borderColor(for option: String) -> Color {
         guard hasAnswered else {
-            return Color.gray.opacity(0.3) // Neutral gray border before selection
+            return Color.gray.opacity(0.3)
         }
         if isCorrectOption(option) {
             return .green
@@ -193,7 +282,7 @@ struct MultipleChoiceView: View {
             return .primary
         }
         if isCorrectOption(option) || selectedOption == option {
-            return .white // White text for selected or correct buttons
+            return .white
         }
         return .primary
     }
@@ -203,7 +292,7 @@ struct MultipleChoiceView: View {
         if isCorrectOption(option) || selectedOption == option {
             return 1.0
         }
-        return 0.5 // Non-selected wrong answers fade out to highlight feedback
+        return 0.5
     }
 }
 

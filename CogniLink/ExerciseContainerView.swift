@@ -212,7 +212,7 @@ struct ExerciseContainerView: View {
                             Group {
                                 switch exercise.type {
                                 case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice, .comparison:
-                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) }, exerciseTitle: exercise.title)
                                 case .categoryCrossOut:
                                     CategoryCrossOutView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 case .yesNo:
@@ -224,7 +224,7 @@ struct ExerciseContainerView: View {
                                 case .sequencing:
                                     SequencingView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 case .matching:
-                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
+                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) }, exerciseTitle: exercise.title)
                                 }
                             }
                             .id(currentItem.id) // Forces full view recreation on question change, resetting all @State
@@ -506,7 +506,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "शानदार! पूरे अंक! 🎉"
         case .gujarati: return "અદ્ભુત! પૂરા ગુણ! 🎉"
         case .chinese: return "太棒了！满分！🎉"
-        case .farsi: return "عالی! نمره کامل! 🎉"
+        case .farsi:      return "عالی! نمره کامل! 🎉"
+        case .korean:     return "완벽한 점수! 🎉"
+        case .vietnamese: return "Điểm tuyệt đối! 🎉"
+        case .arabic:     return "نتيجة مثالية! 🎉"
         }
     }
 
@@ -517,7 +520,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "सत्र पूर्ण!"
         case .gujarati: return "સત્ર પૂર્ણ!"
         case .chinese: return "练习完成！"
-        case .farsi: return "تمرین کامل شد!"
+        case .farsi:      return "تمرین کامل شد!"
+        case .korean:     return "세션 완료!"
+        case .vietnamese: return "Hoàn thành buổi tập!"
+        case .arabic:     return "اكتملت الجلسة!"
         }
     }
 
@@ -528,7 +534,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "स्कोर"
         case .gujarati: return "સ્કોર"
         case .chinese: return "得分"
-        case .farsi: return "نمره"
+        case .farsi:      return "نمره"
+        case .korean:     return "점수"
+        case .vietnamese: return "Điểm"
+        case .arabic:     return "النتيجة"
         }
     }
 
@@ -539,7 +548,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "नया सत्र"
         case .gujarati: return "નવું સત્ર"
         case .chinese: return "新练习"
-        case .farsi: return "تمرین جدید"
+        case .farsi:      return "تمرین جدید"
+        case .korean:     return "새 세션"
+        case .vietnamese: return "Buổi mới"
+        case .arabic:     return "جلسة جديدة"
         }
     }
 
@@ -550,7 +562,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "अभ्यासों पर वापस जाएं"
         case .gujarati: return "કસરત પર પાછા જાઓ"
         case .chinese: return "返回练习"
-        case .farsi: return "بازگشت به تمرین‌ها"
+        case .farsi:      return "بازگشت به تمرین‌ها"
+        case .korean:     return "연습으로 돌아가기"
+        case .vietnamese: return "Quay lại bài tập"
+        case .arabic:     return "العودة إلى التمارين"
         }
     }
 
@@ -561,7 +576,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "प्रश्न"
         case .gujarati: return "પ્રશ્ન"
         case .chinese: return "第"
-        case .farsi: return "سوال"
+        case .farsi:      return "سوال"
+        case .korean:     return "질문"
+        case .vietnamese: return "Câu hỏi"
+        case .arabic:     return "سؤال"
         }
     }
 
@@ -572,7 +590,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "का"
         case .gujarati: return "નો"
         case .chinese: return "题，共"
-        case .farsi: return "از"
+        case .farsi:      return "از"
+        case .korean:     return "중"
+        case .vietnamese: return "trong"
+        case .arabic:     return "من"
         }
     }
 
@@ -583,7 +604,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "पीछे"
         case .gujarati: return "પાછળ"
         case .chinese: return "上一题"
-        case .farsi: return "قبلی"
+        case .farsi:      return "قبلی"
+        case .korean:     return "이전"
+        case .vietnamese: return "Trước"
+        case .arabic:     return "السابق"
         }
     }
 
@@ -594,7 +618,10 @@ struct ExerciseContainerView: View {
         case .hindi: return "छोड़ें"
         case .gujarati: return "છોડો"
         case .chinese: return "跳过"
-        case .farsi: return "رد کردن"
+        case .farsi:      return "رد کردن"
+        case .korean:     return "건너뛰기"
+        case .vietnamese: return "Bỏ qua"
+        case .arabic:     return "تخطي"
         }
     }
 }

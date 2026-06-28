@@ -108,6 +108,24 @@ struct ExerciseListView: View {
             case .cognition: return "شناخت و حافظه"
             case .functionalSkills: return "مهارت‌های روزمره"
             }
+        case .korean:
+            switch section {
+            case .language: return "언어"
+            case .cognition: return "인지력"
+            case .functionalSkills: return "일상 기술"
+            }
+        case .vietnamese:
+            switch section {
+            case .language: return "Ngôn ngữ"
+            case .cognition: return "Nhận thức"
+            case .functionalSkills: return "Kỹ năng hàng ngày"
+            }
+        case .arabic:
+            switch section {
+            case .language: return "اللغة"
+            case .cognition: return "الإدراك والذاكرة"
+            case .functionalSkills: return "المهارات اليومية"
+            }
         }
     }
 
@@ -148,6 +166,24 @@ struct ExerciseListView: View {
             case .language: return "واژگان، ضرب‌المثل، قیاس و بیشتر"
             case .cognition: return "حافظه، دانش عمومی، استدلال"
             case .functionalSkills: return "زندگی روزمره، ایمنی، برنامه‌ریزی"
+            }
+        case .korean:
+            switch section {
+            case .language: return "단어, 동의어, 관용구 등"
+            case .cognition: return "기억력, 상식, 논리와 추론"
+            case .functionalSkills: return "일상생활, 안전, 계획"
+            }
+        case .vietnamese:
+            switch section {
+            case .language: return "Từ vựng, đồng nghĩa, thành ngữ và hơn thế"
+            case .cognition: return "Trí nhớ, kiến thức, logic và lý luận"
+            case .functionalSkills: return "Cuộc sống hàng ngày, an toàn và lập kế hoạch"
+            }
+        case .arabic:
+            switch section {
+            case .language: return "المفردات والأمثال والقياس وأكثر"
+            case .cognition: return "الذاكرة والمعرفة العامة والاستدلال"
+            case .functionalSkills: return "الحياة اليومية والسلامة والتخطيط"
             }
         }
     }
@@ -190,6 +226,24 @@ struct ExerciseListView: View {
             case .easy: return "آسان"
             case .medium: return "متوسط"
             case .hard: return "سخت"
+            }
+        case .korean:
+            switch difficulty {
+            case .easy: return "쉬움"
+            case .medium: return "보통"
+            case .hard: return "어려움"
+            }
+        case .vietnamese:
+            switch difficulty {
+            case .easy: return "Dễ"
+            case .medium: return "Trung bình"
+            case .hard: return "Khó"
+            }
+        case .arabic:
+            switch difficulty {
+            case .easy: return "سهل"
+            case .medium: return "متوسط"
+            case .hard: return "صعب"
             }
         }
     }

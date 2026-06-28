@@ -130,7 +130,10 @@ struct AllActivitiesView: View {
         case .hindi: return "सभी गतिविधियाँ"
         case .gujarati: return "બધી પ્રવૃત્તિઓ"
         case .chinese: return "所有活动"
-        case .farsi: return "همه فعالیت‌ها"
+        case .farsi:      return "همه فعالیت‌ها"
+        case .korean:     return "모든 활동"
+        case .vietnamese: return "Tất cả hoạt động"
+        case .arabic:     return "جميع الأنشطة"
         }
     }
 
@@ -141,18 +144,24 @@ struct AllActivitiesView: View {
         case .hindi: return "इस अनुभाग में कोई अभ्यास उपलब्ध नहीं है।"
         case .gujarati: return "આ વિભાગમાં કોઈ કસરત ઉપલબ્ધ નથી."
         case .chinese: return "此部分暂无练习。"
-        case .farsi: return "تمرینی در این بخش موجود نیست."
+        case .farsi:      return "تمرینی در این بخش موجود نیست."
+        case .korean:     return "이 섹션에 연습 문제가 없습니다."
+        case .vietnamese: return "Không có bài tập nào trong phần này."
+        case .arabic:     return "لا تتوفر تمارين في هذا القسم."
         }
     }
 
     private var surpriseMeButtonText: String {
         switch languageManager.currentLanguage {
-        case .english: return "Surprise Me!"
-        case .spanish: return "¡Sorpréndeme!"
-        case .hindi: return "मुझे आश्चर्यचकित करें!"
-        case .gujarati: return "આશ્ચર્ય કરો!"
-        case .chinese: return "随机练习！🎲"
-        case .farsi: return "شگفتی! 🎲"
+        case .english:    return "Surprise Me!"
+        case .spanish:    return "¡Sorpréndeme!"
+        case .hindi:      return "मुझे आश्चर्यचकित करें!"
+        case .gujarati:   return "આશ્ચર્ય કરો!"
+        case .chinese:    return "随机练习！🎲"
+        case .farsi:      return "شگفتی! 🎲"
+        case .korean:     return "깜짝 놀라게 해봐!"
+        case .vietnamese: return "Thử ngẫu nhiên!"
+        case .arabic:     return "فاجئني!"
         }
     }
 
@@ -193,6 +202,24 @@ struct AllActivitiesView: View {
             case .language: return "زبان"
             case .cognition: return "شناخت و حافظه"
             case .functionalSkills: return "مهارت‌های روزمره"
+            }
+        case .korean:
+            switch section {
+            case .language: return "언어"
+            case .cognition: return "인지력"
+            case .functionalSkills: return "일상 기술"
+            }
+        case .vietnamese:
+            switch section {
+            case .language: return "Ngôn ngữ"
+            case .cognition: return "Nhận thức"
+            case .functionalSkills: return "Kỹ năng hàng ngày"
+            }
+        case .arabic:
+            switch section {
+            case .language: return "اللغة"
+            case .cognition: return "الإدراك والذاكرة"
+            case .functionalSkills: return "المهارات اليومية"
             }
         }
     }
