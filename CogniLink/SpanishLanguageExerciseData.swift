@@ -135,7 +135,7 @@ struct SpanishLanguageExerciseData {
             ExerciseItem(prompt: "Palabra: CALIENTE", options: ["cálido", "frío", "fresco", "tibio"], correctAnswer: "frío", explanation: ""),
             ExerciseItem(prompt: "Palabra: FELIZ", options: ["alegre", "contento", "triste", "satisfecho"], correctAnswer: "triste", explanation: ""),
             ExerciseItem(prompt: "Palabra: GRANDE", options: ["enorme", "gigante", "pequeño", "alto"], correctAnswer: "pequeño", explanation: ""),
-            ExerciseItem(prompt: "Palabra: RÁPIDO", options: ["veloz", "lento", "acelerado", "veloz"], correctAnswer: "lento", explanation: ""),
+            ExerciseItem(prompt: "Palabra: RÁPIDO", options: ["veloz", "lento", "acelerado", "pronto"], correctAnswer: "lento", explanation: ""),
             ExerciseItem(prompt: "Palabra: LIMPIO", options: ["ordenado", "despejado", "sucio", "fresco"], correctAnswer: "sucio", explanation: ""),
             ExerciseItem(prompt: "Palabra: DESPIERTO", options: ["alerta", "atento", "dormido", "activo"], correctAnswer: "dormido", explanation: ""),
             ExerciseItem(prompt: "Palabra: RUIDOSO", options: ["fuerte", "alto", "silencioso", "potente"], correctAnswer: "silencioso", explanation: ""),

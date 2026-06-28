@@ -357,8 +357,6 @@ struct HindiCognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "एक भरे हुए बाथटब में लगभग कितने लीटर पानी होता है?", options: ["5 लीटर", "30 लीटर", "लगभग 120 लीटर", "500 लीटर"], correctAnswer: "लगभग 120 लीटर"),
             ExerciseItem(id: UUID(), prompt: "हाथी के कितने पैर होते हैं?", options: ["2", "3", "4", "6"], correctAnswer: "4"),
             ExerciseItem(id: UUID(), prompt: "एक सदी में कितने साल होते हैं?", options: ["10", "50", "100", "1000"], correctAnswer: "100"),
-            ExerciseItem(id: UUID(), prompt: "क्या हाथी चूहे से बड़ा है?", options: ["हाँ", "नहीं"], correctAnswer: "हाँ"),
-            ExerciseItem(id: UUID(), prompt: "क्या इंसानों के दोनों अंगूठों समेत 10 उंगलियाँ होती हैं?", options: ["हाँ", "नहीं"], correctAnswer: "हाँ"),
             ExerciseItem(id: UUID(), prompt: "एक व्यक्ति सामान्यतः कितनी तेज़ी से चलता है?", options: ["लगभग 1 km/h", "लगभग 5 km/h", "लगभग 20 km/h", "लगभग 50 km/h"], correctAnswer: "लगभग 5 km/h"),
             ExerciseItem(id: UUID(), prompt: "एक सामान्य साल में कितने दिन होते हैं?", options: ["300", "356", "365", "400"], correctAnswer: "365"),
             ExerciseItem(id: UUID(), prompt: "एक सैंडविच में कितने ब्रेड के टुकड़े होते हैं?", options: ["1", "2", "3", "4"], correctAnswer: "2"),

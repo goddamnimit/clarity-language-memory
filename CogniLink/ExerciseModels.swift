@@ -16,6 +16,7 @@ enum ExerciseType: CaseIterable, Hashable {
     case categoryCrossOut      // Tap the word that does not belong
     case multipleChoice        // Standard question with 4 options
     case yesNo                 // Binary YES or NO selection
+    case comparison            // Binary A vs B best-value choice (exactly 2 options)
     case factOrOpinion         // Tap Fact (F) or Opinion (O)
     case openEnded             // Spoken or typed response; model answer is shown
     case sentenceCompletion    // Fill in the blank from 3 options

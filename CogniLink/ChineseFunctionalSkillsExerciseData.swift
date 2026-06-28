@@ -86,7 +86,7 @@ struct ChineseFunctionalSkillsExerciseData {
         title: "购物比价",
         instructions: "您在加州太平洋牧场超市购物，预算$60。请为清单上的每件商品选择最划算的选项。",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "大米（您需要买大米）", options: ["茉莉香米 5磅装 $5.99", "茉莉香米 25磅装 $18.99"], correctAnswer: "茉莉香米 25磅装 $18.99"),

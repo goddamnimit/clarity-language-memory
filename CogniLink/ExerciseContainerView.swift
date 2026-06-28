@@ -211,7 +211,7 @@ struct ExerciseContainerView: View {
                             // Exercise Type Dispatch
                             Group {
                                 switch exercise.type {
-                                case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice:
+                                case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice, .comparison:
                                     MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 case .categoryCrossOut:
                                     CategoryCrossOutView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })

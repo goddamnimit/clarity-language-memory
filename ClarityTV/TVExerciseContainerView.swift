@@ -122,7 +122,7 @@ struct TVExerciseContainerView: View {
             Group {
                 switch exercise.type {
                 case .multipleChoice, .sentenceCompletion, .analogyChoice,
-                     .homonym, .yesNo, .factOrOpinion, .matching:
+                     .homonym, .yesNo, .factOrOpinion, .matching, .comparison:
                     TVMultipleChoiceView(item: currentItem, exerciseType: exercise.type, onAnswered: handleAnswer)
                 case .categoryCrossOut:
                     TVCategoryCrossOutView(item: currentItem, onAnswered: handleAnswer)

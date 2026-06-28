@@ -86,7 +86,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         title: "કરિયાણાની ખરીદી — શ્રેષ્ઠ કિંમત",
         instructions: "દરેક વસ્તુ માટે વધુ સારી કિંમતવાળો વિકલ્પ પસંદ કરો.",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ટૉઇલેટ પેપર: A) 4 રોલ ₹40 (₹10 પ્રતિ રોલ) B) 6 રોલ ₹54 (₹9 પ્રતિ રોલ)", options: ["વિકલ્પ A — 4 રોલ ₹40", "વિકલ્પ B — 6 રોલ ₹54"], correctAnswer: "વિકલ્પ B — 6 રોલ ₹54", explanation: "₹9 પ્રતિ રોલ vs ₹10 પ્રતિ રોલ"),

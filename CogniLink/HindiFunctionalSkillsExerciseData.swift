@@ -86,7 +86,7 @@ struct HindiFunctionalSkillsExerciseData {
         title: "किराने की खरीदारी — सबसे अच्छा मूल्य",
         instructions: "प्रत्येक वस्तु के लिए बेहतर मूल्य वाला विकल्प चुनें।",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "टॉयलेट पेपर: A) 4 रोल ₹40 (₹10 प्रति रोल) B) 6 रोल ₹54 (₹9 प्रति रोल)", options: ["विकल्प A — 4 रोल ₹40", "विकल्प B — 6 रोल ₹54"], correctAnswer: "विकल्प B — 6 रोल ₹54", explanation: "₹9 प्रति रोल बनाम ₹10 प्रति रोल"),

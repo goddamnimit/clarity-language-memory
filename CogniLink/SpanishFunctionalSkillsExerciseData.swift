@@ -64,7 +64,7 @@ struct SpanishFunctionalSkillsExerciseData {
         title: "Compras — Mejor Valor",
         instructions: "Para cada artículo, elige la opción que te ofrezca un mejor valor por tu dinero.",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Papel higiénico: A) 4 rollos por $2.00 ($0.50 por rollo) B) 6 rollos por $2.70 ($0.45 por rollo)", options: ["Opción A — 4 rollos por $2.00", "Opción B — 6 rollos por $2.70"], correctAnswer: "Opción B — 6 rollos por $2.70", explanation: "$0.45 por rollo vs $0.50 por rollo"),

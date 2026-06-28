@@ -135,6 +135,7 @@ struct ResearchExportManager {
         switch type {
         case .categoryCrossOut:   return "categoryCrossOut"
         case .multipleChoice:     return "multipleChoice"
+        case .comparison:         return "comparison"
         case .yesNo:              return "yesNo"
         case .factOrOpinion:      return "factOrOpinion"
         case .openEnded:          return "openEnded"

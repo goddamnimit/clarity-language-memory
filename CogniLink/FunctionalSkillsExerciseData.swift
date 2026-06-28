@@ -88,7 +88,7 @@ struct FunctionalSkillsExerciseData {
         title: "Grocery Shopping — Best Value",
         instructions: "For each item, choose which option gives you better value for your money.",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Toilet paper: A) 4 rolls for $2.00 ($0.50 per roll)  B) 6 rolls for $2.70 ($0.45 per roll)", options: ["Option A — 4 rolls for $2.00", "Option B — 6 rolls for $2.70"], correctAnswer: "Option B — 6 rolls for $2.70", explanation: "$0.45 per roll vs $0.50 per roll"),

@@ -92,6 +92,10 @@ enum ExerciseDataValidator {
       if item.options.count != 4 {
         return ["multipleChoice requires exactly 4 options (found \(item.options.count))"]
       }
+    case .comparison:
+      if item.options.count != 2 {
+        return ["comparison requires exactly 2 options (found \(item.options.count))"]
+      }
     case .yesNo:
       if item.options != yesNoOptions {
         return ["yesNo requires options [\"Yes\", \"No\"] (found \(formatOptions(item.options)))"]

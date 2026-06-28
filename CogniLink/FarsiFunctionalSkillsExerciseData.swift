@@ -87,7 +87,7 @@ struct FarsiFunctionalSkillsExerciseData {
         title: "خرید هوشمند — بهترین ارزش",
         instructions: "بهترین ارزش را برای خرید انتخاب کنید. بودجه شما ۵۰ دلار است.",
         section: .functionalSkills,
-        type: .multipleChoice,
+        type: .comparison,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "برنج — کدام بهتر است؟", options: ["گزینه الف — ۲ کیلو برنج ایرانی ۶ دلار", "گزینه ب — ۵ کیلو برنج ایرانی ۱۲ دلار"], correctAnswer: "گزینه ب — ۵ کیلو برنج ایرانی ۱۲ دلار", explanation: "۲ کیلو: ۳ دلار هر کیلو. ۵ کیلو: ۲.۴۰ دلار هر کیلو — بسته بزرگ‌تر ارزان‌تر است."),

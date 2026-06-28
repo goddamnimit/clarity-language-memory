@@ -223,7 +223,7 @@ struct CognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "Is the Sahara the largest hot desert in the world?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "Is Brazil located in South America?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "Is a nickel worth more than a dime?", options: ["Yes", "No"], correctAnswer: "No", explanation: "A dime is worth 10 cents; a nickel is worth 5 cents"),
-            ExerciseItem(id: UUID(), prompt: "Is a penguin a type of bird?", options: ["Yes", "No"], correctAnswer: "Sí", explanation: "Penguins are birds, though they cannot fly"),
+            ExerciseItem(id: UUID(), prompt: "Is a penguin a type of bird?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Penguins are birds, though they cannot fly"),
             ExerciseItem(id: UUID(), prompt: "Is a dolphin classified as a mammal?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Dolphins breathe air and nurse their young"),
             ExerciseItem(id: UUID(), prompt: "Does the sun rise in the east?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "Is Alaska the largest US state by land area?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "")
@@ -354,8 +354,6 @@ struct CognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "How many legs does an elephant have?", options: ["2", "3", "4", "6"], correctAnswer: "4", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "How many years are in a century?", options: ["10", "50", "100", "1000"], correctAnswer: "100", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "How many individual dollar bills make up one hundred dollars?", options: ["10", "50", "100", "1000"], correctAnswer: "100", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "Is an elephant larger than a mouse?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "Do humans have 10 fingers including both thumbs?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "How fast does a person typically walk?", options: ["About 1 mph", "About 3 mph", "About 15 mph", "About 30 mph"], correctAnswer: "About 3 mph", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "How many days are in a standard non-leap year?", options: ["300", "356", "365", "400"], correctAnswer: "365", explanation: ""),
             ExerciseItem(id: UUID(), prompt: "How many slices of bread are in a standard sandwich?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: ""),

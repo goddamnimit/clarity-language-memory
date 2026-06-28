@@ -129,6 +129,7 @@ struct TVMultipleChoiceView: View {
     private var typeLabel: String {
         switch exerciseType {
         case .multipleChoice:     return "Multiple Choice"
+        case .comparison:         return "Best Value"
         case .yesNo:              return "Yes or No"
         case .factOrOpinion:      return "Fact or Opinion"
         case .sentenceCompletion: return "Fill in the Blank"

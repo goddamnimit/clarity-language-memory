@@ -358,7 +358,6 @@ struct FarsiCognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "معمولاً یک جعبه تخم‌مرغ چند تا دارد؟", options: ["۶", "۱۲", "۱۸", "۲۴"], correctAnswer: "۱۲"),
             ExerciseItem(id: UUID(), prompt: "یک ماشین معمولی چند چرخ دارد؟", options: ["۲", "۳", "۴", "۶"], correctAnswer: "۴"),
             ExerciseItem(id: UUID(), prompt: "یک وان حمام پر از آب حدود چند لیتر آب دارد؟", options: ["۵ لیتر", "۳۰ لیتر", "حدود ۱۲۰ لیتر", "۵۰۰ لیتر"], correctAnswer: "حدود ۱۲۰ لیتر"),
-            ExerciseItem(id: UUID(), prompt: "آیا فیل از موش بزرگ‌تر است؟", options: ["بله", "خیر"], correctAnswer: "بله"),
             ExerciseItem(id: UUID(), prompt: "آیا یک نفر به تنهایی می‌تواند یک ماشین را بلند کند؟", options: ["بله، به راحتی", "بله، با تمرین", "خیر، ماشین خیلی سنگین است", "بله، با یک دست"], correctAnswer: "خیر، ماشین خیلی سنگین است"),
             ExerciseItem(id: UUID(), prompt: "یک نفر معمولاً با چه سرعتی پیاده‌روی می‌کند؟", options: ["حدود ۱ کیلومتر در ساعت", "حدود ۵ کیلومتر در ساعت", "حدود ۲۰ کیلومتر در ساعت", "حدود ۵۰ کیلومتر در ساعت"], correctAnswer: "حدود ۵ کیلومتر در ساعت"),
             ExerciseItem(id: UUID(), prompt: "یک ساندویچ معمولاً با چند تکه نان درست می‌شود؟", options: ["۱", "۲", "۳", "۴"], correctAnswer: "۲"),
