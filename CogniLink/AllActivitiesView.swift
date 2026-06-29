@@ -134,6 +134,7 @@ struct AllActivitiesView: View {
         case .korean:     return "모든 활동"
         case .vietnamese: return "Tất cả hoạt động"
         case .arabic:     return "جميع الأنشطة"
+        case .portuguese: return "Todas as Atividades"
         }
     }
 
@@ -148,6 +149,7 @@ struct AllActivitiesView: View {
         case .korean:     return "이 섹션에 연습 문제가 없습니다."
         case .vietnamese: return "Không có bài tập nào trong phần này."
         case .arabic:     return "لا تتوفر تمارين في هذا القسم."
+        case .portuguese: return "Nenhum exercício disponível nesta seção."
         }
     }
 
@@ -162,6 +164,7 @@ struct AllActivitiesView: View {
         case .korean:     return "깜짝 놀라게 해봐!"
         case .vietnamese: return "Thử ngẫu nhiên!"
         case .arabic:     return "فاجئني!"
+        case .portuguese: return "Me Surpreenda!"
         }
     }
 
@@ -220,6 +223,12 @@ struct AllActivitiesView: View {
             case .language: return "اللغة"
             case .cognition: return "الإدراك والذاكرة"
             case .functionalSkills: return "المهارات اليومية"
+            }
+        case .portuguese:
+            switch section {
+            case .language: return "Linguagem"
+            case .cognition: return "Cognição"
+            case .functionalSkills: return "Habilidades Funcionais"
             }
         }
     }

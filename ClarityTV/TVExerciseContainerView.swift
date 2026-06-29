@@ -234,7 +234,7 @@ struct TVExerciseContainerView: View {
             let safe = exercises.filter {
                 $0.type != .openEnded && $0.type != .categoryCrossOut && $0.type != .sequencing
             }
-            candidates = safe.isEmpty ? exercises : safe
+            candidates = safe.isEmpty ? exercises.filter { $0.type != .openEnded } : safe
         } else {
             candidates = exercises.filter { $0.type != .openEnded }
         }

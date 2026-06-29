@@ -166,6 +166,7 @@ struct ResearchExportManager {
         case .korean:     return "korean"
         case .vietnamese: return "vietnamese"
         case .arabic:     return "arabic"
+        case .portuguese: return "portuguese"
         }
     }
 }

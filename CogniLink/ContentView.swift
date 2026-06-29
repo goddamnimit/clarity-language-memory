@@ -53,6 +53,7 @@ struct ContentView: View {
         case .korean:     return "홈"
         case .vietnamese: return "Trang chủ"
         case .arabic:     return "الرئيسية"
+        case .portuguese: return "Início"
         }
     }
 
@@ -67,6 +68,7 @@ struct ContentView: View {
         case .korean:     return "활동"
         case .vietnamese: return "Hoạt động"
         case .arabic:     return "الأنشطة"
+        case .portuguese: return "Atividades"
         }
     }
 
@@ -81,6 +83,7 @@ struct ContentView: View {
         case .korean:     return "프로필"
         case .vietnamese: return "Hồ sơ"
         case .arabic:     return "الملف"
+        case .portuguese: return "Perfil"
         }
     }
 }
@@ -431,6 +434,29 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+
+        case .portuguese:
+            if hasName {
+                let greetings = [
+                    "Que bom ver você, \(name)!",
+                    "\(name), pronto para praticar?",
+                    "Bem-vindo de volta, \(name)!",
+                    "Vamos começar, \(name)!",
+                    "\(name), que ótimo ter você aqui!",
+                    "Hora de brilhar, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Bem-vindo ao Clarity!",
+                    "Pronto para praticar?",
+                    "Bem-vindo de volta!",
+                    "Vamos começar!",
+                    "Que bom ter você aqui!",
+                    "Hora de praticar!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -445,6 +471,7 @@ struct HomeView: View {
         case .korean:     return "깜짝 놀라게 해봐! 🎲"
         case .vietnamese: return "Thử ngẫu nhiên! 🎲"
         case .arabic:     return "فاجئني! 🎲"
+        case .portuguese: return "Me Surpreenda! 🎲"
         }
     }
 
@@ -468,6 +495,7 @@ struct HomeView: View {
         case .korean:     return "랜덤 활동을 위해 탭하세요"
         case .vietnamese: return "Nhấn để chọn ngẫu nhiên"
         case .arabic:     return "اضغط لنشاط عشوائي"
+        case .portuguese: return "Toque para uma atividade aleatória"
         }
     }
 
@@ -482,6 +510,7 @@ struct HomeView: View {
         case .korean:     return "언어"
         case .vietnamese: return "Ngôn ngữ"
         case .arabic:     return "اللغة"
+        case .portuguese: return "Linguagem"
         }
     }
 
@@ -496,6 +525,7 @@ struct HomeView: View {
         case .korean:     return "인지력"
         case .vietnamese: return "Nhận thức"
         case .arabic:     return "الإدراك والذاكرة"
+        case .portuguese: return "Cognição"
         }
     }
 
@@ -510,6 +540,7 @@ struct HomeView: View {
         case .korean:     return "일상 기술"
         case .vietnamese: return "Kỹ năng hàng ngày"
         case .arabic:     return "المهارات اليومية"
+        case .portuguese: return "Habilidades Funcionais"
         }
     }
 
@@ -533,6 +564,8 @@ struct HomeView: View {
             return "\(sessionsCount) phiên đã chơi"
         case .arabic:
             return "\(sessionsCount) جلسة"
+        case .portuguese:
+            return "\(sessionsCount) \(sessionsCount == 1 ? "sessão jogada" : "sessões jogadas")"
         }
     }
 

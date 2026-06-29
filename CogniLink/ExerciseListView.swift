@@ -126,6 +126,12 @@ struct ExerciseListView: View {
             case .cognition: return "الإدراك والذاكرة"
             case .functionalSkills: return "المهارات اليومية"
             }
+        case .portuguese:
+            switch section {
+            case .language: return "Linguagem"
+            case .cognition: return "Cognição"
+            case .functionalSkills: return "Habilidades Funcionais"
+            }
         }
     }
 
@@ -184,6 +190,12 @@ struct ExerciseListView: View {
             case .language: return "المفردات والأمثال والقياس وأكثر"
             case .cognition: return "الذاكرة والمعرفة العامة والاستدلال"
             case .functionalSkills: return "الحياة اليومية والسلامة والتخطيط"
+            }
+        case .portuguese:
+            switch section {
+            case .language: return "Palavras, sinônimos, provérbios e mais"
+            case .cognition: return "Memória, sequências, lógica e raciocínio"
+            case .functionalSkills: return "Vida diária, segurança e planejamento"
             }
         }
     }
@@ -244,6 +256,12 @@ struct ExerciseListView: View {
             case .easy: return "سهل"
             case .medium: return "متوسط"
             case .hard: return "صعب"
+            }
+        case .portuguese:
+            switch difficulty {
+            case .easy: return "Fácil"
+            case .medium: return "Médio"
+            case .hard: return "Difícil"
             }
         }
     }

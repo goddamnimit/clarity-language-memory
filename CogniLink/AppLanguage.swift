@@ -12,6 +12,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case korean = "한국어"
     case vietnamese = "Tiếng Việt"
     case arabic = "العربية"
+    case portuguese = "Português"
 
     var id: String { self.rawValue }
 
@@ -26,6 +27,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .korean: return "한국어"
         case .vietnamese: return "Tiếng Việt"
         case .arabic: return "العربية"
+        case .portuguese: return "Português"
         }
     }
 
@@ -40,6 +42,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .korean: return "🇰🇷"
         case .vietnamese: return "🇻🇳"
         case .arabic: return "🇸🇦"
+        case .portuguese: return "🇧🇷"
         }
     }
 
@@ -54,6 +57,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .korean: return "ko_KR"
         case .vietnamese: return "vi_VN"
         case .arabic: return "ar_SA"
+        case .portuguese: return "pt_BR"
         }
     }
 }
@@ -110,7 +114,11 @@ class LanguageManager: ObservableObject {
 
             .arabic: ArabicLanguageExerciseData.allExercises +
                      ArabicCognitionExerciseData.allExercises +
-                     ArabicFunctionalSkillsExerciseData.allExercises
+                     ArabicFunctionalSkillsExerciseData.allExercises,
+
+            .portuguese: PortugueseLanguageExerciseData.allExercises +
+                         PortugueseCognitionExerciseData.allExercises +
+                         PortugueseFunctionalSkillsExerciseData.allExercises
         ]
     }
     
@@ -172,6 +180,12 @@ class LanguageManager: ObservableObject {
             case .language: return ArabicLanguageExerciseData.allExercises
             case .cognition: return ArabicCognitionExerciseData.allExercises
             case .functionalSkills: return ArabicFunctionalSkillsExerciseData.allExercises
+            }
+        case .portuguese:
+            switch section {
+            case .language: return PortugueseLanguageExerciseData.allExercises
+            case .cognition: return PortugueseCognitionExerciseData.allExercises
+            case .functionalSkills: return PortugueseFunctionalSkillsExerciseData.allExercises
             }
         }
     }

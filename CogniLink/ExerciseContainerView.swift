@@ -510,6 +510,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "완벽한 점수! 🎉"
         case .vietnamese: return "Điểm tuyệt đối! 🎉"
         case .arabic:     return "نتيجة مثالية! 🎉"
+        case .portuguese: return "Pontuação Perfeita! 🎉"
         }
     }
 
@@ -524,6 +525,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "세션 완료!"
         case .vietnamese: return "Hoàn thành buổi tập!"
         case .arabic:     return "اكتملت الجلسة!"
+        case .portuguese: return "Sessão Concluída!"
         }
     }
 
@@ -538,6 +540,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "점수"
         case .vietnamese: return "Điểm"
         case .arabic:     return "النتيجة"
+        case .portuguese: return "Pontuação"
         }
     }
 
@@ -552,6 +555,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "새 세션"
         case .vietnamese: return "Buổi mới"
         case .arabic:     return "جلسة جديدة"
+        case .portuguese: return "Nova Sessão"
         }
     }
 
@@ -566,6 +570,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "연습으로 돌아가기"
         case .vietnamese: return "Quay lại bài tập"
         case .arabic:     return "العودة إلى التمارين"
+        case .portuguese: return "Voltar aos Exercícios"
         }
     }
 
@@ -580,6 +585,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "질문"
         case .vietnamese: return "Câu hỏi"
         case .arabic:     return "سؤال"
+        case .portuguese: return "Questão"
         }
     }
 
@@ -594,6 +600,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "중"
         case .vietnamese: return "trong"
         case .arabic:     return "من"
+        case .portuguese: return "de"
         }
     }
 
@@ -608,6 +615,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "이전"
         case .vietnamese: return "Trước"
         case .arabic:     return "السابق"
+        case .portuguese: return "Anterior"
         }
     }
 
@@ -622,6 +630,7 @@ struct ExerciseContainerView: View {
         case .korean:     return "건너뛰기"
         case .vietnamese: return "Bỏ qua"
         case .arabic:     return "تخطي"
+        case .portuguese: return "Pular"
         }
     }
 }
