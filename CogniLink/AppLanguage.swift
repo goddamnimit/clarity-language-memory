@@ -112,62 +112,74 @@ class LanguageManager: ObservableObject {
             .spanish: SpanishLanguageExerciseData.allExercises +
                       SpanishCognitionExerciseData.allExercises +
                       SpanishFunctionalSkillsExerciseData.allExercises +
-                      SpanishNewExercisesData.allExercises,
+                      SpanishNewExercisesData.allExercises +
+                      SpanishHardExercisesData.allExercises,
 
             .hindi: HindiLanguageExerciseData.allExercises +
                     HindiCognitionExerciseData.allExercises +
                     HindiFunctionalSkillsExerciseData.allExercises +
-                    HindiNewExercisesData.allExercises,
+                    HindiNewExercisesData.allExercises +
+                    HindiHardExercisesData.allExercises,
 
             .gujarati: GujaratiLanguageExerciseData.allExercises +
                        GujaratiCognitionExerciseData.allExercises +
                        GujaratiFunctionalSkillsExerciseData.allExercises +
-                       GujaratiNewExercisesData.allExercises,
+                       GujaratiNewExercisesData.allExercises +
+                       GujaratiHardExercisesData.allExercises,
 
             .chinese: ChineseLanguageExerciseData.allExercises +
                       ChineseCognitionExerciseData.allExercises +
                       ChineseFunctionalSkillsExerciseData.allExercises +
-                      ChineseNewExercisesData.allExercises,
+                      ChineseNewExercisesData.allExercises +
+                      ChineseHardExercisesData.allExercises,
 
             .farsi: FarsiLanguageExerciseData.allExercises +
                     FarsiCognitionExerciseData.allExercises +
                     FarsiFunctionalSkillsExerciseData.allExercises +
-                    FarsiNewExercisesData.allExercises,
+                    FarsiNewExercisesData.allExercises +
+                    FarsiHardExercisesData.allExercises,
 
             .korean: KoreanLanguageExerciseData.allExercises +
                      KoreanCognitionExerciseData.allExercises +
                      KoreanFunctionalSkillsExerciseData.allExercises +
-                     KoreanNewExercisesData.allExercises,
+                     KoreanNewExercisesData.allExercises +
+                     KoreanHardExercisesData.allExercises,
 
             .vietnamese: VietnameseLanguageExerciseData.allExercises +
                          VietnameseCognitionExerciseData.allExercises +
                          VietnameseFunctionalSkillsExerciseData.allExercises +
-                         VietnameseNewExercisesData.allExercises,
+                         VietnameseNewExercisesData.allExercises +
+                         VietnameseHardExercisesData.allExercises,
 
             .arabic: ArabicLanguageExerciseData.allExercises +
                      ArabicCognitionExerciseData.allExercises +
                      ArabicFunctionalSkillsExerciseData.allExercises +
-                     ArabicNewExercisesData.allExercises,
+                     ArabicNewExercisesData.allExercises +
+                     ArabicHardExercisesData.allExercises,
 
             .portuguese: PortugueseLanguageExerciseData.allExercises +
                          PortugueseCognitionExerciseData.allExercises +
                          PortugueseFunctionalSkillsExerciseData.allExercises +
-                         PortugueseNewExercisesData.allExercises,
+                         PortugueseNewExercisesData.allExercises +
+                         PortugueseHardExercisesData.allExercises,
 
             .tagalog: TagalogLanguageExerciseData.allExercises +
                       TagalogCognitionExerciseData.allExercises +
                       TagalogFunctionalSkillsExerciseData.allExercises +
-                      TagalogNewExercisesData.allExercises,
+                      TagalogNewExercisesData.allExercises +
+                      TagalogHardExercisesData.allExercises,
 
             .punjabi: PunjabiLanguageExerciseData.allExercises +
                       PunjabiCognitionExerciseData.allExercises +
                       PunjabiFunctionalSkillsExerciseData.allExercises +
-                      PunjabiNewExercisesData.allExercises,
+                      PunjabiNewExercisesData.allExercises +
+                      PunjabiHardExercisesData.allExercises,
 
             .armenian: ArmenianLanguageExerciseData.allExercises +
                        ArmenianCognitionExerciseData.allExercises +
                        ArmenianFunctionalSkillsExerciseData.allExercises +
-                       ArmenianNewExercisesData.allExercises
+                       ArmenianNewExercisesData.allExercises +
+                       ArmenianHardExercisesData.allExercises
         ]
     }
     
@@ -187,77 +199,86 @@ class LanguageManager: ObservableObject {
             let pool = SpanishLanguageExerciseData.allExercises +
                        SpanishCognitionExerciseData.allExercises +
                        SpanishFunctionalSkillsExerciseData.allExercises +
-                       SpanishNewExercisesData.allExercises
+                       SpanishNewExercisesData.allExercises +
+                       SpanishHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .hindi:
             let pool = HindiLanguageExerciseData.allExercises +
                        HindiCognitionExerciseData.allExercises +
                        HindiFunctionalSkillsExerciseData.allExercises +
-                       HindiNewExercisesData.allExercises
+                       HindiNewExercisesData.allExercises +
+                       HindiHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .gujarati:
             let pool = GujaratiLanguageExerciseData.allExercises +
                        GujaratiCognitionExerciseData.allExercises +
                        GujaratiFunctionalSkillsExerciseData.allExercises +
-                       GujaratiNewExercisesData.allExercises
+                       GujaratiNewExercisesData.allExercises +
+                       GujaratiHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .chinese:
             let pool = ChineseLanguageExerciseData.allExercises +
                        ChineseCognitionExerciseData.allExercises +
                        ChineseFunctionalSkillsExerciseData.allExercises +
-                       ChineseNewExercisesData.allExercises
+                       ChineseNewExercisesData.allExercises +
+                       ChineseHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .farsi:
             let pool = FarsiLanguageExerciseData.allExercises +
                        FarsiCognitionExerciseData.allExercises +
                        FarsiFunctionalSkillsExerciseData.allExercises +
-                       FarsiNewExercisesData.allExercises
+                       FarsiNewExercisesData.allExercises +
+                       FarsiHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .korean:
             let pool = KoreanLanguageExerciseData.allExercises +
                        KoreanCognitionExerciseData.allExercises +
                        KoreanFunctionalSkillsExerciseData.allExercises +
-                       KoreanNewExercisesData.allExercises
+                       KoreanNewExercisesData.allExercises +
+                       KoreanHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .vietnamese:
             let pool = VietnameseLanguageExerciseData.allExercises +
                        VietnameseCognitionExerciseData.allExercises +
                        VietnameseFunctionalSkillsExerciseData.allExercises +
-                       VietnameseNewExercisesData.allExercises
+                       VietnameseNewExercisesData.allExercises +
+                       VietnameseHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .arabic:
             let pool = ArabicLanguageExerciseData.allExercises +
                        ArabicCognitionExerciseData.allExercises +
                        ArabicFunctionalSkillsExerciseData.allExercises +
-                       ArabicNewExercisesData.allExercises
+                       ArabicNewExercisesData.allExercises +
+                       ArabicHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .portuguese:
             let pool = PortugueseLanguageExerciseData.allExercises +
                        PortugueseCognitionExerciseData.allExercises +
                        PortugueseFunctionalSkillsExerciseData.allExercises +
-                       PortugueseNewExercisesData.allExercises
+                       PortugueseNewExercisesData.allExercises +
+                       PortugueseHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .tagalog:
             let pool = TagalogLanguageExerciseData.allExercises +
                        TagalogCognitionExerciseData.allExercises +
                        TagalogFunctionalSkillsExerciseData.allExercises +
-                       TagalogNewExercisesData.allExercises
+                       TagalogNewExercisesData.allExercises +
+                       TagalogHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .punjabi:
             let pool = PunjabiLanguageExerciseData.allExercises +
                        PunjabiCognitionExerciseData.allExercises +
                        PunjabiFunctionalSkillsExerciseData.allExercises +
-                       PunjabiNewExercisesData.allExercises
+                       PunjabiNewExercisesData.allExercises +
+                       PunjabiHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         case .armenian:
             let pool = ArmenianLanguageExerciseData.allExercises +
                        ArmenianCognitionExerciseData.allExercises +
                        ArmenianFunctionalSkillsExerciseData.allExercises +
-                       ArmenianNewExercisesData.allExercises
+                       ArmenianNewExercisesData.allExercises +
+                       ArmenianHardExercisesData.allExercises
             return pool.filter { $0.section == section }
-
-
-
         }
     }
 }
