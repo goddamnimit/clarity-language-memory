@@ -7,10 +7,13 @@ struct VietnameseCognitionExerciseData {
         storyRecall,
         numberSequences,
         causeAndEffect,
-        whatsWrongHere
+        whatsWrongHere,
+        yesNoQuestions,
+        analogies,
+        emotions
     ]
 
-    // MARK: - Exercise 23: Figurative Language — Idioms
+    // MARK: - Thành ngữ và tục ngữ
     private static let figurativeLanguageIdioms = Exercise(
         id: UUID(),
         title: "Thành ngữ và tục ngữ",
@@ -127,7 +130,7 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 38: Story Recall
+    // MARK: - Từ trái nghĩa (Dễ dàng)
     private static let storyRecall = Exercise(
         id: UUID(),
         title: "Từ trái nghĩa (Dễ dàng)",
@@ -205,11 +208,298 @@ struct VietnameseCognitionExerciseData {
                 options: ["ngưỡng mộ", "thích", "ghét", "quan tâm"],
                 correctAnswer: "ghét",
                 explanation: ""
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì?",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 1)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 2)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 3)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 4)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 5)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 6)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 7)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 8)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 9)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 10)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 11)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 12)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 13)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 14)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 15)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 16)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 17)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 18)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 19)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 20)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 21)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 22)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 23)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 24)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 25)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 26)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 27)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 28)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 29)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 30)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 31)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 32)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 33)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 34)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 35)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 36)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 37)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 38)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 39)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 40)",
+                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
+                correctAnswer: "Chôm chôm và nhãn",
+                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
             )
         ]
     )
 
-    // MARK: - Exercise 39: Number Sequences
+    // MARK: - Hoàn thành câu (Dễ)
     private static let numberSequences = Exercise(
         id: UUID(),
         title: "Hoàn thành câu (Dễ)",
@@ -361,7 +651,7 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 40: Cause and Effect
+    // MARK: - Ngữ pháp và lượng từ
     private static let causeAndEffect = Exercise(
         id: UUID(),
         title: "Ngữ pháp và lượng từ",
@@ -513,7 +803,7 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 42: What’s Wrong Here?
+    // MARK: - Tương tự
     private static let whatsWrongHere = Exercise(
         id: UUID(),
         title: "Tương tự",
@@ -630,4 +920,879 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
+    // MARK: - Câu hỏi Có/Không
+    private static let yesNoQuestions = Exercise(
+        id: UUID(),
+        title: "Câu hỏi Có/Không",
+        instructions: "Chọn Có hoặc Không cho mỗi câu hỏi.",
+        section: .cognition,
+        type: .yesNo,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 1)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 2)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 3)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 4)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 5)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 6)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 7)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 8)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 9)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 10)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 11)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 12)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 13)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 14)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 15)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 16)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 17)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 18)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 19)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 20)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 21)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 22)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 23)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 24)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 25)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 26)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 27)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 28)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 29)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Có phải đường Bolsa ở Westminster là trung tâm của khu Little Saigon tại California không? (Câu hỏi 30)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Bolsa Ave is the main street of Little Saigon in Orange County, CA."
+            )
+        ]
+    )
+
+    // MARK: - Tương tự
+    private static let analogies = Exercise(
+        id: UUID(),
+        title: "Tương tự",
+        instructions: "Chọn từ đúng để hoàn thành phép tương tự.",
+        section: .cognition,
+        type: .analogyChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 1)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 2)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 3)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 4)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 5)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 6)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 7)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 8)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 9)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 10)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 11)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 12)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 13)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 14)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 15)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 16)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 17)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 18)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 19)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 20)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 21)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 22)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 23)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 24)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 25)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 26)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 27)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 28)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 29)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 30)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 31)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 32)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 33)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 34)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 35)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 36)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 37)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 38)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 39)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Nước mắm : Mặn :: Đường : ___ (Phép so sánh 40)",
+                options: ["Ngọt", "Chua", "Cay", "Đắng"],
+                correctAnswer: "Ngọt",
+                explanation: "Fish sauce is salty, sugar is sweet."
+            )
+        ]
+    )
+
+    // MARK: - Nhận biết cảm xúc
+    private static let emotions = Exercise(
+        id: UUID(),
+        title: "Nhận biết cảm xúc",
+        instructions: "Chọn cảm xúc đúng cho mỗi tình huống.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 1)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 2)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 3)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 4)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 5)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 6)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 7)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 8)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 9)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 10)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 11)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 12)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 13)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 14)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 15)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 16)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 17)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 18)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 19)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 20)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 21)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 22)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 23)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 24)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 25)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 26)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 27)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 28)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 29)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 30)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 31)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 32)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 33)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 34)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 35)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 36)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 37)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 38)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 39)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 40)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 41)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 42)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 43)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 44)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 45)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 46)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 47)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 48)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 49)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "Bà Lan cười rạng rỡ và ôm chầm lấy cháu ngoại khi cháu đi học về. Bà Lan cảm thấy thế nào? (Tình huống 50)",
+                options: ["Vui vẻ", "Giận dữ", "Lo lắng", "Buồn bã"],
+                correctAnswer: "Vui vẻ",
+                explanation: "Joy/Happiness is shown by smiling and hugging."
+            )
+        ]
+    )
 }

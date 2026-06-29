@@ -8,10 +8,12 @@ struct ArabicCognitionExerciseData {
         numberSequences,
         causeAndEffect,
         whatEmotionIsThis,
-        whatsWrongHere
+        whatsWrongHere,
+        yesNoQuestions,
+        analogies
     ]
 
-    // MARK: - Exercise 23: Figurative Language — Idioms
+    // MARK: - التعبيرات المجازية والأمثال
     private static let figurativeLanguageIdioms = Exercise(
         id: UUID(),
         title: "التعبيرات المجازية والأمثال",
@@ -128,7 +130,7 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 38: Story Recall
+    // MARK: - أذكر القصة
     private static let storyRecall = Exercise(
         id: UUID(),
         title: "أذكر القصة",
@@ -245,7 +247,7 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 39: Number Sequences
+    // MARK: - تسلسلات الأرقام
     private static let numberSequences = Exercise(
         id: UUID(),
         title: "تسلسلات الأرقام",
@@ -397,7 +399,7 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 40: Cause and Effect
+    // MARK: - السبب والنتيجة
     private static let causeAndEffect = Exercise(
         id: UUID(),
         title: "السبب والنتيجة",
@@ -514,7 +516,7 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 41: What Emotion Is This?
+    // MARK: - ما هي العاطفة هذه؟
     private static let whatEmotionIsThis = Exercise(
         id: UUID(),
         title: "ما هي العاطفة هذه؟",
@@ -616,7 +618,7 @@ struct ArabicCognitionExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "لم يكن لدى \"الخزانة العربية\" الخبز المحدد الذي أراده أحمد، فاضطر إلى شراء ماركة أخرى. كيف يشعر؟",
+                prompt: "لم يكن لدى “الخزانة العربية” الخبز المحدد الذي أراده أحمد، فاضطر إلى شراء ماركة أخرى. كيف يشعر؟",
                 options: ["بخيبة أمل طفيفة", "مرعوب", "غاضب", "منتشي"],
                 correctAnswer: "بخيبة أمل طفيفة",
                 explanation: "عدم الحصول على تفضيل بسيط يؤدي إلى خيبة أمل خفيفة."
@@ -666,7 +668,7 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
-    // MARK: - Exercise 42: What’s Wrong Here?
+    // MARK: - ما هو الخطأ هنا؟
     private static let whatsWrongHere = Exercise(
         id: UUID(),
         title: "ما هو الخطأ هنا؟",
@@ -783,4 +785,1007 @@ struct ArabicCognitionExerciseData {
         ]
     )
 
+    // MARK: - أسئلة نعم/لا
+    private static let yesNoQuestions = Exercise(
+        id: UUID(),
+        title: "أسئلة نعم/لا",
+        instructions: "اختر نعم أو لا لكل سؤال.",
+        section: .cognition,
+        type: .yesNo,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 1)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 2)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 3)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 4)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 5)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 6)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 7)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 8)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 9)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 10)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 11)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 12)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 13)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 14)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 15)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 16)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 17)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 18)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 19)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 20)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 21)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 22)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 23)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 24)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 25)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 26)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 27)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 28)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 29)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 30)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 31)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 32)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 33)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 34)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 35)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 36)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 37)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 38)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 39)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 40)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 41)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 42)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 43)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 44)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 45)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 46)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 47)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 48)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 49)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 50)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 51)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 52)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 53)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 54)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 55)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 56)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 57)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 58)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 59)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 60)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 61)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 62)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 63)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 64)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 65)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 66)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 67)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 68)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 69)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 70)",
+                options: ["Yes", "No"],
+                correctAnswer: "Yes",
+                explanation: "Falafel is a popular Middle Eastern food."
+            )
+        ]
+    )
+
+    // MARK: - القياس المنطقي
+    private static let analogies = Exercise(
+        id: UUID(),
+        title: "القياس المنطقي",
+        instructions: "اختر الكلمة المناسبة لإكمال القياس.",
+        section: .cognition,
+        type: .analogyChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 1)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 2)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 3)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 4)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 5)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 6)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 7)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 8)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 9)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 10)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 11)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 12)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 13)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 14)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 15)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 16)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 17)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 18)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 19)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 20)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 21)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 22)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 23)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 24)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 25)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 26)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 27)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 28)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 29)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 30)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 31)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 32)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 33)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 34)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 35)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 36)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 37)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 38)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 39)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 40)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 41)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 42)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 43)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 44)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 45)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 46)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 47)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 48)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 49)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 50)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 51)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 52)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 53)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 54)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 55)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 56)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 57)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 58)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 59)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 60)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 61)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 62)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 63)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 64)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 65)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 66)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 67)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 68)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 69)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "التمر : حلو :: الليمون : ___ (قياس 70)",
+                options: ["حامض", "مالح", "مر", "حار"],
+                correctAnswer: "حامض",
+                explanation: "Date is sweet, lemon is sour."
+            )
+        ]
+    )
 }
