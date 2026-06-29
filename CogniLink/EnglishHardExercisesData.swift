@@ -12,7 +12,8 @@ struct EnglishHardExercisesData {
         exercise5,
         exercise6,
         exercise7,
-        exercise8
+        exercise8,
+        exercise9
     ]
 
     // MARK: - Exercise 1: Advanced Homonyms
@@ -220,6 +221,32 @@ struct EnglishHardExercisesData {
             ExerciseItem(prompt: "Complete the saying: The pen is mightier than the ___.", options: ["shield", "sword", "book", "voice"], correctAnswer: "sword", explanation: "The proverb is 'The pen is mightier than the sword,' meaning writing and communication are more influential than physical force."),
             ExerciseItem(prompt: "Complete the saying: There is no place like ___.", options: ["home", "school", "work", "nature"], correctAnswer: "home", explanation: "The proverb is 'There is no place like home,' expressing affection for one's own living space."),
             ExerciseItem(prompt: "Complete the saying: Variety is the spice of ___.", options: ["life", "food", "mind", "youth"], correctAnswer: "life", explanation: "The proverb is 'Variety is the spice of life,' meaning differences and changes make life interesting.")
+        ]
+    )
+
+    // MARK: - Exercise 9: Homonyms (Easy)
+    private static let exercise9 = Exercise(
+        title: "Homonyms (Easy)",
+        instructions: "Choose the correct homonym pair to complete the sentences.",
+        section: .language,
+        type: .homonym,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "[see / sea] I can ___ you. The ship sailed on the ___.", options: ["see...sea", "sea...see", "see...see", "sea...sea"], correctAnswer: "see...sea", explanation: "See refers to vision, while sea refers to the ocean."),
+            ExerciseItem(prompt: "[hair / hare] She brushed her ___. The wild rabbit is a ___.", options: ["hare...hair", "hair...hare", "hair...hair", "hare...hare"], correctAnswer: "hair...hare", explanation: "Hair grows on the head, while hare is another word for a rabbit."),
+            ExerciseItem(prompt: "[meet / meat] I will ___ you at noon. The lion eats ___.", options: ["meat...meet", "meet...meat", "meet...meet", "meat...meat"], correctAnswer: "meet...meat", explanation: "Meet means to encounter someone, while meat is animal flesh used for food."),
+            ExerciseItem(prompt: "[sun / son] The ___ is bright today. She has one ___ and one daughter.", options: ["son...sun", "sun...son", "sun...sun", "son...son"], correctAnswer: "sun...son", explanation: "Sun is the star that lights the earth, while son is a male child."),
+            ExerciseItem(prompt: "[flower / flour] She smelled the red ___. Bakeries use ___ to make bread.", options: ["flour...flower", "flower...flour", "flower...flower", "flour...flour"], correctAnswer: "flower...flour", explanation: "Flower is the blossom of a plant, while flour is powder made from grain."),
+            ExerciseItem(prompt: "[pair / pear] I bought a new ___ of shoes. She ate a sweet green ___.", options: ["pear...pair", "pair...pear", "pair...pair", "pear...pear"], correctAnswer: "pair...pear", explanation: "Pair means a set of two, while pear is a type of sweet fruit."),
+            ExerciseItem(prompt: "[eye / I] I have a speck in my ___. ___ like to read books.", options: ["I...eye", "eye...I", "eye...eye", "I...I"], correctAnswer: "eye...I", explanation: "Eye is the organ of sight, while I is the first-person singular pronoun."),
+            ExerciseItem(prompt: "[blue / blew] The sky is ___. The wind ___ the leaves away.", options: ["blew...blue", "blue...blew", "blue...blue", "blew...blew"], correctAnswer: "blue...blew", explanation: "Blue is a color, while blew is the past tense of blow."),
+            ExerciseItem(prompt: "[write / right] Please ___ your name on the paper. Use your ___ hand.", options: ["right...write", "write...right", "write...write", "right...right"], correctAnswer: "write...right", explanation: "Write means to form letters, while right refers to the opposite of left."),
+            ExerciseItem(prompt: "[wear / where] I will ___ my red coat. ___ did you put my keys?", options: ["where...wear", "wear...where", "wear...wear", "where...where"], correctAnswer: "wear...where", explanation: "Wear means to have clothing on, while where refers to a location or place."),
+            ExerciseItem(prompt: "[road / rode] The car drove on the ___. She ___ her horse in the park.", options: ["rode...road", "road...rode", "road...rode", "rode...rode"], correctAnswer: "road...rode", explanation: "Road is a paved path for driving, while rode is the past tense of ride."),
+            ExerciseItem(prompt: "[tail / tale] The dog wagged its ___. The grandpa told a funny ___.", options: ["tale...tail", "tail...tale", "tail...tail", "tale...tale"], correctAnswer: "tail...tale", explanation: "Tail is the rear appendage of an animal, while tale is a story."),
+            ExerciseItem(prompt: "[wood / would] The table is made of ___. ___ you like a cup of tea?", options: ["would...wood", "wood...would", "wood...would", "wood...would"], correctAnswer: "wood...would", explanation: "Wood is material from trees, while would is a verb expressing desire or intent."),
+            ExerciseItem(prompt: "[hear / here] Can you ___ the birds singing? Put the book right ___.", options: ["here...hear", "hear...here", "hear...hear", "here...here"], correctAnswer: "hear...here", explanation: "Hear means to perceive sound, while here refers to this location."),
+            ExerciseItem(prompt: "[one / won] I have ___ dog. Our team ___ the game.", options: ["won...one", "one...won", "one...won", "won...won"], correctAnswer: "one...won", explanation: "One is the number 1, while won is the past tense of win.")
         ]
     )
 }
