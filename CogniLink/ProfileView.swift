@@ -590,7 +590,16 @@ struct ShareSheet: UIViewControllerRepresentable {
     let items: [Any]
 
     func makeUIViewController(context: Context) -> UIActivityViewController {
-        UIActivityViewController(activityItems: items, applicationActivities: nil)
+        let controller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        controller.completionWithItemsHandler = { activityType, completed, returnedItems, error in
+            for item in items {
+                if let url = item as? URL {
+                    try? FileManager.default.removeItem(at: url)
+                    print("[ShareSheet] Cleaned up temporary file: \(url.lastPathComponent)")
+                }
+            }
+        }
+        return controller
     }
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}

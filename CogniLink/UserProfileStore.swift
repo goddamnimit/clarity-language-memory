@@ -19,23 +19,35 @@ class UserProfileStore: ObservableObject {
     private init() {
         // Attempt to load an existing profile from local device memory
         if let data = UserDefaults.standard.data(forKey: userDefaultsKey),
-           let decoded = try? JSONDecoder().decode(UserProfile.self, from: data) {
+           var decoded = try? JSONDecoder().decode(UserProfile.self, from: data) {
+            decoded.name = KeychainHelper.load(key: "clarity_user_name") ?? ""
+            decoded.therapistName = KeychainHelper.load(key: "clarity_therapist_name")
+            decoded.notes = KeychainHelper.load(key: "clarity_notes")
             self.profile = decoded
             checkStreakValidity() // Check if the streak was broken since last launch
         } else {
             // If no profile is found, generate and save a fresh one
             let newProfile = UserProfile.makeNew()
             self.profile = newProfile
-            
-            if let encoded = try? JSONEncoder().encode(newProfile) {
-                UserDefaults.standard.set(encoded, forKey: userDefaultsKey)
-            }
+            saveProfile()
         }
     }
 
     /// Encodes the current profile state to JSON and writes it to disk.
     func saveProfile() {
         profile.lastModified = Date() // Mark change timing
+        KeychainHelper.save(profile.name, key: "clarity_user_name")
+        if let therapistName = profile.therapistName {
+            KeychainHelper.save(therapistName, key: "clarity_therapist_name")
+        } else {
+            KeychainHelper.delete(key: "clarity_therapist_name")
+        }
+        if let notes = profile.notes {
+            KeychainHelper.save(notes, key: "clarity_notes")
+        } else {
+            KeychainHelper.delete(key: "clarity_notes")
+        }
+
         if let encoded = try? JSONEncoder().encode(profile) {
             UserDefaults.standard.set(encoded, forKey: userDefaultsKey)
         }
@@ -118,18 +130,59 @@ class UserProfileStore: ObservableObject {
     }
 
     func resetProfile() {
-        let freshProfile = UserProfile.makeNew()
-        self.profile = freshProfile
+        profile.name = ""
+        profile.avatarImageData = nil
+        profile.diagnosisType = nil
+        profile.therapistName = ""
+        profile.notes = ""
         saveProfile()
+    }
+}
 
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: "CogniLink_ExercisePlays")
-        defaults.removeObject(forKey: "CogniLink_AttemptedTasksCount")
-        ProgressTracker.resetAllProgress()
-        defaults.removeObject(forKey: "clarity_session_log")
-
-        let allKeys = defaults.dictionaryRepresentation().keys
-        allKeys.filter { $0.hasPrefix("clarity_recent_") }
-               .forEach { defaults.removeObject(forKey: $0) }
+// MARK: - Keychain Helper
+struct KeychainHelper {
+    static func save(_ string: String, key: String) {
+        guard let data = string.data(using: .utf8) else { return }
+        
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: key,
+            kSecValueData as String: data,
+            kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
+        ]
+        
+        // Delete any existing item first
+        SecItemDelete(query as CFDictionary)
+        
+        // Add new item
+        let status = SecItemAdd(query as CFDictionary, nil)
+        if status != errSecSuccess {
+            print("[KeychainHelper] ERROR saving to Keychain for key \(key): \(status)")
+        }
+    }
+    
+    static func load(key: String) -> String? {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: key,
+            kSecReturnData as String: kCFBooleanTrue!,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+        
+        var dataTypeRef: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+        
+        if status == errSecSuccess, let data = dataTypeRef as? Data {
+            return String(data: data, encoding: .utf8)
+        }
+        return nil
+    }
+    
+    static func delete(key: String) {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrAccount as String: key
+        ]
+        SecItemDelete(query as CFDictionary)
     }
 }

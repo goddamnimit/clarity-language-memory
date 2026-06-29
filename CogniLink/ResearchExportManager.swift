@@ -1,4 +1,5 @@
 import Foundation
+import os
 
 /// Builds and manages the anonymous research data export.
 /// All methods are static; no instance is ever created.
@@ -20,7 +21,11 @@ struct ResearchExportManager {
         // -- Profile fields --
         let daysUsingApp = calendar.dateComponents([.day], from: profile.startDate, to: today).day ?? 0
         let diagnosis    = profile.diagnosisType?.rawValue ?? "Not specified"
-        print("[ResearchExport] diagnosis=\(diagnosis), daysUsingApp=\(daysUsingApp)")
+        
+        if #available(iOS 14.0, *) {
+            let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.clarity.app", category: "ResearchExport")
+            logger.debug("[ResearchExport] diagnosis=\(diagnosis, privacy: .private), daysUsingApp=\(daysUsingApp, privacy: .public)")
+        }
 
         // -- Exercise activity --
         let plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays")
