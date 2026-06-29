@@ -503,7 +503,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "તબક્કાઓ ખોટા ક્રમમાં દર્શાવેલ છે. તેમને સાચા ક્રમમાં ગોઠવો.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

@@ -486,7 +486,7 @@ struct ArmenianFunctionalSkillsExerciseData {
         instructions: "Դասավորեք պատրաստման քայլերը ճիշտ հաջորդականությամբ:",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

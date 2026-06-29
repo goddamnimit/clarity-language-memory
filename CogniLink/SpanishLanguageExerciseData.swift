@@ -188,7 +188,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que completa correctamente el refrán popular.",
         section: .language,
         type: .multipleChoice,
-        difficulty: .easy,
+        difficulty: .hard,
         items: [
             ExerciseItem(
                 id: UUID(),
@@ -1954,7 +1954,7 @@ struct SpanishLanguageExerciseData {
         instructions: "La pareja de palabras se muestra arriba. Elige la opción correcta para completar los espacios en orden.",
         section: .language,
         type: .homonym,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

@@ -486,7 +486,7 @@ struct PortugueseFunctionalSkillsExerciseData {
         instructions: "Ordene as etapas da receita na sequência correta.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

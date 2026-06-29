@@ -102,7 +102,7 @@ struct ChineseLanguageExerciseData {
         instructions: "完成以下成语。",
         section: .language,
         type: .multipleChoice,
-        difficulty: .medium,
+        difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "完成这个成语：一石＿＿", options: ["二鸟", "三鸟", "两鸟", "四鸟"], correctAnswer: "二鸟"),
             ExerciseItem(id: UUID(), prompt: "完成这个成语：半途而＿＿", options: ["止", "废", "返", "散"], correctAnswer: "废"),

@@ -101,7 +101,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that correctly completes the common phrase.",
         section: .language,
         type: .multipleChoice,
-        difficulty: .easy,
+        difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Bite the ___", options: ["barrel", "bullet", "bandage", "bone"], correctAnswer: "bullet", explanation: ""),
             ExerciseItem(prompt: "A penny for your ___", options: ["pennies", "thoughts", "time", "words"], correctAnswer: "thoughts", explanation: ""),
@@ -258,7 +258,7 @@ struct LanguageExerciseData {
         instructions: "The word pair is shown above the sentence. Choose the correct option to fill BOTH blanks in order.",
         section: .language,
         type: .homonym,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[right / write] Please ___ your name. Turn ___ at the light.", options: ["right…right", "write…write", "write…right", "right…write"], correctAnswer: "write…right", explanation: ""),
             ExerciseItem(prompt: "[flower / flour] She used ___ to bake. She put a ___ in a vase.", options: ["flour…flour", "flour…flower", "flower…flour", "flower…flower"], correctAnswer: "flour…flower", explanation: ""),

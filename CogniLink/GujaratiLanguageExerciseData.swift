@@ -103,7 +103,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "સાચો શબ્દ પસંદ કરીને કહેવત પૂરી કરો.",
         section: .language,
         type: .multipleChoice,
-        difficulty: .easy,
+        difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ઊંટ ઉપર ___ ની ઘોડેસવારી.", options: ["ઊંટ", "ઘોડો", "ગધેડો", "ભેંસ"], correctAnswer: "ઊંટ"),
             ExerciseItem(id: UUID(), prompt: "ઘઉં સાથે ___ પણ દળાય.", options: ["ઘુણ", "ઉંદર", "કીડો", "માખી"], correctAnswer: "ઘુણ"),

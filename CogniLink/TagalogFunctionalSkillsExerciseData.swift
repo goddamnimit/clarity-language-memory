@@ -486,7 +486,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Ayusin ang mga hakbang ng pagluluto sa tamang pagkakasunod-sunod.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

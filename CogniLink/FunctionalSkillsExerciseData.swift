@@ -134,7 +134,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "The steps are listed in the WRONG order. Number them 1, 2, 3 to put them in the correct sequence.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

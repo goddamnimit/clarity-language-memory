@@ -503,7 +503,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "步骤显示的顺序不正确。请将它们按1至3的顺序重新排列。",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

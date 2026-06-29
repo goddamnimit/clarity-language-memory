@@ -394,7 +394,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Los pasos se muestran en el orden INCORRECTO. Ordénalos del 1 al 3 para ponerlos en la secuencia correcta.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

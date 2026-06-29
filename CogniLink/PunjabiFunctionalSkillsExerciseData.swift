@@ -486,7 +486,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਖਾਣਾ ਪਕਾਉਣ ਦੇ ਪੜਾਵਾਂ ਨੂੰ ਸਹੀ ਕ੍ਰม ਵਿੱਚ ਵਿਵਸਥਿਤ ਕਰੋ।",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

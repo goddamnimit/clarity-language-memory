@@ -503,7 +503,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "مراحل به ترتیب نادرست نشان داده شده‌اند. آن‌ها را مرتب کنید.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

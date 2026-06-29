@@ -503,7 +503,7 @@ struct HindiFunctionalSkillsExerciseData {
         instructions: "कदम गलत क्रम में दिखाए गए हैं। उन्हें सही क्रम में व्यवस्थित करें।",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),
@@ -1849,7 +1849,7 @@ struct HindiFunctionalSkillsExerciseData {
                 id: UUID(),
                 prompt: "मेन्यू के अनुसार, कौन सा मुख्य व्यंजन (Main Dish) सबसे महंगा है?",
                 options: ["पनीर टिक्का मसाला", "छोले भटूरे", "दाल मखनी", "समोसा"],
-                correctAnswer: "पनीर Tikkha मसाला",
+                correctAnswer: "पनीर टिक्का मसाला",
                 explanation: "पनीर टिक्का मसाला की कीमत $14.00 है, जो छोले भटूरे ($12.00) और दाल मखनी ($13.00) से अधिक है।"
             ),
             ExerciseItem(

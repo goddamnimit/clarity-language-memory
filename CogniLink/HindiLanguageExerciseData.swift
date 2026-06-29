@@ -101,7 +101,7 @@ struct HindiLanguageExerciseData {
         instructions: "सही शब्द चुनकर कहावत पूरी करें।",
         section: .language,
         type: .multipleChoice,
-        difficulty: .easy,
+        difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "अब पछताए होत क्या जब ___ चुग गए खेत।", options: ["चिड़िया", "कौवा", "तोता", "मोर"], correctAnswer: "चिड़िया"),
             ExerciseItem(id: UUID(), prompt: "नाच न जाने ___ टेढ़ा।", options: ["आंगन", "दरवाज़ा", "रास्ता", "मंच"], correctAnswer: "आंगन"),

@@ -18,7 +18,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "يتم سرد الخطوات بالترتيب الخاطئ. قم بترقيمها 1، 2، 3 لوضعها بالتسلسل الصحيح.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),

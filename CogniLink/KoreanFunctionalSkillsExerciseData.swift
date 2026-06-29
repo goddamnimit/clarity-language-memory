@@ -394,7 +394,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "단계가 잘못된 순서로 나열되어 있습니다. 1, 2, 3으로 번호를 매겨 올바른 순서로 놓으세요.",
         section: .functionalSkills,
         type: .sequencing,
-        difficulty: .easy,
+        difficulty: .medium,
         items: [
             ExerciseItem(
                 id: UUID(),
