@@ -359,6 +359,10 @@ struct TVExerciseContainerView: View {
         case .korean:     return "ko-KR"
         case .vietnamese: return "vi-VN"
         case .arabic:     return "ar-SA"
+        case .portuguese: return "pt-BR"
+        case .tagalog:    return "fil-PH"
+        case .punjabi:    return "pa-IN"
+        case .armenian:   return "hy-AM"
         }
     }
 }
