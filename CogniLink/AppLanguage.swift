@@ -13,6 +13,12 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case vietnamese = "Tiếng Việt"
     case arabic = "العربية"
     case portuguese = "Português"
+    case tagalog = "Tagalog"
+    case punjabi = "ਪੰਜਾਬੀ"
+    case armenian = "Հայերեն"
+
+
+
 
     var id: String { self.rawValue }
 
@@ -28,6 +34,12 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .vietnamese: return "Tiếng Việt"
         case .arabic: return "العربية"
         case .portuguese: return "Português"
+        case .tagalog: return "Tagalog"
+        case .punjabi: return "ਪੰਜਾਬੀ"
+        case .armenian: return "Հայերեն"
+
+
+
         }
     }
 
@@ -43,6 +55,12 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .vietnamese: return "🇻🇳"
         case .arabic: return "🇸🇦"
         case .portuguese: return "🇧🇷"
+        case .tagalog: return "🇵🇭"
+        case .punjabi: return "🇮🇳"
+        case .armenian: return "🇦🇲"
+
+
+
         }
     }
 
@@ -58,6 +76,12 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .vietnamese: return "vi_VN"
         case .arabic: return "ar_SA"
         case .portuguese: return "pt_BR"
+        case .tagalog: return "fil_PH"
+        case .punjabi: return "pa_IN"
+        case .armenian: return "hy_AM"
+
+
+
         }
     }
 }
@@ -118,7 +142,22 @@ class LanguageManager: ObservableObject {
 
             .portuguese: PortugueseLanguageExerciseData.allExercises +
                          PortugueseCognitionExerciseData.allExercises +
-                         PortugueseFunctionalSkillsExerciseData.allExercises
+                         PortugueseFunctionalSkillsExerciseData.allExercises,
+
+            .tagalog: TagalogLanguageExerciseData.allExercises +
+                      TagalogCognitionExerciseData.allExercises +
+                      TagalogFunctionalSkillsExerciseData.allExercises,
+
+            .punjabi: PunjabiLanguageExerciseData.allExercises +
+                      PunjabiCognitionExerciseData.allExercises +
+                      PunjabiFunctionalSkillsExerciseData.allExercises,
+
+            .armenian: ArmenianLanguageExerciseData.allExercises +
+                       ArmenianCognitionExerciseData.allExercises +
+                       ArmenianFunctionalSkillsExerciseData.allExercises
+
+
+
         ]
     }
     
@@ -187,6 +226,27 @@ class LanguageManager: ObservableObject {
             case .cognition: return PortugueseCognitionExerciseData.allExercises
             case .functionalSkills: return PortugueseFunctionalSkillsExerciseData.allExercises
             }
+        case .tagalog:
+            switch section {
+            case .language: return TagalogLanguageExerciseData.allExercises
+            case .cognition: return TagalogCognitionExerciseData.allExercises
+            case .functionalSkills: return TagalogFunctionalSkillsExerciseData.allExercises
+            }
+        case .punjabi:
+            switch section {
+            case .language: return PunjabiLanguageExerciseData.allExercises
+            case .cognition: return PunjabiCognitionExerciseData.allExercises
+            case .functionalSkills: return PunjabiFunctionalSkillsExerciseData.allExercises
+            }
+        case .armenian:
+            switch section {
+            case .language: return ArmenianLanguageExerciseData.allExercises
+            case .cognition: return ArmenianCognitionExerciseData.allExercises
+            case .functionalSkills: return ArmenianFunctionalSkillsExerciseData.allExercises
+            }
+
+
+
         }
     }
 }

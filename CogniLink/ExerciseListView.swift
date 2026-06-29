@@ -132,6 +132,24 @@ struct ExerciseListView: View {
             case .cognition: return "Cognição"
             case .functionalSkills: return "Habilidades Funcionais"
             }
+        case .tagalog:
+            switch section {
+            case .language: return "Wika"
+            case .cognition: return "Kognisyon"
+            case .functionalSkills: return "Functional na Kasanayan"
+            }
+        case .punjabi:
+            switch section {
+            case .language: return "ਭਾਸ਼ਾ"
+            case .cognition: return "ਦਿਮਾਗੀ ਕਸਰਤ"
+            case .functionalSkills: return "ਰੋਜ਼ਾਨਾ ਦੇ ਹੁਨਰ"
+            }
+        case .armenian:
+            switch section {
+            case .language: return "Լեզու"
+            case .cognition: return "Ճանաչողություն"
+            case .functionalSkills: return "Գործնական Հմտություններ"
+            }
         }
     }
 
@@ -196,6 +214,24 @@ struct ExerciseListView: View {
             case .language: return "Palavras, sinônimos, provérbios e mais"
             case .cognition: return "Memória, sequências, lógica e raciocínio"
             case .functionalSkills: return "Vida diária, segurança e planejamento"
+            }
+        case .tagalog:
+            switch section {
+            case .language: return "Mga laro sa salita, kasingkahulugan, parirala at iba pa"
+            case .cognition: return "Memorya, trivia, lohika at pangangatwiran"
+            case .functionalSkills: return "Pang-araw-araw na pamumuhay, kaligtasan at pagpaplano"
+            }
+        case .punjabi:
+            switch section {
+            case .language: return "ਸ਼ਬਦ ਖੇਡਾਂ, ਸਮਾਨਾਰਥੀ, ਵਾਕੰਸ਼ ਅਤੇ ਹੋਰ"
+            case .cognition: return "ਯਾਦਦਾਸ਼ਤ, ਆਮ ਗਿਆਨ, ਤਰਕ ਅਤੇ ਸੂਝ"
+            case .functionalSkills: return "ਰੋਜ਼ਾਨਾ ਜੀਵਨ, ਸੁਰੱਖਿਆ ਅਤੇ ਯੋਜਨਾਬੰਦੀ"
+            }
+        case .armenian:
+            switch section {
+            case .language: return "Բառախաղեր, հոմանիշներ, արտահայտություններ և ավելին"
+            case .cognition: return "Հիշողություն, գիտելիքներ, տրամաբանություն և դատողություն"
+            case .functionalSkills: return "Առօրյա կյանք, անվտանգություն և պլանավորում"
             }
         }
     }
@@ -262,6 +298,24 @@ struct ExerciseListView: View {
             case .easy: return "Fácil"
             case .medium: return "Médio"
             case .hard: return "Difícil"
+            }
+        case .tagalog:
+            switch difficulty {
+            case .easy: return "Madali"
+            case .medium: return "Katamtaman"
+            case .hard: return "Mahirap"
+            }
+        case .punjabi:
+            switch difficulty {
+            case .easy: return "ਆਸਾਨ"
+            case .medium: return "ਦਰਮਿਆਨਾ"
+            case .hard: return "ਮੁਸ਼ਕਲ"
+            }
+        case .armenian:
+            switch difficulty {
+            case .easy: return "Հեշտ"
+            case .medium: return "Միջին"
+            case .hard: return "Դժվար"
             }
         }
     }

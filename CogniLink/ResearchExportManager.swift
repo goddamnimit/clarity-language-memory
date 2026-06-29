@@ -167,6 +167,9 @@ struct ResearchExportManager {
         case .vietnamese: return "vietnamese"
         case .arabic:     return "arabic"
         case .portuguese: return "portuguese"
+        case .tagalog:    return "tagalog"
+        case .punjabi:    return "punjabi"
+        case .armenian:   return "armenian"
         }
     }
 }

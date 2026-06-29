@@ -1,0 +1,518 @@
+import Foundation
+
+struct ArmenianLanguageExerciseData {
+    static let allExercises: [Exercise] = [
+        categoryCrossOutEasy,
+        categoryCrossOutHard,
+        phraseCompletion,
+        synonymsEasy,
+        synonymsHard,
+        antonyms,
+        sentenceCompletionEasy,
+        morphology,
+        analogies,
+        factOrOpinion,
+        sequencing,
+        idioms,
+        rhymingPairs,
+        wordAssociation,
+        completingProverbs,
+        compoundWords,
+        prefixesSuffixes,
+    ]
+
+    private static let categoryCrossOutEasy = Exercise(
+        id: UUID(),
+        title: "Կատեգորիա Cross-Out (Հեշտ)",
+        instructions: "Հպեք այն բառին, որը ՉԻ պատկանում խմբին:",
+        section: .language,
+        type: .categoryCrossOut,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "ԽՆՁՈՐ, ՏԱՁԱՆ, ԳԱԶԱՐ, ՍԱԼՈՐ", options: ["APPLE", "ՏԱՆՁ", "ԳԱԶԱՐ", "Սալոր"], correctAnswer: "ԳԱԶԱՐ", explanation: "Բանջարեղեն, ոչ թե միրգ"),
+            ExerciseItem(id: UUID(), prompt: "ԱՎՏՈՄԵՔԵՆ, ԱՎՏՈԲՈՒՍ, ԳԴԱԼ, ԲԵՌՆԱՑԻՐ", options: ["ՄԵՔԵՆԱ", "ԱՎՏՈԲՈՒՍ", "ԳԴԱԼ", "Բեռնատար"], correctAnswer: "ԳԴԱԼ", explanation: "Տրանսպորտային միջոց չէ"),
+            ExerciseItem(id: UUID(), prompt: "ՈՍԿԻ, ԿԱՏՈՒ, ՇՈՒՆ, ԹՌՉՈՒՆ", options: ["ՈՍԿԻ", "ԿԱՏՈՒ", "ՇՈՒՆ", "ԹՌՉՈՒՆ"], correctAnswer: "ՈՍԿԻ", explanation: "Մետաղ, ոչ թե կենդանի"),
+            ExerciseItem(id: UUID(), prompt: "վերնաշապիկ, շալվար, պատառաքաղ, գլխարկ", options: ["վերնաշապիկ", "Տաբատ", "պատառաքաղ", "ԳԼԽԱՐԿ"], correctAnswer: "պատառաքաղ", explanation: "Ոչ հագուստ"),
+            ExerciseItem(id: UUID(), prompt: "ԱԹՈՌ, ՍԵՂԱՆ, ԽՆԾՈՂ, ՄԱՍՈՂԻ", options: ["ԱԹՈՌ", "ՍԵՂԱՆԱԿ", "APPLE", "Մահճակալ"], correctAnswer: "APPLE", explanation: "Սնունդ, ոչ կահույք"),
+            ExerciseItem(id: UUID(), prompt: "ՄՈՒՐՋ, ԲԱԼԻՔ, ԲԱՐՁ, DRILL", options: ["ՄՈՒՐՋ", "ՊԱԼԱՆԻՉ", "ԲԱՐՁ", "DRILL"], correctAnswer: "ԲԱՐՁ", explanation: "Գործիք չէ"),
+            ExerciseItem(id: UUID(), prompt: "ՀՈՒՆՎԱՐ, ՄԱՐՏ, ՈՒՐԲԱԹ, ՄԱՅԻՍ", options: ["ՀՈՒՆՎԱՐԻ", "ՄԱՐՏ", "ՈՒՐԲԱԹ", "ՄԱՅԻՍ"], correctAnswer: "ՈՒՐԲԱԹ", explanation: "Շաբաթվա օր, ոչ թե մեկ ամիս"),
+            ExerciseItem(id: UUID(), prompt: "ՓԱՐԻԶ, ԼՈՆԴՈՆ, ՅուՊԻՏԵՐ, ՀՌՈՄ", options: ["ՓԱՐԻԶ", "ԼՈՆԴՈՆ", "Յուպիտեր", "ՀՌՈՄ"], correctAnswer: "Յուպիտեր", explanation: "Մոլորակ, ոչ թե քաղաք"),
+            ExerciseItem(id: UUID(), prompt: "ՇՈՒՆ, ԿԱՏՈՒ, ԾԱՌ, ՄՈՒԿ", options: ["ՇՈՒՆ", "ԿԱՏՈՒ", "ԾԱՌ", "Մկնիկ"], correctAnswer: "ԾԱՌ", explanation: "Ոչ մի կենդանի"),
+            ExerciseItem(id: UUID(), prompt: "ԱՉՔ, ՔԻԹ, ՄԵՔԵՆԱ, ԱԿԱՆՋ", options: ["ԱՉՔ", "ՔԻԹ", "ՄԵՔԵՆԱ", "ԱԿԱՆՋ"], correctAnswer: "ՄԵՔԵՆԱ", explanation: "Մարմնի մաս չէ"),
+            ExerciseItem(id: UUID(), prompt: "ԿԱԹ, ՀՅՈՒԹ, ՀԱՑ, ՋՈՒՐ", options: ["ԿԱԹ", "ՀՅՈՒՍ", "ՀԱՑ", "ՋՈՒՐ"], correctAnswer: "ՀԱՑ", explanation: "Սնունդ, ոչ թե խմիչք"),
+            ExerciseItem(id: UUID(), prompt: "ԲԱԶՄՈՎ, ՄԱՍՈՂԻ, ՎԱՃԱՌՈՂ, ԱԹՈՌ", options: ["ԲԱԶՄՈՎ", "Մահճակալ", "ՎԱՃԱՌՔ", "ԱԹՈՌ"], correctAnswer: "ՎԱՃԱՌՔ", explanation: "Սարքավորում, ոչ նստելու կամ քնելու կահույք"),
+            ExerciseItem(id: UUID(), prompt: "ՎԱՐԴ, ԿԱԿԱՉ, ԴԵԶԻ, ՄԵՔԵՆԱ", options: ["ՎԱՐԴ", "ԿԱԿԱՉ", "ԴԵԶԻ", "ՄԵՔԵՆԱ"], correctAnswer: "ՄԵՔԵՆԱ", explanation: "Ծաղիկ չէ"),
+            ExerciseItem(id: UUID(), prompt: "ԳՐԻՉ, ՄԱՏԻՏ, ԳՈՒՆԱԳՈՒՅՆ, ՊԱՏԱՌԱՔԱՌԱԿ", options: ["ԳՐԻՉ", "ՄԱՏԻՏ", "ԿԱՐԻՈՆ", "պատառաքաղ"], correctAnswer: "պատառաքաղ", explanation: "Գրելու գործիք չէ"),
+            ExerciseItem(id: UUID(), prompt: "ԲԱԶՈՏ, ԳՈՐԳ, ԼԱՄՊ, ՀԱՎ", options: ["ԲԱԶՈՏ", "ԳՈՐԳ", "ԼԱՄՊ", "ՀԱՎ"], correctAnswer: "ՀԱՎ", explanation: "Կենցաղային իրեր չեն"),
+            ExerciseItem(id: UUID(), prompt: "ԱՐԵՎ, անձրև, քամի, շապիկ", options: ["ԱՐԵՎ", "ԱՆՁՐԵՎ", "ՔԱՄԻ", "վերնաշապիկ"], correctAnswer: "վերնաշապիկ", explanation: "Եղանակային բառ չէ"),
+            ExerciseItem(id: UUID(), prompt: "ԱՖԵՍ, ԹԱՍ, ԲԱԺԱԿ, ՄԵՔԵՆԱ", options: ["ափսե", "ԲՈՈՒԼ", "ԳԱՎԱԹ", "ՄԵՔԵՆԱ"], correctAnswer: "ՄԵՔԵՆԱ", explanation: "Ոչ ճաշատեսակ կամ տարա"),
+            ExerciseItem(id: UUID(), prompt: "ԱՎՏՈԲՈՒՍ, ԳՆԱՑՔ, ՆԱՎԱԿ, ԿԱՏՈՒ", options: ["ԱՎՏՈԲՈՒՍ", "ԳՆԱՑՔ", "ՆԱՎԱԿ", "ԿԱՏՈՒ"], correctAnswer: "ԿԱՏՈՒ", explanation: "Տրանսպորտային միջոց չէ"),
+            ExerciseItem(id: UUID(), prompt: "ԳԼԽԱՐԿ, Գուլպաներ, ԿՈՇԻԿՆԵՐ, ԿԱԹԱՍԱՆ", options: ["ԳԼԽԱՐԿ", "Գուլպաներ", "ԿՈՇԻԿՆԵՐ", "ՓՈԹ"], correctAnswer: "ՓՈԹ", explanation: "Խոհարարական սպասք, ոչ թե հագուստ"),
+            ExerciseItem(id: UUID(), prompt: "ԿԱՏՈՒ, ՇՈՒՆ, ԹՌՉՈՒՆ, ԲԵՌՆԱՑԻՐ", options: ["ԿԱՏՈՒ", "ՇՈՒՆ", "ԹՌՉՈՒՆ", "Բեռնատար"], correctAnswer: "Բեռնատար", explanation: "Ոչ մի կենդանի"),
+            ExerciseItem(id: UUID(), prompt: "ՄԱՐՏ, ԱՊՐԻԼ, ԵՐԵՔՇԱԲԹԻ, ՀՈՒՆԻՍ", options: ["ՄԱՐՏ", "ԱՊՐԻԼ", "ԵՐԵՔՇԱԲԹԻ", "ՀՈՒՆԻՍ"], correctAnswer: "ԵՐԵՔՇԱԲԹԻ", explanation: "Շաբաթվա օր, ոչ թե մեկ ամիս"),
+            ExerciseItem(id: UUID(), prompt: "ԿԱՐՄԻՐ, ԿԱՊՈՒՅՏ, ՍԵՂԱՆԱԿ, ԿԱՆԱՉ", options: ["ԿԱՐՄԻՐ", "ԿԱՊՈՒՅՏ", "ՍԵՂԱՆԱԿ", "ԿԱՆԱՉ"], correctAnswer: "ՍԵՂԱՆԱԿ", explanation: "Ոչ մի գույն"),
+            ExerciseItem(id: UUID(), prompt: "ԴԱՆԱԿ, ՊԱՏԱՌԱՔԱՌԱԿ, ԳԴԱԼ, ՄԱՍԻՆ", options: ["ԴԱՆԱԿ", "պատառաքաղ", "ԳԴԱԼ", "Մահճակալ"], correctAnswer: "Մահճակալ", explanation: "Կահույք, ոչ դանակներ"),
+            ExerciseItem(id: UUID(), prompt: "ԱՐԾԻՎ, ԲԵԶ, ԲՈՒ, ՁՈՒԿ", options: ["ԱՐԾԻՎ", "ԲԱԶԵ", "ԲՈՒ", "ՁՈՒԿ"], correctAnswer: "ՁՈՒԿ", explanation: "Ոչ մի թռչուն"),
+            ExerciseItem(id: UUID(), prompt: "ՊԵՆԻ, ՆԻԿԵԼ, ԴԱՅՄ, ԲՈՒՋԱԿ", options: ["ՓԵՆԻ", "ՆԻԿԵԼ", "DIME", "ԲԻՋԱԿ"], correctAnswer: "ԲԻՋԱԿ", explanation: "Ոչ արժույթ"),
+            ExerciseItem(id: UUID(), prompt: "ԱՌՅՈՒԾ, ԱՐՋ, ՎԱԳ, ՊԻՑՑԱ", options: ["ԱՌՅՈՒԾ", "ԱՐՋ", "ՎԱԳՐ", "ՊԻՑՑԱ"], correctAnswer: "ՊԻՑՑԱ", explanation: "Ոչ մի կենդանի"),
+            ExerciseItem(id: UUID(), prompt: "ԽՆՁՈՐ, ԲԱՆԱՆ, ԳԱԶԱՐ, ԽԱՂՈՂ", options: ["APPLE", "ԲԱՆԱՆ", "ԳԱԶԱՐ", "ԽԱՂՈՂ"], correctAnswer: "ԳԱԶԱՐ", explanation: "Բանջարեղեն, ոչ թե միրգ"),
+            ExerciseItem(id: UUID(), prompt: "ԱԹՈՌ, ՍԵՂԱՆ, ՍՐԱՀ, ԴԵԼՖԻՆ", options: ["ԱԹՈՌ", "ՍԵՂԱՆԱԿ", "Գրասեղան", "ԴԵԼՖԻՆ"], correctAnswer: "ԴԵԼՖԻՆ", explanation: "Ծովային կենդանի, ոչ կահույք"),
+            ExerciseItem(id: UUID(), prompt: "ՌՈԲԻՆ, ԱՐԾԻՎ, ՍԱՂՄՈՆ, ԹՈՒԹԱԿ", options: ["ՌՈԲԻՆ", "ԱՐԾԻՎ", "ՍԱՂՄՈՆ", "ԹՈՒԹԱԿ"], correctAnswer: "ՍԱՂՄՈՆ", explanation: "Ձուկ, ոչ թե թռչուն"),
+            ExerciseItem(id: UUID(), prompt: "ԲԵՅՍԲՈԼ, ԹԵՆԻՍ, ՇԱԽՄԱՏ, ՖՈՒՏԲՈԼ", options: ["ԲԵՅՍԲՈԼ", "ԹԵՆԻՍ", "ՇԱԽՄԱՏ", "ՖՈՒՏԲՈԼ"], correctAnswer: "ՇԱԽՄԱՏ", explanation: "Սեղանի խաղ, ոչ թե ֆիզիկական սպորտ")
+        ]
+    )
+
+    private static let categoryCrossOutHard = Exercise(
+        id: UUID(),
+        title: "Կատեգորիա Cross-Out (Դժվար)",
+        instructions: "Հպեք այն բառին, որը ՉԻ պատկանում խմբին:",
+        section: .language,
+        type: .categoryCrossOut,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "ՆՄԱՆԱՎՈՐՈՒԹՅՈՒՆ, ՄԵՏԱՖՈՐ, ՀԻՊԵՐԲՈԼ, ՊԱՏՐԱԲՐՈՒԹՅՈՒՆ", options: ["ՆՄԱՆԱՎՈՐՈՒՄ", "ՄԵՏԱՖՈՐ", "ՀԻՊԵՐԲՈԼ", "ՊԱՇՏՈՆ"], correctAnswer: "ՊԱՇՏՈՆ", explanation: "Տեքստի կառուցվածքը, ոչ թե խոսքի պատկերը"),
+            ExerciseItem(id: UUID(), prompt: "FEMUR, TIBIA, RADIUS, CORNEA", options: ["FEMUR", "TIBIA", "ՇԱՌԱՋ", "եղջերաթաղանթ"], correctAnswer: "եղջերաթաղանթ", explanation: "Աչքի մի մասը, ոչ թե ոսկոր"),
+            ExerciseItem(id: UUID(), prompt: "ԲԵԹՀՈՎԵՆ, ՄՈՑԱՐՏ, ՊԻԿԱՍՈ, ՇՈՊԵՆ", options: ["ԲԵԹՀՈՎԵՆ", "ՄՈՑԱՐՏ", "ՊԻԿԱՍՈ", "ՇՈՊԵՆ"], correctAnswer: "ՊԻԿԱՍՈ", explanation: "Նկարիչ, ոչ թե կոմպոզիտոր"),
+            ExerciseItem(id: UUID(), prompt: "ԿԱՐԴԻԳԱՆ, ԲԼԵԶԵՐ, ՇՐՋԱՆԱԿ, ՍՏԻԼԵՏՏՈ", options: ["ԿԱՐԴԻԳԱՆ", "ԲԼԵԶԵՐ", "ՇՐՋԱՆԱԿ", "ՍՏԻԼԵՏՏՈ"], correctAnswer: "ՍՏԻԼԵՏՏՈ", explanation: "Կոշիկ, ոչ թե վերին մասի հագուստ"),
+            ExerciseItem(id: UUID(), prompt: "ԹԵՄԶ, ՆԱՅԼ, ԱՄԱԶՈՆ, ԷՎԵՐԵՍՏ", options: ["ԹԵՄԶ", "ՆԵՂՍ", "AMAZON", "ԷՎԵՐԵՍՏ"], correctAnswer: "ԷՎԵՐԵՍՏ", explanation: "Լեռ, ոչ գետ"),
+            ExerciseItem(id: UUID(), prompt: "ՀԻՇԱՏԱԿԱՐԱՆ, ԿԵՆՍԱԳՐՈՒԹՅՈՒՆ, ԻՆՔՆԱԿԵՆԵԳՐԱՖԻԱ, ՍՈՆԵՏ", options: ["ՀԻՇԱՏԱԿԱՐԱՆ", "ԿԵՆՍԱԳՐՈՒԹՅՈՒՆ", "ԻՆՔՆԱԿԵՆԱԳՐՈՒԹՅՈՒՆ", "ՍՈՆԵՏ"], correctAnswer: "ՍՈՆԵՏ", explanation: "Բանաստեղծություն, ոչ թե կյանքի պատմություն"),
+            ExerciseItem(id: UUID(), prompt: "ԻՆՍՈՒԼԻՆ, ադրենալին, էստրոգեն, IBUPROFEN", options: ["ԻՆՍՈՒԼԻՆ", "ԱԴՐԵՆԱԼԻՆ", "ԷՍՏՐՈԳԵՆ", "ԻԲՈՒՊՐՈՖԵՆ"], correctAnswer: "ԻԲՈՒՊՐՈՖԵՆ", explanation: "Արտադրված դեղամիջոց, ոչ թե բնական հորմոն"),
+            ExerciseItem(id: UUID(), prompt: "ՑԵԼՍԻՈՒՍ, ՖԱՐԵՆՀԱՅՏ, ԿԵԼՎԻՆ, ԴԵԿԻԲԵԼ", options: ["ՑԵԼՍԻՈՒՍ", "Ֆարենհեյթ", "ԿԵԼՎԻՆ", "ԴԵԿԻԲԵԼ"], correctAnswer: "ԴԵԿԻԲԵԼ", explanation: "Չափում է ձայնը, ոչ թե ջերմաստիճանը"),
+            ExerciseItem(id: UUID(), prompt: "ԴԱՏԱՎՈՐ, ԴԱՏԱՎՈՐ, ԿԱՐԳԱՎՈՐԻՉ, ՀԱՅՑԱՎՈՐ", options: ["ԺՈՒՐԻ", "ԴԱՏԱՎՈՐ", "Դատական կարգադրիչ", "Հայցվոր"], correctAnswer: "Հայցվոր", explanation: "Գործով կողմ, ոչ թե դատարանի աշխատակից"),
+            ExerciseItem(id: UUID(), prompt: "ՍՈՆԵՏ, ՀԱՅԿՈՒ, ԼԻՄԵՐԻԿ, ԱՐՁԱԿ", options: ["ՍՈՆԵՏ", "ՀԱՅԿՈՒ", "ԼԻՄԵՐԻԿ", "ԱՐՁԱԿ"], correctAnswer: "ԱՐՁԱԿ", explanation: "Պոեզիայի ձև չէ"),
+            ExerciseItem(id: UUID(), prompt: "ՍՈՊՐԱՆՈ, ԱԼՏՈ, ՏԵՆՈՐ, ԴԻՐԻԺՈՐ", options: ["ՍՈՊՐԱՆՈ", "ԱԼՏՈ", "ՏԵՆՈՐ", "ԴԻՐԻԺՈՐ"], correctAnswer: "ԴԻՐԻԺՈՐ", explanation: "Ղեկավարում է նվագախումբը, ոչ թե երգող ձայնային տեսակ"),
+            ExerciseItem(id: UUID(), prompt: "ԻՄՊՐԵՍԻՈՆԻԶՄ, ՍՅՈՒՐՌԵԱԼԻԶՄ, ԿՈՒԲԻԶՄ, ՋԱԶ", options: ["ԻՄՊՐԵՍԻՈՆԻԶՄ", "ՍՅՈՒՐՌԵԱԼԻԶՄ", "ԿՈՒԲԻԶՄ", "ՋԱԶ"], correctAnswer: "ՋԱԶ", explanation: "Երաժշտության ժանր, ոչ թե վիզուալ արվեստի շարժում"),
+            ExerciseItem(id: UUID(), prompt: "ՍՏՈԿՀՈԼՄ, ՕՍԼՈ, ՀԵԼՍԻՆԿԻ, ԲՐՅՈՒՍԵԼ", options: ["ՍՏՈԿՀՈԼՄ", "ՕՍԼՈ", "ՀԵԼՍԻՆԿԻ", "ԲՐՅՈՒՍԵԼ"], correctAnswer: "ԲՐՅՈՒՍԵԼ", explanation: "Բելգիա, ոչ թե սկանդինավյան մայրաքաղաք"),
+            ExerciseItem(id: UUID(), prompt: "ՌՈՒԲԻ, ՍԱՊՖԻՐ, ԶՄԱՐԴԻՏ, ԳՐԱՆԻՏ", options: ["ՌՈՒԲԻ", "ՍԱՊՖԻՐ", "Զմրուխտ", "ԳՐԱՆԻՏ"], correctAnswer: "ԳՐԱՆԻՏ", explanation: "Ժայռ, ոչ թե թանկարժեք քար"),
+            ExerciseItem(id: UUID(), prompt: "ՀԱՎԵԼՎԱԾՔ, լեղապարկ, ենթաստամոքսային գեղձ, ազդր", options: ["ՀԱՎԵԼՎԱԾ", "Լեղապարկ", "Ենթաստամոքսային գեղձ", "FEMUR"], correctAnswer: "FEMUR", explanation: "Ոսկոր, ոչ թե օրգան"),
+            ExerciseItem(id: UUID(), prompt: "ԹԱՋՈՒԹՅՈՒ, ՈՒԼԱ, HARP, OBOE", options: ["ԹԱՎՋՈՒԿ", "ՎԻՈԼԱ", "HARP", "OBOE"], correctAnswer: "OBOE", explanation: "Փայտե փողային, ոչ թե լարային գործիք"),
+            ExerciseItem(id: UUID(), prompt: "ՖՐԵՍԿՈ, ՄՈԶԱԻԿ, ՎԻՄԱԳՐՈՒԹՅՈՒՆ, ՍՈՆԱՏ", options: ["FRESCO", "ՄՈԶԱԻԿ", "ՎԻՄԱԳՐՈՒԹՅՈՒՆ", "ՍՈՆԱՏ"], correctAnswer: "ՍՈՆԱՏ", explanation: "Երաժշտություն, ոչ թե տեսողական արվեստի ձև"),
+            ExerciseItem(id: UUID(), prompt: "ԱՐՇԻՊԵԼԱԳ, ՖՅՈՐԴ, ՍԱՐՖԱՀ, ԲԱՐԲԱՐ", options: ["ԱՐՇԻՊԵԼԱԳ", "ՖՅՈՐԴ", "սարահարթ", "ԲԱՐԲԱՐԸ"], correctAnswer: "ԲԱՐԲԱՐԸ", explanation: "Լեզվի տատանումներ, ոչ թե աշխարհագրական առանձնահատկություն"),
+            ExerciseItem(id: UUID(), prompt: "ՄԱԳՆԵԶԻՈՒՄ, ԿԱԼՑԻՈՒՄ, ԿԱԼԻՈՒՄ, ՆԱՎԹ", options: ["ՄԱԳՆԵԶԻՈՒՄ", "ԿԱԼՑԻՈՒՄ", "Կալիում", "ՆԱՎԹԱԿԱՆ"], correctAnswer: "ՆԱՎԹԱԿԱՆ", explanation: "Հանածո վառելիք, ոչ թե հանքային տարր"),
+            ExerciseItem(id: UUID(), prompt: "ՖԼԱՄԵՆԿՈ, ՏԱՆԳՈ, ՎԱԼՍ, ՕՊԵՐԱ", options: ["ՖԼԱՄԵՆԿՈ", "ՏԱՆԳՈ", "Վալս", "ՕՊԵՐԱ"], correctAnswer: "ՕՊԵՐԱ", explanation: "Վոկալ կատարողական արվեստ, ոչ թե պար"),
+            ExerciseItem(id: UUID(), prompt: "ԶԱՐԿԵՐԱԿ, ԵՐԱԿ, ՄԱԶԱՆՑ, ՋԻԼ", options: ["ԶԱՐԿԻԿ", "ԵՐԱԿ", "ՄԱՐԶԱԿԱՆ", "ՋԻԼ"], correctAnswer: "ՋԻԼ", explanation: "Մկանը կապում է ոսկորին, ոչ թե արյունատար անոթին"),
+            ExerciseItem(id: UUID(), prompt: "ՏՈՒՆԴՐԱ, ՏԱՅԳԱ, ՍԱՎԱՆՆԱ, ԴԵԼՏԱ", options: ["ՏՈՒՆԴՐԱ", "ՏԱՅԳԱ", "ՍԱՎԱՆՆԱ", "ԴԵԼՏԱ"], correctAnswer: "ԴԵԼՏԱ", explanation: "Գետաբերանի լանդշաֆտ, ոչ թե բիոմ"),
+            ExerciseItem(id: UUID(), prompt: "ԹԱՅՖՈՒՆ, ՑԻԿԼՈՆ, ՄՈՒՍՈՆ, ՍԱՐԴԵՍ", options: ["ԹԱՅՖՈՒՆ", "ՑԻԿԼՈՆ", "ՄՈՒՍՈՆ", "ԴԱՐՁ"], correctAnswer: "ԴԱՐՁ", explanation: "Սեյսմիկ շարժում, ոչ թե եղանակային իրադարձություն"),
+            ExerciseItem(id: UUID(), prompt: "ԱՃՌ, ՋԻԼ, ՋԻԼ, ՆԵՅՐՈՆ", options: ["ԱՃԱՐ", "ԿՈԼԱՆՔ", "ՋԻԼ", "ՆԵՅՐՈՆ"], correctAnswer: "ՆԵՅՐՈՆ", explanation: "Նյարդային բջիջ, ոչ շարակցական հյուսվածք")
+        ]
+    )
+
+    private static let phraseCompletion = Exercise(
+        id: UUID(),
+        title: "Արտահայտությունների լրացում",
+        instructions: "Ընտրեք ամենահամապատասխան բառը՝ արտահայտությունն ավարտելու համար:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “ուտել ___”", options: ["հաց", "ջուր", "օդ", "թուղթ"], correctAnswer: "հաց", explanation: "Հայերենում սնվելու կամ ճաշելու գործողությունը հաճախ արտահայտվում է ‘հաց ուտել’ արտահայտությամբ։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “խմել ___”", options: ["ջուր", "հաց", "քար", "կոշիկ"], correctAnswer: "ջուր", explanation: "Ծարավը հագեցնելու համար խմում են ջուր։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “հագնել ___”", options: ["շոր", "ջուր", "օդ", "թուղթ"], correctAnswer: "շոր", explanation: "Մարմինը ծածկելու համար հագնում են հագուստ կամ շոր։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “նստել ___”", options: ["մեքենա", "ջուր", "օդ", "թուղթ"], correctAnswer: "մեքենա", explanation: "Մի տեղից մյուսը տեղափոխվելու համար նստում են մեքենա։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “անցնել ___”", options: ["փողոցը", "օդը", "տունը", "շունը"], correctAnswer: "փողոցը", explanation: "Հետիոտնը զգուշությամբ անցնում է փողոցը։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “լվանալ ___”", options: ["ձեռքերը", "ուղեղը", "շորերը", "թուղթը"], correctAnswer: "ձեռքերը", explanation: "Ուտելուց առաջ անհրաժեշտ է լվանալ ձեռքերը։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “քնել ___”", options: ["անկողնում", "սեղանին", "մեքենայում", "գետնին"], correctAnswer: "անկողնում", explanation: "Գիշերը հանգստանալու համար քնում են անկողնում։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “կարդալ ___”", options: ["գիրք", "ջուր", "օդ", "շոր"], correctAnswer: "գիրք", explanation: "Գիտելիքներ ստանալու համար կարդում են գիրք։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “գրել ___”", options: ["նամակ", "անձրև", "ուտելիք", "կոշիկ"], correctAnswer: "նամակ", explanation: "Ընկերոջը կամ հարազատին հաղորդագրություն փոխանցելու համար գրում են նամակ։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “զանգել ___”", options: ["հեռախոսով", "օդով", "ջրով", "թղթով"], correctAnswer: "հեռախոսով", explanation: "Հեռվում գտնվող մարդու հետ խոսելու համար զանգում են հեռախոսով։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “տնկել ___”", options: ["ծառ", "անձրև", "կոշիկ", "տուն"], correctAnswer: "ծառ", explanation: "Բնությունը պահպանելու և կանաչապատելու համար տնկում են ծառ։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “բացել ___”", options: ["դուռը", "անձրև", "ջուր", "կոշիկ"], correctAnswer: "դուռը", explanation: "Սենյակ մտնելու համար բացում են դուռը։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “փակել ___”", options: ["պատուհանը", "անձրև", "ուտելիք", "շոր"], correctAnswer: "պատուհանը", explanation: "Ցրտից կամ քամուց պաշտպանվելու համար փակում են պատուհանը։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “դիտել ___”", options: ["հեռուստացույց", "ջուր", "օդ", "փողոց"], correctAnswer: "հեռուստացույց", explanation: "Լուրեր կամ հաղորդումներ նայելու համար դիտում են հեռուստացույց։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “լսել ___”", options: ["երաժշտություն", "անձրև", "ուտելիք", "շոր"], correctAnswer: "երաժշտություն", explanation: "Հաճելի ժամանակ անցկացնելու համար լսում են երաժշտություն։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “եփել ___”", options: ["ճաշ", "ջուր", "օդ", "կոշիկ"], correctAnswer: "ճաշ", explanation: "Խոհանոցում ուտելիք պատրաստելու համար եփում են ճաշ։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “սանրել ___”", options: ["մազերը", "ձեռքերը", "ոտքերը", "աչքերը"], correctAnswer: "մազերը", explanation: "Կոկիկ տեսք ունենալու համար սանրում են մազերը։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “մաքրել ___”", options: ["ատամները", "ձեռքերը", "ոտքերը", "գլուխը"], correctAnswer: "ատամները", explanation: "Բերանի հիգիենայի համար ամեն օր մաքրում են ատամները։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “գնել ___”", options: ["ուտելիք", "անձրև", "օդ", "կոշիկ"], correctAnswer: "ուտելիք", explanation: "Խանութից կամ շուկայից գնում են սննդամթերք կամ ուտելիք։"),
+            ExerciseItem(id: UUID(), prompt: "Ավարտեք արտահայտությունը. “վարել ___”", options: ["մեքենա", "ջուր", "օդ", "թուղթ"], correctAnswer: "մեքենա", explanation: "Ճանապարհով տեղաշարժվելու համար վարում են մեքենա։")
+        ]
+    )
+
+    private static let synonymsEasy = Exercise(
+        id: UUID(),
+        title: "Հոմանիշներ (Հեշտ)",
+        instructions: "Ընտրի՛ր այն բառը, որը նշանակում է ՆՈՒՅՆ, ինչ տվյալ բառը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ Զայրացած", options: ["երջանիկ", "կատաղած", "հանգիստ", "տխուր"], correctAnswer: "կատաղած", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ՍՈՒՐՏ", options: ["տաք", "սառեցում", "տաք", "մեղմ"], correctAnswer: "սառեցում", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ: ՄԵԾ", options: ["փոքրիկ", "մեծ", "կարճ", "բարակ"], correctAnswer: "մեծ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ հոգնած", options: ["զգոն", "արթուն", "ուժասպառ", "հանգստացել է"], correctAnswer: "ուժասպառ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ Վախեցած", options: ["համարձակ", "սարսափած", "հանգիստ", "համարձակ"], correctAnswer: "սարսափած", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԲԱՐԻ", options: ["նշանակում է", "դաժան", "նուրբ", "կոպիտ"], correctAnswer: "նուրբ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ԱՐԱԳ", options: ["դանդաղ", "արագ", "ծույլ", "ձանձրալի"], correctAnswer: "արագ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՀԻՆ", options: ["երիտասարդ", "հնագույն", "նոր", "թարմ"], correctAnswer: "հնագույն", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԿԵՂՏ", options: ["մաքուր", "կեղտոտ", "կոկիկ", "կոկիկ"], correctAnswer: "կեղտոտ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ՊԱՅՄԱՆ", options: ["աղոտ", "մութ", "փայլուն", "ձանձրալի"], correctAnswer: "փայլուն", explanation: "")
+        ]
+    )
+
+    private static let synonymsHard = Exercise(
+        id: UUID(),
+        title: "Հոմանիշներ (Դժվար)",
+        instructions: "Ընտրի՛ր այն բառը, որը նշանակում է ՆՈՒՅՆ, ինչ տվյալ բառը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ՄԵԼԱՆԽՈԼԻԱ", options: ["ուրախալի", "վշտալի", "հուզված", "բովանդակությունը"], correctAnswer: "վշտալի", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՀԱՆԳՍՏ", options: ["աղմկոտ", "գրգռված", "խաղաղ", "խելահեղ"], correctAnswer: "խաղաղ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՔԱՋ", options: ["երկչոտ", "վախկոտ", "համարձակ", "վախկոտ"], correctAnswer: "համարձակ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ՀԱՏՈՒԿ", options: ["սովորական", "տարօրինակ", "նորմալ", "բնորոշ"], correctAnswer: "տարօրինակ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԱՌԱՏ", options: ["սակավ", "առատ", "հազվադեպ", "սահմանափակված"], correctAnswer: "առատ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԹՈՒՅԼ", options: ["ուժեղ", "հզոր", "թույլ", "ամուր"], correctAnswer: "թույլ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ՎԻՎԻԴ", options: ["ձանձրալի", "ուշաթափվել", "գունեղ", "գունատ"], correctAnswer: "գունեղ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԽՆԴԻՐ", options: ["վատնող", "խնայող", "շքեղ", "առատաձեռն"], correctAnswer: "խնայող", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ պերճախոս", options: ["փնթփնթալ", "արտահայտել", "հանգիստ", "անշնորհք"], correctAnswer: "արտահայտել", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՀԱՄԱՌԱԿ", options: ["թույլ", "թողնելը", "համառ", "ճկուն"], correctAnswer: "համառ", explanation: "")
+        ]
+    )
+
+    private static let antonyms = Exercise(
+        id: UUID(),
+        title: "Հականիշներ (Հեշտ)",
+        instructions: "Ընտրի՛ր այն բառը, որը նշանակում է տվյալ բառի ՀԱԿԱՌԱԿԸ։",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՏԱՔ", options: ["տաք", "սառը", "թույն", "գոլ"], correctAnswer: "սառը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ԵՐՋԱՆԻԿ", options: ["ուրախ", "ուրախալի", "տխուր", "բովանդակությունը"], correctAnswer: "տխուր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ: ՄԵԾ", options: ["հսկայական", "մեծ", "փոքր", "բարձրահասակ"], correctAnswer: "փոքր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ԱՐԱԳ", options: ["արագ", "դանդաղ", "արագ", "արագ"], correctAnswer: "դանդաղ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՄԱՔՈՒՐ", options: ["կոկիկ", "կոկիկ", "կեղտոտ", "թարմ"], correctAnswer: "կեղտոտ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ԱՐԹՆԱ", options: ["զգոն", "տեղյակ", "քնած", "ակտիվ"], correctAnswer: "քնած", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ", options: ["աղմկոտ", "հանգիստ", "ծաղկում", "ուժեղ"], correctAnswer: "հանգիստ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԲԱՑ", options: ["փակված", "լայն", "պարզ", "անվճար"], correctAnswer: "փակված", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բառ՝ ԼԻՎ", options: ["փաթեթավորված", "դատարկ", "բեռնված", "ամբողջական"], correctAnswer: "դատարկ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խոսք՝ ՍԵՐ", options: ["պաշտել", "նման", "ատելություն", "խնամք"], correctAnswer: "ատելություն", explanation: "")
+        ]
+    )
+
+    private static let sentenceCompletionEasy = Exercise(
+        id: UUID(),
+        title: "Նախադասության լրացում (հեշտ)",
+        instructions: "Ընտրիր այն բառը, որը լավագույնս լրացնում է նախադասությունը:",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Նա ջրեց ___-ին:", options: ["ծաղիկներ", "հատակներ", "ալյուր"], correctAnswer: "ծաղիկներ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա հագավ իր ___-ը:", options: ["վերարկու", "նավակ", "այծ"], correctAnswer: "վերարկու", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ինձ պետք է մի բաժակ ___:", options: ["ջուր", "մատուցող", "թափառաշրջիկ"], correctAnswer: "ջուր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա նրան անվանեց ___:", options: ["մայրիկ", "անհանգստացնել", "փրփուր"], correctAnswer: "մայրիկ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Շունը թափահարեց ___-ը:", options: ["հեքիաթ", "պոչը", "բարձրահասակ"], correctAnswer: "պոչը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա անջատեց ___-ը:", options: ["պայքարել", "լույս", "գիշեր"], correctAnswer: "լույս", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա թխեց ___:", options: ["կեղծ", "լիճ", "տորթ"], correctAnswer: "տորթ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Թռչունը կառուցել է ___:", options: ["բույն", "հանգիստ", "փորձարկում"], correctAnswer: "բույն", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա կարդաց ___-ը:", options: ["թերթ", "թափոնաթուղթ", "հղկաթուղթ"], correctAnswer: "թերթ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Երեխաները խաղում էին ___-ում:", options: ["այգի", "հաչալ", "մութ"], correctAnswer: "այգի", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա ուղղեց ___-ը:", options: ["խորտակվել", "հղում", "աչքով անել"], correctAnswer: "խորտակվել", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ապուրը նույնպես ___ էր:", options: ["տաք", "շատ", "կետ"], correctAnswer: "տաք", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա բացեց իր ___-ը:", options: ["հովանոց", "վանիլ", "գորիլա"], correctAnswer: "հովանոց", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա վճարեց ___-ը:", options: ["հաշիվը", "լրացնել", "ջրաղաց"], correctAnswer: "հաշիվը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Կատուն նստեց ___-ի վրա:", options: ["գորգ", "չղջիկ", "առնետ"], correctAnswer: "գորգ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա տաք ___ էր հագել:", options: ["սվիտեր", "սփռել", "ցրվել"], correctAnswer: "սվիտեր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա տնկեց ___:", options: ["այգի", "ներում", "պահակ"], correctAnswer: "այգի", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա գրել է իր ___-ում:", options: ["օրագիր", "կաթնամթերք", "երիցուկ"], correctAnswer: "օրագիր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Նա վճարեց ___-ը:", options: ["հաշիվը", "լրացնել", "ջրաղաց"], correctAnswer: "հաշիվը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Երեխան ___ է:", options: ["քնած", "ավլելու", "հոսող"], correctAnswer: "քնած", explanation: "")
+        ]
+    )
+
+    private static let morphology = Exercise(
+        id: UUID(),
+        title: "Ձևաբանություն և քերականություն",
+        instructions: "Ընտրեք բառի ճիշտ քերականական ձևը նախադասության համատեքստում:",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘տուն’ բառի հոգնակի թիվը (երկու կամ ավելի տներ)։”", options: ["տներ", "տուններ", "տունիկներ", "տնակներ"], correctAnswer: "տներ", explanation: "Միավանկ բառերի հոգնակին կազմվում է ‘-եր’ վերջավորությամբ (տուն -> տներ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘սեղան’ բառի հոգնակի թիվը։”", options: ["սեղաններ", "սեղաներ", "սեղանիկներ", "սեղանույք"], correctAnswer: "սեղաններ", explanation: "Բազմավանկ բառերի հոգնակին կազմվում է ‘-ներ’ վերջավորությամբ (սեղան -> սեղաններ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘գիրք’ բառի հոգնակի թիվը։”", options: ["գրքեր", "գիրքեր", "գրքերներ", "գրքիկներ"], correctAnswer: "գրքեր", explanation: "‘գիրք’ բառը միավանկ է, ուստի հոգնակին կազմվում է ‘-եր’ վերջավորությամբ և հնչյունափոխությամբ (գիրք -> գրքեր)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ճիշտ դերանունը. ‘Արամը և Անուշը գնացին խանութ, ___ գնեցին հաց։’”", options: ["նրանք", "մենք", "դուք", "նա"], correctAnswer: "նրանք", explanation: "Երրորդ դեմքի հոգնակի դերանունը ‘նրանք’ է (Արամը և Անուշը)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ճիշտ օժանդակ բայը. ‘Ես սիրում ___ կարդալ հետաքրքիր գրքեր։’”", options: ["եմ", "ես", "է", "ենք"], correctAnswer: "եմ", explanation: "Առաջին դեմքի مفرد դերանվան համար օժանդակ բայը ‘եմ’ է (ես սիրում եմ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ճիշտ օժանդակ բայը. ‘Նա գնում ___ աշխատանքի ամեն օր։’”", options: ["է", "եմ", "ես", "են"], correctAnswer: "է", explanation: "Երրորդ դեմքի مفرد դերանվան համար օժանդակ բայը ‘է’ է (նա գնում է)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘ջուր’ բառի ածականական ձևը (ջրի հետ կապված)։”", options: ["ջրային", "ջրիկ", "ջրոտ", "ջրեղեն"], correctAnswer: "ջրային", explanation: "‘-ային’ վերջածանցով կազմվում է ‘ջրային’ ածականը։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘ծաղիկ’ բառի հոգնակի թիվը։”", options: ["ծաղիկներ", "ծաղկեր", "ծաղկունք", "ծաղիկեր"], correctAnswer: "ծաղիկներ", explanation: "Բազմավանկ բառի հոգնակին կազմվում է ‘-ներ’ վերջավորությամբ (ծաղիկ -> ծաղիկներ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ճիշտ կապը. ‘Գիրքը դրված է սեղանի ___։’”", options: ["վրա", "տակ", "մեջ", "մոտ"], correctAnswer: "վրա", explanation: "Եթե գիրքը սեղանին է, ապա օգտագործվում է ‘վրա’ կապը։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘շուն’ բառի հոգնակի թիվը։”", options: ["շներ", "շուններ", "շնիկներ", "շնակներ"], correctAnswer: "շներ", explanation: "Միավանկ բառի հոգնակին կազմվում է ‘-եր’ վերջավորությամբ և հնչյունափոխությամբ (շուն -> շներ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Լրացրեք նախադասությունը. ‘Մենք երեկ ___ թատրոն։’”", options: ["գնացինք", "գնում ենք", "կգնանք", "գնալու ենք"], correctAnswer: "գնացինք", explanation: "Անցյալ ժամանակի հոգնակի առաջին դեմքի ձևն է ‘գնացինք’ (մենք երեկ գնացինք)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ‘լույս’ բառի հականիշը (հակառակ իմաստը)։”", options: ["խավար", "արև", "կրակ", "ջերմություն"], correctAnswer: "խավար", explanation: "‘լույս’ բառի հակառակ իմաստն է ‘խավար’ կամ ‘մթություն’։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ‘մեծ’ բառի հոգնակի ձևը ածականի դեպքում (օրինակ՝ ___ տներ)։”", options: ["մեծ", "մեծեր", "մեծն", "մեծերներ"], correctAnswer: "մեծ", explanation: "Հայերենում որոշիչ ածականը հոգնակի գոյականի հետ չի փոփոխվում (մեծ տներ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘փայտ’ բառից կազմված ածականը (փայտից պատրաստված)։”", options: ["փայտե", "փայտյա", "փայտեղեն", "փայտային"], correctAnswer: "փայտե", explanation: "‘փայտե’ կամ ‘փայտյա’ ձևը ցույց է տալիս նյութի պատրաստվածությունը։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Լրացրեք նախադասությունը. ‘Դուք այսօր շատ լավ ___ պատասխանել։’”", options: ["եք", "ենք", "են", "եմ"], correctAnswer: "եք", explanation: "Երկրորդ դեմքի հոգնակի դերանվան համար օժանդակ բայը ‘եք’ է (դուք պատասխանել եք)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘քաղաք’ բառի հոգնակի թիվը։”", options: ["քաղաքներ", "քաղաքեր", "քաղաքիկներ", "քաղաքույք"], correctAnswer: "քաղաքներ", explanation: "Բազմավանկ բառի հոգնակին կազմվում է ‘-ներ’ վերջավորությամբ (քաղաք -> քաղաքներ)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘աչք’ բառի հոգնակի թիվը։”", options: ["աչքեր", "աչքներ", "աչիկներ", "աչքերներ"], correctAnswer: "աչքեր", explanation: "‘աչք’ բառը միավանկ է, ուստի հոգնակին կազմվում է ‘-եր’ վերջավորությամբ (աչք -> աչքեր)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Լրացրեք նախադասությունը. ‘Երեխաները հիմա բակում ___։’”", options: ["խաղում են", "խաղացին", "խաղալու են", "խաղում եմ"], correctAnswer: "խաղում են", explanation: "Ներկա ժամանակի հոգնակի երրորդ դեմքի ձևն է ‘խաղում են’ (նրանք հիմա խաղում են)։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ընտրեք ճիշտ կապը. ‘Կատուն թաքնվել է սեղանի ___։’”", options: ["տակ", "վրա", "մեջ", "մոտ"], correctAnswer: "տակ", explanation: "Եթե կատուն թաքնվել է սեղանից ներքև, ապա օգտագործվում է ‘տակ’ կապը։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք նախադասությունը ճիշտ քերականական ձևով. “Ինչպե՞ս կլինի ‘աշուն’ բառի ածականական ձևը (աշնան հետ կապված)։”", options: ["աշնանային", "աշունային", "աշնան", "աշնանոտ"], correctAnswer: "աշնանային", explanation: "‘-ային’ վերջածանցով և հնչյունափոխությամբ կազմվում է ‘աշնանային’ ածականը։")
+        ]
+    )
+
+    private static let analogies = Exercise(
+        id: UUID(),
+        title: "Անալոգիաներ",
+        instructions: "Ընտրիր այն բառը, որը լավագույնս լրացնում է անալոգիան:",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "PUPPY-ն ՇԱՆ համար է, ինչպես ԿԱՏՈՒՆ՝ ___", options: ["Կատու", "Շուն", "Թռչուն", "Ձուկ"], correctAnswer: "Կատու", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ՑՈՒՆՏԸ ՁՄԵՌՆ է, ինչպես ՇՈՏ է ___-ին", options: ["Գարուն", "Աշուն", "Ամառ", "Անձրև"], correctAnswer: "Ամառ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ԱՉՔԸ ՏԵՍՆԵԼՆ է, ինչպես ԱԿՈՒՍԸ՝ ___", options: ["Հպեք", "Լսիր", "Հոտը", "Համտեսել"], correctAnswer: "Լսիր", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ՇԵՖ-ը գնում է Խոհանոց, ինչպես Բժիշկը՝ ___", options: ["Գրադարան", "Հիվանդանոց", "դպրոց", "Խանութ"], correctAnswer: "Հիվանդանոց", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ձեռնոցը ձեռքի համար է, ինչպես Գուլպանը՝ ___", options: ["Արմ", "Ծնկ", "Ոտք", "Գլուխ"], correctAnswer: "Ոտք", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ԵՐՋԱՆԻԿ է Ծիծաղելը, ինչպես Տխուրն է ___", options: ["Ժպտացեք", "Քնել", "Լաց", "Վազիր"], correctAnswer: "Լաց", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "BIRD-ը NEST-ին է, ինչպես BEAR-ը՝ ___-ին", options: ["Ծառ", "Քարանձավ", "Օվկիանոս", "Դաշտ"], correctAnswer: "Քարանձավ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ՄԱՏԻՏԸ պետք է ԳՐԻ, ինչպես ՎՐԱԶԸ՝ ___", options: ["Կտրել", "Ներկել", "ավլում", "Խառնել"], correctAnswer: "Ներկել", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "DAY-ը գիշեր է, ինչպես Սևը ___-ին", options: ["Մութ", "Մոխրագույն", "Սպիտակ", "Կապույտ"], correctAnswer: "Սպիտակ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ԶԻՆՎՈՐԸ ԲԱՆԱԿԻՆ է, ինչպես նավաստիը՝ ___", options: ["Օդային ուժեր", "Ծովային հետեւակայիններ", "Նավատորմ", "Պահակ"], correctAnswer: "Նավատորմ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "WHEEL-ը մեքենայի համար է, ինչպես WING-ը ___-ի համար", options: ["Նավակ", "Ինքնաթիռ", "Գնացք", "Ավտոբուս"], correctAnswer: "Ինքնաթիռ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ՈՒՍՈՒՑԻՉԸ ԴՊՐՈՑ է, ինչպես ԴԱՏԱՎՈՐԸ՝ ___", options: ["Գրասենյակ", "Հիվանդանոց", "Դատարանի դահլիճ", "Խանութ"], correctAnswer: "Դատարանի դահլիճ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "CATERPILLAR-ը BUTTERFLY-ի համար է, ինչպես շերեփուկը՝ ___", options: ["Ձուկ", "Կրիա", "Գորտ", "Մողես"], correctAnswer: "Գորտ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ՍՆՈՒՆԴԸ ՍՈՎԱԼԻ համար է, ինչպես ՋՈՒՐԸ ___", options: ["Թաց", "Ծարավ", "Սառը", "Լրիվ"], correctAnswer: "Ծարավ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Բուրդը ոչխարի համար է, ինչպես ՄԵԹԱՔԸ ___", options: ["Սարդ", "Մետաքսի որդ", "Բամբակ", "Սպիտակեղեն"], correctAnswer: "Մետաքսի որդ", explanation: "")
+        ]
+    )
+
+    private static let factOrOpinion = Exercise(
+        id: UUID(),
+        title: "Փաստ կամ կարծիք",
+        instructions: "Որոշեք՝ այս հայտարարությունը ՓԱՍՏ է, թե ԿԱՐԾԻՔ։",
+        section: .language,
+        type: .factOrOpinion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Շաբաթը 7 օր է։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Վանիլը պաղպաղակի լավագույն համն է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ջուրը սառչում է 32 աստիճան Ֆարենհեյթի ջերմաստիճանում:", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Շները լավագույն ընտանի կենդանիներն են:", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Եռանկյունն ունի երեք կողմ.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Այդ հեռուստահաղորդումը ծիծաղելի է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Աբրահամ Լինքոլնը Միացյալ Նահանգների նախագահ էր։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Երկիրը լավագույն մոլորակն է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Մեկ ժամում կա 60 րոպե։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Կակաչներն ավելի գեղեցիկ են, քան վարդերը:", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Վաշինգտոնը Միացյալ Նահանգների մայրաքաղաքն է։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Լեցուն բերանով խոսելը կոպիտ է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Տարվա մեջ կա 12 ամիս։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Վաղ արթնանալը լավ է ձեզ համար:", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "2 + 2 = 4:", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Օվկիանոսը կազմված է աղի ջրից։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Այգեգործությունը հիանալի հոբբի է:", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ժայռերը ավելի ծանր են, քան նույն չափի փետուրները:", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "ԱՄՆ-ն ունի 50 նահանգ։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Պիցցան լավագույն սնունդն է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Մարզվելը օգտակար է ձեր առողջության համար.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Դասական երաժշտությունը ձանձրալի է։", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Խնձորն ու նարինջը երկուսն էլ միրգ են:", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Կատուներին ավելի հեշտ է խնամել, քան շներին:", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Օրը 24 ժամ է։", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "")
+        ]
+    )
+
+    private static let sequencing = Exercise(
+        id: UUID(),
+        title: "Հաջորդականության քայլեր",
+        instructions: "Քայլերը ցուցադրվում են ՍԽԱԼ հերթականությամբ: Համարիր դրանք 1, 2, 3... ճիշտ հաջորդականությամբ դնելու համար։",
+        section: .language,
+        type: .sequencing,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Տոստ պատրաստելը", options: ["Տոստը կարագով յուղել", "Հացը դնել թոնրի մեջ", "Հեռացնել տոստերից", "Ուտել"], correctAnswer: "Հացը դնել թոնրի մեջ | Հեռացնել տոստերից | Տոստը կարագով յուղել | Ուտել", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Ձեռքերի լվացում", options: ["Ձեռքերը չորացրեք սրբիչով", "Ձեռքերին օճառ քսեք", "Միացրեք ջուրը", "Մաքրեք 20 վայրկյան", "Լվացեք օճառը", "Թրջե՛ք ձեռքերը"], correctAnswer: "Միացրեք ջուրը | Թրջե՛ք ձեռքերը | Ձեռքերին օճառ քսեք | Մաքրեք 20 վայրկյան | Լվացեք օճառը | Ձեռքերը չորացրեք սրբիչով", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Սուրճի պատրաստում", options: ["Լցնել սուրճը ձեր բաժակի մեջ", "Զտիչին ավելացրեք սուրճի մրուրը", "Սեղմեք եփման կոճակը", "Լրացրեք ջրի ջրամբարը"], correctAnswer: "Լրացրեք ջրի ջրամբարը | Զտիչին ավելացրեք սուրճի մրուրը | Սեղմեք եփման կոճակը | Լցնել սուրճը ձեր բաժակի մեջ", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Հեռախոսազանգ կատարելը", options: ["բարևիր", "Անջատեք հեռախոսը", "Վերցրեք հեռախոսը", "Հավաքեք համարը", "Ձեր զրույցը վարեք"], correctAnswer: "Վերցրեք հեռախոսը | Հավաքեք համարը | բարևիր | Ձեր զրույցը վարեք | Անջատեք հեռախոսը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Հագնվելը", options: ["Կոշիկ հագեք", "Ներդրեք վերնաշապիկը", "Ներքնազգեստ հագեք", "Ներդրեք գուլպաներ", "Ներդրեք շալվարը"], correctAnswer: "Ներքնազգեստ հագեք | Ներդրեք վերնաշապիկը | Ներդրեք շալվարը | Ներդրեք գուլպաներ | Կոշիկ հագեք", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Հատակի մաքրում", options: ["Նետել աղբարկղը", "Դուրս եկեք ավելը", "Աղբը թափեք աղբարկղի մեջ", "Մաքրեք բեկորները մի կույտի մեջ"], correctAnswer: "Դուրս եկեք ավելը | Մաքրեք բեկորները մի կույտի մեջ | Աղբը թափեք աղբարկղի մեջ | Նետել աղբարկղը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Պատվիրել ռեստորանում", options: ["Կերեք ձեր կերակուրը", "Տեղեկացրեք սերվերին ձեր պատվերը", "Նստեք", "Սպասեք ձեր կերակուրին", "Վերանայեք ճաշացանկը"], correctAnswer: "Նստեք | Վերանայեք ճաշացանկը | Տեղեկացրեք սերվերին ձեր պատվերը | Սպասեք ձեր կերակուրին | Կերեք ձեր կերակուրը", explanation: ""),
+            ExerciseItem(id: UUID(), prompt: "Թխում թխվածքաբլիթներ", options: ["Թող թխվածքաբլիթները սառչեն", "Թխել ջեռոցում", "Տաքացնել ջեռոցը", "Խառնել բաղադրիչները", "Խմորը լցնել թխման թերթիկի վրա"], correctAnswer: "Տաքացնել ջեռոցը | Խառնել բաղադրիչները | Խմորը լցնել թխման թերթիկի վրա | Թխել ջեռոցում | Թող թխվածքաբլիթները սառչեն", explanation: "")
+        ]
+    )
+
+    private static let idioms = Exercise(
+        id: UUID(),
+        title: "Դարձվածքներ և պատկերավոր խոսք",
+        instructions: "Ընտրեք տրված դարձվածքի ճիշտ փոխաբերական իմաստը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ականջին օղ անել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["լավ հիշել և դաս քաղել", "ականջօղ կրել", "լսողությունը կորցնել", "գաղտնիք պահել"], correctAnswer: "լավ հիշել և դաս քաղել", explanation: "‘ականջին օղ անել’ դարձվածքը նշանակում է տրված խորհուրդը կամ խրատը լավ հիշել և երբեք չմոռանալ։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “աչքի լույս” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["սիրելի և թանկագին անձ", "լավ տեսողություն", "արևի լույս", "ակնաբույժ"], correctAnswer: "սիրելի և թանկագին անձ", explanation: "Այս դարձվածքն օգտագործվում է ամենասիրելի ու թանկագին մարդու մասին խոսելիս։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ջուրն ընկնել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["ձախողվել կամ փչանալ", "լողալ սովորել", "թրջվել", "ջուր խմել"], correctAnswer: "ձախողվել կամ փչանալ", explanation: "Նշանակում է, որ բոլոր ջանքերը կամ ծրագրերը ապարդյուն անցան, ձախողվեցին։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “գլուխը կորցնել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["շփոթվել կամ ինքնատիրապետումը կորցնել", "մահանալ", "փախչել", "մտածել"], correctAnswer: "շփոթվել կամ ինքնատիրապետումը կորցնել", explanation: "Նշանակում է՝ խուճապի մատնվել, չկարողանալ սթափ դատել իրավիճակում։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “սիրտը կոտրել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["հուսահատեցնել կամ խորապես նեղացնել", "վիրահատել", "ուրախացնել", "սիրահարվել"], correctAnswer: "հուսահատեցնել կամ խորապես նեղացնել", explanation: "Նշանակում է՝ մարդուն հիասթափեցնել կամ հոգեպես ցավ պատճառել իր խոսքերով։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ձեռք քաշել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["հրաժարվել ինչ-որ բանից կամ մեկից", "ձեռքով անել", "օգնել", "մաքրություն անել"], correctAnswer: "հրաժարվել ինչ-որ բանից կամ մեկից", explanation: "Դարձվածքն օգտագործվում է, երբ մարդը դադարում է զբաղվել որևէ գործով կամ հրաժարվում է իր մտադրությունից։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “աչքը ծակ” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["ագահ կամ անկշտում", "կույր", "վիրավոր աչք", "հետաքրքրասեր"], correctAnswer: "ագահ կամ անկշտում", explanation: "Ասվում է այն մարդու մասին, ով ունեցածով չի բավարարվում և միշտ ավելին է ուզում։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “քթի տակ” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["շատ մոտիկ կամ անմիջապես դիմացը", "հոտոտել", "հեռվում", "քթի հիվանդություն"], correctAnswer: "շատ մոտիկ կամ անմիջապես դիմացը", explanation: "Նշանակում է, որ առարկան կամ վայրը գտնվում է շատ մոտ հեռավորության վրա։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ձեռք մեկնել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["օգնության հասնել", "ողջունել", "ձեռքը երկարացնել", "խաղալ"], correctAnswer: "օգնության հասնել", explanation: "Նշանակում է աջակցել, օգնել դժվարության մեջ գտնվող մարդուն։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “հոգին տալ” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["չափազանց շատ սիրել կամ նվիրվել", "մահանալ", "վախենալ", "նվեր տալ"], correctAnswer: "չափազանց շատ սիրել կամ նվիրվել", explanation: "Նշանակում է պատրաստ լինել ամեն ինչի հանուն սիրելի էակի կամ գործի։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “գլխից ձեռք քաշել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["հուսահատվել կամ ամեն ինչ կորած համարել", "գլուխը լվանալ", "ուրախանալ", "հաղթել"], correctAnswer: "հուսահատվել կամ ամեն ինչ կորած համարել", explanation: "Նշանակում է՝ այլևս ոչ մի հույս չունենալ, հանձնվել իրավիճակին։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ոտքի կանգնել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["ապաքինվել կամ անկախանալ", "վեր կենալ աթոռից", "քայլել սովորել", "վազել"], correctAnswer: "ապաքինվել կամ անկախանալ", explanation: "Նշանակում է ծանր հիվանդությունից հետո առողջանալ կամ կյանքում ինքնուրույնություն ձեռք բերել։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “աչք փակել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["անտեսել կամ թույլտվություն տալ գաղտնի", "քնել", "կուրանալ", "աչքերը ծածկել"], correctAnswer: "անտեսել կամ թույլտվություն տալ գաղտնի", explanation: "Նշանակում է՝ միտումնավոր չնկատելու տալ որևէ սխալ կամ թերություն։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “ձայնը կտրել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["լռել կամ դադարել խոսել", "ցածր խոսել", "երգել", "հազալ"], correctAnswer: "լռել կամ դադարել խոսել", explanation: "Նշանակում է՝ անմիջապես լռել (հաճախ կոպիտ հրամայական իմաստով)։"),
+            ExerciseItem(id: UUID(), prompt: "Ո՞րն է “լեզուն կծել” դարձվածքի ճիշտ փոխաբերական իմաստը:", options: ["ժամանակին լռել զղջալով", "լեզուն վիրավորել", "ուտելիս կծել", "բարձր խոսել"], correctAnswer: "ժամանակին լռել զղջալով", explanation: "Նշանակում է՝ ափսոսալ ասված խոսքի համար և անմիջապես ընդհատել ինքն իրեն։")
+        ]
+    )
+
+    private static let rhymingPairs = Exercise(
+        id: UUID(),
+        title: "Հանգավորվող բառեր",
+        instructions: "Ընտրեք տրված բառի հետ հանգավորվող ճիշտ բառը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “սար” բառի հետ.", options: ["քար", "տուն", "շուն", "բառ"], correctAnswer: "քար", explanation: "‘սար’ և ‘քար’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ար’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “տուն” բառի հետ.", options: ["շուն", "բառ", "տառ", "հայր"], correctAnswer: "շուն", explanation: "‘տուն’ և ‘շուն’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ուն’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “բառ” բառի հետ.", options: ["տառ", "մայր", "ձյուն", "սյուն"], correctAnswer: "տառ", explanation: "‘բառ’ և ‘տառ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘առ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “հայր” բառի հետ.", options: ["մայր", "գարի", "սարի", "դաս"], correctAnswer: "մայր", explanation: "‘հայր’ և ‘մայր’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘այր’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “ձյուն” բառի հետ.", options: ["սյուն", "մաս", "դանակ", "բանակ"], correctAnswer: "սյուն", explanation: "‘ձյուն’ և ‘սյուն’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘յուն’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “գարի” բառի հետ.", options: ["սարի", "կատու", "մեղու", "գիշեր"], correctAnswer: "սարի", explanation: "‘գարի’ և ‘սարի’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘արի’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “դաս” բառի հետ.", options: ["մաս", "հուշեր", "ծառ", "վառ"], correctAnswer: "մաս", explanation: "‘դաս’ և ‘մաս’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘աս’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “դանակ” բառի հետ.", options: ["բանակ", "գիրք", "ձիրք", "գետ"], correctAnswer: "բանակ", explanation: "‘դանակ’ և ‘բանակ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘անակ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “գիշեր” բառի հետ.", options: ["հուշեր", "հետ", "ջուր", "սուր"], correctAnswer: "հուշեր", explanation: "‘գիշեր’ և ‘հուշեր’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘եր’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “ծառ” բառի հետ.", options: ["վառ", "սիրտ", "բիրտ", "կաթ"], correctAnswer: "վառ", explanation: "‘ծառ’ և ‘վառ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘առ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “գիրք” բառի հետ.", options: ["ձիրք", "թաթ", "հաց", "լաց"], correctAnswer: "ձիրք", explanation: "‘գիրք’ և ‘ձիրք’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘իրք’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “գետ” բառի հետ.", options: ["հետ", "լույս", "հույս", "երգ"], correctAnswer: "հետ", explanation: "‘գետ’ և ‘հետ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ետ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “ջուր” բառի հետ.", options: ["սուր", "վերք", "թուղթ", "ուղտ"], correctAnswer: "սուր", explanation: "‘ջուր’ և ‘սուր’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ուր’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “սիրտ” բառի հետ.", options: ["բիրտ", "սար", "քար", "տուն"], correctAnswer: "բիրտ", explanation: "‘սիրտ’ և ‘բիրտ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘իրտ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “կաթ” բառի հետ.", options: ["թաթ", "շուն", "բառ", "տառ"], correctAnswer: "թաթ", explanation: "‘կաթ’ և ‘թաթ’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘աթ’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “հաց” բառի հետ.", options: ["լաց", "հայր", "մայր", "ձյուն"], correctAnswer: "լաց", explanation: "‘հաց’ և ‘լաց’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘աց’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “լույս” բառի հետ.", options: ["հույս", "սյուն", "գարի", "սարի"], correctAnswer: "հույս", explanation: "‘լույս’ և ‘հույս’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ույս’ հնչյունով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “երգ” բառի հետ.", options: ["վերք", "դաս", "մաս", "դանակ"], correctAnswer: "վերք", explanation: "‘երգ’ և ‘վերք’ բառերը հանգավորվում են իրենց վերջավորության համահունչ հնչյուններով։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “թուղթ” բառի հետ.", options: ["ուղտ", "բանակ", "գիշեր", "հուշեր"], correctAnswer: "ուղտ", explanation: "‘թուղթ’ և ‘ուղտ’ բառերը հանգավորվում են իրենց նմանատիպ վերջնամասի շնորհիվ։"),
+            ExerciseItem(id: UUID(), prompt: "Ընտրեք այն բառը, որը հանգավորվում է “կատու” բառի հետ.", options: ["պապու", "ծառ", "վառ", "գիրք"], correctAnswer: "պապու", explanation: "‘կատու’ և ‘պապու’ բառերը հանգավորվում են, քանի որ երկուսն էլ վերջանում են ‘ու’ հնչյունով։")
+        ]
+    )
+
+    private static let wordAssociation = Exercise(
+        id: UUID(),
+        title: "Խոսքի ասոցիացիա",
+        instructions: "Ընտրի՛ր տվյալ բառի հետ առավել սերտորեն կապված բառը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "ԲԺԻՇԿ", options: ["Հիվանդանոց", "Օդանավակայան", "Գրադարան", "Ֆերմա"], correctAnswer: "Հիվանդանոց", explanation: "Բժիշկներն աշխատում են հիվանդանոցներում՝ հիվանդներին խնամելու համար:"),
+            ExerciseItem(id: UUID(), prompt: "ՀԱՑ", options: ["Կարագ", "Մուրճ", "Օճառ", "Մատիտ"], correctAnswer: "Կարագ", explanation: "Կարագը սովորաբար քսում են հացի վրա։"),
+            ExerciseItem(id: UUID(), prompt: "ԽՈՀԱՆՈՑ", options: ["Վառարան", "Մահճակալ", "Ցնցուղ", "Ավտոմեքենա"], correctAnswer: "Վառարան", explanation: "Վառարանը խոհանոցում առաջնային սարքավորում է:"),
+            ExerciseItem(id: UUID(), prompt: "ԳՐԱԴԱՐԱՆ", options: ["Գրքեր", "Հագուստ", "Գործիքներ", "Մթերային ապրանքներ"], correctAnswer: "Գրքեր", explanation: "Գրադարանները պահում և տալիս են գրքեր:"),
+            ExerciseItem(id: UUID(), prompt: "ԿՈՇԻԿ", options: ["Գուլպա", "Գլխարկ", "Ձեռնոց", "Գոտի"], correctAnswer: "Գուլպա", explanation: "Գուլպաները հագնում են կոշիկների ներսում։"),
+            ExerciseItem(id: UUID(), prompt: "ՏԻԵԶԵՐԱԳԵՏ", options: ["Տիեզերք", "Օվկիանոս", "Ջունգլիներ", "Անապատ"], correctAnswer: "Տիեզերք", explanation: "Տիեզերագնացները ճանապարհորդում են տիեզերք."),
+            ExerciseItem(id: UUID(), prompt: "ՈՒՍՈՒՑԻՉ", options: ["դպրոց", "Գործարան", "Թատրոն", "Մարզասրահ"], correctAnswer: "դպրոց", explanation: "Ուսուցիչները դպրոցում սովորեցնում են աշակերտներին."),
+            ExerciseItem(id: UUID(), prompt: "ՕՎԿԵԱՆ", options: ["Ձուկ", "Թռչուն", "Կով", "Սարդ"], correctAnswer: "Ձուկ", explanation: "Ձկները ապրում են օվկիանոսում:"),
+            ExerciseItem(id: UUID(), prompt: "ՄԵՔԵՆԱ", options: ["Անվադող", "Թևը", "Թամբ", "Առագաստանավ"], correctAnswer: "Անվադող", explanation: "Անվադողերը մեքենաների հիմնական բաղադրիչներն են։"),
+            ExerciseItem(id: UUID(), prompt: "ԱՆՁՐԵՎ", options: ["Հովանոց", "Արևային ակնոցներ", "Ձեռնոցներ", "Շարֆ"], correctAnswer: "Հովանոց", explanation: "Հովանոցը պաշտպանում է ձեզ անձրևից:"),
+            ExerciseItem(id: UUID(), prompt: "ՀՐԴԵՀ", options: ["Ծուխ", "Սառույց", "Տերեւ", "Մետաղադրամ"], correctAnswer: "Ծուխ", explanation: "Կրակը ծուխ է արտադրում։"),
+            ExerciseItem(id: UUID(), prompt: "ԱՏԱՄԱԲՈՒԺ", options: ["Ատամներ", "Մազեր", "Աչքեր", "Ոտքեր"], correctAnswer: "Ատամներ", explanation: "Ատամնաբույժները մասնագիտանում են բերանի խոռոչի և ատամների առողջության վրա:"),
+            ExerciseItem(id: UUID(), prompt: "ՍՈՒՐՃ", options: ["Բաժակ", "Bowl", "Ափսե", "Պատառաքաղ"], correctAnswer: "Բաժակ", explanation: "Սուրճը սովորաբար մատուցվում է բաժակի մեջ:"),
+            ExerciseItem(id: UUID(), prompt: "ԱՅԳԻ", options: ["Ծաղիկներ", "Համակարգիչներ", "Վառարաններ", "Վերարկուներ"], correctAnswer: "Ծաղիկներ", explanation: "Ծաղիկները աճում են պարտեզում:"),
+            ExerciseItem(id: UUID(), prompt: "ԲԱՆԱԼ", options: ["Կողպեք", "Պատուհան", "Տանիք", "Հարկ"], correctAnswer: "Կողպեք", explanation: "Բանալիները օգտագործվում են կողպեքները բացելու համար:"),
+            ExerciseItem(id: UUID(), prompt: "ՓՈՍՏԱՑՈՒՄ", options: ["Նամակ", "Հաց", "Բժշկություն", "Տոմս"], correctAnswer: "Նամակ", explanation: "Նամակները փոստով ուղարկվում են փոստային բաժանմունք:"),
+            ExerciseItem(id: UUID(), prompt: "դաշնամուր", options: ["Երաժշտություն", "Ներկել", "Կավ", "Փայտ"], correctAnswer: "Երաժշտություն", explanation: "Դաշնամուրը երաժշտություն նվագելու գործիք է։"),
+            ExerciseItem(id: UUID(), prompt: "ՄԵՂՈՒ", options: ["Մեղր", "Կաթ", "Բուրդ", "Մետաքս"], correctAnswer: "Մեղր", explanation: "Մեղուները մեղր են արտադրում։"),
+            ExerciseItem(id: UUID(), prompt: "ՍԱՐԴ", options: ["Վեբ", "Բույն", "Փեթակ", "որջ"], correctAnswer: "Վեբ", explanation: "Սարդերը ցանցեր են պտտում:"),
+            ExerciseItem(id: UUID(), prompt: "ՖԵՐՄԵՐ", options: ["Տրակտոր", "Ինքնաթիռ", "Սուզանավ", "Գնացք"], correctAnswer: "Տրակտոր", explanation: "Ֆերմերները հողը մշակելու համար օգտագործում են տրակտորներ:")
+        ]
+    )
+
+    private static let completingProverbs = Exercise(
+        id: UUID(),
+        title: "Առածների լրացում",
+        instructions: "Ընտրեք համապատասխան բառը՝ առածն ավարտելու համար:",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ուշ լինի, ___ լինի”", options: ["նուշ", "ուշ", "լավ", "մուշ"], correctAnswer: "նուշ", explanation: "Ասույթն օգտագործվում է այն դեպքում, երբ ուշացած, բայց հաճելի կամ հաջող արդյունք է լինում։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Աջ ձեռքը չգիտի, թե ինչ է անում ___ ձեռքը”", options: ["ձախ", "մյուս", "առողջ", "փոքր"], correctAnswer: "ձախ", explanation: "Նշանակում է՝ բարեգործություն անելիս պետք չէ պարծենալ կամ ցուցադրել դա։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Լեզուն ոսկոր չունի, բայց ոսկոր է ___”", options: ["կոտրում", "ծակում", "ուտում", "պահում"], correctAnswer: "կոտրում", explanation: "Նշանակում է, որ խոսքը կարող է շատ ծանր հարված հասցնել մարդուն։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Գառը գայլին ___ չի անի”", options: ["բարեկամ", "ընկեր", "թշնամի", "հարևան"], correctAnswer: "բարեկամ", explanation: "Թշնամաբար տրամադրված անձինք դժվար թե անկեղծորեն բարեկամանան։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Շան հետ ընկերացիր, բայց ___ ձեռքիցդ մի գցիր”", options: ["փայտը", "քարը", "հացը", "թուրը"], correctAnswer: "փայտը", explanation: "Նշանակում է՝ պետք է միշտ զգոն և պաշտպանված լինել վտանգավոր իրավիճակներում։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ջուրը գնում է, ___ մնում է”", options: ["ավազը", "քարը", "ձուկը", "ցեխը"], correctAnswer: "ավազը", explanation: "Ժամանակավոր բաներն անցնում են, իսկ հիմնականն ու մնայունն արժեքավորն է։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Աչքից հեռու, ___ հեռու”", options: ["սրտից", "տնից", "մտքից", "մարդուց"], correctAnswer: "սրտից", explanation: "Երբ երկար ժամանակ ինչ-որ մեկին չես տեսնում, զգացմունքները կարող են թուլանալ։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Մի ծաղկով գարուն ___”", options: ["չի գա", "կգա", "կլինի", "չի լինի"], correctAnswer: "չի գա", explanation: "Մեկ մարդու ջանքերով մեծ ու համընդհանուր փոփոխություն դժվար է իրականացնել։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ով աշխատի, նա ___”", options: ["կուտի", "կխմի", "կքնի", "կխաղա"], correctAnswer: "կուտի", explanation: "Աշխատանքը հաջողության և ապրուստի հիմնական աղբյուրն է։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Պտուղը ծառից հեռու ___”", options: ["չի ընկնում", "է ընկնում", "չի թռչում", "է աճում"], correctAnswer: "չի ընկնում", explanation: "Նշանակում է, որ երեխաները ժառանգում են իրենց ծնողների հատկանիշները։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Լավություն արա, ջուրը ___”", options: ["գցիր", "տար", "պահիր", "դրու"], correctAnswer: "գցիր", explanation: "Լավ արարք կատարելիս պետք չէ դրա դիմաց անմիջապես փոխհատուցում ակնկալել։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Խոսքը արծաթ է, լռությունը՝ ___”", options: ["ոսկի", "պղինձ", "երկաթ", "ադամանդ"], correctAnswer: "ոսկի", explanation: "Երբեմն լռելը շատ ավելի արժեքավոր է, քան անտեղի խոսելը։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Երկու երանի մի տեղ ___”", options: ["չի լինի", "կլինի", "կգա", "չի գա"], correctAnswer: "չի լինի", explanation: "Չի կարելի միաժամանակ երկու տարբեր հակասող հաճույքներ վայելել։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Էշի ականջում ___”", options: ["քնած", "արթուն", "նստած", "կանգնած"], correctAnswer: "քնած", explanation: "Ասվում է այն մարդու մասին, ով անտեղյակ է իր շուրջը կատարվող կարևոր իրադարձություններից։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ով ինչ անի, իրեն ___”", options: ["կանի", "չի անի", "կտա", "կտանի"], correctAnswer: "կանի", explanation: "Յուրաքանչյուր մարդ պատասխանատու է իր արարքների հետևանքների համար։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ձեռքը ձեռք է լվանում, երկու ձեռքը՝ ___”", options: ["երես", "աչք", "մարմին", "ոտք"], correctAnswer: "երես", explanation: "Փոխօգնության միջոցով կարելի է հասնել ավելի մեծ և լիարժեք արդյունքի։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Փորձված թանը անփորձ մածունից ___ է”", options: ["լավ", "վատ", "թանկ", "էժան"], correctAnswer: "լավ", explanation: "Ծանոթ ու փորձված բանը նախընտրելի է նոր ու անհայտ բանից։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Քամու բերածը քամին ___”", options: ["կտանի", "կբերի", "կպահի", "կթողնի"], correctAnswer: "կտանի", explanation: "Հեշտությամբ ձեռք բերվածը հեշտությամբ էլ կորչում է։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Ագռավի ճուտը իր մոր համար ___ է”", options: ["անուշ", "դառը", "սև", "սպիտակ"], correctAnswer: "անուշ", explanation: "Յուրաքանչյուր ծնողի համար իր երեխան ամենալավն ու թանկն է։"),
+            ExerciseItem(id: UUID(), prompt: "Լրացրեք հետևյալ առածը. “Գայլի գլխին ավետարան են կարդում, ասում է՝ շուտ արեք, ոչխարը ___”", options: ["անցավ", "կորավ", "եկավ", "գնաց"], correctAnswer: "անցավ", explanation: "Անուղղելի մարդուն խրատելն անօգուտ է, նա միայն իր շահի մասին է մտածում։")
+        ]
+    )
+
+    private static let compoundWords = Exercise(
+        id: UUID(),
+        title: "Բարդ բառեր",
+        instructions: "Ընտրեք երկու բառերի միավորումից կազմված ճիշտ բարդ բառը:",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. հաց + տուն = ___", options: ["հացատուն", "հացատեղ", "հացաման", "ուտեստատուն"], correctAnswer: "հացատուն", explanation: "Այն վայրը կամ սենյակը, որտեղ հաց են թխում կամ պահում։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ջուր + աղաց = ___", options: ["ջրաղաց", "քամաղաց", "էլեկտրաաղաց", "ալրաղաց"], correctAnswer: "ջրաղաց", explanation: "Ջրի ուժով աշխատող ալրաղացը կոչվում է ջրաղաց։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ծաղիկ + աման = ___", options: ["ծաղկաման", "ծաղկամուտ", "ծաղկաձոր", "ծաղկատուն"], correctAnswer: "ծաղկաման", explanation: "Այն անոթը, որի մեջ դնում են ծաղիկները։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ձյուն + մարդ = ___", options: ["ձնեմարդ", "ձնեգնդիկ", "ձնեմատ", "ձնասար"], correctAnswer: "ձնեմարդ", explanation: "Ձյունից պատրաստված մարդու կերպարանքով արձանը։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. գիրք + տուն = ___", options: ["գրատուն", "գրասեղան", "գրապահարան", "գրադարան"], correctAnswer: "գրատուն", explanation: "Հին հայերենում գրախանութը կամ գրքերի պահոցը կոչվում էր գրատուն։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. արև + ծաղիկ = ___", options: ["արևածաղիկ", "կակաչ", "մեխակ", "վարդ"], correctAnswer: "արևածաղիկ", explanation: "Արևին հետևող դեղին թերթիկներով ծաղիկը։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ատամ + բույժ = ___", options: ["ատամնաբույժ", "բժշկատուն", "դեղատուն", "ակնաբույժ"], correctAnswer: "ատամնաբույժ", explanation: "Ատամները բուժող մասնագետը ատամնաբույժն է։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ձեռք + գիր = ___", options: ["ձեռագիր", "տպագիր", "ստորագրություն", "գրատախտակ"], correctAnswer: "ձեռագիր", explanation: "Ձեռքով գրված տեքստը կոչվում է ձեռագիր։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. հեռու + խոսել = ___", options: ["հեռախոս", "հեռագիր", "հեռուստացույց", "ռադիո"], correctAnswer: "հեռախոս", explanation: "Ձայնը հեռավորության վրա հաղորդող սարքը։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ինքն + թռչել = ___", options: ["ինքնաթիռ", "ուղղաթիռ", "փուչիկ", "օդապարիկ"], correctAnswer: "ինքնաթիռ", explanation: "Օդային տրանսպորտային միջոցը, որն ինքն է թռչում։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. լույս + ամփոփ = ___", options: ["լուսամփոփ", "լուսամուտ", "լուսատտիկ", "լուսաբաց"], correctAnswer: "լուսամփոփ", explanation: "Սեղանի կամ առաստաղի լամպի ծածկոցը, որը ցրում է լույսը։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. սեղան + ատամ = ___", options: ["սեղանատամ", "ժանիք", "կտրիչ", "ատամնաշար"], correctAnswer: "սեղանատամ", explanation: "Ծամողական հետին ատամները կոչվում են սեղանատամներ։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. լուս + բաց = ___", options: ["լուսաբաց", "մթնշաղ", "կեսօր", "լուսամուտ"], correctAnswer: "լուսաբաց", explanation: "Օրվա այն պահը, երբ նոր է սկսում լուսանալ։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. քար + ածուխ = ___", options: ["քարածուխ", "փայտածուխ", "գազ", "նավթ"], correctAnswer: "քարածուխ", explanation: "Օգտակար հանածո վառելիքը, որը հանվում է գետնի տակից։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. սեպ + գիր = ___", options: ["սեպագիր", "ձեռագիր", "տպագիր", "ծածկագիր"], correctAnswer: "սեպագիր", explanation: "Հին արևելյան գրության տեսակը՝ քարի վրա սեպաձև փորագրված։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. տուն + պահ = ___", options: ["տնապահ", "պահակ", "տնտեսվար", "տնօրեն"], correctAnswer: "տնապահ", explanation: "Այն անձը, ով հսկում կամ պահպանում է տունը բացակայության ժամանակ։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ծով + աստղ = ___", options: ["ծովաստղ", "ձուկ", "ծովախեցգետին", "դելֆին"], correctAnswer: "ծովաստղ", explanation: "Ծովային փշամորթ կենդանի, որն ունի աստղի տեսք։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ձեռ + սայլակ = ___", options: ["ձեռնասայլակ", "ինքնագլոր", "հեծանիվ", "մեքենա"], correctAnswer: "ձեռնասայլակ", explanation: "Ձեռքով հրվող փոքրիկ սայլակը բեռներ տեղափոխելու համար։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. ժամ + ցույց = ___", options: ["ժամացույց", "օրացույց", "քանոն", "կողմնացույց"], correctAnswer: "ժամացույց", explanation: "Ժամանակը ցույց տվող սարքը։"),
+            ExerciseItem(id: UUID(), prompt: "Կազմեք բարդ բառ միացնելով հետևյալ արմատները. գր + սեղան = ___", options: ["գրասեղան", "ճաշասեղան", "աթոռ", "պահարան"], correctAnswer: "գրասեղան", explanation: "Այն սեղանը, որի վրա գրում կամ աշխատում են։")
+        ]
+    )
+
+    private static let prefixesSuffixes = Exercise(
+        id: UUID(),
+        title: "Նախածանցներ և վերջածանցներ",
+        instructions: "Ընտրեք ածանցների ճիշտ նշանակությունը կամ կիրառությունը:",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “ան-” ածանցը “անտուն” բառի մեջ:", options: ["անտուն", "տնավոր", "տնական", "տնամերձ"], correctAnswer: "անտուն", explanation: "‘ան-’ նախածանցը (prefix) նշանակում է ինչ-որ բանի բացակայություն (անտուն = տուն չունեցող)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “դժ-” ածանցը “դժբախտ” բառի մեջ:", options: ["դժբախտ", "բախտավոր", "հաջողակ", "ուրախ"], correctAnswer: "դժբախտ", explanation: "‘դժ-’ նախածանցը արտահայտում է բացասական իմաստ (դժբախտ = բախտ չունեցող)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “տ-” ածանցը “տգետ” բառի մեջ:", options: ["տգետ", "գետակ", "գիտուն", "խելացի"], correctAnswer: "տգետ", explanation: "‘տ-’ նախածանցը նշանակում է ժխտում կամ տվյալ հատկանիշի բացակայություն (տգետ = չիմացող)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “համ-” ածանցը “համադասարանցի” բառի մեջ:", options: ["համադասարանցի", "դասարան", "աշակերտ", "ուսուցիչ"], correctAnswer: "համադասարանցի", explanation: "‘համ-’ նախածանցը արտահայտում է համատեղություն (համադասարանցի = նույն դասարանի աշակերտ)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ակ” ածանցը “գետակ” բառի մեջ:", options: ["գետակ", "գետաբերան", "մեծ գետ", "ջրվեժ"], correctAnswer: "գետակ", explanation: "‘-ակ’ վերջածանցը (suffix) փոքրացնող իմաստ ունի (գետակ = փոքր գետ)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-իկ” ածանցը “քույրիկ” բառի մեջ:", options: ["քույրիկ", "մայրիկ", "եղբայր", "հայրիկ"], correctAnswer: "քույրիկ", explanation: "‘-իկ’ վերջածանցն արտահայտում է փաղաքշական կամ փոքրացնող իմաստ։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-արան” ածանցը “դասարան” բառի մեջ:", options: ["դասարան", "դպրոց", "աշակերտ", "գրատախտակ"], correctAnswer: "դասարան", explanation: "‘-արան’ վերջածանցը ցույց է տալիս տեղ կամ վայր (դասարան = դաս սովորելու սենյակ)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ատուն” ածանցը “հացատուն” բառի մեջ:", options: ["հացատուն", "հացաման", "փուռ", "խոհանոց"], correctAnswer: "հացատուն", explanation: "‘-ատուն’ վերջավորությունը ցույց է տալիս տուն կամ հատուկ վայր։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-իչ” ածանցը “գրիչ” բառի մեջ:", options: ["գրիչ", "մատիտ", "գրատախտակ", "գրասեղան"], correctAnswer: "գրիչ", explanation: "‘-իչ’ վերջածանցը ցույց է տալիս գործիք կամ կատարող (գրիչ = գրելու գործիք)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ավոր” ածանցը “լուսավոր” բառի մեջ:", options: ["լուսավոր", "մութ", "լույս", "ճրագ"], correctAnswer: "լուսավոր", explanation: "‘-ավոր’ վերջածանցը ցույց է տալիս հատկանիշ ունեցող (լուսավոր = լույս ունեցող)։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ուհի” ածանցը “ուսուցչուհի” բառի մեջ:", options: ["ուսուցչուհի", "ուսուցիչ", "տնօրեն", "աշակերտ"], correctAnswer: "ուսուցչուհի", explanation: "‘-ուհի’ վերջածանցը ցույց է տալիս իգական սեռի պատկանելություն։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-պան” ածանցը “այգեպան” բառի մեջ:", options: ["այգեպան", "այգի", "պահակ", "հողագործ"], correctAnswer: "այգեպան", explanation: "‘-պան’ վերջածանցը ցույց է տալիս պահապան կամ զբաղմունք ունեցող անձ։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ական” ածանցը “հայրական” բառի մեջ:", options: ["հայրական", "հայրիկ", "մայրական", "որդիական"], correctAnswer: "հայրական", explanation: "‘-ական’ վերջածանցով կազմվում են որոշակի հարաբերություն ցույց տվող ածականներ։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-եղեն” ածանցը “մետաղեղեն” բառի մեջ:", options: ["մետաղեղեն", "մետաղյա", "փայտեղեն", "պլաստմասսա"], correctAnswer: "մետաղեղեն", explanation: "‘-եղեն’ վերջածանցը ցույց է տալիս նյութի տեսակ կամ հավաքականություն։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-որդ” ածանցը “որսորդ” բառի մեջ:", options: ["որսորդ", "որս", "կենդանի", "անտառ"], correctAnswer: "որսորդ", explanation: "‘-որդ’ վերջածանցը ցույց է տալիս գործողություն կատարող անձ։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ավոր” ածանցը “զինավոր” բառի մեջ:", options: ["զինավոր", "զենք", "զինվոր", "բանակ"], correctAnswer: "զինավոր", explanation: "‘-ավոր’ վերջածանցը ցույց է տալիս զենք կրող կամ զինված անձ։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-անոց” ածանցը “հիվանդանոց” բառի մեջ:", options: ["հիվանդանոց", "հիվանդ", "բժիշկ", "դեղատուն"], correctAnswer: "հիվանդանոց", explanation: "‘-անոց’ վերջածանցը ցույց է տալիս հաստատություն կամ վայր։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ստան” ածանցը “Հայաստան” բառի մեջ:", options: ["Հայաստան", "Հայ", "երկիր", "աշխարհ"], correctAnswer: "Հայաստան", explanation: "‘-ստան’ վերջածանցը նշանակում է երկիր կամ բնակավայր։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ուտ” ածանցը “քարուտ” բառի մեջ:", options: ["քարուտ", "քարոտ", "ավազուտ", "անտառուտ"], correctAnswer: "քարուտ", explanation: "‘-ուտ’ վերջածանցը ցույց է տալիս տվյալ նյութով հարուստ տեղանք։"),
+            ExerciseItem(id: UUID(), prompt: "Ի՞նչ նշանակություն կամ դեր ունի “-ային” ածանցը “ջրային” բառի մեջ:", options: ["ջրային", "ջուր", "ցամաքային", "օդային"], correctAnswer: "ջրային", explanation: "‘-ային’ վերջածանցով կազմվում են հատկանիշ ցույց տվող ածականներ։")
+        ]
+    )
+
+}

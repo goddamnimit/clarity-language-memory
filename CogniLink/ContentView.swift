@@ -54,6 +54,9 @@ struct ContentView: View {
         case .vietnamese: return "Trang chủ"
         case .arabic:     return "الرئيسية"
         case .portuguese: return "Início"
+        case .tagalog:    return "Home"
+        case .punjabi:    return "ਹੋਮ"
+        case .armenian:   return "Գլխավոր"
         }
     }
 
@@ -69,6 +72,9 @@ struct ContentView: View {
         case .vietnamese: return "Hoạt động"
         case .arabic:     return "الأنشطة"
         case .portuguese: return "Atividades"
+        case .tagalog:    return "Mga Aktibidad"
+        case .punjabi:    return "ਗਤੀਵਿਧੀਆਂ"
+        case .armenian:   return "Վարժություններ"
         }
     }
 
@@ -84,6 +90,9 @@ struct ContentView: View {
         case .vietnamese: return "Hồ sơ"
         case .arabic:     return "الملف"
         case .portuguese: return "Perfil"
+        case .tagalog:    return "Profile"
+        case .punjabi:    return "ਪ੍ਰੋਫਾਈਲ"
+        case .armenian:   return "Պրոֆիլ"
         }
     }
 }
@@ -457,6 +466,72 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+        case .tagalog:
+            if hasName {
+                let greetings = [
+                    "Masaya akong makita ka, \(name)!",
+                    "\(name), handa ka na bang mag-ensayo?",
+                    "Maligayang pagbabalik, \(name)!",
+                    "Simulan na natin, \(name)!",
+                    "\(name), napakasaya na nandito ka!",
+                    "Oras na para magpakitang-gilas, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Maligayang pagdating sa Clarity!",
+                    "Handa ka na bang mag-ensayo?",
+                    "Maligayang pagbabalik!",
+                    "Simulan na natin!",
+                    "Napakasaya na nandito ka!",
+                    "Oras na para mag-ensayo!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+        case .punjabi:
+            if hasName {
+                let greetings = [
+                    "ਤੁਹਾਨੂੰ ਦੇਖ ਕੇ ਖੁਸ਼ੀ ਹੋਈ, \(name)!",
+                    "\(name), ਅਭਿਆਸ ਲਈ ਤਿਆਰ ਹੋ?",
+                    "ਜੀ ਆਇਆਂ ਨੂੰ, \(name)!",
+                    "ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ, \(name)!",
+                    "\(name), ਤੁਹਾਡਾ ਇੱਥੇ ਹੋਣਾ ਬਹੁਤ ਵਧੀਆ ਲੱਗਿਆ!",
+                    "ਚਮਕਣ ਦਾ ਸਮਾਂ ਆ ਗਿਆ ਹੈ, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "ਕਲੈਰਿਟੀ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ!",
+                    "ਅਭਿਆਸ ਲਈ ਤਿਆਰ ਹੋ?",
+                    "ਜੀ ਆਇਆਂ ਨੂੰ!",
+                    "ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ!",
+                    "ਤੁਹਾਡਾ ਇੱਥੇ ਹੋਣਾ ਬਹੁਤ ਵਧੀਆ ਲੱਗਿਆ!",
+                    "ਅਭਿਆਸ ਦਾ ਸਮਾਂ!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+        case .armenian:
+            if hasName {
+                let greetings = [
+                    "Ուրախ եմ քեզ տեսնել, \(name)!",
+                    "\(name), պատրա՞ստ ես մարզվելու:",
+                    "Բարի վերադարձ, \(name)!",
+                    "Սկսե՛նք, \(name)!",
+                    "\(name), որքա՜ն հրաշալի է, որ այստեղ ես:",
+                    "Ժամանակն է փայլելու, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Բարի գալուստ Clarity!",
+                    "Պատրա՞ստ ես մարզվելու:",
+                    "Բարի վերադարձ:",
+                    "Սկսե՛նք:",
+                    "Որքա՜ն հրաշալի է, որ այստեղ ես:",
+                    "Մարզվելու ժամանակն է:"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -472,6 +547,9 @@ struct HomeView: View {
         case .vietnamese: return "Thử ngẫu nhiên! 🎲"
         case .arabic:     return "فاجئني! 🎲"
         case .portuguese: return "Me Surpreenda! 🎲"
+        case .tagalog:    return "Sorpresahin Ako! 🎲"
+        case .punjabi:    return "ਮੈਨੂੰ ਹੈਰਾਨ ਕਰੋ! 🎲"
+        case .armenian:   return "Անակնկալե՛լ ինձ: 🎲"
         }
     }
 
@@ -496,6 +574,9 @@ struct HomeView: View {
         case .vietnamese: return "Nhấn để chọn ngẫu nhiên"
         case .arabic:     return "اضغط لنشاط عشوائي"
         case .portuguese: return "Toque para uma atividade aleatória"
+        case .tagalog:    return "I-tap para sa random na aktibidad"
+        case .punjabi:    return "ਇੱਕ ਬੇਤਰਤੀਬੇ ਅਭਿਆਸ ਲਈ ਟੈਪ ਕਰੋ"
+        case .armenian:   return "Հպեք պատահական վարժության համար"
         }
     }
 
@@ -511,6 +592,9 @@ struct HomeView: View {
         case .vietnamese: return "Ngôn ngữ"
         case .arabic:     return "اللغة"
         case .portuguese: return "Linguagem"
+        case .tagalog:    return "Wika"
+        case .punjabi:    return "ਭਾਸ਼ਾ"
+        case .armenian:   return "Լեզու"
         }
     }
 
@@ -526,6 +610,9 @@ struct HomeView: View {
         case .vietnamese: return "Nhận thức"
         case .arabic:     return "الإدراك والذاكرة"
         case .portuguese: return "Cognição"
+        case .tagalog:    return "Kognisyon"
+        case .punjabi:    return "ਦਿਮਾਗੀ ਕਸਰਤ"
+        case .armenian:   return "Ճանաչողություն"
         }
     }
 
@@ -541,6 +628,9 @@ struct HomeView: View {
         case .vietnamese: return "Kỹ năng hàng ngày"
         case .arabic:     return "المهارات اليومية"
         case .portuguese: return "Habilidades Funcionais"
+        case .tagalog:    return "Functional na Kasanayan"
+        case .punjabi:    return "ਰੋਜ਼ਾਨa ਦੇ ਹੁਨਰ"
+        case .armenian:   return "Գործնական Հմտություններ"
         }
     }
 
@@ -566,6 +656,12 @@ struct HomeView: View {
             return "\(sessionsCount) جلسة"
         case .portuguese:
             return "\(sessionsCount) \(sessionsCount == 1 ? "sessão jogada" : "sessões jogadas")"
+        case .tagalog:
+            return "\(sessionsCount) na session ang nalaro"
+        case .punjabi:
+            return "\(sessionsCount) ਸੈਸ਼ਨ ਖੇਡੇ ਗਏ"
+        case .armenian:
+            return "\(sessionsCount) սեսիա խաղացվել է"
         }
     }
 

@@ -511,6 +511,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Điểm tuyệt đối! 🎉"
         case .arabic:     return "نتيجة مثالية! 🎉"
         case .portuguese: return "Pontuação Perfeita! 🎉"
+        case .tagalog:    return "Perpektong Iskor! 🎉"
+        case .punjabi:    return "ਸ਼ਾਨਦਾਰ ਸਕੋਰ! 🎉"
+        case .armenian:   return "Կատարյալ Արդյունք! 🎉"
         }
     }
 
@@ -526,6 +529,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Hoàn thành buổi tập!"
         case .arabic:     return "اكتملت الجلسة!"
         case .portuguese: return "Sessão Concluída!"
+        case .tagalog:    return "Kumpleto na ang Session!"
+        case .punjabi:    return "ਅਭਿਆਸ ਪੂਰਾ ਹੋਇਆ!"
+        case .armenian:   return "Սեսիան Ավարտվեց!"
         }
     }
 
@@ -541,6 +547,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Điểm"
         case .arabic:     return "النتيجة"
         case .portuguese: return "Pontuação"
+        case .tagalog:    return "Iskor"
+        case .punjabi:    return "ਸਕੋਰ"
+        case .armenian:   return "Միավոր"
         }
     }
 
@@ -556,6 +565,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Buổi mới"
         case .arabic:     return "جلسة جديدة"
         case .portuguese: return "Nova Sessão"
+        case .tagalog:    return "Bagong Session"
+        case .punjabi:    return "ਨਵਾਂ ਅਭਿਆਸ"
+        case .armenian:   return "Նոր Սեսիա"
         }
     }
 
@@ -571,6 +583,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Quay lại bài tập"
         case .arabic:     return "العودة إلى التمارين"
         case .portuguese: return "Voltar aos Exercícios"
+        case .tagalog:    return "Bumalik sa mga Pagsasanay"
+        case .punjabi:    return "ਅਭਿਆਸਾਂ 'ਤੇ ਵਾਪਸ ਜਾਓ"
+        case .armenian:   return "Վերադառնալ Վարժություններին"
         }
     }
 
@@ -586,6 +601,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Câu hỏi"
         case .arabic:     return "سؤال"
         case .portuguese: return "Questão"
+        case .tagalog:    return "Tanong"
+        case .punjabi:    return "ਸਵਾਲ"
+        case .armenian:   return "Հարց"
         }
     }
 
@@ -601,6 +619,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "trong"
         case .arabic:     return "من"
         case .portuguese: return "de"
+        case .tagalog:    return "ng"
+        case .punjabi:    return "ਵਿੱਚੋਂ"
+        case .armenian:   return "-ից"
         }
     }
 
@@ -616,6 +637,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Trước"
         case .arabic:     return "السابق"
         case .portuguese: return "Anterior"
+        case .tagalog:    return "Nakaraan"
+        case .punjabi:    return "ਪਿੱਛੇ"
+        case .armenian:   return "Նախորդ"
         }
     }
 
@@ -631,6 +655,9 @@ struct ExerciseContainerView: View {
         case .vietnamese: return "Bỏ qua"
         case .arabic:     return "تخطي"
         case .portuguese: return "Pular"
+        case .tagalog:    return "Laktawan"
+        case .punjabi:    return "ਛੱਡੋ"
+        case .armenian:   return "Բաց թողնել"
         }
     }
 }
