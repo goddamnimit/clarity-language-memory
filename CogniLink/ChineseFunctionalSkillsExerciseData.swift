@@ -12,7 +12,10 @@ struct ChineseFunctionalSkillsExerciseData {
         temporalAwareness,
         groceryShopping,
         timeAndMath,
-        functionalWriting
+        functionalWriting,
+        readingMenus,
+        readingPrescriptions
+    
     ]
 
     // MARK: - 安全情景
@@ -233,7 +236,113 @@ struct ChineseFunctionalSkillsExerciseData {
                 options: [],
                 correctAnswer: "保持冷静，尽量减少活动以减缓毒液扩散。将受伤部位保持在低于心脏水平的位置。立即拨打911或请他人送你到最近的急诊室。",
                 explanation: "Snake/insect bite safety."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您家里的烟雾报警器突然发出持续的、尖锐的“哔哔”声。您应该怎么做？",
+                options: [],
+                correctAnswer: "立即更换报警器的电池。如果看到烟雾或火光，请迅速撤离并拨打 911 电话。",
+                explanation: "Safe procedure for smoke detector alarm or low battery signal."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您收到一个自称是太平洋燃气电力公司（PG&E）的陌生电话，称如果您不在30分钟内付款，您的电力将被切断。您应该怎么做？",
+                options: [],
+                correctAnswer: "立即挂断电话。拨打电力公司官方账单电话核实您的账户状态。切勿在电话中通过礼品卡或预付卡付款。",
+                explanation: "Standard procedure to avoid utility scams."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您正在开车，突然车辆的引擎盖开始冒出滚滚白烟。您应该怎么做？",
+                options: [],
+                correctAnswer: "立即将车安全停靠在路边，关闭引擎，所有人下车并撤离到安全距离之外，然后拨打道路救援电话。",
+                explanation: "Emergency steps for overheating engine or engine fire."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您的信箱里收到一封信，声称您赢得了加州乐透彩票（California Lottery）50万美元大奖，但需要您先汇款1000美元手续费来领奖。您应该怎么做？",
+                options: [],
+                correctAnswer: "直接把信扔进垃圾桶。正规彩票中心绝对不会要求中奖者先汇款才能领奖，这是诈骗。",
+                explanation: "Identifying advance-fee scams."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "下午家里突然停电，您家中依赖电力的医疗设备（如制氧机）停止了工作。您应该怎么做？",
+                options: [],
+                correctAnswer: "启用备用氧气瓶或备用电池。如果情况危急，请立即拨打 911 或前往最近医院的急诊室。",
+                explanation: "Response plan for medical equipment failure during power outage."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "早上散步时，一只没栓绳（leash）的陌生大狗一边狂吠一边朝您快速跑来。您应该怎么做？",
+                options: [],
+                correctAnswer: "保持冷静，站立不动。不要奔跑或尖叫，避免与狗直接眼神接触。慢慢向后退。",
+                explanation: "Safety measures when approached by an off-leash aggressive dog."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您的手机收到一条自称来自凯撒医疗（Kaiser Permanente）的短信，称您的账单有异常，要求点击下方链接进行处理。您应该怎么做？",
+                options: [],
+                correctAnswer: "不要点击任何链接。直接登录凯撒医疗的官方个人患者门户或拨打官方客服电话进行核实。",
+                explanation: "Healthcare phishing prevention."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "晚上睡觉前，您在厨房里闻到一股浓烈的煤气（天然气）味。您应该怎么做？",
+                options: [],
+                correctAnswer: "不要开关任何电器，也不要点火。迅速打开窗户，关闭煤气总阀，立即离开屋子到外面安全的地方拨打 911 或煤气公司电话。",
+                explanation: "Gas leak protocol."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您的医生处方上写着这种药每天早上服用一次，但您在晚上不小心又吃了一次。您应该怎么做？",
+                options: [],
+                correctAnswer: "立即给您的医生、药剂师或中毒控制中心（1-800-222-1222）打电话，告知他们您误服的药物和剂量。",
+                explanation: "Standard response to accidental double dose of prescription drug."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "湾区下午突然发生强烈地震，房屋开始剧烈摇晃，而您正在屋里。您应该怎么做？",
+                options: [],
+                correctAnswer: "趴下、掩护并抓住（Drop, Cover, and Hold On）。躲在坚固的桌子或书桌下，双手抓住桌腿，直到摇晃停止。",
+                explanation: "Earthquake drill safety protocol."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "在下楼梯时您不小心滑倒，头部撞到了墙上，伤口有轻微出血且您感到头晕。您应该怎么做？",
+                options: [],
+                correctAnswer: "不要忽视头部外伤。用干净的布按压伤口止血，并立即打电话寻求家人帮助或拨打 911。",
+                explanation: "Immediate protocol for head trauma."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "夏天圣何塞气温高达100华氏度（100°F）以上，您家里的空调突然坏了，您感到满头大汗、身体虚弱。您应该怎么做？",
+                options: [],
+                correctAnswer: "多喝水保持水分。用冷水洗澡。如果可能，前往附近有空调的公共场所（如图书馆或避暑中心）。",
+                explanation: "Mitigating heatstroke risks without air conditioning."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "有人打电话自称来自社会安全局（SSA），声称您的社会安全号（SSN）已被冻结，需要您提供SSN进行解冻。您应该怎么做？",
+                options: [],
+                correctAnswer: "立即挂断电话。政府机构绝不会主动打电话索要此类敏感个人信息。",
+                explanation: "Social security scam response."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "暴风雨夜，路边的电线杆和电线倒塌，正好压在了您的车顶上。您应该怎么做？",
+                options: [],
+                correctAnswer: "留在车内，车身可以保护您免受电击。摇下车窗打电话求助，通知电力公司和 911。切勿擅自下车。",
+                explanation: "Staying in vehicle during downed power lines scenario."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "吃东西时突然喉咙被食物卡住，无法呼吸也无法说话。您应该怎么做？",
+                options: [],
+                correctAnswer: "双手掐住脖子示意他人您被卡住，寻求他人为您实施腹部冲击法（Heimlich海姆立克急救法）。如果独自一人，可将腹部压在椅背上用力冲击。",
+                explanation: "Choking emergency rescue steps."
             )
+        
         ]
     )
 
@@ -535,7 +644,92 @@ struct ChineseFunctionalSkillsExerciseData {
                 options: ["将苹果、香蕉和橙子剥皮或洗净", "将所有水果切成一口大小的块状", "将水果块装入大碗中", "挤入少许沙拉酱或酸奶", "用勺子轻轻拌匀即可"],
                 correctAnswer: "将苹果、香蕉和橙子剥皮或洗净 | 将所有水果切成一口大小的块状 | 将水果块装入大碗中 | 挤入少许沙拉酱或酸奶 | 用勺子轻轻拌匀即可",
                 explanation: "Fruit salad preparation."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将小梅在加州制作传统热奶茶（Chai）的步骤按正确顺序排列：",
+                options: ["用滤网将茶汤滤入杯中，趁热饮用。 | 将水烧开，加入磨碎的生姜和豆蔻。 | 加入牛奶，让奶茶再次沸腾一次。 | 放入红茶叶，用小火煮2-3分钟。"],
+                correctAnswer: "将水烧开，加入磨碎的生姜 and 豆蔻。 | 放入红茶叶，用小火煮2-3分钟。 | 加入牛奶，让奶茶再次沸腾一次。 | 用滤网将茶汤滤入杯中，趁热饮用。",
+                explanation: "Step by step spiced tea brewing logic."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将伟强煮巴马香米（Basmati Rice）的步骤按正确顺序排列：",
+                options: ["将香米在冷水中浸泡20分钟。 | 用叉子轻轻搅拌米饭，让多余的蒸汽散发出来。 | 用清水轻轻淘洗香米2-3次。 | 锅中加水烧开，放入香米，盖上锅盖用小火焖煮12分钟。"],
+                correctAnswer: "用清水轻轻淘洗香米2-3次。 | 将香米在冷水中浸泡20分钟。 | 锅中加水烧开，放入香米，盖上锅盖用小火焖煮12分钟。 | 用叉子轻轻搅拌米饭，让多余的蒸汽散发出来。",
+                explanation: "Washing, soaking, cooking, and fluffing rice."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作印度黄豆羹（Dal Tadka）的步骤按正确顺序排列：",
+                options: ["将煮好的黄豆中倒入做好的香辣油，并撒上香菜碎。 | 将黄豆放入压力锅中，加入水、姜黄粉和盐，压3声汽笛。 | 在煎锅中加热酥油（Ghee），炒香孜然、大蒜、洋葱和西红柿。 | 将黄豆仔细清洗干净。"],
+                correctAnswer: "将黄豆仔细清洗干净。 | 将黄豆放入压力锅中，加入水、姜黄粉和盐，压3声汽笛。 | 在煎锅中加热酥油（Ghee），炒香孜然、大蒜、洋葱和西红柿。 | 将煮好的黄豆中倒入做好的香辣油，并撒上香菜碎。",
+                explanation: "Dal prep, boiling, tadka seasoning, and combining."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作炒土豆花菜（Aloo Gobi）的步骤按正确顺序排列：",
+                options: ["将土豆和花花菜清洗干净并切成均匀的小块。 | 锅中热油，放入孜然，然后将土豆和花菜连同调料一起翻炒。 | 盖上锅盖，用小火焖煮至蔬菜变软。 | 出锅前撒上印度葛拉姆马萨拉粉和新鲜香菜。"],
+                correctAnswer: "将土豆和花花菜清洗干净并切成均匀的小块。 | 锅中热油，放入孜然，然后将土豆和花菜连同调料一起翻炒。 | 盖上锅盖，用小火焖煮至蔬菜变软。 | 出锅前撒上印度葛拉姆马萨拉粉和新鲜香菜。",
+                explanation: "Sautéing, steaming, and finishing vegetables."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作手工烙饼（Roti/Chapati）的步骤按正确顺序排列：",
+                options: ["加热平底锅，将擀好的面饼两面各煎至微熟。 | 在面粉中加水揉成面团，静置15分钟。 | 取一小块面团揉圆，用擀面杖擀成薄圆饼。 | 将煎过的面饼直接放在火上烤至膨胀，抹上酥油。"],
+                correctAnswer: "在面粉中加水揉成面团，静置15分钟。 | 取一小块面团揉圆，用擀面杖擀成薄圆饼。 | 加热平底锅，将擀好的面饼两面各煎至微熟。 | 将煎过的面饼直接放在火上烤至膨胀，抹上酥油。",
+                explanation: "Kneading, rolling, dry griddle frying, and puffing over fire."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作甜粗麦糊（Suji Halwa）的步骤按正确顺序排列：",
+                options: ["向粗麦中缓缓倒入白糖和热水混合的糖水。 | 在锅中加热酥油，将粗麦炒至金黄色并散发香气。 | 持续搅拌麦糊，直到其变得浓稠并不再粘锅。 | 撒上切碎的坚果和豆蔻粉，装盘趁热食用。"],
+                correctAnswer: "在锅中加热酥油，将粗麦炒至金黄色并散发香气。 | 向粗麦中缓缓倒入白糖和热水混合的糖水。 | 持续搅拌麦糊，直到其变得浓稠并不再粘锅。 | 撒上切碎的坚果和豆蔻粉，装盘趁热食用。",
+                explanation: "Browning wheat grains, boiling with sweet liquid, thickening, and serving."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作印度大米牛奶布丁（Kheer）的步骤按正确顺序排列：",
+                options: ["在牛奶中放入泡好的巴马香米，用小火慢熬。 | 将全脂牛奶倒入厚底大锅中烧开。 | 煮至米粒软烂、牛奶蒸发减少一半，然后加入白糖。 | 撒上豆蔻粉和切碎的开心果、杏仁，冷藏后食用。"],
+                correctAnswer: "将全脂牛奶倒入厚底大锅中烧开。 | 在牛奶中放入泡好的巴马香米，用小火慢熬。 | 煮至米粒软烂、牛奶蒸发减少一半，然后加入白糖。 | 撒上豆蔻粉和切碎的开心果、杏仁，冷藏后食用。",
+                explanation: "Milk heating, rice adding, cooking to reduce, sweetening, and garnishing."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作蔬菜酸奶（Raita）的步骤按正确顺序排列：",
+                options: ["将原味酸奶在一只大碗中搅拌至柔滑状态。 | 加入黄瓜丝、少许盐和烤孜然粉。 | 充分搅拌均匀，放入冰箱冷藏。 | 饮用前在表面点缀几片新鲜薄荷叶。"],
+                correctAnswer: "将原味酸奶在一只大碗中搅拌至柔滑状态。 | 加入黄瓜丝、少许盐和烤孜然粉。 | 充分搅拌均匀，放入冰箱冷藏。 | 饮用前在表面点缀几片新鲜薄荷叶。",
+                explanation: "Plain yogurt prep, veggie infusion, cooling, and serving."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作柠檬苏打水（Shikanji）的步骤按正确顺序排列：",
+                options: ["在杯中倒入冷水，挤入新鲜柠檬汁。 | 加入白糖、黑盐（Black Salt）和烤孜然粉。 | 搅拌均匀直到白糖完全溶解。 | 加入冰块，用薄荷叶装饰。"],
+                correctAnswer: "在杯中倒入冷水，挤入新鲜柠檬汁。 | 加入白糖、黑盐（Black Salt）和烤孜然粉。 | 搅拌均匀直到白糖完全溶解。 | 加入冰块，用薄荷叶装饰。",
+                explanation: "Drink prep logic: mix ingredients, stir, add ice."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作燕麦粥（Oats Porridge）的步骤按正确顺序排列：",
+                options: ["在小锅中加热牛奶，然后倒入生燕麦片。 | 用小火煮5-7分钟，直到燕麦完全变软。 | 关火关炉子，调入蜂蜜或白糖。 | 撒上苹果丁和烤扁桃体碎，装碗食用。"],
+                correctAnswer: "在小锅中加热牛奶，然后倒入生燕麦片。 | 用小火煮5-7分钟，直到燕麦完全变软。 | 关火关炉子，调入蜂蜜或白糖。 | 撒上苹果丁和烤扁桃体碎，装碗食用。",
+                explanation: "Porridge base prep, boiling, sweetening, and topping."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作印度炒扁米（Poha）的步骤按正确顺序排列：",
+                options: ["将扁米用水冲洗并沥干，放在一旁备用。 | 在炒锅中热油，爆香芥末籽、咖喱叶、花生米和洋葱。 | 倒入扁米、姜黄粉和盐，盖上锅盖焖2分钟。 | 挤入柠檬汁，撒上香菜叶，装盘即可。"],
+                correctAnswer: "将扁米用水冲洗并沥干，放在一旁备用。 | 在炒锅中热油，爆香芥末籽、咖喱叶、花生米和洋葱。 | 倒入扁米、姜黄粉和盐，盖上锅盖焖2分钟。 | 挤入柠檬汁，撒上香菜叶，装盘即可。",
+                explanation: "Traditional Poha recipe progression."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "请将制作水煮蛋（Boiled Egg）的步骤按正确顺序排列：",
+                options: ["将鸡蛋放入冷水锅中，水面需高出鸡蛋1英寸。 | 水烧开后关火，盖上锅盖让鸡蛋在热水中浸泡10分钟。 | 将鸡蛋捞出立即放入冰水中冷却2分钟。 | 剥去蛋壳，将鸡蛋对半切开。"],
+                correctAnswer: "将鸡蛋放入冷水锅中，水面需高出鸡蛋1英寸。 | 水烧开后关火，盖上锅盖让鸡蛋在热水中浸泡10分钟。 | 将鸡蛋捞出立即放入冰水中冷却2分钟. | 剥去蛋壳，将鸡蛋对半切开。",
+                explanation: "Boiling eggs safely using the boil-and-cover method."
             )
+        
         ]
     )
 
@@ -687,7 +881,113 @@ struct ChineseFunctionalSkillsExerciseData {
                 options: [],
                 correctAnswer: "准备工具：电话、药瓶。步骤：拨打药瓶标签上的药房电话。提供你的姓名、出生日期以及药瓶上的处方号（Rx Number）。确认你需要重新配药并询问何时可以取药。",
                 explanation: "Requesting medication refills over the phone."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "明华找不到他的车钥匙了，但他必须在10分钟内出门去上班。他该怎么办？",
+                options: [],
+                correctAnswer: "保持冷静，系统地检查经常放钥匙的地方（如餐桌、玄关柜、包包或昨天的衣服口袋）。如果找不到，先用备用钥匙，下班后再找。",
+                explanation: "Systematic lost keys resolution."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟强觉得他新车保险的保费太贵了。他可以怎么做来降低保费？",
+                options: [],
+                correctAnswer: "他可以向不同的保险公司咨询报价、提高自付额（deductible）或向当前的保险公司询问安全驾驶员折扣。",
+                explanation: "Ways to reduce auto insurance costs."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "小梅想用谷歌地图导航去朋友家，但她手机的移动流量已经用完了。她该怎么办？",
+                options: [],
+                correctAnswer: "她可以在家利用无线网络（Wi-Fi）提前下载好离线地图，或者连上附近的公共无线网，或者打电话让朋友口头指路。",
+                explanation: "Navigating without cellular data."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "杰克需要帮外婆订购降压药的续药（refill），但药房柜台马上就要关门了。他该怎么办？",
+                options: [],
+                correctAnswer: "他可以使用药房的自动电话系统下单，或者通过药房的官方网页或手机应用在线订购续药，也可以等第二天早上再打电话。",
+                explanation: "Options for ordering refills after pharmacy counter hours."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "家里后院的浇水软管破裂漏水，这会导致水费上升。您应该怎么做？",
+                options: [],
+                correctAnswer: "先关闭通往后院的主水阀（shut-off valve）以阻止漏水，然后再去购买新的软管更换或请管道工维修。",
+                explanation: "Stopping water waste at the source."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "俊杰收到一封自称来自大通银行（Chase）的邮件，称他的账户发现可疑活动，需要重置密码。俊杰该怎么办？",
+                options: [],
+                correctAnswer: "不要点击邮件中的任何链接。他应该直接在浏览器输入银行网址登录，或者打开手机网银APP检查安全消息。",
+                explanation: "Protecting online banking credentials from phishing links."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您有一张很久不用的旧信用卡，为了安全起见，您想把它注销。您应该怎么做？",
+                options: [],
+                correctAnswer: "拨打卡片背面的银行客服电话，正式申请注销该账户。随后用剪刀将卡片剪碎销毁。",
+                explanation: "Correct process for canceling and disposing of a credit card."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "丽华需要去学校参加孩子的家长会，但她的汽车今天突然发动不起来了。她该怎么办？",
+                options: [],
+                correctAnswer: "她可以使用打车软件（如Uber或Lyft）叫车，或者打电话给邻居或朋友搭便车，也可以致电学校老师说明情况改期。",
+                explanation: "Transit contingency planning."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您的邮箱里收到了一封写着陌生人名字的信件，但是地址确实是您家。您应该怎么做？",
+                options: [],
+                correctAnswer: "不要拆开信件。在信封上写上“Return to Sender（退回寄件人）”或“Not at this Address（查无此人）”，然后放回邮筒。",
+                explanation: "Correct handling of misdelivered mail."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "晓东公寓的客厅天花板突然开始往下滴水，沙发已经被淋湿了。他该怎么办？",
+                options: [],
+                correctAnswer: "立即把沙发推开，在漏水处放一个水桶接水，然后迅速联系楼上住户或公寓的物业管理处（maintenance）进行维修。",
+                explanation: "Managing an active apartment water leak."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "淑珍的膝盖很痛，需要去诊所看医生，但她今天无法自己开车。她该怎么办？",
+                options: [],
+                correctAnswer: "她可以联系家人或朋友开车送她，或者预约专门的医疗护送接送服务，也可以使用打车软件。",
+                explanation: "Patient transportation workarounds."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "建国发现他的电费账单上多了一笔不寻常的额外收费，金额很高。他该怎么办？",
+                options: [],
+                correctAnswer: "拨打电力公司账单上的客服电话，向客服人员详细询问这笔具体费用的明细和收费原因。",
+                explanation: "Resolution of bill discrepancies."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "佳莹要参加婚礼，她把礼服送去干洗，但当她去取衣服时发现干洗店今天休息。她该怎么办？",
+                options: [],
+                correctAnswer: "她应该回到家里，从衣柜中挑选另一套合适且体面的正式服装穿去参加婚礼。",
+                explanation: "Sourcing backup attire."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "您家厨房水槽的排水管完全被堵住了，积水无法排下去。您应该怎么做？",
+                options: [],
+                correctAnswer: "停止使用水槽。使用管道皮搋子（plunger）尝试疏通，或者倒入小苏打和醋后用热水冲洗。如果不行则联系管道工。",
+                explanation: "Unclogging a kitchen sink drain."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟民需要更新他的护照，但他不知道需要哪些申请材料。他该怎么办？",
+                options: [],
+                correctAnswer: "他应该登录政府的官方护照申请网站（如travel.state.gov）查询护照更新所需的材料清单和申请步骤。",
+                explanation: "Checking government requirements online."
             )
+        
         ]
     )
 
@@ -893,7 +1193,120 @@ struct ChineseFunctionalSkillsExerciseData {
                 options: ["下午4:30", "下午4:35", "下午4:40", "下午4:45"],
                 correctAnswer: "下午4:35",
                 explanation: "4:15 + 20 minutes = 4:35 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "今天是星期三。如果丽华预约了下周一去看牙医，那么从今天算起，还有几天是她的预约日？",
+                options: ["5天", "6天", "4天", "7天"],
+                correctAnswer: "5天",
+                explanation: "Counting from Wednesday: Thursday (1), Friday (2), Saturday (3), Sunday (4), Monday (5)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟强的火车预计在下午2:15出发。如果他必须提前45分钟到达车站，他最晚要在下午几点到达？",
+                options: ["下午1:30", "下午1:45", "下午1:15", "下午2:00"],
+                correctAnswer: "下午1:30",
+                explanation: "45 minutes before 2:15 PM is 1:30 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "如果一年有12个月，那么半个自然年（Half a Year）一共有几个月？",
+                options: ["6个月", "5个月", "8个月", "4个月"],
+                correctAnswer: "6个月",
+                explanation: "12 divided by 2 is 6."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "加州在实行夏令时（DST）结束时，需要将时钟往回拨慢1小时。如果当时是凌晨2:00，调整后时钟应该显示几点？",
+                options: ["凌晨1:00", "凌晨3:00", "凌晨12:00", "早上4:00"],
+                correctAnswer: "凌晨1:00",
+                explanation: "Set back 1 hour from 2:00 AM becomes 1:00 AM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "淑珍每年的12月都会去探望儿子。如果现在是8月份，距离她出发去探望儿子还有几个月？",
+                options: ["4个月", "5个月", "3个月", "6个月"],
+                correctAnswer: "4个月",
+                explanation: "August to December is 4 months (Sept, Oct, Nov, Dec)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "一个重要会议原定于上午10:30开始，但因为设备故障推迟了15分钟才开始。会议实际在什么时候开始的？",
+                options: ["上午10:45", "上午11:00", "上午10:15", "上午10:30"],
+                correctAnswer: "上午10:45",
+                explanation: "10:30 AM + 15 minutes = 10:45 AM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "如果今天是6月28日，那么上周的今天是几月几日？",
+                options: ["6月21日", "6月20日", "6月22日", "6月23日"],
+                correctAnswer: "6月21日",
+                explanation: "28 minus 7 is 21."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "小陈在晚上7:00服用了他的第一剂药。他必须在整整12小时后服用第二剂药。他应该在什么时候服药？",
+                options: ["第二天早上7:00", "第二天中午12:00", "第二天下午2:00", "当天半夜12:00"],
+                correctAnswer: "第二天早上7:00",
+                explanation: "12 hours after 7:00 PM is 7:00 AM the next day."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "小梅的机票行程单上写着起飞时间是18:30。如果转换成普通12小时制时间，这是下午几点？",
+                options: ["下午6:30", "早上6:30", "晚上8:30", "凌晨12:30"],
+                correctAnswer: "下午6:30",
+                explanation: "18:30 in 12-hour format is 6:30 PM (18 - 12 = 6)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "棒球比赛一共打了3个小时，在下午5:30结束。比赛是在下午几点开始的？",
+                options: ["下午2:30", "下午3:30", "下午1:30", "下午4:30"],
+                correctAnswer: "下午2:30",
+                explanation: "5:30 PM minus 3 hours is 2:30 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟民每3个月需要去看一次眼科医生。如果他上一次看眼科是在1月份，下一次预约是在几月份？",
+                options: ["4月份", "3月份", "5月份", "2月份"],
+                correctAnswer: "4月份",
+                explanation: "3 months after January is April."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "如果今天是星期五，而昨天是伟强的生日，那么伟强的生日是星期几？",
+                options: ["星期四", "星期三", "星期六", "星期二"],
+                correctAnswer: "星期四",
+                explanation: "Yesterday relative to Friday is Thursday."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "淑珍预约了9月15日上午9:00去诊所洗牙。今天是9月1日。距离洗牙还有几天？",
+                options: ["14天", "15天", "13天", "16天"],
+                correctAnswer: "14天",
+                explanation: "15 - 1 = 14 days."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "烤箱烤面包需要40分钟。如果佳莹在下午1:15把面包放进烤箱，她应该在下午几点拿出来？",
+                options: ["下午1:55", "下午2:00", "下午1:45", "下午1:50"],
+                correctAnswer: "下午1:55",
+                explanation: "1:15 PM + 40 minutes = 1:55 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "如果明年是闰年（Leap Year），那么明年二月份一共有多少天？",
+                options: ["29天", "28天", "30天", "31天"],
+                correctAnswer: "29天",
+                explanation: "February in leap years has 29 days."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "建国在晚上10:15入睡，第二天早上6:15醒来。他一共睡了几个小时？",
+                options: ["8个小时", "7个小时", "9个小时", "6个小时"],
+                correctAnswer: "8个小时",
+                explanation: "10:15 PM to 6:15 AM is exactly 8 hours."
             )
+        
         ]
     )
 
@@ -1218,7 +1631,127 @@ struct ChineseFunctionalSkillsExerciseData {
                 options: ["$4.00", "$5.00", "$6.00", "$8.00"],
                 correctAnswer: "$6.00",
                 explanation: "3 * $2 = $6."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟强的PG&E电费账单总额为120美元。如果他在截止日期前付款，可以获得5%的折扣。折扣后他需要支付多少美元？",
+                options: ["$114", "$115", "$110", "$108"],
+                correctAnswer: "$114",
+                explanation: "5% of 120 is 6. 120 - 6 = $114."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "小梅在圣何塞的一家印度餐馆吃饭，消费了40美元。她想给15%的小费。她应该给多少小费？",
+                options: ["$6", "$5", "$8", "$4"],
+                correctAnswer: "$6",
+                explanation: "15% of 40 is 6."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "仔细阅读以下水费账单详情：",
+                options: ["$40", "$50", "$35", "$45"],
+                correctAnswer: "$40",
+                explanation: "Usage = 5300 - 4500 = 800 gallons. Cost = 800 * 0.05 = $40."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "俊杰的健身房会员费是每月45美元。他想一次性付清全年（12个月）的费用。他需要付多少钱？",
+                options: ["$540", "$480", "$600", "$500"],
+                correctAnswer: "$540",
+                explanation: "45 * 12 = $540."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "一袋价值15美元的巴马香米正在进行20%折扣的促销。折扣后这袋米的价格是多少？",
+                options: ["$12", "$13", "$11", "$10"],
+                correctAnswer: "$12",
+                explanation: "20% of 15 is 3. 15 - 3 = $12."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "查看以下电视账单明细：",
+                options: ["$80", "$75", "$85", "$70"],
+                correctAnswer: "$80",
+                explanation: "65 + 10 + 5 = $80."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "佳莹买了一件120美元的连衣裙。加州的销售税（Sales Tax）为8.25%。这件衣服的预计税费是多少（四舍五入到个位数）？",
+                options: ["$10", "$8", "$12", "$6"],
+                correctAnswer: "$10",
+                explanation: "120 * 0.0825 = 9.90, which rounds to $10."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟民的宽带账单上个月欠费25美元，本月新消费55美元。他本月共付了60美元。现在他的账户余额还欠多少钱？",
+                options: ["$20", "$15", "$25", "$30"],
+                correctAnswer: "$20",
+                explanation: "Total due = 25 + 55 = 80. Remaining due after $60 payment = 80 - 60 = $20."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "超市里一袋价值6美元的苹果正在参加“买一送一”（BOGO）的活动。如果小陈想要买4袋苹果，他一共需要支付多少美元？",
+                options: ["$12", "$24", "$18", "$16"],
+                correctAnswer: "$12",
+                explanation: "4 bags equals 2 purchases under BOGO. 2 * 6 = $12."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "查看以下燃气账单：",
+                options: ["$55", "$45", "$50", "$60"],
+                correctAnswer: "$55",
+                explanation: "Gas charge = 30 * 1.50 = 45. Total = 45 + 10 = $55."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "丽华在服装店购买了一件50美元的外套。商家给她提供了10%的“长者折扣”。她实际付了多少钱？",
+                options: ["$45", "$40", "$48", "$42"],
+                correctAnswer: "$45",
+                explanation: "10% of 50 is 5. 50 - 5 = $45."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "建国去车行换一次汽车机油（Oil Change）花了60美元。如果他每4个月换一次机油，一年（12个月）换机油的总花费是多少？",
+                options: ["$180", "$240", "$120", "$160"],
+                correctAnswer: "$180",
+                explanation: "3 times a year. 3 * 60 = $180."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下季度垃圾清理账单：",
+                options: ["$105", "$95", "$100", "$110"],
+                correctAnswer: "$105",
+                explanation: "90 + 15 = $105."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "丽华购买了一些处方药，总价为25美元。根据她的医疗保险政策，她个人只需支付20%的自付额（Co-pay）。丽华实际上支付了多少美元？",
+                options: ["$5", "$10", "$8", "$15"],
+                correctAnswer: "$5",
+                explanation: "Co-pay = 25 * 0.20 = $5."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "超市里面一袋5公斤装的面粉售价为8美元。如果您一次性购买15公斤该面粉，总价是多少？",
+                options: ["$24", "$16", "$32", "$20"],
+                correctAnswer: "$24",
+                explanation: "15kg is 3 bags. 3 * 8 = $24."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "伟民拥有一张面值20美元的星巴克礼品卡。他买了三杯单价6美元的红茶拿铁。礼品卡上还剩多少美元余额？",
+                options: ["$2", "$4", "$6", "$0"],
+                correctAnswer: "$2",
+                explanation: "Tea costs 3 * 6 = 18. Balance = 20 - 18 = $2."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "一个包含4条线路的手机家庭套餐（Family Plan）月费为80美元。平均每条线路的月费是多少？",
+                options: ["$20", "$15", "$25", "$30"],
+                correctAnswer: "$20",
+                explanation: "80 / 4 = $20."
             )
+        
         ]
     )
 
@@ -1289,4 +1822,266 @@ struct ChineseFunctionalSkillsExerciseData {
             )
         ]
     )
+    // MARK: - Reading Menus
+    private static let readingMenus = Exercise(
+        id: UUID(),
+        title: "菜单阅读",
+        instructions: "阅读菜单并选择正确的答案。",
+        section: .functionalSkills,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读“中华小馆”（Chinatown Eatery）的午餐菜单：",
+                options: ["$18.00", "$16.00", "$20.00", "$14.00"],
+                correctAnswer: "$18.00",
+                explanation: "14.00 + 4.00 = $18.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据该菜单，如果小梅只想点一份虾饺烧卖组合和一份扬州炒饭，她一共需要花多少钱？",
+                options: ["$17.00", "$15.00", "$19.00", "$12.00"],
+                correctAnswer: "$17.00",
+                explanation: "5.00 + 12.00 = $17.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "查看“老四川”（Sichuan House）的菜单：",
+                options: ["$19.00", "$16.50", "$23.50", "$15.50"],
+                correctAnswer: "$19.00",
+                explanation: "12.00 (Congee) + 2 * 3.50 (Pancake) = 12.00 + 7.00 = $19.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据以上两个菜单，哪一道主菜（Main Dish）的价格最贵？",
+                options: ["水煮鱼", "麻婆豆腐", "扬州炒饭", "皮蛋瘦肉粥"],
+                correctAnswer: "水煮鱼",
+                explanation: "水煮鱼（$15.00）的价格高于麻婆豆腐（$14.00）、扬州炒饭（$12.00）和皮蛋瘦肉粥（$12.00）。"
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“广式点心皇”（Dim Sum King）菜单：",
+                options: ["$7.00", "$6.00", "$8.00", "$5.00"],
+                correctAnswer: "$7.00",
+                explanation: "Cost = 10.00 + 3.00 = 13.00. Change = 20 - 13 = $7.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据上面的菜单，最便宜的单品是什么？",
+                options: ["人参乌龙茶", "叉烧包", "干炒牛河", "招牌虾饺"],
+                correctAnswer: "人参乌龙茶",
+                explanation: "Tea costs $3.00, which is the lowest."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“喜茶点”（Joy Bakery）菜单：",
+                options: ["$17.00", "$15.00", "$16.00", "$14.00"],
+                correctAnswer: "$17.00",
+                explanation: "2 * 4.50 (Slush) + 2 * 4.00 (Bun) = 9.00 + 8.00 = $17.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "喜茶点菜单中哪种面包（Bun）的价格最贵？",
+                options: ["咸蛋黄肉松包", "菠萝包", "蛋挞", "红豆冰沙"],
+                correctAnswer: "咸蛋黄肉松包",
+                explanation: "咸蛋黄肉松包售价 $5.00，高于菠萝包（$4.00）。"
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“面面聚到”（Noodle House）菜单：",
+                options: ["$19.00", "$18.00", "$20.00", "$17.00"],
+                correctAnswer: "$19.00",
+                explanation: "16.00 (Noodle) + 3.00 (Cucumber) = $19.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "面面聚到菜单中甜点的价格是多少？",
+                options: ["$4.00", "$3.00", "$15.00", "$16.00"],
+                correctAnswer: "$4.00",
+                explanation: "The dessert is Sesame Balls, priced at $4.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“江南味道”（Jiangnan Flavors）菜单：",
+                options: ["$9.00", "$8.00", "$10.00", "$11.00"],
+                correctAnswer: "$9.00",
+                explanation: "6.00 + 3.00 = $9.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据“江南味道”的菜单，一份葱油拌面和一份糯米烧麦的总价是多少？",
+                options: ["$16.00", "$15.00", "$17.00", "$18.00"],
+                correctAnswer: "$16.00",
+                explanation: "9.00 (Noodle) + 7.00 (Shumai) = $16.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“家乡早点”（Hometown Breakfast）菜单：",
+                options: ["$11.50", "$9.50", "$10.50", "$12.00"],
+                correctAnswer: "$11.50",
+                explanation: "5.00 (Rice ball) + 3.50 (Soy milk) + 3.00 (You tiao) = $11.50."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "家乡早点菜单中，甜豆浆和咸豆浆哪个更贵？",
+                options: ["咸豆浆", "甜豆浆", "价格一样", "免费"],
+                correctAnswer: "咸豆浆",
+                explanation: "咸豆浆售价 $3.50，甜豆浆售价 $3.00。"
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“泰式面馆”（Thai Noodle）菜单：",
+                options: ["$28.00", "$25.00", "$30.00", "$22.00"],
+                correctAnswer: "$28.00",
+                explanation: "10.00 (Pad Thai) + 12.00 (Tom Yum) + 2 * 3.00 (Tea) = 22.00 + 6.00 = $28.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "泰式面馆菜单中，招牌甜点的价格是多少？",
+                options: ["$5.00", "$3.00", "$10.00", "$12.00"],
+                correctAnswer: "$5.00",
+                explanation: "The dessert is Mango Sticky Rice, priced at $5.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "“西关美食”（Xiguan Delicacies）菜单：",
+                options: ["$17.00", "$15.00", "$16.00", "$18.00"],
+                correctAnswer: "$17.00",
+                explanation: "8.00 + 7.00 + 2.00 = $17.00."
+            )
+        ]
+    )
+
+    // MARK: - Reading Prescriptions
+    private static let readingPrescriptions = Exercise(
+        id: UUID(),
+        title: "药瓶标签阅读",
+        instructions: "阅读药瓶标签上的指示并选择正确的答案。",
+        section: .functionalSkills,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "仔细阅读以下处方药标签：",
+                options: ["每天吃两次，吃东西时服用", "每天吃一次，空腹服用", "仅在睡前吃一次", "每四小时吃一次，不用水"],
+                correctAnswer: "每天吃两次，吃东西时服用",
+                explanation: "Directions say \"Take twice daily with meals\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据该标签，建国还可以去药房续药（Refill）多少次？",
+                options: ["3次", "2次", "4次", "0次"],
+                correctAnswer: "3次",
+                explanation: "Refills listed is 3."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下药物说明：",
+                options: ["每天睡觉前", "早上刚起床时", "吃午饭的时候", "刚运动完以后"],
+                correctAnswer: "每天睡觉前",
+                explanation: "\"Take 1 tablet daily at bedtime\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "服用此药时，不建议饮用哪种果汁？",
+                options: ["葡萄柚汁（西柚汁）", "牛奶", "橙汁", "温水"],
+                correctAnswer: "葡萄柚汁（西柚汁）",
+                explanation: "Warning labels warn against taking the drug with grapefruit juice."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "查看以下处方详情：",
+                options: ["高血压", "糖尿病", "关节炎", "哮喘"],
+                correctAnswer: "高血压",
+                explanation: "Lisinopril treats high blood pressure."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "根据说明，患者每天需要服用几片药？",
+                options: ["1片", "2片", "半片", "根据需要服用"],
+                correctAnswer: "1片",
+                explanation: "\"Take 1 tablet daily\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下眼药水的使用说明：",
+                options: ["每次1滴，每天两次", "每次2滴，每天三次", "每天睡觉前滴4滴", "每小时滴1滴"],
+                correctAnswer: "每次1滴，每天两次",
+                explanation: "\"Instill 1 drop in affected eye twice daily\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "使用该滴眼液时，应该注意什么卫生问题？",
+                options: ["手指不要接触滴管前端", "把药瓶放在热水里加热", "每次使用后不要盖盖子", "放在阳光直射处保存"],
+                correctAnswer: "手指不要接触滴管前端",
+                explanation: "\"Do not touch the tip of the dropper\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下止痛药标签说明：",
+                options: ["4片", "6片", "3片", "8片"],
+                correctAnswer: "4片",
+                explanation: "Do not exceed 4 tablets in 24 hours."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "两次服药之间，最少需要间隔多少小时？",
+                options: ["6小时", "4小时", "12小时", "8小时"],
+                correctAnswer: "6小时",
+                explanation: "\"every 6 hours as needed\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下止咳糖浆说明：",
+                options: ["开车或操作重型机器", "睡觉", "喝热水", "看书"],
+                correctAnswer: "开车或操作重型机器",
+                explanation: "Warning states \"Do not operate machinery or drive\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "针对成年人，每次推荐服用的剂量是多少？",
+                options: ["10毫升", "5毫升", "15毫升", "20毫升"],
+                correctAnswer: "10毫升",
+                explanation: "Adult dosage is 10ml."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下消炎抗菌素处方：",
+                options: ["7天", "5天", "10天", "14天"],
+                correctAnswer: "7天",
+                explanation: "Directions say \"daily for 7 days\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "服用抗菌素类药物时，最重要的一条原则是什么？",
+                options: ["一定要坚持吃完整个疗程", "一旦感觉病好了就立刻停药", "只能用热牛奶送服", "不能用凉开水送服"],
+                correctAnswer: "一定要坚持吃完整个疗程",
+                explanation: "Finishing the full course is critical for antibiotic efficacy."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读以下胰岛素注射笔的说明：",
+                options: ["餐前15分钟", "餐前30分钟", "吃完饭立刻注射", "餐前1小时"],
+                correctAnswer: "餐前15分钟",
+                explanation: "Inject 15 minutes before meals."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "说明中推荐的注射部位是人体的哪里？",
+                options: ["腹部", "手臂", "大腿", "背部"],
+                correctAnswer: "腹部",
+                explanation: "Inject \"into the abdomen (腹部)\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "阅读抗过敏药说明：",
+                options: ["早晨空腹", "中午饭后", "晚上睡前不喝水", "下午喝茶时"],
+                correctAnswer: "早晨空腹",
+                explanation: "\"Take 1 tablet daily in the morning on an empty stomach\"."
+            )
+        ]
+    )
+
 }

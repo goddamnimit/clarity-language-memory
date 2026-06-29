@@ -12,7 +12,10 @@ struct HindiFunctionalSkillsExerciseData {
         temporalAwareness,
         groceryShopping,
         timeAndMath,
-        functionalWriting
+        functionalWriting,
+        readingMenus,
+        readingPrescriptions
+    
     ]
 
     // MARK: - सुरक्षा के उपाय
@@ -233,7 +236,113 @@ struct HindiFunctionalSkillsExerciseData {
                 options: [],
                 correctAnswer: "शांत रहें और ज्यादा हलचल न करें ताकि जहर न फैले। काटे गए स्थान को दिल के स्तर से नीचे रखें। तुरंत 911 पर कॉल करें या किसी को अस्पताल ले जाने के लिए कहें।",
                 explanation: "Snake/insect bite safety."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके घर में रखे स्मोक डिटेक्टर (धुएँ का अलार्म) से लगातार तेज बीप की आवाज आ रही है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "तुरंत अलार्म की बैटरी बदलें। यदि घर में धुआँ या आग दिखाई दे, तो तुरंत बाहर निकलें और 911 पर कॉल करें।",
+                explanation: "Smoke detector beeping indicates a low battery or smoke detection. The user should replace the battery or evacuate and call 911 if there is fire."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपको पीजीएंडई (PG&E) से होने का दावा करने वाले एक अज्ञात नंबर से फोन आता है, जो कहता है कि यदि आपने अगले 30 मिनट में भुगतान नहीं किया तो आपका बिजली कनेक्शन काट दिया जाएगा। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "तुरंत फोन काट दें। अपनी बिजली कंपनी के आधिकारिक नंबर पर कॉल करके खाते की स्थिति की जांच करें। कभी भी फोन पर तुरंत गिफ्ट कार्ड या प्रीपेड कार्ड से भुगतान न करें।",
+                explanation: "Threatening utility scams are common. Hang up and call the official customer service number to verify."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आप गाड़ी चला रहे हैं और अचानक आपकी कार के बोनट से सफेद धुआं निकलने लगता है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "कार को तुरंत सड़क के किनारे सुरक्षित स्थान पर पार्क करें, इंजन बंद करें, और कार से बाहर निकलकर सुरक्षित दूरी पर खड़े हो जाएं। रोडसाइड असिस्टेंस को कॉल करें।",
+                explanation: "Smoke from the hood indicates engine overheating or fire. Safely pull over, exit the vehicle, and call for help."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके मेलबॉक्स में एक पत्र आया है जिसमें लिखा है कि आपने कैलिफोर्निया लॉटरी में $500,000 जीते हैं, लेकिन पुरस्कार का दावा करने के लिए आपको $1,000 प्रोसेसिंग फीस भेजनी होगी। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "इस पत्र को कचरे में फेंक दें। असली लॉटरी कभी भी पुरस्कार देने के लिए अग्रिम पैसे की मांग नहीं करती है। यह एक धोखाधड़ी है।",
+                explanation: "Advance-fee scams promise lottery winnings. True lotteries do not ask for money to release prizes."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "दोपहर में अचानक बिजली चली जाती है और आपके घर में रखे चिकित्सा उपकरण (जैसे ऑक्सीजन कंसंट्रेटर) ने काम करना बंद कर दिया है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "बैकअप ऑक्सीजन सिलेंडर या बैटरी का उपयोग करें। यदि स्थिति गंभीर है, तो तुरंत 911 पर कॉल करें या निकटतम अस्पताल के आपातकालीन कक्ष में जाएं।",
+                explanation: "Medical device failure due to power outage is an emergency. Use backup power/supplies or call 911."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सुबह सैर करते समय किसी अजनबी का कुत्ता आपकी ओर बिना पट्टे (leash) के तेजी से भौंकते हुए दौड़ता है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "शांत रहें और सीधे खड़े रहें। दौड़ें नहीं और न ही चिल्लाएं। कुत्ते की आँखों में सीधे देखने से बचें। धीरे-धीरे पीछे हटें।",
+                explanation: "Running from a dog can trigger its chase instinct. Stand still, stay calm, and slowly back away."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपको अपने फोन पर कैसर परमानेंट (Kaiser Permanente) से होने का दावा करने वाला एक टेक्स्ट संदेश मिलता है जिसमें लिखा है कि आपके बिल में गड़बड़ी है और इसे ठीक करने के लिए नीचे दिए गए लिंक पर क्लिक करें। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "लिंक पर क्लिक न करें। सीधे कैसर परमानेंट के मरीज पोर्टल पर लॉग इन करें या उनके आधिकारिक नंबर पर कॉल करके पुष्टि करें।",
+                explanation: "Phishing texts impersonate healthcare providers. Avoid links; contact the provider directly."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "रात में सोने से पहले आपको रसोई में गैस (एलपीजी या नेचुरल गैस) जैसी तेज गंध महसूस होती है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "कोई भी बिजली का स्विच या माचिस न जलाएं। घर के खिड़की-दरवाजे खोल दें। गैस का मुख्य वाल्व बंद करें और तुरंत घर से बाहर निकलकर 911 या गैस कंपनी को कॉल करें।",
+                explanation: "Gas leak is highly flammable. Do not toggle electrical switches; evacuate and call emergency services."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपकी डॉक्टर की पर्ची में लिखा है कि आपको दवा दिन में केवल एक बार सुबह लेनी है, लेकिन आप गलती से शाम को भी वही दवा खा लेते हैं। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "अपने डॉक्टर, फार्मासिस्ट या पॉइज़न कंट्रोल (1-800-222-1222) को फोन करें और उन्हें बताएं कि आपने कौन सी दवा और कितनी मात्रा में ली है।",
+                explanation: "Accidental double dosing requires professional medical advice. Call doctor or poison control immediately."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "बे एरिया में दोपहर के समय अचानक भूकंप के तेज झटके महसूस होते हैं और आप घर के अंदर हैं। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "झुकें, ढकें और पकड़े रहें (Drop, Cover, and Hold On)। किसी मजबूत मेज या डेस्क के नीचे शरण लें और झटके रुकने तक वहीं रहें।",
+                explanation: "Standard earthquake safety protocol is drop, cover, and hold on under a sturdy piece of furniture."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सीढ़ियों से उतरते समय अचानक आपका पैर फिसल जाता है और आपके सिर पर चोट लग जाती है, जिससे थोड़ा खून बह रहा है और आपको चक्कर आ रहे हैं। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "सिर की चोट को हल्के में न लें। चोट वाली जगह पर साफ कपड़े से दबाव डालें और तुरंत किसी को मदद के लिए बुलाएं या 911 पर कॉल करें।",
+                explanation: "Head injuries with dizziness require immediate medical evaluation due to concussion or internal bleeding risks."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "गर्मियों के दिन में सैन जोस में बहुत अधिक गर्मी पड़ रही है (तापमान 100°F से अधिक है) और आपके घर का एयर कंडीशनर अचानक खराब हो जाता है। आपको बहुत पसीना आ रहा है और कमजोरी महसूस हो रही है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "खूब पानी पीकर हाइड्रेटेड रहें। ठंडे पानी से स्नान करें। यदि संभव हो, तो किसी नजदीकी वातानुकूलित सार्वजनिक स्थान जैसे लाइब्रेरी या कूलिंग सेंटर में जाएं।",
+                explanation: "Extreme heat without AC can lead to heat exhaustion. Cool down with water and find a cooled public space."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके सोशल सिक्योरिटी नंबर (SSN) के बारे में कोई फोन करके दावा करता है कि वह सोशल सिक्योरिटी एडमिनिस्ट्रेशन (SSA) से है और आपका खाता ब्लॉक कर दिया गया है। इसे खोलने के लिए वह आपका एसएसएन पूछता है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "तुरंत फोन काट दें। आधिकारिक सरकारी एजेंसियां कभी भी इस तरह से फोन पर संवेदनशील जानकारी नहीं मांगती हैं।",
+                explanation: "SSA scam calls try to steal SSNs. Hang up; official agencies do not call to verify SSN this way."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "रात में घर के बाहर तेज आंधी के कारण बिजली का एक खंभा और उसका तार टूटकर आपकी कार के ऊपर गिर जाता है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "कार के अंदर ही रहें, क्योंकि यह आपको बिजली के झटके से बचाती है। खिड़की नीचे करके मदद के लिए कॉल करें और बिजली कंपनी व 911 को सूचित करें। कार से बाहर कदम न रखें।",
+                explanation: "Downed power lines carry high voltage. Staying in the car is safest until authorities confirm the line is de-energized."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "खाना खाते समय अचानक आपके गले में कुछ फंस जाता है और आप सांस नहीं ले पा रहे हैं और न ही बोल पा रहे हैं। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "गले पर हाथ रखकर चोकिंग (दम घुटने) का इशारा करें ताकि कोई आपके पेट पर दबाव (Heimlich maneuver) दे सके। यदि आप अकेले हैं, तो मेज या कुर्सी की पीठ पर अपने पेट को जोर से दबाएं।",
+                explanation: "Choking requires immediate physical intervention (Heimlich maneuver) to clear the airway."
             )
+        
         ]
     )
 
@@ -528,7 +637,92 @@ struct HindiFunctionalSkillsExerciseData {
                 options: ["साबूदाना धोकर रात भर थोड़े पानी में भिगोएं", "पैन में घी गरम कर जीरा और मूंगफली के दाने भूनें", "उबला आलू, कटी हरी मिर्च और भिगोया साबूदाना डालें", "स्वादानुसार सेंधा नमक डालें और 5 मिनट ढककर पकाएं", "नींबू का रस और हरी धनिया मिलाएँ"],
                 correctAnswer: "साबूदाना धोकर रात भर थोड़े पानी में भिगोएं | पैन में घी गरम कर जीरा और मूंगफली के दाने भूनें | उबला आलू, कटी हरी मिर्च और भिगोया साबूदाना डालें | स्वादानुसार सेंधा नमक डालें और 5 मिनट ढककर पकाएं | नींबू का रस और हरी धनिया मिलाएँ",
                 explanation: "Sabudana khichdi recipe sequencing."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "प्रिया द्वारा California में शाम की चाय (Chai) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["चाय को कप में छानें और गर्म परोसें। | पानी उबालें और उसमें कद्दूकस किया हुआ अदरक और इलायची डालें। | दूध डालें और चाय को एक बार और उबलने दें। | चायपत्ती डालें और उसे 2-3 मिनट तक धीमी आंच पर उबलने दें।"],
+                correctAnswer: "पानी उबालें और उसमें कद्दूकस किया हुआ अदरक और इलायची डालें। | चायपत्ती डालें और उसे 2-3 मिनट तक धीमी आंच पर उबलने दें। | दूध डालें और चाय को एक बार और उबलने दें। | चाय को कप में छानें और गर्म परोसें।",
+                explanation: "Standard tea brewing sequence: boil water with spices, add tea leaves, add milk, then strain and serve."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "विक्रम द्वारा दोपहर के भोजन के लिए बासमती चावल (Basmati Rice) पकाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["चावल को पानी में 20 मिनट के लिए भिगोएँ। | पके हुए चावल को कांटे से चलाकर भाप निकलने दें। | चावल को साफ पानी से 2-3 बार धोएं। | एक बर्तन में पानी उबालें, चावल डालें और ढककर धीमी आंच पर 12 मिनट पकाएं।"],
+                correctAnswer: "चावल को साफ पानी से 2-3 बार धोएं। | चावल को पानी में 20 मिनट के लिए भिगोएँ। | एक बर्तन में पानी उबालें, चावल डालें और ढककर धीमी आंच पर 12 मिनट पकाएं। | पके हुए चावल को कांटे से चलाकर भाप निकलने दें।",
+                explanation: "Prep involves washing and soaking rice, followed by boiling/simmering, and finally fluffing before serving."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "दाल तड़का (Dal Tadka) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["पकी हुई दाल में गरम तड़का मिलाएं और धनिया पत्ती से सजाएं। | दाल को प्रेशर कुकर में पानी, हल्दी और नमक के साथ 3 सीटी आने तक पकाएं। | एक पैन में घी गरम करें, उसमें जीरा, लहसुन, प्याज और टमाटर भूनें। | दाल को अच्छी तरह धोकर साफ करें।"],
+                correctAnswer: "दाल को अच्छी तरह धोकर साफ करें। | दाल को प्रेशर कुकर में पानी, हल्दी और नमक के साथ 3 सीटी आने तक पकाएं। | एक पैन में घी गरम करें, उसमें जीरा, लहसुन, प्याज और टमाटर भूनें। | पकी हुई दाल में गरम तड़का मिलाएं और धनिया पत्ती से सजाएं।",
+                explanation: "Washing dal, pressure cooking it, preparing the seasoning (tadka) in ghee, and combining them at the end."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आलू गोभी की सब्जी (Aloo Gobi) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["आलू और गोभी के टुकड़ों को धोकर काट लें। | कढ़ाई में तेल गरम करें, जीरा डालें और आलू-गोभी को मसालों के साथ भूनें। | सब्जी को ढककर धीमी आंच पर नरम होने तक पकाएं। | अंत में गरम मसाला और हरा धनिया डालें।"],
+                correctAnswer: "आलू और गोभी के टुकड़ों को धोकर काट लें। | कढ़ाई में तेल गरम करें, जीरा डालें और आलू-गोभी को मसालों के साथ भूनें। | सब्जी को ढककर धीमी आंच पर नरम होने तक पकाएं। | अंत में गरम मसाला और हरा धनिया डालें।",
+                explanation: "Prep vegetables, sauté with spices, cover and simmer to cook, then season with finishing spices and herbs."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "गरम रोटी (Roti/Chapati) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["तवे को गरम करें और बेली हुई रोटी को दोनों तरफ से सेकें। | आटे में पानी मिलाकर गूंथ लें और 15 मिनट के लिए छोड़ दें। | आटे की छोटी लोई बनाएं और उसे बेलन से गोल बेल लें। | सिंकती हुई रोटी को सीधे आंच पर फुलाएं और घी लगाएं।"],
+                correctAnswer: "आटे में पानी मिलाकर गूंथ लें और 15 मिनट के लिए छोड़ दें। | आटे की छोटी लोई बनाएं और उसे बेलन से गोल बेल लें। | तवे को गरम करें और बेली हुई रोटी को दोनों तरफ से सेकें। | सिंकती हुई रोटी को सीधे आंच पर फुलाएं और घी लगाएं।",
+                explanation: "Dough prep, rolling out the dough, griddle cooking, and puffing over flame before applying ghee."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सूजी का हलवा (Suji Halwa) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["सूजी में धीरे-धीरे चीनी और गर्म पानी का मिश्रण डालें। | एक पैन में घी गरम करें और सूजी को सुनहरा होने तक भूनें। | हलवे को लगातार हिलाएं जब तक कि वह गाढ़ा न हो जाए और पैन न छोड़ दे। | कटे हुए मेवे और इलायची पाउडर डालकर गरमागरम परोसें।"],
+                correctAnswer: "एक पैन में घी गरम करें और सूजी को सुनहरा होने तक भूनें। | सूजी में धीरे-धीरे चीनी और गर्म पानी का मिश्रण डालें। | हलवे को लगातार हिलाएं जब तक कि वह गाढ़ा न हो जाए और पैन न छोड़ दे। | कटे हुए मेवे और इलायची पाउडर डालकर गरमागरम परोसें।",
+                explanation: "Toast semolina in ghee, add sweetened hot water, stir until thickened, and garnish with nuts."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "खीर (Kheer) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["दूध में भीगे हुए बासमती चावल डालें और धीमी आंच पर उबालें। | दूध को एक भारी तले वाले बर्तन में उबालें। | चावल के नरम होने और दूध के आधा होने तक पकाएं, फिर चीनी डालें। | इलायची पाउडर और कटे हुए पिस्ता-बादाम से सजाकर ठंडा परोसें।"],
+                correctAnswer: "दूध को एक भारी तले वाले बर्तन में उबालें। | दूध में भीगे हुए बासमती चावल डालें और धीमी आंच पर उबालें। | चावल के नरम होने और दूध के आधा होने तक पकाएं, फिर चीनी डालें। | इलायची पाउडर और कटे हुए पिस्ता-बादाम से सजाकर ठंडा परोसें।",
+                explanation: "Boil milk, add rice, simmer until thick and add sugar, then finish with spices and nuts."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "रायता (Raita) तैयार करने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["दही को एक कटोरे में स्मूथ होने तक फेंटें। | कद्दूकस किया हुआ खीरा, नमक और भुना जीरा पाउडर डालें। | अच्छी तरह मिलाएं और फ्रिज में ठंडा होने के लिए रखें। | परोसने से पहले ऊपर से पुदीने की पत्तियां डालें।"],
+                correctAnswer: "दही को एक कटोरे में स्मूथ होने तक फेंटें। | कद्दूकस किया हुआ खीरा, नमक और भुना जीरा पाउडर डालें। | अच्छी तरह मिलाएं और फ्रिज में ठंडा होने के लिए रखें। | परोसने से पहले ऊपर से पुदीने की पत्तियां डालें।",
+                explanation: "Whisk yogurt, fold in cucumber and spices, chill in refrigerator, and garnish with mint."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नींबू पानी (Shikanji) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["गिलास में ठंडा पानी डालें और नींबू का रस निचोड़ें। | चीनी, काला नमक और भुना जीरा पाउडर डालें। | चीनी पूरी तरह घुलने तक अच्छी तरह हिलाएं। | बर्फ के टुकड़े डालें और पुदीने की पत्ती से सजाएं।"],
+                correctAnswer: "गिलास में ठंडा पानी डालें और नींबू का रस निचोड़ें। | चीनी, काला नमक और भुना जीरा पाउडर डालें। | चीनी पूरी तरह घुलने तक अच्छी तरह हिलाएं। | बर्फ के टुकड़े डालें और पुदीने की पत्ती से सजाएं।",
+                explanation: "Combine water and lemon, add dry ingredients, stir to dissolve, and add ice/garnishes."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "ओट्स दलिया (Oats Porridge) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["एक बर्तन में दूध गरम करें और उसमें ओट्स डालें। | धीमी आंच पर 5-7 मिनट तक पकाएं जब तक कि ओट्स गल न जाएं। | आंच से उतारें, शहद या चीनी मिलाएं। | ऊपर से सेब के टुकड़े और बादाम डालकर परोसें।"],
+                correctAnswer: "एक बर्तन में दूध गरम करें और उसमें ओट्स डालें। | धीमी आंच पर 5-7 मिनट तक पकाएं जब तक कि ओट्स गल न जाएं। | आंच से उतारें, शहद या चीनी मिलाएं। | ऊपर से सेब के टुकड़े और बादाम डालकर परोसें।",
+                explanation: "Heat milk and oats, simmer until tender, sweeten off heat, and top with fresh fruits/nuts."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "पोहा (Poha) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["पोहा को पानी से धोकर छान लें और एक तरफ रख दें। | कड़ाही में तेल गरम करें, राई, करी पत्ता, मूंगफली और प्याज भूनें। | पोहा, हल्दी और नमक डालें और 2 मिनट के लिए ढककर पकाएं। | नींबू का रस और हरा धनिया छिड़ककर परोसें।"],
+                correctAnswer: "पोहा को पानी से धोकर छान लें और एक तरफ रख दें। | कड़ाही में तेल गरम करें, राई, करी पत्ता, मूंगफली और प्याज भूनें। | पोहा, हल्दी और नमक डालें और 2 मिनट के लिए ढककर पकाएं। | नींबू का रस और हरा धनिया छिड़ककर परोसें।",
+                explanation: "Rinse poha, sauté base seasonings and peanuts, stir in poha and steam, then garnish and serve."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "उबला हुआ अंडा (Boiled Egg) बनाने के चरणों को सही क्रम में व्यवस्थित करें:",
+                options: ["अंडे को ठंडे पानी के बर्तन में डालें ताकि पानी अंडे से 1 इंच ऊपर रहे। | पानी में उबाल आने दें, फिर आंच बंद कर बर्तन को 10 मिनट के लिए ढक दें। | अंडे को बर्फ के ठंडे पानी में डालें और 2 मिनट रखें। | अंडे का छिलका उतारकर आधा काट लें।"],
+                correctAnswer: "अंडे को ठंडे पानी के बर्तन में डालें ताकि पानी अंडे से 1 इंच ऊपर रहे। | पानी में उबाल आने दें, फिर आंच बंद कर बर्तन को 10 मिनट के लिए ढक दें। | अंडे को बर्फ के ठंडे पानी में डालें और 2 मिनट रखें। | अंडे का छिलका उतारकर आधा काट लें।",
+                explanation: "Place in cold water, boil/steep, ice-shock to stop cooking, and peel."
             )
+        
         ]
     )
 
@@ -680,7 +874,113 @@ struct HindiFunctionalSkillsExerciseData {
                 options: [],
                 correctAnswer: "आवश्यकता: फोन, दवा की बोतल। प्रक्रिया: फार्मेसी या डॉक्टर के क्लिनिक का नंबर मिलाएं। अपना नाम, जन्मतिथि और दवा की बोतल पर लिखा RX नंबर बताएं। रिफिल के लिए कहें। पुष्टि करें कि वे दवा कब तक तैयार कर देंगे।",
                 explanation: "Refilling a medical prescription."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "प्रिया को अपनी चाबियां नहीं मिल रही हैं और उसे 10 मिनट में काम पर निकलना है। वह क्या करेगी?",
+                options: [],
+                correctAnswer: "शांत होकर अपने घर के उन स्थानों की जांच करें जहां वह अक्सर चाबियां रखती है (जैसे डाइनिंग टेबल, काउंटर, बैग या कल पहने हुए कपड़े)। यदि न मिले, तो अतिरिक्त चाबी का उपयोग करें और बाद में खोजें।",
+                explanation: "Finding lost keys systematically and using a backup prevents panic and lateness."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "विक्रम को लगता है कि उसकी नई कार के इंश्योरेंस का प्रीमियम बहुत अधिक है। वह प्रीमियम कम करने के लिए क्या कर सकता है?",
+                options: [],
+                correctAnswer: "वह विभिन्न बीमा कंपनियों से कोटेशन ले सकता है, अपनी कटौती योग्य राशि (deductible) बढ़ा सकता है, या अपनी बीमा कंपनी से सुरक्षित ड्राइवर छूट के बारे में पूछ सकता है।",
+                explanation: "Comparing quotes, raising deductibles, or asking for discounts are practical ways to lower car insurance premiums."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "अनीता को अपनी दोस्त के घर जाने के लिए गूगल मैप्स पर रास्ता देखना है, लेकिन उसके फोन का इंटरनेट डेटा खत्म हो गया है। वह क्या करेगी?",
+                options: [],
+                correctAnswer: "वह घर के वाई-फाई नेटवर्क का उपयोग करके मार्ग डाउनलोड कर सकती है, किसी सार्वजनिक वाई-फाई से कनेक्ट कर सकती है, या दोस्त से फोन पर निर्देश पूछ सकती है।",
+                explanation: "Downloading offline maps via Wi-Fi or asking for phone directions helps navigate without mobile data."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राज को अपनी दादी की दवाइयों का नया रिफिल मंगाना है, लेकिन फार्मेसी का काउंटर बंद होने वाला है। वह क्या करेगा?",
+                options: [],
+                correctAnswer: "वह फार्मेसी की स्वचालित फोन प्रणाली का उपयोग कर सकता है, उनके ऑनलाइन पोर्टल या ऐप के माध्यम से रिफिल ऑर्डर कर सकता है, या अगले दिन सुबह कॉल कर सकता है।",
+                explanation: "Ordering refills via online portals or automated phone systems avoids library counter hours restrictions."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके घर के बगीचे में पानी का पाइप लीक हो रहा है, जिससे पानी लगातार बह रहा है और आपका पानी का बिल बढ़ सकता है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "पानी के मुख्य वाल्व (shut-off valve) को बंद करें ताकि पानी बहना रुक जाए। इसके बाद होस-पाइप को बदलें या प्लम्बर को बुलाएं।",
+                explanation: "Turning off the water supply valve stops the waste immediately before repairs are made."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "अमित को अपने स्थानीय बैंक से एक ईमेल मिलता है जिसमें कहा गया है कि उसके खाते में संदिग्ध गतिविधि देखी गई है और उसे अपना पासवर्ड बदलने की आवश्यकता है। अमित क्या करेगा?",
+                options: [],
+                correctAnswer: "ईमेल में दिए गए लिंक पर क्लिक न करें। वह सीधे बैंक की वेबसाइट पर जाकर या अपने बैंक ऐप में लॉग इन करके सुरक्षा संदेशों की जांच करेगा।",
+                explanation: "Direct navigation to bank portals protects users from email phishing scams."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके पास एक पुराना क्रेडिट कार्ड है जिसे आप अब उपयोग नहीं करते हैं और आप इसे सुरक्षित रूप से बंद करना चाहते हैं। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "कार्ड जारी करने वाले बैंक के ग्राहक सेवा नंबर पर कॉल करके खाता बंद करने का अनुरोध करें। इसके बाद कार्ड को छोटे टुकड़ों में काटकर नष्ट कर दें।",
+                explanation: "Closing the account formally and shredding the card prevents unauthorized use."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सीमा को अपने बच्चे के स्कूल की मीटिंग में जाना है, लेकिन उसकी कार स्टार्ट नहीं हो रही है। वह क्या करेगी?",
+                options: [],
+                correctAnswer: "वह उबर (Uber) या लिफ्ट (Lyft) बुक कर सकती है, किसी पड़ोसी या दोस्त से लिफ्ट मांग सकती है, या स्कूल को फोन करके मीटिंग को पुनर्निर्धारित करने के लिए कह सकती है।",
+                explanation: "Using ride-shares, asking friends, or rescheduling are practical alternative transit options."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपको अपने घर के मेल में एक अनजान व्यक्ति के नाम का पत्र मिलता है जो आपके पते पर भेजा गया है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "पत्र को बिना खोले उस पर \"Return to Sender\" या \"Not at this Address\" लिखें और उसे वापस मेलबॉक्स में डाल दें।",
+                explanation: "Returning mail meant for others to the post office is the legal and correct procedure."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राहुल के अपार्टमेंट की छत से अचानक पानी टपकने लगता है, जिससे उसका सोफा गीला हो रहा है। वह क्या करेगा?",
+                options: [],
+                correctAnswer: "सोफे को तुरंत वहाँ से हटाए, फर्श पर एक बाल्टी रखें, और ऊपर के पड़ोसी या अपार्टमेंट के रखरखाव विभाग (maintenance) को तुरंत सूचित करे।",
+                explanation: "Minimizing damage with a bucket and contacting maintenance resolves the active leak."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सुनीता के घुटने में दर्द है और उसे डॉक्टर के पास जाना है, लेकिन उसके पास खुद गाड़ी चलाने की ताकत नहीं है। वह क्या करेगी?",
+                options: [],
+                correctAnswer: "वह किसी परिवार के सदस्य या दोस्त से उसे ले जाने के लिए कह सकती है, या मेडिकल ट्रांसपोर्ट सेवा या राइड-शेयर सेवा का उपयोग कर सकती है।",
+                explanation: "Utilizing friends, family, or specialized transport facilitates access to healthcare safely."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "संजय को अपने बिजली के बिल पर एक असामान्य अतिरिक्त शुल्क दिखाई देता है जो बहुत अधिक है। वह क्या करेगा?",
+                options: [],
+                correctAnswer: "वह अपने बिजली प्रदाता (जैसे PG&E) की ग्राहक सेवा को कॉल करेगा और बिल के उस विशिष्ट शुल्क के बारे में स्पष्टीकरण मांगेगा।",
+                explanation: "Calling customer service directly clarifies billing discrepancies."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नेहा को एक शादी में जाना है और उसने अपनी ड्रेस ड्राई क्लीनिंग के लिए दी थी, लेकिन जब वह दुकान पर जाती है तो पता चलता है कि दुकान आज बंद है। वह क्या करेगी?",
+                options: [],
+                correctAnswer: "वह अपनी अलमारी से कोई अन्य उपयुक्त औपचारिक पोशाक (dress) चुनेगी और उसे शादी में पहनेगी।",
+                explanation: "Selecting an alternative outfit is the most practical contingency plan."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आपके रसोईघर के सिंक की नाली पूरी तरह से बंद (clogged) हो गई है और पानी नीचे नहीं जा रहा है। आप क्या करेंगे?",
+                options: [],
+                correctAnswer: "सिंक का उपयोग बंद करें। नाली साफ करने वाले प्लंजर (plunger) का उपयोग करें या बेकिंग सोडा और सिरका डालकर गरम पानी डालें। यदि आवश्यक हो तो प्लम्बर को बुलाएं।",
+                explanation: "Standard home remedies like plunging or baking soda/vinegar resolve minor clogs."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "विवेक को अपने पासपोर्ट का नवीनीकरण कराना है, लेकिन उसे नहीं पता कि कौन से दस्तावेज चाहिए। वह क्या करेगा?",
+                options: [],
+                correctAnswer: "वह आधिकारिक सरकारी वेबसाइट (जैसे travel.state.gov) पर जाएगा और पासपोर्ट नवीनीकरण के लिए आवश्यक दस्तावेजों की सूची और आवेदन प्रक्रिया की जांच करेगा।",
+                explanation: "Consulting official state department websites ensures accurate documentation for renewals."
             )
+        
         ]
     )
 
@@ -886,7 +1186,120 @@ struct HindiFunctionalSkillsExerciseData {
                 options: ["दोपहर 4:30 बजे", "दोपहर 4:35 बजे", "दोपहर 4:40 बजे", "दोपहर 4:45 बजे"],
                 correctAnswer: "दोपहर 4:35 बजे",
                 explanation: "4:15 + 20 minutes = 4:35 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आज बुधवार है। यदि प्रिया को अगले सप्ताह के सोमवार को डॉक्टर से मिलना है, तो आज से कितने दिनों बाद उसका अपॉइंटमेंट है?",
+                options: ["5 दिन", "6 दिन", "4 दिन", "7 दिन"],
+                correctAnswer: "5 दिन",
+                explanation: "Counting from Wednesday: Thursday (1), Friday (2), Saturday (3), Sunday (4), Monday (5)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "अमित की ट्रेन दोपहर 2:15 बजे प्रस्थान करने वाली है। यदि उसे स्टेशन पर प्रस्थान समय से 45 मिनट पहले पहुंचना है, तो उसे कितने बजे तक स्टेशन पहुंचना होगा?",
+                options: ["दोपहर 1:30 बजे", "दोपहर 1:45 बजे", "दोपहर 1:15 बजे", "दोपहर 2:00 बजे"],
+                correctAnswer: "दोपहर 1:30 बजे",
+                explanation: "45 minutes before 2:15 PM is 1:30 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "यदि एक वर्ष में 12 महीने होते हैं, तो आधे वर्ष (Half a Year) में कुल कितने महीने होंगे?",
+                options: ["6 महीने", "5 महीने", "8 महीने", "4 महीने"],
+                correctAnswer: "6 महीने",
+                explanation: "12 divided by 2 is 6 months."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "कैलिफ़ोर्निया में डेलाइट सेविंग टाइम (DST) समाप्त होने पर घड़ियों को 1 घंटा पीछे किया जाता है। यदि वर्तमान समय रात के 2:00 बज रहे हैं, तो घड़ी पीछे करने के बाद समय क्या होगा?",
+                options: ["रात के 1:00 बजे", "रात के 3:00 बजे", "रात के 12:00 बजे", "सुबह के 4:00 बजे"],
+                correctAnswer: "रात के 1:00 बजे",
+                explanation: "Turning clock back 1 hour from 2:00 AM changes the time to 1:00 AM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सुनीता हर साल दिसंबर में अपने बेटे से मिलने आती है। यदि वर्तमान महीना अगस्त है, तो उसे अपने बेटे से मिलने जाने में कितने महीने बचे हैं?",
+                options: ["4 महीने", "5 महीने", "3 महीने", "6 महीने"],
+                correctAnswer: "4 महीने",
+                explanation: "Counting months from August: September (1), October (2), November (3), December (4)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक मीटिंग सुबह 10:30 बजे शुरू होनी थी, लेकिन यह 15 मिनट की देरी से शुरू हुई। मीटिंग किस समय शुरू हुई?",
+                options: ["सुबह 10:45 बजे", "सुबह 11:00 बजे", "सुबह 10:15 बजे", "सुबह 10:30 बजे"],
+                correctAnswer: "सुबह 10:45 बजे",
+                explanation: "10:30 AM + 15 minutes = 10:45 AM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "यदि आज 28 जून है, तो पिछले सप्ताह की समान तारीख क्या थी?",
+                options: ["21 जून", "20 जून", "22 जून", "23 जून"],
+                correctAnswer: "21 जून",
+                explanation: "Subtracting 7 days from 28: 28 - 7 = 21 June."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राज शाम 7:00 बजे अपनी दवा लेता है। उसे अपनी अगली खुराक ठीक 12 घंटे बाद लेनी है। उसकी अगली खुराक का समय क्या होगा?",
+                options: ["अगली सुबह 7:00 बजे", "अगली दोपहर 12:00 बजे", "अगले दिन दोपहर 2:00 बजे", "उसी रात 12:00 बजे"],
+                correctAnswer: "अगली सुबह 7:00 बजे",
+                explanation: "12 hours after 7:00 PM is 7:00 AM the next morning."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सीमा का फ्लाइट बुकिंग कन्फर्मेशन कहता है कि उसकी उड़ान 18:30 बजे रवाना होगी। साधारण 12 घंटे के प्रारूप (Standard Time Format) में यह समय क्या है?",
+                options: ["शाम 6:30 बजे", "सुबह 6:30 बजे", "शाम 8:30 बजे", "रात के 12:30 बजे"],
+                correctAnswer: "शाम 6:30 बजे",
+                explanation: "18:30 in 24-hour time corresponds to 6:30 PM (18 - 12 = 6)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक क्रिकेट मैच कुल 3 घंटे चला और शाम 5:30 बजे समाप्त हुआ। मैच किस समय शुरू हुआ था?",
+                options: ["दोपहर 2:30 बजे", "दोपहर 3:30 बजे", "दोपहर 1:30 बजे", "शाम 4:30 बजे"],
+                correctAnswer: "दोपहर 2:30 बजे",
+                explanation: "3 hours before 5:30 PM is 2:30 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राहुल को हर 3 महीने में अपने डॉक्टर से मिलना होता है। यदि उसकी पिछली मुलाकात जनवरी में थी, तो उसकी अगली मुलाकात किस महीने में होगी?",
+                options: ["अप्रैल", "मार्च", "मई", "फरवरी"],
+                correctAnswer: "अप्रैल",
+                explanation: "Three months after January is April (Feb, March, April)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "यदि आज शुक्रवार है और कल विक्रम का जन्मदिन था, तो विक्रम का जन्मदिन किस दिन था?",
+                options: ["गुरुवार", "बुधवार", "शनिवार", "मंगलवार"],
+                correctAnswer: "गुरुवार",
+                explanation: "\"Yesterday\" relative to Friday is Thursday."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सुनीता के दांतों की सफाई का अपॉइंटमेंट 15 सितंबर को सुबह 9:00 बजे है। आज 1 सितंबर है। अपॉइंटमेंट में कितने दिन बचे हैं?",
+                options: ["14 दिन", "15 दिन", "13 दिन", "16 दिन"],
+                correctAnswer: "14 दिन",
+                explanation: "15 - 1 = 14 days remaining."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक केक को ओवन में पकने के लिए 40 मिनट की आवश्यकता होती है। यदि नेहा ने केक को दोपहर 1:15 बजे ओवन में रखा, तो वह उसे किस समय बाहर निकालेगी?",
+                options: ["दोपहर 1:55 बजे", "दोपहर 2:00 बजे", "दोपहर 1:45 बजे", "दोपहर 1:50 बजे"],
+                correctAnswer: "दोपहर 1:55 बजे",
+                explanation: "1:15 PM + 40 minutes = 1:55 PM."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "यदि अगले साल एक लीप वर्ष (Leap Year) है, तो उस वर्ष के फरवरी महीने में कुल कितने दिन होंगे?",
+                options: ["29 दिन", "28 दिन", "30 दिन", "31 दिन"],
+                correctAnswer: "29 दिन",
+                explanation: "A leap year has 29 days in February."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "संजय रात 10:15 बजे सो गया और सुबह 6:15 बजे उठ गया। उसने कुल कितने घंटे की नींद ली?",
+                options: ["8 घंटे", "7 घंटे", "9 घंटे", "6 घंटे"],
+                correctAnswer: "8 घंटे",
+                explanation: "Time from 10:15 PM to 6:15 AM is exactly 8 hours."
             )
+        
         ]
     )
 
@@ -1211,7 +1624,127 @@ struct HindiFunctionalSkillsExerciseData {
                 options: ["$4.00", "$5.00", "$6.00", "$8.00"],
                 correctAnswer: "$6.00",
                 explanation: "3 * 2 = 6."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "विक्रम के PG&E बिजली बिल पर कुल देय राशि $120 है। यदि वह देय तिथि से पहले भुगतान करता है, तो उसे 5% की छूट मिलती है। छूट के बाद उसे कितना भुगतान करना होगा?",
+                options: ["$114", "$115", "$110", "$108"],
+                correctAnswer: "$114",
+                explanation: "5% of $120 is $6. $120 - $6 = $114."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "प्रिया सैन जोस के एक भारतीय रेस्तरां में भोजन करती है। उसके भोजन का बिल $40 आता है। वह 15% टिप देना चाहती है। उसे कितनी टिप देनी चाहिए?",
+                options: ["$6", "$5", "$8", "$4"],
+                correctAnswer: "$6",
+                explanation: "15% of $40 is 0.15 * 40 = $6."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए पानी के बिल को ध्यान से पढ़ें:",
+                options: ["$40", "$50", "$35", "$45"],
+                correctAnswer: "$40",
+                explanation: "Usage = 5300 - 4500 = 800 gallons. Cost = 800 * 0.05 = $40."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "अनिकेत का मासिक जिम सब्सक्रिप्शन शुल्क $45 है। वह पूरे वर्ष (12 महीने) के लिए एक साथ भुगतान करना चाहता है। वार्षिक भुगतान की कुल राशि क्या होगी?",
+                options: ["$540", "$480", "$600", "$500"],
+                correctAnswer: "$540",
+                explanation: "Monthly fee multiplied by months: 45 * 12 = $540."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक किराना स्टोर पर $15 मूल्य के बासमती चावल के बैग पर 20% की छूट है। छूट के बाद चावल के बैग की कीमत क्या होगी?",
+                options: ["$12", "$13", "$11", "$10"],
+                correctAnswer: "$12",
+                explanation: "20% discount on $15 is 0.20 * 15 = $3. Sale price = 15 - 3 = $12."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "निम्नलिखित केबल टीवी बिल का विवरण देखें:",
+                options: ["$80", "$75", "$85", "$70"],
+                correctAnswer: "$80",
+                explanation: "Summing charges: 65 + 10 + 5 = $80."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सुनीता ने $120 की एक साड़ी खरीदी। कैलिफोर्निया में बिक्री कर (Sales Tax) 8.25% है। साड़ी पर अनुमानित कर कितना होगा (निकटतम डॉलर में)?",
+                options: ["$10", "$8", "$12", "$6"],
+                correctAnswer: "$10",
+                explanation: "Sales tax = 120 * 0.0825 = $9.90, which rounds to $10."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राज के इंटरनेट बिल पर पिछले महीने का बकाया $25 था, और इस महीने का शुल्क $55 है। उसने इस महीने $60 का भुगतान किया। उसका नया बकाया शेष क्या है?",
+                options: ["$20", "$15", "$25", "$30"],
+                correctAnswer: "$20",
+                explanation: "Total due = 25 + 55 = $80. Balance after $60 payment = 80 - 60 = $20."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक सुपरमार्केट में एक खरीदें, एक मुफ्त पाएं (BOGO) योजना के तहत सेब का एक बैग $6 में मिल रहा है। यदि अमित को 4 बैग सेब चाहिए, तो उसे कुल कितना भुगतान करना होगा?",
+                options: ["$12", "$24", "$18", "$16"],
+                correctAnswer: "$12",
+                explanation: "Since 2 bags cost $6, 4 bags (which is two sets of BOGO) will cost 2 * 6 = $12."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए गैस बिल का विवरण देखें:",
+                options: ["$55", "$45", "$50", "$60"],
+                correctAnswer: "$55",
+                explanation: "Gas charge = 30 * 1.50 = $45. Total including service fee = 45 + 10 = $55."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नेहा ने एक स्थानीय कपड़े की दुकान से $50 का कुर्ता खरीदा। दुकानदार ने उसे 10% की वरिष्ठ नागरिक छूट दी। उसे कितना भुगतान करना पड़ा?",
+                options: ["$45", "$40", "$48", "$42"],
+                correctAnswer: "$45",
+                explanation: "10% discount on $50 is $5. Final payment = 50 - 5 = $45."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "संजय ने अपनी कार का तेल बदलने (Oil Change) के लिए $60 का भुगतान किया। यदि वह हर 4 महीने में तेल बदलवाता है, तो पूरे साल (12 महीने) में उसका कुल खर्च कितना होगा?",
+                options: ["$180", "$240", "$120", "$160"],
+                correctAnswer: "$180",
+                explanation: "Cycles per year = 12 / 4 = 3. Total annual cost = 3 * 60 = $180."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए कचरा प्रबंधन (Garbage Bill) के त्रैमासिक बिल को पढ़ें:",
+                options: ["$105", "$95", "$100", "$110"],
+                correctAnswer: "$105",
+                explanation: "Total cost = 90 + 15 = $105."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "सीमा ने $25 की कुछ दवाएं खरीदीं। उसके मेडिकल बीमा (Co-pay) के कारण उसे केवल 20% का भुगतान करना पड़ा। सीमा ने कुल कितना भुगतान किया?",
+                options: ["$5", "$10", "$8", "$15"],
+                correctAnswer: "$5",
+                explanation: "Co-pay amount = 20% of $25 = 0.20 * 25 = $5."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक स्थानीय स्टोर पर 5 किलो आटे की थैली की कीमत $8 है। यदि आप 15 किलो आटा खरीदते हैं, तो कुल कीमत क्या होगी?",
+                options: ["$24", "$16", "$32", "$20"],
+                correctAnswer: "$24",
+                explanation: "Three bags of 5 kg equal 15 kg. Total cost = 3 * 8 = $24."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "राहुल के पास $20 का एक गिफ्ट कार्ड है। वह $6 मूल्य के तीन कप मसाला चाय खरीदता है। गिफ्ट कार्ड में अब कितनी राशि बचेगी?",
+                options: ["$2", "$4", "$6", "$0"],
+                correctAnswer: "$2",
+                explanation: "Cost of tea = 3 * 6 = $18. Remaining balance = 20 - 18 = $2."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एक मोबाइल फोन पारिवारिक प्लान की कीमत $80 प्रति माह है, जिसमें 4 लाइनें शामिल हैं। प्रति लाइन मासिक लागत क्या होगी?",
+                options: ["$20", "$15", "$25", "$30"],
+                correctAnswer: "$20",
+                explanation: "Cost per line = 80 / 4 = $20."
             )
+        
         ]
     )
 
@@ -1282,4 +1815,266 @@ struct HindiFunctionalSkillsExerciseData {
             )
         ]
     )
+    // MARK: - Reading Menus
+    private static let readingMenus = Exercise(
+        id: UUID(),
+        title: "मेन्यू पढ़ना",
+        instructions: "मेन्यू को पढ़ें और प्रश्नों के सही उत्तर चुनें।",
+        section: .functionalSkills,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"स्वाद रेस्तरां\" (Swaad Restaurant) के निम्नलिखित लंच मेन्यू को पढ़ें:",
+                options: ["$18.00", "$16.00", "$20.00", "$14.00"],
+                correctAnswer: "$18.00",
+                explanation: "Total cost = 14.00 (Paneer Tikka) + 4.00 (Mango Lassi) = $18.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "मेन्यू के अनुसार, यदि प्रिया केवल दो पीस समोसा और एक छोले भटूरे ऑर्डर करना चाहती है, तो उसे कुल कितना खर्च करना होगा?",
+                options: ["$17.00", "$15.00", "$19.00", "$12.00"],
+                correctAnswer: "$17.00",
+                explanation: "Total cost = 5.00 (Samosa) + 12.00 (Chole Bhature) = $17.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"कैलिफ़ोर्निया कैफ़े\" (California Cafe) के मेन्यू का विवरण देखें:",
+                options: ["$20.00", "$16.50", "$23.50", "$19.50"],
+                correctAnswer: "$20.00",
+                explanation: "Cost = 13.00 (Dal) + 2 * 3.50 (Nan) = 13.00 + 7.00 = $20.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "मेन्यू के अनुसार, कौन सा मुख्य व्यंजन (Main Dish) सबसे महंगा है?",
+                options: ["पनीर टिक्का मसाला", "छोले भटूरे", "दाल मखनी", "समोसा"],
+                correctAnswer: "पनीर Tikkha मसाला",
+                explanation: "पनीर टिक्का मसाला की कीमत $14.00 है, जो छोले भटूरे ($12.00) और दाल मखनी ($13.00) से अधिक है।"
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"मुंबई चौपाटी\" (Mumbai Chowpatty) मेन्यू:",
+                options: ["$7.00", "$6.00", "$8.00", "$5.00"],
+                correctAnswer: "$7.00",
+                explanation: "Cost = 10.00 (Pav Bhaji) + 3.00 (Coffee) = $13.00. Change from $20 = 20 - 13 = $7.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "मेन्यू के अनुसार, सबसे सस्ती डिश कौन सी है?",
+                options: ["फिल्टर कॉफी", "पानी पूरी", "पाव भाजी", "मसाला डोसा"],
+                correctAnswer: "फिल्टर कॉफी",
+                explanation: "Filter Coffee costs $3.00, which is the lowest price item listed."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"नमस्ते बेकरी\" (Namaste Bakery) का मेन्यू:",
+                options: ["$15.00", "$14.00", "$16.00", "$12.00"],
+                correctAnswer: "$15.00",
+                explanation: "Cost = 2 * 3.50 (Chai) + 2 * 4.00 (Puff) = 7.00 + 8.00 = $15.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "बेकरी के मेन्यू में कौन सा पेय (Beverage) सबसे महंगा है?",
+                options: ["बादाम मिल्क", "इलायची चाय", "वेज पफ", "चिकन समोसा"],
+                correctAnswer: "बादाम मिल्क",
+                explanation: "Badam Milk costs $4.50, which is more than Cardamom Chai ($3.50)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"पंजाबी ढाबा\" (Punjabi Dhaba) मेन्यू:",
+                options: ["$18.00", "$17.00", "$19.00", "$20.00"],
+                correctAnswer: "$18.00",
+                explanation: "Cost = 15.00 (Biryani) + 3.00 (Raita) = $18.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "पंजाबी ढाबा के मेन्यू में मीठे व्यंजन (Dessert) की कीमत क्या है?",
+                options: ["$4.00", "$3.00", "$15.00", "$16.00"],
+                correctAnswer: "$4.00",
+                explanation: "The dessert is Gulab Jamun, which is priced at $4.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"सच्चा दक्षिण\" (True South) मेन्यू:",
+                options: ["$9.00", "$8.00", "$10.00", "$11.00"],
+                correctAnswer: "$9.00",
+                explanation: "Cost = 6.00 (Idli) + 3.00 (Buttermilk) = $9.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "मेन्यू के अनुसार, प्याज उत्तपम और मेदु वड़ा का कुल मूल्य क्या है?",
+                options: ["$16.00", "$15.00", "$17.00", "$18.00"],
+                correctAnswer: "$16.00",
+                explanation: "Cost = 9.00 (Uttapam) + 7.00 (Vada) = $16.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"अमृतसर जंक्शन\" (Amritsar Junction) मेन्यू:",
+                options: ["$23.00", "$21.00", "$24.00", "$22.00"],
+                correctAnswer: "$23.00",
+                explanation: "Cost = 12.00 (Kulcha) + 5.00 (Lassi) + 6.00 (Halwa) = $23.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "अमृतसर जंक्शन के मेन्यू में सबसे सस्ता पेय (Drink) कौन सा है?",
+                options: ["जलजीरा", "लस्सी", "गाजर का हलवा", "अमृतसरी कुल्चा"],
+                correctAnswer: "जलजीरा",
+                explanation: "Jaljeera costs $3.00, which is cheaper than Lassi ($5.00)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"हिमालयन हाउस\" (Himalayan House) मेन्यू:",
+                options: ["$23.00", "$20.00", "$25.00", "$22.00"],
+                correctAnswer: "$23.00",
+                explanation: "Cost = 2 * 10.00 (Momo) + 3.00 (Tea) = 20.00 + 3.00 = $23.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "हिमालयन हाउस के मेन्यू में मुख्य सूप व्यंजन (Soup Dish) की कीमत क्या है?",
+                options: ["$12.00", "$10.00", "$5.00", "$3.00"],
+                correctAnswer: "$12.00",
+                explanation: "The soup dish is Thukpa, priced at $12.00."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "\"देसी पिज्जा\" (Desi Pizza) मेन्यू:",
+                options: ["$24.00", "$22.00", "$26.00", "$25.00"],
+                correctAnswer: "$24.00",
+                explanation: "Cost = 16.00 (Pizza) + 6.00 (Garlic Bread) + 2.00 (Soda) = $24.00."
+            )
+        ]
+    )
+
+    // MARK: - Reading Prescriptions
+    private static let readingPrescriptions = Exercise(
+        id: UUID(),
+        title: "दवा के पर्चे पढ़ना",
+        instructions: "दवा के पर्चे के निर्देशों को पढ़ें और सही उत्तर चुनें।",
+        section: .functionalSkills,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए दवा के पर्चे (Prescription Label) को ध्यान से पढ़ें:",
+                options: ["दिन में दो बार, भोजन के साथ", "दिन में एक बार, खाली पेट", "सोते समय केवल एक बार", "हर चार घंटे में पानी के बिना"],
+                correctAnswer: "दिन में दो बार, भोजन के साथ",
+                explanation: "The label directions state \"Take twice daily with meals\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "पर्चे के अनुसार, विक्रम के पास इस दवा के कुल कितने रिफिल उपलब्ध हैं?",
+                options: ["3", "2", "4", "कोई नहीं"],
+                correctAnswer: "3",
+                explanation: "The prescription label notes \"Refills: 3\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए दवा के निर्देश को पढ़ें:",
+                options: ["रात को सोने से पहले", "सुबह उठते ही", "दोपहर के भोजन के साथ", "वर्कआउट करने के तुरंत बाद"],
+                correctAnswer: "रात को सोने से पहले",
+                explanation: "The label says \"Take 1 tablet daily at bedtime\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "इस दवा के साथ किस पेय पदार्थ का सेवन करने से मना किया गया है?",
+                options: ["अंगूर का रस", "दूध", "संतरे का रस", "गुनगुना पानी"],
+                correctAnswer: "अंगूर का रस",
+                explanation: "The warning label states \"Do not take with grapefruit juice\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "निम्नलिखित पर्चे का विवरण देखें:",
+                options: ["उच्च रक्तचाप", "मधुमेह", "गठिया", "अस्थमा"],
+                correctAnswer: "उच्च रक्तचाप",
+                explanation: "Lisinopril is used for managing blood pressure (उच्च रक्तचाप)."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "पर्चे के अनुसार, मरीज को प्रतिदिन कितनी गोलियां लेनी चाहिए?",
+                options: ["1 गोली", "2 गोली", "आधा गोली", "आवश्यकतानुसार"],
+                correctAnswer: "1 गोली",
+                explanation: "The instruction says \"Take 1 tablet daily\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दी गई आंखों की दवा के निर्देश को पढ़ें:",
+                options: ["दिन में दो बार 1 बूंद", "दिन में तीन बार 2 बूंदें", "रात को सोते समय 4 बूंदें", "हर घंटे 1 बूंद"],
+                correctAnswer: "दिन में दो बार 1 बूंद",
+                explanation: "The label indicates \"Instill 1 drop in affected eye twice daily\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "आई ड्रॉप की बोतल का उपयोग करते समय क्या सावधानी बरतनी आवश्यक है?",
+                options: ["ड्रापर की नोक को न छुएं", "बोतल को गर्म पानी में रखें", "हर उपयोग के बाद अच्छी तरह हिलाएं नहीं", "खुली धूप में रखें"],
+                correctAnswer: "ड्रापर की नोक को न छुएं",
+                explanation: "The precaution warning states \"Do not touch the tip of the dropper\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "निम्नलिखित दर्द निवारक दवा के पर्चे को पढ़ें:",
+                options: ["4 गोलियां", "6 गोलियां", "3 गोलियां", "8 गोलियां"],
+                correctAnswer: "4 गोलियां",
+                explanation: "The maximum limit specified is \"Do not exceed 4 tablets in 24 hours\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "दो खुराकों (doses) के बीच न्यूनतम कितना समय अंतराल होना चाहिए?",
+                options: ["6 घंटे", "4 घंटे", "12 घंटे", "8 घंटे"],
+                correctAnswer: "6 घंटे",
+                explanation: "The label instruction states \"every 6 hours as needed\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए कफ सिरप के निर्देश को पढ़ें:",
+                options: ["गाड़ी या भारी मशीन चलाना", "सोना", "गर्म पानी पीना", "पढ़ना"],
+                correctAnswer: "गाड़ी या भारी मशीन चलाना",
+                explanation: "The warning says \"Do not operate machinery or drive after taking this medication\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "वयस्कों के लिए प्रति खुराक अनुशंसित मात्रा कितनी है?",
+                options: ["10 मिलीलीटर", "5 मिलीलीटर", "15 मिलीलीटर", "20 मिलीलीटर"],
+                correctAnswer: "10 मिलीलीटर",
+                explanation: "The dose specified is \"10ml every 4 hours\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "निम्नलिखित एंटीबायोटिक पर्चे को पढ़ें:",
+                options: ["7 दिन", "5 दिन", "10 दिन", "14 दिन"],
+                correctAnswer: "7 दिन",
+                explanation: "The prescription directs to \"take 3 times daily for 7 days\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "एंटीबायोटिक दवाओं के लिए सबसे महत्वपूर्ण सलाह क्या है?",
+                options: ["पाठ्यक्रम/खुराक पूरी तरह समाप्त करें", "बेहतर महसूस होने पर बंद कर दें", "केवल दूध के साथ लें", "ठंडे पानी के साथ न लें"],
+                correctAnswer: "पाठ्यक्रम/खुराक पूरी तरह समाप्त करें",
+                explanation: "Patients must complete the full course of antibiotics even if they feel better."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "नीचे दिए गए इंसुलिन पेन के निर्देश को पढ़ें:",
+                options: ["15 मिनट पहले", "30 मिनट पहले", "भोजन के तुरंत बाद", "1 घंटा पहले"],
+                correctAnswer: "15 मिनट पहले",
+                explanation: "Instructions specify injecting \"15 minutes before eating\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "इंसुलिन लगाने का सही स्थान निर्देश के अनुसार क्या है?",
+                options: ["पेट", "हाथ", "पैर", "पीठ"],
+                correctAnswer: "पेट",
+                explanation: "The instruction directs to inject \"into the abdomen (पेट)\"."
+            ),
+            ExerciseItem(
+                id: UUID(),
+                prompt: "निम्नलिखित एलर्जी रोधी दवा के पर्चे को पढ़ें:",
+                options: ["सुबह खाली पेट", "दोपहर में भोजन के बाद", "सोते समय पानी के बिना", "शाम को चाय के साथ"],
+                correctAnswer: "सुबह खाली पेट",
+                explanation: "Label states \"Take 1 tablet daily in the morning on an empty stomach\"."
+            )
+        ]
+    )
+
 }
