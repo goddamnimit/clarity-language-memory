@@ -18,17 +18,74 @@ enum ExerciseDataValidator {
   private static let yesNoOptions = ["Yes", "No"]
   private static let factOrOpinionOptions = ["Fact", "Opinion"]
 
-  /// All bundled exercise catalogs (9 data files).
+  /// All bundled exercise catalogs (41 data files).
   static let catalogs: [(name: String, exercises: () -> [Exercise])] = [
+    // English (original)
     ("LanguageExerciseData", { LanguageExerciseData.allExercises }),
     ("CognitionExerciseData", { CognitionExerciseData.allExercises }),
     ("FunctionalSkillsExerciseData", { FunctionalSkillsExerciseData.allExercises }),
+    ("EnglishNewExercisesData", { EnglishNewExercisesData.allExercises }),
+    ("EnglishNewExercisesData2", { EnglishNewExercisesData2.allExercises }),
+    // Spanish
     ("SpanishLanguageExerciseData", { SpanishLanguageExerciseData.allExercises }),
     ("SpanishCognitionExerciseData", { SpanishCognitionExerciseData.allExercises }),
     ("SpanishFunctionalSkillsExerciseData", { SpanishFunctionalSkillsExerciseData.allExercises }),
+    ("SpanishNewExercisesData", { SpanishNewExercisesData.allExercises }),
+    // Hindi
     ("HindiLanguageExerciseData", { HindiLanguageExerciseData.allExercises }),
     ("HindiCognitionExerciseData", { HindiCognitionExerciseData.allExercises }),
     ("HindiFunctionalSkillsExerciseData", { HindiFunctionalSkillsExerciseData.allExercises }),
+    ("HindiNewExercisesData", { HindiNewExercisesData.allExercises }),
+    // Gujarati
+    ("GujaratiLanguageExerciseData", { GujaratiLanguageExerciseData.allExercises }),
+    ("GujaratiCognitionExerciseData", { GujaratiCognitionExerciseData.allExercises }),
+    ("GujaratiFunctionalSkillsExerciseData", { GujaratiFunctionalSkillsExerciseData.allExercises }),
+    ("GujaratiNewExercisesData", { GujaratiNewExercisesData.allExercises }),
+    // Chinese
+    ("ChineseLanguageExerciseData", { ChineseLanguageExerciseData.allExercises }),
+    ("ChineseCognitionExerciseData", { ChineseCognitionExerciseData.allExercises }),
+    ("ChineseFunctionalSkillsExerciseData", { ChineseFunctionalSkillsExerciseData.allExercises }),
+    ("ChineseNewExercisesData", { ChineseNewExercisesData.allExercises }),
+    // Farsi
+    ("FarsiLanguageExerciseData", { FarsiLanguageExerciseData.allExercises }),
+    ("FarsiCognitionExerciseData", { FarsiCognitionExerciseData.allExercises }),
+    ("FarsiFunctionalSkillsExerciseData", { FarsiFunctionalSkillsExerciseData.allExercises }),
+    ("FarsiNewExercisesData", { FarsiNewExercisesData.allExercises }),
+    // Korean
+    ("KoreanLanguageExerciseData", { KoreanLanguageExerciseData.allExercises }),
+    ("KoreanCognitionExerciseData", { KoreanCognitionExerciseData.allExercises }),
+    ("KoreanFunctionalSkillsExerciseData", { KoreanFunctionalSkillsExerciseData.allExercises }),
+    ("KoreanNewExercisesData", { KoreanNewExercisesData.allExercises }),
+    // Vietnamese
+    ("VietnameseLanguageExerciseData", { VietnameseLanguageExerciseData.allExercises }),
+    ("VietnameseCognitionExerciseData", { VietnameseCognitionExerciseData.allExercises }),
+    ("VietnameseFunctionalSkillsExerciseData", { VietnameseFunctionalSkillsExerciseData.allExercises }),
+    ("VietnameseNewExercisesData", { VietnameseNewExercisesData.allExercises }),
+    // Arabic
+    ("ArabicLanguageExerciseData", { ArabicLanguageExerciseData.allExercises }),
+    ("ArabicCognitionExerciseData", { ArabicCognitionExerciseData.allExercises }),
+    ("ArabicFunctionalSkillsExerciseData", { ArabicFunctionalSkillsExerciseData.allExercises }),
+    ("ArabicNewExercisesData", { ArabicNewExercisesData.allExercises }),
+    // Portuguese
+    ("PortugueseLanguageExerciseData", { PortugueseLanguageExerciseData.allExercises }),
+    ("PortugueseCognitionExerciseData", { PortugueseCognitionExerciseData.allExercises }),
+    ("PortugueseFunctionalSkillsExerciseData", { PortugueseFunctionalSkillsExerciseData.allExercises }),
+    ("PortugueseNewExercisesData", { PortugueseNewExercisesData.allExercises }),
+    // Tagalog
+    ("TagalogLanguageExerciseData", { TagalogLanguageExerciseData.allExercises }),
+    ("TagalogCognitionExerciseData", { TagalogCognitionExerciseData.allExercises }),
+    ("TagalogFunctionalSkillsExerciseData", { TagalogFunctionalSkillsExerciseData.allExercises }),
+    ("TagalogNewExercisesData", { TagalogNewExercisesData.allExercises }),
+    // Punjabi
+    ("PunjabiLanguageExerciseData", { PunjabiLanguageExerciseData.allExercises }),
+    ("PunjabiCognitionExerciseData", { PunjabiCognitionExerciseData.allExercises }),
+    ("PunjabiFunctionalSkillsExerciseData", { PunjabiFunctionalSkillsExerciseData.allExercises }),
+    ("PunjabiNewExercisesData", { PunjabiNewExercisesData.allExercises }),
+    // Armenian
+    ("ArmenianLanguageExerciseData", { ArmenianLanguageExerciseData.allExercises }),
+    ("ArmenianCognitionExerciseData", { ArmenianCognitionExerciseData.allExercises }),
+    ("ArmenianFunctionalSkillsExerciseData", { ArmenianFunctionalSkillsExerciseData.allExercises }),
+    ("ArmenianNewExercisesData", { ArmenianNewExercisesData.allExercises }),
   ]
 
   /// Validates every exercise in every catalog.
