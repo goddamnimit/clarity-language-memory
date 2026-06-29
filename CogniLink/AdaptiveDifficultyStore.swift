@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 
 /// Manages difficulty levels and rolling performance history per exercise type.

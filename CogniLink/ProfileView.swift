@@ -401,33 +401,7 @@ struct ProfileView: View {
                                     AdaptiveOverrideItem(id: "completesaying", name: "Complete the Saying")
                                 ]
                                 ForEach(overrideItems) { item in
-                                    HStack {
-                                        Text(item.name)
-                                            .font(.body)
-                                            .foregroundColor(.primary)
-                                        
-                                        Spacer()
-                                        
-                                        Picker("", selection: Binding<String>(
-                                            get: {
-                                                AdaptiveDifficultyStore.shared.getManualOverride(for: item.id)?.rawValue ?? "auto"
-                                            },
-                                            set: { val in
-                                                let diff = (val == "auto") ? nil : Difficulty(rawValue: val)
-                                                AdaptiveDifficultyStore.shared.setManualOverride(diff, for: item.id)
-                                            }
-                                        )) {
-                                            Text(languageManager.currentLanguage.exerciseAuto).tag("auto")
-                                            Text(languageManager.currentLanguage.exerciseEasy).tag("easy")
-                                            Text(languageManager.currentLanguage.exerciseMedium).tag("medium")
-                                            Text(languageManager.currentLanguage.exerciseHard).tag("hard")
-                                        }
-                                        .pickerStyle(MenuPickerStyle())
-                                        .labelsHidden()
-                                    }
-                                    .padding(.horizontal, 16)
-                                    .frame(minHeight: 50)
-                                    
+                                    AdaptiveOverrideRow(item: item)
                                     if item.id != overrideItems.last?.id {
                                         Divider().padding(.leading, 16)
                                     }
@@ -440,34 +414,7 @@ struct ProfileView: View {
                         }
 
                         // Reset Adaptive Progress Button
-                        Button(action: { showResetAdaptiveAlert = true }) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(languageManager.currentLanguage.resetDifficultyProgressLabel)
-                                        .font(.body)
-                                        .foregroundColor(.red)
-                                    Text(languageManager.currentLanguage.resetDifficultyProgressSubtitle)
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                }
-                                Spacer()
-                            }
-                            .padding()
-                            .background(Color.red.opacity(0.08))
-                            .cornerRadius(12)
-                            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal)
-                        .alert(languageManager.currentLanguage.resetDifficultyProgressAlertTitle, isPresented: $showResetAdaptiveAlert) {
-                            Button(languageManager.currentLanguage.resetDifficultyProgressAlertCancel, role: .cancel) {}
-                            Button(languageManager.currentLanguage.resetDifficultyProgressAlertConfirm, role: .destructive) {
-                                adaptiveStore.resetAll()
-                            }
-                        } message: {
-                            Text(languageManager.currentLanguage.resetDifficultyProgressAlertMessage)
-                        }
+                        resetAdaptiveButton
                     }
                 }
 
@@ -530,6 +477,41 @@ struct ProfileView: View {
             }
         }
         #endif
+    }
+
+    // MARK: - Reset Adaptive Button
+
+    @ViewBuilder
+    private var resetAdaptiveButton: some View {
+        let lang = languageManager.currentLanguage
+        Button(action: { showResetAdaptiveAlert = true }) {
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(lang.resetDifficultyProgressLabel)
+                        .font(.body)
+                        .foregroundColor(.red)
+                    Text(lang.resetDifficultyProgressSubtitle)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer()
+            }
+            .padding()
+            .background(Color.red.opacity(0.08))
+            .cornerRadius(12)
+            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal)
+        .alert(lang.resetDifficultyProgressAlertTitle, isPresented: $showResetAdaptiveAlert) {
+            Button("Cancel", role: .cancel) {}
+            Button("Reset", role: .destructive) {
+                adaptiveStore.resetAll()
+            }
+        } message: {
+            Text(lang.resetDifficultyProgressAlertMessage)
+        }
     }
 
     // MARK: - Reusable Row
@@ -707,6 +689,55 @@ struct ProfileView: View {
                 print("[Export] ERROR: Fallback write also failed: \(error)")
             }
         }
+    }
+}
+
+// MARK: - AdaptiveOverrideRow
+
+private struct AdaptiveOverrideRow: View {
+    let item: AdaptiveOverrideItem
+    @ObservedObject private var languageManager = LanguageManager.shared
+
+    private var selectionBinding: Binding<String> {
+        Binding(
+            get: { AdaptiveDifficultyStore.shared.getManualOverride(for: item.id)?.rawValue ?? "auto" },
+            set: { val in
+                let diff = (val == "auto") ? nil : Difficulty(rawValue: val)
+                AdaptiveDifficultyStore.shared.setManualOverride(diff, for: item.id)
+            }
+        )
+    }
+
+    var body: some View {
+        HStack {
+            nameLabel
+            Spacer()
+            difficultyPicker
+        }
+        .padding(.horizontal, 16)
+        .frame(minHeight: 50)
+    }
+
+    private var nameLabel: some View {
+        Text(item.name)
+            .font(.body)
+            .foregroundColor(.primary)
+    }
+
+    private var difficultyPicker: some View {
+        let options: [(tag: String, label: String)] = [
+            ("auto",   languageManager.currentLanguage.exerciseAuto),
+            ("easy",   languageManager.currentLanguage.exerciseEasy),
+            ("medium", languageManager.currentLanguage.exerciseMedium),
+            ("hard",   languageManager.currentLanguage.exerciseHard)
+        ]
+        return Picker("", selection: selectionBinding) {
+            ForEach(options, id: \.tag) { opt in
+                Text(opt.label).tag(opt.tag)
+            }
+        }
+        .pickerStyle(MenuPickerStyle())
+        .labelsHidden()
     }
 }
 
