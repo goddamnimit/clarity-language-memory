@@ -11,8 +11,7 @@ struct SpanishHardExercisesData {
         exercise5,
         exercise6,
         exercise7,
-        exercise8,
-        easyHomonyms
+        exercise8
     ]
 
     // MARK: - Exercise 1: Homónimos Avanzados
@@ -220,32 +219,6 @@ struct SpanishHardExercisesData {
             ExerciseItem(prompt: "Completa el refrán: Árbol que nace torcido, jamás su tronco ___.", options: ["endereza", "crece", "rompe", "florece"], correctAnswer: "endereza", explanation: "El refrán es 'Árbol que nace torcido, jamás su tronco endereza', implicando que es difícil cambiar hábitos muy arraigados."),
             ExerciseItem(prompt: "Completa el refrán: Mucho ruido y pocas ___.", options: ["nueces", "hojas", "ramas", "palabras"], correctAnswer: "nueces", explanation: "El refrán es 'Mucho ruido y pocas nueces', para referirse a algo pomposo de poca sustancia real."),
             ExerciseItem(prompt: "Completa el refrán: El que busca ___.", options: ["encuentra", "pierde", "gana", "sabe"], correctAnswer: "encuentra", explanation: "El refrán es 'El que busca encuentra', alentando a la perseverancia en la investigación o acción.")
-        ]
-    )
-
-    // MARK: - Easy Homonyms
-    private static let easyHomonyms = Exercise(
-        title: "Homónimos Fáciles",
-        instructions: "Elige el homófono correcto para completar las oraciones.",
-        section: .language,
-        type: .homonym,
-        difficulty: .easy,
-        items: [
-            ExerciseItem(prompt: "[hola / ola] El niño dijo ___ al entrar. Una gran ___ de mar golpeó la playa.", options: ["hola...ola", "ola...hola", "hola...hola", "ola...ola"], correctAnswer: "hola...ola", explanation: "'Hola' es un saludo; 'ola' es el movimiento del agua del mar."),
-            ExerciseItem(prompt: "[casa / caza] La familia vive en una ___ roja. La ___ de animales está prohibida aquí.", options: ["casa...caza", "caza...casa", "casa...casa", "caza...caza"], correctAnswer: "casa...caza", explanation: "'Casa' es una vivienda; 'caza' es la acción de cazar animales."),
-            ExerciseItem(prompt: "[tubo / tuvo] El plomero arregló el ___ del agua. Ella ___ que ir al médico.", options: ["tubo...tuvo", "tuvo...tubo", "tubo...tubo", "tuvo...tuvo"], correctAnswer: "tubo...tuvo", explanation: "'Tubo' es una pieza hueca; 'tuvo' es del verbo tener."),
-            ExerciseItem(prompt: "[bello / vello] El amanecer en el campo es ___. El bebé tiene ___ fino en los brazos.", options: ["bello...vello", "vello...bello", "bello...bello", "vello...vello"], correctAnswer: "bello...vello", explanation: "'Bello' significa hermoso; 'vello' es el pelo corto del cuerpo."),
-            ExerciseItem(prompt: "[echo / hecho] Siempre ___ las llaves en mi bolso. El trabajo ya está ___.", options: ["echo...hecho", "hecho...echo", "echo...echo", "hecho...hecho"], correctAnswer: "echo...hecho", explanation: "'Echo' es del verbo echar (tirar); 'hecho' es del verbo hacer."),
-            ExerciseItem(prompt: "[abría / habría] Él ___ la ventana para refrescar la habitación. Si tuviera dinero, ___ comprado el pan.", options: ["abría...habría", "habría...abría", "abría...abría", "habría...habría"], correctAnswer: "abría...habría", explanation: "'Abría' es del verbo abrir; 'habría' es del verbo haber."),
-            ExerciseItem(prompt: "[hacia / hacía] El perro corrió ___ su dueño. Ella ___ la comida todos los días.", options: ["hacia...hacía", "hacía...hacia", "hacia...hacia", "hacía...hacía"], correctAnswer: "hacia...hacía", explanation: "'Hacia' indica dirección; 'hacía' es del verbo hacer."),
-            ExerciseItem(prompt: "[azar / asar] Pusimos la carne a ___ en la cocina. El juego de ___ depende de la suerte.", options: ["asar...azar", "azar...asar", "asar...asar", "azar...azar"], correctAnswer: "asar...azar", explanation: "'Asar' es cocinar al fuego; 'azar' es casualidad o suerte."),
-            ExerciseItem(prompt: "[vaso / bazo] Bebí un ___ de agua fría. El ___ es un órgano del cuerpo.", options: ["vaso...bazo", "bazo...vaso", "vaso...vaso", "bazo...bazo"], correctAnswer: "vaso...bazo", explanation: "'Vaso' es el recipiente para beber; 'bazo' es el órgano corporal."),
-            ExerciseItem(prompt: "[bota / vota] Él se pone la ___ en el pie izquierdo. El ciudadano ___ en las elecciones.", options: ["bota...vota", "vota...bota", "bota...bota", "vota...vota"], correctAnswer: "bota...vota", explanation: "'Bota' es el calzado; 'vota' es dar un voto en una elección."),
-            ExerciseItem(prompt: "[hierba / hierva] La vaca come ___ verde. Deja que el agua ___ en la olla.", options: ["hierba...hierva", "hierva...hierba", "hierba...hierba", "hierva...hierva"], correctAnswer: "hierba...hierva", explanation: "'Hierba' es la planta del suelo; 'hierva' es del verbo hervir."),
-            ExerciseItem(prompt: "[cabo / cavo] El ___ de la cuerda es corto. Yo ___ un hoyo en la arena.", options: ["cabo...cavo", "cavo...cabo", "cabo...cabo", "cavo...cavo"], correctAnswer: "cabo...cavo", explanation: "'Cabo' es la punta de algo; 'cavo' es del verbo cavar."),
-            ExerciseItem(prompt: "[coser / cocer] Ella prefiere ___ su propia ropa a máquina. Vamos a ___ las verduras al vapor.", options: ["coser...cocer", "cocer...coser", "coser...coser", "cocer...cocer"], correctAnswer: "coser...cocer", explanation: "'Coser' es unir telas con hilo; 'cocer' es cocinar alimentos en agua caliente."),
-            ExerciseItem(prompt: "[graba / grava] El micrófono ___ su voz con claridad. El camino está cubierto de ___ gris.", options: ["graba...grava", "grava...graba", "graba...graba", "grava...grava"], correctAnswer: "graba...grava", explanation: "'Graba' es registrar sonidos; 'grava' son piedras pequeñas."),
-            ExerciseItem(prompt: "[sabia / savia] La abuela es una persona muy ___. La ___ transporta nutrientes por el árbol.", options: ["sabia...savia", "savia...sabia", "sabia...sabia", "savia...savia"], correctAnswer: "sabia...savia", explanation: "'Sabia' es alguien con sabiduría; 'savia' es el líquido de las plantas.")
         ]
     )
 }

@@ -12,7 +12,15 @@ struct PortugueseHardExercisesData {
         exercise6,
         exercise7,
         exercise8,
-        easyHomonyms
+        easyHomonyms,
+        easyAnalogies,
+        easyCauseEffect,
+        easyWhatsWrong,
+        easySequencing,
+        mediumWordAssociation,
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: Homófonos Avançados
@@ -246,6 +254,194 @@ struct PortugueseHardExercisesData {
             ExerciseItem(prompt: "[aço / asso] A faca é feita de ___ forte. Eu ___ um bolo de chocolate hoje.", options: ["aço...asso", "asso...aço", "aço...aço", "asso...asso"], correctAnswer: "aço...asso", explanation: "'Aço' é a liga metálica resistente; 'asso' é do verbo assar no forno."),
             ExerciseItem(prompt: "[viagem / viajem] A ___ de férias foi muito divertida. Espero que eles ___ amanhã.", options: ["viagem...viajem", "viajem...viagem", "viagem...viagem", "viajem...viajem"], correctAnswer: "viagem...viajem", explanation: "'Viagem' é o substantivo (a jornada); 'viajem' é a forma verbal do verbo viajar."),
             ExerciseItem(prompt: "[paço / passo] O rei mora no ___ imperial. Dei um ___ à frente.", options: ["paço...passo", "passo...paço", "paço...paço", "passo...passo"], correctAnswer: "paço...passo", explanation: "'Paço' é o palácio real; 'passo' é o movimento de caminhar.")
+        ]
+    )
+
+    // MARK: - Easy Analogies
+    private static let easyAnalogies = Exercise(
+        title: "Analogias Simples",
+        instructions: "Escolha a palavra que melhor completa a analogia.",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "ALTO está para BAIXO assim como QUENTE está para FRIO", options: ["FRIO", "MORNO", "FERVENDO", "MOLHADO"], correctAnswer: "FRIO", explanation: "Alto e baixo são opostos, assim como quente e frio."),
+            ExerciseItem(prompt: "PÁSSARO está para VOAR assim como PEIXE está para NADAR", options: ["NADAR", "CORRER", "CAMINHAR", "SALTAR"], correctAnswer: "NADAR", explanation: "Um pássaro se move voando, e um peixe nadando."),
+            ExerciseItem(prompt: "GATO está para GATINHO assim como CACHORRO está para FILHOTE", options: ["FILHOTE", "GATINHO", "BEZERRO", "POTRO"], correctAnswer: "FILHOTE", explanation: "Gatinho é o filhote do gato, e filhote é o filhote do cachorro."),
+            ExerciseItem(prompt: "DIA está para SOL assim como NOITE está para LUA", options: ["LUA", "CHUVA", "VENTO", "NUVEM"], correctAnswer: "LUA", explanation: "O sol brilha durante o dia e a lua à noite."),
+            ExerciseItem(prompt: "GELO está para FRIO assim como FOGO está para QUENTE", options: ["QUENTE", "MOLHADO", "ESCURO", "MACIO"], correctAnswer: "QUENTE", explanation: "O gelo é frio ao toque, enquanto o fogo é quente."),
+            ExerciseItem(prompt: "CANETA está para ESCREVER assim como TESOURA está para CORTAR", options: ["CORTAR", "COLAR", "DESENHAR", "PINTAR"], correctAnswer: "CORTAR", explanation: "A caneta é usada para escrever, e a tesoura para cortar."),
+            ExerciseItem(prompt: "ÁRVORE está para FOLHA assim como FLOR está para PÉTALA", options: ["PÉTALA", "ESPINHO", "RAIZ", "CAULE"], correctAnswer: "PÉTALA", explanation: "A folha faz parte da árvore, e a pétala faz parte da flor."),
+            ExerciseItem(prompt: "CARRO está para ESTRADA assim como BARCO está para ÁGUA", options: ["AGUA", "AR", "TERRA", "TRILHO"], correctAnswer: "AGUA", explanation: "Um carro viaja na estrada, enquanto um barco viaja na água."),
+            ExerciseItem(prompt: "MEIA está para PÉ assim como LUVA está para MÃO", options: ["MÃO", "CABEÇA", "PESCOÇO", "BRAÇO"], correctAnswer: "MÃO", explanation: "A meia é usada no pé, e a luva na mão."),
+            ExerciseItem(prompt: "FOME está para COMIDA assim como SEDE está para ÁGUA", options: ["ÁGUA", "PÃO", "FRUTA", "SAL"], correctAnswer: "ÁGUA", explanation: "Quando se tem fome precisa de comida, e quando se tem sede de água."),
+            ExerciseItem(prompt: "SAPATO está para PÉ assim como CHAPÉU está para CABEÇA", options: ["CABEÇA", "MÃO", "PERNA", "PESCOÇO"], correctAnswer: "CABEÇA", explanation: "O sapato é usado no pé, e o chapéu na cabeça."),
+            ExerciseItem(prompt: "MAÇÃ está para FRUTA assim como CENOURA está para VEGETAL", options: ["VEGETAL", "CARNE", "GRÃO", "LATICÍNIO"], correctAnswer: "VEGETAL", explanation: "A maçã é um tipo de fruta, enquanto a cenoura é um vegetal."),
+            ExerciseItem(prompt: "VACA está para LEITE assim como ABELHA está para MEL", options: ["MEL", "CERA", "PÓLEN", "ÁGUA"], correctAnswer: "MEL", explanation: "A vaca produz leite, e a abelha produz mel."),
+            ExerciseItem(prompt: "DENTES está para ESCOVA assim como CABELO está para PENTE", options: ["PENTE", "LAVAR", "CORTAR", "SECAR"], correctAnswer: "PENTE", explanation: "Escovamos os dentes para limpar, e penteamos o cabelo para arrumar."),
+            ExerciseItem(prompt: "CHUVA está para MOLHADO assim como SOL está para SECO", options: ["SECO", "FRIO", "ESCURO", "VENTOSO"], correctAnswer: "SECO", explanation: "A chuva molha as coisas, enquanto o sol as seca.")
+        ]
+    )
+
+    // MARK: - Easy Cause and Effect
+    private static let easyCauseEffect = Exercise(
+        title: "Causa e Efeito Simples",
+        instructions: "Escolha a opção que representa a causa ou efeito mais lógico.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Causa: Você deixa cair um copo de vidro no chão de concreto.", options: ["O copo quebra", "O copo flutua", "O copo fica macio", "O copo fica azul"], correctAnswer: "O copo quebra", explanation: "O vidro é frágil e quebra quando cai em uma superfície dura."),
+            ExerciseItem(prompt: "Causa: Você esquece de regar uma planta por uma semana.", options: ["Ela murcha e seca", "Ela dá flores", "Ela fica roxa", "Ela produz frutos"], correctAnswer: "Ela murcha e seca", explanation: "As plantas precisam de água para viver; sem ela, murcham e secam."),
+            ExerciseItem(prompt: "Causa: Você deixa um cubo de gelo na mesa da cozinha no verão.", options: ["Ele derrete", "Ele fica maior", "Ele vira madeira", "Ele continua congelado"], correctAnswer: "Ele derrete", explanation: "O calor do ambiente faz o gelo passar do estado sólido para o líquido."),
+            ExerciseItem(prompt: "Causa: Você sopra um balão com ar demais.", options: ["Ele estoura", "Ele vira pedra", "Ele canta", "Ele fica pesado"], correctAnswer: "Ele estoura", explanation: "Colocar ar demais no balão excede a elasticidade da borracha, fazendo-o estourar."),
+            ExerciseItem(prompt: "Causa: Você aperta o interruptor de luz na parede.", options: ["A luz acende", "O quarto fica frio", "A porta tranca", "O relógio para"], correctAnswer: "A luz acende", explanation: "Apertar o interruptor completa o circuito elétrico, acendendo a lâmpada."),
+            ExerciseItem(prompt: "Causa: Você passa a noite inteira sem dormir.", options: ["Fica muito cansado no dia seguinte", "Fica com muita energia", "O cabelo fica branco", "Você fica mais alto"], correctAnswer: "Fica muito cansado no dia seguinte", explanation: "O sono é necessário para descansar; a falta dele causa fadiga no dia seguinte."),
+            ExerciseItem(prompt: "Causa: Você fica na chuva forte sem guarda-chuva.", options: ["Você fica molhado", "Você fica seco", "Você flutua", "Você pega fogo"], correctAnswer: "Você fica molhado", explanation: "A chuva é água caindo do céu; ficar nela sem proteção molha o corpo."),
+            ExerciseItem(prompt: "Causa: Você coloca o pão na torradeira e abaixa a alavanca.", options: ["O pão fica tostado", "O pão vira farinha", "O pão derrete", "O pão fica úmido"], correctAnswer: "O pão fica tostado", explanation: "A torradeira aquece e doura o pão, tornando-o tostado."),
+            ExerciseItem(prompt: "Causa: Você deixa o leite fora da geladeira por três dias no calor.", options: ["Ele azeda e estraga", "Ele fica mais doce", "Ele congela", "Ele vira mel"], correctAnswer: "Ele azeda e estraga", explanation: "O calor acelera a proliferação de bactérias, fazendo o leite azedar."),
+            ExerciseItem(prompt: "Causa: Você sopra uma vela acesa com força.", options: ["A chama se apaga", "A chama cresce", "A vela derrete na hora", "A vela fica azul"], correctAnswer: "A chama se apaga", explanation: "O sopro afasta o oxigênio e o calor da chama, apagando o fogo."),
+            ExerciseItem(prompt: "Causa: Você coloca uma panela com água no fogo alto.", options: ["A água ferve", "A água congela", "A água some na hora", "A panela cresce"], correctAnswer: "A água ferve", explanation: "O calor do fogão eleva a temperatura da água até o ponto de ebulição."),
+            ExerciseItem(prompt: "Causa: Você pisa em um prego afiado descalço.", options: ["Seu pé se machuca", "Seus sapatos sujam", "Você pula mais alto", "Seu pé fica verde"], correctAnswer: "Seu pé se machuca", explanation: "Pisar em um objeto pontiagudo perfura a pele e causa ferimentos."),
+            ExerciseItem(prompt: "Causa: Você adiciona açúcar ao café preto amargo.", options: ["O café fica doce", "O café fica frio", "O café desaparece", "O café fica salgado"], correctAnswer: "O café fica doce", explanation: "O açúcar adoça a bebida, mascarando o sabor amargo do café."),
+            ExerciseItem(prompt: "Causa: Você joga uma bola de tênis contra uma parede de tijolos.", options: ["A bola rebate de volta", "A bola atravessa a parede", "A parede cai", "A bola derrete"], correctAnswer: "A bola rebate de volta", explanation: "A bola de tênis é elástica e, ao colidir com uma parede rígida, retorna."),
+            ExerciseItem(prompt: "Causa: Você não estuda nada para uma prova importante.", options: ["Você tira nota baixa", "Você tira nota máxima", "A escola fecha", "Você se forma mais cedo"], correctAnswer: "Você tira nota baixa", explanation: "Sem preparação ou estudo, a probabilidade de responder corretamente é baixa.")
+        ]
+    )
+
+    // MARK: - Easy What's Wrong Here
+    private static let easyWhatsWrong = Exercise(
+        title: "Absurdos Simples",
+        instructions: "Identifique o erro lógico ou impossibilidade na frase.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Absurdo: O João calçou os sapatos antes das meias.", options: ["As meias devem ser calçadas antes dos sapatos", "Os sapatos devem ser colocados nas mãos", "As meias são usadas na cabeça", "Os sapatos devem ser comidos"], correctAnswer: "As meias devem ser calçadas antes dos sapatos", explanation: "As meias ficam dentro dos sapatos, por isso devem ser calçadas primeiro."),
+            ExerciseItem(prompt: "Absurdo: Ela usou um garfo para tomar a sopa de galinha quente.", options: ["A sopa é líquida e exige colher", "A sopa deve ser comida com os dedos", "O garfo serve para cortar bife", "A sopa deve ser cozida no copo"], correctAnswer: "A sopa é líquida e exige colher", explanation: "Líquidos escorrem pelos dentes do garfo; é preciso usar uma colher."),
+            ExerciseItem(prompt: "Absurdo: O peixe subiu na árvore para fazer um ninho.", options: ["Peixes vivem na água e não sobem em árvores", "As árvores não têm galhos", "Peixes fazem ninhos no telhado", "Os peixes voam no ar"], correctAnswer: "Peixes vivem na água e não sobem em árvores", explanation: "Peixes respiram por brânquias e não têm membros para escalar árvores."),
+            ExerciseItem(prompt: "Absurdo: Ele vestiu um casaco pesado de inverno para nadar na piscina.", options: ["Usa-se roupa de banho para nadar, não casacos", "Casacos pesados fazem você nadar mais rápido", "A piscina deve estar cheia de gelo", "Casacos de inverno só servem para o verão"], correctAnswer: "Usa-se roupa de banho para nadar, não casacos", explanation: "Casacos de inverno absorvem água e ficam pesados, dificultando o nado."),
+            ExerciseItem(prompt: "Absurdo: Eles cozinharam um ovo cru dentro do freezer.", options: ["Freezers congelam; fogões cozinham", "Ovos só devem ser comidos crus", "O freezer serve para ferver água", "Ovos cozinham melhor no micro-ondas"], correctAnswer: "Freezers congelam; fogões cozinham", explanation: "Cozinhar exige calor; o freezer mantém a temperatura abaixo de zero."),
+            ExerciseItem(prompt: "Absurdo: O cachorro abriu o livro e começou a ler em voz alta.", options: ["Cachorros não leem nem falam línguas humanas", "Cachorros só leem jornais", "Livros devem ser lidos em silêncio", "Cachorros preferem escrever livros"], correctAnswer: "Cachorros não leem nem falam línguas humanas", explanation: "Cães não têm a capacidade de falar ou ler w wika humana."),
+            ExerciseItem(prompt: "Absurdo: Ela cortou o bolo de aniversário com uma colher de sopa.", options: ["Usa-se faca para cortar bolo, não colher", "Bolos devem ser comidos com as mãos", "Colheres servem apenas para sopa", "Bolos devem ser cortados com tesoura"], correctAnswer: "Usa-se faca para cortar bolo, não colher", explanation: "Faca tem corte preciso para fatiar bolo; colheres são para líquidos."),
+            ExerciseItem(prompt: "Absurdo: Ele usou um lápis de madeira para digitar no celular.", options: ["Telas de celular usam dedos ou canetas especiais", "Lápis só funcionam no vidro", "Celulares só aceitam comandos de voz", "O lápis é muito curto para digitar"], correctAnswer: "Telas de celular usam dedos ou canetas especiais", explanation: "Telas capacitivas exigem o contato da pele ou de canetas stylus adequadas."),
+            ExerciseItem(prompt: "Absurdo: O avião navegou sobre as águas profundas do oceano.", options: ["Aviões voam no ar; navios navegam na água", "A água do mar é sempre verde", "Aviões só andam na terra", "Navios voam no céu"], correctAnswer: "Aviões voam no ar; navios navegam na água", explanation: "Aviões voam na atmosfera; navios são os veículos que navegam na água."),
+            ExerciseItem(prompt: "Absurdo: Ela abriu o guarda-chuva dentro da sala seca de casa.", options: ["Guarda-chuvas são para chuva ou sol na rua", "Salas de estar devem ter poças de chuva", "Guarda-chuvas são apenas para o inverno", "Ela deveria usar capa de chuva dentro de casa"], correctAnswer: "Guarda-chuvas são para chuva ou sol na rua", explanation: "Guarda-chuva serve para proteção externa; não chove dentro de casa."),
+            ExerciseItem(prompt: "Absurdo: O gato latiu forte para o carteiro.", options: ["Gatos miam; cachorros latem", "Gatos só latem para ratos", "Carteiros têm medo de gatos", "Gatos latem apenas de manhã"], correctAnswer: "Gatos miam; cachorros latem", explanation: "Latir é uma vocalização dos cães; gatos emitem miados."),
+            ExerciseItem(prompt: "Absurdo: Ele colocou gasolina na bicicleta para ir à padaria.", options: ["Bicicletas são movidas a pedal, não a gasolina", "Bicicletas usam combustível diesel", "Bicicletas funcionam apenas com baterias", "Bicicletas não precisam de rodas"], correctAnswer: "Bicicletas são movidas a pedal, não a gasolina", explanation: "A bicicleta comum depende apenas da força física humana nos pedais."),
+            ExerciseItem(prompt: "Absurdo: Caiu uma neve pesada no dia quente de verão.", options: ["A neve só cai no frio do inverno", "Os dias de verão são escuros", "O verão só acontece em dezembro", "A neve é quente ao toque"], correctAnswer: "A neve só cai no frio do inverno", explanation: "A neve precisa de temperaturas congelantes para se formar e cair."),
+            ExerciseItem(prompt: "Absurdo: Ela lavou a louça suja dentro da lixeira.", options: ["Louça se lava na pia, não na lixeira", "Lixeiras servem para roupas limpas", "Louça deve ser lavada no jardim", "A lixeira está cheia de água limpa"], correctAnswer: "Louça se lava na pia, não na lixeira", explanation: "A lixeira armazena resíduos; a pia de cozinha serve para lavar louça."),
+            ExerciseItem(prompt: "Absurdo: Ele regou o jardim com um balde cheio de areia seca.", options: ["Plantas precisam de água para crescer, não areia", "A areia deixa a terra molhada demais", "Jardins devem ser cheios de pedras", "A areia serve para plantas artificiais"], correctAnswer: "Plantas precisam de água para crescer, não areia", explanation: "Plantas precisam de água para se hidratar; areia seca não rega a planta.")
+        ]
+    )
+
+    // MARK: - Easy Sequencing
+    private static let easySequencing = Exercise(
+        title: "Passos do Dia a Dia",
+        instructions: "Ordene os passos da atividade de forma lógica.",
+        section: .language,
+        type: .sequencing,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Fazer uma torrada", options: ["Colocar a fatia de pão na torradeira", "Abaixar a alavanca para começar", "Esperar a torrada subir", "Passar manteiga na torrada quente"], correctAnswer: "Colocar a fatia de pão na torradeira | Abaixar a alavanca para começar | Esperar a torrada subir | Passar manteiga na torrada quente", explanation: "Primeiro insere-se o pão, inicia-se o calor, aguarda-se o término e passa-se o ingrediente."),
+            ExerciseItem(prompt: "Lavar as mãos", options: ["Molhar as mãos com água", "Passar sabão e esfregar as palmas", "Enxaguar o sabão com água", "Secar as mãos com uma toalha limpa"], correctAnswer: "Molhar as mãos com água | Passar sabão e esfregar as palmas | Enxaguar o sabão com água | Secar as mãos com uma toalha limpa", explanation: "Higiene das mãos: molhar, ensaboar/esfregar, enxaguar e secar."),
+            ExerciseItem(prompt: "Enviar uma carta", options: ["Escrever a mensagem no papel", "Colocar o papel dentro do envelope", "Escrever o endereço do destinatário", "Colar o selo e colocar na caixa de correio"], correctAnswer: "Escrever a mensagem no papel | Colocar o papel dentro do envelope | Escrever o endereço do destinatário | Colar o selo e colocar na caixa de correio", explanation: "Envio postal: redigir, envelopar, endereçar e postar com selo."),
+            ExerciseItem(prompt: "Escovar os dentes", options: ["Colocar pasta na escova de dentes", "Escovar bem todos os dentes", "Enxaguar a boca com água", "Lavar e guardar a escova"], correctAnswer: "Colocar pasta na escova de dentes | Escovar bem todos os dentes | Enxaguar a boca com água | Lavar e guardar a escova", explanation: "Escovação dental: aplicar pasta, escovar dentes, enxaguar e limpar a escova."),
+            ExerciseItem(prompt: "Preparar chá quente", options: ["Ferver água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Deixar em infusão e beber"], correctAnswer: "Ferver água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Deixar em infusão e beber", explanation: "Preparo de chá: aquecer água, colocar saquinho, verter líquido e aguardar infusão.")
+        ]
+    )
+
+    // MARK: - Medium Word Association
+    private static let mediumWordAssociation = Exercise(
+        title: "Associação de Palavras",
+        instructions: "Escolha a palavra mais relacionada com o termo fornecido.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "BIBLIOTECA", options: ["Silêncio", "Barulho", "Multidão", "Jogo"], correctAnswer: "Silêncio", explanation: "A biblioteca é um espaço de leitura onde se exige silêncio."),
+            ExerciseItem(prompt: "HOSPITAL", options: ["Cura", "Férias", "Compras", "Culinária"], correctAnswer: "Cura", explanation: "Hospitais são locais de tratamento médico voltados para a cura de doentes."),
+            ExerciseItem(prompt: "AEROPORTO", options: ["Partida", "Sono", "Jardinagem", "Pintura"], correctAnswer: "Partida", explanation: "O aeroporto é o ponto de embarque e partida de voos de viagem."),
+            ExerciseItem(prompt: "DESERTO", options: ["Seca", "Tempestade", "Floresta", "Oceano"], correctAnswer: "Seca", explanation: "Desertos são caracterizados pela extrema falta de umidade e seca."),
+            ExerciseItem(prompt: "CASAMENTO", options: ["Aliança", "Exame", "Escritório", "Chave"], correctAnswer: "Aliança", explanation: "A aliança é o símbolo material tradicional de união trocado no casamento."),
+            ExerciseItem(prompt: "FAZENDA", options: ["Colheita", "Cidade", "Escritório", "Fábrica"], correctAnswer: "Colheita", explanation: "A fazenda produz alimentos agrícolas, cujo resultado final é a colheita."),
+            ExerciseItem(prompt: "COZINHA", options: ["Receita", "Cama", "Carro", "Chuveiro"], correctAnswer: "Receita", explanation: "Cozinhar envolve seguir orientações ou uma receita culinária."),
+            ExerciseItem(prompt: "MONTANHA", options: ["Cume", "Porão", "Rua", "Deserto"], correctAnswer: "Cume", explanation: "O cume é a parte mais alta ou o pico de uma montanha."),
+            ExerciseItem(prompt: "TRIBUNAL", options: ["Justiça", "Teatro", "Cozinha", "Mercado"], correctAnswer: "Justiça", explanation: "O tribunal é a instituição judicial voltada a aplicar as leis e a justiça."),
+            ExerciseItem(prompt: "ESCRITÓRIO", options: ["Prazo", "Praia", "Cama", "Picnic"], correctAnswer: "Prazo", explanation: "Trabalhos de escritório costumam ser organizados por datas limite ou prazos."),
+            ExerciseItem(prompt: "TEATRO", options: ["Palco", "Cozinha", "Rodovia", "Floresta"], correctAnswer: "Palco", explanation: "O palco é o tablado onde os atores se apresentam no teatro."),
+            ExerciseItem(prompt: "FLORESTA", options: ["Natureza", "Cidade", "Deserto", "Asfalto"], correctAnswer: "Natureza", explanation: "Florestas são biomas naturais caracterizados por árvores e vida selvagem."),
+            ExerciseItem(prompt: "LABORATÓRIO", options: ["Experimento", "Culinária", "Dança", "Compras"], correctAnswer: "Experimento", explanation: "Laboratórios são instalações para a realização de pesquisas e experimentos."),
+            ExerciseItem(prompt: "MUSEU", options: ["Exposição", "Filme", "Esportes", "Culinária"], correctAnswer: "Exposição", explanation: "Museus preservam acervos históricos e artísticos exibidos em exposições."),
+            ExerciseItem(prompt: "DENTISTA", options: ["Cárie", "Corte de cabelo", "Passagem", "Culinária"], correctAnswer: "Cárie", explanation: "O dentista trata da saúde dos dentes, combatendo problemas como a cárie.")
+        ]
+    )
+
+    // MARK: - Medium Homonyms
+    private static let mediumHomonyms = Exercise(
+        title: "Homófonos Médios",
+        instructions: "Escolha as palavras corretas para completar as orações.",
+        section: .language,
+        type: .homonym,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "[noz / nos] Comemos doce de ___ no Natal. Ela ___ ajudou com a mudança.", options: ["noz...nos", "nos...noz", "noz...nos", "nos...nos"], correctAnswer: "noz...nos", explanation: "'Noz' é a semente comestível; 'nos' é o pronome oblíquo."),
+            ExerciseItem(prompt: "[traz / trás] Ele ___ as compras da feira. O menino ficou para ___ do grupo.", options: ["traz...trás", "trás...traz", "traz...traz", "trás...trás"], correctAnswer: "traz...trás", explanation: "'Traz' é do verbo trazer; 'trás' indica a parte de trás."),
+            ExerciseItem(prompt: "[houve / ouve] Não ___ nenhuma dúvida na aula. Ela ___ música clássica.", options: ["houve...ouve", "ouve...houve", "houve...houve", "ouve...ouve"], correctAnswer: "houve...ouve", explanation: "'Houve' é do verbo haver; 'ouve' é do verbo ouvir."),
+            ExerciseItem(prompt: "[mal / mau] Ele se comportou muito ___. Aquele era um ___ exemplo.", options: ["mal...mau", "mau...mal", "mal...mal", "mau...mau"], correctAnswer: "mal...mau", explanation: "'Mal' é o oposto de bem; 'mau' é o oposto de bom."),
+            ExerciseItem(prompt: "[conserto / concerto] O mecânico fez o ___ do carro. Fomos ao ___ de piano.", options: ["conserto...concerto", "concerto...conserto", "conserto...conserto", "concerto...concerto"], correctAnswer: "conserto...concerto", explanation: "'Conserto' é reparo; 'concerto' é espetáculo musical.")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "Provérbios Populares",
+        instructions: "Escolha a palavra que completa corretamente o ditado popular.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Mais vale um pássaro na mão do que dois ___", options: ["voando", "cantando", "presos", "comendo"], correctAnswer: "voando", explanation: "É melhor ter uma garantia pequena do que arriscar tudo por algo incerto."),
+            ExerciseItem(prompt: "Quem não tem cão, caça com ___", options: ["gato", "rato", "leão", "passarinho"], correctAnswer: "gato", explanation: "Devemos improvisar com os recursos que temos à disposição."),
+            ExerciseItem(prompt: "A cavalo dado não se olha os ___", options: ["dentes", "olhos", "cascos", "pelos"], correctAnswer: "dentes", explanation: "Não se deve criticar ou desvalorizar um presente recebido."),
+            ExerciseItem(prompt: "De grão em grão, a galinha enche o ___", options: ["papo", "ninho", "saco", "estômago"], correctAnswer: "papo", explanation: "Pequenas economias acumuladas resultam em grandes quantidades."),
+            ExerciseItem(prompt: "Cão que ladra não ___", options: ["morde", "corre", "late", "brinca"], correctAnswer: "morde", explanation: "Quem muito ameaça geralmente não age de verdade."),
+            ExerciseItem(prompt: "Quem avisa, amigo ___", options: ["é", "será", "foi", "está"], correctAnswer: "é", explanation: "Amigos verdadeiros avisam sobre perigos e nos ajudam."),
+            ExerciseItem(prompt: "A mentira tem perna ___", options: ["curta", "longa", "torta", "quebrada"], correctAnswer: "curta", explanation: "As mentiras são descobertas rapidamente."),
+            ExerciseItem(prompt: "Antes só do que mal ___", options: ["acompanhado", "vestido", "alimentado", "protegido"], correctAnswer: "acompanhado", explanation: "É melhor a solidão do que a companhia de pessoas nocivas."),
+            ExerciseItem(prompt: "Cada macaco no seu ___", options: ["galho", "ninho", "quarto", "lugar"], correctAnswer: "galho", explanation: "Cada pessoa deve cuidar dos seus próprios assuntos sem interferir nos outros."),
+            ExerciseItem(prompt: "Quem planta colhe, e quem semeia ventos colhe ___", options: ["tempestades", "flores", "chuvas", "frutas"], correctAnswer: "tempestades", explanation: "Ações ruins geram consequências ainda piores no futuro."),
+            ExerciseItem(prompt: "Filho de peixe, peixinho ___", options: ["é", "será", "nada", "morre"], correctAnswer: "é", explanation: "Os filhos herdam traços e talentos de seus pais."),
+            ExerciseItem(prompt: "Quem ri por último, ri ___", options: ["melhor", "mais", "alto", "depressa"], correctAnswer: "melhor", explanation: "A vitória final é a que realmente importa."),
+            ExerciseItem(prompt: "Onde há fumaça, há ___", options: ["fogo", "calor", "brasa", "vento"], correctAnswer: "fogo", explanation: "Se há boatos, costuma haver algum fundo de verdade."),
+            ExerciseItem(prompt: "De médico e de louco, todo mundo tem um ___", options: ["pouco", "dia", "amigo", "lado"], correctAnswer: "pouco", explanation: "As pessoas têm um pouco de sabedoria prática e de excentricidade."),
+            ExerciseItem(prompt: "Há males que vêm para o ___", options: ["bem", "mal", "pior", "fim"], correctAnswer: "bem", explanation: "Situações ruins podem acabar gerando resultados positivos no final.")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "Ditados Avançados",
+        instructions: "Escolha a palavra que completa corretamente o ditado popular.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "Água mole em pedra dura, tanto bate até que ___", options: ["fura", "quebra", "racha", "molha"], correctAnswer: "fura", explanation: "A persistência vence qualquer obstáculo difícil."),
+            ExerciseItem(prompt: "Em casa de ferreiro, o espeto é de ___", options: ["pau", "ferro", "aço", "pedra"], correctAnswer: "pau", explanation: "É comum faltar em nossa casa aquilo que é a nossa própria especialidade profissional."),
+            ExerciseItem(prompt: "A pressa é a inimiga da ___", options: ["perfeição", "rapidez", "calma", "beleza"], correctAnswer: "perfeição", explanation: "Fazer as coisas correndo gera erros e imperfeições."),
+            ExerciseItem(prompt: "De noite todos os gatos são ___", options: ["pardos", "pretos", "brancos", "cinzas"], correctAnswer: "pardos", explanation: "Na escuridão ou sem detalhes, as diferenças desaparecem."),
+            ExerciseItem(prompt: "Quem cala ___", options: ["consente", "fala", "sabe", "pensa"], correctAnswer: "consente", explanation: "Quem não discorda ou fica em silêncio concorda tacitamente."),
+            ExerciseItem(prompt: "Não se deve colocar todos os ovos na mesma ___", options: ["cesta", "galinha", "cozinha", "caixa"], correctAnswer: "cesta", explanation: "Não concentre todos os seus recursos ou riscos em um único lugar."),
+            ExerciseItem(prompt: "A cavalo dado não se olha os ___", options: ["dentes", "cascos", "olhos", "pêlos"], correctAnswer: "dentes", explanation: "Não se deve reclamar de algo recebido de graça."),
+            ExerciseItem(prompt: "Nem tudo o que reluz é ___", options: ["ouro", "prata", "brilhante", "metal"], correctAnswer: "ouro", explanation: "Aparências bonitas podem esconder realidades ruins ou falsas."),
+            ExerciseItem(prompt: "Vão-se os anéis, fiquem os ___", options: ["dedos", "braços", "amigos", "bens"], correctAnswer: "dedos", explanation: "É melhor perder bens materiais do que a própria vida ou integridade."),
+            ExerciseItem(prompt: "Não cutuque o cão com vara ___", options: ["curta", "longa", "verde", "grossa"], correctAnswer: "curta", explanation: "Não se deve provocar o perigo desnecessariamente."),
+            ExerciseItem(prompt: "Quem com ferro fere, com ferro será ___", options: ["ferido", "curado", "morto", "pago"], correctAnswer: "ferido", explanation: "Quem faz o mal sofrerá o mesmo mal de volta."),
+            ExerciseItem(prompt: "Um dia é da caça, outro do ___", options: ["caçador", "lobo", "leão", "bicho"], correctAnswer: "caçador", explanation: "As posições de sorte e azar se invertem com o tempo."),
+            ExerciseItem(prompt: "A ocasião faz o ___", options: ["ladrão", "monge", "santo", "rei"], correctAnswer: "ladrão", explanation: "Facilidades podem induzir as pessoas a agirem de forma errada."),
+            ExerciseItem(prompt: "Antes prevenir do que ___", options: ["remediar", "chorar", "tratar", "pagar"], correctAnswer: "remediar", explanation: "Evitar problemas é mais fácil do que consertá-los depois."),
+            ExerciseItem(prompt: "Gato escaldado tem medo de água ___", options: ["fria", "quente", "suja", "doce"], correctAnswer: "fria", explanation: "Quem passou por uma experiência ruim fica traumatizado e cauteloso com tudo.")
         ]
     )
 }

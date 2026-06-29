@@ -12,7 +12,15 @@ struct VietnameseHardExercisesData {
         exercise6,
         exercise7,
         exercise8,
-        easyHomonyms
+        easyHomonyms,
+        easyAnalogies,
+        easyCauseEffect,
+        easyWhatsWrong,
+        easySequencing,
+        mediumWordAssociation,
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: Từ đồng âm nâng cao
@@ -246,6 +254,194 @@ struct VietnameseHardExercisesData {
             ExerciseItem(prompt: "[mắt / mật] Đôi ___ của bé sáng lấp lánh. Con ong chăm chỉ hút ___ hoa ngọt.", options: ["mắt...mật", "mật...mắt", "mắt...mắt", "mật...mật"], correctAnswer: "mắt...mật", explanation: "'Mắt' (cơ quan thị giác) và 'mật' (chất ngọt từ hoa) là cặp từ đồng âm khác thanh."),
             ExerciseItem(prompt: "[dừa / dứa] Quả ___ có nhiều nước ngọt mát. Quả ___ có nhiều mắt và thơm ngọt.", options: ["dừa...dứa", "dứa...dừa", "dừa...dừa", "dứa...dứa"], correctAnswer: "dừa...dứa", explanation: "'Dừa' (quả dừa ở Bến Tre) và 'dứa' (quả thơm/khóm) là từ gần âm phổ biến."),
             ExerciseItem(prompt: "[bạn / bàn] Nam là người ___ thân nhất của tôi. Em lau sạch mặt ___ học tập.", options: ["bạn...bàn", "bàn...bạn", "bạn...bạn", "bàn...bàn"], correctAnswer: "bạn...bàn", explanation: "'Bạn' (người chơi cùng thân thiết) và 'bàn' (mặt gỗ có chân để học) là từ gần âm khác dấu.")
+        ]
+    )
+
+    // MARK: - Easy Analogies
+    private static let easyAnalogies = Exercise(
+        title: "Ẩn dụ Đơn giản",
+        instructions: "Chọn từ hoàn thành tốt nhất phép tương đồng.",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "TRÊN đối với DƯỚI giống như NÓNG đối với gì?", options: ["LẠNH", "ẤM", "SÔI", "ƯỚT"], correctAnswer: "LẠNH", explanation: "Trên và dưới là hai từ trái nghĩa, tương tự nóng trái nghĩa với lạnh."),
+            ExerciseItem(prompt: "CHIM đối với BAY giống như CÁ đối với gì?", options: ["BƠI", "CHẠY", "ĐI", "NHẢY"], correctAnswer: "BƠI", explanation: "Chim di chuyển bằng cách bay, cá di chuyển bằng cách bơi."),
+            ExerciseItem(prompt: "MÈO đối với MÈO CON giống như CHÓ đối với gì?", options: ["CHÓ CON", "MÈO CON", "BÊ", "NGỰA CON"], correctAnswer: "CHÓ CON", explanation: "Mèo con là con của mèo, chó con là con của chó."),
+            ExerciseItem(prompt: "BAN NGÀY đối với MẶT TRỜI giống như BAN ĐÊM đối với gì?", options: ["MẶT TRĂNG", "MƯA", "GIÓ", "MÂY"], correctAnswer: "MẶT TRĂNG", explanation: "Mặt trời xuất hiện vào ban ngày, mặt trăng xuất hiện vào ban đêm."),
+            ExerciseItem(prompt: "BĂNG đối với LẠNH giống như LỬA đối với gì?", options: ["NÓNG", "ƯỚT", "TỐI", "MỀM"], correctAnswer: "NÓNG", explanation: "Băng lạnh khi chạm vào, trong khi lửa thì nóng."),
+            ExerciseItem(prompt: "BÚT đối với VIẾT giống như KÉO đối với gì?", options: ["CẮT", "DÁN", "VẼ", "TÔ MÀU"], correctAnswer: "CẮT", explanation: "Bút được dùng để viết, kéo được dùng để cắt."),
+            ExerciseItem(prompt: "CÂY đối với LÁ giống như HOA đối với gì?", options: ["CÁNH HOA", "GAI", "RỄ", "THÂN"], correctAnswer: "CÁNH HOA", explanation: "Lá là một phần của cây, cánh hoa là một phần của hoa."),
+            ExerciseItem(prompt: "Ô TÔ đối với ĐƯỜNG BỘ giống như THUYỀN đối với gì?", options: ["NƯỚC", "KHÔNG KHÍ", "ĐẤT LIỀN", "ĐƯỜNG RAY"], correctAnswer: "NƯỚC", explanation: "Ô tô di chuyển trên đường bộ, thuyền di chuyển dưới nước."),
+            ExerciseItem(prompt: "VỚ đối với BÀN CHÂN giống như GĂNG TAY đối với gì?", options: ["BÀN TAY", "ĐẦU", "CỔ", "CÁNH TAY"], correctAnswer: "BÀN TAY", explanation: "Vớ đeo vào chân, găng tay đeo vào tay."),
+            ExerciseItem(prompt: "ĐÓI đối với THỨC ĂN giống như KHÁT đối với gì?", options: ["NƯỚC", "BÁNH MÌ", "TRÁI CÂY", "MUỐI"], correctAnswer: "NƯỚC", explanation: "Khi đói cần thức ăn, khi khát cần nước uống."),
+            ExerciseItem(prompt: "GIÀY đối với BÀN CHÂN giống như MŨ đối với gì?", options: ["ĐẦU", "BÀN TAY", "CHÂN", "CỔ"], correctAnswer: "ĐẦU", explanation: "Giày đi dưới chân, mũ đội trên đầu."),
+            ExerciseItem(prompt: "TÁO đối với TRÁI CÂY giống như CÀ RỐT đối với gì?", options: ["RAU CỦ", "THỊT", "NGŨ CỐC", "SỮA"], correctAnswer: "RAU CỦ", explanation: "Táo là một loại trái cây, cà rốt là một loại rau củ."),
+            ExerciseItem(prompt: "BÒ đối với SỮA giống như ONG đối với gì?", options: ["MẬT ONG", "SÁP", "PHẤN HOA", "NƯỚC"], correctAnswer: "MẬT ONG", explanation: "Bò sản xuất ra sữa, ong sản xuất ra mật ong."),
+            ExerciseItem(prompt: "RĂNG đối với BÀN CHẢI giống như TÓC đối với gì?", options: ["LƯỢC", "GỘI", "CẮT", "SẤY"], correctAnswer: "LƯỢC", explanation: "Răng được làm sạch bằng bàn chải, tóc được chải bằng lược."),
+            ExerciseItem(prompt: "MƯA đối với ƯỚT giống như MẶT TRỜI đối với gì?", options: ["KHÔ", "LẠNH", "TỐI", "GIÓ"], correctAnswer: "KHÔ", explanation: "Mưa làm mọi thứ ướt nhẹp, trong khi mặt trời làm khô ráo.")
+        ]
+    )
+
+    // MARK: - Easy Cause and Effect
+    private static let easyCauseEffect = Exercise(
+        title: "Nguyên nhân và Kết quả",
+        instructions: "Chọn phương án thể hiện nguyên nhân hoặc kết quả hợp lý nhất.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Nguyên nhân: Bạn làm rơi chiếc cốc thủy tinh xuống sàn bê tông.", options: ["Cốc bị vỡ", "Cốc nổi lên", "Cốc mềm đi", "Cốc biến thành màu xanh"], correctAnswer: "Cốc bị vỡ", explanation: "Thủy tinh giòn, va chạm với sàn cứng sẽ bị rạn nứt hoặc vỡ tan."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn quên tưới nước cho cây cảnh trong nhà suốt một tuần.", options: ["Cây bị héo và khô héo", "Cây ra hoa", "Cây chuyển sang màu tím", "Cây ra quả"], correctAnswer: "Cây bị héo và khô héo", explanation: "Cây cối cần nước để duy trì sự sống; không có nước chúng sẽ khô héo."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn để một viên đá lạnh trên bàn bếp vào mùa hè.", options: ["Đá tan chảy thành nước", "Đá to ra", "Đá biến thành gỗ", "Đá vẫn đông cứng"], correctAnswer: "Đá tan chảy thành nước", explanation: "Nhiệt độ phòng ấm áp làm đá chuyển sang trạng thái nước lỏng."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn thổi quá nhiều không khí vào bong bóng xà phòng.", options: ["Bong bóng bị vỡ", "Bong bóng biến thành đá", "Bong bóng nặng hơn", "Bong bóng nóng lên"], correctAnswer: "Bong bóng bị vỡ", explanation: "Thổi quá nhiều hơi vượt giới hạn co giãn của bong bóng xà phòng sẽ làm nó nổ."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn nhấn công tắc đèn trên tường.", options: ["Đèn sáng lên", "Phòng lạnh đi", "Cửa tự khóa", "Đồng hồ dừng lại"], correctAnswer: "Đèn sáng lên", explanation: "Nhấn công tắc giúp khép kín mạch điện, làm đèn phát sáng."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn thức suốt đêm không ngủ.", options: ["Bạn cảm thấy rất mệt mỏi vào ngày hôm sau", "Bạn thấy tràn đầy năng lượng", "Tóc bạn bạc trắng", "Bạn cao lên"], correctAnswer: "Bạn cảm thấy rất mệt mỏi vào ngày hôm sau", explanation: "Thiếu ngủ làm cơ thể không thể hồi phục năng lượng, gây mệt mỏi rã rời."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn đứng ngoài trời mưa lớn mà không có ô (dù).", options: ["Bạn bị ướt", "Bạn hoàn toàn khô ráo", "Bạn bay lên", "Bạn bị bốc cháy"], correctAnswer: "Bạn bị ướt", explanation: "Mưa là nước rơi từ trên cao; đứng trong mưa không che chắn sẽ bị ướt."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn bỏ bánh mì vào máy nướng và ấn cần gạt xuống.", options: ["Bánh mì được nướng giòn", "Bánh mì biến thành bột", "Bánh mì tan chảy", "Bánh mì bị sũng nước"], correctAnswer: "Bánh mì được nướng giòn", explanation: "Máy nướng tỏa nhiệt làm nóng và làm giòn bề mặt lát bánh mì."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn để sữa tươi ngoài tủ lạnh suốt ba ngày nắng nóng.", options: ["Sữa bị chua và hỏng", "Sữa ngọt hơn", "Sữa đông đá", "Sữa biến thành mật ong"], correctAnswer: "Sữa bị chua và hỏng", explanation: "Nhiệt độ ấm khiến vi khuẩn sinh sôi nhanh chóng, làm hỏng sữa."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn thổi mạnh vào ngọn nến đang cháy.", options: ["Ngọn nến tắt", "Ngọn lửa to hơn", "Nến tan chảy ngay lập tức", "Nến chuyển màu xanh"], correctAnswer: "Ngọn nến tắt", explanation: "Luồng hơi thổi mạnh làm phân tán nhiệt lượng và dập tắt lửa nến."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn đặt một nồi nước lên bếp ga đang cháy.", options: ["Nước bắt đầu sôi", "Nước đông đá", "Nước biến mất ngay lập tức", "Nồi nước to ra"], correctAnswer: "Nước bắt đầu sôi", explanation: "Nhiệt từ bếp ga truyền sang làm tăng nhiệt độ nước đến mức sôi trào."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn giẫm chân trần lên một chiếc đinh gỉ sắc nhọn.", options: ["Chân bạn bị thương", "Giày bạn bị bẩn", "Bạn nhảy cao hơn", "Chân bạn hóa xanh"], correctAnswer: "Chân bạn bị thương", explanation: "Đinh sắc nhọn đâm xuyên qua da nhạy cảm gây đau và nhiễm trùng."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn thêm đường vào một tách cà phê đen đắng.", options: ["Cà phê ngọt hơn", "Cà phê lạnh đi", "Cà phê biến mất", "Cà phê mặn hơn"], correctAnswer: "Cà phê ngọt hơn", explanation: "Đường là chất tạo ngọt, giúp làm dịu và lấn át vị đắng của cà phê."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn ném quả bóng tennis vào bức tường bê tông.", options: ["Bóng nảy ngược lại", "Bóng xuyên qua tường", "Tường bị sập", "Bóng bị hòa tan"], correctAnswer: "Bóng nảy ngược lại", explanation: "Bóng tennis có tính đàn hồi; va chạm vào bề mặt cứng giúp bóng nảy trở lại."),
+            ExerciseItem(prompt: "Nguyên nhân: Bạn không học bài hay ôn tập cho kỳ thi quan trọng.", options: ["Bạn nhận điểm kém", "Bạn đạt điểm tuyệt đối", "Trường học đóng cửa", "Bạn tốt nghiệp sớm"], correctAnswer: "Bạn nhận điểm kém", explanation: "Không chuẩn bị kiến thức trước kỳ thi thường dẫn đến kết quả bài làm kém.")
+        ]
+    )
+
+    // MARK: - Easy What's Wrong Here
+    private static let easyWhatsWrong = Exercise(
+        title: "Nhận biết Điểm phi lý",
+        instructions: "Xác định lỗi logic hoặc điều không thể xảy ra trong câu.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Phi lý: Nam đi giày vào chân trước khi đi tất (vớ).", options: ["Tất phải được đi trước khi đi giày", "Giày phải đeo vào tay", "Tất phải đội trên đầu", "Giày dùng để ăn"], correctAnswer: "Tất phải được đi trước khi đi giày", explanation: "Tất giúp bảo vệ chân bên trong giày, vì vậy cần đi tất trước."),
+            ExerciseItem(prompt: "Phi lý: Cô ấy dùng một chiếc dĩa để ăn bát canh gà nóng hổi.", options: ["Canh là nước lỏng và cần thìa", "Canh nên ăn bằng ngón tay", "Dĩa dùng để cắt thịt bò", "Canh nên nấu trong cốc"], correctAnswer: "Canh là nước lỏng và cần thìa", explanation: "Nước canh lỏng sẽ chảy qua các kẽ dĩa; cần sử dụng thìa để xúc canh."),
+            ExerciseItem(prompt: "Phi lý: Con cá trèo lên cây cổ thụ để làm tổ.", options: ["Cá sống dưới nước và không thể leo cây", "Cây xanh không có cành lá", "Cá chỉ làm tổ trên mái nhà", "Cá bay lượn trên trời"], correctAnswer: "Cá sống dưới nước và không thể leo cây", explanation: "Cá hô hấp bằng mang và bơi bằng vây; chúng không sống trên cạn và không biết leo cây."),
+            ExerciseItem(prompt: "Phi lý: Trời nóng nực và anh ấy mặc áo khoác len dày đi bơi.", options: ["Bơi lội cần mặc đồ bơi, không mặc áo khoác", "Áo khoác len giúp bơi nhanh hơn", "Bể bơi nên chứa đầy nước đá", "Áo khoác len chỉ mặc vào mùa hè"], correctAnswer: "Bơi lội cần mặc đồ bơi, không mặc áo khoác", explanation: "Áo len dày hút nước cực kỳ nặng và gây nguy hiểm khi ở dưới nước."),
+            ExerciseItem(prompt: "Phi lý: Họ nấu một quả trứng sống chín trong ngăn đông tủ lạnh.", options: ["Ngăn đông làm lạnh; bếp ga mới nấu chín", "Trứng chỉ nên ăn sống", "Ngăn đông dùng để đun nước", "Trứng chín ngon hơn trong lò vi sóng"], correctAnswer: "Ngăn đông làm lạnh; bếp ga mới nấu chín", explanation: "Nấu chín cần nguồn nhiệt; ngăn đông dùng để làm lạnh và bảo quản thực phẩm."),
+            ExerciseItem(prompt: "Phi lý: Con chó mở cuốn sách ra và bắt đầu đọc to thành tiếng.", options: ["Chó không thể đọc hay nói tiếng người", "Chó chỉ đọc báo giấy", "Sách nên được đọc thầm", "Chó thích tự viết sách"], correctAnswer: "Chó không thể đọc hay nói tiếng người", explanation: "Động vật không có tư duy ngôn ngữ và cơ quan phát âm để đọc sách."),
+            ExerciseItem(prompt: "Phi lý: Cô ấy cắt chiếc bánh sinh nhật bằng một chiếc thìa ăn canh.", options: ["Cắt bánh cần dùng dao chứ không dùng thìa", "Bánh nên ăn bốc bằng tay", "Thìa chỉ dùng để ăn canh", "Bánh nên cắt bằng kéo"], correctAnswer: "Cắt bánh cần dùng dao chứ không dùng thìa", explanation: "Thìa tròn để xúc canh; để cắt bánh sinh nhật thành lát đẹp cần dao có cạnh sắc."),
+            ExerciseItem(prompt: "Phi lý: Anh ấy dùng bút chì gỗ để nhắn tin trên màn hình điện thoại.", options: ["Màn hình cảm ứng dùng ngón tay hoặc bút chuyên dụng", "Bút chì chỉ dùng trên kính", "Điện thoại chỉ nhận lệnh giọng nói", "Bút chì quá ngắn để viết tin nhắn"], correctAnswer: "Màn hình cảm ứng dùng ngón tay hoặc bút chuyên dụng", explanation: "Màn hình cảm ứng điện thoại hoạt động nhờ cảm ứng điện dung từ ngón tay người."),
+            ExerciseItem(prompt: "Phi lý: Chiếc máy bay lướt sóng đi lại trên mặt biển xanh thẳm.", options: ["Máy bay bay trên trời; tàu thủy đi dưới nước", "Nước biển luôn có màu xanh lá", "Máy bay chỉ chạy trên đất liền", "Tàu thủy bay trên trời"], correctAnswer: "Máy bay bay trên trời; tàu thủy đi dưới nước", explanation: "Máy bay di chuyển trong không trung; tàu thuyền mới là phương tiện đi trên mặt nước."),
+            ExerciseItem(prompt: "Phi lý: Cô ấy mở ô (dù) che mưa ngay trong phòng khách khô ráo.", options: ["Ô dùng che nắng mưa ngoài trời", "Phòng khách nên có vũng nước mưa", "Ô chỉ dùng vào mùa đông", "Cô ấy nên mặc áo mưa trong nhà"], correctAnswer: "Ô dùng che nắng mưa ngoài trời", explanation: "Ô che mưa ngoài trời; trong nhà có mái che khô ráo nên không cần dùng ô."),
+            ExerciseItem(prompt: "Phi lý: Con mèo sủa gâu gâu inh ỏi vào mặt người bưu tá.", options: ["Mèo kêu meo meo; chó mới sủa gâu gâu", "Mèo chỉ sủa gâu gâu với chuột", "Người bưu tá sợ loài mèo", "Mèo chỉ sủa gâu gâu vào buổi sáng"], correctAnswer: "Mèo kêu meo meo; chó mới sủa gâu gâu", explanation: "Sủa là tiếng của chó; tiếng kêu đặc trưng của loài mèo là meo meo."),
+            ExerciseItem(prompt: "Phi lý: Anh ấy đổ xăng vào chiếc xe đạp để đạp ra chợ.", options: ["Xe đạp chạy bằng sức chân, không chạy bằng xăng", "Xe đạp chạy bằng dầu diesel", "Xe đạp chỉ chạy bằng pin", "Xe đạp không cần bánh xe"], correctAnswer: "Xe đạp chạy bằng sức chân, không chạy bằng xăng", explanation: "Xe đạp thông thường là phương tiện thô sơ dùng sức đạp của người."),
+            ExerciseItem(prompt: "Phi lý: Tuyết rơi dày đặc giữa một trưa hè nóng nực.", options: ["Tuyết rơi vào mùa đông lạnh giá", "Ngày hè luôn tối tăm", "Mùa hè chỉ có vào tháng mười hai", "Tuyết sờ vào thấy nóng"], correctAnswer: "Tuyết rơi vào mùa đông lạnh giá", explanation: "Tuyết cần nhiệt độ khí quyển đóng băng để hình thành; mùa hè nóng nực không thể có tuyết."),
+            ExerciseItem(prompt: "Phi lý: Cô ấy rửa đống bát đĩa bẩn trong thùng rác.", options: ["Bát đĩa rửa trong bồn rửa, không phải thùng rác", "Thùng rác để đựng quần áo sạch", "Bát đĩa nên rửa ngoài vườn", "Thùng rác chứa đầy nước sạch"], correctAnswer: "Bát đĩa rửa trong bồn rửa, không phải thùng rác", explanation: "Thùng rác chứa chất thải bẩn; bát đĩa cần được rửa sạch bằng nước trong bồn rửa bát."),
+            ExerciseItem(prompt: "Phi lý: Anh ấy tưới hoa bằng một xô cát khô.", options: ["Cây cần nước để sống chứ không cần cát", "Cát làm đất quá ẩm ướt", "Vườn hoa nên đổ đầy đá", "Cát chỉ dành cho cây nhựa"], correctAnswer: "Cây cần nước để sống chứ không cần cát", explanation: "Nước giúp cây cối duy trì sự sống; cát khô không thể cung cấp độ ẩm cần thiết cho cây.")
+        ]
+    )
+
+    // MARK: - Easy Sequencing
+    private static let easySequencing = Exercise(
+        title: "Thứ tự Hoạt động",
+        instructions: "Sắp xếp các bước thực hiện hoạt động theo trình tự logic.",
+        section: .language,
+        type: .sequencing,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Nướng bánh mì", options: ["Đặt lát bánh mì vào lò nướng", "Ấn cần gạt xuống để bắt đầu nướng", "Đợi lát bánh mì nướng tự động nảy lên", "Phết bơ lên lát bánh mì nướng nóng hổi"], correctAnswer: "Đặt lát bánh mì vào lò nướng | Ấn cần gạt xuống để bắt đầu nướng | Đợi lát bánh mì nướng tự động nảy lên | Phết bơ lên lát bánh mì nướng nóng hổi", explanation: "Bánh mì được đưa vào lò, bật nhiệt nướng, nảy lên và phết bơ."),
+            ExerciseItem(prompt: "Rửa tay sạch sẽ", options: ["Làm ướt bàn tay bằng nước", "Thoa xà phòng và xoa đều hai lòng bàn tay", "Rửa sạch xà phòng dưới vòi nước chảy", "Lau khô tay bằng khăn sạch"], correctAnswer: "Làm ướt bàn tay bằng nước | Thoa xà phòng và xoa đều hai lòng bàn tay | Rửa sạch xà phòng dưới vòi nước chảy | Lau khô tay bằng khăn sạch", explanation: "Quy trình rửa tay: làm ướt, xoa xà phòng, xả nước sạch, lau khô."),
+            ExerciseItem(prompt: "Gửi thư tay", options: ["Viết nội dung thư lên giấy", "Gấp thư lại và bỏ vào phong bì", "Viết địa chỉ người nhận lên phong bì", "Dán tem và bỏ thư vào hòm thư"], correctAnswer: "Viết nội dung thư lên giấy | Gấp thư lại và bỏ vào phong bì | Viết địa chỉ người nhận lên phong bì | Dán tem và bỏ thư vào hòm thư", explanation: "Các bước gửi thư: viết thư, đóng phong bì, ghi địa chỉ, dán tem gửi đi."),
+            ExerciseItem(prompt: "Đánh răng", options: ["Bóp kem đánh răng lên bàn chải", "Chải kỹ các mặt của răng", "Súc miệng sạch bằng nước", "Rửa sạch bàn chải và cất đúng nơi quy định"], correctAnswer: "Bóp kem đánh răng lên bàn chải | Chải kỹ các mặt của răng | Súc miệng sạch bằng nước | Rửa sạch bàn chải và cất đúng nơi quy định", explanation: "Trình tự đánh răng: bôi kem, chải răng, súc miệng, cất bàn chải."),
+            ExerciseItem(prompt: "Pha trà nóng", options: ["Đun sôi nước trong ấm", "Đặt túi trà vào tách", "Rót nước sôi vào tách trà", "Đợi trà ngấm vài phút và thưởng thức"], correctAnswer: "Đun sôi nước trong ấm | Đặt túi trà vào tách | Rót nước sôi vào tách trà | Đợi trà ngấm vài phút và thưởng thức", explanation: "Pha trà ấm: đun nước, cho trà vào tách, rót nước sôi, ủ trà thưởng thức.")
+        ]
+    )
+
+    // MARK: - Medium Word Association
+    private static let mediumWordAssociation = Exercise(
+        title: "Liên kết Từ vựng",
+        instructions: "Chọn từ có mối quan hệ gần gũi nhất với từ gợi ý.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "THƯ VIỆN", options: ["Im lặng", "Tiếng ồn", "Đám đông", "Trò chơi"], correctAnswer: "Im lặng", explanation: "Thư viện là không gian đọc sách học tập yêu cầu giữ im lặng."),
+            ExerciseItem(prompt: "BỆNH VIỆN", options: ["Chữa bệnh", "Kỳ nghỉ", "Mua sắm", "Nấu ăn"], correctAnswer: "Chữa bệnh", explanation: "Bệnh viện là cơ sở y tế phục vụ công tác khám và chữa bệnh."),
+            ExerciseItem(prompt: "SÂN BAY", options: ["Khởi hành", "Ngủ", "Làm vườn", "Hội họa"], correctAnswer: "Khởi hành", explanation: "Sân bay là nơi làm thủ tục lên máy bay cất cánh khởi hành chuyến bay."),
+            ExerciseItem(prompt: "SA MẠC", options: ["Hạn hán", "Mưa bão", "Rừng rậm", "Đại dương"], correctAnswer: "Hạn hán", explanation: "Sa mạc có lượng mưa cực thấp nên thường xuyên xảy ra hạn hán khô cằn."),
+            ExerciseItem(prompt: "ĐÁM CƯỚI", options: ["Nhẫn", "Kỳ thi", "Văn phòng", "Chìa khóa"], correctAnswer: "Nhẫn", explanation: "Nhẫn cưới là tín vật truyền thống trao nhau làm giao ước hôn nhân."),
+            ExerciseItem(prompt: "TRANG TRẠI", options: ["Thu hoạch", "Thành phố", "Văn phòng", "Nhà máy"], correctAnswer: "Thu hoạch", explanation: "Trang trại trồng trọt nông sản, thu về thành quả là vụ thu hoạch."),
+            ExerciseItem(prompt: "NHÀ BẾP", options: ["Công thức", "Giường", "Ô tô", "Vòi hoa sen"], correctAnswer: "Công thức", explanation: "Nấu ăn tại nhà bếp đòi hỏi tuân theo công thức chế biến."),
+            ExerciseItem(prompt: "NÚI CAO", options: ["Đỉnh núi", "Tầng hầm", "Đường phố", "Sa mạc"], correctAnswer: "Đỉnh núi", explanation: "Đỉnh núi là điểm cao nhất hoặc chóp của ngọn núi."),
+            ExerciseItem(prompt: "TÒA ÁN", options: ["Công lý", "Nhà hát", "Nhà bếp", "Chợ búa"], correctAnswer: "Công lý", explanation: "Tòa án là cơ quan tư pháp nhân danh nhà nước thực thi công lý."),
+            ExerciseItem(prompt: "VĂN PHÒNG", options: ["Hạn chót", "Bãi biển", "Giường ngủ", "Dã ngoại"], correctAnswer: "Hạn chót", explanation: "Công việc văn phòng thường xoay quanh thời hạn hoàn thành công việc (deadline)."),
+            ExerciseItem(prompt: "NHÀ HÁT", options: ["Sân khấu", "Nhà bếp", "Đường cao tốc", "Rừng rậm"], correctAnswer: "Sân khấu", explanation: "Sân khấu là nơi diễn viên thực hiện các buổi biểu diễn nghệ thuật."),
+            ExerciseItem(prompt: "RỪNG RẬM", options: ["Thiên nhiên", "Thành phố", "Sa mạc", "Đường nhựa"], correctAnswer: "Thiên nhiên", explanation: "Rừng xanh bao phủ nhiều cây cối, là biểu tượng của thiên nhiên hoang dã."),
+            ExerciseItem(prompt: "PHÒNG THÍ NGHIỆM", options: ["Thí nghiệm", "Nấu ăn", "Nhảy múa", "Mua sắm"], correctAnswer: "Thí nghiệm", explanation: "Phòng thí nghiệm phục vụ thực hiện các thử nghiệm khoa học."),
+            ExerciseItem(prompt: "BẢO TÀNG", options: ["Triển lãm", "Phim ảnh", "Thể thao", "Nấu ăn"], correctAnswer: "Triển lãm", explanation: "Bảo tàng lưu giữ hiện vật lịch sử văn hóa để trưng bày triển lãm."),
+            ExerciseItem(prompt: "NHA SĨ", options: ["Sâu răng", "Cắt tóc", "Vé tàu", "Nấu ăn"], correctAnswer: "Sâu răng", explanation: "Nha sĩ là bác sĩ chuyên chữa các bệnh về răng miệng như sâu răng.")
+        ]
+    )
+
+    // MARK: - Medium Homonyms
+    private static let mediumHomonyms = Exercise(
+        title: "Từ Đồng âm Trung bình",
+        instructions: "Chọn cặp từ đồng âm chính xác để hoàn thành các câu sau.",
+        section: .language,
+        type: .homonym,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "[chín / chín] Quả xoài trên cây đã ___ vàng. Số ___ là số đứng trước số mười.", options: ["chín...chín", "chín...chín", "chín...chín", "chín...chín"], correctAnswer: "chín...chín", explanation: "Từ 'chín' thứ nhất chỉ trạng thái trái cây chín; 'chín' thứ hai là số chín."),
+            ExerciseItem(prompt: "[đường / đường] Vị của hạt ___ rất ngọt. Con ___ trước nhà rất đông xe cộ.", options: ["đường...đường", "đường...đường", "đường...đường", "đường...đường"], correctAnswer: "đường...đường", explanation: "Từ 'đường' thứ nhất chỉ chất ngọt; 'đường' thứ hai chỉ lối đi."),
+            ExerciseItem(prompt: "[keo / keo] Lọ ___ dán giấy rất chắc. Người bủn xỉn hay bị nói là ___ kiệt.", options: ["keo...keo", "keo...keo", "keo...keo", "keo...keo"], correctAnswer: "keo...keo", explanation: "Từ 'keo' thứ nhất chỉ chất dính; 'keo' thứ hai chỉ tính tiết kiệm cực đoan."),
+            ExerciseItem(prompt: "[kho / kho] Cá chép ___ tiêu rất ngon. Nhà ___ chứa đầy hàng hóa cũ.", options: ["kho...kho", "kho...kho", "kho...kho", "kho...kho"], correctAnswer: "kho...kho", explanation: "Từ 'kho' thứ nhất là phương pháp chế biến; 'kho' thứ hai chỉ nơi lưu trữ."),
+            ExerciseItem(prompt: "[bàn / bàn] Mọi người đang họp để ___ bạc công việc. Chiếc ___ gỗ đặt ở giữa phòng.", options: ["bàn...bàn", "bàn...bàn", "bàn...bàn", "bàn...bàn"], correctAnswer: "bàn...bàn", explanation: "Từ 'bàn' thứ nhất là động từ thảo luận; 'bàn' thứ hai chỉ đồ nội thất.")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "Tục ngữ Đơn giản",
+        instructions: "Chọn từ chính xác để hoàn thành câu tục ngữ phổ biến.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Có công mài sắt, có ngày nên ___", options: ["kim", "xà", "đinh", "đồng"], correctAnswer: "kim", explanation: "Câu tục ngữ khuyên chúng ta kiên trì chịu khó ắt sẽ thành công."),
+            ExerciseItem(prompt: "Lá lành đùm lá ___", options: ["rách", "héo", "rụng", "xanh"], correctAnswer: "rách", explanation: "Thể hiện tinh thần tương thân tương ái, đùm bọc người hoạn nạn."),
+            ExerciseItem(prompt: "Uống nước nhớ ___", options: ["nguồn", "sông", "biển", "mưa"], correctAnswer: "nguồn", explanation: "Nhắc nhở lòng biết ơn đối với người đi trước."),
+            ExerciseItem(prompt: "Gần mực thì đen, gần đèn thì ___", options: ["sáng", "tối", "đỏ", "trắng"], correctAnswer: "sáng", explanation: "Môi trường sống xung quanh ảnh hưởng trực tiếp đến nhân cách."),
+            ExerciseItem(prompt: "Ăn quả nhớ kẻ trồng ___", options: ["cây", "hoa", "quả", "vườn"], correctAnswer: "cây", explanation: "Khuyên bảo con người luôn ghi nhớ công ơn người tạo ra thành quả."),
+            ExerciseItem(prompt: "Có chí thì ___", options: ["nên", "làm", "học", "chơi"], correctAnswer: "nên", explanation: "Có ý chí quyết tâm cao sẽ làm nên nghiệp lớn."),
+            ExerciseItem(prompt: "Đói cho sạch, rách cho ___", options: ["thơm", "ấm", "đẹp", "sạch"], correctAnswer: "thơm", explanation: "Dù hoàn cảnh nghèo khó vẫn phải giữ gìn phẩm hạnh trong sạch."),
+            ExerciseItem(prompt: "Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi ___", options: ["cao", "to", "lớn", "dài"], correctAnswer: "cao", explanation: "Ca ngợi sức mạnh của sự đoàn kết tập thể."),
+            ExerciseItem(prompt: "Có thực mới vực được ___", options: ["đạo", "người", "bụng", "sức"], correctAnswer: "đạo", explanation: "Cần đáp ứng nhu cầu vật chất tối thiểu trước khi làm việc lớn."),
+            ExerciseItem(prompt: "Tốt gỗ hơn tốt nước ___", options: ["sơn", "vôi", "bóng", "màu"], correctAnswer: "sơn", explanation: "Đề cao giá trị phẩm chất bên trong hơn vẻ bề ngoài hào nhoáng."),
+            ExerciseItem(prompt: "Thương người như thể thương ___", options: ["thân", "nhà", "bạn", "dân"], correctAnswer: "thân", explanation: "Yêu thương giúp đỡ đồng bào như chính bản thân mình."),
+            ExerciseItem(prompt: "Bán anh em xa, mua láng giềng ___", options: ["gần", "tốt", "thân", "quanh"], correctAnswer: "gần", explanation: "Hàng xóm gần gũi hỗ trợ nhau nhanh hơn người thân ở xa."),
+            ExerciseItem(prompt: "Mất bò mới lo làm ___", options: ["chuồng", "nhà", "cửa", "rào"], correctAnswer: "chuồng", explanation: "Để xảy ra hậu quả nghiêm trọng rồi mới lo sửa chữa là quá muộn."),
+            ExerciseItem(prompt: "Đoàn kết là sống, chia rẽ là ___", options: ["chết", "hết", "bại", "nghèo"], correctAnswer: "chết", explanation: "Đoàn kết tạo sức mạnh tồn tại, chia rẽ dẫn đến diệt vong."),
+            ExerciseItem(prompt: "Nói lời phải giữ lấy ___", options: ["lời", "chữ", "tiếng", "danh"], correctAnswer: "lời", explanation: "Giữ chữ tín trong lời nói, không nuốt lời thất hứa.")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "Tục ngữ Nâng cao",
+        instructions: "Chọn từ chính xác để hoàn thành câu tục ngữ dân gian.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "Lửa thử vàng, gian nan thử ___", options: ["sức", "lòng", "người", "trí"], correctAnswer: "sức", explanation: "Khó khăn thử thách là thước đo sức lực và bản lĩnh con người."),
+            ExerciseItem(prompt: "Nực cười châu chấu đá xe, tưởng rằng chấu ngã ai dè xe ___", options: ["nghiêng", "đổ", "hỏng", "lật"], correctAnswer: "nghiêng", explanation: "Nói về ý chí nhỏ bé chiến thắng thế lực bạo tàn tưởng như vô địch."),
+            ExerciseItem(prompt: "Tránh vỏ dưa, gặp vỏ ___", options: ["dừa", "bí", "bầu", "mướp"], correctAnswer: "dừa", explanation: "Tránh được khó khăn này lại vấp phải khó khăn tương tự khác."),
+            ExerciseItem(prompt: "Tre già măng ___", options: ["mọc", "lên", "trồi", "non"], correctAnswer: "mọc", explanation: "Thế hệ sau kế thừa và tiếp bước thế hệ trước."),
+            ExerciseItem(prompt: "Khôn ngoan đối đáp người ngoài, gà cùng một mẹ chớ hoài đá ___", options: ["nhau", "lộn", "đùa", "nhường"], correctAnswer: "nhau", explanation: "Anh em ruột thịt trong một gia đình phải biết yêu thương nhường nhịn nhau."),
+            ExerciseItem(prompt: "Sai một ly, đi một ___", options: ["dặm", "thước", "mét", "sải"], correctAnswer: "dặm", explanation: "Lỗi lầm nhỏ ban đầu dẫn đến hậu quả sai lệch rất xa về sau."),
+            ExerciseItem(prompt: "Vải thưa che mắt ___", options: ["thánh", "người", "đời", "trần"], correctAnswer: "thánh", explanation: "Thủ đoạn giả dối vụng về không thể lừa gạt được người thông thái."),
+            ExerciseItem(prompt: "Gieo gió gặt ___", options: ["bão", "mưa", "nước", "lửa"], correctAnswer: "bão", explanation: "Làm điều xấu hại người sẽ nhận lại quả báo nặng nề hơn."),
+            ExerciseItem(prompt: "Nước chảy đá ___", options: ["mòn", "vỡ", "trôi", "cứng"], correctAnswer: "mòn", explanation: "Kiên trì nỗ lực lâu dài sẽ làm được điều tưởng chừng không thể."),
+            ExerciseItem(prompt: "Trâu buộc ghét trâu ___", options: ["ăn", "đi", "chạy", "nằm"], correctAnswer: "ăn", explanation: "Thói đố kỵ ganh ghét của kẻ thất bại trước người thành công."),
+            ExerciseItem(prompt: "Thả con săn sắt, bắt con cá ___", options: ["rô", "quả", "diếc", "trắm"], correctAnswer: "rô", explanation: "Chấp nhận bỏ ra cái nhỏ để thu về lợi ích lớn hơn."),
+            ExerciseItem(prompt: "Mật ngọt chết ___", options: ["ruồi", "ong", "kiến", "muỗi"], correctAnswer: "ruồi", explanation: "Những lời nói nịnh hót ngọt ngào dễ làm người ta mất cảnh giác sa bẫy."),
+            ExerciseItem(prompt: "Chuồn chuồn bay thấp thì mưa, bay cao thì nắng, bay vừa thì ___", options: ["râm", "mát", "ẩm", "khô"], correctAnswer: "râm", explanation: "Kinh nghiệm thời tiết dân gian dựa vào cách bay của chuồn chuồn."),
+            ExerciseItem(prompt: "Ếch ngồi đáy giếng coi trời bằng ___", options: ["vung", "mâm", "nong", "nia"], correctAnswer: "vung", explanation: "Kẻ hiểu biết nông cạn nhưng lại huênh hoang coi thường mọi sự."),
+            ExerciseItem(prompt: "Học đi đôi với ___", options: ["hành", "chơi", "nghĩ", "làm"], correctAnswer: "hành", explanation: "Kiến thức lý thuyết học được cần áp dụng thực hành vào thực tế.")
         ]
     )
 }

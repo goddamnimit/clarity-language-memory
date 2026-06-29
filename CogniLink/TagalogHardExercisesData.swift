@@ -12,7 +12,15 @@ struct TagalogHardExercisesData {
         exercise6,
         exercise7,
         exercise8,
-        easyHomonyms
+        easyHomonyms,
+        easyAnalogies,
+        easyCauseEffect,
+        easyWhatsWrong,
+        easySequencing,
+        mediumWordAssociation,
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: Mga Salitang Magkapareho ang Baybay
@@ -246,6 +254,192 @@ struct TagalogHardExercisesData {
             ExerciseItem(prompt: "[bata / bata] Masayahin ang ___ na naglalaro ng sipa. Kaya kong ___ ang hirap ng buhay.", options: ["bata...bata", "bata...matanda", "matanda...bata", "bata...tiis"], correctAnswer: "bata...bata", explanation: "Ang unang 'bata' ay may maliit na edad (child); ang pangalawang 'bata' ay pagtitiis sa pasakit (endure)."),
             ExerciseItem(prompt: "[tubo / tubo] Gawa sa plastik ang ___ ng gripo. Matamis ang ___ na ginagawang asukal.", options: ["tubo...tubo", "tubo...ugat", "ugat...tubo", "tubo...bakal"], correctAnswer: "tubo...tubo", explanation: "Ang unang 'tubo' ay daanan ng tubig (pipe); ang pangalawang 'tubo' ay halamang sugarcane."),
             ExerciseItem(prompt: "[lata / lata] Nilagay ang sardinas sa loob ng ___. Ang ___ ng kanyang tuhod ay dahil sa pagod.", options: ["lata...lata", "lata...baso", "baso...lata", "lata...lakas"], correctAnswer: "lata...lata", explanation: "Ang unang 'lata' ay sisidlang metal (tin can); ang pangalawang 'lata' ay panghihina ng katawan (weakness).")
+        ]
+    )
+
+    // MARK: - Easy Analogies
+    private static let easyAnalogies = Exercise(
+        title: "Madaling Analhiya",
+        instructions: "Piliin ang salita na pinakamahusay na nakakumpleto sa analhiya.",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "TAAS ay sa BABA tulad ng MAINIT ay sa MALAMIG", options: ["MALAMIG", "MALAMBING", "KUMUKULO", "BASA"], correctAnswer: "MALAMIG", explanation: "Ang taas at baba ay magkasalungat, tulad ng mainit at malamig."),
+            ExerciseItem(prompt: "IBON ay sa LUMIPAD tulad ng ISDA ay sa LUMANGOY", options: ["LUMANGOY", "TUMAKBO", "LUMAKAD", "TUMALON"], correctAnswer: "LUMANGOY", explanation: "Ang ibon ay gumagalaw sa pamamagitan ng paglipad, at ang isda sa paglangoy."),
+            ExerciseItem(prompt: "PUSA ay sa KUTING tulad ng ASO ay sa TUTA", options: ["TUTA", "KUTING", "BACA", "KABAYO"], correctAnswer: "TUTA", explanation: "Ang kuting ay anak ng pusa, at ang tuta ay anak ng aso."),
+            ExerciseItem(prompt: "ARAW ay sa ARAW (SUN) tulad ng GABI ay sa BUWAN", options: ["BUWAN", "ULAN", "HANGIN", "ULAP"], correctAnswer: "BUWAN", explanation: "Ang araw ay nakikita sa umaga, at ang buwan sa gabi."),
+            ExerciseItem(prompt: "YELO ay sa MALAMIG tulad ng APOY ay sa MAINIT", options: ["MAINIT", "BASA", "MADILIM", "MALAMBOT"], correctAnswer: "MAINIT", explanation: "Ang yelo ay malamig hawakan, habang ang apoy ay mainit."),
+            ExerciseItem(prompt: "PANULAT ay sa MAGSULAT tulad ng GUNTING ay sa GUMUPIT", options: ["GUMUPIT", "MAGDIKIT", "GUMUHIT", "MAGKULAY"], correctAnswer: "GUMUPIT", explanation: "Ang panulat ay ginagamit sa pagsulat, at ang gunting sa paggupit."),
+            ExerciseItem(prompt: "PUNO ay sa DAHON tulad ng BULAKLAK ay sa PETAL", options: ["PETAL", "TINIK", "UGAT", "TANGLAY"], correctAnswer: "PETAL", explanation: "Ang dahon ay bahagi ng puno, at ang petal ay bahagi ng bulaklak."),
+            ExerciseItem(prompt: "KOTSE ay sa KALSADA tulad ng BANGKA ay sa TUBIG", options: ["TUBIG", "HIMPAPAWID", "LUPA", "Riles"], correctAnswer: "TUBIG", explanation: "Ang kotse ay tumatakbo sa kalsada, habang ang bangka sa tubig."),
+            ExerciseItem(prompt: "MEDYAS ay sa PAA tulad ng GOWANTES ay sa KAMAY", options: ["KAMAY", "ULO", "LEEG", "BISIG"], correctAnswer: "KAMAY", explanation: "Ang medyas ay sinusuot sa paa, at ang guwantes sa kamay."),
+            ExerciseItem(prompt: "GUTOM ay sa PAGKAIN tulad ng UHAW ay sa TUBIG", options: ["TUBIG", "TINAPAY", "PRUTAS", "ASIN"], correctAnswer: "TUBIG", explanation: "Kapag gutom ay kailangan ng pagkain, at kapag uhaw ay tubig."),
+            ExerciseItem(prompt: "SAPATOS ay sa PAA tulad ng SUMBRERO ay sa ULO", options: ["ULO", "KAMAY", "Binti", "LEEG"], correctAnswer: "ULO", explanation: "Ang sapatos ay sinusuot sa paa, at ang sumbrero sa ulo."),
+            ExerciseItem(prompt: "BAKA ay sa GATAS tulad ng LAYWAN ay sa PULOT", options: ["PULOT", "KANDILA", "BULAKLAK", "TUBIG"], correctAnswer: "PULOT", explanation: "Ang baka ay nagbibigay ng gatas, at ang laywan ay pulot-pukyutan."),
+            ExerciseItem(prompt: "NGIPIN ay sa SIPILYO tulad ng BUHOK ay sa SUKLAY", options: ["SUKLAY", "HUGAS", "GUPIT", "TUYO"], correctAnswer: "SUKLAY", explanation: "Sinisipilyo ang ngipin para luminis, at sinusuklay ang buhok para maayos."),
+            ExerciseItem(prompt: "ULAN ay sa BASA tulad ng ARAW ay sa TUYO", options: ["TUYO", "MALAMIG", "MADILIM", "MAHANGIN"], correctAnswer: "TUYO", explanation: "Ang ulan ay nagpapabasa ng mga bagay, habang ang araw ay nagpapatuyo.")
+        ]
+    )
+
+    // MARK: - Easy Cause and Effect
+    private static let easyCauseEffect = Exercise(
+        title: "Madaling Sanhi at Bunga",
+        instructions: "Piliin ang pinaka-lohikal na sanhi o bunga.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Sanhi: Nabitawan mo ang basong bubog sa semento.", options: ["Nabasag ang baso", "Lulutang ang baso", "Lalambot ang baso", "Magiging asul ang baso"], correctAnswer: "Nabasag ang baso", explanation: "Ang bubog ay madaling mabasag kapag bumagsak sa matigas na sahig."),
+            ExerciseItem(prompt: "Sanhi: Nakalimutan mong diligan ang halaman nang isang linggo.", options: ["Nalanta at natuyo ito", "Tumubo ang mga bulaklak", "Naging kulay ube ito", "Namunga ito"], correctAnswer: "Nalanta at natuyo ito", explanation: "Kailangan ng halaman ng tubig; kung wala ito, ito ay malalanta at mamamatay."),
+            ExerciseItem(prompt: "Sanhi: Iniwan mo ang yelo sa mesa ng kusina sa tag-init.", options: ["Natunaw ito at naging tubig", "Lumaki ito", "Naging kahoy ito", "Nanatiling matigas"], correctAnswer: "Natunaw ito at naging tubig", explanation: "Dahil sa init ng temperatura, ang yelo ay natutunaw at nagiging tubig."),
+            ExerciseItem(prompt: "Sanhi: Hinipan mo ang lobo nang masyadong maraming hangin.", options: ["Pumutok ang lobo", "Naging yelo ito", "Kumanta ito", "Bumigat ito"], correctAnswer: "Pumutok ang lobo", explanation: "Ang labis na hangin ay lalampas sa kakayahan ng goma ng lobo kaya ito puputok."),
+            ExerciseItem(prompt: "Sanhi: Pinindot mo ang switch ng ilaw sa dingding.", options: ["Sumindi ang ilaw", "Lumamig ang silid", "Nasusi ang pinto", "Huminto ang orasan"], correctAnswer: "Sumindi ang ilaw", explanation: "Ang pagpindot sa switch ay nagdurugtong sa kuryente kaya sumisindi ang ilaw."),
+            ExerciseItem(prompt: "Sanhi: Hindi ka natulog buong magdamag.", options: ["Sobrang pagod mo kinabukasan", "Sobrang sigla mo", "Pumuti ang buhok mo", "Tangkad mo lalo"], correctAnswer: "Sobrang pagod mo kinabukasan", explanation: "Kailangan ng katawan ng pahinga; ang puyat ay nagdudulot ng matinding pagod."),
+            ExerciseItem(prompt: "Sanhi: Tumayo ka sa malakas na ulan nang walang payong.", options: ["Nabasa ka", "Nanatili kang tuyo", "Lumipad ka sa hangin", "Nasunog ka"], correctAnswer: "Nabasa ka", explanation: "Ang ulan ay tubig mula sa langit; kung wala kang proteksyon ay mababasa ka."),
+            ExerciseItem(prompt: "Sanhi: Naglagay ka ng tinapay sa toaster at binaba ang lever.", options: ["Naging tostado ang tinapay", "Naging harina ang tinapay", "Natunaw ang tinapay", "Nabasa ang tinapay"], correctAnswer: "Naging tostado ang tinapay", explanation: "Ang toaster ay nag-ainit upang gawing tostado at malutong ang tinapay."),
+            ExerciseItem(prompt: "Sanhi: Iniwan mo ang gatas sa counter nang tatlong araw sa init.", options: ["Naasim at nasira ang gatas", "Tamis lalo ang gatas", "Naging yelo ito", "Naging pulot ito"], correctAnswer: "Naasim at nasira ang gatas", explanation: "Ang pag-iwan sa gatas sa init ay nagpaparami ng bakterya kaya ito nasisira."),
+            ExerciseItem(prompt: "Sanhi: Hinipan mo nang malakas ang kandilang may apoy.", options: ["Namatay ang apoy", "Lumalaki ang apoy", "Natunaw agad ang kandila", "Naging asul ang kandila"], correctAnswer: "Namatay ang apoy", explanation: "Ang malakas na ihip ay nag-aalis ng init at hangin na kailangan ng apoy kaya ito namamatay."),
+            ExerciseItem(prompt: "Sanhi: Naglagay ka ng kaldero ng tubig sa mainit na kalan.", options: ["Nag-umpisang kumulo ang tubig", "Naging yelo ang tubig", "Nawala agad ang tubig", "Lumaki ang kaldero"], correctAnswer: "Nag-umpisang kumulo ang tubig", explanation: "Ang init mula sa kalan ay nagpapataas ng temperatura ng tubig hanggang kumulo ito."),
+            ExerciseItem(prompt: "Sanhi: Nakaapak ka ng matulis na pako nang nakayapak.", options: ["Nasugatan ang paa mo", "Nadumihan ang sapatos mo", "Tumalon ka nang mataas", "Naging berde ang paa mo"], correctAnswer: "Nasugatan ang paa mo", explanation: "Ang pag-apak sa matulis na bagay ay bumabaon sa balat at nagdudulot ng sugat."),
+            ExerciseItem(prompt: "Sanhi: Naglagay ka ng asukal sa mapait na kape.", options: ["Tumatamis ang kape", "Lumalamig ang kape", "Nawawala ang kape", "Maalat ang kape"], correctAnswer: "Tumatamis ang kape", explanation: "Ang asukal ay nagbibigay ng tamis na nagtatakip sa pait ng kape."),
+            ExerciseItem(prompt: "Sanhi: Nagtapon ka ng bola ng tennis sa pader.", options: ["Bumalik ang bola sa iyo", "Pumasok ang bola sa pader", "Nawasak ang pader", "Natunaw ang bola"], correctAnswer: "Bumalik ang bola sa iyo", explanation: "Dahil sa pagka-talbog ng bola ng tennis, babalik ito matapos tumama sa pader."),
+            ExerciseItem(prompt: "Sanhi: Hindi ka nag-aral para sa mahalagang pagsusulit.", options: ["Mababa ang nakuha mong marka", "Perpekto ang nakuha mong marka", "Nagsara ang paaralan", "Nagtapos ka agad"], correctAnswer: "Mababa ang nakuha mong marka", explanation: "Kung walang paghahanda o pag-aaral, mahihirapan kang sumagot nang tama sa pagsusulit.")
+        ]
+    )
+
+    // MARK: - Easy What's Wrong Here
+    private static let easyWhatsWrong = Exercise(
+        title: "Madaling Paghahanap ng Mali",
+        instructions: "Tukuyin ang lohikal na mali o imposible sa pahayag.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Mali: Nagsuot si Juan ng sapatos bago ang kanyang medyas.", options: ["Dapat isuot ang medyas bago ang sapatos", "Dapat ilagay ang sapatos sa kamay", "Ang medyas ay sinusuot sa ulo", "Dapat kainin ang sapatos"], correctAnswer: "Dapat isuot ang medyas bago ang sapatos", explanation: "Ang medyas ay nasa loob ng sapatos, kaya ito ang unang sinusuot."),
+            ExerciseItem(prompt: "Mali: Ginamit niya ang tinidor para higupin ang sabaw ng manok.", options: ["Ang sabaw ay likido at kailangan ng kutsara", "Dapat kamayin ang sabaw", "Ang tinidor ay ginagamit sa paghiwa ng karne", "Dapat lutuin ang sabaw sa baso"], correctAnswer: "Ang sabaw ay likido at kailangan ng kutsara", explanation: "Tutusok lang ang tinidor sa sabaw at tatagas ang sabaw; kutsara ang dapat gamitin."),
+            ExerciseItem(prompt: "Mali: Umakyat ang isda sa puno para gumawa ng pugad.", options: ["Ang isda ay nakatira sa tubig at hindi umaakyat sa puno", "Walang sanga ang mga puno", "Ang isda ay gumagawa ng pugad sa bubong", "Lumilipad ang isda sa hangin"], correctAnswer: "Ang isda ay nakatira sa tubig at hindi umaakyat sa puno", explanation: "May hasang at palikpik ang isda`t hindi nabubuhay sa lupa o umaakyat sa puno."),
+            ExerciseItem(prompt: "Mali: Nagsuot siya ng makapal na jacket para lumangoy sa pool.", options: ["Damit pampaligo ang ginagamit sa paglangoy, hindi makapal na jacket", "Nagpapabilis sa paglangoy ang makapal na jacket", "Dapat puno ng yelo ang pool", "Tuwing tag-init lang sinusuot ang makapal na jacket"], correctAnswer: "Damit pampaligo ang ginagamit sa paglangoy, hindi makapal na jacket", explanation: "Sumisipsip ng tubig ang jacket at bibigat kaya mahihirapan kang lumangoy."),
+            ExerciseItem(prompt: "Mali: Niluto nila ang hilaw na itlog sa loob ng freezer.", options: ["Naglalamig ang freezer; kalan ang nagluluto", "Dapat hilaw lang kainin ang itlog", "Ang freezer ay ginagamit sa pagpapakulo ng tubig", "Mas madaling maluto ang itlog sa microwave"], correctAnswer: "Naglalamig ang freezer; kalan ang nagluluto", explanation: "Kailangan ng init para makapagluto; ang freezer ay para magpalamig."),
+            ExerciseItem(prompt: "Mali: Binuksan ng aso ang libro at nagbasa nang malakas.", options: ["Hindi nakakapagsalita o nakakapagbasa ang aso", "Diyaryo lang ang binabasa ng aso", "Dapat tahimik lang magbasa", "Gusto ng aso na magsulat ng libro"], correctAnswer: "Hindi nakakapagsalita o nakakapagbasa ang aso", explanation: "Walang kakayahan ang hayop na magbasa o magsalita ng wika ng tao."),
+            ExerciseItem(prompt: "Mali: Hinati niya ang cake gamit ang kutsara.", options: ["Kutsilyo ang ginagamit sa paghati ng cake, hindi kutsara", "Kamayin dapat ang cake", "Para sa sabaw lang ang kutsara", "Dapat gupitin ang cake ng gunting"], correctAnswer: "Kutsilyo ang ginagamit sa paghati ng cake, hindi kutsara", explanation: "May talim ang kutsilyo para makahati nang maayos; ang kutsara ay para sa paghigop."),
+            ExerciseItem(prompt: "Mali: Ginamit niya ang lapis para mag-type sa kanyang cellphone.", options: ["Daliri o stylus ang ginagamit sa touchscreen ng cellphone", "Sa salamin lang ginagamit ang lapis", "Voice command lang ang tinatanggap ng cellphone", "Masyadong maikli ang lapis para magsulat"], correctAnswer: "Daliri o stylus ang ginagamit sa touchscreen ng cellphone", explanation: "Ang screen ng smartphone ay gumagana sa dampi ng daliri o stylus pen."),
+            ExerciseItem(prompt: "Mali: Lumayag ang eroplano sa ibabaw ng malalim na dagat.", options: ["Lumilipad ang eroplano sa hangin; barko ang lumalayag sa dagat", "Berde palagi ang tubig sa dagat", "Sa lupa lang tumatakbo ang eroplano", "Lumilipad ang barko sa langit"], correctAnswer: "Lumilipad ang eroplano sa hangin; barko ang lumalayag sa dagat", explanation: "Ang eroplano ay para sa himpapawid; ang barko ang para sa dagat."),
+            ExerciseItem(prompt: "Mali: Nagbukas siya ng payong sa loob ng tuyong sala.", options: ["Ang payong ay para sa ulan o araw sa labas", "Dapat may ulan sa loob ng sala", "Tuwing taglamig lang ginagamit ang payong", "Dapat magsuot siya ng jascket sa loob"], correctAnswer: "Ang payong ay para sa ulan o araw sa labas", explanation: "Proteksyon ang payong sa ulan sa labas; walang ulan sa loob ng tuyong bahay."),
+            ExerciseItem(prompt: "Mali: Tiyak na tumahol ang pusa sa kartero.", options: ["Ngumiyaw ang pusa; tumahol ang aso", "Sa daga lang tumatahol ang pusa", "Takot ang kartero sa pusa", "Tuwing umaga lang tumatahol ang pusa"], correctAnswer: "Ngumiyaw ang pusa; tumahol ang aso", explanation: "Ang aso ang tumatahol; ngumiyaw naman ang tunog ng pusa."),
+            ExerciseItem(prompt: "Mali: Naglagay siya ng gasolina sa kanyang bisikleta para pumunta sa tindahan.", options: ["Pedal at lakas ng tao ang nagpapatakbo sa bisikleta", "Diesel ang ginagamit sa bisikleta", "Baterya lang ang nagpapatakbo sa bisikleta", "Walang gulong ang bisikleta"], correctAnswer: "Pedal at lakas ng tao ang nagpapatakbo sa bisikleta", explanation: "Ang bisikleta ay walang makina; pedal ang nagpapandar nito gamit ang paa."),
+            ExerciseItem(prompt: "Mali: Umulan ng yelo (snow) sa gitna ng mainit na tag-araw.", options: ["Sa malamig na taglamig lang umuulan ng yelo", "Madilim palagi ang tag-araw", "Tuwing Disyembre lang may tag-araw", "Mainit hawakan ang yelo (snow)"], correctAnswer: "Sa malamig na taglamig lang umuulan ng yelo", explanation: "Kailangan ng napakalamig na panahon para magka-yelo o snow."),
+            ExerciseItem(prompt: "Mali: Hinugasan niya ang mga maruruming plato sa basurahan.", options: ["Sa sink hinuhugasan ang plato, hindi sa basurahan", "Para sa malilinis na damit ang basurahan", "Sa halamanan dapat hinuhugasan ang plato", "Puno ng malinis na tubig ang basurahan"], correctAnswer: "Sa sink hinuhugasan ang plato, hindi sa basurahan", explanation: "Tapunan ng dumi ang basurahan; sa lababo o sink hinuhugasan ang mga plato."),
+            ExerciseItem(prompt: "Mali: Diniligan niya ang kanyang halaman ng isang balde ng buhangin.", options: ["Tubig ang kailangan ng halaman para lumaki, hindi buhangin", "Masyadong binabasa ng buhangin ang lupa", "Dapat puno ng bato ang halamanan", "Para sa pekeng halaman lang ang buhangin"], correctAnswer: "Tubig ang kailangan ng halaman para lumaki, hindi buhangin", explanation: "Tubig ang kailangan ng halaman para mabuhay; matutuyo ito sa buhangin.")
+        ]
+    )
+
+    // MARK: - Easy Sequencing
+    private static let easySequencing = Exercise(
+        title: "Madaling Pagkakasunod-sunod",
+        instructions: "Ayusin ang mga hakbang ng aktibidad sa tamang pagkakasunod-sunod.",
+        section: .language,
+        type: .sequencing,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Paggawa ng tinapay na tostado (toast)", options: ["Ilagay ang tinapay sa toaster", "Ibaon ang lever para mag-init", "Hintaying lumabas o tumalon ang tinapay", "Pahiran ng mantikilya ang tinapay"], correctAnswer: "Ilagay ang tinapay sa toaster | Ibaon ang lever para mag-init | Hintaying lumabas o tumalon ang tinapay | Pahiran ng mantikilya ang tinapay", explanation: "Ilagay ang tinapay, painitin, hintaying lumabas, saka pahiran ng mantikilya."),
+            ExerciseItem(prompt: "Paghuhugas ng kamay", options: ["Basain ang mga kamay ng tubig", "Maglagay ng sabon at kuskusin ang mga palad", "Banlawan ang sabon ng tubig", "Patuyuin ang mga kamay gamit ang malinis na tuwalya"], correctAnswer: "Basain ang mga kamay ng tubig | Maglagay ng sabon at kuskusin ang mga palad | Banlawan ang sabon ng tubig | Patuyuin ang mga kamay gamit ang malinis na tuwalya", explanation: "Basain ang kamay, sabunin, banlawan, at patuyuin."),
+            ExerciseItem(prompt: "Pagpapadala ng sulat", options: ["Isulat ang mensahe sa papel", "Ipasok ang sulat sa envelope", "Isulat ang address sa envelope", "Magdikit ng stamp at ihulog sa mailbox"], correctAnswer: "Isulat ang mensahe sa papel | Ipasok ang sulat sa envelope | Isulat ang address sa envelope | Magdikit ng stamp at ihulog sa mailbox", explanation: "Isulat ang sulat, ilagay sa sobre, isulat ang address, at padalhan ng selyo."),
+            ExerciseItem(prompt: "Pagsisipilyo ng ngipin", options: ["Maglagay ng toothpaste sa sipilyo", "Sipilyuhin nang maayos ang mga ngipin", "Magmumog ng tubig", "Hugasan ang sipilyo at itabi ito"], correctAnswer: "Maglagay ng toothpaste sa sipilyo | Sipilyuhin nang maayos ang mga ngipin | Magmumog ng tubig | Hugasan ang sipilyo at itabi ito", explanation: "Maglagay ng toothpaste, sipilyuhin ang ngipin, magmumog, at linisin ang sipilyo."),
+            ExerciseItem(prompt: "Paghahanda ng mainit na tsa (tea)", options: ["Magpakulo ng tubig sa takure", "Ilagay ang tea bag sa tasa", "Ibuhos ang mainit na tubig sa tasa", "Hayaang lumamig nang kaunti bago inumin"], correctAnswer: "Magpakulo ng tubig sa takure | Ilagay ang tea bag sa tasa | Ibuhos ang mainit na tubig sa tasa | Hayaang lumamig nang kaunti bago inumin", explanation: "Magpakulo ng tubig, ilagay ang tsa sa tasa, buhusan ng tubig, at inumin kapag sapat na ang lamig.")
+        ]
+    )
+
+    // MARK: - Medium Word Association
+    private static let mediumWordAssociation = Exercise(
+        title: "Pag-uugnay ng Salita",
+        instructions: "Piliin ang salita na may pinakamalapit na kaugnayan sa ibinigay na salita.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "AKLATAN (LIBRARY)", options: ["Katahimikan", "Ingay", "Maraming Tao", "Laro"], correctAnswer: "Katahimikan", explanation: "Ang aklatan ay lugar ng pag-aaral kung saan kinakailangan ang katahimikan."),
+            ExerciseItem(prompt: "OSPITAL", options: ["Paggaling", "Bakasyon", "Pamimili", "Pagluluto"], correctAnswer: "Paggaling", explanation: "Ang ospital ay pasilidad para gamutin ang mga may karamdaman upang gumaling."),
+            ExerciseItem(prompt: "PALIPARAN (AIRPORT)", options: ["Pag-alis", "Pagtulog", "Paghahalaman", "Pinta"], correctAnswer: "Pag-alis", explanation: "Ang paliparan ay lugar para sa pag-alis o paglipad ng mga eroplano."),
+            ExerciseItem(prompt: "DISYERTO", options: ["Tuyot", "Bagyo", "Gubat", "Dagat"], correctAnswer: "Tuyot", explanation: "Ang disyerto ay isang napakatuyong lugar dahil sa kawalan ng ulan."),
+            ExerciseItem(prompt: "KASAL", options: ["Singsing", "Pagsusulit", "Opisina", "Susi"], correctAnswer: "Singsing", explanation: "Ang singsing ay tradisyonal na simbolo ng pag-iisang dibdib sa kasal."),
+            ExerciseItem(prompt: "BUKID", options: ["Ani", "Lungsod", "Opisina", "Pabrika"], correctAnswer: "Ani", explanation: "Ang bukid ay lugar ng pagsasaka kung saan nakukuha ang ani."),
+            ExerciseItem(prompt: "KUSINA", options: ["Resipe", "Kama", "Kotse", "Shower"], correctAnswer: "Resipe", explanation: "Ang pagluluto sa kusina ay karaniwang sumusunod sa resipe o hakbang."),
+            ExerciseItem(prompt: "BUNDOK", options: ["Taluktok", "Silong", "Kalsada", "Disyerto"], correctAnswer: "Taluktok", explanation: "Ang taluktok o peak ang pinakamataas na bahagi ng bundok."),
+            ExerciseItem(prompt: "HUKUMAN", options: ["Katarungan", "Teatro", "Kusina", "Pamilihan"], correctAnswer: "Katarungan", explanation: "Ang hukuman ay nagpapasya ayon sa batas para sa katarungan."),
+            ExerciseItem(prompt: "OPISINA", options: ["Deadline", "Baybayin", "Kama", "Picnic"], correctAnswer: "Deadline", explanation: "Ang trabaho sa opisina ay nakatutok sa oras ng pagtatapos ng gawain (deadline)."),
+            ExerciseItem(prompt: "TEATRO", options: ["Entablado", "Kusina", "Lansangan", "Gubat"], correctAnswer: "Entablado", explanation: "Ang entablado o stage ang lugar kung saan nagtatanghal ang mga aktor."),
+            ExerciseItem(prompt: "GUBAT", options: ["Kalikasan", "Lungsod", "Disyerto", "Semento"], correctAnswer: "Kalikasan", explanation: "Ang gubat ay binubuo ng mga puno at mga hayop na bahagi ng kalikasan."),
+            ExerciseItem(prompt: "LABORATORYO", options: ["Eksperimento", "Pagluluto", "Pagsayaw", "Pamimili"], correctAnswer: "Eksperimento", explanation: "Ang laboratoryo ay lugar para sa siyentipikong pag-aaral o eksperimento."),
+            ExerciseItem(prompt: "MUSEO", options: ["Eksibisyon", "Pelikula", "Palakasan", "Pagluluto"], correctAnswer: "Eksibisyon", explanation: "Sa museo itinatanghal ang mga makasaysayang bagay sa pamamagitan ng eksibisyon."),
+            ExerciseItem(prompt: "DENTISTA", options: ["Sira sa Ngipin", "Gupit", "Tiket", "Pagluluto"], correctAnswer: "Sira sa Ngipin", explanation: "Ang dentista ang nangangalaga sa ngipin tulad ng pagsasaayos ng sira o cavity.")
+        ]
+    )
+
+    // MARK: - Medium Homonyms
+    private static let mediumHomonyms = Exercise(
+        title: "Katamtamang Homonimya",
+        instructions: "Piliin ang tamang pares ng salita upang makumpleto ang mga pangungusap.",
+        section: .language,
+        type: .homonym,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "[basa / basa] Ang basang papel ay mahirap sulatan. Ang ___ ng libro ay nakakatalino.", options: ["basa...basa", "basa...basa", "basa...basa", "basa...basa"], correctAnswer: "basa...basa", explanation: "Ang unang 'basa' ay may tubig (wet); ang ikalawang 'basa' ay pagbabasa (read)."),
+            ExerciseItem(prompt: "[puno / puno] Ang malaking ___ ng mangga ay namumunga. Ang baso ay ___ ng tubig.", options: ["puno...puno", "puno...puno", "puno...puno", "puno...puno"], correctAnswer: "puno...puno", explanation: "Ang unang 'puno' ay halaman (tree); ang ikalawang 'puno' ay walang bakante (full)."),
+            ExerciseItem(prompt: "[kita / kita] Magkano ang ___ mo sa trabaho ngayong araw? Doon ko ___ ang nawawalang aso.", options: ["kita...kita", "kita...kita", "kita...kita", "kita...kita"], correctAnswer: "kita...kita", explanation: "Ang unang 'kita' ay sahod o income; ang ikalawang 'kita' ay nakita (seen)."),
+            ExerciseItem(prompt: "[tuyo / tuyo] Ang basang damit ay ___ na. Masarap kumain ng ___ na isda sa almusal.", options: ["tuyo...tuyo", "tuyo...tuyo", "tuyo...tuyo", "tuyo...tuyo"], correctAnswer: "tuyo...tuyo", explanation: "Ang unang 'tuyo' ay dry; ang ikalawang 'tuyo' ay ang uri ng isda (salted dried fish)."),
+            ExerciseItem(prompt: "[gabi / gabi] Masarap ang ___ na hinalo sa sinigang. Madilim na kapag ___ na.", options: ["gabi...gabi", "gabi...gabi", "gabi...gabi", "gabi...gabi"], correctAnswer: "gabi...gabi", explanation: "Ang unang 'gabi' ay ang halamang-ugat (taro); ang ikalawang 'gabi' ay ang gabi pagkatapos ng hapon (night).")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "Madaling mga Salawikain",
+        instructions: "Piliin ang salita na tamang nakakumpleto sa salawikain.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "Aanhin pa ang damo, kung patay na ang ___", options: ["kabayo", "baka", "aso", "pusa"], correctAnswer: "kabayo", explanation: "Walang silbi ang tulong o ibinibigay kung huli na ang lahat."),
+            ExerciseItem(prompt: "Habang maikli ang kumot, matutong ___", options: ["mamaluktot", "matulog", "bumangon", "umiyak"], correctAnswer: "mamaluktot", explanation: "Dapat mamuhay nang naaayon sa kakayahan habang kapos pa."),
+            ExerciseItem(prompt: "Kung may tinanim, may ___", options: ["aanihin", "kakainin", "itatapon", "ibili"], correctAnswer: "aanihin", explanation: "Ang nagsisipag at naghahanda ay may makukuhang magandang bunga sa huli."),
+            ExerciseItem(prompt: "Ang hindi lumingon sa pinanggalingan, hindi makakarating sa ___", options: ["paroroonan", "bahay", "paaralan", "trabaho"], correctAnswer: "paroroonan", explanation: "Dapat magpasalamat at tandaan ang mga taong tumulong sa atin upang magtagumpay."),
+            ExerciseItem(prompt: "Pag habang may buhay, may ___", options: ["pag-asa", "pagsubok", "gawain", "hirap"], correctAnswer: "pag-asa", explanation: "Habang tayo ay nabubuhay, laging may pagkakataon na magbago o umayos ang sitwasyon."),
+            ExerciseItem(prompt: "Nasa Diyos ang awa, nasa tao ang ___", options: ["gawa", "isip", "tiwala", "salita"], correctAnswer: "gawa", explanation: "Kailangang kumilos ng tao at huwag umasa lamang sa himala."),
+            ExerciseItem(prompt: "Ang sakit ng kalingkingan, dama ng buong ___", options: ["katawan", "kamay", "pamilya", "bayan"], correctAnswer: "katawan", explanation: "Ang problema ng isang miyembro ay nararamdaman at nakakaapekto sa buong grupo."),
+            ExerciseItem(prompt: "Daig ng maagap ang ___", options: ["masipag", "matalino", "mayaman", "malakas"], correctAnswer: "masipag", explanation: "Ang taong maagang kumilos ay nakalalamang sa kahit na sino."),
+            ExerciseItem(prompt: "Bunsod ng katamaran, ang tao ay ___", options: ["nagugutom", "yumayaman", "sumasaya", "natututo"], correctAnswer: "nagugutom", explanation: "Ang hindi nagtatrabaho ay walang makakain."),
+            ExerciseItem(prompt: "Kung ano ang puno, siya ang ___", options: ["bunga", "dahon", "sanga", "ugat"], correctAnswer: "bunga", explanation: "Ang katangian ng magulang ay makikita rin sa kanilang anak."),
+            ExerciseItem(prompt: "Ang lalaking nagigipit, sa patalim ___", options: ["kumakapit", "tumatakbo", "lumalaban", "tumatalon"], correctAnswer: "kumakapit", explanation: "Ang taong desperado ay handang gumawa ng delikadong bagay."),
+            ExerciseItem(prompt: "Walang matigas na tinapay sa mainit na ___", options: ["kape", "tubig", "tsokolate", "gatas"], correctAnswer: "kape", explanation: "Nalalamuyot ang matigas na puso sa pamamagitan ng mabuting pakikitungo."),
+            ExerciseItem(prompt: "Walang lihim na hindi ___", options: ["nabubunyag", "nawawala", "sumasabog", "natatago"], correctAnswer: "nabubunyag", explanation: "Lahat ng sikreto ay nalalaman din pagdating ng tamang panahon."),
+            ExerciseItem(prompt: "Ang taong walang kibo, nasa loob ang ___", options: ["kulo", "galit", "takot", "saya"], correctAnswer: "kulo", explanation: "Ang tahimik na tao ay may nakatagong matinding emosyon o plano."),
+            ExerciseItem(prompt: "Magbiro ka na sa lasing, huwag lang sa bagong ___", options: ["gising", "tuyo", "salta", "kasal"], correctAnswer: "gising", explanation: "Madaling magalit ang taong bagong gising kaya huwag itong bibiruin.")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "Mahirap na mga Salawikain",
+        instructions: "Piliin ang salita na tamang nakakumpleto sa salawikain.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "Kapag ang ilog ay matahimik, asahan mong ito ay ___", options: ["malalim", "mababaw", "marumi", "tuyo"], correctAnswer: "malalim", explanation: "Ang taong tahimik ay malalim mag-isip at may malawak na kaalaman."),
+            ExerciseItem(prompt: "Bago ka bumati sa matang may muta, pahirin mo muna ang iyong ___", options: ["mukha", "mata", "kamay", "luha"], correctAnswer: "mata", explanation: "Bago mo punahin ang pagkakamali ng iba, tingnan mo muna ang sarili mo."),
+            ExerciseItem(prompt: "Walang humawak ng guryon na hindi ___", options: ["napasuko", "nasugatan", "natuwa", "nadala"], correctAnswer: "nasugatan", explanation: "Ang bawat pagsubok sa buhay o malaking ambisyon ay may kaakibat na sakripisyo."),
+            ExerciseItem(prompt: "Ang bawat gubat ay may ___", options: ["ahas", "bato", "halaman", "ibon"], correctAnswer: "ahas", explanation: "Kahit saan ka pumunta ay may mga taong mapanlinlang kaya mag-ingat."),
+            ExerciseItem(prompt: "Walang lumura sa langit na hindi sa mukha ___", options: ["tumatama", "pumapatak", "bumabagsak", "dumudura"], correctAnswer: "tumatama", explanation: "Ang paggawa ng masama sa kapwa o sa nakatataas ay babalik din sa iyo."),
+            ExerciseItem(prompt: "Kung hindi ukol, hindi ___", options: ["bubukol", "darating", "mangyayari", "aabot"], correctAnswer: "bubukol", explanation: "Kung ang isang bagay ay hindi nakalaan sa iyo, hindi mo ito makukuha."),
+            ExerciseItem(prompt: "Ang lumalakad nang matulin, kung matinik ay ___", options: ["malalim", "mababaw", "masakit", "madugo"], correctAnswer: "malalim", explanation: "Ang nagmamadali sa pagpapasya ay nakagagawa ng malubhang pagkakamali."),
+            ExerciseItem(prompt: "Huwag mong bilangin ang sisu (chick) hangga't hindi ___", options: ["napipisa", "lumalabas", "lumalaki", "tumutubo"], correctAnswer: "napipisa", explanation: "Huwag munang umasa sa tagumpay hangga't hindi pa ito nangyayari."),
+            ExerciseItem(prompt: "Ang pili nang pili, nauuwi sa ___", options: ["bungi", "wala", "tira", "mali"], correctAnswer: "bungi", explanation: "Ang taong napakapili ay madalas na nakakakuha ng pinakamasamang opsyon sa huli."),
+            ExerciseItem(prompt: "Walang lumapit sa kalan na hindi ___", options: ["naulingan", "nainitan", "nasunog", "nabasa"], correctAnswer: "naulingan", explanation: "Ang taong sumasama sa masamang barkada ay tiyak na maiimpluwensyahan."),
+            ExerciseItem(prompt: "Walang matiyagang alipin na hindi ___", options: ["nagtagumpay", "nakalaya", "naging panginoon", "yumaman"], correctAnswer: "nakalaya", explanation: "Ang pagtitiis at pagsisikap ay nagbubunga ng kalayaan o kaginhawaan."),
+            ExerciseItem(prompt: "Magbiro ka na sa bagong gising, huwag lang sa gutom na ___", options: ["aso", "tao", "tigre", "lalaki"], correctAnswer: "aso", explanation: "Maging maingat sa pakikitungo sa mga taong nasa kritikal na kalagayan."),
+            ExerciseItem(prompt: "Ang bawat palayok ay may katapat na ___", options: ["suklob", "pinggan", "kutsara", "takip"], correctAnswer: "suklob", explanation: "Lahat ng tao ay may katugma o kapareha na laan para sa kanya."),
+            ExerciseItem(prompt: "Magsisi ka man at huli, wala nang ___", options: ["mangyayari", "saysay", "lunas", "gamot"], correctAnswer: "saysay", explanation: "Ang pagsisisi sa huli ay walang kapararakan o hindi na mababago ang nangyari.")
         ]
     )
 }

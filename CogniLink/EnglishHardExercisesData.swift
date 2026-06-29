@@ -19,7 +19,9 @@ struct EnglishHardExercisesData {
         easyWhatsWrong,
         easySequencing,
         mediumWordAssociation,
-        mediumHomonyms
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: Advanced Homonyms
@@ -389,6 +391,58 @@ struct EnglishHardExercisesData {
             ExerciseItem(prompt: "[cent / scent] A penny is worth one ___. The flower has a sweet ___.", options: ["cent...scent", "scent...cent", "cent...cent", "scent...scent"], correctAnswer: "cent...scent", explanation: "'Cent' is a unit of currency, while 'scent' refers to a smell or fragrance."),
             ExerciseItem(prompt: "[board / bored] He wrote the lesson on the ___. She felt ___ with nothing to do.", options: ["board...bored", "bored...board", "board...board", "bored...bored"], correctAnswer: "board...bored", explanation: "'Board' is a flat surface for writing, while 'bored' is the state of feeling weary or uninterested."),
             ExerciseItem(prompt: "[steel / steal] The bridge is made of strong ___. It is wrong to ___ money from others.", options: ["steel...steal", "steal...steel", "steel...steel", "steal...steal"], correctAnswer: "steel...steal", explanation: "'Steel' is a strong metal alloy, while 'steal' means to take property without permission.")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "Easy Complete the Saying",
+        instructions: "Choose the word that correctly completes the proverb or saying.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "An apple a day keeps the doctor ___", options: ["away", "here", "close", "well"], correctAnswer: "away", explanation: "The traditional proverb is 'An apple a day keeps the doctor away.'"),
+            ExerciseItem(prompt: "Look before you ___", options: ["leap", "run", "jump", "walk"], correctAnswer: "leap", explanation: "The traditional proverb is 'Look before you leap.'"),
+            ExerciseItem(prompt: "Better late than ___", options: ["never", "always", "sometimes", "soon"], correctAnswer: "never", explanation: "The traditional proverb is 'Better late than never.'"),
+            ExerciseItem(prompt: "A penny saved is a penny ___", options: ["earned", "spent", "lost", "found"], correctAnswer: "earned", explanation: "The traditional proverb is 'A penny saved is a penny earned.'"),
+            ExerciseItem(prompt: "Two heads are better than ___", options: ["one", "three", "four", "none"], correctAnswer: "one", explanation: "The traditional proverb is 'Two heads are better than one.'"),
+            ExerciseItem(prompt: "Don't count your chickens before they ___", options: ["hatch", "fly", "sleep", "sing"], correctAnswer: "hatch", explanation: "The traditional proverb is 'Don't count your chickens before they hatch.'"),
+            ExerciseItem(prompt: "Practice makes ___", options: ["perfect", "easy", "hard", "better"], correctAnswer: "perfect", explanation: "The traditional proverb is 'Practice makes perfect.'"),
+            ExerciseItem(prompt: "A picture is worth a thousand ___", options: ["words", "pages", "colors", "dollars"], correctAnswer: "words", explanation: "The traditional proverb is 'A picture is worth a thousand words.'"),
+            ExerciseItem(prompt: "Honesty is the best ___", options: ["policy", "habit", "choice", "rule"], correctAnswer: "policy", explanation: "The traditional proverb is 'Honesty is the best policy.'"),
+            ExerciseItem(prompt: "All that glitters is not ___", options: ["gold", "silver", "bright", "metal"], correctAnswer: "gold", explanation: "The traditional proverb is 'All that glitters is not gold.'"),
+            ExerciseItem(prompt: "No pain, no ___", options: ["gain", "loss", "work", "play"], correctAnswer: "gain", explanation: "The traditional proverb is 'No pain, no gain.'"),
+            ExerciseItem(prompt: "Birds of a feather flock ___", options: ["together", "apart", "away", "alone"], correctAnswer: "together", explanation: "The traditional proverb is 'Birds of a feather flock together.'"),
+            ExerciseItem(prompt: "Actions speak louder than ___", options: ["words", "sounds", "voices", "calls"], correctAnswer: "words", explanation: "The traditional proverb is 'Actions speak louder than words.'"),
+            ExerciseItem(prompt: "Out of sight, out of ___", options: ["mind", "heart", "view", "reach"], correctAnswer: "mind", explanation: "The traditional proverb is 'Out of sight, out of mind.'"),
+            ExerciseItem(prompt: "Every cloud has a silver ___", options: ["lining", "border", "color", "shine"], correctAnswer: "lining", explanation: "The traditional proverb is 'Every cloud has a silver lining.'")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "Hard Complete the Saying",
+        instructions: "Choose the word that correctly completes the proverb or saying.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "Familiarity breeds ___", options: ["contempt", "closeness", "dislike", "friendship"], correctAnswer: "contempt", explanation: "The proverb is 'Familiarity breeds contempt.'"),
+            ExerciseItem(prompt: "Fortune favors the ___", options: ["bold", "wise", "kind", "rich"], correctAnswer: "bold", explanation: "The proverb is 'Fortune favors the bold.'"),
+            ExerciseItem(prompt: "A chain is only as strong as its weakest ___", options: ["link", "part", "loop", "metal"], correctAnswer: "link", explanation: "The proverb is 'A chain is only as strong as its weakest link.'"),
+            ExerciseItem(prompt: "Adversity makes strange ___", options: ["bedfellows", "partners", "friends", "allies"], correctAnswer: "bedfellows", explanation: "The proverb is 'Adversity makes strange bedfellows.'"),
+            ExerciseItem(prompt: "Absence makes the heart grow ___", options: ["fonder", "colder", "weaker", "sad"], correctAnswer: "fonder", explanation: "The proverb is 'Absence makes the heart grow fonder.'"),
+            ExerciseItem(prompt: "Still waters run ___", options: ["deep", "cold", "fast", "quiet"], correctAnswer: "deep", explanation: "The proverb is 'Still waters run deep.'"),
+            ExerciseItem(prompt: "Necessity is the mother of ___", options: ["invention", "progress", "creativity", "needs"], correctAnswer: "invention", explanation: "The proverb is 'Necessity is the mother of invention.'"),
+            ExerciseItem(prompt: "The pen is mightier than the ___", options: ["sword", "shield", "army", "gun"], correctAnswer: "sword", explanation: "The proverb is 'The pen is mightier than the sword.'"),
+            ExerciseItem(prompt: "All good things must come to an ___", options: ["end", "halt", "outcome", "epoch"], correctAnswer: "end", explanation: "The proverb is 'All good things must come to an end.'"),
+            ExerciseItem(prompt: "Discretion is the better part of ___", options: ["valor", "wisdom", "safety", "caution"], correctAnswer: "valor", explanation: "The proverb is 'Discretion is the better part of valor.'"),
+            ExerciseItem(prompt: "A rolling stone gathers no ___", options: ["moss", "dust", "dirt", "leaves"], correctAnswer: "moss", explanation: "The proverb is 'A rolling stone gathers no moss.'"),
+            ExerciseItem(prompt: "Hope springs eternal in the human ___", options: ["breast", "mind", "soul", "heart"], correctAnswer: "breast", explanation: "The proverb is 'Hope springs eternal in the human breast.'"),
+            ExerciseItem(prompt: "Beauty is in the eye of the ___", options: ["beholder", "painter", "dreamer", "artist"], correctAnswer: "beholder", explanation: "The proverb is 'Beauty is in the eye of the beholder.'"),
+            ExerciseItem(prompt: "Good fences make good ___", options: ["neighbors", "borders", "gardens", "homes"], correctAnswer: "neighbors", explanation: "The proverb is 'Good fences make good neighbors.'"),
+            ExerciseItem(prompt: "Power corrupts, and absolute power corrupts ___", options: ["absolutely", "quickly", "totally", "silently"], correctAnswer: "absolutely", explanation: "The proverb is 'Power corrupts, and absolute power corrupts absolutely.'")
         ]
     )
 }

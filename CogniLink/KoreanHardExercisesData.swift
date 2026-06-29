@@ -12,7 +12,15 @@ struct KoreanHardExercisesData {
         exercise6,
         exercise7,
         exercise8,
-        easyHomonyms
+        easyHomonyms,
+        easyAnalogies,
+        easyCauseEffect,
+        easyWhatsWrong,
+        easySequencing,
+        mediumWordAssociation,
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: 고급 동음이의어
@@ -246,6 +254,195 @@ struct KoreanHardExercisesData {
             ExerciseItem(prompt: "[발 / 발] 걸어가니 ___이 아프다. 더운 여름 햇빛을 막기 위해 창문에 ___을 쳤다.", options: ["발...발", "발...손", "손...발", "발...커튼"], correctAnswer: "발...발", explanation: "첫 번째 '발'은 걷는 신체 부위(foot)이고, 두 번째 '발'은 대나무 등으로 만든 가리개(screen)입니다."),
             ExerciseItem(prompt: "[파 / 파] 찌개에 매운 송송 썬 ___를 넣었다. 바다에 큰 ___도가 몰려온다.", options: ["파...파", "무...파", "파...물", "파...파도"], correctAnswer: "파...파", explanation: "첫 번째 '파'는 식재료인 채소(green onion)이고, 두 번째 '파'는 바다 물결(wave)입니다."),
             ExerciseItem(prompt: "[손 / 손] 물건을 만질 때는 ___을 깨끗이 씻어야 한다. 오늘 우리 집에 귀한 ___님이 오신다.", options: ["손...손", "손...발", "발...손", "손...친구"], correctAnswer: "손...손", explanation: "첫 번째 '손'은 팔 끝에 달린 신체 기관(hand)이고, 두 번째 '손'은 손님(guest)을 의미합니다.")
+        ]
+    )
+
+    // MARK: - Easy Analogies
+    private static let easyAnalogies = Exercise(
+        title: "쉬운 유추",
+        instructions: "유추를 가장 잘 완성하는 단어를 고르세요.",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "위 와 아래 의 관계는 덥다 와 무엇의 관계와 같습니까?", options: ["춥다", "따뜻하다", "끓다", "젖다"], correctAnswer: "춥다", explanation: "위와 아래는 반대말이며, 덥다와 춥다 역시 반대말입니다."),
+            ExerciseItem(prompt: "새 와 날다 의 관계는 물고기 와 무엇의 관계와 같습니까?", options: ["헤엄치다", "달리다", "걷다", "뛰다"], correctAnswer: "헤엄치다", explanation: "새는 날아서 이동하고, 물고기는 헤엄쳐서 이동합니다."),
+            ExerciseItem(prompt: "고양이 와 새끼고양이 의 관계는 개 와 무엇의 관계와 같습니까?", options: ["강아지", "새끼고양이", "송아지", "망아지"], correctAnswer: "강아지", explanation: "새끼고양이는 고양이의 아기이고, 강아지는 개의 아기입니다."),
+            ExerciseItem(prompt: "낮 과 태양 의 관계는 밤 과 무엇의 관계와 같습니까?", options: ["달", "비", "바람", "구름"], correctAnswer: "달", explanation: "낮에는 태양이 뜨고 밤에는 달이 뜹니다."),
+            ExerciseItem(prompt: "얼음 과 차갑다 의 관계는 불 과 무엇의 관계와 같습니까?", options: ["뜨겁다", "젖다", "어둡다", "부드럽다"], correctAnswer: "뜨겁다", explanation: "얼음은 만지면 차갑고, 불은 뜨겁습니다."),
+            ExerciseItem(prompt: "펜 과 쓰다 의 관계는 가위 와 무엇의 관계와 같습니까?", options: ["자르다", "붙이다", "그리다", "칠하다"], correctAnswer: "자르다", explanation: "펜은 쓰는 데 사용되고, 가위는 자르는 데 사용됩니다."),
+            ExerciseItem(prompt: "나무 와 잎 의 관계는 꽃 과 무엇의 관계와 같습니까?", options: ["꽃잎", "가시", "뿌리", "줄기"], correctAnswer: "꽃잎", explanation: "잎은 나무의 일부이고, 꽃잎은 꽃의 일부입니다."),
+            ExerciseItem(prompt: "자동차 와 도로 의 관계는 배 와 무엇의 관계와 같습니까?", options: ["물", "공기", "땅", "철로"], correctAnswer: "물", explanation: "자동차는 도로 위를 달리고, 배는 물 위를 다닙니다."),
+            ExerciseItem(prompt: "양말 과 발 의 관계는 장갑 과 무엇의 관계와 같습니까?", options: ["손", "머리", "목", "팔"], correctAnswer: "손", explanation: "양말은 발에 신고, 장갑은 손에 낍니다."),
+            ExerciseItem(prompt: "배고픔 과 음식 의 관계는 목마름 과 무엇의 관계와 같습니까?", options: ["물", "빵", "과일", "소금"], correctAnswer: "물", explanation: "배가 고프면 음식이 필요하고, 목이 마르면 물이 필요합니다."),
+            ExerciseItem(prompt: "신발 과 발 의 관계는 모자 와 무엇의 관계와 같습니까?", options: ["머리", "손", "다리", "목"], correctAnswer: "머리", explanation: "신발은 발에 신고, 모자는 머리에 씁니다."),
+            ExerciseItem(prompt: "사과 와 과일 의 관계는 당근 과 무엇의 관계와 같습니까?", options: ["채소", "고기", "곡물", "유제품"], correctAnswer: "채소", explanation: "사과는 과일의 일종이고, 당근은 채소의 일종입니다."),
+            ExerciseItem(prompt: "소 와 우유 의 관계는 벌 과 무엇의 관계와 같습니까?", options: ["꿀", "밀랍", "꽃가루", "물"], correctAnswer: "꿀", explanation: "소는 우유를 생산하고, 벌은 꿀을 생산합니다."),
+            ExerciseItem(prompt: "이빨 과 칫솔 의 관계는 머리카락 과 무엇의 관계와 같습니까?", options: ["빗", "감기", "자르기", "말리기"], correctAnswer: "빗", explanation: "이빨은 칫솔로 닦고, 머리카락은 빗으로 빗습니다."),
+            ExerciseItem(prompt: "비 와 젖음 의 관계는 햇빛 과 무엇의 관계와 같습니까?", options: ["마름", "추위", "어둠", "바람"], correctAnswer: "마름", explanation: "비는 사물을 젖게 만들고, 햇빛은 사물을 마르게 만듭니다.")
+        ]
+    )
+
+    // MARK: - Easy Cause and Effect
+    private static let easyCauseEffect = Exercise(
+        title: "쉬운 인과관계",
+        instructions: "가장 논리적인 원인이나 결과를 나타내는 옵션을 고르세요.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "원인: 유리컵을 콘크리트 바닥에 떨어뜨립니다.", options: ["유리가 깨집니다", "유리가 물에 뜹니다", "유리가 부드러워집니다", "유리가 파랗게 변합니다"], correctAnswer: "유리가 깨집니다", explanation: "단단한 바닥에 깨지기 쉬운 유리가 떨어지면 박살나거나 깨집니다."),
+            ExerciseItem(prompt: "원인: 일주일 동안 집안 식물에 물을 주지 않습니다.", options: ["시들어 말라버립니다", "꽃이 자라납니다", "보라색으로 변합니다", "열매를 맺습니다"], correctAnswer: "시들어 말라버립니다", explanation: "식물은 살기 위해 물이 필요하며, 물이 없으면 시들어 죽습니다."),
+            ExerciseItem(prompt: "원인: 여름에 부엌 테이블 위에 얼음 한 조각을 올려놓습니다.", options: ["녹아서 물이 됩니다", "더 커집니다", "나무로 변합니다", "얼은 채로 유지됩니다"], correctAnswer: "녹아서 물이 됩니다", explanation: "따뜻한 실내 온도 때문에 얼음이 녹아 액체인 물이 됩니다."),
+            ExerciseItem(prompt: "원인: 비누방울에 너무 많은 공기를 불어넣습니다.", options: ["터져버립니다", "얼음으로 변합니다", "노래를 부릅니다", "무거워집니다"], correctAnswer: "터져버립니다", explanation: "비누방울 막의 한계를 넘어서 공기를 불어넣으면 터지게 됩니다."),
+            ExerciseItem(prompt: "원인: 벽에 있는 조명 스위치를 켭니다.", options: ["불이 켜집니다", "방이 차가워집니다", "문이 잠깁니다", "시계가 멈춥니다"], correctAnswer: "불이 켜집니다", explanation: "스위치를 켜면 회로가 연결되어 전등에 불이 들어옵니다."),
+            ExerciseItem(prompt: "원인: 밤을 새워 한숨도 자지 않습니다.", options: ["다음 날 매우 피곤합니다", "에너지가 넘칩니다", "머리가 하얗게 셉니다", "키가 더 자랍니다"], correctAnswer: "다음 날 매우 피곤합니다", explanation: "수면 부족은 신체의 피로 누적과 피곤함을 유발합니다."),
+            ExerciseItem(prompt: "원인: 우산 없이 폭우 속에 서 있습니다.", options: ["비에 젖습니다", "보송보송하게 유지됩니다", "공중에 뜹니다", "불이 붙습니다"], correctAnswer: "비에 젖습니다", explanation: "비는 내리는 물이므로, 보호 장비 없이 맞으면 옷과 몸이 젖습니다."),
+            ExerciseItem(prompt: "원인: 토스터에 식빵을 넣고 레버를 아래로 누릅니다.", options: ["식빵이 구워집니다", "밀가루로 변합니다", "식빵이 녹습니다", "식빵이 축축해집니다"], correctAnswer: "식빵이 구워집니다", explanation: "토스터는 열을 가해 식빵 표면을 바삭하게 굽습니다."),
+            ExerciseItem(prompt: "원인: 여름에 우유를 냉장고 밖에 사흘 동안 방치합니다.", options: ["상해서 시어집니다", "더 단맛이 납니다", "단단하게 얼어붙습니다", "꿀로 변합니다"], correctAnswer: "상해서 시어집니다", explanation: "실온에 방치하면 세균이 증식하여 우유가 상하고 산패됩니다."),
+            ExerciseItem(prompt: "원인: 타오르는 촛불에 입김을 세게 붑니다.", options: ["촛불이 꺼집니다", "불꽃이 더 커집니다", "양초가 한 번에 녹습니다", "양초가 파랗게 변합니다"], correctAnswer: "촛불이 꺼집니다", explanation: "바람이 산소 공급을 차단하고 온도를 낮춰 불을 끕니다."),
+            ExerciseItem(prompt: "원인: 켜져 있는 가스레인지 위에 물이 담긴 냄비를 올립니다.", options: ["물이 끓기 시작합니다", "물이 얼음이 됩니다", "물이 즉시 사라집니다", "냄비가 커집니다"], correctAnswer: "물이 끓기 시작합니다", explanation: "불의 열기가 물의 온도를 끓는점까지 상승시킵니다."),
+            ExerciseItem(prompt: "원인: 맨발로 녹슨 못을 밟습니다.", options: ["발을 다칩니다", "신발이 더러워집니다", "더 높이 뜁니다", "발이 초록색이 됩니다"], correctAnswer: "발을 다칩니다", explanation: "뾰족한 못을 밟으면 피부를 뚫고 들어가 부상과 통증을 유발합니다."),
+            ExerciseItem(prompt: "원인: 쓴 블랙커피에 설탕을 넣습니다.", options: ["커피가 달콤해집니다", "커피가 차가워집니다", "커피가 사라집니다", "커피가 짭짤해집니다"], correctAnswer: "커피가 달콤해집니다", explanation: "설탕의 단맛이 커피의 쓴맛을 중화시켜 줍니다."),
+            ExerciseItem(prompt: "원인: 콘크리트 벽을 향해 테니스공을 던집니다.", options: ["공이 튕겨 나옵니다", "공이 벽을 뚫고 지나갑니다", "벽이 무너집니다", "공이 녹아버립니다"], correctAnswer: "공이 튕겨 나옵니다", explanation: "탄성이 있는 공이 단단한 벽에 부딪히면 반사 작용으로 되튕깁니다."),
+            ExerciseItem(prompt: "원인: 중요한 시험을 앞두고 공부를 전혀 하지 않습니다.", options: ["나쁜 점수를 받습니다", "만점을 받습니다", "학교가 문을 닫습니다", "조기 졸업을 합니다"], correctAnswer: "나쁜 점수를 받습니다", explanation: "준비와 학습이 없으면 시험 문제를 풀 수 없어 나쁜 점수를 받게 됩니다.")
+        ]
+    )
+
+    // MARK: - Easy What's Wrong Here
+    private static let easyWhatsWrong = Exercise(
+        title: "쉬운 모순 찾기",
+        instructions: "문장에서 논리적 오류나 발생할 수 없는 일을 찾으세요.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "모순: 철수는 양말을 신기 전에 신발을 신었습니다.", options: ["양말은 신발 안에 신어야 합니다", "신발은 손에 신어야 합니다", "양말은 머리에 쓰는 것입니다", "신발은 먹는 것입니다"], correctAnswer: "양말은 신발 안에 신어야 합니다", explanation: "양말은 신발 내부의 쓸림을 막기 위해 신발보다 먼저 신어야 합니다."),
+            ExerciseItem(prompt: "모순: 그녀는 닭고기 수프를 먹기 위해 포크를 사용했습니다.", options: ["수프는 액체이므로 숟가락이 필요합니다", "수프는 손가락으로 먹어야 합니다", "포크는 스테이크를 썰 때 씁니다", "수프는 컵에 끓여야 합니다"], correctAnswer: "수프는 액체이므로 숟가락이 필요합니다", explanation: "포크는 틈이 있어 액체를 담지 못하므로 숟가락을 써야 합니다."),
+            ExerciseItem(prompt: "모순: 물고기가 둥지를 틀기 위해 나무 위로 기어올라갔습니다.", options: ["물고기는 물에 살며 나무를 타지 못합니다", "나무에는 나뭇가지가 없습니다", "물고기는 지붕 위에만 둥지를 틉니다", "물고기는 공중을 납니다"], correctAnswer: "물고기는 물에 살며 나무를 타지 못합니다", explanation: "물고기는 아가미로 호흡하는 수생 생물이며 다리가 없어 나무를 타지 못합니다."),
+            ExerciseItem(prompt: "모순: 날씨가 아주 더웠는데 수영장에서 놀기 위해 무거운 모직 코트를 입었습니다.", options: ["수영할 때는 코트가 아닌 수영복을 입어야 합니다", "무거운 코트는 수영을 더 빠르게 합니다", "수영장에 얼음이 가득 차야 합니다", "모직 코트는 여름에만 입는 옷입니다"], correctAnswer: "수영할 때는 코트가 아닌 수영복을 입어야 합니다", explanation: "모직 코트는 물을 흡수하면 아주 무거워져 수영에 방해가 되고 위험합니다."),
+            ExerciseItem(prompt: "모순: 그들은 날달걀을 냉동실에 넣어서 삶아 익혔습니다.", options: ["냉동실은 음식을 얼리고, 가스레인지가 익힙니다", "달걀은 날로만 먹어야 합니다", "냉동실은 물을 끓이는 데 씁니다", "달걀은 전자레인지에 익히는 것이 낫습니다"], correctAnswer: "냉동실은 음식을 얼리고, 가스레인지가 익힙니다", explanation: "음식을 익히려면 열이 필요하며, 냉동실은 차갑게 얼리는 공간입니다."),
+            ExerciseItem(prompt: "모순: 강아지가 책을 펼치더니 소리 내어 읽기 시작했습니다.", options: ["개는 글을 읽거나 인간의 말을 하지 못합니다", "개는 신문만 읽습니다", "책은 소리 없이 읽어야 합니다", "개는 책 쓰는 것을 좋아합니다"], correctAnswer: "개는 글을 읽거나 인간의 말을 하지 못합니다", explanation: "동물은 인간의 언어를 인식하거나 발성할 인지 및 신체 능력이 없습니다."),
+            ExerciseItem(prompt: "모순: 그녀는 생일 케이크를 숟가락으로 잘랐습니다.", options: ["케이크를 자를 때는 숟가락이 아닌 칼을 써야 합니다", "케이크는 손으로 먹어야 합니다", "숟가락은 수프용으로만 쓰입니다", "케이크는 가위로 잘라야 합니다"], correctAnswer: "케이크를 자를 때는 숟가락이 아닌 칼을 써야 합니다", explanation: "케이크를 깔끔하게 조각내려면 날이 서 있는 칼을 사용해야 합니다."),
+            ExerciseItem(prompt: "모순: 그는 휴대폰에 문자를 치기 위해 연필을 사용했습니다.", options: ["휴대폰 터치스크린은 손가락이나 전용 펜을 씁니다", "연필은 유리에만 쓸 수 있습니다", "휴대폰은 음성 명령만 받습니다", "연필은 문자 쓰기에 너무 짧습니다"], correctAnswer: "휴대폰 터치스크린은 손가락이나 전용 펜을 씁니다", explanation: "스마트폰 스크린은 정전식 터치 방식으로 작동하여 손가락 끝이나 전용 스타일러스 펜이 필요합니다."),
+            ExerciseItem(prompt: "모순: 비행기가 깊고 푸른 바다의 물 위를 항해했습니다.", options: ["비행기는 하늘을 날고, 배가 바다를 항해합니다", "바닷물은 언제나 초록색입니다", "비행기는 땅 위로만 다닙니다", "배는 하늘을 납니다"], correctAnswer: "비행기는 하늘을 날고, 배가 바다를 항해합니다", explanation: "비행기는 공중을 비행하는 비행체이며, 해상 이동에는 선박이 필요합니다."),
+            ExerciseItem(prompt: "모순: 그녀는 비가 오지 않는 건조한 거실 안에서 우산을 펼쳤습니다.", options: ["우산은 야외에서 비나 햇빛을 피할 때 씁니다", "거실 안에는 빗물이 고여 있어야 합니다", "우산은 겨울에만 씁니다", "집안에서 우비를 입어야 합니다"], correctAnswer: "우산은 야외에서 비나 햇빛을 피할 때 씁니다", explanation: "우산은 실외 강수를 막는 도구이며 실내에는 지붕이 있어 비가 오지 않습니다."),
+            ExerciseItem(prompt: "모순: 고양이가 우체부 아저씨를 보고 멍멍 짖었습니다.", options: ["고양이는 야옹 하고, 개가 멍멍 짖습니다", "고양이는 쥐를 보고만 짖습니다", "우체부는 고양이를 무서워합니다", "고양이는 아침에만 짖습니다"], correctAnswer: "고양이는 야옹 하고, 개가 멍멍 짖습니다", explanation: "짖는 소리는 개의 울음소리이며 고양이는 야옹 소리를 냅니다."),
+            ExerciseItem(prompt: "모순: 그는 가게에 가기 위해 자전거에 휘발유를 부었습니다.", options: ["자전거는 페달을 밟아 타는 것이며 기름이 필요 없습니다", "자전거는 경유를 씁니다", "자전거는 배터리로만 갑니다", "자전거는 바퀴가 필요 없습니다"], correctAnswer: "자전거는 페달을 밟아 타는 것이며 기름이 필요 없습니다", explanation: "일반 자전거는 모터가 없는 인력 구동 탈것입니다."),
+            ExerciseItem(prompt: "모순: 무더운 여름날 오후에 폭설이 쏟아졌습니다.", options: ["눈은 추운 겨울 기온에만 내립니다", "여름날은 언제나 어둡습니다", "여름은 12월에만 찾아옵니다", "눈은 만지면 뜨겁습니다"], correctAnswer: "눈은 추운 겨울 기온에만 내립니다", explanation: "강설은 대기 온도가 영하로 떨어져야 가능하므로 더운 여름에는 불가능합니다."),
+            ExerciseItem(prompt: "모순: 그녀는 더러운 식기들을 쓰레기통 안에서 씻었습니다.", options: ["식기는 쓰레기통이 아닌 싱크대에서 씻어야 합니다", "쓰레기통은 깨끗한 옷을 두는 곳입니다", "식기는 정원에서 씻어야 합니다", "쓰레기통은 깨끗한 물로 차 있습니다"], correctAnswer: "식기는 쓰레기통이 아닌 싱크대에서 씻어야 합니다", explanation: "쓰레기통은 폐기물을 모으는 곳이고 식기는 싱크대에서 위생적으로 닦아야 합니다."),
+            ExerciseItem(prompt: "모순: 그는 모래가 가득 든 양동이로 화단의 식물들에 물을 주었습니다.", options: ["식물은 자라기 위해 물이 필요하며 모래는 안 됩니다", "모래는 흙을 너무 축축하게 만듭니다", "정원은 돌로 가득 차 있어야 합니다", "모래는 인조 식물에만 씁니다"], correctAnswer: "식물은 자라기 위해 물이 필요하며 모래는 안 됩니다", explanation: "식물의 생존과 수분 흡수에는 물이 필수적이며 마른 모래는 수분을 공급하지 못합니다.")
+        ]
+    )
+
+    // MARK: - Easy Sequencing
+    private static let easySequencing = Exercise(
+        title: "일상 단계 배열",
+        instructions: "활동 단계를 올바른 논리적 순서로 배열하세요.",
+        section: .language,
+        type: .sequencing,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "토스트 굽기", options: ["식빵 한 조각을 토스터에 넣는다", "레버를 아래로 눌러 굽기 시작한다", "다 구워진 토스트가 위로 올라올 때까지 기다린다", "따뜻한 토스트에 버터를 바른다"], correctAnswer: "식빵 한 조각을 토스터에 넣는다 | 레버를 아래로 눌러 굽기 시작한다 | 다 구워진 토스트가 위로 올라올 때까지 기다린다 | 따뜻한 토스트에 버터를 바른다", explanation: "토스트 굽기 과정: 식빵 삽입, 작동, 완성 대기, 버터 도포."),
+            ExerciseItem(prompt: "올바른 손 씻기", options: ["물로 손을 적신다", "비누를 묻혀 손바닥을 서로 문지른다", "흐르는 물에 거품을 깨끗이 씻어낸다", "깨끗한 수건으로 물기를 닦는다"], correctAnswer: "물로 손을 적신다 | 비누를 묻혀 손바닥을 서로 문지른다 | 흐르는 물에 거품을 깨끗이 씻어낸다 | 깨끗한 수건으로 물기를 닦는다", explanation: "위생 손 씻기 단계: 물 적시기, 비누 문지르기, 헹구기, 건조."),
+            ExerciseItem(prompt: "편지 보내기", options: ["편지지에 내용을 적는다", "편지를 편지봉투 안에 넣는다", "봉투에 받는 사람의 주소를 적는다", "우표를 붙이고 우체통에 넣는다"], correctAnswer: "편지지에 내용을 적는다 | 편지를 편지봉투 안에 넣는다 | 봉투에 받는 사람의 주소를 적는다 | 우표를 붙이고 우체통에 넣는다", explanation: "우편 발송 순서: 작성, 봉인, 주소 기재, 우표 부착 후 발송."),
+            ExerciseItem(prompt: "양치질하기", options: ["칫솔에 치약을 짠다", "모든 치아를 구석구석 닦는다", "물로 입안을 깨끗이 헹군다", "칫솔을 물에 씻어 보관함에 넣는다"], correctAnswer: "칫솔에 치약을 짠다 | 모든 치아를 구석구석 닦는다 | 물로 입안을 깨끗이 헹군다 | 칫솔을 물에 씻어 보관함에 넣는다", explanation: "구강 관리 순서: 치약 도포, 칫솔질, 헹구기, 도구 정리."),
+            ExerciseItem(prompt: "따뜻한 차 우리기", options: ["주전자에 물을 끓인다", "찻잔에 티백을 넣는다", "찻잔에 뜨거운 물을 붓는다", "차가 우러나기를 기다린 후 마신다"], correctAnswer: "주전자에 물을 끓인다 | 찻잔에 티백을 넣는다 | 찻잔에 뜨거운 물을 붓는다 | 차가 우러나기를 기다린 후 마신다", explanation: "다도 차 우리기: 물 끓이기, 티백 준비, 온수 주입, 음용.")
+        ]
+    )
+
+    // MARK: - Medium Word Association
+    private static let mediumWordAssociation = Exercise(
+        title: "중등 단어 연상",
+        instructions: "주어진 제시어와 가장 관련이 깊은 단어를 선택하세요.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "도서관", options: ["침묵", "소음", "군중", "게임"], correctAnswer: "침묵", explanation: "도서관은 학습과 독서를 하는 조용한 공간입니다."),
+            ExerciseItem(prompt: "병원", options: ["치료", "휴가", "쇼핑", "요리"], correctAnswer: "치료", explanation: "병원은 아픈 환자들을 치료하고 회복시키는 곳입니다."),
+            ExerciseItem(prompt: "공항", options: ["출발", "수면", "원예", "미술"], correctAnswer: "출발", explanation: "공항은 항공기 탑승 and 출발..."),
+            ExerciseItem(prompt: "공항", options: ["출발", "수면", "원예", "미술"], correctAnswer: "출발", explanation: "비행기가 출발하는 공항."),
+            ExerciseItem(prompt: "사막", options: ["가뭄", "폭우", "숲", "바다"], correctAnswer: "가뭄", explanation: "사막은 강수량이 매우 적어 메마른 가뭄 상태가 특징입니다."),
+            ExerciseItem(prompt: "결혼식", options: ["반지", "시험", "사무실", "열쇠"], correctAnswer: "반지", explanation: "결혼식에서는 결합의 서약으로 서로 반지를 교환합니다."),
+            ExerciseItem(prompt: "농장", options: ["수확", "도시", "사무실", "공장"], correctAnswer: "수확", explanation: "농장에서는 작물을 경작하고 농작물을 수확합니다."),
+            ExerciseItem(prompt: "주방", options: ["레시피", "침대", "자동차", "샤워"], correctAnswer: "레시피", explanation: "주방 요리 레시피."),
+            ExerciseItem(prompt: "산", options: ["정상", "지하실", "거리", "사막"], correctAnswer: "정상", explanation: "정상은 산의 가장 높은 꼭대기 지점을 뜻합니다."),
+            ExerciseItem(prompt: "법원", options: ["정의", "극장", "주방", "시장"], correctAnswer: "정의", explanation: "법원은 법을 바탕으로 사법 정의를 실현하는 기관입니다."),
+            ExerciseItem(prompt: "사무실", options: ["마감일", "해변", "침대", "소풍"], correctAnswer: "마감일", explanation: "사무 업무는 주로 마감일(데드라인)을 지키는 활동입니다."),
+            ExerciseItem(prompt: "극장", options: ["무대", "주방", "고속도로", "숲"], correctAnswer: "무대", explanation: "극장 무대는 배우들이 공연을 선보이는 단상입니다."),
+            ExerciseItem(prompt: "숲", options: ["대자연", "도시", "사막", "아스팔트"], correctAnswer: "대자연", explanation: "숲은 울창한 나무들과 야생 생물이 가득한 대자연의 일부입니다."),
+            ExerciseItem(prompt: "실험실", options: ["실험", "요리", "춤", "쇼핑"], correctAnswer: "실험", explanation: "실험실은 과학적 연구와 실험을 수행하도록 설비된 방입니다."),
+            ExerciseItem(prompt: "박물관", options: ["전시", "영화", "스포츠", "요리"], correctAnswer: "전시", explanation: "박물관은 유물이나 예술 작품을 수집하고 전시하는 공간입니다."),
+            ExerciseItem(prompt: "치과의사", options: ["충치", "이발", "차표", "요리"], correctAnswer: "충치", explanation: "치과의사는 충치 등 구강 관련 질환을 진료하고 예방합니다.")
+        ]
+    )
+
+    // MARK: - Medium Homonyms
+    private static let mediumHomonyms = Exercise(
+        title: "중등 동음이의어",
+        instructions: "문장을 완성하기에 알맞은 동음이의어 쌍을 고르세요.",
+        section: .language,
+        type: .homonym,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "[배 / 배] 가을이 되면 달콤한 ___가 맛있습니다. 항구에 커다란 ___가 정박했습니다.", options: ["배...배", "배...배", "배...배", "배...배"], correctAnswer: "배...배", explanation: "첫 번째 '배'는 과일이고, 두 번째 '배'는 탈것(선박)입니다."),
+            ExerciseItem(prompt: "[밤 / 밤] 둥글고 맛있는 군___을 먹었습니다. 깜깜한 ___에는 별이 보입니다.", options: ["밤...밤", "밤...밤", "밤...밤", "밤...밤"], correctAnswer: "밤...밤", explanation: "첫 번째 '밤'은 견과류이고, 두 번째 '밤'은 야간 시간대입니다."),
+            ExerciseItem(prompt: "[눈 / 눈] 겨울이 되면 하얀 ___이 내립니다. 얼굴에 있는 두 ___으로 사물을 봅니다.", options: ["눈...눈", "눈...눈", "눈...눈", "눈...눈"], correctAnswer: "눈...눈", explanation: "첫 번째 '눈'은 강설이고, 두 번째 '눈'은 신체 부위(안구)입니다."),
+            ExerciseItem(prompt: "[다리 / 다리] 튼튼한 두 ___로 걷습니다. 강 위에 걸쳐진 긴 ___를 건넙니다.", options: ["다리...다리", "다리...다리", "다리...다리", "다리...다리"], correctAnswer: "다리...다리", explanation: "첫 번째 '다리'는 신체 하체이고, 두 번째 '다리'는 교량 구조물입니다."),
+            ExerciseItem(prompt: "[말 / 말] 우리는 한국 ___로 이야기합니다. 목장에 멋진 ___이 달리고 있습니다.", options: ["말...말", "말...말", "말...말", "말...말"], correctAnswer: "말...말", explanation: "첫 번째 '말'은 언어이고, 두 번째 '말'은 달리는 동물(마)입니다.")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "쉬운 속담 완성",
+        instructions: "속담을 올바르게 완성하는 단어를 고르세요.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "가는 말이 고와야 오는 말이 ___", options: ["곱다", "나쁘다", "많다", "빠르다"], correctAnswer: "곱다", explanation: "남에게 말을 좋게 해야 남도 나에게 좋게 대한다는 뜻입니다."),
+            ExerciseItem(prompt: "원숭이도 나무에서 ___", options: ["떨어진다", "올라간다", "논다", "잔다"], correctAnswer: "떨어진다", explanation: "아무리 재주가 뛰어나고 익숙한 사람이라도 실수할 때가 있다는 뜻입니다."),
+            ExerciseItem(prompt: "소 잃고 외양간 ___", options: ["고친다", "부순다", "만든다", "산다"], correctAnswer: "고친다", explanation: "이미 일이 잘못된 뒤에 대책을 세워도 소용이 없음을 뜻합니다."),
+            ExerciseItem(prompt: "누워서 떡 ___", options: ["먹기", "만들기", "팔기", "버리기"], correctAnswer: "먹기", explanation: "일이 하기에 매우 쉽다는 뜻입니다."),
+            ExerciseItem(prompt: "티끌 모아 ___", options: ["태산", "바다", "동산", "강산"], correctAnswer: "태산", explanation: "아무리 작은 것이라도 모이면 큰 힘이나 재산이 된다는 뜻입니다."),
+            ExerciseItem(prompt: "발 없는 말이 천 리 ___", options: ["간다", "달린다", "날아간다", "멈춘다"], correctAnswer: "간다", explanation: "소문이나 말이 널리 빠르게 퍼지므로 말조심해야 한다는 뜻입니다."),
+            ExerciseItem(prompt: "백지장도 맞들면 ___", options: ["낫다", "무겁다", "찢어진다", "어렵다"], correctAnswer: "낫다", explanation: "아무리 쉬운 일이라도 서로 힘을 합치면 더 쉽다는 뜻입니다."),
+            ExerciseItem(prompt: "꿩 먹고 알 ___", options: ["먹기", "버리기", "낳기", "잡기"], correctAnswer: "먹기", explanation: "한 가지 일로 동시에 두 가지 이득을 본다는 뜻입니다."),
+            ExerciseItem(prompt: "금강산도 식후___", options: ["경", "식", "구", "놀이"], correctAnswer: "경", explanation: "아무리 좋은 구경이나 즐거운 일도 배가 불러야 재미있다는 뜻입니다."),
+            ExerciseItem(prompt: "등 밑이 ___", options: ["어둡다", "밝다", "뜨겁다", "차갑다"], correctAnswer: "어둡다", explanation: "가까운 곳에서 일어난 일을 오히려 더 모를 때 쓰는 말입니다."),
+            ExerciseItem(prompt: "세 살 버릇 여든까지 ___", options: ["간다", "멈춘다", "바뀐다", "사라진다"], correctAnswer: "간다", explanation: "어릴 때 몸에 밴 습관은 나이가 들어서도 고치기 어렵다는 뜻입니다."),
+            ExerciseItem(prompt: "밑 빠진 독에 물 ___", options: ["붓기", "빼기", "얼리기", "마시기"], correctAnswer: "붓기", explanation: "아무리 힘을 쓰고 노력해도 밑 빠진 항아리처럼 보람이 없음을 뜻합니다."),
+            ExerciseItem(prompt: "하늘이 무너져도 솟아날 구멍이 ___", options: ["있다", "없다", "보인다", "사라진다"], correctAnswer: "있다", explanation: "아무리 큰 재난이나 어려움이 닥쳐도 해결책은 있다는 뜻입니다."),
+            ExerciseItem(prompt: "돌다리도 두들겨 보고 ___", options: ["건너라", "부숴라", "만들어라", "피해라"], correctAnswer: "건너라", explanation: "잘 아는 일이라도 실수가 없도록 안전하고 신중하게 처리하라는 뜻입니다."),
+            ExerciseItem(prompt: "우물 안 ___", options: ["개구리", "물고기", "지렁이", "거북이"], correctAnswer: "개구리", explanation: "세상 형편을 모르는 좁은 시야를 가진 사람을 비유하는 말입니다.")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "어려운 속담 완성",
+        instructions: "속담을 올바르게 완성하는 단어를 고르세요.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "서당 개 삼 년이면 풍월을 ___", options: ["읊는다", "짖는다", "읽는다", "쓴다"], correctAnswer: "읊는다", explanation: "어떤 분야에 지식이 없는 사람도 오래 보고 들으면 기본은 흉내 낸다는 뜻입니다."),
+            ExerciseItem(prompt: "티끌 모아 태산이 되듯 낙숫물이 바위를 ___", options: ["뚫는다", "적신다", "깬다", "밀어낸다"], correctAnswer: "뚫는다", explanation: "작은 힘이라도 끊임없이 노력하면 마침내 큰일을 해낸다는 뜻입니다."),
+            ExerciseItem(prompt: "벼는 익을수록 고개를 ___", options: ["숙인다", "든다", "흔든다", "돌린다"], correctAnswer: "숙인다", explanation: "교양이 있고 수양이 깊은 사람일수록 겸손해진다는 뜻입니다."),
+            ExerciseItem(prompt: "믿는 도끼에 발등 ___", options: ["찍힌다", "다친다", "부러진다", "아프다"], correctAnswer: "찍힌다", explanation: "믿었던 사람으로부터 배신이나 큰 피해를 입었을 때 쓰는 말입니다."),
+            ExerciseItem(prompt: "호랑이 없는 골에 토끼가 ___ 노릇 한다", options: ["스승", "왕", "도둑", "광대"], correctAnswer: "왕", explanation: "뛰어난 인물이 없는 곳에서 보잘것없는 존재가 득세함을 뜻합니다."),
+            ExerciseItem(prompt: "바늘도둑이 소___ 된다", options: ["도둑", "주인", "잡이", "몰이"], correctAnswer: "도둑", explanation: "작은 나쁜 짓도 버릇이 되면 결국 큰 죄를 저지르게 된다는 뜻입니다."),
+            ExerciseItem(prompt: "등잔 밑이 ___", options: ["어둡다", "밝다", "멀다", "가깝다"], correctAnswer: "어둡다", explanation: "가까이에 있는 문제를 오히려 더 알기 어렵다는 뜻입니다."),
+            ExerciseItem(prompt: "구슬이 서 말이라도 꿰어야 ___", options: ["보배", "보석", "장식", "보물"], correctAnswer: "보배", explanation: "아무리 좋은 소재나 재주도 다듬고 엮어야 가치가 난다는 뜻입니다."),
+            ExerciseItem(prompt: "말 한마디로 천 냥 빚을 ___", options: ["갚는다", "진다", "벌어들인다", "날린다"], correctAnswer: "갚는다", explanation: "처세를 조리 있고 말 한마디를 바르게 함으로써 큰 문제를 해결할 수 있다는 뜻입니다."),
+            ExerciseItem(prompt: "지렁이도 밟으면 ___", options: ["꿈틀한다", "문다", "운다", "죽는다"], correctAnswer: "꿈틀한다", explanation: "아무리 유순하고 보잘것없는 존재라도 억압하면 저항한다는 뜻입니다."),
+            ExerciseItem(prompt: "닭 쫓던 개 지붕 ___", options: ["쳐다본다", "올라간다", "짖는다", "뛰어내린다"], correctAnswer: "쳐다본다", explanation: "열심히 노력하던 일을 한순간에 잃어 허망하게 바라만 보는 상태를 뜻합니다."),
+            ExerciseItem(prompt: "아닌 굴뚝에 연기 ___", options: ["날까", "안 날까", "꺼질까", "피어오를까"], correctAnswer: "날까", explanation: "실제 원인이 없으면 소문이나 결과가 나타날 리 없다는 뜻입니다."),
+            ExerciseItem(prompt: "하룻강아지 범 무서운 줄 ___", options: ["모른다", "안다", "배운다", "피한다"], correctAnswer: "모른다", explanation: "세상물정 모르는 미숙한 사람이 겁 없이 무모하게 행동함을 비유하는 말입니다."),
+            ExerciseItem(prompt: "배보다 배꼽이 더 ___", options: ["크다", "작다", "둥글다", "아프다"], correctAnswer: "크다", explanation: "기본적인 본체보다 부가적으로 들어가는 비용이나 일이 더 클 때 쓰는 말입니다."),
+            ExerciseItem(prompt: "핑계 없는 무덤 ___", options: ["없다", "있다", "보인다", "사라진다"], correctAnswer: "없다", explanation: "아무리 잘못한 일이라도 다 나름대로의 변명이나 사유는 있다는 뜻입니다.")
         ]
     )
 }

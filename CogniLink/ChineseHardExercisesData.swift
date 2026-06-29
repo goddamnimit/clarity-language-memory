@@ -12,7 +12,15 @@ struct ChineseHardExercisesData {
         exercise6,
         exercise7,
         exercise8,
-        easyHomonyms
+        easyHomonyms,
+        easyAnalogies,
+        easyCauseEffect,
+        easyWhatsWrong,
+        easySequencing,
+        mediumWordAssociation,
+        mediumHomonyms,
+        easyCompleteSaying,
+        hardCompleteSaying
     ]
 
     // MARK: - Exercise 1: 高级同音字词
@@ -246,6 +254,195 @@ struct ChineseHardExercisesData {
             ExerciseItem(prompt: "[xīng / xīn] 夜空中闪烁着亮晶晶的 ___ 颗。 动物园里有一只大猩 ___。", options: ["星...猩", "猩...星", "星...星", "猩...猩"], correctAnswer: "星...猩", explanation: "“星”指星星、天体；“猩”指猩猩（灵长类动物）。"),
             ExerciseItem(prompt: "[mǎ / mǎ] 他骑着一匹黑 ___ 奔跑。 结账时需要扫描二维 ___。", options: ["马...码", "码...马", "马...马", "码...码"], correctAnswer: "马...码", explanation: "“马”是一种家畜；“码”指号码或条形码。"),
             ExerciseItem(prompt: "[huā / huā] 花园里盛开着红色的玫瑰 ___。 他今天买衣服 ___ 了很多钱。", options: ["花...花", "花...钱", "钱...花", "花...买"], correctAnswer: "花...花", explanation: "第一个“花”指植物的花朵；第二个“花”是动词，指花费、开销。")
+        ]
+    )
+
+    // MARK: - Easy Analogies
+    private static let easyAnalogies = Exercise(
+        title: "简单类比",
+        instructions: "选择最能完成类比的词。",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "上之于下 相当于 热之于什么？", options: ["冷", "温", "烫", "湿"], correctAnswer: "冷", explanation: "上和下是反义词，热和冷也是反义词。"),
+            ExerciseItem(prompt: "鸟之于飞 相当于 鱼之于什么？", options: ["游", "跑", "走", "跳"], correctAnswer: "游", explanation: "鸟通过飞行动作，鱼通过游泳动作。"),
+            ExerciseItem(prompt: "猫之于小猫 相当于 狗之于什么？", options: ["小狗", "小猫", "小牛", "小马"], correctAnswer: "小狗", explanation: "小猫是猫的幼崽，小狗是狗的幼崽。"),
+            ExerciseItem(prompt: "白天之于太阳 相当于 夜晚之于什么？", options: ["月亮", "下雨", "风", "云"], correctAnswer: "月亮", explanation: "白天的天空有太阳，夜晚的天空有月亮。"),
+            ExerciseItem(prompt: "冰之于冷 相当于 火之于什么？", options: ["热", "湿", "暗", "软"], correctAnswer: "热", explanation: "冰是冷的，火是热的。"),
+            ExerciseItem(prompt: "笔之于写 相当于 剪刀之于什么？", options: ["剪", "粘", "画", "涂色"], correctAnswer: "剪", explanation: "笔用于书写，剪刀用于剪东西。"),
+            ExerciseItem(prompt: "树之于叶 相当于 花之于什么？", options: ["花瓣", "刺", "根", "茎"], correctAnswer: "花瓣", explanation: "树叶是树的一部分，花瓣是花的一部分。"),
+            ExerciseItem(prompt: "汽车之于公路 相当于 轮船之于什么？", options: ["水", "空气", "陆地", "轨道"], correctAnswer: "水", explanation: "汽车在公路上行驶，轮船在水里航行。"),
+            ExerciseItem(prompt: "袜子之于脚 相当于 手套之于什么？", options: ["手", "头", "脖子", "手臂"], correctAnswer: "手", explanation: "袜子戴在脚上，手套戴在手上。"),
+            ExerciseItem(prompt: "饥饿之于食物 相当于 口渴之于什么？", options: ["水", "面包", "水果", "盐"], correctAnswer: "水", explanation: "饿了需要食物，渴了需要水。"),
+            ExerciseItem(prompt: "鞋之于脚 相当于 帽子之于什么？", options: ["头", "手", "腿", "脖子"], correctAnswer: "头", explanation: "鞋穿在脚上，帽子戴在头上。"),
+            ExerciseItem(prompt: "苹果之于水果 相当于 胡萝卜之于什么？", options: ["蔬菜", "肉", "谷物", "乳制品"], correctAnswer: "蔬菜", explanation: "苹果是水果，胡萝卜是蔬菜。"),
+            ExerciseItem(prompt: "牛之于牛奶 相当于 蜜蜂之于什么？", options: ["蜂蜜", "蜡", "花粉", "水"], correctAnswer: "蜂蜜", explanation: "牛生产牛奶，蜜蜂生产蜂蜜。"),
+            ExerciseItem(prompt: "牙齿之于刷牙 相当于 头发之于什么？", options: ["梳头", "洗", "剪", "吹干"], correctAnswer: "梳头", explanation: "刷牙是清洁牙齿，梳头是整理头发。"),
+            ExerciseItem(prompt: "雨之于湿 相当于 太阳之于什么？", options: ["干", "冷", "暗", "风"], correctAnswer: "干", explanation: "下雨会让东西变湿，太阳会让东西变干。")
+        ]
+    )
+
+    // MARK: - Easy Cause and Effect
+    private static let easyCauseEffect = Exercise(
+        title: "简单因果关系",
+        instructions: "选择最合理的因果关系选项。",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "原因：你在水泥地上扔了一个玻璃杯。", options: ["玻璃杯碎了", "玻璃杯漂浮", "玻璃杯变软", "玻璃杯变蓝"], correctAnswer: "玻璃杯碎了", explanation: "易碎的玻璃杯掉在坚硬的地面上会摔碎。"),
+            ExerciseItem(prompt: "原因：你一个星期忘记给室内植物浇水。", options: ["植物枯萎并干枯", "植物开花", "植物变紫", "植物结果"], correctAnswer: "植物枯萎并干枯", explanation: "植物需要水分生存，缺水会导致枯萎。"),
+            ExerciseItem(prompt: "原因：夏天你把冰块留在厨房桌子上。", options: ["冰块融化成水", "冰块变大", "冰块变成木头", "冰块保持冷冻"], correctAnswer: "冰块融化成水", explanation: "夏天的室温会让冰块融化为液态水。"),
+            ExerciseItem(prompt: "原因：你往肥皂泡里吹了太多空气。", options: ["肥皂泡破裂了", "肥皂泡变成冰", "肥皂泡唱歌", "肥皂泡变重"], correctAnswer: "肥皂泡破裂了", explanation: "吹入过多气体会超过肥皂泡薄膜的承受极限而破裂。"),
+            ExerciseItem(prompt: "原因：你按下了墙上的电灯开关。", options: ["电灯亮了", "房间变冷", "门锁上了", "钟表停了"], correctAnswer: "电灯亮了", explanation: "按下开关会接通电路，使电灯发光。"),
+            ExerciseItem(prompt: "原因：你一整晚都没有睡觉。", options: ["第二天你感到非常疲倦", "你感到精力充沛", "你头发变白", "你长高了"], correctAnswer: "第二天你感到非常疲倦", explanation: "睡眠不足会导致身体无法恢复，从而产生疲倦感。"),
+            ExerciseItem(prompt: "原因：暴雨天你没带雨伞站在室外。", options: ["你被淋湿了", "你保持干燥", "你漂浮起来", "你着火了"], correctAnswer: "你被淋湿了", explanation: "雨是水滴，没有保护直接暴露在雨中会被淋湿。"),
+            ExerciseItem(prompt: "原因: 你把面包放进烤面包机并按下手柄。", options: ["面包被烤好了", "面包变成面粉", "面包融化", "面包变湿"], correctAnswer: "面包被烤好了", explanation: "烤面包机加热并烘烤面包，使其松脆。"),
+            ExerciseItem(prompt: "原因：你在炎热的天气里把牛奶放在冰箱外三天。", options: ["牛奶变酸变质了", "牛奶变甜", "牛奶结冰", "牛奶变成蜂蜜"], correctAnswer: "牛奶变酸变质了", explanation: "炎热的常温会加速细菌繁殖，导致牛奶酸败变质。"),
+            ExerciseItem(prompt: "原因：你用力吹燃烧的蜡烛。", options: ["烛火熄灭了", "烛火变大", "蜡烛融化", "蜡烛变蓝"], correctAnswer: "烛火熄灭了", explanation: "强风会带走热量并隔绝可燃气体，使火焰熄灭。"),
+            ExerciseItem(prompt: "原因：你把一锅水放在燃气灶上加热。", options: ["水开始沸腾", "水结冰", "水瞬间消失", "锅变大了"], correctAnswer: "水开始沸腾", explanation: "热量持续输入会提升水温直至沸腾。"),
+            ExerciseItem(prompt: "原因：你光脚踩在一颗生锈的铁钉上。", options: ["你的脚受伤了", "鞋子脏了", "跳得更高", "脚变绿了"], correctAnswer: "你的脚受伤了", explanation: "尖锐的铁钉穿透皮肤会造成物理伤害和疼痛。"),
+            ExerciseItem(prompt: "原因：你往苦涩的黑咖啡里加糖。", options: ["咖啡变甜了", "咖啡变冷", "咖啡消失", "咖啡变咸"], correctAnswer: "咖啡变甜了", explanation: "糖具有甜味，能够中和咖啡的苦涩。"),
+            ExerciseItem(prompt: "原因：你把网球扔向水泥墙面。", options: ["网球反弹回来", "网球穿过墙壁", "墙壁倒塌", "网球溶解"], correctAnswer: "网球反弹回来", explanation: "网球具有弹性，撞击坚硬表面会产生反弹。"),
+            ExerciseItem(prompt: "原因：你没有为重要考试做任何复习。", options: ["你成绩很差", "你拿了满分", "学校关闭", "你提前毕业"], correctAnswer: "你成绩很差", explanation: "没有准备去考试通常会拿低分。")
+        ]
+    )
+
+    // MARK: - Easy What's Wrong Here
+    private static let easyWhatsWrong = Exercise(
+        title: "简单常识判断",
+        instructions: "找出陈述中逻辑错误或不可能发生的地方。",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "荒谬：小明先穿鞋子，再穿袜子。", options: ["袜子应该穿在鞋子里面", "鞋子应该戴在手上", "袜子应该戴在头上", "鞋子应该用来吃"], correctAnswer: "袜子应该穿在鞋子里面", explanation: "常识是先穿袜子保护脚部，再穿鞋子。"),
+            ExerciseItem(prompt: "荒谬：她用叉子喝鸡汤。", options: ["鸡汤是液体，应该用勺子", "鸡汤应该用手抓着吃", "叉子是用来切牛排的", "鸡汤应该用杯子煮"], correctAnswer: "鸡汤是液体，应该用勺子", explanation: "汤是液体，叉子漏水，无法盛起汤汁，需要用勺子。"),
+            ExerciseItem(prompt: "荒谬：鱼爬上树去筑巢。", options: ["鱼生活在水里，不会爬树", "树木没有树枝", "鱼只在屋顶筑巢", "鱼在空气中飞"], correctAnswer: "鱼生活在水里，不会爬树", explanation: "鱼是用腮呼吸的水生动物，没有四肢，无法爬树。"),
+            ExerciseItem(prompt: "荒谬：天气很热，他穿了一件厚羊毛大衣去游泳。", options: ["游泳应该穿泳衣，而不是大衣", "厚大衣让你游得更快", "泳池里应该放满冰块", "羊毛大衣只有夏天才穿"], correctAnswer: "游泳应该穿泳衣，而不是大衣", explanation: "羊毛大衣吸水后会极度沉重，在泳池中非常危险。"),
+            ExerciseItem(prompt: "荒谬：他们把生鸡蛋放在冰箱冷冻室里煮熟了。", options: ["冷冻室是冷冻食物的，炉子才是煮饭的", "鸡蛋只能生吃", "冷冻室是用来烧开水的", "鸡蛋放在微波炉里烤得更好"], correctAnswer: "冷冻室是冷冻食物的，炉子才是煮饭的", explanation: "冷冻室冷冻，炉子加热烹饪。"),
+            ExerciseItem(prompt: "荒谬：小狗打开书本，开始大声朗读。", options: ["狗不会阅读或说人类语言", "狗只读报纸", "书本应该默读", "狗喜欢写书"], correctAnswer: "狗不会阅读或说人类语言", explanation: "狗没有语言说话阅读功能。"),
+            ExerciseItem(prompt: "荒谬：她用汤匙切生日蛋糕。", options: ["切蛋糕应该用刀，而不是勺子", "蛋糕应该用手抓着吃", "汤匙只用于喝汤", "蛋糕应该用剪刀切"], correctAnswer: "切蛋糕应该用刀，而不是勺子", explanation: "勺子没有锋利的边缘，无法整齐地切开蛋糕，需要用刀。"),
+            ExerciseItem(prompt: "荒谬：他用木铅笔在手机屏幕上打字发短信。", options: ["手机触摸屏要用手指或电容笔", "铅笔只能在玻璃上用", "手机只接受语音指令", "铅笔太短无法写字"], correctAnswer: "手机触摸屏要用手指或电容笔", explanation: "智能手机电容屏需要人体静电感应或专用触控笔。"),
+            ExerciseItem(prompt: "荒谬：飞机在深蓝色的海洋水面上航行。", options: ["飞机在空中飞行，轮船在水面航行", "海水总是绿色的", "飞机只在陆地上行驶", "船在天空中飞"], correctAnswer: "飞机在空中飞行，轮船在水面航行", explanation: "飞机是航空器，在空中飞行；轮船才是水上交通工具。"),
+            ExerciseItem(prompt: "荒谬：她躲在干燥的客厅里撑起雨伞。", options: ["雨伞是户外防雨或遮阳用的", "客厅里应该放人工雨景", "雨伞只有冬天用", "她应该在屋里穿雨衣"], correctAnswer: "雨伞是户外防雨或遮阳用的", explanation: "屋顶能遮风挡雨，干燥的室内不需要撑伞。"),
+            ExerciseItem(prompt: "荒谬：猫对着邮递员大声汪汪叫。", options: ["猫发出喵喵声，狗才汪汪叫", "猫只对老鼠汪汪叫", "邮递员害怕猫", "猫只在早上汪汪叫"], correctAnswer: "猫发出喵喵声，狗才汪汪叫", explanation: "狗的叫声是汪汪，猫的叫声是喵喵。"),
+            ExerciseItem(prompt: "荒谬：他往自行车里倒汽油以便骑去超市。", options: ["自行车是用脚踏板人力的，不用汽油", "自行车使用柴油", "自行车只用电池", "自行车不需要车轮"], correctAnswer: "自行车是用脚踏板人力的，不用汽油", explanation: "自行车是无发动机的靠人力脚踩驱动的车辆。"),
+            ExerciseItem(prompt: "荒谬：炎热的夏天中午下起了鹅毛大雪。", options: ["下雪需要冬天的寒冷低温", "夏天的日子总是黑暗的", "夏天只在十二月出现", "雪摸起来是热的"], correctAnswer: "下雪需要冬天的寒冷低温", explanation: "降雪需要气温降到冰点以下，夏天炎热不可能下雪。"),
+            ExerciseItem(prompt: "荒谬：她把脏盘子放在垃圾桶里洗。", options: ["盘子在水槽里洗，不是垃圾桶", "垃圾桶是放干净衣服的", "盘子应该在花园里洗", "垃圾桶盛满了干净水"], correctAnswer: "盘子在水槽里洗，不是垃圾桶", explanation: "垃圾桶是盛放废弃物的，洗盘子应该在洗碗水槽里。"),
+            ExerciseItem(prompt: "荒谬：他用一桶沙子给花园里的植物浇水。", options: ["植物需要水才能生长，不是沙子", "沙子会让土壤太湿", "花园里应该填满石头", "沙子只适合塑料植物"], correctAnswer: "植物需要水才能生长，不是沙子", explanation: "植物需要水分维持生命进行光合作用，沙子是干燥的矿物。")
+        ]
+    )
+
+    // MARK: - Easy Sequencing
+    private static let easySequencing = Exercise(
+        title: "日常步骤排序",
+        instructions: "将活动的步骤按正确的逻辑顺序排列。",
+        section: .language,
+        type: .sequencing,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "烤面包片", options: ["把面包片放进烤面包机", "按压手柄启动加热", "等待烤好的面包片弹起", "在烤面包片上涂抹黄油"], correctAnswer: "把面包片放进烤面包机 | 按压手柄启动加热 | 等待烤好的面包片弹起 | 在烤面包片上涂抹黄油", explanation: "烤面包需要先放入面包，按下开关，弹起后涂黄油食用。"),
+            ExerciseItem(prompt: "正确洗手", options: ["用水打湿双手", "涂抹肥皂并揉搓手掌", "用流动清水冲洗干净", "用干净毛巾擦干双手"], correctAnswer: "用水打湿双手 | 涂抹肥皂并揉搓手掌 | 用流动清水冲洗干净 | 用干净毛巾擦干双手", explanation: "洗手步骤：淋湿，打肥皂揉搓，冲洗，擦干。"),
+            ExerciseItem(prompt: "邮寄信件", options: ["在信纸上写好信件内容", "将信纸折叠装入信封", "在信封上写好收件人地址", "贴上邮票放入邮筒邮寄"], correctAnswer: "在信纸上写好信件内容 | 将信纸折叠装入信封 | 在信封上写好收件人地址 | 贴上邮票放入邮筒邮寄", explanation: "邮寄信件步骤：写信，装信封，写地址，贴邮票寄出。"),
+            ExerciseItem(prompt: "刷牙过程", options: ["在牙刷上挤适量牙膏", "仔细刷洗每颗牙齿的表面", "用清水漱口漱干净", "清洗干净牙刷并放回原处"], correctAnswer: "在牙刷上挤适量牙膏 | 仔细刷洗每颗牙齿的表面 | 用清水漱口漱干净 | 清洗干净牙刷并放回原处", explanation: "刷牙步骤：挤牙膏，刷牙，漱口，洗牙刷。"),
+            ExerciseItem(prompt: "冲泡热茶", options: ["烧开壶里的水", "把茶包放入杯子", "往杯中倒入开水", "静置几分钟后饮用"], correctAnswer: "烧开壶里的水 | 把茶包放入杯子 | 往杯中倒入开水 | 静置几分钟后饮用", explanation: "泡茶步骤：烧水，放茶包，倒水，静置饮用。")
+        ]
+    )
+
+    // MARK: - Medium Word Association
+    private static let mediumWordAssociation = Exercise(
+        title: "中等词汇关联",
+        instructions: "选择与给出提示词关系最密切的词语。",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "图书馆", options: ["安静", "噪音", "拥挤", "游戏"], correctAnswer: "安静", explanation: "图书馆是阅读学习的地方，要求保持安静。"),
+            ExerciseItem(prompt: "医院", options: ["康复", "度假", "购物", "烹饪"], correctAnswer: "康复", explanation: "医院是进行医疗活动、帮助病人恢复健康的地方。"),
+            ExerciseItem(prompt: "机场", options: ["起飞", "睡觉", "园艺", "绘画"], correctAnswer: "起飞", explanation: "机场是飞机出发和到达的枢纽，与起飞密切相关。"),
+            ExerciseItem(prompt: "荒漠", options: ["干旱", "暴雨", "森林", "海洋"], correctAnswer: "干旱", explanation: "荒漠地带降水稀少，以干旱为主要特征。"),
+            ExerciseItem(prompt: "婚礼", options: ["戒指", "考试", "办公室", "钥匙"], correctAnswer: "戒指", explanation: "婚礼上通常会交换婚戒作为结合的信物。"),
+            ExerciseItem(prompt: "农场", options: ["丰收", "城市", "办公室", "工厂"], correctAnswer: "丰收", explanation: "农场是农业生产场所，丰收是种植成果的体现。"),
+            ExerciseItem(prompt: "厨房", options: ["食谱", "床", "汽车", "淋浴"], correctAnswer: "食谱", explanation: "厨房里做菜需要参考烹饪步骤和食谱。"),
+            ExerciseItem(prompt: "山脉", options: ["山顶", "地下室", "街道", "沙漠"], correctAnswer: "山顶", explanation: "山顶是山脉的最高点。"),
+            ExerciseItem(prompt: "法庭", options: ["正义", "剧院", "厨房", "市场"], correctAnswer: "正义", explanation: "法庭是审判案件、维护司法正义的机构。"),
+            ExerciseItem(prompt: "办公室", options: ["截止日期", "沙滩", "床", "野餐"], correctAnswer: "截止日期", explanation: "办公室工作通常围绕各项任务的截止时间开展。"),
+            ExerciseItem(prompt: "剧院", options: ["舞台", "厨房", "公路", "森林"], correctAnswer: "舞台", explanation: "舞台是剧院中演员进行表演的平台。"),
+            ExerciseItem(prompt: "森林", options: ["大自然", "城市", "沙漠", "柏油路"], correctAnswer: "大自然", explanation: "森林覆盖大片树木，是野生动植物和大自然的象征。"),
+            ExerciseItem(prompt: "实验室", options: ["实验", "烹饪", "跳舞", "购物"], correctAnswer: "实验", explanation: "进行实验的地方。"),
+            ExerciseItem(prompt: "博物馆", options: ["展览", "电影", "体育", "烹饪"], correctAnswer: "展览", explanation: "博物馆用于陈列和展览历史或艺术收藏品。"),
+            ExerciseItem(prompt: "牙医", options: ["蛀牙", "理发", "车票", "烹饪"], correctAnswer: "蛀牙", explanation: "牙科医生主要治疗牙齿疾病如蛀牙。")
+        ]
+    )
+
+    // MARK: - Medium Homonyms
+    private static let mediumHomonyms = Exercise(
+        title: "中等同音字",
+        instructions: "选择正确的同音字组合完成句子。",
+        section: .language,
+        type: .homonym,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(prompt: "[权力 / 权利] 保护个人财产是公民的___。宪法规定了国家机关的___。", options: ["权利...权力", "权力...权利", "权利...权利", "权力...权力"], correctAnswer: "权利...权力", explanation: "“权利”指法律赋予的权益，“权力”指控制力。"),
+            ExerciseItem(prompt: "[公式 / 公事] 数学老师在黑板上写了一个___。我们应该公事___公办。", options: ["公式...公事", "公事...公式", "公式...公式", "公事...公事"], correctAnswer: "公式...公事", explanation: "“公式”是数学表达式，“公事”是公共事务。"),
+            ExerciseItem(prompt: "[做 / 作] 他决定___一件好事。老师布置了今天的课后___业。", options: ["做...作", "作...做", "做...做", "作...作"], correctAnswer: "做...作", explanation: "“做”指动作行为，“作”常用于合成词如作业。"),
+            ExerciseItem(prompt: "[时期 / 十七] 祖父年轻的___生活很艰苦。妹妹今年正好___岁了。", options: ["时期...十七", "十七...时期", "时期...时期", "十七...十七"], correctAnswer: "时期...十七", explanation: "“时期”指某段时间，“十七”是数字。"),
+            ExerciseItem(prompt: "[话 / 画] 爷爷喜欢听收音机里说___。墙上挂着一幅美丽的风景___。", options: ["话...画", "画...话", "话...话", "画...画"], correctAnswer: "话...画", explanation: "“话”指言语，“画”指绘画作品。")
+        ]
+    )
+
+    // MARK: - Easy Complete the Saying
+    private static let easyCompleteSaying = Exercise(
+        title: "简单俗语填空",
+        instructions: "选择最合适的词语来完成这个常用俗语。",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .easy,
+        items: [
+            ExerciseItem(prompt: "一寸光阴一寸___", options: ["金", "银", "铁", "土"], correctAnswer: "金", explanation: "俗语“一寸光阴一寸金”比喻时间极其珍贵。"),
+            ExerciseItem(prompt: "少壮不努力，老大徒___", options: ["伤悲", "高兴", "轻松", "后悔"], correctAnswer: "伤悲", explanation: "年轻时不努力，年老了只能悲伤叹息。"),
+            ExerciseItem(prompt: "百闻不如一___", options: ["见", "听", "写", "想"], correctAnswer: "见", explanation: "听别人说一百遍，也不如自己亲眼看一次。"),
+            ExerciseItem(prompt: "千里之行，始于___", options: ["足下", "起点", "明天", "半路"], correctAnswer: "足下", explanation: "任何伟大的事业都是从小的一步开始做起。"),
+            ExerciseItem(prompt: "失败乃成功之___", options: ["母", "父", "子", "友"], correctAnswer: "母", explanation: "失败能让人吸取教训，为以后的成功打下基础。"),
+            ExerciseItem(prompt: "近朱者赤，近墨者___", options: ["黑", "白", "红", "青"], correctAnswer: "黑", explanation: "接近好人变好，接近坏人变坏，环境对人影响很大。"),
+            ExerciseItem(prompt: "己所不欲，勿施于___", options: ["人", "己", "物", "天"], correctAnswer: "人", explanation: "自己不喜欢的事情，不要强加给别人。"),
+            ExerciseItem(prompt: "人不可貌相，海水不可___", options: ["斗量", "尺量", "瓢饮", "秤称"], correctAnswer: "斗量", explanation: "不能光凭外表去判断一个人。"),
+            ExerciseItem(prompt: "冰冻三尺，非一日之___", options: ["寒", "冻", "冷", "水"], correctAnswer: "寒", explanation: "比喻事情达到某种程度是长期积累的结果。"),
+            ExerciseItem(prompt: "读书破万卷，下笔如有___", options: ["神", "风", "字", "画"], correctAnswer: "神", explanation: "书读得多，写文章时就会文思泉涌。"),
+            ExerciseItem(prompt: "光阴似箭，日月如___", options: ["梭", "电", "风", "雨"], correctAnswer: "梭", explanation: "比喻时间过得极快。"),
+            ExerciseItem(prompt: "饮水思___", options: ["源", "甜", "清", "冷"], correctAnswer: "源", explanation: "喝水的时候要想到水源，比喻不忘本。"),
+            ExerciseItem(prompt: "世上无难事，只怕有___", options: ["心人", "钱人", "闲人", "懒人"], correctAnswer: "心人", explanation: "只要肯下决心，世上就没有办不到的难事。"),
+            ExerciseItem(prompt: "温故而知___", options: ["新", "旧", "理", "道"], correctAnswer: "新", explanation: "复习旧知识可以得到新的理解和体会。"),
+            ExerciseItem(prompt: "三人行，必有我___", options: ["师", "友", "敌", "伴"], correctAnswer: "师", explanation: "多个人同行，其中必定有值得我学习和请教的人。")
+        ]
+    )
+
+    // MARK: - Hard Complete the Saying
+    private static let hardCompleteSaying = Exercise(
+        title: "复杂俗语填空",
+        instructions: "选择最合适的词语来完成这个常用俗语。",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "独木不成___", options: ["林", "森", "桥", "板"], correctAnswer: "林", explanation: "一棵树成不了森林，比喻个人力量单薄，必须依靠集体。"),
+            ExerciseItem(prompt: "玉不琢，不成___", options: ["器", "玉", "美", "石"], correctAnswer: "器", explanation: "玉石不经过雕琢就成不了器皿，人也是如此。"),
+            ExerciseItem(prompt: "水能载舟，亦能___", options: ["覆舟", "沉舟", "推舟", "破舟"], correctAnswer: "覆舟", explanation: "水能让船浮起来，也能让船翻掉。"),
+            ExerciseItem(prompt: "画龙点睛，破壁飞___", options: ["去", "来", "天", "走"], correctAnswer: "去", explanation: "形容艺术手法极其神妙，或在关键处补充使内容生动。"),
+            ExerciseItem(prompt: "路遥知马力，日久见___", options: ["人心", "人品", "性情", "实力"], correctAnswer: "人心", explanation: "路途遥远才能知道马的力气，日子久了才能看出人心的好坏。"),
+            ExerciseItem(prompt: "工欲善其事，必先利其___", options: ["器", "人", "脑", "手"], correctAnswer: "器", explanation: "工匠想要做好工作，必须先使他的工具锋利。"),
+            ExerciseItem(prompt: "不入虎穴，焉得虎___", options: ["子", "口", "穴", "尾"], correctAnswer: "子", explanation: "不进老虎洞，怎么能捉到小老虎。比喻不担风险就不能取得成功。"),
+            ExerciseItem(prompt: "皮之不存，毛将焉___", options: ["附", "长", "留", "在"], correctAnswer: "附", explanation: "皮都没有了，毛发还依附在什么地方呢。比喻事物失去基础就无法生存。"),
+            ExerciseItem(prompt: "螳螂捕蝉，黄雀在___", options: ["后", "前", "上", "下"], correctAnswer: "后", explanation: "比喻只顾眼前利益，不顾身后的隐患。"),
+            ExerciseItem(prompt: "不积跬步，无以至___", options: ["千里", "百里", "终点", "成功"], correctAnswer: "千里", explanation: "不积累半步，就无法达到千里之远。强调积累的重要性。"),
+            ExerciseItem(prompt: "桃李不言，下自成___", options: ["蹊", "路", "林", "市"], correctAnswer: "蹊", explanation: "桃树李树不会说话，但因花果美丽，树下自然会被踩出小路。"),
+            ExerciseItem(prompt: "机不可失，时不再___", options: ["来", "有", "去", "现"], correctAnswer: "来", explanation: "机会非常难得，一旦失去就不会再来。"),
+            ExerciseItem(prompt: "欲速则不___", options: ["达", "成", "快", "慢"], correctAnswer: "达", explanation: "过于性急图快，反而达不到目的。"),
+            ExerciseItem(prompt: "前事不忘，后事之___", options: ["师", "友", "鉴", "路"], correctAnswer: "师", explanation: "记住以前의 经验教训..."),
+            ExerciseItem(prompt: "前事不忘，后事之___", options: ["师", "友", "鉴", "路"], correctAnswer: "师", explanation: "记住以前的经验教训，作为后世借鉴。"),
+            ExerciseItem(prompt: "海纳百川，有容乃___", options: ["大", "深", "广", "多"], correctAnswer: "大", explanation: "比喻胸怀宽广。")
         ]
     )
 }
