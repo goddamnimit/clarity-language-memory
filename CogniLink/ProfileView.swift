@@ -3,6 +3,11 @@ import SwiftUI
 import PhotosUI
 #endif
 
+struct AdaptiveOverrideItem: Identifiable {
+    let id: String
+    let name: String
+}
+
 struct ProfileView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @ObservedObject private var store = UserProfileStore.shared
@@ -21,6 +26,8 @@ struct ProfileView: View {
     @State private var exportURL: URL? = nil
     @State private var showKeyboardTip = false
     @State private var keyboardTipLanguage: AppLanguage? = nil
+    @State private var showResetAdaptiveAlert = false
+    @ObservedObject private var adaptiveStore = AdaptiveDifficultyStore.shared
 
     // MARK: - Computed Stats
 
@@ -341,6 +348,126 @@ struct ProfileView: View {
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding(.horizontal)
+                    }
+                }
+
+                // MARK: - 7.5. Therapy Settings
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "lock.fill")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Text(languageManager.currentLanguage.therapySettingsTitle)
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.horizontal)
+
+                    VStack(spacing: 12) {
+                        // Master Toggle
+                        VStack(alignment: .leading, spacing: 4) {
+                            Toggle(isOn: Binding<Bool>(
+                                get: { AdaptiveDifficultyStore.shared.isMasterToggleOn },
+                                set: { val in AdaptiveDifficultyStore.shared.isMasterToggleOn = val }
+                            )) {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(languageManager.currentLanguage.adaptiveDifficultyLabel)
+                                        .font(.body)
+                                        .foregroundColor(.primary)
+                                    Text(languageManager.currentLanguage.adaptiveDifficultySubtitle)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                            }
+                        }
+                        .padding()
+                        .background(Color.secondaryGroupedBackground)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                        .padding(.horizontal)
+
+                        // Per-Exercise Overrides (only if master toggle is on)
+                        if AdaptiveDifficultyStore.shared.isMasterToggleOn {
+                            VStack(spacing: 0) {
+                                let overrideItems = [
+                                    AdaptiveOverrideItem(id: "homonym", name: "Homonyms"),
+                                    AdaptiveOverrideItem(id: "analogyChoice", name: "Analogies"),
+                                    AdaptiveOverrideItem(id: "wordassociation", name: "Word Association"),
+                                    AdaptiveOverrideItem(id: "sentencecompletion", name: "Sentence Completion"),
+                                    AdaptiveOverrideItem(id: "sequencing", name: "Sequencing"),
+                                    AdaptiveOverrideItem(id: "causeeffect", name: "Cause and Effect"),
+                                    AdaptiveOverrideItem(id: "whatswrong", name: "What's Wrong Here?"),
+                                    AdaptiveOverrideItem(id: "completesaying", name: "Complete the Saying")
+                                ]
+                                ForEach(overrideItems) { item in
+                                    HStack {
+                                        Text(item.name)
+                                            .font(.body)
+                                            .foregroundColor(.primary)
+                                        
+                                        Spacer()
+                                        
+                                        Picker("", selection: Binding<String>(
+                                            get: {
+                                                AdaptiveDifficultyStore.shared.getManualOverride(for: item.id)?.rawValue ?? "auto"
+                                            },
+                                            set: { val in
+                                                let diff = (val == "auto") ? nil : Difficulty(rawValue: val)
+                                                AdaptiveDifficultyStore.shared.setManualOverride(diff, for: item.id)
+                                            }
+                                        )) {
+                                            Text(languageManager.currentLanguage.exerciseAuto).tag("auto")
+                                            Text(languageManager.currentLanguage.exerciseEasy).tag("easy")
+                                            Text(languageManager.currentLanguage.exerciseMedium).tag("medium")
+                                            Text(languageManager.currentLanguage.exerciseHard).tag("hard")
+                                        }
+                                        .pickerStyle(MenuPickerStyle())
+                                        .labelsHidden()
+                                    }
+                                    .padding(.horizontal, 16)
+                                    .frame(minHeight: 50)
+                                    
+                                    if item.id != overrideItems.last?.id {
+                                        Divider().padding(.leading, 16)
+                                    }
+                                }
+                            }
+                            .background(Color.secondaryGroupedBackground)
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                            .padding(.horizontal)
+                        }
+
+                        // Reset Adaptive Progress Button
+                        Button(action: { showResetAdaptiveAlert = true }) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(languageManager.currentLanguage.resetDifficultyProgressLabel)
+                                        .font(.body)
+                                        .foregroundColor(.red)
+                                    Text(languageManager.currentLanguage.resetDifficultyProgressSubtitle)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                                Spacer()
+                            }
+                            .padding()
+                            .background(Color.red.opacity(0.08))
+                            .cornerRadius(12)
+                            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.horizontal)
+                        .alert(languageManager.currentLanguage.resetDifficultyProgressAlertTitle, isPresented: $showResetAdaptiveAlert) {
+                            Button(languageManager.currentLanguage.resetDifficultyProgressAlertCancel, role: .cancel) {}
+                            Button(languageManager.currentLanguage.resetDifficultyProgressAlertConfirm, role: .destructive) {
+                                adaptiveStore.resetAll()
+                            }
+                        } message: {
+                            Text(languageManager.currentLanguage.resetDifficultyProgressAlertMessage)
+                        }
                     }
                 }
 

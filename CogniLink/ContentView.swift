@@ -706,3 +706,205 @@ struct HomeView: View {
         .shadow(color: Color.black.opacity(0.02), radius: 2, x: 0, y: 1)
     }
 }
+
+// MARK: - Therapy Settings Localization
+extension AppLanguage {
+    var therapySettingsTitle: String {
+        switch self {
+        case .english:    return "Therapy Settings"
+        case .spanish:    return "Ajustes de Terapia"
+        case .hindi:      return "थेरेपी सेटिंग्स"
+        case .gujarati:   return "થેરાપી સેટિંગ્સ"
+        case .chinese:    return "治疗设置"
+        case .farsi:      return "تنظیمات درمان"
+        case .korean:     return "치료 설정"
+        case .vietnamese: return "Cài đặt trị liệu"
+        case .arabic:     return "إعدادات العلاج"
+        case .portuguese: return "Configurações de Terapia"
+        case .tagalog:    return "Mga Setting ng Therapy"
+        case .punjabi:    return "ਥੈਰੇਪੀ ਸੈਟਿੰਗਜ਼"
+        case .armenian:   return "Թերապիայի Կարգավորումներ"
+        }
+    }
+    
+    var adaptiveDifficultyLabel: String {
+        switch self {
+        case .english:    return "Adaptive Difficulty"
+        case .spanish:    return "Dificultad Adaptativa"
+        case .hindi:      return "अनुकूली कठिनाई"
+        case .gujarati:   return "અનુકૂલનશીલ મુશ્કેલી"
+        case .chinese:    return "自适应难度"
+        case .farsi:      return "دشواری تطبیقی"
+        case .korean:     return "적응형 난이도"
+        case .vietnamese: return "Độ khó thích ứng"
+        case .arabic:     return "الصعوبة التكيفية"
+        case .portuguese: return "Dificuldade Adaptativa"
+        case .tagalog:    return "Adaptive na Dificultad"
+        case .punjabi:    return "ਅਨੁਕੂਲਿਤ ਮੁਸ਼ਕਲ"
+        case .armenian:   return "Ադապտիվ Դժվարություն"
+        }
+    }
+
+    var adaptiveDifficultySubtitle: String {
+        switch self {
+        case .english:    return "Automatically adjusts question difficulty based on performance"
+        case .spanish:    return "Ajusta automáticamente la dificultad de las preguntas según el rendimiento"
+        case .hindi:      return "प्रदर्शन के आधार पर प्रश्नों की कठिनाई को स्वचालित रूप से समायोजित करता है"
+        case .gujarati:   return "પ્રદર્શનના આધારે પ્રશ્નોની મુશ્કેલીને આપમેળે સમાયોજيت કરે છે"
+        case .chinese:    return "根据表现自动调整问题难度"
+        case .farsi:      return "به طور خودکار سختی سوالات را بر اساس عملکرد تنظیم می کند"
+        case .korean:     return "수행 능력에 따라 질문 난이도를 자동으로 조절합니다"
+        case .vietnamese: return "Tự động điều chỉnh độ khó của câu hỏi dựa trên hiệu suất"
+        case .arabic:     return "ضبط صعوبة الأسئلة تلقائيًا بناءً على الأداء"
+        case .portuguese: return "Ajusta automaticamente a dificuldade das perguntas com base no desempenho"
+        case .tagalog:    return "Awtomatikong inaayos ang hirap ng tanong batay sa pagganap"
+        case .punjabi:    return "ਕਾਰਗੁਜ਼ਾਰੀ ਦੇ ਅਧਾਰ ਤੇ ਪ੍ਰਸ਼ਨ ਦੀ ਮੁਸ਼ਕਲ ਨੂੰ ਆਪਣੇ ਆਪ ਵਿਵਸਥਿਤ ਕਰਦਾ ਹੈ"
+        case .armenian:   return "Ավտոմատ կերպով կարգավորում է հարցերի դժվարությունը՝ հիմնվելով կատարողականի վրա"
+        }
+    }
+
+    var resetDifficultyProgressLabel: String {
+        switch self {
+        case .english:    return "Reset Difficulty Progress"
+        case .spanish:    return "Restablecer Progreso de Dificultad"
+        case .hindi:      return "कठिनाई प्रगति रीसेट करें"
+        case .gujarati:   return "મુશ્કેલીની પ્રગતિ રીસેટ કરો"
+        case .chinese:    return "重置难度进度"
+        case .farsi:      return "بازنشانی پیشرفت سختی"
+        case .korean:     return "난이도 진행 상황 초기화"
+        case .vietnamese: return "Đặt lại tiến trình độ khó"
+        case .arabic:     return "إعادة تعيين تقدم الصعوبة"
+        case .portuguese: return "Redefinir Progresso de Dificuldade"
+        case .tagalog:    return "I-reset ang Progreso ng Kahirapan"
+        case .punjabi:    return "ਮੁਸ਼ਕਲ ਪ੍ਰਗਤੀ ਨੂੰ ਰੀਸੈਟ ਕਰੋ"
+        case .armenian:   return "Վերակայել Դժվարության Առաջընթացը"
+        }
+    }
+
+    var resetDifficultyProgressSubtitle: String {
+        switch self {
+        case .english:    return "Returns all exercises to Easy difficulty and clears performance history"
+        case .spanish:    return "Devuelve todos los ejercicios a dificultad Fácil y borra el historial de rendimiento"
+        case .hindi:      return "सभी अभ्यासों को आसान कठिनाई पर लौटाता है और प्रदर्शन इतिहास को साफ करता है"
+        case .gujarati:   return "બધી કસરતોને સરળ મુશ્કેલી પર પરત કરે છે અને પ્રદર્શન ઇતિહાસ સાફ કરે છે"
+        case .chinese:    return "将所有练习恢复为简单难度并清除表现记录"
+        case .farsi:      return "همه تمرین ها را به سختی آسان برمی گرداند و تاریخچه عملکرد را پاک می کند"
+        case .korean:     return "모든 연습을 쉬움 난이도로 되돌리고 수행 기록을 지웁니다"
+        case .vietnamese: return "Trả tất cả bài tập về độ khó Dễ và xóa lịch sử hiệu suất"
+        case .arabic:     return "إرجاع جميع التمارين إلى الصعوبة السهلة ومسح سجل الأداء"
+        case .portuguese: return "Retorna todos os exercícios para a dificuldade Fácil e limpa o histórico de desempenho"
+        case .tagalog:    return "Ipinapabalik ang lahat ng pagsasanay sa Madaling kahirapan at nililinis ang kasaysayan ng pagganap"
+        case .punjabi:    return "ਸਾਰੇ ਅਭਿਆਸਾਂ ਨੂੰ ਅਸਾਨ ਮੁਸ਼ਕਲ ਵਿੱਚ ਵਾਪਸ ਲਿਆਉਂਦਾ ਹੈ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਦੇ ਇਤਿਹਾਸ ਨੂੰ ਸਾਫ਼ ਕਰਦਾ ਹੈ"
+        case .armenian:   return "Վերադարձնում է բոլոր վարժությունները Հեշտ դժվարության և մաքրում կատարողականի պատմությունը"
+        }
+    }
+
+    var resetDifficultyProgressAlertTitle: String {
+        switch self {
+        case .english:    return "Reset Difficulty Progress?"
+        case .spanish:    return "¿Restablecer Progreso de Dificultad?"
+        case .hindi:      return "कठिनाई प्रगति रीसेट करें?"
+        case .gujarati:   return "મુશ્કેલીની પ્રગતિ રીસેટ કરવી?"
+        case .chinese:    return "确定重置难度进度吗？"
+        case .farsi:      return "بازنشانی پیشرفت سختی؟"
+        case .korean:     return "난이도 진행 상황을 초기화하시겠습니까?"
+        case .vietnamese: return "Đặt lại tiến trình độ khó?"
+        case .arabic:     return "إعادة تعيين تقدم الصعوبة؟"
+        case .portuguese: return "Redefinir Progresso de Dificuldade?"
+        case .tagalog:    return "I-reset ang Progreso ng Kahirapan?"
+        case .punjabi:    return "ਮੁਸ਼ਕਲ ਪ੍ਰਗਤੀ ਨੂੰ ਰੀਸੈਟ ਕਰਨਾ ਹੈ?"
+        case .armenian:   return "Վերակայե՞լ դժվարության առաջընթացը:"
+        }
+    }
+
+    var resetDifficultyProgressAlertMessage: String {
+        switch self {
+        case .english:    return "This will clear your rolling accuracy history and reset all exercises to Auto/Easy. This cannot be undone."
+        case .spanish:    return "Esto borrará su historial de precisión y restablecerá todos los ejercicios a Auto/Fácil. Esto no se puede deshacer."
+        case .hindi:      return "यह आपके सटीकता इतिहास को साफ कर देगा और सभी अभ्यासों को ऑटो/आसान पर रीसेट कर देगा। इसे पूर्ववत नहीं किया जा सकता।"
+        case .gujarati:   return "આ તમારા સચોટતાના ઇતિહાસને સાફ કરશે અને બધી કસરતોને ઓટો/સરળ પર રીસેટ કરશે. આ પૂર્વવત્ કરી શકાતું નથી."
+        case .chinese:    return "这将清除您的滚动正确率记录，并将所有练习重置为自动/简单。此操作无法撤销。"
+        case .farsi:      return "این کار تاریخچه دقت شما را پاک کرده و تمام تمرین‌ها را به حالت خودکار/آسان بازنشانی می‌کند. این عمل غیرقابل بازگشت است."
+        case .korean:     return "이 작업은 정확도 기록을 지우고 모든 연습을 자동/쉬움으로 초기화합니다. 이 작업은 되돌릴 수 없습니다."
+        case .vietnamese: return "Thao tác này sẽ xóa lịch sử độ chính xác và đặt lại tất cả bài tập về Tự động/Dễ. Việc này không thể hoàn tác."
+        case .arabic:     return "سيؤدي هذا إلى مسح سجل الدقة وإعادة تعيين جميع التمارين إلى تلقائي/سهل. لا يمكن التراجع عن هذا الإجراء."
+        case .portuguese: return "Isso limpará seu histórico de precisão e redefinirá todos os exercícios para Auto/Fácil. Isso não pode ser desfeito."
+        case .tagalog:    return "Lilinisin nito ang iyong kasaysayan ng katumpakan at ibabalik ang lahat ng pagsasanay sa Auto/Madali. Hindi ito maaaring bawiin."
+        case .punjabi:    return "ਇਹ ਤੁਹਾਡੇ ਸ਼ੁੱਧਤਾ ਇਤਿਹਾਸ ਨੂੰ ਸਾਫ਼ ਕਰੇਗਾ ਅਤੇ ਸਾਰੇ ਅਭਿਆਸਾਂ ਨੂੰ ਆਟੋ/ਅਸਾਨ ਤੇ ਰੀਸੈਟ ਕਰੇਗਾ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ।"
+        case .armenian:   return "Սա կմաքրի ձեր ճշգրտության պատմությունը և կվերակայի բոլոր վարժությունները Ավտո/Հեշտ վիճակի: Սա հնարավոր չէ չեղարկել:"
+        }
+    }
+
+    var exerciseAuto: String {
+        switch self {
+        case .english:    return "Auto"
+        case .spanish:    return "Auto"
+        case .hindi:      return "ऑटो"
+        case .gujarati:   return "ઓટો"
+        case .chinese:    return "自动"
+        case .farsi:      return "خودکار"
+        case .korean:     return "자동"
+        case .vietnamese: return "Tự động"
+        case .arabic:     return "تلقائي"
+        case .portuguese: return "Auto"
+        case .tagalog:    return "Auto"
+        case .punjabi:    return "ਆਟੋ"
+        case .armenian:   return "Ավտո"
+        }
+    }
+
+    var exerciseEasy: String {
+        switch self {
+        case .english:    return "Easy"
+        case .spanish:    return "Fácil"
+        case .hindi:      return "आसान"
+        case .gujarati:   return "સરળ"
+        case .chinese:    return "简单"
+        case .farsi:      return "آسان"
+        case .korean:     return "쉬움"
+        case .vietnamese: return "Dễ"
+        case .arabic:     return "سهل"
+        case .portuguese: return "Fácil"
+        case .tagalog:    return "Madali"
+        case .punjabi:    return "ਅਸਾਨ"
+        case .armenian:   return "Հեշտ"
+        }
+    }
+
+    var exerciseMedium: String {
+        switch self {
+        case .english:    return "Medium"
+        case .spanish:    return "Medio"
+        case .hindi:      return "मध्यम"
+        case .gujarati:   return "મધ્યમ"
+        case .chinese:    return "中等"
+        case .farsi:      return "متوسط"
+        case .korean:     return "보통"
+        case .vietnamese: return "Vừa"
+        case .arabic:     return "متوسط"
+        case .portuguese: return "Médio"
+        case .tagalog:    return "Katamtaman"
+        case .punjabi:    return "ਮੱਧਮ"
+        case .armenian:   return "Միջին"
+        }
+    }
+
+    var exerciseHard: String {
+        switch self {
+        case .english:    return "Hard"
+        case .spanish:    return "Difícil"
+        case .hindi:      return "कठिन"
+        case .gujarati:   return "કઠિન"
+        case .chinese:    return "困难"
+        case .farsi:      return "سخت"
+        case .korean:     return "어려움"
+        case .vietnamese: return "Khó"
+        case .arabic:     return "صعب"
+        case .portuguese: return "Difícil"
+        case .tagalog:    return "Mahirap"
+        case .punjabi:    return "ਕਠਿਨ"
+        case .armenian:   return "Դժվար"
+        }
+    }
+}
+

@@ -6,7 +6,7 @@ enum AppSection: CaseIterable, Hashable {
     case functionalSkills
 }
 
-enum Difficulty: CaseIterable, Hashable {
+enum Difficulty: String, CaseIterable, Hashable {
     case easy
     case medium
     case hard

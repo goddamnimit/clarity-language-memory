@@ -338,9 +338,45 @@ struct ExerciseContainerView: View {
         UserDefaults.standard.set(items.map { $0.id.uuidString }, forKey: recentSessionKey)
     }
 
+    private func getActiveExercise() -> Exercise {
+        guard let adaptiveId = AdaptiveDifficultyStore.shared.adaptiveIdentifier(for: exercise) else {
+            return exercise
+        }
+        
+        let effectiveDiff = AdaptiveDifficultyStore.shared.effectiveDifficulty(for: adaptiveId)
+        
+        // Find matching exercise of the same type and difficulty in the current language
+        let allExs = LanguageManager.shared.allExercises[LanguageManager.shared.currentLanguage] ?? []
+        let candidates = allExs.filter { 
+            AdaptiveDifficultyStore.shared.adaptiveIdentifier(for: $0) == adaptiveId
+        }
+        
+        // Try to find the exact difficulty
+        if let match = candidates.first(where: { $0.difficulty == effectiveDiff }), match.items.count >= 5 {
+            return match
+        }
+        
+        // Fallback to nearest difficulty
+        let order: [Difficulty]
+        switch effectiveDiff {
+        case .easy: order = [.medium, .hard]
+        case .medium: order = [.easy, .hard]
+        case .hard: order = [.medium, .easy]
+        }
+        
+        for diff in order {
+            if let fallbackMatch = candidates.first(where: { $0.difficulty == diff }), fallbackMatch.items.count >= 5 {
+                return fallbackMatch
+            }
+        }
+        
+        return exercise
+    }
+
     private func initializeSession() {
         let recentIDs = loadRecentIDs()
-        let selected = exercise.randomSession(excluding: recentIDs)
+        let activeEx = getActiveExercise()
+        let selected = activeEx.randomSession(excluding: recentIDs)
         sessionItems = selected.map { item in
             ExerciseItem(id: item.id, prompt: item.prompt, options: item.options.shuffled(), correctAnswer: item.correctAnswer, explanation: item.explanation)
         }
@@ -455,6 +491,10 @@ struct ExerciseContainerView: View {
         if correct {
             score += 1
             currentQuestionAnswered = true
+        }
+        
+        if let adaptiveId = AdaptiveDifficultyStore.shared.adaptiveIdentifier(for: exercise) {
+            AdaptiveDifficultyStore.shared.recordAttempt(for: adaptiveId, correct: correct)
         }
     }
 

@@ -483,6 +483,7 @@ struct AppProgressView: View {
     private func executeWipeAndReset() {
         ProgressTracker.resetAllProgress()
         UserProgressStore.shared.resetAttempts()
+        AdaptiveDifficultyStore.shared.resetAll()
         
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "CogniLink_ExercisePlays")

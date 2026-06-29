@@ -12,6 +12,7 @@ struct ResearchExportManager {
 
     /// Builds the full anonymous JSON export and returns it as UTF-8 encoded Data.
     /// Returns nil only if JSON serialisation fails (should never happen in practice).
+    @MainActor
     static func generateExport() -> Data? {
         print("[ResearchExport] generateExport() started")
         let profile  = UserProfileStore.shared.profile
