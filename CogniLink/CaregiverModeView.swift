@@ -55,13 +55,10 @@ extension AppLanguage {
         case .portuguese: return "Modo Cuidador"
         case .tagalog:    return "Caregiver Mode"
         case .punjabi:    return "ਦੇਖਭਾਲਕਰਤਾ ਮੋਡ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Խնամողի Ռեժիմ"
+        case .armenian:   return "Խնամողի Ռեժիմ"
+        case .japanese:   return "Խնամողի Ռեժիմ" // TODO: Add translation
+        case .french:     return "Խնամողի Ռեժիմ" // TODO: Add translation
+        case .amharic:    return "Խնամողի Ռեժիմ" // TODO: Add translation
         }
     }
 
@@ -79,13 +76,10 @@ extension AppLanguage {
         case .portuguese: return "Digite o PIN"
         case .tagalog:    return "Ilagay ang PIN"
         case .punjabi:    return "PIN ਦਰਜ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Մուտքագրեք PIN-ը"
+        case .armenian:   return "Մուտքագրեք PIN-ը"
+        case .japanese:   return "Մուտքագրեք PIN-ը" // TODO: Add translation
+        case .french:     return "Մուտքագրեք PIN-ը" // TODO: Add translation
+        case .amharic:    return "Մուտքագրեք PIN-ը" // TODO: Add translation
         }
     }
 
@@ -103,13 +97,10 @@ extension AppLanguage {
         case .portuguese: return "Esqueceu o PIN? Redefinir para 0000"
         case .tagalog:    return "Nakalimutan ang PIN? I-reset sa 0000"
         case .punjabi:    return "PIN ਭੁੱਲ ਗਏ? 0000 'ਤੇ ਰੀਸੈਟ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Մոռացե՞լ եք PIN-ը: Վերակայել 0000-ի"
+        case .armenian:   return "Մոռացե՞լ եք PIN-ը: Վերակայել 0000-ի"
+        case .japanese:   return "Մոռացե՞լ եք PIN-ը: Վերակայել 0000-ի" // TODO: Add translation
+        case .french:     return "Մոռացե՞լ եք PIN-ը: Վերակայել 0000-ի" // TODO: Add translation
+        case .amharic:    return "Մոռացե՞լ եք PIN-ը: Վերակայել 0000-ի" // TODO: Add translation
         }
     }
 
@@ -127,13 +118,10 @@ extension AppLanguage {
         case .portuguese: return "Cancelar"
         case .tagalog:    return "Kanselahin"
         case .punjabi:    return "ਰੱਦ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Չեղարկել"
+        case .armenian:   return "Չեղարկել"
+        case .japanese:   return "Չեղարկել" // TODO: Add translation
+        case .french:     return "Չեղարկել" // TODO: Add translation
+        case .amharic:    return "Չեղարկել" // TODO: Add translation
         }
     }
 
@@ -151,13 +139,10 @@ extension AppLanguage {
         case .portuguese: return "Apagar"
         case .tagalog:    return "Burahin"
         case .punjabi:    return "ਮਿਟਾਓ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ջնջել"
+        case .armenian:   return "Ջնջել"
+        case .japanese:   return "Ջնջել" // TODO: Add translation
+        case .french:     return "Ջնջել" // TODO: Add translation
+        case .amharic:    return "Ջնջել" // TODO: Add translation
         }
     }
 
@@ -175,13 +160,10 @@ extension AppLanguage {
         case .portuguese: return "Redefinir PIN?"
         case .tagalog:    return "I-reset ang PIN?"
         case .punjabi:    return "PIN ਰੀਸੈਟ ਕਰਨਾ ਹੈ?"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Վերակայե՞լ PIN-ը:"
+        case .armenian:   return "Վերակայե՞լ PIN-ը:"
+        case .japanese:   return "Վերակայե՞լ PIN-ը:" // TODO: Add translation
+        case .french:     return "Վերակայե՞լ PIN-ը:" // TODO: Add translation
+        case .amharic:    return "Վերակայե՞լ PIN-ը:" // TODO: Add translation
         }
     }
 
@@ -199,13 +181,10 @@ extension AppLanguage {
         case .portuguese: return "O PIN será redefinido para 0000."
         case .tagalog:    return "Ire-reset ang PIN sa 0000."
         case .punjabi:    return "PIN 0000 'ਤੇ ਰੀਸੈਟ ਹੋ ਜਾਵੇਗਾ।"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "PIN-ը կվերակայվի 0000-ի:"
+        case .armenian:   return "PIN-ը կվերակայվի 0000-ի:"
+        case .japanese:   return "PIN-ը կվերակայվի 0000-ի:" // TODO: Add translation
+        case .french:     return "PIN-ը կվերակայվի 0000-ի:" // TODO: Add translation
+        case .amharic:    return "PIN-ը կվերակայվի 0000-ի:" // TODO: Add translation
         }
     }
 
@@ -223,13 +202,10 @@ extension AppLanguage {
         case .portuguese: return "Redefinir"
         case .tagalog:    return "I-reset"
         case .punjabi:    return "ਰੀਸੈਟ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Վերակայել"
+        case .armenian:   return "Վերակայել"
+        case .japanese:   return "Վերակայել" // TODO: Add translation
+        case .french:     return "Վերակայել" // TODO: Add translation
+        case .amharic:    return "Վերակայել" // TODO: Add translation
         }
     }
 
@@ -247,13 +223,10 @@ extension AppLanguage {
         case .portuguese: return "Alterar PIN"
         case .tagalog:    return "Palitan ang PIN"
         case .punjabi:    return "PIN ਬਦਲੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Փոխել PIN-ը"
+        case .armenian:   return "Փոխել PIN-ը"
+        case .japanese:   return "Փոխել PIN-ը" // TODO: Add translation
+        case .french:     return "Փոխել PIN-ը" // TODO: Add translation
+        case .amharic:    return "Փոխել PIN-ը" // TODO: Add translation
         }
     }
 
@@ -271,13 +244,10 @@ extension AppLanguage {
         case .portuguese: return "Digite o novo PIN"
         case .tagalog:    return "Ilagay ang bagong PIN"
         case .punjabi:    return "ਨਵਾਂ PIN ਦਰਜ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Մուտքագրեք նոր PIN-ը"
+        case .armenian:   return "Մուտքագրեք նոր PIN-ը"
+        case .japanese:   return "Մուտքագրեք նոր PIN-ը" // TODO: Add translation
+        case .french:     return "Մուտքագրեք նոր PIN-ը" // TODO: Add translation
+        case .amharic:    return "Մուտքագրեք նոր PIN-ը" // TODO: Add translation
         }
     }
 
@@ -295,13 +265,10 @@ extension AppLanguage {
         case .portuguese: return "Confirme o novo PIN"
         case .tagalog:    return "Kumpirmahin ang bagong PIN"
         case .punjabi:    return "ਨਵੇਂ PIN ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Հաստատեք նոր PIN-ը"
+        case .armenian:   return "Հաստատեք նոր PIN-ը"
+        case .japanese:   return "Հաստատեք նոր PIN-ը" // TODO: Add translation
+        case .french:     return "Հաստատեք նոր PIN-ը" // TODO: Add translation
+        case .amharic:    return "Հաստատեք նոր PIN-ը" // TODO: Add translation
         }
     }
 
@@ -319,13 +286,10 @@ extension AppLanguage {
         case .portuguese: return "PIN alterado"
         case .tagalog:    return "Napalitan na ang PIN"
         case .punjabi:    return "PIN ਬਦਲ ਗਿਆ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "PIN-ը փոխվեց"
+        case .armenian:   return "PIN-ը փոխվեց"
+        case .japanese:   return "PIN-ը փոխվեց" // TODO: Add translation
+        case .french:     return "PIN-ը փոխվեց" // TODO: Add translation
+        case .amharic:    return "PIN-ը փոխվեց" // TODO: Add translation
         }
     }
 
@@ -343,13 +307,10 @@ extension AppLanguage {
         case .portuguese: return "PIN Padrão"
         case .tagalog:    return "Default na PIN"
         case .punjabi:    return "ਡਿਫੌਲਟ PIN"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Կանխադրված PIN"
+        case .armenian:   return "Կանխադրված PIN"
+        case .japanese:   return "Կանխադրված PIN" // TODO: Add translation
+        case .french:     return "Կանխադրված PIN" // TODO: Add translation
+        case .amharic:    return "Կանխադրված PIN" // TODO: Add translation
         }
     }
 
@@ -367,13 +328,10 @@ extension AppLanguage {
         case .portuguese: return "O PIN padrão é 0000. Altere-o após entrar no Modo Cuidador."
         case .tagalog:    return "Ang default na PIN ay 0000. Palitan ito pagkapasok sa Caregiver Mode."
         case .punjabi:    return "ਡਿਫੌਲਟ PIN 0000 ਹੈ। ਦੇਖਭਾਲਕਰਤਾ ਮੋਡ ਵਿੱਚ ਦਾਖਲ ਹੋਣ ਤੋਂ ਬਾਅਦ ਕਿਰਪਾ ਕਰਕੇ ਇਸਨੂੰ ਬਦਲੋ।"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Կանխադրված PIN-ը 0000 է: Խնդրում ենք փոխել այն Խնամողի Ռեժիմ մտնելուց հետո:"
+        case .armenian:   return "Կանխադրված PIN-ը 0000 է: Խնդրում ենք փոխել այն Խնամողի Ռեժիմ մտնելուց հետո:"
+        case .japanese:   return "Կանխադրված PIN-ը 0000 է: Խնդրում ենք փոխել այն Խնամողի Ռեժիմ մտնելուց հետո:" // TODO: Add translation
+        case .french:     return "Կանխադրված PIN-ը 0000 է: Խնդրում ենք փոխել այն Խնամողի Ռեժիմ մտնելուց հետո:" // TODO: Add translation
+        case .amharic:    return "Կանխադրված PIN-ը 0000 է: Խնդրում ենք փոխել այն Խնամողի Ռեժիմ մտնելուց հետո:" // TODO: Add translation
         }
     }
 
@@ -391,13 +349,10 @@ extension AppLanguage {
         case .portuguese: return "Sequência Atual"
         case .tagalog:    return "Kasalukuyang Streak"
         case .punjabi:    return "ਮੌਜੂਦਾ ਸਟ੍ਰੀਕ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ընթացիկ Շարք"
+        case .armenian:   return "Ընթացիկ Շարք"
+        case .japanese:   return "Ընթացիկ Շարք" // TODO: Add translation
+        case .french:     return "Ընթացիկ Շարք" // TODO: Add translation
+        case .amharic:    return "Ընթացիկ Շարք" // TODO: Add translation
         }
     }
 
@@ -415,13 +370,10 @@ extension AppLanguage {
         case .portuguese: return "Precisão Geral"
         case .tagalog:    return "Kabuuang Katumpakan"
         case .punjabi:    return "ਕੁੱਲ ਸ਼ੁੱਧਤਾ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ընդհանուր Ճշգրտություն"
+        case .armenian:   return "Ընդհանուր Ճշգրտություն"
+        case .japanese:   return "Ընդհանուր Ճշգրտություն" // TODO: Add translation
+        case .french:     return "Ընդհանուր Ճշգրտություն" // TODO: Add translation
+        case .amharic:    return "Ընդհանուր Ճշգրտություն" // TODO: Add translation
         }
     }
 
@@ -439,13 +391,10 @@ extension AppLanguage {
         case .portuguese: return "Sessões Esta Semana"
         case .tagalog:    return "Mga Session Ngayong Linggo"
         case .punjabi:    return "ਇਸ ਹਫ਼ਤੇ ਦੇ ਸੈਸ਼ਨ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Այս Շաբաթվա Սեսիաներ"
+        case .armenian:   return "Այս Շաբաթվա Սեսիաներ"
+        case .japanese:   return "Այս Շաբաթվա Սեսիաներ" // TODO: Add translation
+        case .french:     return "Այս Շաբաթվա Սեսիաներ" // TODO: Add translation
+        case .amharic:    return "Այս Շաբաթվա Սեսիաներ" // TODO: Add translation
         }
     }
 
@@ -463,13 +412,10 @@ extension AppLanguage {
         case .portuguese: return "Detalhe do Progresso"
         case .tagalog:    return "Detalye ng Progreso"
         case .punjabi:    return "ਪ੍ਰਗਤੀ ਵੇਰਵਾ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Առաջընթացի Մանրամասներ"
+        case .armenian:   return "Առաջընթացի Մանրամասներ"
+        case .japanese:   return "Առաջընթացի Մանրամասներ" // TODO: Add translation
+        case .french:     return "Առաջընթացի Մանրամասներ" // TODO: Add translation
+        case .amharic:    return "Առաջընթացի Մանրամասներ" // TODO: Add translation
         }
     }
 
@@ -487,13 +433,10 @@ extension AppLanguage {
         case .portuguese: return "Meta Semanal"
         case .tagalog:    return "Lingguhang Layunin"
         case .punjabi:    return "ਹਫ਼ਤਾਵਾਰੀ ਟੀਚਾ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Շաբաթական Նպատակ"
+        case .armenian:   return "Շաբաթական Նպատակ"
+        case .japanese:   return "Շաբաթական Նպատակ" // TODO: Add translation
+        case .french:     return "Շաբաթական Նպատակ" // TODO: Add translation
+        case .amharic:    return "Շաբաթական Նպատակ" // TODO: Add translation
         }
     }
 
@@ -511,13 +454,10 @@ extension AppLanguage {
         case .portuguese: return "Notas de Terapia"
         case .tagalog:    return "Mga Tala ng Therapy"
         case .punjabi:    return "ਥੈਰੇਪੀ ਨੋਟਸ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Թերապիայի Նշումներ"
+        case .armenian:   return "Թերապիայի Նշումներ"
+        case .japanese:   return "Թերապիայի Նշումներ" // TODO: Add translation
+        case .french:     return "Թերապիայի Նշումներ" // TODO: Add translation
+        case .amharic:    return "Թերապիայի Նշումներ" // TODO: Add translation
         }
     }
 
@@ -535,13 +475,10 @@ extension AppLanguage {
         case .portuguese: return "Exportar Relatório PDF"
         case .tagalog:    return "I-export ang PDF Report"
         case .punjabi:    return "PDF ਰਿਪੋਰਟ ਨਿਰਯਾਤ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Արտահանել PDF Հաշվետվություն"
+        case .armenian:   return "Արտահանել PDF Հաշվետվություն"
+        case .japanese:   return "Արտահանել PDF Հաշվետվություն" // TODO: Add translation
+        case .french:     return "Արտահանել PDF Հաշվետվություն" // TODO: Add translation
+        case .amharic:    return "Արտահանել PDF Հաշվետվություն" // TODO: Add translation
         }
     }
 
@@ -559,13 +496,10 @@ extension AppLanguage {
         case .portuguese: return "Histórico de Sessões"
         case .tagalog:    return "Kasaysayan ng Session"
         case .punjabi:    return "ਸੈਸ਼ਨ ਇਤਿਹਾਸ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Սեսիաների Պատմություն"
+        case .armenian:   return "Սեսիաների Պատմություն"
+        case .japanese:   return "Սեսիաների Պատմություն" // TODO: Add translation
+        case .french:     return "Սեսիաների Պատմություն" // TODO: Add translation
+        case .amharic:    return "Սեսիաների Պատմություն" // TODO: Add translation
         }
     }
 
@@ -583,13 +517,10 @@ extension AppLanguage {
         case .portuguese: return "Tendência de Precisão"
         case .tagalog:    return "Trend ng Katumpakan"
         case .punjabi:    return "ਸ਼ੁੱਧਤਾ ਦਾ ਰੁਝਾਨ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ճշգրտության Միտում"
+        case .armenian:   return "Ճշգրտության Միտում"
+        case .japanese:   return "Ճշգրտության Միտում" // TODO: Add translation
+        case .french:     return "Ճշգրտության Միտում" // TODO: Add translation
+        case .amharic:    return "Ճշգրտության Միտում" // TODO: Add translation
         }
     }
 
@@ -607,13 +538,10 @@ extension AppLanguage {
         case .portuguese: return "Tudo"
         case .tagalog:    return "Lahat"
         case .punjabi:    return "ਸਾਰੇ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Բոլորը"
+        case .armenian:   return "Բոլորը"
+        case .japanese:   return "Բոլորը" // TODO: Add translation
+        case .french:     return "Բոլորը" // TODO: Add translation
+        case .amharic:    return "Բոլորը" // TODO: Add translation
         }
     }
 
@@ -631,13 +559,10 @@ extension AppLanguage {
         case .portuguese: return "Últimos 7 dias"
         case .tagalog:    return "Huling 7 araw"
         case .punjabi:    return "ਪਿਛਲੇ 7 ਦਿਨ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Վերջին 7 օր"
+        case .armenian:   return "Վերջին 7 օր"
+        case .japanese:   return "Վերջին 7 օր" // TODO: Add translation
+        case .french:     return "Վերջին 7 օր" // TODO: Add translation
+        case .amharic:    return "Վերջին 7 օր" // TODO: Add translation
         }
     }
 
@@ -655,13 +580,10 @@ extension AppLanguage {
         case .portuguese: return "Últimos 30 dias"
         case .tagalog:    return "Huling 30 araw"
         case .punjabi:    return "ਪਿਛਲੇ 30 ਦਿਨ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Վերջին 30 օր"
+        case .armenian:   return "Վերջին 30 օր"
+        case .japanese:   return "Վերջին 30 օր" // TODO: Add translation
+        case .french:     return "Վերջին 30 օր" // TODO: Add translation
+        case .amharic:    return "Վերջին 30 օր" // TODO: Add translation
         }
     }
 
@@ -679,13 +601,10 @@ extension AppLanguage {
         case .portuguese: return "Adicionar Nota"
         case .tagalog:    return "Magdagdag ng Tala"
         case .punjabi:    return "ਨੋਟ ਸ਼ਾਮਲ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ավելացնել Նշում"
+        case .armenian:   return "Ավելացնել Նշում"
+        case .japanese:   return "Ավելացնել Նշում" // TODO: Add translation
+        case .french:     return "Ավելացնել Նշում" // TODO: Add translation
+        case .amharic:    return "Ավելացնել Նշում" // TODO: Add translation
         }
     }
 
@@ -703,13 +622,10 @@ extension AppLanguage {
         case .portuguese: return "Salvar"
         case .tagalog:    return "I-save"
         case .punjabi:    return "ਸੰਭਾਲੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Պահպանել"
+        case .armenian:   return "Պահպանել"
+        case .japanese:   return "Պահպանել" // TODO: Add translation
+        case .french:     return "Պահպանել" // TODO: Add translation
+        case .amharic:    return "Պահպանել" // TODO: Add translation
         }
     }
 
@@ -727,13 +643,10 @@ extension AppLanguage {
         case .portuguese: return "Nenhuma nota ainda"
         case .tagalog:    return "Wala pang tala"
         case .punjabi:    return "ਹਾਲੇ ਕੋਈ ਨੋਟ ਨਹੀਂ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Դեռ նշումներ չկան"
+        case .armenian:   return "Դեռ նշումներ չկան"
+        case .japanese:   return "Դեռ նշումներ չկան" // TODO: Add translation
+        case .french:     return "Դեռ նշումներ չկան" // TODO: Add translation
+        case .amharic:    return "Դեռ նշումներ չկան" // TODO: Add translation
         }
     }
 
@@ -751,13 +664,10 @@ extension AppLanguage {
         case .portuguese: return "Nenhum dado ainda"
         case .tagalog:    return "Wala pang data"
         case .punjabi:    return "ਹਾਲੇ ਕੋਈ ਡਾਟਾ ਨਹੀਂ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Դեռ տվյալներ չկան"
+        case .armenian:   return "Դեռ տվյալներ չկան"
+        case .japanese:   return "Դեռ տվյալներ չկան" // TODO: Add translation
+        case .french:     return "Դեռ տվյալներ չկան" // TODO: Add translation
+        case .amharic:    return "Դեռ տվյալներ չկան" // TODO: Add translation
         }
     }
 
@@ -775,13 +685,10 @@ extension AppLanguage {
         case .portuguese: return "sessões por semana"
         case .tagalog:    return "session bawat linggo"
         case .punjabi:    return "ਸੈਸ਼ਨ ਪ੍ਰਤੀ ਹਫ਼ਤਾ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "սեսիա շաբաթում"
+        case .armenian:   return "սեսիա շաբաթում"
+        case .japanese:   return "սեսիա շաբաթում" // TODO: Add translation
+        case .french:     return "սեսիա շաբաթում" // TODO: Add translation
+        case .amharic:    return "սեսիա շաբաթում" // TODO: Add translation
         }
     }
 
@@ -799,13 +706,10 @@ extension AppLanguage {
         case .portuguese: return "Executar Avaliação Inicial"
         case .tagalog:    return "Patakbuhin ang Baseline Assessment"
         case .punjabi:    return "ਬੇਸਲਾਈਨ ਮੁਲਾਂਕਣ ਚਲਾਓ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Անցկացնել Սկզբնական Գնահատում"
+        case .armenian:   return "Անցկացնել Սկզբնական Գնահատում"
+        case .japanese:   return "Անցկացնել Սկզբնական Գնահատում" // TODO: Add translation
+        case .french:     return "Անցկացնել Սկզբնական Գնահատում" // TODO: Add translation
+        case .amharic:    return "Անցկացնել Սկզբնական Գնահատում" // TODO: Add translation
         }
     }
 
@@ -823,13 +727,10 @@ extension AppLanguage {
         case .portuguese: return "Notificações"
         case .tagalog:    return "Mga Notification"
         case .punjabi:    return "ਸੂਚਨਾਵਾਂ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Ծանուցումներ"
+        case .armenian:   return "Ծանուցումներ"
+        case .japanese:   return "Ծանուցումներ" // TODO: Add translation
+        case .french:     return "Ծանուցումներ" // TODO: Add translation
+        case .amharic:    return "Ծանուցումներ" // TODO: Add translation
         }
     }
 
@@ -847,13 +748,10 @@ extension AppLanguage {
         case .portuguese: return "Lembretes de Prática"
         case .tagalog:    return "Mga Paalala sa Pag-eensayo"
         case .punjabi:    return "ਅਭਿਆਸ ਰਿਮਾਈਂਡਰ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Մարզման Հիշեցումներ"
+        case .armenian:   return "Մարզման Հիշեցումներ"
+        case .japanese:   return "Մարզման Հիշեցումներ" // TODO: Add translation
+        case .french:     return "Մարզման Հիշեցումներ" // TODO: Add translation
+        case .amharic:    return "Մարզման Հիշեցումներ" // TODO: Add translation
         }
     }
 
@@ -871,13 +769,10 @@ extension AppLanguage {
         case .portuguese: return "Hora do Lembrete"
         case .tagalog:    return "Oras ng Paalala"
         case .punjabi:    return "ਰਿਮਾਈਂਡਰ ਦਾ ਸਮਾਂ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Հիշեցման Ժամ"
+        case .armenian:   return "Հիշեցման Ժամ"
+        case .japanese:   return "Հիշեցման Ժամ" // TODO: Add translation
+        case .french:     return "Հիշեցման Ժամ" // TODO: Add translation
+        case .amharic:    return "Հիշեցման Ժամ" // TODO: Add translation
         }
     }
 
@@ -895,13 +790,10 @@ extension AppLanguage {
         case .portuguese: return "Lembretes de Sequência"
         case .tagalog:    return "Mga Paalala sa Streak"
         case .punjabi:    return "ਸਟ੍ਰੀਕ ਰਿਮਾਈਂਡਰ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Շարքի Հիշեցումներ"
+        case .armenian:   return "Շարքի Հիշեցումներ"
+        case .japanese:   return "Շարքի Հիշեցումներ" // TODO: Add translation
+        case .french:     return "Շարքի Հիշեցումներ" // TODO: Add translation
+        case .amharic:    return "Շարքի Հիշեցումներ" // TODO: Add translation
         }
     }
 
@@ -919,13 +811,10 @@ extension AppLanguage {
         case .portuguese: return "Ative as notificações nos Ajustes do iOS"
         case .tagalog:    return "I-enable ang notifications sa iOS Settings"
         case .punjabi:    return "iOS ਸੈਟਿੰਗਜ਼ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "Միացրեք ծանուցումները iOS Կարգավորումներում"
+        case .armenian:   return "Միացրեք ծանուցումները iOS Կարգավորումներում"
+        case .japanese:   return "Միացրեք ծանուցումները iOS Կարգավորումներում" // TODO: Add translation
+        case .french:     return "Միացրեք ծանուցումները iOS Կարգավորումներում" // TODO: Add translation
+        case .amharic:    return "Միացրեք ծանուցումները iOS Կարգավորումներում" // TODO: Add translation
         }
     }
 
@@ -943,13 +832,10 @@ extension AppLanguage {
         case .portuguese: return "\(done) de \(goal) sessões esta semana"
         case .tagalog:    return "\(done) sa \(goal) session ngayong linggo"
         case .punjabi:    return "ਇਸ ਹਫ਼ਤੇ \(goal) ਵਿੱਚੋਂ \(done) ਸੈਸ਼ਨ"
-        case .armenian:
-        case .japanese:
-        case .french:
-        case .amharic:
-        case .japanese:
-        case .french:
-        case .amharic:   return "\(done) \(goal)-ից սեսիա այս շաբաթ"
+        case .armenian:   return "\(done) \(goal)-ից սեսիա այս շաբաթ"
+        case .japanese:   return "\(done) \(goal)-ից սեսիա այս շաբաթ" // TODO: Add translation
+        case .french:     return "\(done) \(goal)-ից սեսիա այս շաբաթ" // TODO: Add translation
+        case .amharic:    return "\(done) \(goal)-ից սեսիա այս շաբաթ" // TODO: Add translation
         }
     }
 }
