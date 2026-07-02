@@ -107,7 +107,8 @@ class LanguageManager: ObservableObject {
                       FunctionalSkillsExerciseData.allExercises +
                       EnglishNewExercisesData.allExercises +
                       EnglishNewExercisesData2.allExercises +
-                      EnglishHardExercisesData.allExercises,
+                      EnglishHardExercisesData.allExercises +
+                      EnglishMinimalPairsData.allExercises,
 
             .spanish: SpanishLanguageExerciseData.allExercises +
                       SpanishCognitionExerciseData.allExercises +
@@ -193,7 +194,8 @@ class LanguageManager: ObservableObject {
                               FunctionalSkillsExerciseData.allExercises +
                               EnglishNewExercisesData.allExercises +
                               EnglishNewExercisesData2.allExercises +
-                              EnglishHardExercisesData.allExercises
+                              EnglishHardExercisesData.allExercises +
+                              EnglishMinimalPairsData.allExercises
             return englishPool.filter { $0.section == section }
         case .spanish:
             let pool = SpanishLanguageExerciseData.allExercises +

@@ -11,6 +11,23 @@ struct CaregiverDashboardView: View {
 
     @State private var showChangePIN = false
     @State private var showResetAdaptiveAlert = false
+    @State private var showBaselineAssessment = false
+    @ObservedObject private var notificationManager = NotificationManager.shared
+
+    private var reminderTimeBinding: Binding<Date> {
+        Binding(
+            get: {
+                Calendar.current.date(bySettingHour: notificationManager.reminderHour,
+                                      minute: notificationManager.reminderMinute,
+                                      second: 0, of: Date()) ?? Date()
+            },
+            set: { newValue in
+                let components = Calendar.current.dateComponents([.hour, .minute], from: newValue)
+                notificationManager.reminderHour = components.hour ?? 10
+                notificationManager.reminderMinute = components.minute ?? 0
+            }
+        )
+    }
 
     // MARK: - Stats
 
@@ -74,6 +91,11 @@ struct CaregiverDashboardView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     Divider().padding(.leading, 52)
+                    Button(action: { showBaselineAssessment = true }) {
+                        dashboardRow(icon: "list.clipboard", label: languageManager.currentLanguage.cgRunBaseline)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Divider().padding(.leading, 52)
                     Button(action: { showChangePIN = true }) {
                         dashboardRow(icon: "key", label: languageManager.currentLanguage.cgChangePIN)
                     }
@@ -84,6 +106,9 @@ struct CaregiverDashboardView: View {
                 .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                 .padding(.horizontal)
 
+                // Notification settings
+                notificationSettingsSection
+
                 // Therapy Settings (moved from Profile tab)
                 therapySettingsSection
             }
@@ -92,6 +117,92 @@ struct CaregiverDashboardView: View {
         .background(Color.groupedBackground.ignoresSafeArea())
         .sheet(isPresented: $showChangePIN) {
             ChangePINView()
+        }
+        .sheet(isPresented: $showBaselineAssessment) {
+            BaselineAssessmentView()
+        }
+        .onAppear {
+            notificationManager.requestPermissionIfNeeded()
+        }
+    }
+
+    // MARK: - Notification Settings
+
+    private var notificationSettingsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 8) {
+                Image(systemName: "bell.fill")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                Text(languageManager.currentLanguage.cgNotifications)
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+            }
+            .padding(.horizontal)
+
+            VStack(spacing: 0) {
+                Toggle(isOn: Binding(
+                    get: { notificationManager.remindersEnabled },
+                    set: { notificationManager.remindersEnabled = $0 }
+                )) {
+                    Text(languageManager.currentLanguage.cgPracticeReminders)
+                        .font(.body)
+                        .foregroundColor(.primary)
+                }
+                .padding(.horizontal, 16)
+                .frame(minHeight: 50)
+
+                if notificationManager.remindersEnabled {
+                    Divider().padding(.leading, 16)
+                    DatePicker(
+                        languageManager.currentLanguage.cgReminderTime,
+                        selection: reminderTimeBinding,
+                        displayedComponents: .hourAndMinute
+                    )
+                    .font(.body)
+                    .padding(.horizontal, 16)
+                    .frame(minHeight: 50)
+                }
+
+                Divider().padding(.leading, 16)
+
+                Toggle(isOn: Binding(
+                    get: { notificationManager.streakRemindersEnabled },
+                    set: { notificationManager.streakRemindersEnabled = $0 }
+                )) {
+                    Text(languageManager.currentLanguage.cgStreakReminders)
+                        .font(.body)
+                        .foregroundColor(.primary)
+                }
+                .padding(.horizontal, 16)
+                .frame(minHeight: 50)
+            }
+            .background(Color.secondaryGroupedBackground)
+            .cornerRadius(12)
+            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+            .padding(.horizontal)
+
+            if notificationManager.permissionDenied {
+                Button {
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    HStack {
+                        Image(systemName: "exclamationmark.triangle")
+                            .foregroundColor(.orange)
+                        Text(languageManager.currentLanguage.cgEnableNotificationsInSettings)
+                            .font(.footnote)
+                            .foregroundColor(.blue)
+                        Spacer()
+                    }
+                    .padding()
+                    .background(Color.secondaryGroupedBackground)
+                    .cornerRadius(12)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding(.horizontal)
+            }
         }
     }
 

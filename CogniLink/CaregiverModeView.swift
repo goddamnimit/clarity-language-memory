@@ -599,6 +599,114 @@ extension AppLanguage {
         }
     }
 
+    var cgRunBaseline: String {
+        switch self {
+        case .english:    return "Run Baseline Assessment"
+        case .spanish:    return "Realizar Evaluación Inicial"
+        case .hindi:      return "आधारभूत मूल्यांकन चलाएं"
+        case .gujarati:   return "બેઝલાઇન મૂલ્યાંકન ચલાવો"
+        case .chinese:    return "运行基线评估"
+        case .farsi:      return "اجرای ارزیابی پایه"
+        case .korean:     return "기초 평가 실행"
+        case .vietnamese: return "Chạy đánh giá cơ bản"
+        case .arabic:     return "إجراء التقييم الأساسي"
+        case .portuguese: return "Executar Avaliação Inicial"
+        case .tagalog:    return "Patakbuhin ang Baseline Assessment"
+        case .punjabi:    return "ਬੇਸਲਾਈਨ ਮੁਲਾਂਕਣ ਚਲਾਓ"
+        case .armenian:   return "Անցկացնել Սկզբնական Գնահատում"
+        }
+    }
+
+    var cgNotifications: String {
+        switch self {
+        case .english:    return "Notifications"
+        case .spanish:    return "Notificaciones"
+        case .hindi:      return "सूचनाएं"
+        case .gujarati:   return "સૂચનાઓ"
+        case .chinese:    return "通知"
+        case .farsi:      return "اعلان‌ها"
+        case .korean:     return "알림"
+        case .vietnamese: return "Thông báo"
+        case .arabic:     return "الإشعارات"
+        case .portuguese: return "Notificações"
+        case .tagalog:    return "Mga Notification"
+        case .punjabi:    return "ਸੂਚਨਾਵਾਂ"
+        case .armenian:   return "Ծանուցումներ"
+        }
+    }
+
+    var cgPracticeReminders: String {
+        switch self {
+        case .english:    return "Practice Reminders"
+        case .spanish:    return "Recordatorios de Práctica"
+        case .hindi:      return "अभ्यास अनुस्मारक"
+        case .gujarati:   return "અભ્યાસ રિમાઇન્ડર"
+        case .chinese:    return "练习提醒"
+        case .farsi:      return "یادآور تمرین"
+        case .korean:     return "연습 알림"
+        case .vietnamese: return "Nhắc nhở luyện tập"
+        case .arabic:     return "تذكيرات التدريب"
+        case .portuguese: return "Lembretes de Prática"
+        case .tagalog:    return "Mga Paalala sa Pag-eensayo"
+        case .punjabi:    return "ਅਭਿਆਸ ਰਿਮਾਈਂਡਰ"
+        case .armenian:   return "Մարզման Հիշեցումներ"
+        }
+    }
+
+    var cgReminderTime: String {
+        switch self {
+        case .english:    return "Reminder Time"
+        case .spanish:    return "Hora del Recordatorio"
+        case .hindi:      return "अनुस्मारक समय"
+        case .gujarati:   return "રિમાઇન્ડરનો સમય"
+        case .chinese:    return "提醒时间"
+        case .farsi:      return "زمان یادآور"
+        case .korean:     return "알림 시간"
+        case .vietnamese: return "Giờ nhắc nhở"
+        case .arabic:     return "وقت التذكير"
+        case .portuguese: return "Hora do Lembrete"
+        case .tagalog:    return "Oras ng Paalala"
+        case .punjabi:    return "ਰਿਮਾਈਂਡਰ ਦਾ ਸਮਾਂ"
+        case .armenian:   return "Հիշեցման Ժամ"
+        }
+    }
+
+    var cgStreakReminders: String {
+        switch self {
+        case .english:    return "Streak Reminders"
+        case .spanish:    return "Recordatorios de Racha"
+        case .hindi:      return "स्ट्रीक अनुस्मारक"
+        case .gujarati:   return "સ્ટ્રીક રિમાઇન્ડર"
+        case .chinese:    return "连续记录提醒"
+        case .farsi:      return "یادآور روند"
+        case .korean:     return "연속 기록 알림"
+        case .vietnamese: return "Nhắc nhở chuỗi ngày"
+        case .arabic:     return "تذكيرات السلسلة"
+        case .portuguese: return "Lembretes de Sequência"
+        case .tagalog:    return "Mga Paalala sa Streak"
+        case .punjabi:    return "ਸਟ੍ਰੀਕ ਰਿਮਾਈਂਡਰ"
+        case .armenian:   return "Շարքի Հիշեցումներ"
+        }
+    }
+
+    var cgEnableNotificationsInSettings: String {
+        switch self {
+        case .english:    return "Enable notifications in iOS Settings"
+        case .spanish:    return "Active las notificaciones en Ajustes de iOS"
+        case .hindi:      return "iOS सेटिंग्स में सूचनाएं चालू करें"
+        case .gujarati:   return "iOS સેટિંગ્સમાં સૂચનાઓ ચાલુ કરો"
+        case .chinese:    return "请在 iOS 设置中启用通知"
+        case .farsi:      return "اعلان‌ها را در تنظیمات iOS فعال کنید"
+        case .korean:     return "iOS 설정에서 알림을 켜세요"
+        case .vietnamese: return "Bật thông báo trong Cài đặt iOS"
+        case .arabic:     return "قم بتفعيل الإشعارات في إعدادات iOS"
+        case .portuguese: return "Ative as notificações nos Ajustes do iOS"
+        case .tagalog:    return "I-enable ang notifications sa iOS Settings"
+        case .punjabi:    return "iOS ਸੈਟਿੰਗਜ਼ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ"
+        case .armenian:   return "Միացրեք ծանուցումները iOS Կարգավորումներում"
+        }
+    }
+
     func cgGoalProgress(_ done: Int, _ goal: Int) -> String {
         switch self {
         case .english:    return "\(done) of \(goal) sessions this week"

@@ -139,6 +139,7 @@ struct TVMultipleChoiceView: View {
         case .categoryCrossOut:   return "Category"
         case .openEnded:          return "Open Ended"
         case .sequencing:         return "Sequencing"
+        case .minimalPairs:       return "Minimal Pairs"
         }
     }
 }

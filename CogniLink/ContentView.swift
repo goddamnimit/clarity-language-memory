@@ -38,6 +38,12 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
+        #if os(iOS)
+        .onAppear {
+            NotificationManager.shared.refreshPermissionStatus()
+            NotificationManager.shared.rescheduleAll()
+        }
+        #endif
     }
 
     // MARK: - Localized Tab Titles
@@ -799,6 +805,350 @@ struct HomeView: View {
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.02), radius: 2, x: 0, y: 1)
+    }
+}
+
+// MARK: - Notification Copy Localization
+extension AppLanguage {
+
+    /// Rotating daily-reminder messages. `name` may be empty.
+    func notifDailyMessages(name: String) -> [String] {
+        let hasName = !name.isEmpty
+        switch self {
+        case .english:
+            return [
+                hasName ? "Time for your Clarity practice, \(name)." : "Time for your Clarity practice.",
+                "A few minutes of practice goes a long way.",
+                "Your streak is waiting — keep it going.",
+                "Ready when you are. Open Clarity."
+            ]
+        case .spanish:
+            return [
+                hasName ? "Hora de tu práctica de Clarity, \(name)." : "Hora de tu práctica de Clarity.",
+                "Unos minutos de práctica ayudan mucho.",
+                "Tu racha te espera — mantenla viva.",
+                "Cuando estés listo, abre Clarity."
+            ]
+        case .hindi:
+            return [
+                hasName ? "\(name), आपके Clarity अभ्यास का समय हो गया।" : "आपके Clarity अभ्यास का समय हो गया।",
+                "कुछ मिनट का अभ्यास बहुत काम आता है।",
+                "आपकी स्ट्रीक इंतज़ार कर रही है — इसे जारी रखें।",
+                "जब आप तैयार हों, Clarity खोलें।"
+            ]
+        case .gujarati:
+            return [
+                hasName ? "\(name), તમારા Clarity અભ્યાસનો સમય થયો." : "તમારા Clarity અભ્યાસનો સમય થયો.",
+                "થોડી મિનિટનો અભ્યાસ ઘણો ફાયદો કરે છે.",
+                "તમારી સ્ટ્રીક રાહ જુએ છે — ચાલુ રાખો.",
+                "તમે તૈયાર હો ત્યારે Clarity ખોલો."
+            ]
+        case .chinese:
+            return [
+                hasName ? "\(name)，该进行 Clarity 练习了。" : "该进行 Clarity 练习了。",
+                "几分钟的练习就有很大帮助。",
+                "你的连续记录在等你——继续保持。",
+                "准备好了就打开 Clarity。"
+            ]
+        case .farsi:
+            return [
+                hasName ? "\(name)، وقت تمرین Clarity شماست." : "وقت تمرین Clarity شماست.",
+                "چند دقیقه تمرین تأثیر زیادی دارد.",
+                "روند شما منتظر است — ادامه دهید.",
+                "هر وقت آماده بودید، Clarity را باز کنید."
+            ]
+        case .korean:
+            return [
+                hasName ? "\(name)님, Clarity 연습 시간이에요." : "Clarity 연습 시간이에요.",
+                "몇 분의 연습이 큰 도움이 됩니다.",
+                "연속 기록이 기다리고 있어요 — 이어가세요.",
+                "준비되면 Clarity를 열어 주세요."
+            ]
+        case .vietnamese:
+            return [
+                hasName ? "\(name), đến giờ luyện tập Clarity rồi." : "Đến giờ luyện tập Clarity rồi.",
+                "Vài phút luyện tập cũng rất hữu ích.",
+                "Chuỗi ngày của bạn đang chờ — hãy duy trì.",
+                "Sẵn sàng thì mở Clarity nhé."
+            ]
+        case .arabic:
+            return [
+                hasName ? "\(name)، حان وقت تدريب Clarity." : "حان وقت تدريب Clarity.",
+                "دقائق قليلة من التدريب تحدث فرقًا كبيرًا.",
+                "سلسلتك بانتظارك — واصل التقدم.",
+                "افتح Clarity متى كنت مستعدًا."
+            ]
+        case .portuguese:
+            return [
+                hasName ? "Hora da sua prática no Clarity, \(name)." : "Hora da sua prática no Clarity.",
+                "Alguns minutos de prática fazem muita diferença.",
+                "Sua sequência está esperando — continue.",
+                "Quando estiver pronto, abra o Clarity."
+            ]
+        case .tagalog:
+            return [
+                hasName ? "\(name), oras na ng iyong Clarity practice." : "Oras na ng iyong Clarity practice.",
+                "Malaki ang naitutulong ng ilang minutong pagsasanay.",
+                "Naghihintay ang iyong streak — ipagpatuloy mo.",
+                "Handa ka na? Buksan ang Clarity."
+            ]
+        case .punjabi:
+            return [
+                hasName ? "\(name), ਤੁਹਾਡੇ Clarity ਅਭਿਆਸ ਦਾ ਸਮਾਂ ਹੋ ਗਿਆ।" : "ਤੁਹਾਡੇ Clarity ਅਭਿਆਸ ਦਾ ਸਮਾਂ ਹੋ ਗਿਆ।",
+                "ਕੁਝ ਮਿੰਟਾਂ ਦਾ ਅਭਿਆਸ ਬਹੁਤ ਫਾਇਦੇਮੰਦ ਹੁੰਦਾ ਹੈ।",
+                "ਤੁਹਾਡੀ ਸਟ੍ਰੀਕ ਉਡੀਕ ਰਹੀ ਹੈ — ਇਸਨੂੰ ਜਾਰੀ ਰੱਖੋ।",
+                "ਜਦੋਂ ਤਿਆਰ ਹੋਵੋ, Clarity ਖੋਲ੍ਹੋ।"
+            ]
+        case .armenian:
+            return [
+                hasName ? "\(name), ձեր Clarity մարզման ժամանակն է:" : "Ձեր Clarity մարզման ժամանակն է:",
+                "Մի քանի րոպե մարզումը մեծ օգուտ է տալիս:",
+                "Ձեր շարքը սպասում է — շարունակեք:",
+                "Երբ պատրաստ լինեք, բացեք Clarity-ն:"
+            ]
+        }
+    }
+
+    func notifStreakAtRisk(name: String, days: Int) -> String {
+        let hasName = !name.isEmpty
+        switch self {
+        case .english:
+            return hasName
+                ? "\(name), your \(days)-day streak ends at midnight. Practice now to keep it going."
+                : "Your \(days)-day streak ends at midnight. Practice now to keep it going."
+        case .spanish:
+            return hasName
+                ? "\(name), tu racha de \(days) días termina a medianoche. Practica ahora para mantenerla."
+                : "Tu racha de \(days) días termina a medianoche. Practica ahora para mantenerla."
+        case .hindi:
+            return hasName
+                ? "\(name), आपकी \(days)-दिन की स्ट्रीक आधी रात को समाप्त हो जाएगी। इसे जारी रखने के लिए अभी अभ्यास करें।"
+                : "आपकी \(days)-दिन की स्ट्रीक आधी रात को समाप्त हो जाएगी। इसे जारी रखने के लिए अभी अभ्यास करें।"
+        case .gujarati:
+            return hasName
+                ? "\(name), તમારી \(days)-દિવસની સ્ટ્રીક મધરાતે પૂરી થશે. ચાલુ રાખવા હમણાં અભ્યાસ કરો."
+                : "તમારી \(days)-દિવસની સ્ટ્રીક મધરાતે પૂરી થશે. ચાલુ રાખવા હમણાં અભ્યાસ કરો."
+        case .chinese:
+            return hasName
+                ? "\(name)，你 \(days) 天的连续记录将在午夜结束。现在练习以保持记录。"
+                : "你 \(days) 天的连续记录将在午夜结束。现在练习以保持记录。"
+        case .farsi:
+            return hasName
+                ? "\(name)، روند \(days) روزه شما نیمه‌شب پایان می‌یابد. برای ادامه، اکنون تمرین کنید."
+                : "روند \(days) روزه شما نیمه‌شب پایان می‌یابد. برای ادامه، اکنون تمرین کنید."
+        case .korean:
+            return hasName
+                ? "\(name)님, \(days)일 연속 기록이 자정에 끝나요. 지금 연습해서 이어가세요."
+                : "\(days)일 연속 기록이 자정에 끝나요. 지금 연습해서 이어가세요."
+        case .vietnamese:
+            return hasName
+                ? "\(name), chuỗi \(days) ngày của bạn sẽ kết thúc lúc nửa đêm. Luyện tập ngay để duy trì."
+                : "Chuỗi \(days) ngày của bạn sẽ kết thúc lúc nửa đêm. Luyện tập ngay để duy trì."
+        case .arabic:
+            return hasName
+                ? "\(name)، سلسلتك البالغة \(days) أيام تنتهي عند منتصف الليل. تدرب الآن للحفاظ عليها."
+                : "سلسلتك البالغة \(days) أيام تنتهي عند منتصف الليل. تدرب الآن للحفاظ عليها."
+        case .portuguese:
+            return hasName
+                ? "\(name), sua sequência de \(days) dias termina à meia-noite. Pratique agora para mantê-la."
+                : "Sua sequência de \(days) dias termina à meia-noite. Pratique agora para mantê-la."
+        case .tagalog:
+            return hasName
+                ? "\(name), magtatapos ang iyong \(days)-araw na streak sa hatinggabi. Mag-ensayo na ngayon."
+                : "Magtatapos ang iyong \(days)-araw na streak sa hatinggabi. Mag-ensayo na ngayon."
+        case .punjabi:
+            return hasName
+                ? "\(name), ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
+                : "ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
+        case .armenian:
+            return hasName
+                ? "\(name), ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
+                : "Ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
+        }
+    }
+
+    var notifWelcomeBack: String {
+        switch self {
+        case .english:    return "It's been a few days. Clarity is here whenever you're ready."
+        case .spanish:    return "Han pasado unos días. Clarity está aquí cuando estés listo."
+        case .hindi:      return "कुछ दिन हो गए हैं। जब आप तैयार हों, Clarity यहीं है।"
+        case .gujarati:   return "થોડા દિવસ થઈ ગયા. તમે તૈયાર હો ત્યારે Clarity અહીં જ છે."
+        case .chinese:    return "已经好几天了。Clarity 随时等着你。"
+        case .farsi:      return "چند روزی گذشته است. هر وقت آماده بودید، Clarity اینجاست."
+        case .korean:     return "며칠이 지났네요. 준비되면 언제든 Clarity가 기다리고 있어요."
+        case .vietnamese: return "Đã vài ngày rồi. Clarity luôn ở đây khi bạn sẵn sàng."
+        case .arabic:     return "مرت بضعة أيام. Clarity هنا متى كنت مستعدًا."
+        case .portuguese: return "Já se passaram alguns dias. O Clarity está aqui quando você estiver pronto."
+        case .tagalog:    return "Ilang araw na ang lumipas. Nandito ang Clarity kapag handa ka na."
+        case .punjabi:    return "ਕੁਝ ਦਿਨ ਹੋ ਗਏ ਹਨ। ਜਦੋਂ ਤੁਸੀਂ ਤਿਆਰ ਹੋਵੋ, Clarity ਇੱਥੇ ਹੈ।"
+        case .armenian:   return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:"
+        }
+    }
+}
+
+// MARK: - Baseline Assessment Localization
+extension AppLanguage {
+
+    var baTitle: String {
+        switch self {
+        case .english:    return "Baseline Assessment"
+        case .spanish:    return "Evaluación Inicial"
+        case .hindi:      return "आधारभूत मूल्यांकन"
+        case .gujarati:   return "બેઝલાઇન મૂલ્યાંકન"
+        case .chinese:    return "基线评估"
+        case .farsi:      return "ارزیابی پایه"
+        case .korean:     return "기초 평가"
+        case .vietnamese: return "Đánh giá cơ bản"
+        case .arabic:     return "التقييم الأساسي"
+        case .portuguese: return "Avaliação Inicial"
+        case .tagalog:    return "Baseline Assessment"
+        case .punjabi:    return "ਬੇਸਲਾਈਨ ਮੁਲਾਂਕਣ"
+        case .armenian:   return "Սկզբնական Գնահատում"
+        }
+    }
+
+    var baIntroMessage: String {
+        switch self {
+        case .english:    return "Answer 15 short questions so we can set the right starting level for your practice. It takes about 10 minutes."
+        case .spanish:    return "Responde 15 preguntas cortas para que fijemos el nivel inicial adecuado para tu práctica. Toma unos 10 minutos."
+        case .hindi:      return "15 छोटे प्रश्नों के उत्तर दें ताकि हम आपके अभ्यास के लिए सही शुरुआती स्तर तय कर सकें। इसमें लगभग 10 मिनट लगते हैं।"
+        case .gujarati:   return "15 ટૂંકા પ્રશ્નોના જવાબ આપો જેથી અમે તમારા અભ્યાસ માટે યોગ્ય શરૂઆતનું સ્તર નક્કી કરી શકીએ. લગભગ 10 મિનિટ લાગે છે."
+        case .chinese:    return "回答 15 个简短问题，帮助我们为你的练习设置合适的起始难度。大约需要 10 分钟。"
+        case .farsi:      return "به ۱۵ سوال کوتاه پاسخ دهید تا سطح شروع مناسب تمرین شما را تعیین کنیم. حدود ۱۰ دقیقه طول می‌کشد."
+        case .korean:     return "15개의 짧은 질문에 답하면 알맞은 시작 난이도를 설정해 드립니다. 약 10분 걸립니다."
+        case .vietnamese: return "Trả lời 15 câu hỏi ngắn để chúng tôi đặt mức khởi đầu phù hợp cho việc luyện tập của bạn. Mất khoảng 10 phút."
+        case .arabic:     return "أجب عن 15 سؤالًا قصيرًا لنحدد مستوى البداية المناسب لتدريبك. يستغرق حوالي 10 دقائق."
+        case .portuguese: return "Responda 15 perguntas curtas para definirmos o nível inicial certo para a sua prática. Leva cerca de 10 minutos."
+        case .tagalog:    return "Sagutin ang 15 maikling tanong para maitakda namin ang tamang panimulang antas ng iyong pagsasanay. Aabutin ng mga 10 minuto."
+        case .punjabi:    return "15 ਛੋਟੇ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿਓ ਤਾਂ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਅਭਿਆਸ ਲਈ ਸਹੀ ਸ਼ੁਰੂਆਤੀ ਪੱਧਰ ਤੈਅ ਕਰ ਸਕੀਏ। ਲਗਭਗ 10 ਮਿੰਟ ਲੱਗਦੇ ਹਨ।"
+        case .armenian:   return "Պատասխանեք 15 կարճ հարցերի, որպեսզի սահմանենք ձեր մարզման ճիշտ սկզբնական մակարդակը: Տևում է մոտ 10 րոպե:"
+        }
+    }
+
+    func baQuestionProgress(_ current: Int, _ total: Int) -> String {
+        switch self {
+        case .english:    return "Question \(current) of \(total)"
+        case .spanish:    return "Pregunta \(current) de \(total)"
+        case .hindi:      return "प्रश्न \(current) / \(total)"
+        case .gujarati:   return "પ્રશ્ન \(current) / \(total)"
+        case .chinese:    return "第 \(current) 题，共 \(total) 题"
+        case .farsi:      return "سوال \(current) از \(total)"
+        case .korean:     return "질문 \(current) / \(total)"
+        case .vietnamese: return "Câu hỏi \(current) trên \(total)"
+        case .arabic:     return "سؤال \(current) من \(total)"
+        case .portuguese: return "Questão \(current) de \(total)"
+        case .tagalog:    return "Tanong \(current) ng \(total)"
+        case .punjabi:    return "ਸਵਾਲ \(current) / \(total)"
+        case .armenian:   return "Հարց \(current) / \(total)"
+        }
+    }
+
+    var baNext: String {
+        switch self {
+        case .english:    return "Next"
+        case .spanish:    return "Siguiente"
+        case .hindi:      return "आगे"
+        case .gujarati:   return "આગળ"
+        case .chinese:    return "下一题"
+        case .farsi:      return "بعدی"
+        case .korean:     return "다음"
+        case .vietnamese: return "Tiếp"
+        case .arabic:     return "التالي"
+        case .portuguese: return "Próxima"
+        case .tagalog:    return "Susunod"
+        case .punjabi:    return "ਅੱਗੇ"
+        case .armenian:   return "Հաջորդ"
+        }
+    }
+
+    var baStart: String {
+        switch self {
+        case .english:    return "Start Assessment"
+        case .spanish:    return "Comenzar Evaluación"
+        case .hindi:      return "मूल्यांकन शुरू करें"
+        case .gujarati:   return "મૂલ્યાંકન શરૂ કરો"
+        case .chinese:    return "开始评估"
+        case .farsi:      return "شروع ارزیابی"
+        case .korean:     return "평가 시작"
+        case .vietnamese: return "Bắt đầu đánh giá"
+        case .arabic:     return "بدء التقييم"
+        case .portuguese: return "Iniciar Avaliação"
+        case .tagalog:    return "Simulan ang Assessment"
+        case .punjabi:    return "ਮੁਲਾਂਕਣ ਸ਼ੁਰੂ ਕਰੋ"
+        case .armenian:   return "Սկսել Գնահատումը"
+        }
+    }
+
+    var baSkip: String {
+        switch self {
+        case .english:    return "Skip for now"
+        case .spanish:    return "Omitir por ahora"
+        case .hindi:      return "अभी छोड़ें"
+        case .gujarati:   return "હમણાં છોડો"
+        case .chinese:    return "暂时跳过"
+        case .farsi:      return "فعلاً رد شوید"
+        case .korean:     return "지금은 건너뛰기"
+        case .vietnamese: return "Bỏ qua bây giờ"
+        case .arabic:     return "التخطي الآن"
+        case .portuguese: return "Pular por enquanto"
+        case .tagalog:    return "Laktawan muna"
+        case .punjabi:    return "ਹਾਲੇ ਛੱਡੋ"
+        case .armenian:   return "Բաց թողնել առայժմ"
+        }
+    }
+
+    var baCompleteTitle: String {
+        switch self {
+        case .english:    return "Assessment complete."
+        case .spanish:    return "Evaluación completada."
+        case .hindi:      return "मूल्यांकन पूर्ण।"
+        case .gujarati:   return "મૂલ્યાંકન પૂર્ણ."
+        case .chinese:    return "评估完成。"
+        case .farsi:      return "ارزیابی کامل شد."
+        case .korean:     return "평가가 완료되었습니다."
+        case .vietnamese: return "Đánh giá hoàn tất."
+        case .arabic:     return "اكتمل التقييم."
+        case .portuguese: return "Avaliação concluída."
+        case .tagalog:    return "Tapos na ang assessment."
+        case .punjabi:    return "ਮੁਲਾਂਕਣ ਪੂਰਾ ਹੋਇਆ।"
+        case .armenian:   return "Գնահատումն ավարտված է:"
+        }
+    }
+
+    var baCompleteMessage: String {
+        switch self {
+        case .english:    return "We've set up your practice based on your responses."
+        case .spanish:    return "Hemos configurado tu práctica según tus respuestas."
+        case .hindi:      return "हमने आपके उत्तरों के आधार पर आपका अभ्यास सेट कर दिया है।"
+        case .gujarati:   return "તમારા જવાબોના આધારે અમે તમારો અભ્યાસ સેટ કર્યો છે."
+        case .chinese:    return "我们已根据你的回答设置好你的练习。"
+        case .farsi:      return "تمرین شما را بر اساس پاسخ‌هایتان تنظیم کردیم."
+        case .korean:     return "응답을 바탕으로 연습을 설정했습니다."
+        case .vietnamese: return "Chúng tôi đã thiết lập việc luyện tập dựa trên câu trả lời của bạn."
+        case .arabic:     return "قمنا بإعداد تدريبك بناءً على إجاباتك."
+        case .portuguese: return "Configuramos sua prática com base nas suas respostas."
+        case .tagalog:    return "Na-set up na namin ang iyong pagsasanay batay sa iyong mga sagot."
+        case .punjabi:    return "ਅਸੀਂ ਤੁਹਾਡੇ ਜਵਾਬਾਂ ਦੇ ਅਧਾਰ 'ਤੇ ਤੁਹਾਡਾ ਅਭਿਆਸ ਸੈੱਟ ਕਰ ਦਿੱਤਾ ਹੈ।"
+        case .armenian:   return "Ձեր պատասխանների հիման վրա կարգավորել ենք ձեր մարզումը:"
+        }
+    }
+
+    var baDone: String {
+        switch self {
+        case .english:    return "Done"
+        case .spanish:    return "Listo"
+        case .hindi:      return "हो गया"
+        case .gujarati:   return "થઈ ગયું"
+        case .chinese:    return "完成"
+        case .farsi:      return "تمام"
+        case .korean:     return "완료"
+        case .vietnamese: return "Xong"
+        case .arabic:     return "تم"
+        case .portuguese: return "Concluído"
+        case .tagalog:    return "Tapos"
+        case .punjabi:    return "ਹੋ ਗਿਆ"
+        case .armenian:   return "Պատրաստ է"
+        }
     }
 }
 

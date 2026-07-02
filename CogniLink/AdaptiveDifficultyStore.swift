@@ -65,6 +65,13 @@ final class AdaptiveDifficultyStore: ObservableObject {
         let key = "\(prefixKey)diff_\(exerciseIdentifier)"
         defaults.set(difficulty.rawValue, forKey: key)
     }
+
+    /// Directly sets the stored difficulty (used by the baseline assessment
+    /// to place a patient at their assessed starting level).
+    func setDifficulty(_ difficulty: Difficulty, for exerciseIdentifier: String) {
+        saveDifficulty(difficulty, for: exerciseIdentifier)
+        objectWillChange.send()
+    }
     
     // MARK: - History Tracking
     

@@ -333,6 +333,7 @@ struct PDFReportManager {
         case "matching":           return "Matching"
         case "sequencing":         return "Sequencing"
         case "analogyChoice":      return "Analogies"
+        case "minimalPairs":       return "Minimal Pairs"
         default:                   return key
         }
     }

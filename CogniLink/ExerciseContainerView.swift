@@ -225,6 +225,8 @@ struct ExerciseContainerView: View {
                                     SequencingView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 case .matching:
                                     MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) }, exerciseTitle: exercise.title)
+                                case .minimalPairs:
+                                    MinimalPairsView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 }
                             }
                             .id(currentItem.id) // Forces full view recreation on question change, resetting all @State
@@ -429,6 +431,11 @@ struct ExerciseContainerView: View {
             "language": ResearchExportManager.string(for: languageManager.currentLanguage)
         ]
         ResearchExportManager.appendSessionRecord(record)
+
+        // Practicing today changes what should fire — recompute reminders
+        #if os(iOS)
+        NotificationManager.shared.rescheduleAll()
+        #endif
 
         // Haptic feedback on session completion
         #if os(iOS)

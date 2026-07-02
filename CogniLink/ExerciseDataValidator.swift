@@ -27,6 +27,7 @@ enum ExerciseDataValidator {
     ("EnglishNewExercisesData", { EnglishNewExercisesData.allExercises }),
     ("EnglishNewExercisesData2", { EnglishNewExercisesData2.allExercises }),
     ("EnglishHardExercisesData", { EnglishHardExercisesData.allExercises }),
+    ("EnglishMinimalPairsData", { EnglishMinimalPairsData.allExercises }),
     // Spanish
     ("SpanishLanguageExerciseData", { SpanishLanguageExerciseData.allExercises }),
     ("SpanishCognitionExerciseData", { SpanishCognitionExerciseData.allExercises }),
@@ -185,6 +186,10 @@ enum ExerciseDataValidator {
     case .categoryCrossOut:
       if item.options.count != 4 {
         return ["categoryCrossOut requires exactly 4 options (found \(item.options.count))"]
+      }
+    case .minimalPairs:
+      if item.options.count != 4 {
+        return ["minimalPairs requires exactly 4 options (found \(item.options.count))"]
       }
     case .sentenceCompletion, .homonym, .matching, .analogyChoice:
       break

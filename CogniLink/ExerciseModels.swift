@@ -24,6 +24,7 @@ enum ExerciseType: CaseIterable, Hashable {
     case matching              // Connect left column items to right column
     case sequencing            // Put scrambled steps in the correct order
     case analogyChoice         // A is to B as C is to ___
+    case minimalPairs          // Distinguish words differing by one phoneme (visual discrimination)
 }
 
 struct ExerciseItem: Identifiable, Equatable, Hashable {

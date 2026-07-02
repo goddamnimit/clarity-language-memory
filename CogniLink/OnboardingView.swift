@@ -7,6 +7,7 @@ struct OnboardingView: View {
     @State private var currentPage = 0
     @State private var name = ""
     @State private var selectedLanguage: AppLanguage = .english
+    @State private var showBaselineAssessment = false
 
     var body: some View {
         #if os(iOS)
@@ -313,11 +314,26 @@ struct OnboardingView: View {
 
             gradientButton(label: "Start Practicing") {
                 UserDefaults.standard.set(true, forKey: "clarity_onboarding_complete")
+                #if os(iOS)
+                if !BaselineAssessmentEngine.isCompleted {
+                    showBaselineAssessment = true
+                } else {
+                    isPresented = false
+                }
+                #else
                 isPresented = false
+                #endif
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 60)
         }
+        #if os(iOS)
+        .sheet(isPresented: $showBaselineAssessment, onDismiss: {
+            isPresented = false
+        }) {
+            BaselineAssessmentView()
+        }
+        #endif
     }
 
     @ViewBuilder

@@ -150,6 +150,7 @@ struct ResearchExportManager {
         case .matching:           return "matching"
         case .sequencing:         return "sequencing"
         case .analogyChoice:      return "analogyChoice"
+        case .minimalPairs:       return "minimalPairs"
         }
     }
 
