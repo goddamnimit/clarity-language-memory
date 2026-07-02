@@ -99,7 +99,25 @@ enum ExerciseDataValidator {
     ("ArmenianCognitionExerciseData", { ArmenianCognitionExerciseData.allExercises }),
     ("ArmenianFunctionalSkillsExerciseData", { ArmenianFunctionalSkillsExerciseData.allExercises }),
     ("ArmenianNewExercisesData", { ArmenianNewExercisesData.allExercises }),
-    ("ArmenianHardExercisesData", { ArmenianHardExercisesData.allExercises })
+    ("ArmenianHardExercisesData", { ArmenianHardExercisesData.allExercises }),
+    // Japanese
+    ("JapaneseLanguageExerciseData", { JapaneseLanguageExerciseData.allExercises }),
+    ("JapaneseCognitionExerciseData", { JapaneseCognitionExerciseData.allExercises }),
+    ("JapaneseFunctionalSkillsExerciseData", { JapaneseFunctionalSkillsExerciseData.allExercises }),
+    ("JapaneseNewExercisesData", { JapaneseNewExercisesData.allExercises }),
+    ("JapaneseHardExercisesData", { JapaneseHardExercisesData.allExercises }),
+    // French
+    ("FrenchLanguageExerciseData", { FrenchLanguageExerciseData.allExercises }),
+    ("FrenchCognitionExerciseData", { FrenchCognitionExerciseData.allExercises }),
+    ("FrenchFunctionalSkillsExerciseData", { FrenchFunctionalSkillsExerciseData.allExercises }),
+    ("FrenchNewExercisesData", { FrenchNewExercisesData.allExercises }),
+    ("FrenchHardExercisesData", { FrenchHardExercisesData.allExercises }),
+    // Amharic
+    ("AmharicLanguageExerciseData", { AmharicLanguageExerciseData.allExercises }),
+    ("AmharicCognitionExerciseData", { AmharicCognitionExerciseData.allExercises }),
+    ("AmharicFunctionalSkillsExerciseData", { AmharicFunctionalSkillsExerciseData.allExercises }),
+    ("AmharicNewExercisesData", { AmharicNewExercisesData.allExercises }),
+    ("AmharicHardExercisesData", { AmharicHardExercisesData.allExercises })
   ]
 
   /// Validates every exercise in every catalog.

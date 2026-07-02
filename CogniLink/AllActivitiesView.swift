@@ -138,6 +138,9 @@ struct AllActivitiesView: View {
         case .tagalog:    return "Lahat ng Aktibidad"
         case .punjabi:    return "ਸਾਰੀਆਂ ਗਤੀਵਿਧੀਆਂ"
         case .armenian:   return "Բոլոր Վարժությունները"
+        case .japanese:   return "すべての活動"
+        case .french:     return "Toutes les Activités"
+        case .amharic:    return "ሁሉም ተግባራት"
         }
     }
 
@@ -156,6 +159,9 @@ struct AllActivitiesView: View {
         case .tagalog:    return "Walang magagamit na pagsasanay sa seksyong ito."
         case .punjabi:    return "ਇਸ ਭਾਗ ਵਿੱਚ ਕੋਈ ਅਭਿਆਸ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
         case .armenian:   return "Այս բաժնում հասանելի վարժություններ չկան:"
+        case .japanese:   return "このセクションで利用可能な演習はありません。"
+        case .french:     return "Aucun exercice disponible dans cette section."
+        case .amharic:    return "በዚህ ክፍል ውስጥ ምንም መልመጃዎች የሉም።"
         }
     }
 
@@ -174,6 +180,9 @@ struct AllActivitiesView: View {
         case .tagalog:    return "Sorpresahin Ako!"
         case .punjabi:    return "ਮੈਨੂੰ ਹੈਰਾਨ ਕਰੋ!"
         case .armenian:   return "Անակնկալե՛լ ինձ!"
+        case .japanese:   return "おまかせ！🎲"
+        case .french:     return "Me Surprendre !"
+        case .amharic:    return "አስገርመኝ!"
         }
     }
 
@@ -256,6 +265,24 @@ struct AllActivitiesView: View {
             case .language: return "Լեզու"
             case .cognition: return "Ճանաչողություն"
             case .functionalSkills: return "Գործնական Հմտություններ"
+            }
+        case .japanese:
+            switch section {
+            case .language: return "言語"
+            case .cognition: return "認知と記憶"
+            case .functionalSkills: return "日常生活動作"
+            }
+        case .french:
+            switch section {
+            case .language: return "Langue"
+            case .cognition: return "Cognition"
+            case .functionalSkills: return "Compétences fonctionnelles"
+            }
+        case .amharic:
+            switch section {
+            case .language: return "ቋንቋ"
+            case .cognition: return "አስተሳሰብ"
+            case .functionalSkills: return "ተግባራዊ ክህሎቶች"
             }
         }
     }

@@ -177,6 +177,9 @@ struct ResearchExportManager {
         case .tagalog:    return "tagalog"
         case .punjabi:    return "punjabi"
         case .armenian:   return "armenian"
+        case .japanese:   return "japanese"
+        case .french:     return "french"
+        case .amharic:    return "amharic"
         }
     }
 }

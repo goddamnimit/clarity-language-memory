@@ -8,7 +8,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case hindi = "हिन्दी"
     case gujarati = "ગુજરાતી"
     case chinese = "中文"
-    case farsi = "فارسی"
+    case farsi = "فารسی"
     case korean = "한국어"
     case vietnamese = "Tiếng Việt"
     case arabic = "العربية"
@@ -16,6 +16,9 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case tagalog = "Tagalog"
     case punjabi = "ਪੰਜਾਬੀ"
     case armenian = "Հայերեն"
+    case japanese = "日本語"
+    case french = "Français"
+    case amharic = "አማርኛ"
 
 
 
@@ -37,6 +40,9 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .tagalog: return "Tagalog"
         case .punjabi: return "ਪੰਜਾਬੀ"
         case .armenian: return "Հայերեն"
+        case .japanese: return "日本語"
+        case .french: return "Français"
+        case .amharic: return "አማርኛ"
 
 
 
@@ -58,6 +64,9 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .tagalog: return "🇵🇭"
         case .punjabi: return "🇮🇳"
         case .armenian: return "🇦🇲"
+        case .japanese: return "🇯🇵"
+        case .french: return "🇫🇷"
+        case .amharic: return "🇪🇹"
 
 
 
@@ -79,6 +88,9 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .tagalog: return "fil_PH"
         case .punjabi: return "pa_IN"
         case .armenian: return "hy_AM"
+        case .japanese: return "ja_JP"
+        case .french: return "fr_FR"
+        case .amharic: return "am_ET"
 
 
 
@@ -180,7 +192,25 @@ class LanguageManager: ObservableObject {
                        ArmenianCognitionExerciseData.allExercises +
                        ArmenianFunctionalSkillsExerciseData.allExercises +
                        ArmenianNewExercisesData.allExercises +
-                       ArmenianHardExercisesData.allExercises
+                       ArmenianHardExercisesData.allExercises,
+
+            .japanese: JapaneseLanguageExerciseData.allExercises +
+                       JapaneseCognitionExerciseData.allExercises +
+                       JapaneseFunctionalSkillsExerciseData.allExercises +
+                       JapaneseNewExercisesData.allExercises +
+                       JapaneseHardExercisesData.allExercises,
+
+            .french: FrenchLanguageExerciseData.allExercises +
+                     FrenchCognitionExerciseData.allExercises +
+                     FrenchFunctionalSkillsExerciseData.allExercises +
+                     FrenchNewExercisesData.allExercises +
+                     FrenchHardExercisesData.allExercises,
+
+            .amharic: AmharicLanguageExerciseData.allExercises +
+                      AmharicCognitionExerciseData.allExercises +
+                      AmharicFunctionalSkillsExerciseData.allExercises +
+                      AmharicNewExercisesData.allExercises +
+                      AmharicHardExercisesData.allExercises
         ]
     }
     
@@ -280,6 +310,27 @@ class LanguageManager: ObservableObject {
                        ArmenianFunctionalSkillsExerciseData.allExercises +
                        ArmenianNewExercisesData.allExercises +
                        ArmenianHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
+        case .japanese:
+            let pool = JapaneseLanguageExerciseData.allExercises +
+                       JapaneseCognitionExerciseData.allExercises +
+                       JapaneseFunctionalSkillsExerciseData.allExercises +
+                       JapaneseNewExercisesData.allExercises +
+                       JapaneseHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
+        case .french:
+            let pool = FrenchLanguageExerciseData.allExercises +
+                       FrenchCognitionExerciseData.allExercises +
+                       FrenchFunctionalSkillsExerciseData.allExercises +
+                       FrenchNewExercisesData.allExercises +
+                       FrenchHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
+        case .amharic:
+            let pool = AmharicLanguageExerciseData.allExercises +
+                       AmharicCognitionExerciseData.allExercises +
+                       AmharicFunctionalSkillsExerciseData.allExercises +
+                       AmharicNewExercisesData.allExercises +
+                       AmharicHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         }
     }

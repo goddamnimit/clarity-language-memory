@@ -62,7 +62,13 @@ struct ContentView: View {
         case .portuguese: return "Início"
         case .tagalog:    return "Home"
         case .punjabi:    return "ਹੋਮ"
-        case .armenian:   return "Գլխավոր"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Գլխավոր"
         }
     }
 
@@ -80,7 +86,13 @@ struct ContentView: View {
         case .portuguese: return "Atividades"
         case .tagalog:    return "Mga Aktibidad"
         case .punjabi:    return "ਗਤੀਵਿਧੀਆਂ"
-        case .armenian:   return "Վարժություններ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Վարժություններ"
         }
     }
 
@@ -98,7 +110,13 @@ struct ContentView: View {
         case .portuguese: return "Perfil"
         case .tagalog:    return "Profile"
         case .punjabi:    return "ਪ੍ਰੋਫਾਈਲ"
-        case .armenian:   return "Պրոֆիլ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Պրոֆիլ"
         }
     }
 }
@@ -555,6 +573,12 @@ struct HomeView: View {
                 return greetings[dayOfYear % greetings.count]
             }
         case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:
             if hasName {
                 let greetings = [
                     "Ուրախ եմ քեզ տեսնել, \(name)!",
@@ -593,7 +617,13 @@ struct HomeView: View {
         case .portuguese: return "Me Surpreenda! 🎲"
         case .tagalog:    return "Sorpresahin Ako! 🎲"
         case .punjabi:    return "ਮੈਨੂੰ ਹੈਰਾਨ ਕਰੋ! 🎲"
-        case .armenian:   return "Անակնկալե՛լ ինձ: 🎲"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Անակնկալե՛լ ինձ: 🎲"
         }
     }
 
@@ -620,7 +650,13 @@ struct HomeView: View {
         case .portuguese: return "Toque para uma atividade aleatória"
         case .tagalog:    return "I-tap para sa random na aktibidad"
         case .punjabi:    return "ਇੱਕ ਬੇਤਰਤੀਬੇ ਅਭਿਆਸ ਲਈ ਟੈਪ ਕਰੋ"
-        case .armenian:   return "Հպեք պատահական վարժության համար"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Հպեք պատահական վարժության համար"
         }
     }
 
@@ -638,7 +674,13 @@ struct HomeView: View {
         case .portuguese: return "Linguagem"
         case .tagalog:    return "Wika"
         case .punjabi:    return "ਭਾਸ਼ਾ"
-        case .armenian:   return "Լեզու"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Լեզու"
         }
     }
 
@@ -656,7 +698,13 @@ struct HomeView: View {
         case .portuguese: return "Cognição"
         case .tagalog:    return "Kognisyon"
         case .punjabi:    return "ਦਿਮਾਗੀ ਕਸਰਤ"
-        case .armenian:   return "Ճանաչողություն"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ճանաչողություն"
         }
     }
 
@@ -674,7 +722,13 @@ struct HomeView: View {
         case .portuguese: return "Habilidades Funcionais"
         case .tagalog:    return "Functional na Kasanayan"
         case .punjabi:    return "ਰੋਜ਼ਾਨa ਦੇ ਹੁਨਰ"
-        case .armenian:   return "Գործնական Հմտություններ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Գործնական Հմտություններ"
         }
     }
 
@@ -705,6 +759,12 @@ struct HomeView: View {
         case .punjabi:
             return "\(sessionsCount) ਸੈਸ਼ਨ ਖੇਡੇ ਗਏ"
         case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:
             return "\(sessionsCount) սեսիա խաղացվել է"
         }
     }
@@ -900,6 +960,12 @@ extension AppLanguage {
                 "ਜਦੋਂ ਤਿਆਰ ਹੋਵੋ, Clarity ਖੋਲ੍ਹੋ।"
             ]
         case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:
             return [
                 hasName ? "\(name), ձեր Clarity մարզման ժամանակն է:" : "Ձեր Clarity մարզման ժամանակն է:",
                 "Մի քանի րոպե մարզումը մեծ օգուտ է տալիս:",
@@ -961,6 +1027,12 @@ extension AppLanguage {
                 ? "\(name), ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
                 : "ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
         case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:
             return hasName
                 ? "\(name), ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
                 : "Ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
@@ -981,7 +1053,13 @@ extension AppLanguage {
         case .portuguese: return "Já se passaram alguns dias. O Clarity está aqui quando você estiver pronto."
         case .tagalog:    return "Ilang araw na ang lumipas. Nandito ang Clarity kapag handa ka na."
         case .punjabi:    return "ਕੁਝ ਦਿਨ ਹੋ ਗਏ ਹਨ। ਜਦੋਂ ਤੁਸੀਂ ਤਿਆਰ ਹੋਵੋ, Clarity ਇੱਥੇ ਹੈ।"
-        case .armenian:   return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:"
         }
     }
 }
@@ -1003,7 +1081,13 @@ extension AppLanguage {
         case .portuguese: return "Avaliação Inicial"
         case .tagalog:    return "Baseline Assessment"
         case .punjabi:    return "ਬੇਸਲਾਈਨ ਮੁਲਾਂਕਣ"
-        case .armenian:   return "Սկզբնական Գնահատում"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Սկզբնական Գնահատում"
         }
     }
 
@@ -1021,7 +1105,13 @@ extension AppLanguage {
         case .portuguese: return "Responda 15 perguntas curtas para definirmos o nível inicial certo para a sua prática. Leva cerca de 10 minutos."
         case .tagalog:    return "Sagutin ang 15 maikling tanong para maitakda namin ang tamang panimulang antas ng iyong pagsasanay. Aabutin ng mga 10 minuto."
         case .punjabi:    return "15 ਛੋਟੇ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿਓ ਤਾਂ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਅਭਿਆਸ ਲਈ ਸਹੀ ਸ਼ੁਰੂਆਤੀ ਪੱਧਰ ਤੈਅ ਕਰ ਸਕੀਏ। ਲਗਭਗ 10 ਮਿੰਟ ਲੱਗਦੇ ਹਨ।"
-        case .armenian:   return "Պատասխանեք 15 կարճ հարցերի, որպեսզի սահմանենք ձեր մարզման ճիշտ սկզբնական մակարդակը: Տևում է մոտ 10 րոպե:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Պատասխանեք 15 կարճ հարցերի, որպեսզի սահմանենք ձեր մարզման ճիշտ սկզբնական մակարդակը: Տևում է մոտ 10 րոպե:"
         }
     }
 
@@ -1039,7 +1129,13 @@ extension AppLanguage {
         case .portuguese: return "Questão \(current) de \(total)"
         case .tagalog:    return "Tanong \(current) ng \(total)"
         case .punjabi:    return "ਸਵਾਲ \(current) / \(total)"
-        case .armenian:   return "Հարց \(current) / \(total)"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Հարց \(current) / \(total)"
         }
     }
 
@@ -1057,7 +1153,13 @@ extension AppLanguage {
         case .portuguese: return "Próxima"
         case .tagalog:    return "Susunod"
         case .punjabi:    return "ਅੱਗੇ"
-        case .armenian:   return "Հաջորդ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Հաջորդ"
         }
     }
 
@@ -1075,7 +1177,13 @@ extension AppLanguage {
         case .portuguese: return "Iniciar Avaliação"
         case .tagalog:    return "Simulan ang Assessment"
         case .punjabi:    return "ਮੁਲਾਂਕਣ ਸ਼ੁਰੂ ਕਰੋ"
-        case .armenian:   return "Սկսել Գնահատումը"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Սկսել Գնահատումը"
         }
     }
 
@@ -1093,7 +1201,13 @@ extension AppLanguage {
         case .portuguese: return "Pular por enquanto"
         case .tagalog:    return "Laktawan muna"
         case .punjabi:    return "ਹਾਲੇ ਛੱਡੋ"
-        case .armenian:   return "Բաց թողնել առայժմ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Բաց թողնել առայժմ"
         }
     }
 
@@ -1111,7 +1225,13 @@ extension AppLanguage {
         case .portuguese: return "Avaliação concluída."
         case .tagalog:    return "Tapos na ang assessment."
         case .punjabi:    return "ਮੁਲਾਂਕਣ ਪੂਰਾ ਹੋਇਆ।"
-        case .armenian:   return "Գնահատումն ավարտված է:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Գնահատումն ավարտված է:"
         }
     }
 
@@ -1129,7 +1249,13 @@ extension AppLanguage {
         case .portuguese: return "Configuramos sua prática com base nas suas respostas."
         case .tagalog:    return "Na-set up na namin ang iyong pagsasanay batay sa iyong mga sagot."
         case .punjabi:    return "ਅਸੀਂ ਤੁਹਾਡੇ ਜਵਾਬਾਂ ਦੇ ਅਧਾਰ 'ਤੇ ਤੁਹਾਡਾ ਅਭਿਆਸ ਸੈੱਟ ਕਰ ਦਿੱਤਾ ਹੈ।"
-        case .armenian:   return "Ձեր պատասխանների հիման վրա կարգավորել ենք ձեր մարզումը:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ձեր պատասխանների հիման վրա կարգավորել ենք ձեր մարզումը:"
         }
     }
 
@@ -1147,7 +1273,13 @@ extension AppLanguage {
         case .portuguese: return "Concluído"
         case .tagalog:    return "Tapos"
         case .punjabi:    return "ਹੋ ਗਿਆ"
-        case .armenian:   return "Պատրաստ է"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Պատրաստ է"
         }
     }
 }
@@ -1171,7 +1303,13 @@ extension AppLanguage {
             case .portuguese: return "Linguagem"
             case .tagalog:    return "Wika"
             case .punjabi:    return "ਭਾਸ਼ਾ"
-            case .armenian:   return "Լեզու"
+            case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Լեզու"
             }
         case .cognition:
             switch self {
@@ -1187,7 +1325,13 @@ extension AppLanguage {
             case .portuguese: return "Cognição"
             case .tagalog:    return "Kognisyon"
             case .punjabi:    return "ਦਿਮਾਗੀ ਕਸਰਤ"
-            case .armenian:   return "Ճանաչողություն"
+            case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ճանաչողություն"
             }
         case .functionalSkills:
             switch self {
@@ -1203,7 +1347,13 @@ extension AppLanguage {
             case .portuguese: return "Habilidades Funcionais"
             case .tagalog:    return "Functional na Kasanayan"
             case .punjabi:    return "ਰੋਜ਼ਾਨਾ ਦੇ ਹੁਨਰ"
-            case .armenian:   return "Գործնական Հմտություններ"
+            case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Գործնական Հմտություններ"
             }
         }
     }
@@ -1222,7 +1372,13 @@ extension AppLanguage {
         case .portuguese: return "Voltar para \(exerciseName)"
         case .tagalog:    return "Balik sa \(exerciseName)"
         case .punjabi:    return "\(exerciseName) 'ਤੇ ਵਾਪਸ ਜਾਓ"
-        case .armenian:   return "Վերադարձ դեպի \(exerciseName)"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Վերադարձ դեպի \(exerciseName)"
         }
     }
 
@@ -1240,7 +1396,13 @@ extension AppLanguage {
         case .portuguese: return "Você não pratica há \(days) dias"
         case .tagalog:    return "\(days) araw ka nang hindi nag-eensayo"
         case .punjabi:    return "ਤੁਸੀਂ \(days) ਦਿਨਾਂ ਤੋਂ ਅਭਿਆਸ ਨਹੀਂ ਕੀਤਾ"
-        case .armenian:   return "Դուք \(days) օր չեք մարզվել"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Դուք \(days) օր չեք մարզվել"
         }
     }
 
@@ -1258,7 +1420,13 @@ extension AppLanguage {
         case .portuguese: return "\(exerciseName) precisa de atenção"
         case .tagalog:    return "Kailangan ng pansin ang \(exerciseName)"
         case .punjabi:    return "\(exerciseName) ਵੱਲ ਧਿਆਨ ਦਿਓ"
-        case .armenian:   return "\(exerciseName)-ը ուշադրության կարիք ունի"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "\(exerciseName)-ը ուշադրության կարիք ունի"
         }
     }
 
@@ -1276,7 +1444,13 @@ extension AppLanguage {
         case .portuguese: return "A precisão caiu recentemente"
         case .tagalog:    return "Bumaba kamakailan ang katumpakan"
         case .punjabi:    return "ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ੁੱਧਤਾ ਘਟੀ ਹੈ"
-        case .armenian:   return "Ճշգրտությունը վերջերս նվազել է"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ճշգրտությունը վերջերս նվազել է"
         }
     }
 
@@ -1294,7 +1468,13 @@ extension AppLanguage {
         case .portuguese: return "Experimente algo novo"
         case .tagalog:    return "Sumubok ng bago"
         case .punjabi:    return "ਕੁਝ ਨਵਾਂ ਅਜ਼ਮਾਓ"
-        case .armenian:   return "Փորձեք նոր բան"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Փորձեք նոր բան"
         }
     }
 
@@ -1312,7 +1492,13 @@ extension AppLanguage {
         case .portuguese: return "Você não praticou \(sectionName) esta semana"
         case .tagalog:    return "Hindi mo pa nagagalaw ang \(sectionName) ngayong linggo"
         case .punjabi:    return "ਇਸ ਹਫ਼ਤੇ ਤੁਸੀਂ \(sectionName) ਦਾ ਅਭਿਆਸ ਨਹੀਂ ਕੀਤਾ"
-        case .armenian:   return "Այս շաբաթ դուք չեք զբաղվել \(sectionName)-ով"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Այս շաբաթ դուք չեք զբաղվել \(sectionName)-ով"
         }
     }
 
@@ -1330,7 +1516,13 @@ extension AppLanguage {
         case .portuguese: return "Pronto para um desafio?"
         case .tagalog:    return "Handa na ba sa hamon?"
         case .punjabi:    return "ਚੁਣੌਤੀ ਲਈ ਤਿਆਰ ਹੋ?"
-        case .armenian:   return "Պատրա՞ստ եք մարտահրավերի:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Պատրա՞ստ եք մարտահրավերի:"
         }
     }
 
@@ -1348,7 +1540,13 @@ extension AppLanguage {
         case .portuguese: return "Você domina \(exerciseName) consistentemente"
         case .tagalog:    return "Tuloy-tuloy kang mahusay sa \(exerciseName)"
         case .punjabi:    return "ਤੁਸੀਂ \(exerciseName) ਵਿੱਚ ਲਗਾਤਾਰ ਵਧੀਆ ਕਰ ਰਹੇ ਹੋ"
-        case .armenian:   return "Դուք անընդհատ գերազանց եք \(exerciseName)-ում"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Դուք անընդհատ գերազանց եք \(exerciseName)-ում"
         }
     }
 }
@@ -1369,7 +1567,13 @@ extension AppLanguage {
         case .portuguese: return "Configurações de Terapia"
         case .tagalog:    return "Mga Setting ng Therapy"
         case .punjabi:    return "ਥੈਰੇਪੀ ਸੈਟਿੰਗਜ਼"
-        case .armenian:   return "Թերապիայի Կարգավորումներ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Թերապիայի Կարգավորումներ"
         }
     }
     
@@ -1387,7 +1591,13 @@ extension AppLanguage {
         case .portuguese: return "Dificuldade Adaptativa"
         case .tagalog:    return "Adaptive na Dificultad"
         case .punjabi:    return "ਅਨੁਕੂਲਿਤ ਮੁਸ਼ਕਲ"
-        case .armenian:   return "Ադապտիվ Դժվարություն"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ադապտիվ Դժվարություն"
         }
     }
 
@@ -1405,7 +1615,13 @@ extension AppLanguage {
         case .portuguese: return "Ajusta automaticamente a dificuldade das perguntas com base no desempenho"
         case .tagalog:    return "Awtomatikong inaayos ang hirap ng tanong batay sa pagganap"
         case .punjabi:    return "ਕਾਰਗੁਜ਼ਾਰੀ ਦੇ ਅਧਾਰ ਤੇ ਪ੍ਰਸ਼ਨ ਦੀ ਮੁਸ਼ਕਲ ਨੂੰ ਆਪਣੇ ਆਪ ਵਿਵਸਥਿਤ ਕਰਦਾ ਹੈ"
-        case .armenian:   return "Ավտոմատ կերպով կարգավորում է հարցերի դժվարությունը՝ հիմնվելով կատարողականի վրա"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ավտոմատ կերպով կարգավորում է հարցերի դժվարությունը՝ հիմնվելով կատարողականի վրա"
         }
     }
 
@@ -1423,7 +1639,13 @@ extension AppLanguage {
         case .portuguese: return "Redefinir Progresso de Dificuldade"
         case .tagalog:    return "I-reset ang Progreso ng Kahirapan"
         case .punjabi:    return "ਮੁਸ਼ਕਲ ਪ੍ਰਗਤੀ ਨੂੰ ਰੀਸੈਟ ਕਰੋ"
-        case .armenian:   return "Վերակայել Դժվարության Առաջընթացը"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Վերակայել Դժվարության Առաջընթացը"
         }
     }
 
@@ -1441,7 +1663,13 @@ extension AppLanguage {
         case .portuguese: return "Retorna todos os exercícios para a dificuldade Fácil e limpa o histórico de desempenho"
         case .tagalog:    return "Ipinapabalik ang lahat ng pagsasanay sa Madaling kahirapan at nililinis ang kasaysayan ng pagganap"
         case .punjabi:    return "ਸਾਰੇ ਅਭਿਆਸਾਂ ਨੂੰ ਅਸਾਨ ਮੁਸ਼ਕਲ ਵਿੱਚ ਵਾਪਸ ਲਿਆਉਂਦਾ ਹੈ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਦੇ ਇਤਿਹਾਸ ਨੂੰ ਸਾਫ਼ ਕਰਦਾ ਹੈ"
-        case .armenian:   return "Վերադարձնում է բոլոր վարժությունները Հեշտ դժվարության և մաքրում կատարողականի պատմությունը"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Վերադարձնում է բոլոր վարժությունները Հեշտ դժվարության և մաքրում կատարողականի պատմությունը"
         }
     }
 
@@ -1459,7 +1687,13 @@ extension AppLanguage {
         case .portuguese: return "Redefinir Progresso de Dificuldade?"
         case .tagalog:    return "I-reset ang Progreso ng Kahirapan?"
         case .punjabi:    return "ਮੁਸ਼ਕਲ ਪ੍ਰਗਤੀ ਨੂੰ ਰੀਸੈਟ ਕਰਨਾ ਹੈ?"
-        case .armenian:   return "Վերակայե՞լ դժվարության առաջընթացը:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Վերակայե՞լ դժվարության առաջընթացը:"
         }
     }
 
@@ -1477,7 +1711,13 @@ extension AppLanguage {
         case .portuguese: return "Isso limpará seu histórico de precisão e redefinirá todos os exercícios para Auto/Fácil. Isso não pode ser desfeito."
         case .tagalog:    return "Lilinisin nito ang iyong kasaysayan ng katumpakan at ibabalik ang lahat ng pagsasanay sa Auto/Madali. Hindi ito maaaring bawiin."
         case .punjabi:    return "ਇਹ ਤੁਹਾਡੇ ਸ਼ੁੱਧਤਾ ਇਤਿਹਾਸ ਨੂੰ ਸਾਫ਼ ਕਰੇਗਾ ਅਤੇ ਸਾਰੇ ਅਭਿਆਸਾਂ ਨੂੰ ਆਟੋ/ਅਸਾਨ ਤੇ ਰੀਸੈਟ ਕਰੇਗਾ। ਇਸਨੂੰ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ।"
-        case .armenian:   return "Սա կմաքրի ձեր ճշգրտության պատմությունը և կվերակայի բոլոր վարժությունները Ավտո/Հեշտ վիճակի: Սա հնարավոր չէ չեղարկել:"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Սա կմաքրի ձեր ճշգրտության պատմությունը և կվերակայի բոլոր վարժությունները Ավտո/Հեշտ վիճակի: Սա հնարավոր չէ չեղարկել:"
         }
     }
 
@@ -1495,7 +1735,13 @@ extension AppLanguage {
         case .portuguese: return "Auto"
         case .tagalog:    return "Auto"
         case .punjabi:    return "ਆਟੋ"
-        case .armenian:   return "Ավտո"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Ավտո"
         }
     }
 
@@ -1513,7 +1759,13 @@ extension AppLanguage {
         case .portuguese: return "Fácil"
         case .tagalog:    return "Madali"
         case .punjabi:    return "ਅਸਾਨ"
-        case .armenian:   return "Հեշտ"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Հեշտ"
         }
     }
 
@@ -1531,7 +1783,13 @@ extension AppLanguage {
         case .portuguese: return "Médio"
         case .tagalog:    return "Katamtaman"
         case .punjabi:    return "ਮੱਧਮ"
-        case .armenian:   return "Միջին"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Միջին"
         }
     }
 
@@ -1549,7 +1807,13 @@ extension AppLanguage {
         case .portuguese: return "Difícil"
         case .tagalog:    return "Mahirap"
         case .punjabi:    return "ਕਠਿਨ"
-        case .armenian:   return "Դժվար"
+        case .armenian:
+        case .japanese:
+        case .french:
+        case .amharic:
+        case .japanese:
+        case .french:
+        case .amharic:   return "Դժվար"
         }
     }
 }
