@@ -22,8 +22,8 @@ struct ExerciseDataValidationTests {
 
     #expect(
       issues.isEmpty,
-      "Found \(issues.count) validation issue(s) in \(sourceName):\n"
-        + issues.map(\.description).joined(separator: "\n")
+      Comment(rawValue: "Found \(issues.count) validation issue(s) in \(sourceName):\n"
+        + issues.map(\.description).joined(separator: "\n"))
     )
   }
 
@@ -31,9 +31,9 @@ struct ExerciseDataValidationTests {
     let issues = ExerciseDataValidator.validateAllCatalogs()
     #expect(
       issues.isEmpty,
-      "Found \(issues.count) validation issue(s) across all catalogs:\n"
+      Comment(rawValue: "Found \(issues.count) validation issue(s) across all catalogs:\n"
         + issues.prefix(50).map(\.description).joined(separator: "\n")
-        + (issues.count > 50 ? "\n... and \(issues.count - 50) more" : "")
+        + (issues.count > 50 ? "\n... and \(issues.count - 50) more" : ""))
     )
   }
 

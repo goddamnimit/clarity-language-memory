@@ -26,8 +26,6 @@ struct ProfileView: View {
     @State private var exportURL: URL? = nil
     @State private var showKeyboardTip = false
     @State private var keyboardTipLanguage: AppLanguage? = nil
-    @State private var showResetAdaptiveAlert = false
-    @ObservedObject private var adaptiveStore = AdaptiveDifficultyStore.shared
 
     // MARK: - Computed Stats
 
@@ -348,75 +346,55 @@ struct ProfileView: View {
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding(.horizontal)
-                    }
-                }
 
-                // MARK: - 7.5. Therapy Settings
-                VStack(alignment: .leading, spacing: 12) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "lock.fill")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                        Text(languageManager.currentLanguage.therapySettingsTitle)
-                            .font(.headline)
-                            .foregroundColor(.secondary)
-                    }
-                    .padding(.horizontal)
-
-                    VStack(spacing: 12) {
-                        // Master Toggle
-                        VStack(alignment: .leading, spacing: 4) {
-                            Toggle(isOn: Binding<Bool>(
-                                get: { AdaptiveDifficultyStore.shared.isMasterToggleOn },
-                                set: { val in AdaptiveDifficultyStore.shared.isMasterToggleOn = val }
-                            )) {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(languageManager.currentLanguage.adaptiveDifficultyLabel)
-                                        .font(.body)
-                                        .foregroundColor(.primary)
-                                    Text(languageManager.currentLanguage.adaptiveDifficultySubtitle)
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                }
+                        #if os(iOS)
+                        Button {
+                            exportPDFReport()
+                        } label: {
+                            HStack {
+                                Image(systemName: "doc.richtext")
+                                    .foregroundColor(.blue)
+                                Text(languageManager.currentLanguage.cgExportPDF)
+                                    .foregroundColor(.blue)
+                                Spacer()
                             }
-                        }
-                        .padding()
-                        .background(Color.secondaryGroupedBackground)
-                        .cornerRadius(12)
-                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
-                        .padding(.horizontal)
-
-                        // Per-Exercise Overrides (only if master toggle is on)
-                        if AdaptiveDifficultyStore.shared.isMasterToggleOn {
-                            VStack(spacing: 0) {
-                                let overrideItems = [
-                                    AdaptiveOverrideItem(id: "homonym", name: "Homonyms"),
-                                    AdaptiveOverrideItem(id: "analogyChoice", name: "Analogies"),
-                                    AdaptiveOverrideItem(id: "wordassociation", name: "Word Association"),
-                                    AdaptiveOverrideItem(id: "sentencecompletion", name: "Sentence Completion"),
-                                    AdaptiveOverrideItem(id: "sequencing", name: "Sequencing"),
-                                    AdaptiveOverrideItem(id: "causeeffect", name: "Cause and Effect"),
-                                    AdaptiveOverrideItem(id: "whatswrong", name: "What's Wrong Here?"),
-                                    AdaptiveOverrideItem(id: "completesaying", name: "Complete the Saying")
-                                ]
-                                ForEach(overrideItems) { item in
-                                    AdaptiveOverrideRow(item: item)
-                                    if item.id != overrideItems.last?.id {
-                                        Divider().padding(.leading, 16)
-                                    }
-                                }
-                            }
+                            .padding()
+                            .frame(minHeight: 50)
                             .background(Color.secondaryGroupedBackground)
                             .cornerRadius(12)
                             .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
-                            .padding(.horizontal)
                         }
-
-                        // Reset Adaptive Progress Button
-                        resetAdaptiveButton
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.horizontal)
+                        #endif
                     }
                 }
+
+                // MARK: - 7.5. Caregiver Mode (Therapy Settings moved inside)
+                #if os(iOS)
+                VStack(alignment: .leading, spacing: 12) {
+                    NavigationLink(destination: CaregiverModeView()) {
+                        HStack {
+                            Image(systemName: "lock.shield")
+                                .foregroundColor(.accentColor)
+                            Text(languageManager.currentLanguage.cgCaregiverMode)
+                                .font(.body)
+                                .foregroundColor(.primary)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption.bold())
+                                .foregroundColor(.secondary)
+                        }
+                        .padding()
+                        .frame(minHeight: 50)
+                        .background(Color.secondaryGroupedBackground)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.horizontal)
+                }
+                #endif
 
                 // MARK: 8. Reset Profile
                 Button(action: { showResetAlert = true }) {
@@ -477,41 +455,6 @@ struct ProfileView: View {
             }
         }
         #endif
-    }
-
-    // MARK: - Reset Adaptive Button
-
-    @ViewBuilder
-    private var resetAdaptiveButton: some View {
-        let lang = languageManager.currentLanguage
-        Button(action: { showResetAdaptiveAlert = true }) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(lang.resetDifficultyProgressLabel)
-                        .font(.body)
-                        .foregroundColor(.red)
-                    Text(lang.resetDifficultyProgressSubtitle)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer()
-            }
-            .padding()
-            .background(Color.red.opacity(0.08))
-            .cornerRadius(12)
-            .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
-        }
-        .buttonStyle(PlainButtonStyle())
-        .padding(.horizontal)
-        .alert(lang.resetDifficultyProgressAlertTitle, isPresented: $showResetAdaptiveAlert) {
-            Button("Cancel", role: .cancel) {}
-            Button("Reset", role: .destructive) {
-                adaptiveStore.resetAll()
-            }
-        } message: {
-            Text(lang.resetDifficultyProgressAlertMessage)
-        }
     }
 
     // MARK: - Reusable Row
@@ -690,55 +633,23 @@ struct ProfileView: View {
             }
         }
     }
-}
 
-// MARK: - AdaptiveOverrideRow
+    // MARK: - PDF Report Export
 
-private struct AdaptiveOverrideRow: View {
-    let item: AdaptiveOverrideItem
-    @ObservedObject private var languageManager = LanguageManager.shared
-
-    private var selectionBinding: Binding<String> {
-        Binding(
-            get: { AdaptiveDifficultyStore.shared.getManualOverride(for: item.id)?.rawValue ?? "auto" },
-            set: { val in
-                let diff = (val == "auto") ? nil : Difficulty(rawValue: val)
-                AdaptiveDifficultyStore.shared.setManualOverride(diff, for: item.id)
-            }
-        )
-    }
-
-    var body: some View {
-        HStack {
-            nameLabel
-            Spacer()
-            difficultyPicker
+    #if os(iOS)
+    private func exportPDFReport() {
+        let data = PDFReportManager.generateReport()
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent(PDFReportManager.suggestedFilename())
+        do {
+            try data.write(to: url, options: .atomic)
+            exportURL = url
+            showShareSheet = true
+        } catch {
+            print("[Export] ERROR: PDF write failed: \(error)")
         }
-        .padding(.horizontal, 16)
-        .frame(minHeight: 50)
     }
-
-    private var nameLabel: some View {
-        Text(item.name)
-            .font(.body)
-            .foregroundColor(.primary)
-    }
-
-    private var difficultyPicker: some View {
-        let options: [(tag: String, label: String)] = [
-            ("auto",   languageManager.currentLanguage.exerciseAuto),
-            ("easy",   languageManager.currentLanguage.exerciseEasy),
-            ("medium", languageManager.currentLanguage.exerciseMedium),
-            ("hard",   languageManager.currentLanguage.exerciseHard)
-        ]
-        return Picker("", selection: selectionBinding) {
-            ForEach(options, id: \.tag) { opt in
-                Text(opt.label).tag(opt.tag)
-            }
-        }
-        .pickerStyle(MenuPickerStyle())
-        .labelsHidden()
-    }
+    #endif
 }
 
 // MARK: - ShareSheet (UIActivityViewController wrapper)

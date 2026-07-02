@@ -104,7 +104,10 @@ struct HomeView: View {
     @State private var sessionsCount: Int = 0
     @State private var surpriseExercise: Exercise? = nil
     @State private var sectionExercise: Exercise? = nil
-    
+    @State private var recommendations: [Recommendation] = []
+    @State private var recommendedExercise: Exercise? = nil
+    @State private var weeklyGoalText: String? = nil
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -126,9 +129,39 @@ struct HomeView: View {
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
 
+                    // Weekly goal indicator (set in Caregiver Mode)
+                    if let goalText = weeklyGoalText {
+                        HStack(spacing: 6) {
+                            Image(systemName: "trophy")
+                                .font(.caption)
+                            Text(goalText)
+                        }
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                    }
+
                     // Streak Widget
                     StreakWidgetView()
                         .padding(.horizontal)
+
+                    // MARK: - Personalized Recommendations
+                    if !recommendations.isEmpty {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 12) {
+                                ForEach(recommendations) { rec in
+                                    Button {
+                                        launchRecommendation(rec)
+                                    } label: {
+                                        recommendationCard(rec)
+                                    }
+                                    .buttonStyle(.plain)
+                                    .tvFocusEffect()
+                                }
+                            }
+                            .padding(.horizontal)
+                        }
+                    }
 
                     // MARK: - Surprise Me Button
                     Button(action: {
@@ -206,11 +239,16 @@ struct HomeView: View {
             }
             .onAppear {
                 loadSessionsCount()
+                refreshRecommendations()
+                refreshWeeklyGoal()
             }
             .navigationDestination(item: $surpriseExercise) { exercise in
                 ExerciseContainerView(exercise: exercise)
             }
             .navigationDestination(item: $sectionExercise) { exercise in
+                ExerciseContainerView(exercise: exercise)
+            }
+            .navigationDestination(item: $recommendedExercise) { exercise in
                 ExerciseContainerView(exercise: exercise)
             }
             .navigationTitle("Clarity")
@@ -670,6 +708,63 @@ struct HomeView: View {
         sessionsCount = plays.values.reduce(0, +)
     }
 
+    // MARK: - Recommendations
+
+    private func refreshRecommendations() {
+        let language = languageManager.currentLanguage
+        let pool = languageManager.exercisesForSection(.language) +
+                   languageManager.exercisesForSection(.cognition) +
+                   languageManager.exercisesForSection(.functionalSkills)
+        recommendations = RecommendationEngine.generateRecommendations(language: language, exercises: pool)
+    }
+
+    private func refreshWeeklyGoal() {
+        #if os(iOS)
+        let goal = WeeklyGoalStore.goal
+        if goal > 0 {
+            weeklyGoalText = languageManager.currentLanguage.cgGoalProgress(WeeklyGoalStore.sessionsThisWeek(), goal)
+        } else {
+            weeklyGoalText = nil
+        }
+        #endif
+    }
+
+    private func launchRecommendation(_ rec: Recommendation) {
+        let pool = languageManager.exercisesForSection(.language) +
+                   languageManager.exercisesForSection(.cognition) +
+                   languageManager.exercisesForSection(.functionalSkills)
+        if let title = rec.targetExerciseTitle,
+           let exercise = pool.first(where: { $0.title == title }) {
+            recommendedExercise = exercise
+        } else if let section = rec.targetSection {
+            recommendedExercise = randomExercise(for: section)
+        }
+    }
+
+    @ViewBuilder
+    private func recommendationCard(_ rec: Recommendation) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Image(systemName: rec.sfSymbolName)
+                .font(.system(size: 20))
+                .foregroundColor(.accentColor)
+            Text(rec.headline)
+                .font(.system(.subheadline, design: .rounded))
+                .fontWeight(.semibold)
+                .foregroundColor(.primary)
+                .lineLimit(1)
+            Text(rec.explanation)
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .lineLimit(2)
+                .multilineTextAlignment(.leading)
+        }
+        .padding(14)
+        .frame(width: 220, alignment: .leading)
+        .background(Color.secondaryGroupedBackground)
+        .cornerRadius(14)
+        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+    }
+
     @ViewBuilder
     private func sectionCard(title: String, subtitle: String, systemImage: String, color: Color) -> some View {
         HStack(spacing: 16) {
@@ -704,6 +799,207 @@ struct HomeView: View {
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.02), radius: 2, x: 0, y: 1)
+    }
+}
+
+// MARK: - Recommendation Copy Localization
+extension AppLanguage {
+
+    func recSectionName(_ section: AppSection) -> String {
+        switch section {
+        case .language:
+            switch self {
+            case .english:    return "Language"
+            case .spanish:    return "Lenguaje"
+            case .hindi:      return "भाषा"
+            case .gujarati:   return "ભાષા"
+            case .chinese:    return "语言"
+            case .farsi:      return "زبان"
+            case .korean:     return "언어"
+            case .vietnamese: return "Ngôn ngữ"
+            case .arabic:     return "اللغة"
+            case .portuguese: return "Linguagem"
+            case .tagalog:    return "Wika"
+            case .punjabi:    return "ਭਾਸ਼ਾ"
+            case .armenian:   return "Լեզու"
+            }
+        case .cognition:
+            switch self {
+            case .english:    return "Cognition"
+            case .spanish:    return "Cognición"
+            case .hindi:      return "अनुभूति"
+            case .gujarati:   return "સ્મૃતિ અને તર્ક"
+            case .chinese:    return "认知与记忆"
+            case .farsi:      return "شناخت و حافظه"
+            case .korean:     return "인지력"
+            case .vietnamese: return "Nhận thức"
+            case .arabic:     return "الإدراك والذاكرة"
+            case .portuguese: return "Cognição"
+            case .tagalog:    return "Kognisyon"
+            case .punjabi:    return "ਦਿਮਾਗੀ ਕਸਰਤ"
+            case .armenian:   return "Ճանաչողություն"
+            }
+        case .functionalSkills:
+            switch self {
+            case .english:    return "Functional Skills"
+            case .spanish:    return "Habilidades Funcionales"
+            case .hindi:      return "कार्यात्मक कौशल"
+            case .gujarati:   return "દૈનિક કૌશલ્ય"
+            case .chinese:    return "日常技能"
+            case .farsi:      return "مهارت‌های روزمره"
+            case .korean:     return "일상 기술"
+            case .vietnamese: return "Kỹ năng hàng ngày"
+            case .arabic:     return "المهارات اليومية"
+            case .portuguese: return "Habilidades Funcionais"
+            case .tagalog:    return "Functional na Kasanayan"
+            case .punjabi:    return "ਰੋਜ਼ਾਨਾ ਦੇ ਹੁਨਰ"
+            case .armenian:   return "Գործնական Հմտություններ"
+            }
+        }
+    }
+
+    func recBackToHeadline(_ exerciseName: String) -> String {
+        switch self {
+        case .english:    return "Back to \(exerciseName)"
+        case .spanish:    return "Volver a \(exerciseName)"
+        case .hindi:      return "\(exerciseName) पर लौटें"
+        case .gujarati:   return "\(exerciseName) પર પાછા ફરો"
+        case .chinese:    return "回到\(exerciseName)"
+        case .farsi:      return "بازگشت به \(exerciseName)"
+        case .korean:     return "\(exerciseName)(으)로 돌아가기"
+        case .vietnamese: return "Quay lại \(exerciseName)"
+        case .arabic:     return "العودة إلى \(exerciseName)"
+        case .portuguese: return "Voltar para \(exerciseName)"
+        case .tagalog:    return "Balik sa \(exerciseName)"
+        case .punjabi:    return "\(exerciseName) 'ਤੇ ਵਾਪਸ ਜਾਓ"
+        case .armenian:   return "Վերադարձ դեպի \(exerciseName)"
+        }
+    }
+
+    func recDaysSinceExplanation(_ days: Int) -> String {
+        switch self {
+        case .english:    return "You haven't practiced in \(days) days"
+        case .spanish:    return "No has practicado en \(days) días"
+        case .hindi:      return "आपने \(days) दिनों से अभ्यास नहीं किया"
+        case .gujarati:   return "તમે \(days) દિવસથી અભ્યાસ કર્યો નથી"
+        case .chinese:    return "你已经 \(days) 天没有练习了"
+        case .farsi:      return "\(days) روز است تمرین نکرده‌اید"
+        case .korean:     return "\(days)일 동안 연습하지 않았어요"
+        case .vietnamese: return "Bạn đã \(days) ngày chưa luyện tập"
+        case .arabic:     return "لم تتدرب منذ \(days) أيام"
+        case .portuguese: return "Você não pratica há \(days) dias"
+        case .tagalog:    return "\(days) araw ka nang hindi nag-eensayo"
+        case .punjabi:    return "ਤੁਸੀਂ \(days) ਦਿਨਾਂ ਤੋਂ ਅਭਿਆਸ ਨਹੀਂ ਕੀਤਾ"
+        case .armenian:   return "Դուք \(days) օր չեք մարզվել"
+        }
+    }
+
+    func recNeedsAttentionHeadline(_ exerciseName: String) -> String {
+        switch self {
+        case .english:    return "\(exerciseName) needs attention"
+        case .spanish:    return "\(exerciseName) necesita atención"
+        case .hindi:      return "\(exerciseName) पर ध्यान दें"
+        case .gujarati:   return "\(exerciseName) પર ધ્યાન આપો"
+        case .chinese:    return "\(exerciseName)需要关注"
+        case .farsi:      return "\(exerciseName) نیاز به توجه دارد"
+        case .korean:     return "\(exerciseName)에 관심이 필요해요"
+        case .vietnamese: return "\(exerciseName) cần chú ý"
+        case .arabic:     return "\(exerciseName) يحتاج إلى اهتمام"
+        case .portuguese: return "\(exerciseName) precisa de atenção"
+        case .tagalog:    return "Kailangan ng pansin ang \(exerciseName)"
+        case .punjabi:    return "\(exerciseName) ਵੱਲ ਧਿਆਨ ਦਿਓ"
+        case .armenian:   return "\(exerciseName)-ը ուշադրության կարիք ունի"
+        }
+    }
+
+    var recAccuracyDroppedExplanation: String {
+        switch self {
+        case .english:    return "Accuracy dropped recently"
+        case .spanish:    return "La precisión bajó recientemente"
+        case .hindi:      return "हाल ही में सटीकता घटी है"
+        case .gujarati:   return "તાજેતરમાં ચોકસાઈ ઘટી છે"
+        case .chinese:    return "最近正确率有所下降"
+        case .farsi:      return "دقت اخیراً کاهش یافته است"
+        case .korean:     return "최근 정확도가 떨어졌어요"
+        case .vietnamese: return "Độ chính xác gần đây giảm"
+        case .arabic:     return "انخفضت الدقة مؤخرًا"
+        case .portuguese: return "A precisão caiu recentemente"
+        case .tagalog:    return "Bumaba kamakailan ang katumpakan"
+        case .punjabi:    return "ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ੁੱਧਤਾ ਘਟੀ ਹੈ"
+        case .armenian:   return "Ճշգրտությունը վերջերս նվազել է"
+        }
+    }
+
+    var recTrySomethingNewHeadline: String {
+        switch self {
+        case .english:    return "Try something new"
+        case .spanish:    return "Prueba algo nuevo"
+        case .hindi:      return "कुछ नया आज़माएं"
+        case .gujarati:   return "કંઈક નવું અજમાવો"
+        case .chinese:    return "尝试新练习"
+        case .farsi:      return "چیز جدیدی امتحان کنید"
+        case .korean:     return "새로운 것을 시도해 보세요"
+        case .vietnamese: return "Thử điều gì đó mới"
+        case .arabic:     return "جرّب شيئًا جديدًا"
+        case .portuguese: return "Experimente algo novo"
+        case .tagalog:    return "Sumubok ng bago"
+        case .punjabi:    return "ਕੁਝ ਨਵਾਂ ਅਜ਼ਮਾਓ"
+        case .armenian:   return "Փորձեք նոր բան"
+        }
+    }
+
+    func recUntouchedSectionExplanation(_ sectionName: String) -> String {
+        switch self {
+        case .english:    return "You haven't touched \(sectionName) this week"
+        case .spanish:    return "No has tocado \(sectionName) esta semana"
+        case .hindi:      return "इस सप्ताह आपने \(sectionName) का अभ्यास नहीं किया"
+        case .gujarati:   return "આ અઠવાડિયે તમે \(sectionName) નો અભ્યાસ કર્યો નથી"
+        case .chinese:    return "本周你还没有练习\(sectionName)"
+        case .farsi:      return "این هفته \(sectionName) را تمرین نکرده‌اید"
+        case .korean:     return "이번 주에 \(sectionName)을(를) 연습하지 않았어요"
+        case .vietnamese: return "Tuần này bạn chưa luyện \(sectionName)"
+        case .arabic:     return "لم تتدرب على \(sectionName) هذا الأسبوع"
+        case .portuguese: return "Você não praticou \(sectionName) esta semana"
+        case .tagalog:    return "Hindi mo pa nagagalaw ang \(sectionName) ngayong linggo"
+        case .punjabi:    return "ਇਸ ਹਫ਼ਤੇ ਤੁਸੀਂ \(sectionName) ਦਾ ਅਭਿਆਸ ਨਹੀਂ ਕੀਤਾ"
+        case .armenian:   return "Այս շաբաթ դուք չեք զբաղվել \(sectionName)-ով"
+        }
+    }
+
+    var recChallengeHeadline: String {
+        switch self {
+        case .english:    return "Ready for a challenge?"
+        case .spanish:    return "¿Listo para un desafío?"
+        case .hindi:      return "चुनौती के लिए तैयार?"
+        case .gujarati:   return "પડકાર માટે તૈયાર છો?"
+        case .chinese:    return "准备好挑战了吗？"
+        case .farsi:      return "آماده یک چالش هستید؟"
+        case .korean:     return "도전할 준비 되셨나요?"
+        case .vietnamese: return "Sẵn sàng thử thách?"
+        case .arabic:     return "هل أنت مستعد للتحدي؟"
+        case .portuguese: return "Pronto para um desafio?"
+        case .tagalog:    return "Handa na ba sa hamon?"
+        case .punjabi:    return "ਚੁਣੌਤੀ ਲਈ ਤਿਆਰ ਹੋ?"
+        case .armenian:   return "Պատրա՞ստ եք մարտահրավերի:"
+        }
+    }
+
+    func recChallengeExplanation(_ exerciseName: String) -> String {
+        switch self {
+        case .english:    return "You're consistently acing \(exerciseName)"
+        case .spanish:    return "Dominas \(exerciseName) constantemente"
+        case .hindi:      return "आप \(exerciseName) में लगातार शानदार हैं"
+        case .gujarati:   return "તમે \(exerciseName) માં સતત ઉત્તમ છો"
+        case .chinese:    return "你在\(exerciseName)中一直表现出色"
+        case .farsi:      return "شما در \(exerciseName) پیوسته عالی هستید"
+        case .korean:     return "\(exerciseName)에서 꾸준히 잘하고 있어요"
+        case .vietnamese: return "Bạn liên tục làm tốt \(exerciseName)"
+        case .arabic:     return "أنت تتفوق باستمرار في \(exerciseName)"
+        case .portuguese: return "Você domina \(exerciseName) consistentemente"
+        case .tagalog:    return "Tuloy-tuloy kang mahusay sa \(exerciseName)"
+        case .punjabi:    return "ਤੁਸੀਂ \(exerciseName) ਵਿੱਚ ਲਗਾਤਾਰ ਵਧੀਆ ਕਰ ਰਹੇ ਹੋ"
+        case .armenian:   return "Դուք անընդհատ գերազանց եք \(exerciseName)-ում"
+        }
     }
 }
 
