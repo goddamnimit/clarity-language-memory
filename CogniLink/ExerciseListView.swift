@@ -150,24 +150,6 @@ struct ExerciseListView: View {
             case .cognition: return "Ճանաչողություն"
             case .functionalSkills: return "Գործնական Հմտություններ"
             }
-        case .japanese:
-            switch section {
-            case .language: return "言語"
-            case .cognition: return "認知と記憶"
-            case .functionalSkills: return "日常生活動作"
-            }
-        case .french:
-            switch section {
-            case .language: return "Langue"
-            case .cognition: return "Cognition"
-            case .functionalSkills: return "Compétences fonctionnelles"
-            }
-        case .amharic:
-            switch section {
-            case .language: return "ቋንቋ"
-            case .cognition: return "አስተሳሰብ"
-            case .functionalSkills: return "ተግባራዊ ክህሎቶች"
-            }
         }
     }
 
@@ -250,24 +232,6 @@ struct ExerciseListView: View {
             case .language: return "Բառախաղեր, հոմանիշներ, արտահայտություններ և ավելին"
             case .cognition: return "Հիշողություն, գիտելիքներ, տրամաբանություն և դատողություն"
             case .functionalSkills: return "Առօրյա կյանք, անվտանգություն և պլանավորում"
-            }
-        case .japanese:
-            switch section {
-            case .language: return "語彙ゲーム、類義語、表現など"
-            case .cognition: return "記憶、クイズ、論理と推理"
-            case .functionalSkills: return "日常生活動作、安全性、カレンダー計画"
-            }
-        case .french:
-            switch section {
-            case .language: return "Jeux de mots, synonymes, expressions et plus"
-            case .cognition: return "Mémoire, quiz, logique et raisonnement"
-            case .functionalSkills: return "Vie quotidienne, sécurité et planification"
-            }
-        case .amharic:
-            switch section {
-            case .language: return "የቃላት ጨዋታዎች፣ ተመሳሳይ ቃላት፣ ሀረጎች እና ሌሎችም"
-            case .cognition: return "ማስታወስ፣ ጥያቄዎች፣ አመክንዮ እና ማሰብ"
-            case .functionalSkills: return "ዕለታዊ ኑሮ፣ ደህንነት እና ማቀድ"
             }
         }
     }
@@ -352,24 +316,6 @@ struct ExerciseListView: View {
             case .easy: return "Հեշտ"
             case .medium: return "Միջին"
             case .hard: return "Դժվար"
-            }
-        case .japanese:
-            switch difficulty {
-            case .easy: return "初級"
-            case .medium: return "中級"
-            case .hard: return "上級"
-            }
-        case .french:
-            switch difficulty {
-            case .easy: return "Facile"
-            case .medium: return "Moyen"
-            case .hard: return "Difficile"
-            }
-        case .amharic:
-            switch difficulty {
-            case .easy: return "ቀላል"
-            case .medium: return "መካከለኛ"
-            case .hard: return "ከባድ"
             }
         }
     }
