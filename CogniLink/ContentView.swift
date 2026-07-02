@@ -1025,12 +1025,22 @@ extension AppLanguage {
             return hasName
                 ? "\(name), ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
                 : "ਤੁਹਾਡੀ \(days)-ਦਿਨ ਦੀ ਸਟ੍ਰੀਕ ਅੱਧੀ ਰਾਤ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੁਣੇ ਅਭਿਆਸ ਕਰੋ।"
-        case .armenian:   return hasName
-        case .japanese:   return hasName // TODO: translate
-        case .french:     return hasName // TODO: translate
-        case .amharic:    return hasName // TODO: translate
+        case .armenian:
+            return hasName
                 ? "\(name), ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
                 : "Ձեր \(days)-օրյա շարքն ավարտվում է կեսգիշերին: Մարզվեք հիմա՝ այն պահպանելու համար:"
+        case .japanese:
+            return hasName
+                ? "\(name)さん、継続記録はあと \(days)日です。"
+                : "継続記録はあと \(days)日です。" // TODO: translate
+        case .french:
+            return hasName
+                ? "\(name), votre série de \(days) jours se termine à minuit. Entraînez-vous maintenant."
+                : "Votre série de \(days) jours se termine à minuit. Entraînez-vous maintenant." // TODO: translate
+        case .amharic:
+            return hasName
+                ? "\(name)፣ የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።"
+                : "የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።" // TODO: translate
         }
     }
 
