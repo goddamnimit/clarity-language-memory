@@ -1442,56 +1442,56 @@ struct KoreanLanguageExerciseData {
                 id: UUID(),
                 prompt: "토스트 만들기",
                 options: ["토스트에 버터를 바르세요", "토스터에 빵을 넣어주세요", "토스터에서 제거", "먹다"],
-                correctAnswer: "토스트에 버터를 바르세요",
+                correctAnswer: "토스터에 빵을 넣어주세요 | 토스터에서 제거 | 토스트에 버터를 바르세요 | 먹다",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "손 씻기",
                 options: ["수건으로 손을 말리세요", "손에 비누를 바르세요", "물을 켜세요", "20초간 문지르기", "비누를 헹구세요", "손을 적셔라"],
-                correctAnswer: "수건으로 손을 말리세요",
+                correctAnswer: "물을 켜세요 | 손을 적셔라 | 손에 비누를 바르세요 | 20초간 문지르기 | 비누를 헹구세요 | 수건으로 손을 말리세요",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "커피 만들기",
                 options: ["컵에 커피를 부어주세요", "필터에 커피가루를 넣어주세요", "추출 버튼을 누르세요", "물통을 채우세요"],
-                correctAnswer: "컵에 커피를 부어주세요",
+                correctAnswer: "물통을 채우세요 | 필터에 커피가루를 넣어주세요 | 추출 버튼을 누르세요 | 컵에 커피를 부어주세요",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "전화 걸기",
                 options: ["인사해", "끊으세요", "전화를 받아", "전화번호를 누르세요", "대화를 나누세요"],
-                correctAnswer: "인사해",
+                correctAnswer: "전화를 받아 | 전화번호를 누르세요 | 인사해 | 대화를 나누세요 | 끊으세요",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "옷 입기",
                 options: ["신발을 신다", "셔츠를 입으세요", "속옷을 입으세요", "양말을 신으세요", "바지를 입으세요"],
-                correctAnswer: "신발을 신다",
+                correctAnswer: "속옷을 입으세요 | 셔츠를 입으세요 | 바지를 입으세요 | 양말을 신으세요 | 신발을 신다",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "바닥 청소",
                 options: ["쓰레기통에 버리세요", "빗자루를 꺼내라", "잔해물을 쓰레받기에 담으세요.", "잔해물을 쓸어 모아 더미로 만든다"],
-                correctAnswer: "쓰레기통에 버리세요",
+                correctAnswer: "빗자루를 꺼내라 | 잔해물을 쓸어 모아 더미로 만든다 | 잔해물을 쓰레받기에 담으세요. | 쓰레기통에 버리세요",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "레스토랑에서 주문하기",
                 options: ["식사하세요", "서버에게 주문을 말해주세요", "앉아", "음식을 기다려라", "메뉴 검토"],
-                correctAnswer: "식사하세요",
+                correctAnswer: "앉아 | 메뉴 검토 | 서버에게 주문을 말해주세요 | 음식을 기다려라 | 식사하세요",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "쿠키 굽기",
                 options: ["쿠키를 식혀주세요", "오븐에 굽는다", "오븐을 예열하세요", "재료를 섞는다", "베이킹 시트에 반죽을 떠서 올려주세요"],
-                correctAnswer: "쿠키를 식혀주세요",
+                correctAnswer: "오븐을 예열하세요 | 재료를 섞는다 | 베이킹 시트에 반죽을 떠서 올려주세요 | 오븐에 굽는다 | 쿠키를 식혀주세요",
                 explanation: ""
             )
         ]

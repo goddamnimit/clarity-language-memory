@@ -1442,56 +1442,56 @@ struct VietnameseLanguageExerciseData {
                 id: UUID(),
                 prompt: "làm bánh mì nướng",
                 options: ["Bơ bánh mì nướng", "Cho bánh mì vào lò nướng", "Loại bỏ khỏi máy nướng bánh mì", "ăn"],
-                correctAnswer: "Bơ bánh mì nướng",
+                correctAnswer: "Cho bánh mì vào lò nướng | Loại bỏ khỏi máy nướng bánh mì | Bơ bánh mì nướng | ăn",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Rửa tay",
                 options: ["Lau khô tay bằng khăn", "Thoa xà phòng lên tay", "Bật nước", "Chà trong 20 giây", "Xả sạch xà phòng", "Làm ướt tay bạn"],
-                correctAnswer: "Lau khô tay bằng khăn",
+                correctAnswer: "Bật nước | Làm ướt tay bạn | Thoa xà phòng lên tay | Chà trong 20 giây | Xả sạch xà phòng | Lau khô tay bằng khăn",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Pha cà phê",
                 options: ["Đổ cà phê vào cốc của bạn", "Thêm bã cà phê vào bộ lọc", "Nhấn nút pha", "Đổ đầy hồ chứa nước"],
-                correctAnswer: "Đổ cà phê vào cốc của bạn",
+                correctAnswer: "Đổ đầy hồ chứa nước | Thêm bã cà phê vào bộ lọc | Nhấn nút pha | Đổ cà phê vào cốc của bạn",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Thực hiện cuộc gọi điện thoại",
                 options: ["Nói xin chào", "Cúp máy", "Nhấc điện thoại lên", "Quay số", "Có cuộc trò chuyện của bạn"],
-                correctAnswer: "Nói xin chào",
+                correctAnswer: "Nhấc điện thoại lên | Quay số | Nói xin chào | Có cuộc trò chuyện của bạn | Cúp máy",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Mặc quần áo",
                 options: ["Mang giày vào", "Mặc áo vào", "Mặc đồ lót", "Mang tất vào", "Mặc quần vào"],
-                correctAnswer: "Mang giày vào",
+                correctAnswer: "Mặc đồ lót | Mặc áo vào | Mặc quần vào | Mang tất vào | Mang giày vào",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Quét sàn",
                 options: ["Vứt vào thùng rác", "Lấy chổi ra", "Đổ rác vào thùng rác", "Quét các mảnh vụn thành một đống"],
-                correctAnswer: "Vứt vào thùng rác",
+                correctAnswer: "Lấy chổi ra | Quét các mảnh vụn thành một đống | Đổ rác vào thùng rác | Vứt vào thùng rác",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đặt hàng tại nhà hàng",
                 options: ["Ăn bữa ăn của bạn", "Báo cho máy chủ biết đơn đặt hàng của bạn", "ngồi xuống", "Đợi đồ ăn của bạn", "Xem lại thực đơn"],
-                correctAnswer: "Ăn bữa ăn của bạn",
+                correctAnswer: "ngồi xuống | Xem lại thực đơn | Báo cho máy chủ biết đơn đặt hàng của bạn | Đợi đồ ăn của bạn | Ăn bữa ăn của bạn",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "bánh nướng",
                 options: ["Để bánh nguội", "Nướng trong lò", "Làm nóng lò trước", "Trộn các thành phần", "Múc bột lên khay nướng"],
-                correctAnswer: "Để bánh nguội",
+                correctAnswer: "Làm nóng lò trước | Trộn các thành phần | Múc bột lên khay nướng | Nướng trong lò | Để bánh nguội",
                 explanation: ""
             )
         ]

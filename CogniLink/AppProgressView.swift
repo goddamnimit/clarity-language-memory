@@ -481,21 +481,7 @@ struct AppProgressView: View {
     }
 
     private func executeWipeAndReset() {
-        ProgressTracker.resetAllProgress()
-        UserProgressStore.shared.resetAttempts()
-        AdaptiveDifficultyStore.shared.resetAll()
-        
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: "CogniLink_ExercisePlays")
-        defaults.removeObject(forKey: "CogniLink_AttemptedExercises")
-        defaults.removeObject(forKey: ResearchExportManager.sessionLogKey)
-        defaults.removeObject(forKey: "clarity_onboarding_complete")
-        defaults.removeObject(forKey: "tvSoundEnabled")
-        
-        let allKeys = defaults.dictionaryRepresentation().keys
-        allKeys.filter { $0.hasPrefix("clarity_keyboard_tip_shown_") }
-               .forEach { defaults.removeObject(forKey: $0) }
-               
+        UserProfileStore.shared.executeWipeAndReset()
         loadAllData()
     }
 }

@@ -363,6 +363,9 @@ struct TVExerciseContainerView: View {
         case .tagalog:    return "fil-PH"
         case .punjabi:    return "pa-IN"
         case .armenian:   return "hy-AM"
+        case .japanese:   return "ja-JP"
+        case .french:     return "fr-FR"
+        case .amharic:    return "am-ET"
         }
     }
 }

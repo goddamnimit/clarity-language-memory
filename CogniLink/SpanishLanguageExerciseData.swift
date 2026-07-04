@@ -2088,428 +2088,428 @@ struct SpanishLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hay 7 días en una semana.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Hecho",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "La vainilla es el mejor sabor de helado.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Opinión",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Opinion",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "El agua se congela a 0 grados Celsius o 32 Fahrenheit.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Hecho",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Los perros son las mejores mascotas.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Opinión",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Opinion",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Un triángulo tiene tres lados.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Hecho",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Esa película es muy divertida.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Opinión",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Opinion",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "El océano es de agua salada.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Hecho",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "La jardinería es un gran pasatiempo.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Opinión",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Opinion",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Las piedras son más pesadas que las plumas.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Hecho",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "La pizza es la mejor comida.",
-                options: ["Hecho", "Opinión"],
-                correctAnswer: "Opinión",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Opinion",
                 explanation: ""
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 1)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 2)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 3)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 4)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 5)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 6)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 7)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 8)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 9)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 10)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 11)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 12)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 13)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 14)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 15)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 16)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 17)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 18)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 19)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 20)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 21)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 22)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 23)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 24)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 25)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 26)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 27)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 28)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 29)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 30)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 31)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 32)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 33)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 34)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 35)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 36)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 37)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 38)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 39)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 40)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 41)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 42)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 43)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 44)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 45)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 46)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 47)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 48)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 49)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 50)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
+                options: ["Fact", "Opinion"],
+                correctAnswer: "Fact",
                 explanation: "Mariachi music originated in Mexico."
             )
         ]

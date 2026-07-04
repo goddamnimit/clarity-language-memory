@@ -137,6 +137,42 @@ class UserProfileStore: ObservableObject {
         profile.notes = ""
         saveProfile()
     }
+
+    func executeWipeAndReset() {
+        // Reset profile (PII + streaks) to factory state
+        profile = UserProfile.makeNew()
+        saveProfile()
+        // Explicitly clear Keychain keys (saveProfile only deletes when value is nil)
+        KeychainHelper.delete(key: "clarity_user_name")
+        KeychainHelper.delete(key: "clarity_therapist_name")
+        KeychainHelper.delete(key: "clarity_notes")
+
+        // Reset progress stores
+        ProgressTracker.resetAllProgress()
+        UserProgressStore.shared.resetAttempts()
+        AdaptiveDifficultyStore.shared.resetAll()
+
+        // Clear UserDefaults keys
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "CogniLink_ExercisePlays")
+        defaults.removeObject(forKey: "CogniLink_AttemptedExercises")
+        defaults.removeObject(forKey: "CogniLink_AttemptedTasksCount")
+        defaults.removeObject(forKey: "CogniLink_CompletedExercises")
+        defaults.removeObject(forKey: ResearchExportManager.sessionLogKey)
+        defaults.removeObject(forKey: "clarity_notifications_enabled")
+        defaults.removeObject(forKey: "clarity_notification_time_hour")
+        defaults.removeObject(forKey: "clarity_notification_time_minute")
+        defaults.removeObject(forKey: "clarity_streak_notifications_enabled")
+        defaults.removeObject(forKey: "clarity_onboarding_complete")
+        defaults.removeObject(forKey: "clarity_baseline_completed")
+        defaults.removeObject(forKey: "clarity_weekly_goal")
+        defaults.removeObject(forKey: "tvSoundEnabled")
+
+        // Clear all clarity_keyboard_tip_shown_* and clarity_recent_* keys
+        let allKeys = defaults.dictionaryRepresentation().keys
+        allKeys.filter { $0.hasPrefix("clarity_keyboard_tip_shown_") || $0.hasPrefix("clarity_recent_") }
+               .forEach { defaults.removeObject(forKey: $0) }
+    }
 }
 
 // MARK: - Keychain Helper
