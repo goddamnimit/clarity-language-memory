@@ -1,337 +1,243 @@
 #if os(tvOS)
 import SwiftUI
 
-// MARK: - Focus tag
-
-private enum SeqFocus: Hashable {
-    case left(Int)
-    case right(Int)
-    case check
-}
-
-// MARK: - TVSequencingView
-
 struct TVSequencingView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
 
-    @FocusState private var focus: SeqFocus?
-    @State private var shuffledSteps: [String] = []
-    @State private var pickedUp: String? = nil
-    @State private var slots: [String?] = []
+    @FocusState private var focusedIndex: Int?
+    @State private var steps: [String] = []
+    @State private var liftedIndex: Int? = nil
     @State private var hasChecked = false
-    @State private var slotResults: [Bool] = []
+    @State private var correctStates: [Bool]? = nil
+    @State private var showHint = false
 
-    private var correctSteps: [String] {
-        item.correctAnswer.components(separatedBy: " | ")
+    private static var hasShownHintThisSession = false
+
+    static func resetHint() {
+        hasShownHintThisSession = false
     }
 
-    private var allSlotsFilled: Bool {
-        !slots.isEmpty && slots.allSatisfy { $0 != nil }
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            // Question prompt
+        VStack(spacing: 24) {
+            // Hint Banner
+            if showHint {
+                Text("Select a step, then select where it goes")
+                    .font(.system(size: 28, weight: .semibold, design: .rounded))
+                    .foregroundColor(Color(hex: "FF9500"))
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 32)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color(hex: "FF9500").opacity(0.15))
+                    )
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            }
+
+            // Prompt
             Text(item.prompt)
-                .font(.system(size: 44, weight: .bold, design: .rounded))
+                .font(.system(size: 42, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
-                .multilineTextAlignment(.leading)
-                .lineLimit(3)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 80)
+                .frame(maxHeight: 120)
 
-            // Two-column layout: left tiles | right drop zones
-            HStack(alignment: .top, spacing: 60) {
-                // LEFT: shuffled step tiles
-                VStack(alignment: .leading, spacing: 14) {
-                    Text("Steps (shuffled)")
-                        .font(.system(size: 28, weight: .light))
-                        .foregroundColor(Color.white.opacity(0.45))
-
-                    ForEach(shuffledSteps.indices, id: \.self) { i in
-                        let step = shuffledSteps[i]
-                        Button { handleLeftTap(step) } label: {
-                            LeftStepTile(
-                                letter: stepLetter(i),
-                                text: step,
-                                isPickedUp: pickedUp == step,
-                                isPlaced: slots.contains(where: { $0 == step })
-                            )
+            // Steps List
+            ScrollView {
+                VStack(spacing: 20) {
+                    ForEach(steps.indices, id: \.self) { index in
+                        Button {
+                            handleSelection(at: index)
+                        } label: {
+                            stepTile(at: index)
                         }
                         .buttonStyle(.plain)
-                        .focused($focus, equals: .left(i))
+                        .focused($focusedIndex, equals: index)
                         .disabled(hasChecked)
                     }
-                }
-                .frame(maxWidth: .infinity)
 
-                // RIGHT: ordered drop zones
-                VStack(alignment: .leading, spacing: 14) {
-                    Text("Put in order")
-                        .font(.system(size: 28, weight: .light))
-                        .foregroundColor(Color.white.opacity(0.45))
-
-                    ForEach(slots.indices, id: \.self) { i in
-                        Button { handleRightTap(i) } label: {
-                            DropZone(
-                                stepNumber: i + 1,
-                                content: slots[i],
-                                hasPickedUp: pickedUp != nil,
-                                hasChecked: hasChecked,
-                                isCorrect: slotResult(at: i)
-                            )
+                    if !hasChecked {
+                        Button {
+                            checkAnswer()
+                        } label: {
+                            submitButton
                         }
                         .buttonStyle(.plain)
-                        .focused($focus, equals: .right(i))
-                        .disabled(hasChecked)
+                        .focused($focusedIndex, equals: steps.count)
+                        .padding(.top, 20)
                     }
                 }
-                .frame(maxWidth: .infinity)
-            }
-
-            // Check Answer — amber pill, only when all zones filled
-            if allSlotsFilled && !hasChecked {
-                HStack {
-                    Spacer()
-                    Button { checkAnswer() } label: { CheckAnswerButton() }
-                        .buttonStyle(.plain)
-                        .focused($focus, equals: .check)
-                    Spacer()
-                }
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .padding(.vertical, 20)
+                .padding(.horizontal, 100)
             }
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         .onAppear {
-            shuffledSteps = item.options.shuffled()
-            slots = Array(repeating: nil, count: correctSteps.count)
-            focus = .left(0)
-        }
-    }
-
-    // MARK: - Helpers
-
-    private func stepLetter(_ index: Int) -> String {
-        guard index < 26 else { return "\(index + 1)" }
-        return String(UnicodeScalar(UInt32(65 + index))!)
-    }
-
-    private func slotResult(at index: Int) -> Bool? {
-        guard hasChecked, index < slotResults.count else { return nil }
-        return slotResults[index]
-    }
-
-    // MARK: - Interaction
-
-    private func handleLeftTap(_ step: String) {
-        if pickedUp == step {
-            // Cancel pickup
-            pickedUp = nil
-            return
-        }
-        // Remove from any slot if already placed
-        if let idx = slots.firstIndex(where: { $0 == step }) {
-            withAnimation(.spring(response: 0.25, dampingFraction: 0.8)) {
-                slots[idx] = nil
+            steps = item.options.shuffled()
+            focusedIndex = 0
+            if !TVSequencingView.hasShownHintThisSession {
+                showHint = true
             }
         }
-        pickedUp = step
+        // Menu button cancels the lift state without dismissing if a tile is lifted
+        .onExitCommand(perform: liftedIndex != nil ? { liftedIndex = nil } : nil)
     }
 
-    private func handleRightTap(_ index: Int) {
-        guard let held = pickedUp else {
-            // Nothing in hand — pick up from this zone
-            if let content = slots[index] {
-                withAnimation(.spring(response: 0.25, dampingFraction: 0.8)) {
-                    slots[index] = nil
+    @ViewBuilder
+    private func stepTile(at index: Int) -> some View {
+        let isLifted = liftedIndex == index
+        let isFocused = focusedIndex == index
+        let text = steps[index]
+        let state = stepState(at: index)
+
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(tileBackground(isFocused: isFocused, isLifted: isLifted, state: state))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(borderColor(isFocused: isFocused, isLifted: isLifted, state: state), lineWidth: 3)
+                        .shadow(color: isFocused || isLifted ? Color(hex: "FF9500").opacity(0.6) : .clear, radius: 10)
+                )
+
+            HStack(spacing: 24) {
+                // Index Indicator
+                Text("\(index + 1)")
+                    .font(.system(size: 24, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .frame(width: 48, height: 48)
+                    .background(Color.white.opacity(0.2))
+                    .clipShape(Circle())
+
+                Text(text)
+                    .font(.system(size: 34, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.leading)
+
+                Spacer()
+
+                if let correctStates = correctStates {
+                    Image(systemName: correctStates[index] ? "checkmark.circle.fill" : "xmark.circle.fill")
+                        .font(.system(size: 48))
+                        .foregroundColor(Color.white.opacity(0.9))
                 }
-                pickedUp = content
             }
-            return
+            .padding(.horizontal, 32)
         }
-        // Place or swap
-        let displaced = slots[index]
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-            slots[index] = held
+        .frame(height: 110)
+        .scaleEffect(isLifted ? 1.08 : (isFocused ? 1.04 : 1.0))
+        .opacity(state == .dimmed ? 0.35 : 1.0)
+        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isLifted)
+        .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+
+    private var submitButton: some View {
+        let isFocused = focusedIndex == steps.count
+        return Text("Submit")
+            .font(.system(size: 36, weight: .bold, design: .rounded))
+            .foregroundColor(.white)
+            .padding(.horizontal, 80)
+            .padding(.vertical, 20)
+            .background(
+                Capsule().fill(
+                    isFocused ? Color(hex: "FF9500") : Color(hex: "FF9500").opacity(0.7)
+                )
+            )
+            .scaleEffect(isFocused ? 1.06 : 1.0)
+            .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+
+    private func handleSelection(at index: Int) {
+        // Dismiss hint on first action
+        if showHint {
+            withAnimation {
+                showHint = false
+                TVSequencingView.hasShownHintThisSession = true
+            }
         }
-        pickedUp = displaced  // nil → placement done; non-nil → carry displaced tile
+
+        if let lifted = liftedIndex {
+            if lifted == index {
+                liftedIndex = nil
+            } else {
+                // Swap steps
+                steps.swapAt(lifted, index)
+                liftedIndex = nil
+            }
+        } else {
+            liftedIndex = index
+        }
     }
 
     private func checkAnswer() {
-        let results = slots.indices.map { i -> Bool in
-            guard let step = slots[i], i < correctSteps.count else { return false }
-            return step == correctSteps[i]
+        hasChecked = true
+        
+        let patientOrder = steps.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: " | ")
+        let expectedOrder = item.correctAnswer.components(separatedBy: " | ").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: " | ")
+        let allCorrect = patientOrder.lowercased() == expectedOrder.lowercased()
+
+        let correctSteps = item.correctAnswer.components(separatedBy: " | ").map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
+        var states: [Bool] = []
+        for i in 0..<steps.count {
+            let stepText = steps[i].trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+            if i < correctSteps.count {
+                states.append(stepText == correctSteps[i])
+            } else {
+                states.append(false)
+            }
         }
-        slotResults = results
-        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-            hasChecked = true
-        }
-        focus = nil
-        let allCorrect = results.allSatisfy { $0 }
+        correctStates = states
+
+        TVSoundManager.play(allCorrect ? .correct : .wrong)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             onAnswered(allCorrect)
         }
     }
+
+    private enum TileVisualState {
+        case idle, correct, wrong, dimmed
+    }
+
+    private func stepState(at index: Int) -> TileVisualState {
+        guard hasChecked, let correctStates = correctStates else { return .idle }
+        if correctStates[index] { return .correct }
+        return .wrong
+    }
+
+    private func tileBackground(isFocused: Bool, isLifted: Bool, state: TileVisualState) -> Color {
+        if isLifted { return Color(hex: "FF9500").opacity(0.3) }
+        switch state {
+        case .idle:    return isFocused ? Color(hex: "3D3D60") : Color(hex: "2D2D44")
+        case .correct: return Color(hex: "2ECC71")
+        case .wrong:   return Color(hex: "E74C3C")
+        case .dimmed:  return Color(hex: "2D2D44")
+        }
+    }
+
+    private func borderColor(isFocused: Bool, isLifted: Bool, state: TileVisualState) -> Color {
+        if isLifted { return Color(hex: "FF9500") }
+        guard state == .idle else { return .clear }
+        return isFocused ? .white : Color(hex: "FF9500").opacity(0.5)
+    }
 }
 
-// MARK: - LeftStepTile
+// MARK: - Hex Color Helper
 
-private struct LeftStepTile: View {
-    let letter: String
-    let text: String
-    let isPickedUp: Bool
-    let isPlaced: Bool
-
-    @Environment(\.isFocused) private var isFocused
-    @State private var pulseOpacity: Double = 1.0
-
-    var body: some View {
-        HStack(spacing: 16) {
-            Text(letter)
-                .font(.system(size: 22, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
-                .frame(width: 44, height: 44)
-                .background(isPickedUp ? Color.orange : Color.white.opacity(0.18))
-                .clipShape(Circle())
-
-            Text(text)
-                .font(.system(size: 32, weight: .bold, design: .rounded))
-                .foregroundColor(isPlaced && !isPickedUp ? Color.white.opacity(0.35) : .white)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-
-            Spacer()
-        }
-        .padding(.horizontal, 24)
-        .frame(maxWidth: .infinity)
-        .frame(height: 100)
-        .background(tileBg)
-        .cornerRadius(16)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(
-                    isPickedUp ? Color.orange : (isFocused ? Color.white.opacity(0.6) : Color.clear),
-                    lineWidth: 3
-                )
-                .opacity(isPickedUp ? pulseOpacity : 1.0)
+fileprivate extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        self.init(
+            red:   Double((int >> 16) & 0xFF) / 255,
+            green: Double((int >> 8)  & 0xFF) / 255,
+            blue:  Double( int        & 0xFF) / 255
         )
-        .scaleEffect(isPickedUp ? 1.1 : (isFocused ? 1.04 : 1.0))
-        .opacity(isPlaced && !isPickedUp ? 0.5 : 1.0)
-        .animation(.easeInOut(duration: 0.15), value: isFocused)
-        .animation(.spring(response: 0.25, dampingFraction: 0.7), value: isPickedUp)
-        .onChange(of: isPickedUp) {
-            if isPickedUp {
-                pulseOpacity = 1.0
-                withAnimation(.easeInOut(duration: 0.65).repeatForever(autoreverses: true)) {
-                    pulseOpacity = 0.25
-                }
-            } else {
-                withAnimation(.easeInOut(duration: 0.2)) { pulseOpacity = 1.0 }
-            }
-        }
-    }
-
-    private var tileBg: Color {
-        if isPickedUp { return Color.orange.opacity(0.2) }
-        if isFocused  { return Color(red: 0.24, green: 0.24, blue: 0.38) }
-        return Color(red: 0.18, green: 0.18, blue: 0.27)
-    }
-}
-
-// MARK: - DropZone
-
-private struct DropZone: View {
-    let stepNumber: Int
-    let content: String?
-    let hasPickedUp: Bool
-    let hasChecked: Bool
-    let isCorrect: Bool?
-
-    @Environment(\.isFocused) private var isFocused
-
-    var body: some View {
-        ZStack(alignment: .leading) {
-            if let step = content {
-                // Filled zone
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(filledBg)
-                HStack(spacing: 16) {
-                    Text("\(stepNumber)")
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(.white)
-                        .frame(width: 44, height: 44)
-                        .background(badgeBg)
-                        .clipShape(Circle())
-                    Text(step)
-                        .font(.system(size: 32, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
-                        .lineLimit(2)
-                    Spacer()
-                    if hasChecked {
-                        Image(systemName: isCorrect == true ? "checkmark.circle.fill" : "xmark.circle.fill")
-                            .font(.system(size: 36))
-                            .foregroundColor(Color.white.opacity(0.9))
-                            .transition(.scale.combined(with: .opacity))
-                    }
-                }
-                .padding(.horizontal, 24)
-            } else {
-                // Empty zone — dashed border
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(emptyBg)
-                RoundedRectangle(cornerRadius: 16)
-                    .strokeBorder(style: StrokeStyle(lineWidth: 2, dash: [12, 6]))
-                    .foregroundColor(dashedBorderColor)
-                Text("Step \(stepNumber)")
-                    .font(.system(size: 28, weight: .light))
-                    .foregroundColor(Color.white.opacity(0.30))
-                    .padding(.horizontal, 24)
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height: 100)
-        .scaleEffect(isFocused && (hasPickedUp || content != nil) ? 1.04 : 1.0)
-        .animation(.easeInOut(duration: 0.15), value: isFocused)
-    }
-
-    private var filledBg: Color {
-        if hasChecked {
-            if isCorrect == true  { return Color(red: 0.12, green: 0.55, blue: 0.30) }
-            if isCorrect == false { return Color(red: 0.70, green: 0.18, blue: 0.14) }
-        }
-        return isFocused ? Color(red: 0.24, green: 0.24, blue: 0.38)
-                         : Color(red: 0.18, green: 0.18, blue: 0.27)
-    }
-
-    private var badgeBg: Color {
-        if hasChecked {
-            if isCorrect == true  { return Color.green.opacity(0.35) }
-            if isCorrect == false { return Color.red.opacity(0.35) }
-        }
-        return Color.white.opacity(0.2)
-    }
-
-    private var emptyBg: Color {
-        isFocused && hasPickedUp ? Color.orange.opacity(0.08) : Color.white.opacity(0.04)
-    }
-
-    private var dashedBorderColor: Color {
-        isFocused && hasPickedUp ? Color.orange.opacity(0.7) : Color.white.opacity(0.25)
-    }
-}
-
-// MARK: - CheckAnswerButton
-
-private struct CheckAnswerButton: View {
-    @Environment(\.isFocused) private var isFocused
-
-    var body: some View {
-        Text("Check Answer")
-            .font(.system(size: 36, weight: .bold, design: .rounded))
-            .foregroundColor(.white)
-            .padding(.horizontal, 80)
-            .padding(.vertical, 24)
-            .background(Capsule().fill(isFocused ? Color.orange : Color.orange.opacity(0.7)))
-            .scaleEffect(isFocused ? 1.08 : 1.0)
-            .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }
 #endif

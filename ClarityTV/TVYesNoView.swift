@@ -1,25 +1,26 @@
 #if os(tvOS)
 import SwiftUI
 
-struct TVCategoryCrossOutView: View {
+struct TVYesNoView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
 
-    @State private var shuffledOptions: [String] = []
+    @State private var yesNoOptions: [String] = []
 
     var body: some View {
         VStack(spacing: 0) {
-            if !shuffledOptions.isEmpty {
+            if !yesNoOptions.isEmpty {
                 TVOptionGridView(
                     prompt: item.prompt,
-                    options: shuffledOptions,
+                    options: yesNoOptions,
                     correctAnswer: item.correctAnswer,
                     onAnswered: onAnswered
                 )
             }
         }
         .onAppear {
-            shuffledOptions = item.options.shuffled()
+            let yesOnLeft = Bool.random()
+            yesNoOptions = yesOnLeft ? ["Yes", "No"] : ["No", "Yes"]
         }
     }
 }

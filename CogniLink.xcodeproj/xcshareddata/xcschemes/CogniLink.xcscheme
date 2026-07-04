@@ -37,6 +37,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "096B04062FCD05DC004A96A3"
                BuildableName = "CogniLinkTests.xctest"
+               BlueprintName = "CogniLinkTests"
                ReferencedContainer = "container:CogniLink.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -47,6 +48,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "096B04102FCD05DC004A96A3"
                BuildableName = "CogniLinkUITests.xctest"
+               BlueprintName = "CogniLinkUITests"
                ReferencedContainer = "container:CogniLink.xcodeproj">
             </BuildableReference>
          </TestableReference>

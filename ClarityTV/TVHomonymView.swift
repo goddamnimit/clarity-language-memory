@@ -1,7 +1,7 @@
 #if os(tvOS)
 import SwiftUI
 
-struct TVCategoryCrossOutView: View {
+struct TVHomonymView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
 
@@ -19,7 +19,7 @@ struct TVCategoryCrossOutView: View {
             }
         }
         .onAppear {
-            shuffledOptions = item.options.shuffled()
+            shuffledOptions = Array(item.options.shuffled().prefix(4))
         }
     }
 }

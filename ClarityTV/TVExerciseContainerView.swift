@@ -121,11 +121,20 @@ struct TVExerciseContainerView: View {
             // Exercise type dispatch
             Group {
                 switch exercise.type {
-                case .multipleChoice, .sentenceCompletion, .analogyChoice,
-                     .homonym, .yesNo, .factOrOpinion, .matching, .comparison, .minimalPairs:
+                case .multipleChoice, .matching, .comparison, .minimalPairs:
                     TVMultipleChoiceView(item: currentItem, exerciseType: exercise.type, onAnswered: handleAnswer)
                 case .categoryCrossOut:
                     TVCategoryCrossOutView(item: currentItem, onAnswered: handleAnswer)
+                case .sentenceCompletion:
+                    TVSentenceCompletionView(item: currentItem, onAnswered: handleAnswer)
+                case .analogyChoice:
+                    TVAnalogyChoiceView(item: currentItem, onAnswered: handleAnswer)
+                case .homonym:
+                    TVHomonymView(item: currentItem, onAnswered: handleAnswer)
+                case .yesNo:
+                    TVYesNoView(item: currentItem, onAnswered: handleAnswer)
+                case .factOrOpinion:
+                    TVFactOrOpinionView(item: currentItem, onAnswered: handleAnswer)
                 case .sequencing:
                     TVSequencingView(item: currentItem, onAnswered: handleAnswer)
                 case .openEnded:
@@ -246,6 +255,7 @@ struct TVExerciseContainerView: View {
     }
 
     private func initializeSession(exercise: Exercise) {
+        TVSequencingView.resetHint()
         if let pool = questionPool, !pool.isEmpty {
             sessionItems = pool
         } else {
