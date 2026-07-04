@@ -4,7 +4,7 @@ import SwiftUI
 struct ClarityTVApp: App {
     var body: some Scene {
         WindowGroup {
-            TVHomeView()
+            TVTabView()
         }
     }
 }

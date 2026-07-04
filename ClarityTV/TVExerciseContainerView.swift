@@ -9,6 +9,7 @@ struct TVExerciseContainerView: View {
     let language: AppLanguage
     var difficulty: Difficulty? = nil
     var questionPool: [ExerciseItem]? = nil
+    var targetExercise: Exercise? = nil
     var onSessionComplete: ((Int) -> Void)? = nil
 
     @AppStorage("tvSpeechEnabled") private var speechEnabled: Bool = false
@@ -235,6 +236,11 @@ struct TVExerciseContainerView: View {
     }
 
     private func pickExerciseAndInit() {
+        if let target = targetExercise {
+            currentExercise = target
+            initializeSession(exercise: target)
+            return
+        }
         let exercises = languageManager.exercisesForSection(section)
         // When a pool is injected, restrict dispatch to the TVMultipleChoiceView
         // family so the exercise title/type shown always matches how items render.
