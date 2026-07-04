@@ -243,21 +243,21 @@ struct JapaneseCognitionExerciseData {
         type: .multipleChoice,
         difficulty: .medium,
         items: [
-            ExerciseItem(id: UUID(), prompt: "田中さんは月曜日に魚屋で鮭を買いました。火曜日に調理しました。何を買いましたか？", options: ["鮭", "マグロ", "鶏肉", "豆腐"], correctAnswer: "鮭", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "山本さんは春に桜の花見をしました。友人5人と公園で弁当を食べました。何人で行きましたか？", options: ["3人", "4人", "5人", "6人"], correctAnswer: "6人", explanation: "山本さんを含めると6人"),
-            ExerciseItem(id: UUID(), prompt: "鈴木さんは毎朝6時に起きて緑茶を飲みます。水曜日の朝、緑茶がなかったのでお湯だけ飲みました。普段何を飲みますか？", options: ["コーヒー", "緑茶", "牛乳", "ジュース"], correctAnswer: "緑茶", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "中村さんは図書館で本を3冊借りました。1冊は料理本、1冊は歴史本、1冊は詩集です。料理本は何冊目ですか？", options: ["2冊目", "1冊目", "3冊目", "4冊目"], correctAnswer: "1冊目", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "渡辺さんは木曜日の午後3時に病院に行きました。待合室で1時間待ちました。診察が始まったのは何時ですか？", options: ["午後2時", "午後3時", "午後4時", "午後5時"], correctAnswer: "午後4時", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "佐藤さんは孫と一緒に公園に行きました。孫は8歳の男の子です。孫は何歳ですか？", options: ["6歳", "7歳", "8歳", "9歳"], correctAnswer: "8歳", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "伊藤さんはお正月に着物を着て初詣に行きました。神社でお守りを買いました。どこに行きましたか？", options: ["お寺", "神社", "図書館", "公園"], correctAnswer: "神社", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "加藤さんは毎週土曜日に書道教室に通っています。先生に褒められました。何曜日に通っていますか？", options: ["金曜日", "土曜日", "日曜日", "月曜日"], correctAnswer: "土曜日", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "吉田さんはスーパーでりんごを5個、みかんを3個買いました。合計いくつ買いましたか？", options: ["6個", "7個", "8個", "9個"], correctAnswer: "8個", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "岡田さんは娘の誕生日に花束とケーキを贈りました。娘は何歳になったか書いていませんが、プレゼントは何ですか？", options: ["おもちゃと本", "花束とケーキ", "着物と靴", "財布と時計"], correctAnswer: "花束とケーキ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "小林さんは金曜日に映画館に行き、3時間の映画を見ました。映画が始まったのが午後2時なら、終わったのは何時ですか？", options: ["午後4時", "午後5時", "午後6時", "午後7時"], correctAnswer: "午後5時", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "斎藤さんは冬休みに大阪から東京まで新幹線で旅行しました。東京で2泊しました。帰りも新幹線でした。東京で何泊しましたか？", options: ["1泊", "2泊", "3泊", "4泊"], correctAnswer: "2泊", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "松本さんは料理教室でみそ汁、煮魚、ご飯を作りました。全部で何品作りましたか？", options: ["2品", "3品", "4品", "5品"], correctAnswer: "3品", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "橋本さんは孫のためにセーターを編んでいます。赤い毛糸を使っています。何色のセーターですか？", options: ["青", "緑", "赤", "黄色"], correctAnswer: "赤", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "清水さんは朝8時に家を出て、徒歩15分でバス停に到着しました。バス停に着いたのは何時ですか？", options: ["8時10分", "8時15分", "8時20分", "8時30分"], correctAnswer: "8時15分", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "何を買いましたか？", options: ["鮭", "マグロ", "鶏肉", "豆腐"], correctAnswer: "鮭", explanation: "", passage: "田中さんは月曜日に魚屋で鮭を買いました。火曜日に調理しました。"),
+            ExerciseItem(id: UUID(), prompt: "何人で行きましたか？", options: ["3人", "4人", "5人", "6人"], correctAnswer: "6人", explanation: "山本さんを含めると6人", passage: "山本さんは春に桜の花見をしました。友人5人と公園で弁当を食べました。"),
+            ExerciseItem(id: UUID(), prompt: "普段何を飲みますか？", options: ["コーヒー", "緑茶", "牛乳", "ジュース"], correctAnswer: "緑茶", explanation: "", passage: "鈴木さんは毎朝6時に起きて緑茶を飲みます。水曜日の朝、緑茶がなかったのでお湯だけ飲みました。"),
+            ExerciseItem(id: UUID(), prompt: "料理本は何冊目ですか？", options: ["2冊目", "1冊目", "3冊目", "4冊目"], correctAnswer: "1冊目", explanation: "", passage: "中村さんは図書館で本を3冊借りました。1冊は料理本、1冊は歴史本、1冊は詩集です。"),
+            ExerciseItem(id: UUID(), prompt: "診察が始まったのは何時ですか？", options: ["午後2時", "午後3時", "午後4時", "午後5時"], correctAnswer: "午後4時", explanation: "", passage: "渡辺さんは木曜日の午後3時に病院に行きました。待合室で1時間待ちました。"),
+            ExerciseItem(id: UUID(), prompt: "孫は何歳ですか？", options: ["6歳", "7歳", "8歳", "9歳"], correctAnswer: "8歳", explanation: "", passage: "佐藤さんは孫と一緒に公園に行きました。孫は8歳の男の子です。"),
+            ExerciseItem(id: UUID(), prompt: "どこに行きましたか？", options: ["お寺", "神社", "図書館", "公園"], correctAnswer: "神社", explanation: "", passage: "伊藤さんはお正月に着物を着て初詣に行きました。神社でお守りを買いました。"),
+            ExerciseItem(id: UUID(), prompt: "何曜日に通っていますか？", options: ["金曜日", "土曜日", "日曜日", "月曜日"], correctAnswer: "土曜日", explanation: "", passage: "加藤さんは毎週土曜日に書道教室に通っています。先生に褒められました。"),
+            ExerciseItem(id: UUID(), prompt: "合計いくつ買いましたか？", options: ["6個", "7個", "8個", "9個"], correctAnswer: "8個", explanation: "", passage: "吉田さんはスーパーでりんごを5個、みかんを3個買いました。"),
+            ExerciseItem(id: UUID(), prompt: "娘は何歳になったか書いていませんが、プレゼントは何ですか？", options: ["おもちゃと本", "花束とケーキ", "着物と靴", "財布と時計"], correctAnswer: "花束とケーキ", explanation: "", passage: "岡田さんは娘の誕生日に花束とケーキを贈りました。"),
+            ExerciseItem(id: UUID(), prompt: "映画が始まったのが午後2時なら、終わったのは何時ですか？", options: ["午後4時", "午後5時", "午後6時", "午後7時"], correctAnswer: "午後5時", explanation: "", passage: "小林さんは金曜日に映画館に行き、3時間の映画を見ました。"),
+            ExerciseItem(id: UUID(), prompt: "東京で何泊しましたか？", options: ["1泊", "2泊", "3泊", "4泊"], correctAnswer: "2泊", explanation: "", passage: "斎藤さんは冬休みに大阪から東京まで新幹線で旅行しました。東京で2泊しました。帰りも新幹線でした。"),
+            ExerciseItem(id: UUID(), prompt: "全部で何品作りましたか？", options: ["2品", "3品", "4品", "5品"], correctAnswer: "3品", explanation: "", passage: "松本さんは料理教室でみそ汁、煮魚、ご飯を作りました。"),
+            ExerciseItem(id: UUID(), prompt: "何色のセーターですか？", options: ["青", "緑", "赤", "黄色"], correctAnswer: "赤", explanation: "", passage: "橋本さんは孫のためにセーターを編んでいます。赤い毛糸を使っています。"),
+            ExerciseItem(id: UUID(), prompt: "バス停に着いたのは何時ですか？", options: ["8時10分", "8時15分", "8時20分", "8時30分"], correctAnswer: "8時15分", explanation: "", passage: "清水さんは朝8時に家を出て、徒歩15分でバス停に到着しました。")
         ]
     )
 

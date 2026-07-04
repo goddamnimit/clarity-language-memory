@@ -183,21 +183,21 @@ struct ChineseNewExercisesData {
         type: .multipleChoice,
         difficulty: .medium,
         items: [
-            ExerciseItem(prompt: "玛丽亚去超市买牛奶和面包。她把钱包忘在厨房的柜台上。玛丽亚把什么落在家了？", options: ["她的钱包", "她的钥匙", "她的购物清单", "她的手机"], correctAnswer: "她的钱包", explanation: "故事里写到，玛丽亚把她的钱包忘在了厨房的柜台上。"),
-            ExerciseItem(prompt: "托马斯星期六早起去钓鱼。他钓到了一条大鳟鱼，但因为鱼太小，他不得不把它放了。托马斯钓到了什么鱼？", options: ["鳟鱼", "三文鱼", "鲈鱼", "鲶鱼"], correctAnswer: "鳟鱼", explanation: "故事写到他钓到了一条大鳟鱼。"),
-            ExerciseItem(prompt: "亚瑟把他的蓝色汽车停在了一棵阴凉的橡树下。等他回来时，发现车上落满了黄色的叶子。亚瑟的汽车是什么颜色？", options: ["蓝色", "黄色", "红色", "绿色"], correctAnswer: "蓝色", explanation: "故事里说明亚瑟停的是他的蓝色汽车。"),
-            ExerciseItem(prompt: "琳达给女儿的生日派对烤了一个巧克力蛋糕。她在蛋糕上插了十支红色的蜡烛。琳达在蛋糕上插了几支蜡烛？", options: ["十支", "五支", "八支", "十二支"], correctAnswer: "十支", explanation: "故事里说她插了十支红色的蜡烛。"),
-            ExerciseItem(prompt: "罗伯特去邮局给他在芝加哥的弟弟寄一个包裹。营业员告诉他包裹会在星期二寄达。罗伯特的弟弟住在哪里？", options: ["芝加哥", "纽约", "波士顿", "迈阿密"], correctAnswer: "芝加哥", explanation: "故事明确说明罗伯特是给他在芝加哥的弟弟寄包裹。"),
-            ExerciseItem(prompt: "萨拉昨天买了一双新的跑步鞋。鞋子是亮绿色，带白色条纹的。萨拉的新跑步鞋是什么颜色？", options: ["亮绿色", "蓝色", "红色", "黑色"], correctAnswer: "亮绿色", explanation: "故事描述这双鞋子是亮绿色的。"),
-            ExerciseItem(prompt: "詹姆斯在公园散步时突然下起了雨。他撑开一把黄色雨伞挡雨。詹姆斯用的雨伞是什么颜色？", options: ["黄色", "红色", "蓝色", "黑色"], correctAnswer: "黄色", explanation: "故事写道，詹姆斯撑开了一把黄色雨伞。"),
-            ExerciseItem(prompt: "当地的面包店星期一停业整修。他们计划于星期二早上六点重新营业。面包店星期几关门？", options: ["星期一", "星期二", "星期三", "星期日"], correctAnswer: "星期一", explanation: "故事提到面包店在星期一因为整修而关门。"),
-            ExerciseItem(prompt: "安娜打电话叫了水管工，因为她家的厨房水槽漏水了。水管工在一小时内赶到并修好了水管。安娜为什么叫水管工？", options: ["水槽漏水", "炉灶坏了", "灯泡坏了", "门锁住了"], correctAnswer: "水槽漏水", explanation: "故事中说她叫水管工是因为厨房水槽漏水了。"),
-            ExerciseItem(prompt: "大卫带着他的狗麦克斯绕着街区散步。麦克斯看到一只松鼠，并对着它大声叫唤。大卫的狗叫什么名字？", options: ["麦克斯", "巴迪", "查理", "洛奇"], correctAnswer: "麦克斯", explanation: "故事里说大卫带着他的狗，麦克斯。"),
-            ExerciseItem(prompt: "海伦在做晚餐的蔬菜汤。她发现胡萝卜用完了，所以改用了土豆。海伦做汤时什么食材用完了？", options: ["胡萝卜", "土豆", "洋葱", "芹菜"], correctAnswer: "胡萝卜", explanation: "故事提到她发现胡萝卜用完了。"),
-            ExerciseItem(prompt: "彼得午餐点了一份培根披萨和一瓶汽水。总共花了十五美元。彼得的午餐花了多少钱？", options: ["十五美元", "十美元", "二十美元", "十二美元"], correctAnswer: "十五美元", explanation: "故事明确提到彼得的午餐总共花费十五美元。"),
-            ExerciseItem(prompt: "爱丽丝去图书馆借了一本关于园艺的书。她还借了一张关于历史的DVD。爱丽丝借的书是什么主题？", options: ["园艺", "历史", "烹饪", "旅行"], correctAnswer: "园艺", explanation: "故事指出，她去图书馆借了一本关于园艺的书。"),
-            ExerciseItem(prompt: "乔治早上乘火车去市中心参加面试。由于铁轨维护，他乘坐的火车晚点了十五分钟。火车为什么晚点？", options: ["铁轨维护", "暴风雨", "停电", "乘务员缺席"], correctAnswer: "铁轨维护", explanation: "故事中说火车晚点十五分钟是由于铁轨维护。"),
-            ExerciseItem(prompt: "南希去园艺中心买红玫瑰。玫瑰卖光了，于是她买了一些粉色康乃馨。南希最后买了什么花？", options: ["粉色康乃馨", "红玫瑰", "黄色郁金香", "白色百合"], correctAnswer: "粉色康乃馨", explanation: "故事提到她最后买了粉色康乃馨代替红玫瑰。")
+            ExerciseItem(prompt: "玛丽亚把什么落在家了？", options: ["她的钱包", "她的钥匙", "她的购物清单", "她的手机"], correctAnswer: "她的钱包", explanation: "故事里写到，玛丽亚把她的钱包忘在了厨房的柜台上。", passage: "玛丽亚去超市买牛奶和面包。她把钱包忘在厨房的柜台上。"),
+            ExerciseItem(prompt: "托马斯钓到了什么鱼？", options: ["鳟鱼", "三文鱼", "鲈鱼", "鲶鱼"], correctAnswer: "鳟鱼", explanation: "故事写到他钓到了一条大鳟鱼。", passage: "托马斯星期六早起去钓鱼。他钓到了一条大鳟鱼，但因为鱼太小，他不得不把它放了。"),
+            ExerciseItem(prompt: "亚瑟的汽车是什么颜色？", options: ["蓝色", "黄色", "红色", "绿色"], correctAnswer: "蓝色", explanation: "故事里说明亚瑟停的是他的蓝色汽车。", passage: "亚瑟把他的蓝色汽车停在了一棵阴凉的橡树下。等他回来时，发现车上落满了黄色的叶子。"),
+            ExerciseItem(prompt: "琳达在蛋糕上插了几支蜡烛？", options: ["十支", "五支", "八支", "十二支"], correctAnswer: "十支", explanation: "故事里说她插了十支红色的蜡烛。", passage: "琳达给女儿的生日派对烤了一个巧克力蛋糕。她在蛋糕上插了十支红色的蜡烛。"),
+            ExerciseItem(prompt: "罗伯特的弟弟住在哪里？", options: ["芝加哥", "纽约", "波士顿", "迈阿密"], correctAnswer: "芝加哥", explanation: "故事明确说明罗伯特是给他在芝加哥的弟弟寄包裹。", passage: "罗伯特去邮局给他在芝加哥的弟弟寄一个包裹。营业员告诉他包裹会在星期二寄达。"),
+            ExerciseItem(prompt: "萨拉的新跑步鞋是什么颜色？", options: ["亮绿色", "蓝色", "红色", "黑色"], correctAnswer: "亮绿色", explanation: "故事描述这双鞋子是亮绿色的。", passage: "萨拉昨天买了一双新的跑步鞋。鞋子是亮绿色，带白色条纹的。"),
+            ExerciseItem(prompt: "詹姆斯用的雨伞是什么颜色？", options: ["黄色", "红色", "蓝色", "黑色"], correctAnswer: "黄色", explanation: "故事写道，詹姆斯撑开了一把黄色雨伞。", passage: "詹姆斯在公园散步时突然下起了雨。他撑开一把黄色雨伞挡雨。"),
+            ExerciseItem(prompt: "面包店星期几关门？", options: ["星期一", "星期二", "星期三", "星期日"], correctAnswer: "星期一", explanation: "故事提到面包店在星期一因为整修而关门。", passage: "当地的面包店星期一停业整修。他们计划于星期二早上六点重新营业。"),
+            ExerciseItem(prompt: "安娜为什么叫水管工？", options: ["水槽漏水", "炉灶坏了", "灯泡坏了", "门锁住了"], correctAnswer: "水槽漏水", explanation: "故事中说她叫水管工是因为厨房水槽漏水了。", passage: "安娜打电话叫了水管工，因为她家的厨房水槽漏水了。水管工在一小时内赶到并修好了水管。"),
+            ExerciseItem(prompt: "大卫的狗叫什么名字？", options: ["麦克斯", "巴迪", "查理", "洛奇"], correctAnswer: "麦克斯", explanation: "故事里说大卫带着他的狗，麦克斯。", passage: "大卫带着他的狗麦克斯绕着街区散步。麦克斯看到一只松鼠，并对着它大声叫唤。"),
+            ExerciseItem(prompt: "海伦做汤时什么食材用完了？", options: ["胡萝卜", "土豆", "洋葱", "芹菜"], correctAnswer: "胡萝卜", explanation: "故事提到她发现胡萝卜用完了。", passage: "海伦在做晚餐的蔬菜汤。她发现胡萝卜用完了，所以改用了土豆。"),
+            ExerciseItem(prompt: "彼得的午餐花了多少钱？", options: ["十五美元", "十美元", "二十美元", "十二美元"], correctAnswer: "十五美元", explanation: "故事明确提到彼得的午餐总共花费十五美元。", passage: "彼得午餐点了一份培根披萨和一瓶汽水。总共花了十五美元。"),
+            ExerciseItem(prompt: "爱丽丝借的书是什么主题？", options: ["园艺", "历史", "烹饪", "旅行"], correctAnswer: "园艺", explanation: "故事指出，她去图书馆借了一本关于园艺的书。", passage: "爱丽丝去图书馆借了一本关于园艺的书。她还借了一张关于历史的DVD。"),
+            ExerciseItem(prompt: "火车为什么晚点？", options: ["铁轨维护", "暴风雨", "停电", "乘务员缺席"], correctAnswer: "铁轨维护", explanation: "故事中说火车晚点十五分钟是由于铁轨维护。", passage: "乔治早上乘火车去市中心参加面试。由于铁轨维护，他乘坐的火车晚点了十五分钟。"),
+            ExerciseItem(prompt: "南希最后买了什么花？", options: ["粉色康乃馨", "红玫瑰", "黄色郁金香", "白色百合"], correctAnswer: "粉色康乃馨", explanation: "故事提到她最后买了粉色康乃馨代替红玫瑰。", passage: "南希去园艺中心买红玫瑰。玫瑰卖光了，于是她买了一些粉色康乃馨。")
         ]
     )
 

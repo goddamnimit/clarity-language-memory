@@ -313,7 +313,7 @@ struct ExerciseContainerView: View {
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-        .background(Color.groupedBackground)
+        .appBackground()
         .onAppear {
             if sessionItems.isEmpty {
                 initializeSession()
@@ -380,7 +380,14 @@ struct ExerciseContainerView: View {
         let activeEx = getActiveExercise()
         let selected = activeEx.randomSession(excluding: recentIDs)
         sessionItems = selected.map { item in
-            ExerciseItem(id: item.id, prompt: item.prompt, options: item.options.shuffled(), correctAnswer: item.correctAnswer, explanation: item.explanation)
+            ExerciseItem(
+                id: item.id,
+                prompt: item.prompt,
+                options: item.options.shuffled(),
+                correctAnswer: item.correctAnswer,
+                explanation: item.explanation,
+                passage: item.passage
+            )
         }
         saveRecentIDs(sessionItems)
         currentIndex = 0

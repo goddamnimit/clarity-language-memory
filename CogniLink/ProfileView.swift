@@ -208,58 +208,75 @@ struct ProfileView: View {
                 .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                 .padding(.horizontal)
 
-                // MARK: 5. Language Selector (unchanged)
+                // MARK: 5. Language Selector (collapsible to avoid layout/scrolling fold issue)
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("🌐 Language / Idioma / भाषा")
-                        .font(.headline)
-                        .foregroundColor(.secondary)
-                        .padding(.horizontal)
-
-                    VStack(spacing: 12) {
-                        ForEach(AppLanguage.allCases) { language in
-                            Button(action: {
-                                withAnimation {
-                                    languageManager.currentLanguage = language
-                                }
-                                let nonLatin: [AppLanguage] = [.hindi, .gujarati, .chinese, .farsi]
-                                let tipKey = "clarity_keyboard_tip_shown_\(language.rawValue)"
-                                if nonLatin.contains(language) &&
-                                    !UserDefaults.standard.bool(forKey: tipKey) {
-                                    keyboardTipLanguage = language
-                                    showKeyboardTip = true
-                                    UserDefaults.standard.set(true, forKey: tipKey)
-                                }
-                            }) {
-                                HStack(spacing: 16) {
-                                    Text(language.flagEmoji)
-                                        .font(.system(size: 32))
-
-                                    Text(language.displayName)
-                                        .font(.system(size: 18, weight: .medium))
-                                        .foregroundColor(languageManager.currentLanguage == language ? .white : .primary)
-
-                                    Spacer()
-
-                                    if languageManager.currentLanguage == language {
-                                        Image(systemName: "checkmark")
-                                            .font(.system(size: 18, weight: .bold))
-                                            .foregroundColor(.white)
+                    DisclosureGroup {
+                        VStack(spacing: 12) {
+                            ForEach(AppLanguage.allCases) { language in
+                                Button(action: {
+                                    withAnimation {
+                                        languageManager.currentLanguage = language
                                     }
+                                    let nonLatin: [AppLanguage] = [.hindi, .gujarati, .chinese, .farsi]
+                                    let tipKey = "clarity_keyboard_tip_shown_\(language.rawValue)"
+                                    if nonLatin.contains(language) &&
+                                        !UserDefaults.standard.bool(forKey: tipKey) {
+                                        keyboardTipLanguage = language
+                                        showKeyboardTip = true
+                                        UserDefaults.standard.set(true, forKey: tipKey)
+                                    }
+                                }) {
+                                    HStack(spacing: 16) {
+                                        Text(language.flagEmoji)
+                                            .font(.system(size: 32))
+
+                                        Text(language.displayName)
+                                            .font(.system(size: 18, weight: .medium))
+                                            .foregroundColor(languageManager.currentLanguage == language ? .white : .primary)
+
+                                        Spacer()
+
+                                        if languageManager.currentLanguage == language {
+                                            Image(systemName: "checkmark")
+                                                .font(.system(size: 18, weight: .bold))
+                                                .foregroundColor(.white)
+                                        }
+                                    }
+                                    .padding(.horizontal, 16)
+                                    .frame(height: 60)
+                                    .frame(maxWidth: .infinity)
+                                    .background(
+                                        languageManager.currentLanguage == language
+                                            ? Color.accentColor
+                                            : Color.secondaryGroupedBackground
+                                    )
+                                    .cornerRadius(12)
+                                    .shadow(color: Color.black.opacity(0.05), radius: 2, x: 0, y: 1)
                                 }
-                                .padding(.horizontal, 16)
-                                .frame(height: 60)
-                                .frame(maxWidth: .infinity)
-                                .background(
-                                    languageManager.currentLanguage == language
-                                        ? Color.accentColor
-                                        : Color.secondaryGroupedBackground
-                                )
-                                .cornerRadius(12)
-                                .shadow(color: Color.black.opacity(0.05), radius: 2, x: 0, y: 1)
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
+                        .padding(.top, 8)
+                    } label: {
+                        HStack {
+                            Image(systemName: "globe")
+                                .font(.body)
+                                .foregroundColor(.accentColor)
+                            Text("Language / Idioma / भाषा")
+                                .font(.body)
+                                .foregroundColor(.primary)
+                            Spacer()
+                            Text(languageManager.currentLanguage.displayName)
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding()
+                        .frame(minHeight: 50)
+                        .background(Color.secondaryGroupedBackground)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                     }
+                    .accentColor(.secondary)
                     .padding(.horizontal)
 
                     VStack(alignment: .leading, spacing: 8) {
@@ -269,21 +286,9 @@ struct ProfileView: View {
                         Text("La app mostrará todos los ejercicios en el idioma seleccionado.")
                             .font(.footnote)
                             .foregroundColor(.secondary)
-                        Text("ऐप चयनित भाषा में सभी अभ्यास दिखाएगा।")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                        Text("એપ પસંદ કરેલી ભાષામાં બધી કસરત બતાવશે.")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                        Text("应用将以所选语言显示所有练习。")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                        Text("اپ همه تمرین‌ها را به زبان انتخابی نمایش می‌دهد.")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
                     }
                     .padding(.horizontal)
-                    .padding(.top, 8)
+                    .padding(.top, 4)
                 }
 
                 // MARK: 6. Achievements (unchanged)

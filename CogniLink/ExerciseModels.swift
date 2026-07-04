@@ -33,13 +33,15 @@ struct ExerciseItem: Identifiable, Equatable, Hashable {
     let options: [String]
     let correctAnswer: String
     let explanation: String
+    let passage: String?
     
-    init(id: UUID = UUID(), prompt: String, options: [String], correctAnswer: String, explanation: String = "") {
+    init(id: UUID = UUID(), prompt: String, options: [String], correctAnswer: String, explanation: String = "", passage: String? = nil) {
         self.id = id
         self.prompt = prompt
         self.options = options
         self.correctAnswer = correctAnswer
         self.explanation = explanation
+        self.passage = passage
     }
 }
 

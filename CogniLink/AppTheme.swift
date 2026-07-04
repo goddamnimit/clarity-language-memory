@@ -116,3 +116,46 @@ extension View {
         modifier(TVFocusModifier())
     }
 }
+
+/// A beautiful, calm, daily-rotating gradient background designed for low-contrast readability.
+struct AppBackgroundView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        let calendar = Calendar.current
+        let dayOfYear = calendar.ordinality(of: .day, in: .year, for: Date()) ?? 1
+        let index = dayOfYear % 5
+        
+        Group {
+            if colorScheme == .dark {
+                darkGradients[index]
+            } else {
+                lightGradients[index]
+            }
+        }
+        .ignoresSafeArea()
+    }
+    
+    private let lightGradients = [
+        LinearGradient(colors: [Color(red: 0.98, green: 0.96, blue: 0.95), Color(red: 0.94, green: 0.91, blue: 0.96)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.94, green: 0.97, blue: 0.98), Color(red: 0.91, green: 0.93, blue: 0.96)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.95, green: 0.97, blue: 0.95), Color(red: 0.91, green: 0.93, blue: 0.92)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.96, green: 0.95, blue: 0.98), Color(red: 0.92, green: 0.91, blue: 0.96)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.98, green: 0.97, blue: 0.94), Color(red: 0.94, green: 0.93, blue: 0.90)], startPoint: .topLeading, endPoint: .bottomTrailing)
+    ]
+    
+    private let darkGradients = [
+        LinearGradient(colors: [Color(red: 0.12, green: 0.10, blue: 0.12), Color(red: 0.08, green: 0.08, blue: 0.10)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.08, green: 0.12, blue: 0.14), Color(red: 0.06, green: 0.08, blue: 0.10)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.08, green: 0.12, blue: 0.10), Color(red: 0.06, green: 0.08, blue: 0.08)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.10, green: 0.08, blue: 0.14), Color(red: 0.06, green: 0.06, blue: 0.10)], startPoint: .topLeading, endPoint: .bottomTrailing),
+        LinearGradient(colors: [Color(red: 0.12, green: 0.11, blue: 0.08), Color(red: 0.08, green: 0.08, blue: 0.06)], startPoint: .topLeading, endPoint: .bottomTrailing)
+    ]
+}
+
+extension View {
+    /// Applies a premium, daily rotating gradient background with full safe area ignore.
+    func appBackground() -> some View {
+        self.background(AppBackgroundView())
+    }
+}

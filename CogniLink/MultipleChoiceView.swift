@@ -75,6 +75,27 @@ struct MultipleChoiceView: View {
     @ViewBuilder
     private var choiceContent: some View {
         VStack(alignment: .leading, spacing: 20) {
+            if let passage = item.passage {
+                VStack(alignment: .leading, spacing: 8) {
+                    ScrollView {
+                        Text(passage)
+                            .font(.body)
+                            .foregroundColor(.primary)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(14)
+                    }
+                    .frame(maxHeight: 180)
+                    .background(Color.secondaryGroupedBackground)
+                    .cornerRadius(12)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                    )
+                }
+                .padding(.bottom, 4)
+            }
+
             // Large question prompt text at top
             Text(item.prompt)
                 .font(.title3)

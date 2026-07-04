@@ -4,6 +4,7 @@ struct ContentView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @State private var selectedTab = 0
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "clarity_onboarding_complete")
+    @State private var hasResetTabOnLaunch = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -20,7 +21,7 @@ struct ContentView: View {
                 AllActivitiesView()
             }
             .tabItem {
-                Label(activitiesTabTitle, systemImage: "list.bullet.rectangle.fill")
+                Label(activitiesTabTitle, systemImage: "brain.head.profile")
             }
             .tag(1)
             
@@ -40,6 +41,10 @@ struct ContentView: View {
         }
         #if os(iOS)
         .onAppear {
+            if !hasResetTabOnLaunch {
+                selectedTab = 0
+                hasResetTabOnLaunch = true
+            }
             NotificationManager.shared.refreshPermissionStatus()
             NotificationManager.shared.rescheduleAll()
         }
@@ -256,6 +261,11 @@ struct HomeView: View {
                 loadSessionsCount()
                 refreshRecommendations()
                 refreshWeeklyGoal()
+                
+                // Clear any active exercise navigation destinations on launch
+                surpriseExercise = nil
+                sectionExercise = nil
+                recommendedExercise = nil
             }
             .navigationDestination(item: $surpriseExercise) { exercise in
                 ExerciseContainerView(exercise: exercise)
@@ -267,7 +277,7 @@ struct HomeView: View {
                 ExerciseContainerView(exercise: exercise)
             }
             .navigationTitle("Clarity")
-            .background(Color.groupedBackground)
+            .appBackground()
             .toolbar {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
