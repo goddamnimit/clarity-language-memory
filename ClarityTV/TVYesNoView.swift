@@ -7,6 +7,11 @@ struct TVYesNoView: View {
 
     @State private var yesNoOptions: [String] = []
 
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             if !yesNoOptions.isEmpty {
@@ -22,6 +27,7 @@ struct TVYesNoView: View {
             let yesOnLeft = Bool.random()
             yesNoOptions = yesOnLeft ? ["Yes", "No"] : ["No", "Yes"]
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 }
 #endif

@@ -43,6 +43,11 @@ struct TVMultipleChoiceView: View {
 
     private var options: [String] { Array(item.options.prefix(4)) }
 
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
+    }
+
     var body: some View {
         GeometryReader { geo in
             VStack(spacing: 0) {
@@ -97,6 +102,7 @@ struct TVMultipleChoiceView: View {
         .onAppear {
             focus = .tileA
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 
     // MARK: - Logic

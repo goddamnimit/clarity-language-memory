@@ -11,6 +11,11 @@ struct TVAnalogyChoiceView: View {
         formatAnalogyPrompt(item.prompt)
     }
 
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             if !shuffledOptions.isEmpty {
@@ -25,6 +30,7 @@ struct TVAnalogyChoiceView: View {
         .onAppear {
             shuffledOptions = Array(item.options.shuffled().prefix(4))
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 
     private func formatAnalogyPrompt(_ prompt: String) -> String {

@@ -7,6 +7,11 @@ struct TVFactOrOpinionView: View {
 
     @State private var factOrOpinionOptions: [String] = []
 
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             if !factOrOpinionOptions.isEmpty {
@@ -22,6 +27,7 @@ struct TVFactOrOpinionView: View {
             let factOnLeft = Bool.random()
             factOrOpinionOptions = factOnLeft ? ["Fact", "Opinion"] : ["Opinion", "Fact"]
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 }
 #endif

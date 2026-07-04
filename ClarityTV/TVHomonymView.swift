@@ -7,6 +7,11 @@ struct TVHomonymView: View {
 
     @State private var shuffledOptions: [String] = []
 
+    private var isRTL: Bool {
+        let currentLanguage = LanguageManager.shared.currentLanguage
+        return currentLanguage == .farsi || currentLanguage == .arabic
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             if !shuffledOptions.isEmpty {
@@ -21,6 +26,7 @@ struct TVHomonymView: View {
         .onAppear {
             shuffledOptions = Array(item.options.shuffled().prefix(4))
         }
+        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
     }
 }
 #endif

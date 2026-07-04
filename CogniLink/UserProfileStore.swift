@@ -177,48 +177,62 @@ class UserProfileStore: ObservableObject {
 
 // MARK: - Keychain Helper
 struct KeychainHelper {
+    // Shared across the CogniLink (iOS) and ClarityTV (tvOS) targets via the
+    // "com.nimitdesai.clarity.shared" Keychain Sharing group, so the caregiver
+    // PIN set on one platform gates Caregiver Mode on the other.
+    private static let sharedAccessGroupKeys: Set<String> = ["clarity_caregiver_pin"]
+    private static let sharedAccessGroup = "com.nimitdesai.clarity.shared"
+
+    private static func accessGroupAttributes(for key: String) -> [String: Any] {
+        guard sharedAccessGroupKeys.contains(key) else { return [:] }
+        return [kSecAttrAccessGroup as String: sharedAccessGroup]
+    }
+
     static func save(_ string: String, key: String) {
         guard let data = string.data(using: .utf8) else { return }
-        
-        let query: [String: Any] = [
+
+        var query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key,
             kSecValueData as String: data,
             kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly
         ]
-        
+        query.merge(accessGroupAttributes(for: key)) { _, new in new }
+
         // Delete any existing item first
         SecItemDelete(query as CFDictionary)
-        
+
         // Add new item
         let status = SecItemAdd(query as CFDictionary, nil)
         if status != errSecSuccess {
             print("[KeychainHelper] ERROR saving to Keychain for key \(key): \(status)")
         }
     }
-    
+
     static func load(key: String) -> String? {
-        let query: [String: Any] = [
+        var query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key,
             kSecReturnData as String: kCFBooleanTrue!,
             kSecMatchLimit as String: kSecMatchLimitOne
         ]
-        
+        query.merge(accessGroupAttributes(for: key)) { _, new in new }
+
         var dataTypeRef: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-        
+
         if status == errSecSuccess, let data = dataTypeRef as? Data {
             return String(data: data, encoding: .utf8)
         }
         return nil
     }
-    
+
     static func delete(key: String) {
-        let query: [String: Any] = [
+        var query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: key
         ]
+        query.merge(accessGroupAttributes(for: key)) { _, new in new }
         SecItemDelete(query as CFDictionary)
     }
 }
