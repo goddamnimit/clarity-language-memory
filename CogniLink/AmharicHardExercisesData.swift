@@ -1,136 +1,226 @@
 import Foundation
 
+/// Holds the 8 advanced Amharic exercises sourced from the Hard Exercises content library.
+/// Covers the Language and Cognition sections.
 struct AmharicHardExercisesData {
+
+    /// The complete collection of all 8 hard Amharic exercises.
     static let allExercises: [Exercise] = [
-        Exercise(
-            id: UUID(),
-            title: "AmharicHardExercisesData",
-            instructions: "ጥያቄዎቹን በጥንቃቄ ይመልሱ።",
-            section: .language,
-            type: .multipleChoice,
-            difficulty: .medium,
-            items: [
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 1 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 2 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 3 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 4 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 5 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 6 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 7 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 8 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 9 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 10 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 11 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 12 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 13 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 14 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 15 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 16 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 17 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 18 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 19 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 20 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 21 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 22 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 23 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 24 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 25 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 26 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 27 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 28 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 29 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 30 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 31 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 32 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 33 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 34 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 35 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 36 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 37 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 38 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 39 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 40 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 41 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 42 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 43 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 44 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 45 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 46 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 47 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 48 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 49 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 50 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 51 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 52 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 53 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 54 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 55 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 56 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 57 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 58 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 59 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 60 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 61 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 62 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 63 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 64 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 65 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 66 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 67 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 68 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 69 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 70 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 71 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 72 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 73 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 74 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 75 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 76 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 77 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 78 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 79 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 80 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 81 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 82 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 83 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 84 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 85 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 86 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 87 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 88 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 89 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 90 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 91 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 92 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 93 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 94 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 95 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 96 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 97 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 98 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 99 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 100 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 101 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 102 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 103 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 104 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 105 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 106 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 107 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 108 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 109 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 110 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 111 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 112 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 113 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 114 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 115 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 116 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 117 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 118 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 119 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-                ExerciseItem(id: UUID(), prompt: "ከባድ ጥያቄ 120 ፦ ትልቅ የሰውነት ክፍል የትኛው ነው?", options: ["ቆዳ", "ልብ", "ሳምባ", "ኩላሊት"], correctAnswer: "ቆዳ", explanation: ""),
-            ]
-        )
+        exercise1,
+        exercise2,
+        exercise3,
+        exercise4,
+        exercise5,
+        exercise6,
+        exercise7,
+        exercise8
     ]
+
+    // MARK: - Exercise 1: የላቀ የቃላት ፍቺ
+    private static let exercise1 = Exercise(
+        title: "የላቀ የቃላት ፍቺ",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .homonym,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "[ቀን / ቀን] ዛሬ ምን ___ ነው? የእርሱ ___ አልቀናም ብሎ አዝኗል።", options: ["ቀን...ቀን", "ቀን...ቀን", "ቀን...ሌሊት", "ሌሊት...ቀን"], correctAnswer: "ቀን...ቀን", explanation: "የመጀመሪያው 'ቀን' የሳምንቱን ወይም የወሩን ዕለት ያሳያል፤ ሁለተኛው 'ቀን' ደግሞ ዕድል ወይም ስኬትን ያሳያል።"),
+            ExerciseItem(prompt: "[አልጋ / አልጋ] አልማዝ በመኝታ ክፍሏ ውስጥ አዲስ ___ ገዛች። ንጉሡ በ ___ ላይ ተቀመጡ።", options: ["አልጋ...አልጋ", "አልጋ...ዙፋን", "አልጋ...አልጋ", "ዙፋን...አልጋ"], correctAnswer: "አልጋ...አልጋ", explanation: "የመጀመሪያው 'አልጋ' መተኛት የሚከናወንበትን ዕቃ ይወክላል፤ ሁለተኛው 'አልጋ' ደግሞ ስልጣን ወይም ዙፋንን ይወክላል።"),
+            ExerciseItem(prompt: "[ብር / ብር] ለ DMV አገልግሎት ሃምሳ ___ ከፈለ። ወፉ በ ___ ወደ ሰማይ በረረ።", options: ["ብር...ብር", "ብር...ብር", "ሳንቲም...ክንፍ", "ክንፍ...ብር"], correctAnswer: "ብር...ብር", explanation: "የመጀመሪያው 'ብር' የኢትዮጵያ መገበያያ ገንዘብን ያሳያል፤ ሁለተኛው 'ብር' ደግሞ በበረራ ወደ ላይ መነሳትን ያሳያል።"),
+            ExerciseItem(prompt: "[ቃል / ቃል] ይህንን ___ መዝገበ ቃላት ውስጥ ፈልግ። እውነት ለመናገር ___ ገባ።", options: ["ቃል...ቃል", "ቃል...ቃል", "ንግግር...ምስክር", "ምስክር...ቃል"], correctAnswer: "ቃል...ቃል", explanation: "የመጀመሪያው 'ቃል' ነጠላ የቋንቋ ድምፅን (Word) ያሳያል፤ ሁለተኛው 'ቃል' ደግሞ የገባውን ቃል ኪዳን ወይም ቃል (Promise) ያሳያል።"),
+            ExerciseItem(prompt: "[ዋጋ / ዋጋ] የቤቱ ___ በካሊፎርኒያ በጣም ውድ ሆኗል። ላደረገው በጎ ሥራ ትልቅ ___ አገኘ።", options: ["ዋጋ...ዋጋ", "ዋጋ...ዋጋ", "ብር...ደስታ", "ደስታ...ዋጋ"], correctAnswer: "ዋጋ...ዋጋ", explanation: "የመጀመሪያው 'ዋጋ' የገንዘብ ክፍያ መጠንን ያሳያል፤ ሁለተኛው 'ዋጋ' ደግሞ የእሴት ወይም የክብር ዋጋን (Value/Reward) ያሳያል።"),
+            ExerciseItem(prompt: "[ራስ / ራስ] በቀለ ___ ላይ ኮፍያ አደረገ። እያንዳንዱ ሰው ለ ___ ጥንቃቄ ማድረግ አለበት።", options: ["ራስ...ራስ", "ራስ...ራስ", "ጭንቅላት...ሰውነት", "ሰውነት...ራስ"], correctAnswer: "ራስ...ራስ", explanation: "የመጀመሪያው 'ራስ' የሰውነትን የላይኛው ክፍል (Head) ያሳያል፤ ሁለተኛው 'ራስ' ደግሞ እራስን (Self) ያሳያል።"),
+            ExerciseItem(prompt: "[ታሪክ / ታሪክ] ስለ አድዋ ጦርነት ___ የሚያሳይ መጽሐፍ አነበበ። መልካም ስም ለትውልድ የሚተርፍ ___ ነው።", options: ["ታሪክ...ታሪክ", "ታሪክ...ታሪክ", "ትረካ...ዝና", "ዝና...ታሪክ"], correctAnswer: "ታሪክ...ታሪክ", explanation: "የመጀመሪያው 'ታሪክ' ያለፈ ክስተትን (History) ያሳያል፤ ሁለተኛው 'ታሪክ' ደግሞ የአንድን ሰው መልካም ስም ወይም አሻራ (Legacy) ያሳያል።"),
+            ExerciseItem(prompt: "[ህግ / ህግ] በካሊፎርኒያ አዲሱ የትራፊክ ___ ጸደቀ። ተፈጥሮ የራሱ የሆነ የጸና ___ አለው።", options: ["ህግ...ህግ", "ህግ...ህግ", "ደንብ...ስርዓት", "ስርዓት...ህግ"], correctAnswer: "ህግ...ህግ", explanation: "የመጀመሪያው 'ህግ' የመንግስትን የጽሁፍ ደንብ ያሳያል፤ ሁለተኛው 'ህግ' ደግሞ የተፈጥሮን ጸጥታና መርህ (Principle) ያሳያል።"),
+            ExerciseItem(prompt: "[ባህር / ባህር] መርከቡ በፓስፊክ ___ ላይ ይጓዛል። የእርሱ የዋህነት ባህሪ መልካም ___ ነው።", options: ["ባህር...ባህር", "ባህር...ባህር", "ውቅያኖስ...ባህሪ", "ባህሪ...ባህር"], correctAnswer: "ባህር...ባህር", explanation: "የመጀመሪያው 'ባህር' ትልቁን የውሃ አካል ያሳያል፤ ሁለተኛው 'ባህር' ደግሞ የአንድን ሰው ውስጣዊ ማንነት ወይም ባህሪ (Nature) ያሳያል።"),
+            ExerciseItem(prompt: "[ቀለም / ቀለም] ቤቱን ለመቀባት አረንጓዴ ___ ገዛ። እርሱ በትምህርቱ ከፍተኛ ___ አለው።", options: ["ቀለም...ቀለም", "ቀለም...ቀለም", "ቀለም...እውቀት", "እውቀት...ቀለም"], correctAnswer: "ቀለም...ቀለም", explanation: "የመጀመሪያው 'ቀለም' ለግድግዳ ማሳመሪያ የሚቀባውን ፈሳሽ ያሳያል፤ ሁለተኛው 'ቀለም' ደግሞ በትምህርት ስኬታማ መሆንን (Literacy/Knowledge) ያሳያል።"),
+            ExerciseItem(prompt: "[ደመና / ደመና] ሰማዩ በ ___ ተሸፍኖ ዝናብ መጣ። የሕዝቡ የኅብረት ስምምነት ___ ይባላል።", options: ["ደመና...ደመና", "ደመና...ደመና", "ዝናብ...ውል", "ውል...ደመና"], correctAnswer: "ደመና...ደመና", explanation: "የመጀመሪያው 'ደመና' በሰማይ ላይ የሚታየውን የውሃ ትነት ያሳያል፤ ሁለተኛው 'ደመና' ደግሞ የአብሮነትና የስምምነት ማኅበርን ያሳያል።"),
+            ExerciseItem(prompt: "[ገንዘብ / ገንዘብ] በባንክ ሂሳቡ ውስጥ በቂ ___ አስቀመጠ። ይህ መሬት የሀገሪቱ ዋና ___ ነው።", options: ["ገንዘብ...ገንዘብ", "ገንዘብ...ገንዘብ", "ዶላር...ሀብት", "ሀብት...ገንዘብ"], correctAnswer: "ገንዘብ...ገንዘብ", explanation: "የመጀመሪያው 'ገንዘብ' መገበያያ ዶላር ወይም ብርን ያሳያል፤ ሁለተኛው 'ገንዘብ' ደግሞ የአገር ይዞታን ወይም የንብረት ሀብትን (Asset) ያሳያል።"),
+            ExerciseItem(prompt: "[ፍርድ / ፍርድ] ዳኛው በችሎቱ ላይ ፍትሃዊ ___ ሰጡ። የወንጀለኛው የቅጣት ___ ተወሰነ።", options: ["ፍርድ...ፍርድ", "ፍርድ...ፍርድ", "ፍትህ...ውሳኔ", "ውሳኔ...ፍርድ"], correctAnswer: "ፍርድ...ፍርድ", explanation: "የመጀመሪያው 'ፍርድ' የፍትህን አሰጣጥ ያሳያል፤ ሁለተኛው 'ፍርድ' ደግሞ የመጨረሻውን የቅጣት ውሳኔ (Sentence) ያሳያል።"),
+            ExerciseItem(prompt: "[ጥናት / ጥናት] ለስኳር በሽታ ምርምር ጠቃሚ ___ ተካሄደ። የልብ ጥንካሬና ጽናት ለስኬት ___ ነው።", options: ["ጥናት...ጥናት", "ጥናት...ጥናት", "ምርምር...ብርታት", "ብርታት...ጥናት"], correctAnswer: "ጥናት...ጥናት", explanation: "የመጀመሪያው 'ጥናት' ሳይንሳዊ ምርምርን (Research) ያሳያል፤ ሁለተኛው 'ጥናት' ደግሞ የሰውነት ወይም የሀሳብ ጥንካሬን (Firmness) ያሳያል።"),
+            ExerciseItem(prompt: "[ፈር / ፈር] ባቡሩ በባቡር ሐዲዱ ___ ላይ ይሄዳል። እባቡን ሲያይ በጣም ___ መጮኽ ጀመረ።", options: ["ፈር...ፈር", "ፈር...ፈር", "መንገድ...ፈራ", "ፈራ...ፈር"], correctAnswer: "ፈር...ፈር", explanation: "የመጀመሪያው 'ፈር' የተዘጋጀውን መስመር ወይም ዱካ (Track) ያሳያል፤ ሁለተኛው 'ፈር' ደግሞ ፍርሃትን (Fear) ያሳያል።")
+        ]
+    )
+
+    // MARK: - Exercise 2: የላቀ ተዛምዶ
+    private static let exercise2 = Exercise(
+        title: "የላቀ ተዛምዶ",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .analogyChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "ግብር (Tax) ለ መንግስት (Government) እንደሆነ ሁሉ፥ ደሞዝ (Salary) ለ ___ ነው።", options: ["ቀጣሪ (Employer)", "ገዢ (Buyer)", "ሻጭ (Seller)", "ባንክ (Bank)"], correctAnswer: "ቀጣሪ (Employer)", explanation: "መንግስት ግብርን እንደሚሰበስብ ሁሉ ቀጣሪም ለሰራተኛው ደሞዝ ይከፍላል።"),
+            ExerciseItem(prompt: "DMV ለ የመንዳት ፈቃድ (License) እንደሆነ ሁሉ፥ ባንክ (Bank) ለ ___ ነው።", options: ["የዱቤ ካርድ (Credit Card)", "መኪና (Car)", "ፖስታ (Mail)", "ቤት (House)"], correctAnswer: "የዱቤ ካርድ (Credit Card)", explanation: "DMV የመንዳት ፈቃድ እንደሚሰጥ ሁሉ ባንክ ደግሞ የዱቤ ካርድ ወይም ብድር ይሰጣል።"),
+            ExerciseItem(prompt: "ዳኛ (Judge) ለ ፍርድ ቤት (Court) እንደሆነ ሁሉ፥ ዶክተር (Doctor) ለ ___ ነው።", options: ["ሆስፒታል (Hospital)", "ትምህርት ቤት (School)", "ፋርማሲ (Pharmacy)", "ባንክ (Bank)"], correctAnswer: "ሆስፒታል (Hospital)", explanation: "ዳኛው በፍትህ ስፍራ እንደሚሰራ ሁሉ ዶክተርም በሆስፒታል ውስጥ ያክማል።"),
+            ExerciseItem(prompt: "ዜግነት (Citizenship) ለ ፓስፖርት (Passport) እንደሆነ ሁሉ፥ ጋብቻ (Marriage) ለ ___ ነው።", options: ["የሰርግ ምስክር ወረቀት", "የልደት ሰርተፊኬት", "የመንዳት ፈቃድ", "የንግድ ፈቃድ"], correctAnswer: "የሰርግ ምስክር ወረቀት", explanation: "ዜግነት በፓስፖርት እንደሚረጋገጥ ሁሉ ጋብቻም በሰርግ ምስክር ወረቀት ይረጋገጣል።"),
+            ExerciseItem(prompt: "ዶላር (Dollar) ለ አሜሪካ (USA) እንደሆነ ሁሉ፥ ብር (Birr) ለ ___ ነው።", options: ["ኢትዮጵያ (Ethiopia)", "ኬንያ (Kenya)", "እንግሊዝ (UK)", "ካናዳ (Canada)"], correctAnswer: "ኢትዮጵያ (Ethiopia)", explanation: "ዶላር የአሜሪካ ገንዘብ እንደሆነ ሁሉ ብር የኢትዮጵያ ይፋዊ ገንዘብ ነው።"),
+            ExerciseItem(prompt: "ከተማ (City) ለ ከንቲባ (Mayor) እንደሆነ ሁሉ፥ ሀገር (Country) ለ ___ ነው።", options: ["ፕሬዝዳንት (President)", "ገዢ (Governor)", "ዳኛ (Judge)", "ሚኒስትር (Minister)"], correctAnswer: "ፕሬዝዳንት (President)", explanation: "ከንቲባ ከተማን እንደሚመራ ሁሉ ፕሬዝዳንት ወይም ጠቅላይ ሚኒስትር ደግሞ አገርን ይመራል።"),
+            ExerciseItem(prompt: "ኮምፒውተር (Computer) ለ ሶፍትዌር (Software) እንደሆነ ሁሉ፥ መኪና (Car) ለ ___ ነው።", options: ["ሞተር (Engine)", "መንገድ (Road)", "ነዳጅ (Gas)", "ጎማ (Tire)"], correctAnswer: "ሞተር (Engine)", explanation: "ኮምፒውተር በሶፍትዌር እንደሚመራ ሁሉ መኪናም በሞተር ኃይል ይንቀሳቀሳል።"),
+            ExerciseItem(prompt: "መጽሐፍ (Book) ለ ደራሲ (Author) እንደሆነ ሁሉ፥ ፊልም (Movie) ለ ___ ነው።", options: ["አዘጋጅ (Director)", "ተዋናይ (Actor)", "አንባቢ (Reader)", "ገዢ (Buyer)"], correctAnswer: "አዘጋጅ (Director)", explanation: "ደራሲ መጽሐፍን እንደሚጽፍ ሁሉ አዘጋጅ (ዳይሬክተር) ደግሞ ፊልሙን ይሰራል::"),
+            ExerciseItem(prompt: "ዋስትና (Insurance) ለ አደጋ (Accident) እንደሆነ ሁሉ፥ ጃንጥላ (Umbrella) ለ ___ ነው።", options: ["ዝናብ (Rain)", "ነፋስ (Wind)", "ፀሐይ (Sun)", "በረዶ (Snow)"], correctAnswer: "ዝናብ (Rain)", explanation: "ዋስትና ከአደጋ የገንዘብ ኪሳራ እንደሚከላከል ሁሉ ጃንጥላም ከዝናብ ይጠብቃል።"),
+            ExerciseItem(prompt: "ቁልፍ (Key) ለ በር (Door) እንደሆነ ሁሉ፥ የይለፍ ቃል (Password) ለ ___ ነው።", options: ["የኮምፒውተር መለያ (Account)", "መኪና (Car)", "ቁምሳጥን (Cabinet)", "ስልክ ቁጥር (Phone Number)"], correctAnswer: "የኮምፒውተር መለያ (Account)", explanation: "ቁልፍ በርን ለመክፈት እንደሚያገለግል ሁሉ የይለፍ ቃል የኮምፒውተር መለያን ለመክፈት ያገለግላል።"),
+            ExerciseItem(prompt: "ትምህርት (Education) ለ እውቀት (Knowledge) እንደሆነ ሁሉ፥ ሥራ (Work) ለ ___ ነው።", options: ["ልምድ (Experience)", "ደሞዝ (Salary)", "እረፍት (Rest)", "ግብር (Tax)"], correctAnswer: "ልምድ (Experience)", explanation: "ትምህርት እውቀትን እንደሚያስገኝ ሁሉ ሥራ ደግሞ ሙያዊ ልምድን ያስገኛል።"),
+            ExerciseItem(prompt: "ወለድ (Interest) ለ ብድር (Loan) እንደሆነ ሁሉ፥ ትርፍ (Profit) ለ ___ ነው።", options: ["ኢንቨስትመንት (Investment)", "ቀረጥ (Tax)", "ደሞዝ (Salary)", "ኪሳራ (Loss)"], correctAnswer: "ኢንቨስትመንት (Investment)", explanation: "ወለድ ከብድር እንደሚገኝ ሁሉ ትርፍ ደግሞ ከኢንቨስትመንት ይገኛል።"),
+            ExerciseItem(prompt: "ጡረታ (Pension) ለ እርጅና (Old Age) እንደሆነ ሁሉ፥ ደሞዝ (Salary) ለ ___ ነው።", options: ["የሥራ ዘመን (Employment)", "እረፍት (Holiday)", "ቀረጥ (Tax)", "ጥናት (Study)"], correctAnswer: "የሥራ ዘመን (Employment)", explanation: "ጡረታ በዕድሜ መግፋት ጊዜ እንደሚከፈል ሁሉ ደሞዝ ደግሞ በሥራ ዘመን ይከፈላል።"),
+            ExerciseItem(prompt: "ውል (Contract) ለ ፊርማ (Signature) እንደሆነ ሁሉ፥ ሕግ (Law) ለ ___ ነው።", options: ["ማጽደቅ (Ratification)", "ክስ (Lawsuit)", "ፍርድ ቤት (Court)", "ፖሊስ (Police)"], correctAnswer: "ማጽደቅ (Ratification)", explanation: "ውል በፊርማ እንደሚጸና ሁሉ ሕግ ደግሞ በፓርላማ ማጽደቅ ይጸናል።"),
+            ExerciseItem(prompt: "መሪ (Leader) ለ ተከታይ (Follower) እንደሆነ ሁሉ፥ መምህር (Teacher) ለ ___ ነው።", options: ["ተማሪ (Student)", "ትምህርት ቤት (School)", "ክፍል (Class)", "መጽሐፍ (Book)"], correctAnswer: "ተማሪ (Student)", explanation: "መሪ ተከታዮችን እንደሚመራ ሁሉ መምህር ደግሞ ተማሪዎችን ያስተምራል።")
+        ]
+    )
+
+    // MARK: - Exercise 3: የላቀ የቃላት ትስስር
+    private static let exercise3 = Exercise(
+        title: "የላቀ የቃላት ትስስር",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "ውል", options: ["ስምምነት", "መለያየት", "ጠብ", "ጉዞ"], correctAnswer: "ስምምነት", explanation: "ውል ማለት በሁለት ወገኖች መካከል የሚደረግ አስገዳጅ ስምምነት (Agreement) ነው።"),
+            ExerciseItem(prompt: "ዋስትና", options: ["ማረጋገጫ", "አደጋ", "ኪሳራ", "ፍርሃት"], correctAnswer: "ማረጋገጫ", explanation: "ዋስትና የአንድን ነገር አስተማማኝነት ወይም ማረጋገጫ (Collateral/Guarantee) መስጠትን ያሳያል።"),
+            ExerciseItem(prompt: "ግብር", options: ["ክፍያ ለመንግስት", "ስጦታ", "ደሞዝ", "ቁጠባ"], correctAnswer: "ክፍያ ለመንግስት", explanation: "ግብር (Tax) ዜጎች ለመንግስት አገልግሎት የሚከፍሉት ግዴታ ክፍያ ነው።"),
+            ExerciseItem(prompt: "ጡረታ", options: ["ከሥራ ማረፊያ አበል", "ዕለታዊ ክፍያ", "መዋጮ", "ቅጣት"], correctAnswer: "ከሥራ ማረፊያ አበል", explanation: "ጡረታ (Pension) ከረጅም አገልግሎት በኋላ ለኑሮ ዋስትና የሚሰጥ የገንዘብ ድጋፍ ነው።"),
+            ExerciseItem(prompt: "ውርስ", options: ["የንብረት ቅብብሎሽ", "ግዢ", "ኪራይ", "ብድር"], correctAnswer: "የንብረት ቅብብሎሽ", explanation: "ውርስ (Inheritance) ከአንድ ሰው ህልፈት በኋላ ንብረቱ ለዘመዶቹ የሚተላለፍበት ሥርዓት ነው።"),
+            ExerciseItem(prompt: "ከተማነት", options: ["የሰፈራ ዕድገት", "ግብርና", "ጫካ", "ምድረ በዳ"], correctAnswer: "የሰፈራ ዕድገት", explanation: "ከተማነት (Urbanization) የአንድ አካባቢ ወደ ከተማ ማኅበረሰብ የማደግ ሂደት ነው።"),
+            ExerciseItem(prompt: "ስምምነት", options: ["መግባባት", "ጭቅጭቅ", "ትርፍ", "ወለድ"], correctAnswer: "መግባባት", explanation: "ስምምነት (Accord) በሰዎች ወይም በድርጅቶች መካከል ያለ የሀሳብ መግባባትን ይገልጻል።"),
+            ExerciseItem(prompt: "ውሳኔ", options: ["መረዳትና መቁረጥ", "ጥርጣሬ", "ምኞት", "ፍርሃት"], correctAnswer: "መረዳትና መቁረጥ", explanation: "ውሳኔ (Decision) በአንድ ነገር ላይ ግልጽ የሆነ መደምደሚያ መስጠት ነው።"),
+            ExerciseItem(prompt: "ንብረት", options: ["ሀብት", "ዕዳ", "ኪሳራ", "ውል"], correctAnswer: "ሀብት", explanation: "ንብረት (Property/Asset) የአንድ ሰው ወይም ድርጅት በሕጋዊ መንገድ የራሱ የሆነ ሀብት ነው።"),
+            ExerciseItem(prompt: "ምርመራ", options: ["ማጣራት", "ቸልተኝነት", "እምነት", "ሽልማት"], correctAnswer: "ማጣራት", explanation: "ምርመራ (Investigation) የእውነትን ወይም የችግሩን ምንጭ በጥልቀት ማጣራት ነው።"),
+            ExerciseItem(prompt: "ሕጋዊነት", options: ["በሕግ መመራት", "ሕገ-ወጥነት", "ነጻነት", "ትርምስ"], correctAnswer: "በሕግ መመራት", explanation: "ሕጋዊነት (Legality) ከአገሪቱ የተደነገጉ ሕጎች ጋር መስማማትን ያሳያል።"),
+            ExerciseItem(prompt: "ኢንሹራንስ", options: ["የስጋት መከላከያ", "ብድር", "የባንክ ሂሳብ", "ወለድ"], correctAnswer: "የስጋት መከላከያ", explanation: "ኢንሹራንስ (Insurance) ከድንገተኛ አደጋና ኪሳራ የገንዘብ ዋስትና ማግኛ ዘዴ ነው።"),
+            ExerciseItem(prompt: "ባለቤትነት", options: ["የይዞታ መብት", "ኪራይ", "ብድር", "ጊዜያዊ ፈቃድ"], correctAnswer: "የይዞታ መብት", explanation: "ባለቤትነት (Ownership) በአንድ ነገር ላይ ሙሉ ሕጋዊ ይዞታና መብት መኖርን ይወክላል።"),
+            ExerciseItem(prompt: "መብት", options: ["ሕጋዊ ነጻነት", "ግዴታ", "ቅጣት", "ክልከላ"], correctAnswer: "ሕጋዊ ነጻነት", explanation: "መብት (Right) አንድ ሰው በሕግ የተሰጠው ነጻነት ወይም ሕጋዊ ጥቅም ነው።"),
+            ExerciseItem(prompt: "ብድር", options: ["ተመላሽ ገንዘብ", "ስጦታ", "ግብር", "ደሞዝ"], correctAnswer: "ተመላሽ ገንዘብ", explanation: "ብድር (Loan) ከጊዜ በኋላ በወለድ ወይም ያለወለድ የሚመለስ የተዋሰ ገንዘብ ነው።")
+        ]
+    )
+
+    // MARK: - Exercise 4: የላቀ ዓረፍተ ነገር ማጠናቀቅ
+    private static let exercise4 = Exercise(
+        title: "የላቀ ዓረፍተ ነገር ማጠናቀቅ",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .sentenceCompletion,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "በካሊፎርኒያ የቤት ባለቤት ለመሆን ___ ክፍያዎችን እና የኢንሹራንስ ዋጋን በዝርዝር ማጥናት ያስፈልጋል።", options: ["የሞርጌጅ", "የኪራይ", "የደሞዝ", "የፖስታ"], correctAnswer: "የሞርጌጅ", explanation: "የቤት ግዢን የረጅም ጊዜ ብድር ለመግለጽ የሞርጌጅ ክፍያ ይባላል።"),
+            ExerciseItem(prompt: "ግብርን በሰዓቱ አለመክፈል ከፍተኛ የገንዘብ ___ እና ሕጋዊ ተጠያቂነትን ሊያስከትል ይችላል።", options: ["ቅጣት", "ሽልማት", "ትርፍ", "ቁጠባ"], correctAnswer: "ቅጣት", explanation: "የመንግስት ህግን ባለማክበር የሚመጣው የገንዘብ ኪሳራ ቅጣት ይባላል።"),
+            ExerciseItem(prompt: "ወይዘሮ ዘነበች የሶሻል ሴኩሪቲ (ማኅበራዊ ዋስትና) ___ ለመጠየቅ ሰነዶቻቸውን በሙሉ አዘጋጁ።", options: ["አበል", "ግብር", "ክስ", "ፈቃድ"], correctAnswer: "አበል", explanation: "ለማህበራዊ ዋስትና የሚሰጠው ወርሃዊ የገንዘብ ድጋፍ አበል ተብሎ ይጠራል።"),
+            ExerciseItem(prompt: "የ DMV የመንዳት ፈተናን በተሳካ ሁኔታ ለማለፍ የትራፊክ ___ ማጥናት ወሳኝ ነው።", options: ["ደንቦችን", "መንገዶችን", "መኪናዎችን", "ባቡሮችን"], correctAnswer: "ደንቦችን", explanation: "ፈተናውን ለማለፍ የትራፊክ ደንቦችንና ህጎችን ማወቅ ግድ ይላል።"),
+            ExerciseItem(prompt: "ባለሀብቱ አዲሱን ሥራቸውን ለመጀመር በሎስ አንጀለስ ከተማ የንግድ ___ አወጡ።", options: ["ፈቃድ", "ቀረጥ", "ውል", "ክስ"], correctAnswer: "ፈቃድ", explanation: "ስራን ህጋዊ ለማድረግ የንግድ ፈቃድ ማውጣት የመጀመሪያው እርምጃ ነው።"),
+            ExerciseItem(prompt: "የባንክ ሂሳብዎን ከማጭበርበር ለመጠበቅ የይለፍ ቃልዎን ___ መያዝ ይኖርብዎታል።", options: ["በምስጢር", "በይፋ", "በወረቀት", "በስልክ"], correctAnswer: "በምስጢር", explanation: "የደህንነት ይለፍ ቃሎች ሁልጊዜ ምስጢር መሆን አለባቸው።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ የጤና መድን (ሜዲኬይድ) ለማግኘት የተገልጋዮች ወርሃዊ ___ መረጋገጥ አለበት።", options: ["ገቢ", "ዕድሜ", "ሥራ", "ዜግነት"], correctAnswer: "ገቢ", explanation: "የጤና መድን ድጋፍ ለማግኘት የገቢ መጠን ዋናው መስፈርት ነው።"),
+            ExerciseItem(prompt: "አቶ በቀለ በግላቸው የቆጠቡትን የገንዘብ መጠን አስተማማኝ በሆነ ___ ላይ ለማዋል ወሰኑ።", options: ["ኢንቨስትመንት", "ብድር", "ቀረጥ", "ግብር"], correctAnswer: "ኢንቨስትመንት", explanation: "ገንዘብን ለማሳደግ በጥናት ላይ የተመሰረተ ኢንቨስትመንት ማካሄድ ይበጃል።"),
+            ExerciseItem(prompt: "የ DMV የጽሑፍ ፈተና መውሰድ የማይችሉ አረጋውያን የቃል ___ እንዲሰጣቸው መጠየቅ ይችላሉ።", options: ["ፈተና", "ፈቃድ", "ማረጋገጫ", "ምስክር"], correctAnswer: "ፈተና", explanation: "ለልዩ ሁኔታዎች የቃል ፈተና መስጠት በህግ የተፈቀደ አሰራር ነው።"),
+            ExerciseItem(prompt: "የንብረት ሽያጭ ውል ሕጋዊ ተቀባይነት እንዲኖረው በባለሙያ ፊት ___ መፈረም አለበት።", options: ["በምስክር", "በፊርማ", "በስልክ", "በፖስታ"], correctAnswer: "በምስክር", explanation: "ውሎች በህግ ፊት እንዲጸኑ በገለልተኛ ምስክሮች ፊት መፈረም አለባቸው።"),
+            ExerciseItem(prompt: "የኢሚግሬሽን ፎርም ሲሞሉ እውነተኛ መረጃ አለመስጠት ቪዛን ___ ሊያስከትል ይችላል።", options: ["መሰረዝ", "ማጽደቅ", "ማሳደግ", "ማስተላለፍ"], correctAnswer: "መሰረዝ", explanation: "የሀሰት መረጃ መስጠት ማመልከቻው ውድቅ እንዲሆን ያደርጋል።"),
+            ExerciseItem(prompt: "ወርሃዊ የቤት ኪራይ ክፍያ ከቀኑ በ 5 ቀናት ካለፈ የዘግይቶ መክፈያ ___ ይታሰባል።", options: ["ቅጣት", "ቅናሽ", "ትርፍ", "ሽልማት"], correctAnswer: "ቅጣት", explanation: "ከቀጠሮ በኋላ በሚደረግ ክፍያ ላይ የዘግይቶ መክፈያ ቅጣት ይጣላል።"),
+            ExerciseItem(prompt: "የሕክምና ባለሙያው ለአረጋዊቷ የሰጡትን የመድኃኒት ___ በዝርዝር አስረዷቸው።", options: ["መመሪያ", "ዋጋ", "ብዛት", "ቅናሽ"], correctAnswer: "መመሪያ", explanation: "መድኃኒትን በአግባቡ ለመውሰድ የታዘዘውን የዶክተር መመሪያ መከተል ወሳኝ ነው።"),
+            ExerciseItem(prompt: "የባንክ ብድር ለማግኘት የደንበኛው የቀድሞ የክሬዲት (የዱቤ) ___ መመርመር አለበት።", options: ["ታሪክ", "ካርድ", "ደሞዝ", "ቁጠባ"], correctAnswer: "ታሪክ", explanation: "ብድር ለመስጠት የባንክ ተቋማት የዱቤ ታሪክን (Credit History) ያያሉ።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ አሠሪዎች ለሠራተኞቻቸው በሕግ የተደነገገውን ዝቅተኛ ___ የመክፈል ግዴታ አለባቸው።", options: ["ደሞዝ", "ቀረጥ", "ሽልማት", "ኢንሹራንስ"], correctAnswer: "ደሞዝ", explanation: "ዝቅተኛው የክፍያ መጠን (Minimum Wage) በህግ የተወሰነ ደሞዝ ነው።")
+        ]
+    )
+
+    // MARK: - Exercise 5: የእንቅስቃሴዎች ቅደም ተከተል
+    private static let exercise5 = Exercise(
+        title: "የእንቅስቃሴዎች ቅደም ተከተል",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .sequencing,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "የመንዳት ፈቃድ (Driver License) በ DMV ለማውጣት የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["የቀጠሮ ሰዓት መያዝ", "የፎቶ እና የአይን ምርመራ ማድረግ", "የጽሑፍ ፈተና መውሰድ", "የተግባር የመንዳት ፈተና ማለፍ"], correctAnswer: "የቀጠሮ ሰዓት መያዝ | የፎቶ እና የአይን ምርመራ ማድረግ | የጽሑፍ ፈተና መውሰድ | የተግባር የመንዳት ፈተና ማለፍ", explanation: "ፈቃድ ለማውጣት መጀመሪያ ቀጠሮ ይያዛል፥ ከዚያ ፎቶና አይን ይታያል፥ በመቀጠል የጽሑፍ ፈተና ተወስዶ በመጨረሻ የመንዳት ፈተና ያልፋል።"),
+            ExerciseItem(prompt: "የባንክ አካውንት ለመክፈት የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["አስፈላጊውን መታወቂያ ማቅረብ", "ፎርሙን መሙላትና መፈረም", "የመጀመሪያ ገንዘብ ማስገባት", "የካርድ የይለፍ ቃል መምረጥ"], correctAnswer: "አስፈላጊውን መታወቂያ ማቅረብ | ፎርሙን መሙላትና መፈረም | የመጀመሪያ ገንዘብ ማስገባት | የካርድ የይለፍ ቃል መምረጥ", explanation: "መጀመሪያ መታወቂያ ቀርቦ ይመረመራል፥ ከዚያ ማመልከቻው ተሞልቶ ይፈረማል፥ በመቀጠል መነሻ ገንዘብ ይገባል፥ በመጨረሻም የካርድ ይለፍ ቃል ይመረጣል።"),
+            ExerciseItem(prompt: "የባህላዊ የዶሮ ወጥ አሰራር ዋና ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ሽንኩርቱን ያለ ዘይት በደንብ ማብሰል", "ዘይት ወይም ቅቤ መጨመር", "በርበሬና ቅመማ ቅመም መጨመር", "ዶሮውንና የተቀቀለ እንቁላልን ማካተት"], correctAnswer: "ሽንኩርቱን ያለ ዘይት በደንብ ማብሰል | ዘይት ወይም ቅቤ መጨመር | በርበሬና ቅመማ ቅመም መጨመር | ዶሮውንና የተቀቀለ እንቁላልን ማካተት", explanation: "የዶሮ ወጥ ሲሰራ መጀመሪያ ሽንኩርት ይበስላል፥ ከዚያ ዘይትና በርበሬ ተጨምሮ ከተቁላላ በኋላ ዶሮና እንቁላል ይገባል።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ የንግድ ሥራ ለመጀመር ፈቃድ የማውጣት ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["የንግድ ስም መምረጥና ማስመዝገብ", "የንግድ ፈቃድ ማመልከቻ መሙላት", "የቀረጥ መለያ ቁጥር ማግኘት", "ከተፈቀደ በኋላ ሥራ መጀመር"], correctAnswer: "የንግድ ስም መምረጥና ማስመዝገብ | የንግድ ፈቃድ ማመልከቻ መሙላት | የቀረጥ መለያ ቁጥር ማግኘት | ከተፈቀደ በኋላ ሥራ መጀመር", explanation: "መጀመሪያ ስም ይመረታል፥ ከዚያ ማመልከቻ ይሞላል፥ በመቀጠል የቀረጥ ቁጥር ወጥቶ በመጨረሻ ስራ ይጀመራል።"),
+            ExerciseItem(prompt: "የአሜሪካ ዜግነት ፈተና (Naturalization) እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["የ N-400 ፎርም መሙላትና መላክ", "የጣት አሻራ ምርመራ ማድረግ", "በቃለ መጠይቅ ፈተና ላይ መቅረብ", "የታማኝነት ቃለ መሐላ መፈጸም"], correctAnswer: "የ N-400 ፎርም መሙላትና መላክ | የጣት አሻራ ምርመራ ማድረግ | በቃለ መጠይቅ ፈተና ላይ መቅረብ | የታማኝነት ቃለ መሐላ መፈጸም", explanation: "ዜግነት ለማግኘት መጀመሪያ ማመልከቻ ይላካል፥ ከዚያ አሻራ ይሰጣል፥ በመቀጠል ቃለ መጠይቅ ተደርጎ በመጨረሻ መሐላ ይፈጸማል።"),
+            ExerciseItem(prompt: "የባህላዊ ቡና ማፍላት ሥርዓትን በቅደም ተከተል አስቀምጥ።", options: ["የቡና ፍሬውን ማጠብና መቁላት", "በመውቀጫ ወቅጦ ዱቄት ማድረግ", "በጀበና ላይ ውሃ አፍልቶ ቡናውን መጨመር", "በሲኒ ላይ አፍስሶ ማቅረብ"], correctAnswer: "የቡና ፍሬውን ማጠብና መቁላት | በመውቀጫ ወቅጦ ዱቄት ማድረግ | በጀበና ላይ ውሃ አፍልቶ ቡናውን መጨመር | በሲኒ ላይ አፍስሶ ማቅረብ", explanation: "ቡና ለመጠጣት መጀመሪያ ፍሬው ይታጠባልና ይቆላል፥ ከዚያ ተወቅጦ ዱቄት ከሆነ በኋላ በጀበና ይፈላል፥ በመጨረሻም በሲኒ ይቀርባል።"),
+            ExerciseItem(prompt: "የግብር (Tax Return) ፎርም የመሙላት ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["የገቢና የ W-2 ሰነዶችን መሰብሰብ", "የቀረጥ ቅናሾችንና ገቢን ማስላት", "የግብር ማመልከቻውን መፈረምና መላክ", "የተመላሽ ገንዘብ በባንክ መቀበል"], correctAnswer: "የገቢና የ W-2 ሰነዶችን መሰብሰብ | የቀረጥ ቅናሾችንና ገቢን ማስላት | የግብር ማመልከቻውን መፈረምና መላክ | የተመላሽ ገንዘብ በባንክ መቀበል", explanation: "መጀመሪያ ሰነድ ይሰበሰባል፥ ከዚያ ገቢና ቅናሽ ይሰላል፥ በመቀጠል ፎርሙ ተፈርሞ ይላካ፥ በመጨረሻም ተመላሹ ይወሰዳል።"),
+            ExerciseItem(prompt: "የቤት ኪራይ ውል (Lease) ለመፈረም የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ቤቱን ሄዶ መጎብኘትና ማየት", "የኪራይ ማመልከቻ ፎርም መሙላት", "የጀርባ ታሪክና ገቢ ምርመራ ማለፍ", "የኪራይ ውሉን መፈረምና ቁልፍ መረከብ"], correctAnswer: "ቤቱን ሄዶ መጎብኘትና ማየት | የኪራይ ማመልከቻ ፎርም መሙላት | የጀርባ ታሪክና ገቢ ምርመራ ማለፍ | የኪራይ ውሉን መፈረምና ቁልፍ መረከብ", explanation: "መጀመሪያ ቤቱ ይታያል፥ ከዚያ ማመልከቻ ይሞላል፥ በመቀጠል ታሪክና ገቢ ይጣራል፥ በመጨረሻም ውል ተፈርሞ ቁልፍ ይወሰዳል።"),
+            ExerciseItem(prompt: "የሕክምና ቀጠሮ ለመያዝና ዶክተር ለማየት የሚደረጉ ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ለሆስፒታል ደውሎ ቀጠሮ መያዝ", "ሆስፒታል ደርሶ መመዝገብ", "የዶክተር ምርመራና ምክር ማግኘት", "መድኃኒቱን ከፋርማሲ መውሰድ"], correctAnswer: "ለሆስፒታል ደውሎ ቀጠሮ መያዝ | ሆስፒታል ደርሶ መመዝገብ | የዶክተር ምርመራና ምክር ማግኘት | መድኃኒቱን ከፋርማሲ መውሰድ", explanation: "መጀመሪያ ቀጠሮ ይያዛል፥ ከዚያ ሆስፒታል ሄዶ ይመዘገባል፥ በመቀጠል ዶክተር ያያል፥ በመጨረሻም መድኃኒት ይወሰዳል።"),
+            ExerciseItem(prompt: "የመኪና ኢንሹራንስ አደጋ ሲደርስ የሚደረጉ ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["አደጋውን በፎቶ ማስረጃ መቅረጽ", "የፖሊስ ሪፖርት ማውጣት", "ለኢንሹራንስ ኩባንያ ደውሎ ማሳወቅ", "መኪናውን ወደ መጠገኛ ጋራዥ መውሰድ"], correctAnswer: "አደጋውን በፎቶ ማስረጃ መቅረጽ | የፖሊስ ሪፖርት ማውጣት | ለኢንሹራንስ ኩባንያ ደውሎ ማሳወቅ | መኪናውን ወደ መጠገኛ ጋራዥ መውሰድ", explanation: "አደጋ ሲደርስ መጀመሪያ ፎቶ ይነሳል፥ ከዚያ ፖሊስ ሪፖርት ያደርጋል፥ በመቀጠል ኢንሹራንስ ይነገራል፥ በመጨረሻም መኪናው ይጠገናልል።"),
+            ExerciseItem(prompt: "የፖስታ ጥቅል ዕቃ (Package) ለመላክ የሚደረጉ ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ዕቃውን በሳጥን ውስጥ መደርደር", "የመላኪያና የመቀበያ አድራሻ መጻፍ", "ፖስታ ቤት ሄዶ ክብደቱን መለካት", "የፖስታ ክፍያ መፈጸምና መላክ"], correctAnswer: "ዕቃውን በሳጥን ውስጥ መደርደር | የመላኪያና የመቀበያ አድራሻ መጻፍ | ፖስታ ቤት ሄዶ ክብደቱን መለካት | የፖስታ ክፍያ መፈጸምና መላክ", explanation: "ጥቅል ለመላክ መጀመሪያ እቃው ይታሸጋል፥ አድራሻ ይጻፋል፥ ከዚያ ፖስታ ቤት ተወስዶ ይመዘናል፥ በመጨረሻም ክፍያ ተፈጽሞ ይላካል።"),
+            ExerciseItem(prompt: "የተበላሸ ጎማ ለመቀየር የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["መኪናውን ደህንነቱ በተጠበቀ ቦታ ማቆም", "በጃክ መኪናውን ወደ ላይ ማንሳት", "የተበላሸውን ጎማ ፈትቶ ማውጣት", "መለዋወጫውን ጎማ መግጠምና ማጥበቅ"], correctAnswer: "መኪናውን ደህንነቱ በተጠበቀ ቦታ ማቆም | በጃክ መኪናውን ወደ ላይ ማንሳት | የተበላሸውን ጎማ ፈትቶ ማውጣት | መለዋወጫውን ጎማ መግጠምና ማጥበቅ", explanation: "መጀመሪያ መኪናው በሰላም ይቆማል፥ ከዚያ በጃክ ይነሳል፥ በመቀጠል ጎማው ይፈታል፥ በመጨረሻም አዲሱ ይገጠማል።"),
+            ExerciseItem(prompt: "የኤሌክትሪክ ሂሳብ በድረ-ገጽ ለመክፈል የሚደረጉ ደረጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ወደ ሂሳብ መግቢያ ገጽ መግባት", "የክፍያ መጠንና ሰነድ መመልከት", "የክሬዲት ካርድ መረጃ ማስገባት", "ክፍያውን አጽድቆ ደረሰኝ መውሰድ"], correctAnswer: "ወደ ሂሳብ መግቢያ ገጽ መግባት | የክፍያ መጠንና ሰነድ መመልከት | የክሬዲት ካርድ መረጃ ማስገባት | ክፍያውን አጽድቆ ደረሰኝ መውሰድ", explanation: "መጀመሪያ ድረ-ገጽ ይገባል፥ ሂሳብ ይታያል፥ ከዚያ የካርድ ቁጥር ይሞላል፥ በመጨረሻም ክፍያው አልቆ ደረሰኝ ይወሰዳል።"),
+            ExerciseItem(prompt: "የይለፍ ቃል (Password) ለመቀየር የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ወደ ቅንብሮች (Settings) መሄድ", "የድሮውን የይለፍ ቃል ማስገባት", "አዲሱን የይለፍ ቃል ሁለት ጊዜ መጻፍ", "ለውጦቹን አጽድቆ መውጣት"], correctAnswer: "ወደ ቅንብሮች (Settings) መሄድ | የድሮውን የይለፍ ቃል ማስገባት | አዲሱን የይለፍ ቃል ሁለት ጊዜ መጻፍ | ለውጦቹን አጽድቆ መውጣት", explanation: "ለመቀየር መጀመሪያ ቅንብሮች ይገባል፥ የድሮው ይለፍ ቃል ይሞላል፥ አዲሱ ተደጋግሞ ይጻፋል፥ በመጨረሻም ጸድቆ ይጠናቀቃል።"),
+            ExerciseItem(prompt: "አዲስ ስልክ ገዝቶ ለመጠቀም የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["ስልኩን ከሳጥኑ ማውጣትና ማብራት", "የሲም (SIM) ካርድ በስልኩ ማስገባት", "ቋንቋና የዋይፋይ ግንኙነት መምረጥ", "የድሮ መረጃዎችን ወደ አዲሱ ማዛወር"], correctAnswer: "ስልኩን ከሳጥኑ ማውጣትና ማብራት | የሲም (SIM) ካርድ በስልኩ ማስገባት | ቋንቋና የዋይፋይ ግንኙነት መምረጥ | የድሮ መረጃዎችን ወደ አዲሱ ማዛወር", explanation: "መጀመሪያ ስልክ በርቶ ሲም ካርድ ይገባል፥ ከዚያ ቋንቋና ዋይፋይ ይመረጣል፥ በመጨረሻም መረጃዎች ይዛወራሉ።")
+        ]
+    )
+
+    // MARK: - Exercise 6: የላቀ መንስኤና ውጤት
+    private static let exercise6 = Exercise(
+        title: "የላቀ መንስኤና ውጤት",
+        instructions: "Choose the correct answer.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "የአሜሪካ ማዕከላዊ ባንክ ወለድን በከፍተኛ ሁኔታ ከፍ ቢያደርገው ምን ይከሰታል?", options: ["ለቤት ግዢ የሚደረግ የባንክ ብድር ዋጋ ይወዳል", "ሰዎች በቀላሉ ብድር ያገኛሉ", "ዋጋዎች በሙሉ ወዲያውኑ ይቀንሳሉ", "ምንም ለውጥ አይኖርም"], correctAnswer: "ለቤት ግዢ የሚደረግ የባንክ ብድር ዋጋ ይወዳል", explanation: "የማዕከላዊ ባንክ ወለድ መጨመር የቤት ብድርን (Mortgage) እና የንግድ ብድርን ወለድ ከፍ ያደርገዋል።"),
+            ExerciseItem(prompt: "አንድ ሰው የግብር ፎርሙን በሰዓቱ ሳያሳውቅ ካለፈ ምን ጉዳት ይደርስበታል?", options: ["በሕግ የተቀመጠ የዘግይቶ መክፈያ ቅጣት ይጣልበታል", "መንግስት በነጻ ገንዘብ ይሰጠዋል", "ምንም የገንዘብ ቅጣት አይኖርበትም", "የመንዳት ፈቃዱ ይሰረዛል"], correctAnswer: "በሕግ የተቀመጠ የዘግይቶ መክፈያ ቅጣት ይጣልበታል", explanation: "ቀን ካለፈ በኋላ ግብር ማሳወቅ የዘግይቶ ማስታወቂያ ቅጣት (Filing Penalty) ያስከትላል።"),
+            ExerciseItem(prompt: "አንድ አረጋዊ የሶሻል ሴኩሪቲ ገቢያቸው ከአማካይ በላይ ከፍ ቢል በግብር ላይ ምን ተጽዕኖ ይኖረዋል?", options: ["የሶሻል ሴኩሪቲ ገቢያቸው በከፊል ቀረጥ ሊታሰብበት ይችላል", "ቀረጥ ሙሉ በሙሉ ነጻ ይሆናሉ", "መንግስት ግብር እንዲከፍላቸው ያደርጋል", "ደሞዝ ይጨምርላቸዋል"], correctAnswer: "የሶሻል ሴኩሪቲ ገቢያቸው በከፊል ቀረጥ ሊታሰብበት ይችላል", explanation: "የማህበራዊ ዋስትና ገቢ ከተወሰነ ጣሪያ በላይ ሲያልፍ በከፊል የገቢ ግብር (Income Tax) ይከፈልበታል።"),
+            ExerciseItem(prompt: "መኪናዎን ያለ ኢንሹራንስ (የመኪና ዋስትና) በካሊፎርኒያ መንገድ ላይ ቢያሽከረክሩ ምን ሕጋዊ ችግር ያጋጥምዎታል?", options: ["የመንዳት ፈቃድዎ ሊታገድና መኪናዎ ሊታሰር ይችላል", "ፖሊስ በነጻ ኢንሹራንስ ይሰጥዎታል", "ምንም ዓይነት ሕጋዊ ተጠያቂነት የለውም", "አዲስ መኪና መግዛት ይችላሉ"], correctAnswer: "የመንዳት ፈቃድዎ ሊታገድና መኪናዎ ሊታሰር ይችላል", explanation: "በካሊፎርኒያ ያለ ኢንሹራንስ መንዳት በህግ የተከለከለ ሲሆን ከባድ የገንዘብና የፈቃድ መታገድ ቅጣት አለው።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ ከፍተኛ የዝናብ እጥረትና ድርቅ በሚከሰትበት ጊዜ በውሃ አጠቃቀም ላይ ምን ሕግ ይወጣል?", options: ["የውሃ አጠቃቀም ገደብና አላስፈላጊ አጠቃቀም ላይ ቅጣት ይጣላል", "ሰዎች ውሃ በነጻ እንዲጠቀሙ ይፈቀዳል", "የውሃ ቧንቧዎች በሙሉ ይዘጋሉ", "ውሃ ከሌላ ሀገር በነጻ ይመጣል"], correctAnswer: "የውሃ አጠቃቀም ገደብና አላስፈላጊ አጠቃቀም ላይ ቅጣት ይጣላል", explanation: "ድርቅ በሚከሰትበት ጊዜ መንግስት የውሃ አጠቃቀምን ለመቀነስ ጥብቅ የቁጥጥር ህግ ያወጣል።"),
+            ExerciseItem(prompt: "አንድ ሰው የክሬዲት ካርድ ክፍያውን በየወሩ ሙሉ በሙሉ ካልከፈለ ምን የገንዘብ ጉዳት ይደርስበታል?", options: ["ባልተከፈለው ቀሪ ሂሳብ ላይ ከፍተኛ ወለድ ይታሰባል", "ባንኩ የብድር እዳውን ይሰርዘዋል", "ክፍያው በራሱ ይቀንሳል", "የዱቤ ወለድ መጠን ዜሮ ይሆናል"], correctAnswer: "ባልተከፈለው ቀሪ ሂሳብ ላይ ከፍተኛ ወለድ ይታሰባል", explanation: "ቀሪ ሂሳብ ካለ በየወሩ የክሬዲት ካርድ ወለድ (APR) ስለሚታሰብ እዳው ይከማቻል።"),
+            ExerciseItem(prompt: "የመኖሪያ ቤት ኪራይ ዋጋ በከተሞች ውስጥ በከፍተኛ ሁኔታ እንዲጨምር የሚያደርገው ዋና ምክንያት ምንድን ነው?", options: ["የቤቶች እጥረትና የፈላጊዎች ቁጥር መጨመር", "የመንግስት የቤት ኪራይ ድጋፍ መቀነስ", "የወለድ መጠን ዝቅተኛ መሆን", "የከተማው የአየር ሙቀት መጨመር"], correctAnswer: "የቤቶች እጥረትና የፈላጊዎች ቁጥር መጨመር", explanation: "የቤት አቅርቦት ከፈላጊው ማህበረሰብ ፍላጎት በታች ሲሆን የቤት ኪራይ ዋጋ ይጨምራል።"),
+            ExerciseItem(prompt: "በ DMV የቀጠሮ ሰዓትዎን ሳያሳውቁ ሳይሄዱ ቢቀሩ ምን ችግር ይፈጠራል?", options: ["አገልግሎት ለማግኘት ረጅም ሰዓት በሰልፍ መጠበቅ ይኖርብዎታል", "የመንዳት ፈቃድዎ ወዲያውኑ ይሰረዛል", "DMV ቤትዎ ድረስ መጥቶ ያገለግልዎታል", "ምንም ዓይነት የ DMV አገልግሎት ማግኘት አይችሉም"], correctAnswer: "አገልግሎት ለማግኘት ረጅም ሰዓት በሰልፍ መጠበቅ ይኖርብዎታል", explanation: "ቀጠሮ ከሌለዎት እንደ Walk-in ደንበኛ ተቆጥረው ረጅም ሰዓት መጠበቅ ሊኖርብዎት ይችላል።"),
+            ExerciseItem(prompt: "አንድ ሠራተኛ በሥራ ቦታ ላይ ጉዳት ቢደርስበት የሚከተለው ዋስትና ምንድን ነው?", options: ["የሠራተኞች የጉዳት ካሳ (Workers Compensation) ያገኛል", "ደሞዙ ሙሉ በሙሉ ይቆረጣል", "ወዲያውኑ ከሥራ ይሰናበታል", "ምንም ዓይነት የሕክምና ድጋፍ አያገኝም"], correctAnswer: "የሠራተኞች የጉዳት ካሳ (Workers Compensation) ያገኛል", explanation: "ሰራተኞች በስራ ላይ ጉዳት ሲደርስባቸው የህክምናና የገንዘብ ድጋፍ በህግ ያገኛሉ።"),
+            ExerciseItem(prompt: "በባንክ ውስጥ የተቀመጠው የቁጠባ ሂሳብ (Savings) ወለድ መጠን ቢቀንስ ምን ይሆናል?", options: ["ከቁጠባው የሚገኘው ትርፍ ይቀንሳል", "የቁጠባው ዋና ገንዘብ ይጠፋል", "ባንኩ ተጨማሪ ገንዘብ ይሰጣል", "ገንዘቡ በራሱ ይጨምራል"], correctAnswer: "ከቁጠባው የሚገኘው ትርፍ ይቀንሳል", explanation: "ወለድ ሲቀንስ ከባንክ የሚገኘው የትርፍ ክፍያ መጠን አነስተኛ ይሆናል።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ የመኪና ጭስ ምርመራ (Smog Check) ቢያልፍ ምን ጥቅምና አስፈላጊነት አለው?", options: ["የመኪናውን ዓመታዊ ምዝገባ ለማደስ ያስችላል", "የነዳጅ ፍጆታን በግማሽ ይቀንሳል", "የመኪናውን ቀለም ያሳምራል", "ፍጥነቱን በከፍተኛ ሁኔታ ይጨምራል"], correctAnswer: "የመኪናውን ዓመታዊ ምዝገባ ለማደስ ያስችላል", explanation: "የጭስ ምርመራ ማለፍ መኪናው ለአየር ብክለት ደህንነቱ የተጠበቀ መሆኑን አረጋግጦ ምዝገባውን ለማደስ ያስፈልጋል።"),
+            ExerciseItem(prompt: "አንድ ሰው የፍርድ ቤት መጥሪያ (Jury Duty) ደርሶት ሳይቀርብ ቢቀር ምን ሕጋዊ ቅጣት ይገጥመዋል?", options: ["የፍርድ ቤት መናቅ ወንጀል ተቆጥሮ የገንዘብ ቅጣት ይጣልበታል", "ምንም ዓይነት ሕጋዊ ቅጣት አይኖርም", "ፖሊስ ወዲያውኑ ያስረዋል", "አዲስ የመንዳት ፈቃድ ይሰጠዋል"], correctAnswer: "የፍርድ ቤት መናቅ ወንጀል ተቆጥሮ የገንዘብ ቅጣት ይጣልበታል", explanation: "በአሜሪካ የዳኝነት ግዴታን (Jury Duty) አለማክበር የገንዘብ ቅጣት ወይም የፍርድ ቤት መናቅ ክስ ያስከትላል።"),
+            ExerciseItem(prompt: "በአሜሪካ የቤት ኪራይ ቁጥጥር (Rent Control) ባለባቸው ቤቶች ውስጥ የሚኖረው ጥቅም ምንድን ነው?", options: ["ባለቤቱ በየዓመቱ የኪራይ ዋጋን ከሕግ በላይ መጨመር አይችልም", "ቤት ኪራዩ በየወሩ ሙሉ በሙሉ ነጻ ይሆናል", "ኪራዩ በየዓመቱ በግማሽ ይቀንሳል", "ማንኛውም ሰው በነጻ መኖር ይችላል"], correctAnswer: "ባለቤቱ በየዓመቱ የኪራይ ዋጋን ከሕግ በላይ መጨመር አይችልም", explanation: "የኪራይ ቁጥጥር ህግ አከራዮች በየዓመቱ የሚጨምሩትን የቤት ኪራይ መጠን ይገድባል።"),
+            ExerciseItem(prompt: "በካሊፎርኒያ የሽያጭ ቀረጥ (Sales Tax) ቢጨምር በሸማቾች ላይ ምን ተጽዕኖ ይኖረዋል?", options: ["ዕቃዎችን ለመግዛት የሚከፍሉት ጠቅላላ ዋጋ ይጨምራል", "ዕቃዎች በሙሉ በጣም ርካሽ ይሆናሉ", "ሰዎች ግብይት ማድረግ ያቆማሉ", "የመንግስት ቀረጥ ዜሮ ይሆናል"], correctAnswer: "ዕቃዎችን ለመግዛት የሚከፍሉት ጠቅላላ ዋጋ ይጨምራል", explanation: "የሽያጭ ቀረጥ ሲጨምር የሚገዙት እቃዎች ላይ የሚታሰበው ግብር ስለሚጨምር የመጨረሻ ዋጋው ይወዳል::"),
+            ExerciseItem(prompt: "የጤና ዋስትና (Health Insurance) ጥቅማጥቅም የትኛው ነው?", options: ["ከፍተኛ የሕክምና ወጪዎችን በመሸፈን የገንዘብ ኪሳራን መከላከል", "ከማንኛውም ሕመም ወዲያውኑ ማዳን", "የመድኃኒት ዋጋን ሙሉ በሙሉ መጨመር", "በነጻ ምግብ መስጠት"], correctAnswer: "ከፍተኛ የሕክምና ወጪዎችን በመሸፈን የገንዘብ ኪሳራን መከላከል", explanation: "የጤና ኢንሹራንስ ውድ የሆኑ የህክምናና የሆስፒታል ወጪዎችን በከፊል ወይም በሙሉ ይሸፍናል።")
+        ]
+    )
+
+    // MARK: - Exercise 7: ሎጂካዊ ስህተቶች
+    private static let exercise7 = Exercise(
+        title: "ሎጂካዊ ስህተቶች",
+        instructions: "Choose the correct answer.",
+        section: .cognition,
+        type: .multipleChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "አቶ በቀለ በካሊፎርኒያ የበጋ ወራት ከፍተኛ ሙቀት ስላለባቸው ቅዝቃዜ ለማግኘት ጃኬታቸውን ደራርበው ለበሱ።", options: ["በሙቀት ወቅት ጃኬት መደረብ ሙቀትን ይበልጥ ይጨምራል", "በካሊፎርኒያ በጋ የለም", "ጃኬት መልበስ ሕገ-ወጥ ነው", "ሙቀት ላይ ውሃ መጠጣት ስህተት ነው"], correctAnswer: "በሙቀት ወቅት ጃኬት መደረብ ሙቀትን ይበልጥ ይጨምራል", explanation: "ጃኬት የሰውነት ሙቀትን ጠብቆ ስለሚይዝ በሙቀት ወቅት መልበስ ሙቀትን ያባብሰዋል።"),
+            ExerciseItem(prompt: "ወይዘሮ አስቴር በመኪናቸው ውስጥ ነዳጅ ማለቁን እያዩ ረጅም ርቀት መጓዝ እንደሚችሉ አስበው ጉዟቸውን ቀጠሉ።", options: ["ነዳጅ የሌለው መኪና ሊጓዝ አይችልም", "ረጅም ርቀት መሄድ ቀላል ነው", "ነዳጅ መሙላት አያስፈልግም", "መኪናው በፍጥነት መሄድ ነበረበት"], correctAnswer: "ነዳጅ የሌለው መኪና ሊጓዝ አይችልም", explanation: "መኪና ለመንቀሳቀስ ነዳጅ ስለሚፈልግ ሳይሞላ ጉዞ መቀጠል አይቻልም።"),
+            ExerciseItem(prompt: "ዮሴፍ በባንክ አካውንቱ ውስጥ ዜሮ ዶላር እያለው ለቤት ባለቤትነት የሚሆን የመጀመሪያ ክፍያ ቼክ ጽፎ ሰጠ።", options: ["በቂ ገንዘብ የሌለው ቼክ ተቀባይነት የለውም", "ቼክ መጻፍ ሕገ-ወጥ ነው", "ቤት መግዛት አይቻልም", "ባንክ መሄድ አያስፈልግም"], correctAnswer: "በቂ ገንዘብ የሌለው ቼክ ተቀባይነት የለውም", explanation: "በመለያው ውስጥ ገንዘብ ከሌለ ቼኩ ተመላሽ (Bounced Check) ስለሚሆን ክፍያው አይጸናም።"),
+            ExerciseItem(prompt: "አልማዝ አዲሱን የመንዳት ፈቃድ ለማውጣት DMV ሳትሄድ ቤት ውስጥ ቁጭ ብላ በስልክ ፎቶ ተነሳች።", options: ["የመንዳት ፈቃድ ፎቶ በ DMV በአካል መነሳት አለበት", "DMV መሄድ አያስፈልግም", "ፈቃዱ በፖስታ አይመጣም", "ፎቶ መነሳት ስህተት ነው"], correctAnswer: "የመንዳት ፈቃድ ፎቶ በ DMV በአካል መነሳት አለበት", explanation: "የመንዳት ፈቃድ ለመስጠት DMV በአካል ተገኝቶ የጣት አሻራ መውሰድና ፎቶ መነሳት ግዴታ ነው።"),
+            ExerciseItem(prompt: "ዮናስ ግብር በሰዓቱ ባለማሳወቁ ምክንያት ከመንግስት ትልቅ የገንዘብ ሽልማት እንደሚያገኝ ጠበቀ።", options: ["ግብር አለማሳወቅ ቅጣት እንጂ ሽልማት አያስገኝም", "ግብር መክፈል አያስፈልግም", "መንግስት ሽልማት ይሰጣል", "ገንዘቡ በሙሉ ይመለስለታል"], correctAnswer: "ግብር አለማሳወቅ ቅጣት እንጂ ሽልማት አያስገኝም", explanation: "ግብርን በሰዓቱ አለማሳወቅ ወይም አለመክፈል የቅጣት ክፍያ (Penalty) ያስከትላል።"),
+            ExerciseItem(prompt: "ወይዘሮ ዘነበች የኤሌክትሪክ ሂሳባቸውን ባለመክፈላቸው መብራት በቤታቸው ውስጥ በደመቀ ሁኔታ በርቶ ቀጠለ።", options: ["ሂሳብ ካልተከፈለ የኤሌክትሪክ አገልግሎት ይቋረጣል", "መብራት መቼም አይጠፋም", "ሂሳብ መክፈል ግዴታ አይደለም", "መብራቱ በጣም ደካማ መሆን ነበረበት"], correctAnswer: "ሂሳብ ካልተከፈለ የኤሌክትሪክ አገልግሎት ይቋረጣል", explanation: "ለረጅም ጊዜ ክፍያ ካልተፈጸመ የኃይል አቅራቢው ኩባንያ መብራቱን ያጠፋዋል።"),
+            ExerciseItem(prompt: "ተስፋዬ የልብ ሕመም መድኃኒቱን እንዲረዳው በማሰብ በቀን አንድ ጊዜ መውሰድ ሲገባው አምስት ጊዜ ወሰደ።", options: ["መድኃኒት ከመጠን በላይ መውሰድ አደጋ ያስከትላል", "በቀን አምስት ጊዜ መውሰድ የተሻለ ነው", "መድኃኒቱን መጣል ነበረበት", "የልብ በሽታ መድኃኒት የለውም"], correctAnswer: "መድኃኒት ከመጠን በላይ መውሰድ አደጋ ያስከትላል", explanation: "የአጠቃቀም መመሪያውን (Dosage) ማለፍ ከባድ የመርዝ ወይም የጤና አደጋ ያጋጥማል።"),
+            ExerciseItem(prompt: "ሰለሞን የመኪናውን ጭስ ምርመራ (Smog Check) ሳይሳካለት ቀርቶ ዓመታዊ ምዝገባው እንደታደሰለት አሰበ።", options: ["የጭስ ምርመራ ካላለፈ ምዝገባ ማደስ አይቻልም", "መኪና መመዝገብ አያስፈልግም", "ምርመራው ሁልጊዜ ያልፋል", "አዲስ ታርጋ ወዲያውኑ ይሰጠዋል"], correctAnswer: "የጭስ ምርመራ ካላለፈ ምዝገባ ማደስ አይቻልም", explanation: "የጭስ ምርመራ ማለፍ ለምዝገባ እድሳት ቅድመ-ሁኔታ ነው።"),
+            ExerciseItem(prompt: "ሊዲያ በባንክ ሂሳቧ ውስጥ ብድር ለመጠየቅ የዱቤ ታሪኳ (Credit History) በጣም መጥፎ መሆኑን እያወቀች በቀላሉ እንደምታገኝ አመነች።", options: ["መጥፎ የዱቤ ታሪክ ብድር ማግኘትን በጣም አስቸጋሪ ያደርገዋል", "ማንም ሰው በቀላሉ ብድር ያገኛል", "የዱቤ ታሪክ ምንም ዋጋ የለውም", "ባንኮች ታሪክ አይመረምሩም"], correctAnswer: "መጥፎ የዱቤ ታሪክ ብድር ማግኘትን በጣም አስቸጋሪ ያደርገዋል", explanation: "የዱቤ ውጤት (Credit Score) አነስተኛ ከሆነ ባንኮች ብድር ለመስጠት ፈቃደኛ አይሆኑም።"),
+            ExerciseItem(prompt: "ወይዘሮ ማርታ የቤት ኪራይ ውል ሳይፈረም እና ለባለቤቱ ምንም ገንዘብ ሳይከፍሉ ቁልፉን ተረክበው መኖር ጀመሩ።", options: ["ያለ ውል እና ክፍያ ቤት መከራየት አይቻልም", "አከራዩ ቁልፉን በነጻ ይሰጣል", "ቤት ኪራይ መክፈል ሕገ-ወጥ ነው", "መኖር መጀመር ስህተት አይደለም"], correctAnswer: "ያለ ውል እና ክፍያ ቤት መከራየት አይቻልም", explanation: "ኪራይ ለመጀመር መጀመሪያ የውል ስምምነት መፈረምና የዋስትና መያዣ (Security Deposit) መክፈል ያስፈልጋል።"),
+            ExerciseItem(prompt: "ሳሙኤል በ DMV ፈተናውን በደቂቃዎች ውስጥ ወድቆ ወደ ቤት ሲመለስ የመንዳት ፈቃዱን ይዞ ሄደ።", options: ["በፈተና ወድቆ ፈቃድ ማግኘት አይቻልም", "ፈተና መውሰድ አያስፈልግም", "ፈቃዱ ወዲያውኑ በፖስታ ይመጣል", "ፈተናው ውሸት ነው"], correctAnswer: "በፈተና ወድቆ ፈቃድ ማግኘት አይቻልም", explanation: "የመንዳት ፈቃድ የሚሰጠው በ DMV ፈተናዎችን በተሳካ ሁኔታ ላለፈ ሰው ብቻ ነው።"),
+            ExerciseItem(prompt: "ዳዊት የባንክ ካርዱ የይለፍ ቃል ለሌቦች እንዲመች በማሰብ በካርዱ ጀርባ ላይ በትልቁ ጽፎ በኪሱ አስቀመጠ።", options: ["የይለፍ ቃል በካርድ ጀርባ ላይ መጻፍ የደህንነት ስጋት ነው", "ሌቦች ካርዱን አይወስዱም", "ካርዱን መጣል ነበረበት", "የይለፍ ቃል መጻፍ ስህተት አይደለም"], correctAnswer: "የይለፍ ቃል በካርድ ጀርባ ላይ መጻፍ የደህንነት ስጋት ነው", explanation: "የካርድ የይለፍ ቃል (PIN) ለሌላ ሰው እንዳይታይ በሚስጥር መያዝ አለበት።"),
+            ExerciseItem(prompt: "ወይዘሮ ዘነበች ከኢትዮጵያ የመጣውን ጥቅል ቅመማ ቅመም ለመቀበል የቤት አድራሻቸውን ሳይጽፉ የፖስታ ሰራተኛው እንደሚያመጣላቸው ጠበቁ።", options: ["ያለ ሙሉ አድራሻ ፖስታ ማድረስ አይቻልም", "ፖስታ ሰራተኛው አድራሻውን ያውቃል", "ቅመሙ መምጣት የለበትም", "አድራሻ መጻፍ አያስፈልግም"], correctAnswer: "ያለ ሙሉ አድራሻ ፖስታ ማድረስ አይቻልም", explanation: "ለፖስታ መላኪያ ትክክለኛና ሙሉ የቤት አድራሻ (የቤት ቁጥር፥ ጎዳና፥ ዚፕ ኮድ) መጻፍ ግዴታ ነው።"),
+            ExerciseItem(prompt: "አቶ በቀለ የጤና ኢንሹራንስ ሳይኖራቸው የሆስፒታሉን ውድ የሕክምና ሂሳብ በሙሉ በነጻ እንደሚሸፈንላቸው አሰቡ።", options: ["ያለ ኢንሹራንስ የሕክምና ወጪ በነጻ አይሸፈንም", "ሆስፒታሉ ሂሳቡን ይሰርዘዋል", "የሕክምና ወጪ ሁልጊዜ ነጻ ነው", "ኢንሹራንስ መግዛት አያስፈልግም"], correctAnswer: "ያለ ኢንሹራንስ የሕክምና ወጪ በነጻ አይሸፈንም", explanation: "የጤና ኢንሹራንስ ከሌለ የህክምና ወጪው ሙሉ በሙሉ በታካሚው ላይ ይጫናል::"),
+            ExerciseItem(prompt: "ሳሙኤል የመኪና ጎማ ሙሉ በሙሉ መተንፈሱን እያየ በፍጥነት በመንገድ ላይ መንዳት እንደሚችል አምኖ ጉዞ ቀጠለ።", options: ["የተነፈሰ ጎማ መንዳት መኪናውንና መንገዱን አደጋ ላይ ይጥላል", "ፍጥነት መጨመር ጎማውን ይሞላዋል", "ጎማው መተንፈሱ ምንም ችግር የለውም", "ጉዞ መቀጠል ስህተት አይደለም"], correctAnswer: "የተነፈሰ ጎማ መንዳት መኪናውንና መንገዱን አደጋ ላይ ይጥላል", explanation: "ጎማ ሳይኖረው መንዳት የመኪናውን ሪም (Rim) ያበላሻል እንዲሁም ከባድ የመቆጣጠር አደጋ ያመጣል።")
+        ]
+    )
+
+    // MARK: - Exercise 8: ባህላዊ አባባሎችና ምሳሌዎች
+    private static let exercise8 = Exercise(
+        title: "ባህላዊ አባባሎችና ምሳሌዎች",
+        instructions: "Choose the correct answer.",
+        section: .language,
+        type: .multipleChoice,
+        difficulty: .hard,
+        items: [
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ቀስ በቀስ ጫካው ___ ይባላል።", options: ["ይለመልማል", "ይጠፋል", "ይቆረጣል", "ያልቃል"], correctAnswer: "ይለመልማል", explanation: "ቀስ በቀስ በጥረታችን ጫካው እንኳን ለምለም እንደሚሆን የሚገልጽ ጥንታዊ አባባል ነው።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ከአወቁበት አፈር ___ ነው።", options: ["ወርቅ", "ጭቃ", "ድንጋይ", "ውሃ"], correctAnswer: "ወርቅ", explanation: "ከተረዳንበትና ከተጠቀምንበት ማንኛውም ቀላል ነገር ዋጋ ያለው ሊሆን እንደሚችል ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ዕውቀት የሌለው ሰው እንደ ___ ነው።", options: ["ዓይን የሌለው", "ጆሮ የሌለው", "እግር የሌለው", "ልብ የሌለው"], correctAnswer: "ዓይን የሌለው", explanation: "እውቀት ማጣት ሰውን መንገድ እንደማያሳይ ዕውር ያደርገዋል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ የሰነፍ ሰበብ ___ ነው።", options: ["ብዙ", "አጭር", "የለም", "ጥሩ"], correctAnswer: "ብዙ", explanation: "ሰነፍ ሰው ከሥራ ለመዳን ሁልጊዜ ሰበብ ያበዛል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ዕድልና ፍርሃት በአንድ ___ አይኖሩም።", options: ["ልብ ውስጥ", "ቤት ውስጥ", "ከተማ ውስጥ", "ሀገር ውስጥ"], correctAnswer: "ልብ ውስጥ", explanation: "ደፋር መሆን ዕድልን ለመጠቀም ወሳኝ መሆኑን ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ለማይሰማ ጆሮ ___ ማልቀስ።", options: ["አቁማዳ", "ከንቱ", "ውሃ", "እንባ"], correctAnswer: "አቁማዳ", explanation: "የማይረዳን ወይም የማይሰማንን ሰው መምከር ዋጋ እንደሌለው ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ለሆድ ሲያድሉ ___ ያጣሉ።", options: ["ዕውቀት", "ክብር", "ምግብ", "ልብስ"], correctAnswer: "ክብር", explanation: "ለዕለታዊ ፍላጎት ብቻ የሚጨነቁ ሰዎች ትልቅ ዋጋ ያለውን ክብር እንደሚያጡ ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ በእንቅርት ላይ ___ ደግፍ።", options: ["ጆሮ", "ራስ", "እግር", "አፍ"], correctAnswer: "ጆሮ", explanation: "በአንድ ችግር ላይ ሌላ ተጨማሪ ችግር ሲከሰት የሚነገር አባባል ነው።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ የአህያ ምስጋና ___ ነው።", options: ["ርግጫ", "ጩኸት", "ሳር", "ጭነት"], correctAnswer: "ርግጫ", explanation: "ውለታ የማይገባው ሰው በመጥፎ ነገር መልስ እንደሚሰጥ ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ኃምሳ ሎሚ ለአንድ ሰው ሸክሙ ነው ለኃምሳ ሰው ግን ___ ነው።", options: ["ጌጡ", "ምግቡ", "ቀለሉ", "ጭነቱ"], correctAnswer: "ጌጡ", explanation: "የኅብረት ሥራ ለሁሉም ቀላልና ውበት እንደሚሆን ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ከአንበሳ ጀርባ ___ መጋለብ።", options: ["አይቻልም", "ቀላል ነው", "አያምርም", "ይቻላል"], correctAnswer: "አይቻልም", explanation: "አደገኛ ከሆኑ ኃይሎች ጋር አብሮ መሥራት ዋስትና እንደማይሰጥ ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ የማይሞት ልጅ ___ ይወለዳል።", options: ["አይገኝም", "ይወለዳል", "አያድግም", "ይሻላል"], correctAnswer: "አይገኝም", explanation: "በሰው ልጆች ሕይወት ውስጥ ሞት የማይቀር እውነታ መሆኑን ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ካለፈው ይልቅ ___ ይመረጣል።", options: ["የሚመጣው", "የቀረው", "የጠፋው", "የቆመው"], correctAnswer: "የሚመጣው", explanation: "ለትናንት ጸጸት ከመጨነቅ ይልቅ ስለ ነገ ማሰብ እንደሚበጅ ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ሲታጠቡ እስከ ___።", options: ["ክርን", "ጉልበት", "ራስ", "እጅ"], correctAnswer: "ክርን", explanation: "አንድን ተግባር ሲጀምሩ ሙሉ በሙሉ እና በጥራት ማከናወን እንደሚገባ ያሳያል።"),
+            ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ወርቅ በፈተና እሳት፥ ሰው ___ ይገለጣል።", options: ["በመከራ", "በሀብት", "በደስታ", "በንግግር"], correctAnswer: "በመከራ", explanation: "የሰው እውነተኛ ማንነትና ጥንካሬ የሚታወቀው በችግር ጊዜ ነው።")
+        ]
+    )
 }
