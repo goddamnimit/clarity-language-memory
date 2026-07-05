@@ -490,493 +490,423 @@ struct ArmenianFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 1):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Թեյ պատրաստելը",
+                options: ["Թեյնիկով ջուրը եռացնել", "Թեյի տոպրակը դնել բաժակի մեջ", "Եռման ջուրը լցնել բաժակի մեջ", "Թողնել 3 րոպե և խմել"],
+                correctAnswer: "Թեյնիկով ջուրը եռացնել | Թեյի տոպրակը դնել բաժակի մեջ | Եռման ջուրը լցնել բաժակի մեջ | Թողնել 3 րոպե և խմել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 2):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձեռքերը լվանալը",
+                options: ["Օճառ քսել ափերին", "Տրորել ձեռքերը 20 վայրկյան", "Լվանալ օճառը և չորացնել սրբիչով", "Միացնել ջուրը և թրջել ձեռքերը"],
+                correctAnswer: "Միացնել ջուրը և թրջել ձեռքերը | Օճառ քսել ափերին | Տրորել ձեռքերը 20 վայրկյան | Լվանալ օճառը և չորացնել սրբիչով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 3):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Նամակ ուղարկելը",
+                options: ["Գրել հասցեն և փակցնել նամականիշը", "Գցել ծրարը փոստարկղի մեջ", "Գրել նամակը թղթի վրա", "Դնել նամակը ծրարի մեջ"],
+                correctAnswer: "Գրել նամակը թղթի վրա | Դնել նամակը ծրարի մեջ | Գրել հասցեն և փակցնել նամականիշը | Գցել ծրարը փոստարկղի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 4):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ատամները մաքրելը",
+                options: ["Լվանալ խոզանակը", "Ատամի մածուկը լցնել խոզանակի վրա", "Մաքրել ատամները խոզանակով", "Ողողել բերանը ջրով"],
+                correctAnswer: "Ատամի մածուկը լցնել խոզանակի վրա | Մաքրել ատամները խոզանակով | Ողողել բերանը ջրով | Լվանալ խոզանակը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 5):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սենդվիչ պատրաստելը",
+                options: ["Վերցնել հացի երկու կտոր", "Կարագ քսել հացին", "Դնել պանիր և երշիկ", "Միացնել կտորները"],
+                correctAnswer: "Վերցնել հացի երկու կտոր | Կարագ քսել հացին | Դնել պանիր և երշիկ | Միացնել կտորները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 6):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սուրճ եփելը",
+                options: ["Ավելացնել սուրճ և շաքար", "Դնել կրակին մինչև եռալը", "Լցնել բաժակի մեջ", "Ջուրը լցնել սրճեփի մեջ"],
+                correctAnswer: "Ջուրը լցնել սրճեփի մեջ | Ավելացնել սուրճ և շաքար | Դնել կրակին մինչև եռալը | Լցնել բաժակի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 7):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Բույսերը ջրելը",
+                options: ["Ջուրը լցնել հողի մեջ", "Դնել ջրամանը տեղը", "Լցնել ջրամանը ջրով", "Մոտենալ ծաղկամանին"],
+                correctAnswer: "Լցնել ջրամանը ջրով | Մոտենալ ծաղկամանին | Ջուրը լցնել հողի մեջ | Դնել ջրամանը տեղը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 8):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հեռախոսով զանգելը",
+                options: ["Զրուցել և անջատել", "Վերցնել հեռախոսը", "Հավաքել համարը", "Սպասել կապին և բարևել"],
+                correctAnswer: "Վերցնել հեռախոսը | Հավաքել համարը | Սպասել կապին և բարևել | Զրուցել և անջատել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 9):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հագնվելը",
+                options: ["Հագնել ներքնազգեստը", "Հագնել շապիկն ու տաբատը", "Հագնել գուլպաները", "Հագնել կոշիկները"],
+                correctAnswer: "Հագնել ներքնազգեստը | Հագնել շապիկն ու տաբատը | Հագնել գուլպաները | Հագնել կոշիկները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 10):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Տնից դուրս գալը",
+                options: ["Վերցնել հեռախոսն ու բանալիները", "Անջատել լույսերը տանը", "Փակել դուռը բանալիով", "Հագնել վերարկուն"],
+                correctAnswer: "Հագնել վերարկուն | Վերցնել հեռախոսն ու բանալիները | Անջատել լույսերը տանը | Փակել դուռը բանալիով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 11):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Աղցան պատրաստելը",
+                options: ["Ավելացնել աղ և ձեթ", "Խառնել ափսեի մեջ", "Լվանալ բանջարեղենը", "Կտրատել լոլիկն ու վարունգը"],
+                correctAnswer: "Լվանալ բանջարեղենը | Կտրատել լոլիկն ու վարունգը | Ավելացնել աղ և ձեթ | Խառնել ափսեի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 12):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սեղանը հավաքելը",
+                options: ["Լվանալ ափսեները", "Կերակուրները դնել սառնարանում", "Կեղտոտ սպասքը տանել լվացարան", "Սրբել սեղանը լաթով"],
+                correctAnswer: "Կերակուրները դնել սառնարանում | Կեղտոտ սպասքը տանել լվացարան | Սրբել սեղանը լաթով | Լվանալ ափսեները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 13):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ծառ տնկելը",
+                options: ["Փորել փոսը հողի մեջ", "Տնկին դնել փոսի մեջ", "Լցնել փոսը հողով", "Ջրել նոր տնկած ծառը"],
+                correctAnswer: "Փորել փոսը հողի մեջ | Տնկին դնել փոսի մեջ | Լցնել փոսը հողով | Ջրել նոր տնկած ծառը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 14):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձվածեղ պատրաստելը",
+                options: ["Կոտրել ձվերը թավայի մեջ", "Ավելացնել աղ և պղպեղ", "Եփել 3 րոպե և մատուցել", "Տաքացնել թավան ձեթով"],
+                correctAnswer: "Տաքացնել թավան ձեթով | Կոտրել ձվերը թավայի մեջ | Ավելացնել աղ և պղպեղ | Եփել 3 րոպե և մատուցել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 15):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Լվացք անելը",
+                options: ["Ավելացնել լվացքի փոշի", "Միացնել լվացքի ծրագիրը", "Հավաքել կեղտոտ հագուստը", "Լցնել լվացքի մեքենայի մեջ"],
+                correctAnswer: "Հավաքել կեղտոտ հագուստը | Լցնել լվացքի մեքենայի մեջ | Ավելացնել լվացքի փոշի | Միացնել լվացքի ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 16):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Կոշիկներ մաքրելը",
+                options: ["Թողնել չորանա", "Կոշիկից մաքրել փոշին", "Քսել կոշիկի քսուքը", "Փայլեցնել խոզանակով"],
+                correctAnswer: "Կոշիկից մաքրել փոշին | Քսել կոշիկի քսուքը | Փայլեցնել խոզանակով | Թողնել չորանա"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 17):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Համակարգիչը միացնելը",
+                options: ["Սեղմել միացման կոճակը", "Սպասել համակարգի բեռնմանը", "Մուտքագրել գաղտնաբառը", "Բացել անհրաժեշտ ծրագիրը"],
+                correctAnswer: "Սեղմել միացման կոճակը | Սպասել համակարգի բեռնմանը | Մուտքագրել գաղտնաբառը | Բացել անհրաժեշտ ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 18):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Գնումներ կատարելը",
+                options: ["Գնալ մոտակա խանութ", "Հավաքել ապրանքները զամբյուղի մեջ", "Վճարել դրամարկղում", "Գրել անհրաժեշտ գնումների ցուցակը"],
+                correctAnswer: "Գրել անհրաժեշտ գնումների ցուցակը | Գնալ մոտակա խանութ | Հավաքել ապրանքները զամբյուղի մեջ | Վճարել դրամարկղում"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 19):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձմերուկ կտրելը",
+                options: ["Զգուշությամբ կիսել մեծ դանակով", "Կտրատել փոքր կտորների", "Լվանալ ձմերուկը հոսող ջրի տակ", "Դնել մեծ տախտակի վրա"],
+                correctAnswer: "Լվանալ ձմերուկը հոսող ջրի տակ | Դնել մեծ տախտակի վրա | Զգուշությամբ կիսել մեծ դանակով | Կտրատել փոքր կտորների"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 20):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Մոմ վառելը",
+                options: ["Հանգցնել լուցկին զգուշությամբ", "Դնել մոմը մոմակալի մեջ", "Վերցնել լուցկին կամ կրակայրիչը", "Վառել մոմի պատրույգը"],
+                correctAnswer: "Դնել մոմը մոմակալի մեջ | Վերցնել լուցկին կամ կրակայրիչը | Վառել մոմի պատրույգը | Հանգցնել լուցկին զգուշությամբ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 21):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Թեյ պատրաստելը (Տարբերակ 21)",
+                options: ["Թեյնիկով ջուրը եռացնել", "Թեյի տոպրակը դնել բաժակի մեջ", "Եռման ջուրը լցնել բաժակի մեջ", "Թողնել 3 րոպե և խմել"],
+                correctAnswer: "Թեյնիկով ջուրը եռացնել | Թեյի տոպրակը դնել բաժակի մեջ | Եռման ջուրը լցնել բաժակի մեջ | Թողնել 3 րոպե և խմել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 22):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձեռքերը լվանալը (Տարբերակ 22)",
+                options: ["Օճառ քսել ափերին", "Տրորել ձեռքերը 20 վայրկյան", "Լվանալ օճառը և չորացնել սրբիչով", "Միացնել ջուրը և թրջել ձեռքերը"],
+                correctAnswer: "Միացնել ջուրը և թրջել ձեռքերը | Օճառ քսել ափերին | Տրորել ձեռքերը 20 վայրկյան | Լվանալ օճառը և չորացնել սրբիչով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 23):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Նամակ ուղարկելը (Տարբերակ 23)",
+                options: ["Գրել հասցեն և փակցնել նամականիշը", "Գցել ծրարը փոստարկղի մեջ", "Գրել նամակը թղթի վրա", "Դնել նամակը ծրարի մեջ"],
+                correctAnswer: "Գրել նամակը թղթի վրա | Դնել նամակը ծրարի մեջ | Գրել հասցեն և փակցնել նամականիշը | Գցել ծրարը փոստարկղի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 24):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ատամները մաքրելը (Տարբերակ 24)",
+                options: ["Լվանալ խոզանակը", "Ատամի մածուկը լցնել խոզանակի վրա", "Մաքրել ատամները խոզանակով", "Ողողել բերանը ջրով"],
+                correctAnswer: "Ատամի մածուկը լցնել խոզանակի վրա | Մաքրել ատամները խոզանակով | Ողողել բերանը ջրով | Լվանալ խոզանակը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 25):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սենդվիչ պատրաստելը (Տարբերակ 25)",
+                options: ["Վերցնել հացի երկու կտոր", "Կարագ քսել հացին", "Դնել պանիր և երշիկ", "Միացնել կտորները"],
+                correctAnswer: "Վերցնել հացի երկու կտոր | Կարագ քսել հացին | Դնել պանիր և երշիկ | Միացնել կտորները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 26):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սուրճ եփելը (Տարբերակ 26)",
+                options: ["Ավելացնել սուրճ և շաքար", "Դնել կրակին մինչև եռալը", "Լցնել բաժակի մեջ", "Ջուրը լցնել սրճեփի մեջ"],
+                correctAnswer: "Ջուրը լցնել սրճեփի մեջ | Ավելացնել սուրճ և շաքար | Դնել կրակին մինչև եռալը | Լցնել բաժակի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 27):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Բույսերը ջրելը (Տարբերակ 27)",
+                options: ["Ջուրը լցնել հողի մեջ", "Դնել ջրամանը տեղը", "Լցնել ջրամանը ջրով", "Մոտենալ ծաղկամանին"],
+                correctAnswer: "Լցնել ջրամանը ջրով | Մոտենալ ծաղկամանին | Ջուրը լցնել հողի մեջ | Դնել ջրամանը տեղը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 28):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հեռախոսով զանգելը (Տարբերակ 28)",
+                options: ["Զրուցել և անջատել", "Վերցնել հեռախոսը", "Հավաքել համարը", "Սպասել կապին և բարևել"],
+                correctAnswer: "Վերցնել հեռախոսը | Հավաքել համարը | Սպասել կապին և բարևել | Զրուցել և անջատել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 29):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հագնվելը (Տարբերակ 29)",
+                options: ["Հագնել ներքնազգեստը", "Հագնել շապիկն ու տաբատը", "Հագնել գուլպաները", "Հագնել կոշիկները"],
+                correctAnswer: "Հագնել ներքնազգեստը | Հագնել շապիկն ու տաբատը | Հագնել գուլպաները | Հագնել կոշիկները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 30):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Տնից դուրս գալը (Տարբերակ 30)",
+                options: ["Վերցնել հեռախոսն ու բանալիները", "Անջատել լույսերը տանը", "Փակել դուռը բանալիով", "Հագնել վերարկուն"],
+                correctAnswer: "Հագնել վերարկուն | Վերցնել հեռախոսն ու բանալիները | Անջատել լույսերը տանը | Փակել դուռը բանալիով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 31):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Աղցան պատրաստելը (Տարբերակ 31)",
+                options: ["Ավելացնել աղ և ձեթ", "Խառնել ափսեի մեջ", "Լվանալ բանջարեղենը", "Կտրատել լոլիկն ու վարունգը"],
+                correctAnswer: "Լվանալ բանջարեղենը | Կտրատել լոլիկն ու վարունգը | Ավելացնել աղ և ձեթ | Խառնել ափսեի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 32):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սեղանը հավաքելը (Տարբերակ 32)",
+                options: ["Լվանալ ափսեները", "Կերակուրները դնել սառնարանում", "Կեղտոտ սպասքը տանել լվացարան", "Սրբել սեղանը լաթով"],
+                correctAnswer: "Կերակուրները դնել սառնարանում | Կեղտոտ սպասքը տանել լվացարան | Սրբել սեղանը լաթով | Լվանալ ափսեները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 33):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ծառ տնկելը (Տարբերակ 33)",
+                options: ["Փորել փոսը հողի մեջ", "Տնկին դնել փոսի մեջ", "Լցնել փոսը հողով", "Ջրել նոր տնկած ծառը"],
+                correctAnswer: "Փորել փոսը հողի մեջ | Տնկին դնել փոսի մեջ | Լցնել փոսը հողով | Ջրել նոր տնկած ծառը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 34):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձվածեղ պատրաստելը (Տարբերակ 34)",
+                options: ["Կոտրել ձվերը թավայի մեջ", "Ավելացնել աղ և պղպեղ", "Եփել 3 րոպե և մատուցել", "Տաքացնել թավան ձեթով"],
+                correctAnswer: "Տաքացնել թավան ձեթով | Կոտրել ձվերը թավայի մեջ | Ավելացնել աղ և պղպեղ | Եփել 3 րոպե և մատուցել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 35):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Լվացք անելը (Տարբերակ 35)",
+                options: ["Ավելացնել լվացքի փոշի", "Միացնել լվացքի ծրագիրը", "Հավաքել կեղտոտ հագուստը", "Լցնել լվացքի մեքենայի մեջ"],
+                correctAnswer: "Հավաքել կեղտոտ հագուստը | Լցնել լվացքի մեքենայի մեջ | Ավելացնել լվացքի փոշի | Միացնել լվացքի ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 36):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Կոշիկներ մաքրելը (Տարբերակ 36)",
+                options: ["Թողնել չորանա", "Կոշիկից մաքրել փոշին", "Քսել կոշիկի քսուքը", "Փայլեցնել խոզանակով"],
+                correctAnswer: "Կոշիկից մաքրել փոշին | Քսել կոշիկի քսուքը | Փայլեցնել խոզանակով | Թողնել չորանա"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 37):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Համակարգիչը միացնելը (Տարբերակ 37)",
+                options: ["Սեղմել միացման կոճակը", "Սպասել համակարգի բեռնմանը", "Մուտքագրել գաղտնաբառը", "Բացել անհրաժեշտ ծրագիրը"],
+                correctAnswer: "Սեղմել միացման կոճակը | Սպասել համակարգի բեռնմանը | Մուտքագրել գաղտնաբառը | Բացել անհրաժեշտ ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 38):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Գնումներ կատարելը (Տարբերակ 38)",
+                options: ["Գնալ մոտակա խանութ", "Հավաքել ապրանքները զամբյուղի մեջ", "Վճարել դրամարկղում", "Գրել անհրաժեշտ գնումների ցուցակը"],
+                correctAnswer: "Գրել անհրաժեշտ գնումների ցուցակը | Գնալ մոտակա խանութ | Հավաքել ապրանքները զամբյուղի մեջ | Վճարել դրամարկղում"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 39):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձմերուկ կտրելը (Տարբերակ 39)",
+                options: ["Զգուշությամբ կիսել մեծ դանակով", "Կտրատել փոքր կտորների", "Լվանալ ձմերուկը հոսող ջրի տակ", "Դնել մեծ տախտակի վրա"],
+                correctAnswer: "Լվանալ ձմերուկը հոսող ջրի տակ | Դնել մեծ տախտակի վրա | Զգուշությամբ կիսել մեծ դանակով | Կտրատել փոքր կտորների"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 40):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Մոմ վառելը (Տարբերակ 40)",
+                options: ["Հանգցնել լուցկին զգուշությամբ", "Դնել մոմը մոմակալի մեջ", "Վերցնել լուցկին կամ կրակայրիչը", "Վառել մոմի պատրույգը"],
+                correctAnswer: "Դնել մոմը մոմակալի մեջ | Վերցնել լուցկին կամ կրակայրիչը | Վառել մոմի պատրույգը | Հանգցնել լուցկին զգուշությամբ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 41):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Թեյ պատրաստելը (Տարբերակ 41)",
+                options: ["Թեյնիկով ջուրը եռացնել", "Թեյի տոպրակը դնել բաժակի մեջ", "Եռման ջուրը լցնել բաժակի մեջ", "Թողնել 3 րոպե և խմել"],
+                correctAnswer: "Թեյնիկով ջուրը եռացնել | Թեյի տոպրակը դնել բաժակի մեջ | Եռման ջուրը լցնել բաժակի մեջ | Թողնել 3 րոպե և խմել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 42):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձեռքերը լվանալը (Տարբերակ 42)",
+                options: ["Օճառ քսել ափերին", "Տրորել ձեռքերը 20 վայրկյան", "Լվանալ օճառը և չորացնել սրբիչով", "Միացնել ջուրը և թրջել ձեռքերը"],
+                correctAnswer: "Միացնել ջուրը և թրջել ձեռքերը | Օճառ քսել ափերին | Տրորել ձեռքերը 20 վայրկյան | Լվանալ օճառը և չորացնել սրբիչով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 43):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Նամակ ուղարկելը (Տարբերակ 43)",
+                options: ["Գրել հասցեն և փակցնել նամականիշը", "Գցել ծրարը փոստարկղի մեջ", "Գրել նամակը թղթի վրա", "Դնել նամակը ծրարի մեջ"],
+                correctAnswer: "Գրել նամակը թղթի վրա | Դնել նամակը ծրարի մեջ | Գրել հասցեն և փակցնել նամականիշը | Գցել ծրարը փոստարկղի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 44):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ատամները մաքրելը (Տարբերակ 44)",
+                options: ["Լվանալ խոզանակը", "Ատամի մածուկը լցնել խոզանակի վրա", "Մաքրել ատամները խոզանակով", "Ողողել բերանը ջրով"],
+                correctAnswer: "Ատամի մածուկը լցնել խոզանակի վրա | Մաքրել ատամները խոզանակով | Ողողել բերանը ջրով | Լվանալ խոզանակը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 45):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սենդվիչ պատրաստելը (Տարբերակ 45)",
+                options: ["Վերցնել հացի երկու կտոր", "Կարագ քսել հացին", "Դնել պանիր և երշիկ", "Միացնել կտորները"],
+                correctAnswer: "Վերցնել հացի երկու կտոր | Կարագ քսել հացին | Դնել պանիր և երշիկ | Միացնել կտորները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 46):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սուրճ եփելը (Տարբերակ 46)",
+                options: ["Ավելացնել սուրճ և շաքար", "Դնել կրակին մինչև եռալը", "Լցնել բաժակի մեջ", "Ջուրը լցնել սրճեփի մեջ"],
+                correctAnswer: "Ջուրը լցնել սրճեփի մեջ | Ավելացնել սուրճ և շաքար | Դնել կրակին մինչև եռալը | Լցնել բաժակի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 47):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Բույսերը ջրելը (Տարբերակ 47)",
+                options: ["Ջուրը լցնել հողի մեջ", "Դնել ջրամանը տեղը", "Լցնել ջրամանը ջրով", "Մոտենալ ծաղկամանին"],
+                correctAnswer: "Լցնել ջրամանը ջրով | Մոտենալ ծաղկամանին | Ջուրը լցնել հողի մեջ | Դնել ջրամանը տեղը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 48):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հեռախոսով զանգելը (Տարբերակ 48)",
+                options: ["Զրուցել և անջատել", "Վերցնել հեռախոսը", "Հավաքել համարը", "Սպասել կապին և բարևել"],
+                correctAnswer: "Վերցնել հեռախոսը | Հավաքել համարը | Սպասել կապին և բարևել | Զրուցել և անջատել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 49):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հագնվելը (Տարբերակ 49)",
+                options: ["Հագնել ներքնազգեստը", "Հագնել շապիկն ու տաբատը", "Հագնել գուլպաները", "Հագնել կոշիկները"],
+                correctAnswer: "Հագնել ներքնազգեստը | Հագնել շապիկն ու տաբատը | Հագնել գուլպաները | Հագնել կոշիկները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 50):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Տնից դուրս գալը (Տարբերակ 50)",
+                options: ["Վերցնել հեռախոսն ու բանալիները", "Անջատել լույսերը տանը", "Փակել դուռը բանալիով", "Հագնել վերարկուն"],
+                correctAnswer: "Հագնել վերարկուն | Վերցնել հեռախոսն ու բանալիները | Անջատել լույսերը տանը | Փակել դուռը բանալիով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 51):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Աղցան պատրաստելը (Տարբերակ 51)",
+                options: ["Ավելացնել աղ և ձեթ", "Խառնել ափսեի մեջ", "Լվանալ բանջարեղենը", "Կտրատել լոլիկն ու վարունգը"],
+                correctAnswer: "Լվանալ բանջարեղենը | Կտրատել լոլիկն ու վարունգը | Ավելացնել աղ և ձեթ | Խառնել ափսեի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 52):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սեղանը հավաքելը (Տարբերակ 52)",
+                options: ["Լվանալ ափսեները", "Կերակուրները դնել սառնարանում", "Կեղտոտ սպասքը տանել լվացարան", "Սրբել սեղանը լաթով"],
+                correctAnswer: "Կերակուրները դնել սառնարանում | Կեղտոտ սպասքը տանել լվացարան | Սրբել սեղանը լաթով | Լվանալ ափսեները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 53):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ծառ տնկելը (Տարբերակ 53)",
+                options: ["Փորել փոսը հողի մեջ", "Տնկին դնել փոսի մեջ", "Լցնել փոսը հողով", "Ջրել նոր տնկած ծառը"],
+                correctAnswer: "Փորել փոսը հողի մեջ | Տնկին դնել փոսի մեջ | Լցնել փոսը հողով | Ջրել նոր տնկած ծառը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 54):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձվածեղ պատրաստելը (Տարբերակ 54)",
+                options: ["Կոտրել ձվերը թավայի մեջ", "Ավելացնել աղ և պղպեղ", "Եփել 3 րոպե և մատուցել", "Տաքացնել թավան ձեթով"],
+                correctAnswer: "Տաքացնել թավան ձեթով | Կոտրել ձվերը թավայի մեջ | Ավելացնել աղ և պղպեղ | Եփել 3 րոպե և մատուցել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 55):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Լվացք անելը (Տարբերակ 55)",
+                options: ["Ավելացնել լվացքի փոշի", "Միացնել լվացքի ծրագիրը", "Հավաքել կեղտոտ հագուստը", "Լցնել լվացքի մեքենայի մեջ"],
+                correctAnswer: "Հավաքել կեղտոտ հագուստը | Լցնել լվացքի մեքենայի մեջ | Ավելացնել լվացքի փոշի | Միացնել լվացքի ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 56):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Կոշիկներ մաքրելը (Տարբերակ 56)",
+                options: ["Թողնել չորանա", "Կոշիկից մաքրել փոշին", "Քսել կոշիկի քսուքը", "Փայլեցնել խոզանակով"],
+                correctAnswer: "Կոշիկից մաքրել փոշին | Քսել կոշիկի քսուքը | Փայլեցնել խոզանակով | Թողնել չորանա"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 57):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Համակարգիչը միացնելը (Տարբերակ 57)",
+                options: ["Սեղմել միացման կոճակը", "Սպասել համակարգի բեռնմանը", "Մուտքագրել գաղտնաբառը", "Բացել անհրաժեշտ ծրագիրը"],
+                correctAnswer: "Սեղմել միացման կոճակը | Սպասել համակարգի բեռնմանը | Մուտքագրել գաղտնաբառը | Բացել անհրաժեշտ ծրագիրը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 58):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Գնումներ կատարելը (Տարբերակ 58)",
+                options: ["Գնալ մոտակա խանութ", "Հավաքել ապրանքները զամբյուղի մեջ", "Վճարել դրամարկղում", "Գրել անհրաժեշտ գնումների ցուցակը"],
+                correctAnswer: "Գրել անհրաժեշտ գնումների ցուցակը | Գնալ մոտակա խանութ | Հավաքել ապրանքները զամբյուղի մեջ | Վճարել դրամարկղում"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 59):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձմերուկ կտրելը (Տարբերակ 59)",
+                options: ["Զգուշությամբ կիսել մեծ դանակով", "Կտրատել փոքր կտորների", "Լվանալ ձմերուկը հոսող ջրի տակ", "Դնել մեծ տախտակի վրա"],
+                correctAnswer: "Լվանալ ձմերուկը հոսող ջրի տակ | Դնել մեծ տախտակի վրա | Զգուշությամբ կիսել մեծ դանակով | Կտրատել փոքր կտորների"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 60):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Մոմ վառելը (Տարբերակ 60)",
+                options: ["Հանգցնել լուցկին զգուշությամբ", "Դնել մոմը մոմակալի մեջ", "Վերցնել լուցկին կամ կրակայրիչը", "Վառել մոմի պատրույգը"],
+                correctAnswer: "Դնել մոմը մոմակալի մեջ | Վերցնել լուցկին կամ կրակայրիչը | Վառել մոմի պատրույգը | Հանգցնել լուցկին զգուշությամբ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 61):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Թեյ պատրաստելը (Տարբերակ 61)",
+                options: ["Թեյնիկով ջուրը եռացնել", "Թեյի տոպրակը դնել բաժակի մեջ", "Եռման ջուրը լցնել բաժակի մեջ", "Թողնել 3 րոպե և խմել"],
+                correctAnswer: "Թեյնիկով ջուրը եռացնել | Թեյի տոպրակը դնել բաժակի մեջ | Եռման ջուրը լցնել բաժակի մեջ | Թողնել 3 րոպե և խմել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 62):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ձեռքերը լվանալը (Տարբերակ 62)",
+                options: ["Օճառ քսել ափերին", "Տրորել ձեռքերը 20 վայրկյան", "Լվանալ օճառը և չորացնել սրբիչով", "Միացնել ջուրը և թրջել ձեռքերը"],
+                correctAnswer: "Միացնել ջուրը և թրջել ձեռքերը | Օճառ քսել ափերին | Տրորել ձեռքերը 20 վայրկյան | Լվանալ օճառը և չորացնել սրբիչով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 63):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Նամակ ուղարկելը (Տարբերակ 63)",
+                options: ["Գրել հասցեն և փակցնել նամականիշը", "Գցել ծրարը փոստարկղի մեջ", "Գրել նամակը թղթի վրա", "Դնել նամակը ծրարի մեջ"],
+                correctAnswer: "Գրել նամակը թղթի վրա | Դնել նամակը ծրարի մեջ | Գրել հասցեն և փակցնել նամականիշը | Գցել ծրարը փոստարկղի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 64):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ատամները մաքրելը (Տարբերակ 64)",
+                options: ["Լվանալ խոզանակը", "Ատամի մածուկը լցնել խոզանակի վրա", "Մաքրել ատամները խոզանակով", "Ողողել բերանը ջրով"],
+                correctAnswer: "Ատամի մածուկը լցնել խոզանակի վրա | Մաքրել ատամները խոզանակով | Ողողել բերանը ջրով | Լվանալ խոզանակը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 65):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սենդվիչ պատրաստելը (Տարբերակ 65)",
+                options: ["Վերցնել հացի երկու կտոր", "Կարագ քսել հացին", "Դնել պանիր և երշիկ", "Միացնել կտորները"],
+                correctAnswer: "Վերցնել հացի երկու կտոր | Կարագ քսել հացին | Դնել պանիր և երշիկ | Միացնել կտորները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 66):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Սուրճ եփելը (Տարբերակ 66)",
+                options: ["Ավելացնել սուրճ և շաքար", "Դնել կրակին մինչև եռալը", "Լցնել բաժակի մեջ", "Ջուրը լցնել սրճեփի մեջ"],
+                correctAnswer: "Ջուրը լցնել սրճեփի մեջ | Ավելացնել սուրճ և շաքար | Դնել կրակին մինչև եռալը | Լցնել բաժակի մեջ"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 67):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Բույսերը ջրելը (Տարբերակ 67)",
+                options: ["Ջուրը լցնել հողի մեջ", "Դնել ջրամանը տեղը", "Լցնել ջրամանը ջրով", "Մոտենալ ծաղկամանին"],
+                correctAnswer: "Լցնել ջրամանը ջրով | Մոտենալ ծաղկամանին | Ջուրը լցնել հողի մեջ | Դնել ջրամանը տեղը"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 68):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հեռախոսով զանգելը (Տարբերակ 68)",
+                options: ["Զրուցել և անջատել", "Վերցնել հեռախոսը", "Հավաքել համարը", "Սպասել կապին և բարևել"],
+                correctAnswer: "Վերցնել հեռախոսը | Հավաքել համարը | Սպասել կապին և բարևել | Զրուցել և անջատել"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 69):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Հագնվելը (Տարբերակ 69)",
+                options: ["Հագնել ներքնազգեստը", "Հագնել շապիկն ու տաբատը", "Հագնել գուլպաները", "Հագնել կոշիկները"],
+                correctAnswer: "Հագնել ներքնազգեստը | Հագնել շապիկն ու տաբատը | Հագնել գուլպաները | Հագնել կոշիկները"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Armenian-American meal (Step 70):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Տնից դուրս գալը (Տարբերակ 70)",
+                options: ["Վերցնել հեռախոսն ու բանալիները", "Անջատել լույսերը տանը", "Փակել դուռը բանալիով", "Հագնել վերարկուն"],
+                correctAnswer: "Հագնել վերարկուն | Վերցնել հեռախոսն ու բանալիները | Անջատել լույսերը տանը | Փակել դուռը բանալիով"
             )
         ]
     )
@@ -992,528 +922,453 @@ struct ArmenianFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 1):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 1)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 2):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 2)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 3):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 3)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 4):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 4)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 5):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 5)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 6):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 6)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 7):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 7)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 8):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 8)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 9):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 9)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 10):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 10)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 11):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 11)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 12):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 12)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 13):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 13)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 14):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 14)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 15):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 15)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 16):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 16)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 17):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 17)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 18):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 18)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 19):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 19)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 20):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 20)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 21):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 21)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 22):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 22)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 23):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 23)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 24):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 24)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 25):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 25)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 26):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 26)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 27):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 27)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 28):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 28)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 29):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 29)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 30):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 30)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 31):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 31)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 32):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 32)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 33):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 33)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 34):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 34)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 35):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 35)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 36):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 36)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 37):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 37)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 38):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 38)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 39):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 39)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 40):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 40)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 41):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 41)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 42):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 42)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 43):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 43)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 44):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 44)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 45):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 45)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 46):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 46)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 47):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 47)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 48):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 48)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 49):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 49)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 50):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 50)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 51):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 51)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 52):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 52)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 53):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 53)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 54):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 54)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 55):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 55)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 56):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 56)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 57):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 57)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 58):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 58)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 59):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 59)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 60):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 60)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 61):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 61)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 62):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 62)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 63):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 63)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 64):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 64)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 65):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 65)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 66):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 66)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 67):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 67)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 68):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 68)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 69):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 69)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 70):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 70)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 71):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 71)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 72):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 72)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 73):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 73)",
+                options: ["Փոքր տոպրակ (1 կգ) $3-ով", "Մեծ տոպրակ (2 կգ) $4-ով"],
+                correctAnswer: "Մեծ տոպրակ (2 կգ) $4-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 74):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 74)",
+                options: ["Փոքր տոպրակ (2 կգ) $6-ով", "Մեծ տոպրակ (4 կգ) $9-ով"],
+                correctAnswer: "Մեծ տոպրակ (4 կգ) $9-ով"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for lavash ingredients at local CA market (Option 75):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Համեմատեք գները և ընտրեք լավագույն արժեքով տարբերակը. Լոլիկի գնում (Տարբերակ 75)",
+                options: ["Փոքր տոպրակ (3 կգ) $9-ով", "Մեծ տոպրակ (6 կգ) $14-ով"],
+                correctAnswer: "Մեծ տոպրակ (6 կգ) $14-ով"
             )
         ]
     )

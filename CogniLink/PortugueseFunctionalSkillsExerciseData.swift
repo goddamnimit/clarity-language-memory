@@ -490,493 +490,423 @@ struct PortugueseFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 1):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar um Chá",
+                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
+                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 2):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar as Mãos",
+                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
+                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 3):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Enviar uma Carta",
+                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
+                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 4):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Escovar os Dentes",
+                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
+                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 5):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer um Sanduíche",
+                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
+                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 6):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Passar Café",
+                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
+                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 7):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Regar as Plantas",
+                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
+                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 8):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Ligação",
+                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
+                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 9):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Vestir-se pela Manhã",
+                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
+                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 10):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Sair de Casa",
+                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
+                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 11):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Salada",
+                options: ["Adicionar sal, azeite e limão", "Misturar tudo em uma tigela", "Lavar bem as verduras em água corrente", "Cortar o tomate e o pepino em fatias"],
+                correctAnswer: "Lavar bem as verduras em água corrente | Cortar o tomate e o pepino em fatias | Adicionar sal, azeite e limão | Misturar tudo em uma tigela"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 12):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar a Mesa",
+                options: ["Secar a mesa com um pano limpo", "Guardar os alimentos na geladeira", "Levar a louça suja para a pia", "Passar um pano úmido na mesa"],
+                correctAnswer: "Guardar os alimentos na geladeira | Levar a louça suja para a pia | Passar um pano úmido na mesa | Secar a mesa com um pano limpo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 13):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Plantar uma Flor",
+                options: ["Cavar um pequeno buraco na terra", "Colocar a muda de flor no buraco", "Preencher o espaço com terra adubada", "Regar a flor recém-plantada"],
+                correctAnswer: "Cavar um pequeno buraco na terra | Colocar a muda de flor no buraco | Preencher o espaço com terra adubada | Regar a flor recém-plantada"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 14):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar Ovos Mexidos",
+                options: ["Quebrar os ovos diretamente na frigideira", "Adicionar uma pitada de sal", "Mexer os ovos até cozinhar", "Aquecer a frigideira com um pouco de manteiga"],
+                correctAnswer: "Aquecer a frigideira com um pouco de manteiga | Quebrar os ovos diretamente na frigideira | Adicionar uma pitada de sal | Mexer os ovos até cozinhar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 15):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar Roupa",
+                options: ["Adicionar o sabão em pó no compartimento", "Selecionar o ciclo e ligar a máquina", "Separar as roupas por cores", "Colocar as roupas na máquina de lavar"],
+                correctAnswer: "Separar as roupas por cores | Colocar as roupas na máquina de lavar | Adicionar o sabão em pó no compartimento | Selecionar o ciclo e ligar a máquina"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 16):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar os Sapatos",
+                options: ["Deixar secar na sombra", "Remover a poeira seca do sapato com pano", "Aplicar a graxa de sapato uniformemente", "Lustrar com a escova apropriada"],
+                correctAnswer: "Remover a poeira seca do sapato com pano | Aplicar a graxa de sapato uniformemente | Lustrar com a escova apropriada | Deixar secar na sombra"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 17):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ligar o Computador",
+                options: ["Pressionar o botão de ligar na CPU", "Aguardar o sistema operacional carregar", "Digitar a senha de usuário", "Abrir o navegador de internet"],
+                correctAnswer: "Pressionar o botão de ligar na CPU | Aguardar o sistema operacional carregar | Digitar a senha de usuário | Abrir o navegador de internet"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 18):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer Compras",
+                options: ["Ir até o supermercado local", "Colocar os itens selecionados no carrinho", "Pagar os produtos no caixa", "Escrever a lista de itens necessários"],
+                correctAnswer: "Escrever a lista de itens necessários | Ir até o supermercado local | Colocar os itens selecionados no carrinho | Pagar os produtos no caixa"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 19):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Cortar Melancia",
+                options: ["Cortar ao meio com uma faca grande", "Fatiar em pedaços menores", "Lavar a melancia em água corrente", "Colocar a fruta sobre a tábua de corte"],
+                correctAnswer: "Lavar a melancia em água corrente | Colocar a fruta sobre a tábua de corte | Cortar ao meio com uma faca grande | Fatiar em pedaços menores"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 20):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Acender uma Vela",
+                options: ["Apagar o fósforo com um sopro leve", "Colocar a vela em um castiçal firme", "Pegar a caixa de fósforos ou isqueiro", "Acender o pavio da vela com cuidado"],
+                correctAnswer: "Colocar a vela em um castiçal firme | Pegar a caixa de fósforos ou isqueiro | Acender o pavio da vela com cuidado | Apagar o fósforo com um sopro leve"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 21):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar um Chá (Opção 21)",
+                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
+                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 22):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar as Mãos (Opção 22)",
+                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
+                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 23):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Enviar uma Carta (Opção 23)",
+                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
+                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 24):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Escovar os Dentes (Opção 24)",
+                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
+                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 25):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer um Sanduíche (Opção 25)",
+                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
+                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 26):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Passar Café (Opção 26)",
+                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
+                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 27):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Regar as Plantas (Opção 27)",
+                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
+                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 28):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Ligação (Opção 28)",
+                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
+                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 29):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Vestir-se pela Manhã (Opção 29)",
+                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
+                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 30):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Sair de Casa (Opção 30)",
+                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
+                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 31):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Salada (Opção 31)",
+                options: ["Adicionar sal, azeite e limão", "Misturar tudo em uma tigela", "Lavar bem as verduras em água corrente", "Cortar o tomate e o pepino em fatias"],
+                correctAnswer: "Lavar bem as verduras em água corrente | Cortar o tomate e o pepino em fatias | Adicionar sal, azeite e limão | Misturar tudo em uma tigela"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 32):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar a Mesa (Opção 32)",
+                options: ["Secar a mesa com um pano limpo", "Guardar os alimentos na geladeira", "Levar a louça suja para a pia", "Passar um pano úmido na mesa"],
+                correctAnswer: "Guardar os alimentos na geladeira | Levar a louça suja para a pia | Passar um pano úmido na mesa | Secar a mesa com um pano limpo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 33):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Plantar uma Flor (Opção 33)",
+                options: ["Cavar um pequeno buraco na terra", "Colocar a muda de flor no buraco", "Preencher o espaço com terra adubada", "Regar a flor recém-plantada"],
+                correctAnswer: "Cavar um pequeno buraco na terra | Colocar a muda de flor no buraco | Preencher o espaço com terra adubada | Regar a flor recém-plantada"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 34):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar Ovos Mexidos (Opção 34)",
+                options: ["Quebrar os ovos diretamente na frigideira", "Adicionar uma pitada de sal", "Mexer os ovos até cozinhar", "Aquecer a frigideira com um pouco de manteiga"],
+                correctAnswer: "Aquecer a frigideira com um pouco de manteiga | Quebrar os ovos diretamente na frigideira | Adicionar uma pitada de sal | Mexer os ovos até cozinhar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 35):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar Roupa (Opção 35)",
+                options: ["Adicionar o sabão em pó no compartimento", "Selecionar o ciclo e ligar a máquina", "Separar as roupas por cores", "Colocar as roupas na máquina de lavar"],
+                correctAnswer: "Separar as roupas por cores | Colocar as roupas na máquina de lavar | Adicionar o sabão em pó no compartimento | Selecionar o ciclo e ligar a máquina"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 36):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar os Sapatos (Opção 36)",
+                options: ["Deixar secar na sombra", "Remover a poeira seca do sapato com pano", "Aplicar a graxa de sapato uniformemente", "Lustrar com a escova apropriada"],
+                correctAnswer: "Remover a poeira seca do sapato com pano | Aplicar a graxa de sapato uniformemente | Lustrar com a escova apropriada | Deixar secar na sombra"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 37):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ligar o Computador (Opção 37)",
+                options: ["Pressionar o botão de ligar na CPU", "Aguardar o sistema operacional carregar", "Digitar a senha de usuário", "Abrir o navegador de internet"],
+                correctAnswer: "Pressionar o botão de ligar na CPU | Aguardar o sistema operacional carregar | Digitar a senha de usuário | Abrir o navegador de internet"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 38):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer Compras (Opção 38)",
+                options: ["Ir até o supermercado local", "Colocar os itens selecionados no carrinho", "Pagar os produtos no caixa", "Escrever a lista de itens necessários"],
+                correctAnswer: "Escrever a lista de itens necessários | Ir até o supermercado local | Colocar os itens selecionados no carrinho | Pagar os produtos no caixa"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 39):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Cortar Melancia (Opção 39)",
+                options: ["Cortar ao meio com uma faca grande", "Fatiar em pedaços menores", "Lavar a melancia em água corrente", "Colocar a fruta sobre a tábua de corte"],
+                correctAnswer: "Lavar a melancia em água corrente | Colocar a fruta sobre a tábua de corte | Cortar ao meio com uma faca grande | Fatiar em pedaços menores"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 40):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Acender uma Vela (Opção 40)",
+                options: ["Apagar o fósforo com um sopro leve", "Colocar a vela em um castiçal firme", "Pegar a caixa de fósforos ou isqueiro", "Acender o pavio da vela com cuidado"],
+                correctAnswer: "Colocar a vela em um castiçal firme | Pegar a caixa de fósforos ou isqueiro | Acender o pavio da vela com cuidado | Apagar o fósforo com um sopro leve"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 41):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar um Chá (Opção 41)",
+                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
+                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 42):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar as Mãos (Opção 42)",
+                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
+                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 43):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Enviar uma Carta (Opção 43)",
+                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
+                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 44):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Escovar os Dentes (Opção 44)",
+                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
+                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 45):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer um Sanduíche (Opção 45)",
+                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
+                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 46):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Passar Café (Opção 46)",
+                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
+                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 47):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Regar as Plantas (Opção 47)",
+                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
+                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 48):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Ligação (Opção 48)",
+                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
+                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 49):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Vestir-se pela Manhã (Opção 49)",
+                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
+                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 50):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Sair de Casa (Opção 50)",
+                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
+                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 51):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Salada (Opção 51)",
+                options: ["Adicionar sal, azeite e limão", "Misturar tudo em uma tigela", "Lavar bem as verduras em água corrente", "Cortar o tomate e o pepino em fatias"],
+                correctAnswer: "Lavar bem as verduras em água corrente | Cortar o tomate e o pepino em fatias | Adicionar sal, azeite e limão | Misturar tudo em uma tigela"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 52):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar a Mesa (Opção 52)",
+                options: ["Secar a mesa com um pano limpo", "Guardar os alimentos na geladeira", "Levar a louça suja para a pia", "Passar um pano úmido na mesa"],
+                correctAnswer: "Guardar os alimentos na geladeira | Levar a louça suja para a pia | Passar um pano úmido na mesa | Secar a mesa com um pano limpo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 53):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Plantar uma Flor (Opção 53)",
+                options: ["Cavar um pequeno buraco na terra", "Colocar a muda de flor no buraco", "Preencher o espaço com terra adubada", "Regar a flor recém-plantada"],
+                correctAnswer: "Cavar um pequeno buraco na terra | Colocar a muda de flor no buraco | Preencher o espaço com terra adubada | Regar a flor recém-plantada"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 54):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar Ovos Mexidos (Opção 54)",
+                options: ["Quebrar os ovos diretamente na frigideira", "Adicionar uma pitada de sal", "Mexer os ovos até cozinhar", "Aquecer a frigideira com um pouco de manteiga"],
+                correctAnswer: "Aquecer a frigideira com um pouco de manteiga | Quebrar os ovos diretamente na frigideira | Adicionar uma pitada de sal | Mexer os ovos até cozinhar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 55):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar Roupa (Opção 55)",
+                options: ["Adicionar o sabão em pó no compartimento", "Selecionar o ciclo e ligar a máquina", "Separar as roupas por cores", "Colocar as roupas na máquina de lavar"],
+                correctAnswer: "Separar as roupas por cores | Colocar as roupas na máquina de lavar | Adicionar o sabão em pó no compartimento | Selecionar o ciclo e ligar a máquina"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 56):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Limpar os Sapatos (Opção 56)",
+                options: ["Deixar secar na sombra", "Remover a poeira seca do sapato com pano", "Aplicar a graxa de sapato uniformemente", "Lustrar com a escova apropriada"],
+                correctAnswer: "Remover a poeira seca do sapato com pano | Aplicar a graxa de sapato uniformemente | Lustrar com a escova apropriada | Deixar secar na sombra"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 57):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ligar o Computador (Opção 57)",
+                options: ["Pressionar o botão de ligar na CPU", "Aguardar o sistema operacional carregar", "Digitar a senha de usuário", "Abrir o navegador de internet"],
+                correctAnswer: "Pressionar o botão de ligar na CPU | Aguardar o sistema operacional carregar | Digitar a senha de usuário | Abrir o navegador de internet"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 58):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer Compras (Opção 58)",
+                options: ["Ir até o supermercado local", "Colocar os itens selecionados no carrinho", "Pagar os produtos no caixa", "Escrever a lista de itens necessários"],
+                correctAnswer: "Escrever a lista de itens necessários | Ir até o supermercado local | Colocar os itens selecionados no carrinho | Pagar os produtos no caixa"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 59):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Cortar Melancia (Opção 59)",
+                options: ["Cortar ao meio com uma faca grande", "Fatiar em pedaços menores", "Lavar a melancia em água corrente", "Colocar a fruta sobre a tábua de corte"],
+                correctAnswer: "Lavar a melancia em água corrente | Colocar a fruta sobre a tábua de corte | Cortar ao meio com uma faca grande | Fatiar em pedaços menores"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 60):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Acender uma Vela (Opção 60)",
+                options: ["Apagar o fósforo com um sopro leve", "Colocar a vela em um castiçal firme", "Pegar a caixa de fósforos ou isqueiro", "Acender o pavio da vela com cuidado"],
+                correctAnswer: "Colocar a vela em um castiçal firme | Pegar a caixa de fósforos ou isqueiro | Acender o pavio da vela com cuidado | Apagar o fósforo com um sopro leve"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 61):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Preparar um Chá (Opção 61)",
+                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
+                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 62):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Lavar as Mãos (Opção 62)",
+                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
+                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 63):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Enviar uma Carta (Opção 63)",
+                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
+                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 64):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Escovar os Dentes (Opção 64)",
+                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
+                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 65):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer um Sanduíche (Opção 65)",
+                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
+                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 66):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Passar Café (Opção 66)",
+                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
+                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 67):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Regar as Plantas (Opção 67)",
+                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
+                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 68):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Fazer uma Ligação (Opção 68)",
+                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
+                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 69):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Vestir-se pela Manhã (Opção 69)",
+                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
+                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Brazilian-American meal (Step 70):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Sair de Casa (Opção 70)",
+                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
+                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
             )
         ]
     )
@@ -992,528 +922,453 @@ struct PortugueseFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 1):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 1):",
+                options: ["Pacote de 200g por $4", "Pacote de 400g por $6"],
+                correctAnswer: "Pacote de 400g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 2):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 2):",
+                options: ["Pacote de 300g por $5", "Pacote de 600g por $8"],
+                correctAnswer: "Pacote de 600g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 3):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 3):",
+                options: ["Pacote de 400g por $6", "Pacote de 800g por $10"],
+                correctAnswer: "Pacote de 800g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 4):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 4):",
+                options: ["Pacote de 500g por $7", "Pacote de 1000g por $12"],
+                correctAnswer: "Pacote de 1000g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 5):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 5):",
+                options: ["Pacote de 600g por $4", "Pacote de 1200g por $6"],
+                correctAnswer: "Pacote de 1200g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 6):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 6):",
+                options: ["Pacote de 200g por $5", "Pacote de 400g por $8"],
+                correctAnswer: "Pacote de 400g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 7):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 7):",
+                options: ["Pacote de 300g por $6", "Pacote de 600g por $10"],
+                correctAnswer: "Pacote de 600g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 8):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 8):",
+                options: ["Pacote de 400g por $7", "Pacote de 800g por $12"],
+                correctAnswer: "Pacote de 800g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 9):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 9):",
+                options: ["Pacote de 500g por $4", "Pacote de 1000g por $6"],
+                correctAnswer: "Pacote de 1000g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 10):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 10):",
+                options: ["Pacote de 600g por $5", "Pacote de 1200g por $8"],
+                correctAnswer: "Pacote de 1200g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 11):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 11):",
+                options: ["Pacote de 200g por $6", "Pacote de 400g por $10"],
+                correctAnswer: "Pacote de 400g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 12):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 12):",
+                options: ["Pacote de 300g por $7", "Pacote de 600g por $12"],
+                correctAnswer: "Pacote de 600g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 13):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 13):",
+                options: ["Pacote de 400g por $4", "Pacote de 800g por $6"],
+                correctAnswer: "Pacote de 800g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 14):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 14):",
+                options: ["Pacote de 500g por $5", "Pacote de 1000g por $8"],
+                correctAnswer: "Pacote de 1000g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 15):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 15):",
+                options: ["Pacote de 600g por $6", "Pacote de 1200g por $10"],
+                correctAnswer: "Pacote de 1200g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 16):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 16):",
+                options: ["Pacote de 200g por $7", "Pacote de 400g por $12"],
+                correctAnswer: "Pacote de 400g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 17):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 17):",
+                options: ["Pacote de 300g por $4", "Pacote de 600g por $6"],
+                correctAnswer: "Pacote de 600g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 18):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 18):",
+                options: ["Pacote de 400g por $5", "Pacote de 800g por $8"],
+                correctAnswer: "Pacote de 800g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 19):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 19):",
+                options: ["Pacote de 500g por $6", "Pacote de 1000g por $10"],
+                correctAnswer: "Pacote de 1000g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 20):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 20):",
+                options: ["Pacote de 600g por $7", "Pacote de 1200g por $12"],
+                correctAnswer: "Pacote de 1200g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 21):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 21):",
+                options: ["Pacote de 200g por $4", "Pacote de 400g por $6"],
+                correctAnswer: "Pacote de 400g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 22):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 22):",
+                options: ["Pacote de 300g por $5", "Pacote de 600g por $8"],
+                correctAnswer: "Pacote de 600g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 23):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 23):",
+                options: ["Pacote de 400g por $6", "Pacote de 800g por $10"],
+                correctAnswer: "Pacote de 800g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 24):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 24):",
+                options: ["Pacote de 500g por $7", "Pacote de 1000g por $12"],
+                correctAnswer: "Pacote de 1000g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 25):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 25):",
+                options: ["Pacote de 600g por $4", "Pacote de 1200g por $6"],
+                correctAnswer: "Pacote de 1200g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 26):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 26):",
+                options: ["Pacote de 200g por $5", "Pacote de 400g por $8"],
+                correctAnswer: "Pacote de 400g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 27):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 27):",
+                options: ["Pacote de 300g por $6", "Pacote de 600g por $10"],
+                correctAnswer: "Pacote de 600g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 28):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 28):",
+                options: ["Pacote de 400g por $7", "Pacote de 800g por $12"],
+                correctAnswer: "Pacote de 800g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 29):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 29):",
+                options: ["Pacote de 500g por $4", "Pacote de 1000g por $6"],
+                correctAnswer: "Pacote de 1000g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 30):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 30):",
+                options: ["Pacote de 600g por $5", "Pacote de 1200g por $8"],
+                correctAnswer: "Pacote de 1200g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 31):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 31):",
+                options: ["Pacote de 200g por $6", "Pacote de 400g por $10"],
+                correctAnswer: "Pacote de 400g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 32):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 32):",
+                options: ["Pacote de 300g por $7", "Pacote de 600g por $12"],
+                correctAnswer: "Pacote de 600g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 33):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 33):",
+                options: ["Pacote de 400g por $4", "Pacote de 800g por $6"],
+                correctAnswer: "Pacote de 800g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 34):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 34):",
+                options: ["Pacote de 500g por $5", "Pacote de 1000g por $8"],
+                correctAnswer: "Pacote de 1000g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 35):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 35):",
+                options: ["Pacote de 600g por $6", "Pacote de 1200g por $10"],
+                correctAnswer: "Pacote de 1200g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 36):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 36):",
+                options: ["Pacote de 200g por $7", "Pacote de 400g por $12"],
+                correctAnswer: "Pacote de 400g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 37):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 37):",
+                options: ["Pacote de 300g por $4", "Pacote de 600g por $6"],
+                correctAnswer: "Pacote de 600g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 38):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 38):",
+                options: ["Pacote de 400g por $5", "Pacote de 800g por $8"],
+                correctAnswer: "Pacote de 800g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 39):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 39):",
+                options: ["Pacote de 500g por $6", "Pacote de 1000g por $10"],
+                correctAnswer: "Pacote de 1000g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 40):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 40):",
+                options: ["Pacote de 600g por $7", "Pacote de 1200g por $12"],
+                correctAnswer: "Pacote de 1200g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 41):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 41):",
+                options: ["Pacote de 200g por $4", "Pacote de 400g por $6"],
+                correctAnswer: "Pacote de 400g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 42):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 42):",
+                options: ["Pacote de 300g por $5", "Pacote de 600g por $8"],
+                correctAnswer: "Pacote de 600g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 43):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 43):",
+                options: ["Pacote de 400g por $6", "Pacote de 800g por $10"],
+                correctAnswer: "Pacote de 800g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 44):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 44):",
+                options: ["Pacote de 500g por $7", "Pacote de 1000g por $12"],
+                correctAnswer: "Pacote de 1000g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 45):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 45):",
+                options: ["Pacote de 600g por $4", "Pacote de 1200g por $6"],
+                correctAnswer: "Pacote de 1200g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 46):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 46):",
+                options: ["Pacote de 200g por $5", "Pacote de 400g por $8"],
+                correctAnswer: "Pacote de 400g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 47):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 47):",
+                options: ["Pacote de 300g por $6", "Pacote de 600g por $10"],
+                correctAnswer: "Pacote de 600g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 48):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 48):",
+                options: ["Pacote de 400g por $7", "Pacote de 800g por $12"],
+                correctAnswer: "Pacote de 800g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 49):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 49):",
+                options: ["Pacote de 500g por $4", "Pacote de 1000g por $6"],
+                correctAnswer: "Pacote de 1000g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 50):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 50):",
+                options: ["Pacote de 600g por $5", "Pacote de 1200g por $8"],
+                correctAnswer: "Pacote de 1200g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 51):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 51):",
+                options: ["Pacote de 200g por $6", "Pacote de 400g por $10"],
+                correctAnswer: "Pacote de 400g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 52):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 52):",
+                options: ["Pacote de 300g por $7", "Pacote de 600g por $12"],
+                correctAnswer: "Pacote de 600g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 53):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 53):",
+                options: ["Pacote de 400g por $4", "Pacote de 800g por $6"],
+                correctAnswer: "Pacote de 800g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 54):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 54):",
+                options: ["Pacote de 500g por $5", "Pacote de 1000g por $8"],
+                correctAnswer: "Pacote de 1000g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 55):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 55):",
+                options: ["Pacote de 600g por $6", "Pacote de 1200g por $10"],
+                correctAnswer: "Pacote de 1200g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 56):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 56):",
+                options: ["Pacote de 200g por $7", "Pacote de 400g por $12"],
+                correctAnswer: "Pacote de 400g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 57):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 57):",
+                options: ["Pacote de 300g por $4", "Pacote de 600g por $6"],
+                correctAnswer: "Pacote de 600g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 58):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 58):",
+                options: ["Pacote de 400g por $5", "Pacote de 800g por $8"],
+                correctAnswer: "Pacote de 800g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 59):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 59):",
+                options: ["Pacote de 500g por $6", "Pacote de 1000g por $10"],
+                correctAnswer: "Pacote de 1000g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 60):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 60):",
+                options: ["Pacote de 600g por $7", "Pacote de 1200g por $12"],
+                correctAnswer: "Pacote de 1200g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 61):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 61):",
+                options: ["Pacote de 200g por $4", "Pacote de 400g por $6"],
+                correctAnswer: "Pacote de 400g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 62):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 62):",
+                options: ["Pacote de 300g por $5", "Pacote de 600g por $8"],
+                correctAnswer: "Pacote de 600g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 63):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 63):",
+                options: ["Pacote de 400g por $6", "Pacote de 800g por $10"],
+                correctAnswer: "Pacote de 800g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 64):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 64):",
+                options: ["Pacote de 500g por $7", "Pacote de 1000g por $12"],
+                correctAnswer: "Pacote de 1000g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 65):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 65):",
+                options: ["Pacote de 600g por $4", "Pacote de 1200g por $6"],
+                correctAnswer: "Pacote de 1200g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 66):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 66):",
+                options: ["Pacote de 200g por $5", "Pacote de 400g por $8"],
+                correctAnswer: "Pacote de 400g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 67):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 67):",
+                options: ["Pacote de 300g por $6", "Pacote de 600g por $10"],
+                correctAnswer: "Pacote de 600g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 68):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 68):",
+                options: ["Pacote de 400g por $7", "Pacote de 800g por $12"],
+                correctAnswer: "Pacote de 800g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 69):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Guaraná lata no supermercado local de Sacramento (Item 69):",
+                options: ["Pacote de 500g por $4", "Pacote de 1000g por $6"],
+                correctAnswer: "Pacote de 1000g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 70):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Polvilho Doce no supermercado local de Los Angeles (Item 70):",
+                options: ["Pacote de 600g por $5", "Pacote de 1200g por $8"],
+                correctAnswer: "Pacote de 1200g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 71):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão de Queijo no supermercado local de San Jose (Item 71):",
+                options: ["Pacote de 200g por $6", "Pacote de 400g por $10"],
+                correctAnswer: "Pacote de 400g por $10"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 72):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Açaí Congelado no supermercado local de Oakland (Item 72):",
+                options: ["Pacote de 300g por $7", "Pacote de 600g por $12"],
+                correctAnswer: "Pacote de 600g por $12"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 73):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Feijão Preto no supermercado local de San Francisco (Item 73):",
+                options: ["Pacote de 400g por $4", "Pacote de 800g por $6"],
+                correctAnswer: "Pacote de 800g por $6"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 74):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Pão Francês no supermercado local de Anaheim (Item 74):",
+                options: ["Pacote de 500g por $5", "Pacote de 1000g por $8"],
+                correctAnswer: "Pacote de 1000g por $8"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for pão de queijo ingredients at local CA market (Option 75):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Comparação de preços para comprar Brigadeiro Gourmet no supermercado local de Berkeley (Item 75):",
+                options: ["Pacote de 600g por $6", "Pacote de 1200g por $10"],
+                correctAnswer: "Pacote de 1200g por $10"
             )
         ]
     )

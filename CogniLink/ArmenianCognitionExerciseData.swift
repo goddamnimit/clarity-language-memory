@@ -588,528 +588,528 @@ struct ArmenianCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 1)",
+                prompt: "Լավաշը հայկական ավանդական հա՞ց է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Լավաշը հայտնի ավանդական հայկական հաց է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 2)",
+                prompt: "Խնձորը բանջարեղե՞ն է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Խնձորը միրգ է, ոչ թե բանջարեղեն:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 3)",
+                prompt: "Երևանը Հայաստանի մայրաքաղա՞քն է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Երևանը Հայաստանի մայրաքաղաքն է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 4)",
+                prompt: "Շունը կատվից մե՞ծ է սովորաբար։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Սովորական շները սովորաբար ավելի մեծ են, կան սովորական կատուները:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 5)",
+                prompt: "Ձմեռը տարվա ամենատաք եղանա՞կն է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ամառը տարվա ամենատաք եղանակն է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 6)",
+                prompt: "Ձուկը կարո՞ղ է ապրել առանց ջրի։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ձկներին ջուր է անհրաժեշտ շնչելու և ապրելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 7)",
+                prompt: "Արևը ծագում է արևելքի՞ց։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Արևը ծագում է արևելքից և մայր մտնում արևմուտքում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 8)",
+                prompt: "Մեկ ժամը 100 րոպե՞ է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Մեկ ժամը պարունակում է 60 րոպե:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 9)",
+                prompt: "Մեղուն մեղր պատրաստո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Մեղուները ծաղիկների նեկտարից մեղր են պատրաստում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 10)",
+                prompt: "Կիրակին աշխատանքային օ՞ր է սովորաբար։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Կիրակին հանգստյան օր է շատ երկրներում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 11)",
+                prompt: "Գիրքը նախատեսված է կարդալո՞ւ համար։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Գրքերը գրվում և տպագրվում են կարդալու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 12)",
+                prompt: "Կրակը սառն է սովորաբար։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Կրակը շատ տաք է և կարող է այրել:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 13)",
+                prompt: "Հեծանիվը ունի երեք անի՞վ։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Սովորական հեծանիվը ունի երկու անիվ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 14)",
+                prompt: "Շաքարը քաղցր համ ունի՞։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Շաքարը քաղցր է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 15)",
+                prompt: "Կիտրոնը թթո՞ւ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կիտրոնը հայտնի է իր թթու համով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 16)",
+                prompt: "Ձյունը տաք ջրից է կազմվա՞ծ։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ձյունը կազմված է սառցե բյուրեղներից և սառն է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 17)",
+                prompt: "Կովը կաթ տալի՞ս է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կովերը կաթ են տալիս:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 18)",
+                prompt: "Անձրևը երկնքից է թափվո՞ւմ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Անձրևը տեղումների տեսակ է, որը թափվում է երկնքից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 19)",
+                prompt: "Ականջով մենք տեսնո՞ւմ ենք։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ականջներով լսում ենք, իսկ աչքերով՝ տեսնում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 20)",
+                prompt: "Մեքենան վառելիքո՞վ է աշխատում։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Մեքենաների մեծ մասը աշխատում է բենզինով, դիզելով կամ էլեկտրականությամբ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 21)",
+                prompt: "Ծառերը տերևներ ունենո՞ւմ են։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ծառերի մեծ մասը ունեն տերևներ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 22)",
+                prompt: "Կրիան շատ արագ է վազո՞ւմ։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Կրիաները հայտնի են իրենց դանդաղ շարժումներով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 23)",
+                prompt: "Գդալով ապուր ուտո՞ւմ են։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ապուրը սովորաբար ուտում են գդալով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 24)",
+                prompt: "Ամառը ձյուն գալի՞ս է սովորաբար։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ամառը ձյուն չի գալիս տաք եղանակի պատճառով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 25)",
+                prompt: "Նավը ջրի վրայով է լողո՞ւմ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Նավերը նախատեսված են ջրի վրայով լողալու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 26)",
+                prompt: "Մատիտով կարելի է նկարե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Մատիտները օգտագործվում են գրելու և նկարելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 27)",
+                prompt: "Աչքը լսողության օրգա՞ն է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Աչքը տեսողության օրգան է, ոչ թե լսողության:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 28)",
+                prompt: "Աղը աղի համ ունի՞։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Աղը օգտագործվում է սննդին աղի համ տալու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 29)",
+                prompt: "Թռչունները թռչել կարողանո՞ւմ են։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Թռչունների մեծ մասը կարողանում է թռչել:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 30)",
+                prompt: "Ձմերուկը բանջարեղե՞ն է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ձմերուկը հատապտուղ է կամ միրգ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 31)",
+                prompt: "Հունվարը տարվա առաջին ամի՞սն է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Հունվարը տարվա առաջին ամիսն է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 32)",
+                prompt: "Արջը ձմռանը քնո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Արջերը ձմռանը անցնում են ձմեռային քնի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 33)",
+                prompt: "Մատանի հագնում են ականջի՞ն։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Մատանին հագնում են մատին, իսկ ականջին՝ օղ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 34)",
+                prompt: "Ձիուն կարելի է հեծնե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ձիերը հնուց օգտագործվել են հեծնելու և տեղաշարժվելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 35)",
+                prompt: "Սառույցը տաքանալիս հալվո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Սառույցը տաքանալիս վերածվում է ջրի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 36)",
+                prompt: "Կենգուրուն ցատկո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կենգուրուները տեղաշարժվում են ցատկելով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 37)",
+                prompt: "Հեռախոսով կարելի է խոսե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Հեռախոսները օգտագործվում են հեռավորության վրա խոսելu համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 38)",
+                prompt: "Տան տանիքը ներքևո՞ւմ է լինում։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Տանիքը միշտ լինում է տան վերևի մասում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 39)",
+                prompt: "Անանասը աճում է ծառի՞ վրա։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Անանասը աճում է գետնին մոտ խոտաբույսերի վրա:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 40)",
+                prompt: "Ոչխարը բուրդ տալի՞ս է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ոչխարները տալիս են տաք բուրդ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 41)",
+                prompt: "Գնացքը ռելսերի վրայով է շարժվո՞ւմ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Գնացքները շարժվում են հատուկ ռելսերով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 42)",
+                prompt: "Ասեղով կարելի է կարե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ասեղը օգտագործվում է կարելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 43)",
+                prompt: "Կոշիկը հագնում են ոտքերին։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կոշիկը հագնում են ոտքերին:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 44)",
+                prompt: "Լոլիկը կարմիր գույն ունենո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Հասած լոլիկը սովորաբար կարմիր է լինում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 45)",
+                prompt: "Դելֆինը ձո՞ւկ է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Դելֆինը կաթնասուն է, թեև ապրում է ջրում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 46)",
+                prompt: "Օճառը օգտագործվում է լվացվելո՞ւ համար։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Օճառն օգնում է մաքրել կեղտը լվացվելիս:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 47)",
+                prompt: "Արևը գիշերը շողո՞ւմ է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Արևը շողում է ցերեկը, գիշերը երկնքում երևում է Լուսինը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 48)",
+                prompt: "Օձը ոտքեր ունի՞։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Օձերը սողուններ են և ոտքեր չունեն:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 49)",
+                prompt: "Ծիածանը անձրևից հետո կարո՞ղ է երևալ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ծիածանը հաճախ երևում է անձրևից հետո, երբ արևը դուրս է գալիս:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 50)",
+                prompt: "Գազարը նարնջագո՞ւյն է լինում սովորաբար։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Գազարը սովորաբար նարնջագույն է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 51)",
+                prompt: "Օվկիանոսի ջուրը քաղցրահա՞մ է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Օվկիանոսի ջուրը աղի է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 52)",
+                prompt: "Ժամացույցը ցույց է տալիս ժա՞մը։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ժամացույցը նախատեսված է ժամանակը չափելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 53)",
+                prompt: "Կապիկը սիրում է բանա՞ն ուտել։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կապիկները հայտնի են բանան սիրելով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 54)",
+                prompt: "Մատիտի հետևում լինո՞ւմ է ռետին։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Շատ մատիտներ ունեն փոքրիկ ռետին իրենց ծայրին:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 55)",
+                prompt: "Հայաստանը ծովային սահման ունի՞։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Հայաստանը դեպի ծով ելք չունեցող երկիր է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 56)",
+                prompt: "Գայլը վայրի կենդանի՞ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Գայլերը վայրի կենդանիներ են:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 57)",
+                prompt: "Ավտոբուսը հասարակական տրանսպո՞րտ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ավտոբուսը տեղափոխում է շատ ուղևորների:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 58)",
+                prompt: "Թեյը կարող է տաք լինե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Թեյը սովորաբար եփում են եռման ջրով և խմում տաք վիճակում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 59)",
+                prompt: "Ձմռանը ծաղիկները բացվո՞ւմ են բաց երկնքի տակ։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ցրտի պատճառով ձմռանը բույսերը չեն ծաղկում բաց տարածքում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 60)",
+                prompt: "Գորտը կարո՞ղ է ցատկել։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Գորտերը հիանալի ցատկողներ են:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 61)",
+                prompt: "Ամպը երկնքո՞ւմ է լինում։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Ամպերը գտնվում են մթնոլորտում և երևում են երկնքում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 62)",
+                prompt: "Կավից կարելի է ամաններ պատրաստե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Կավից պատրաստում են տարբեր ամաններ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 63)",
+                prompt: "Շոկոլադը սովորաբար դառն է կամ քաղցր։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Շոկոլադը լինում է քաղցր կամ դառնահամ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 64)",
+                prompt: "Ակնոցը օգնում է ավելի լավ տեսնե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Տեսողական ակնոցները բարելավում են տեսողությունը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 65)",
+                prompt: "Ձկները թոքերո՞վ են շնչում ջրի տակ։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Ձկները շնչում են խռիկներով, ոչ թե թոքերով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 66)",
+                prompt: "Արծիվը բարձր թռչող թռչո՞ւն է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Արծիվները հայտնի են բարձր թռիչքներով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 67)",
+                prompt: "Մուրճով կարելի է մեխ մեխե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Մուրճը նախատեսված է մեխեր խփելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 68)",
+                prompt: "Տանձը կանաչ կամ դեղին գույն ունենո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Տանձերը հիմնականում կանաչ կամ դեղին են լինում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 69)",
+                prompt: "Կոկորդիլոսը ցամաքային կենդանի՞ է միայն։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Կոկորդիլոսները կիսաջրային կենդանիներ են:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 70)",
+                prompt: "Ձյան գույնը սպիտա՞կ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Մաքուր ձյունը սպիտակ է երևում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 71)",
+                prompt: "Անձրևանոցը պաշտպանում է արևի՞ց միայն։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Անձրևանոցը հիմնականում պաշտպանում է անձրևից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 72)",
+                prompt: "Պանիրը պատրաստում են կաթի՞ց։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Պանիրը կաթնամթերք է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 73)",
+                prompt: "Աթոռը նախատեսված է քնելո՞ւ համար։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Աթոռը նստելու համար է, մահճակալը՝ քնելու:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 74)",
+                prompt: "Հատիկավոր լոբին սպիտակուցներ պարունակո՞ւմ է։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                explanation: "Լոբին հարուստ է բուսական սպիտակուցներով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is lavash a popular traditional food in the Armenian-American community? (Question 75)",
+                prompt: "Լուսինը սեփական լույս արձակո՞ւմ է։",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "lavash is a traditional food in the Armenian-American community."
+                correctAnswer: "No",
+                explanation: "Լուսինը միայն անդրադարձնում է Արեգակի լույսը:"
             )
         ]
     )
@@ -1125,563 +1125,563 @@ struct ArmenianCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 1)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Լավաշ : Հաց :: Գաթա : Թխվածք",
+                options: ["Թխվածք", "Ջուր", "Աղ", "Պղպեղ"],
+                correctAnswer: "Թխվածք",
+                explanation: "Գաթան ավանդական հայկական թխվածք է, ինչպես լավաշը հաց է:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 2)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Արև : Ցերեկ :: Լուսին : Գիշեր",
+                options: ["Գիշեր", "Ամպ", "Անձրև", "Աստղ"],
+                correctAnswer: "Գիշեր",
+                explanation: "Արևը երևում է ցերեկը, իսկ լուսինը՝ գիշերը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 3)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ձուկ : Ջուր :: Թռչուն : Օդ",
+                options: ["Օդ", "Անտառ", "Բույն", "Գետ"],
+                correctAnswer: "Օդ",
+                explanation: "Ձկները լողում են ջրում, թռչունները թռչում են օդում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 4)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գրիչ : Գրել :: Մատիտ : Նկարել",
+                options: ["Նկարել", "Ջնջել", "Կարդալ", "Խոսել"],
+                correctAnswer: "Նկարել",
+                explanation: "Գրիչով գրում են, մատիտով նկարում կամ գրում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 5)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կով : Կաթ :: Ոչխար : Բուրդ",
+                options: ["Բուրդ", "Միս", "Խոտ", "Կաթ"],
+                correctAnswer: "Բուրդ",
+                explanation: "Կովից ստանում են կաթ, ոչխարից՝ բուրդ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 6)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Աչք : Տեսնել :: Ականջ : Լսել",
+                options: ["Լսել", "Հպվել", "Հոտոտել", "Համտեսել"],
+                correctAnswer: "Լսել",
+                explanation: "Աչքերով տեսնում են, ականջներով՝ լսում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 7)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ձմեռ : Ցուրտ :: Ամառ : Շոգ",
+                options: ["Շոգ", "Անձրև", "Գարուն", "Ամպամած"],
+                correctAnswer: "Շոգ",
+                explanation: "Ձմռանը ցուրտ է լինում, ամռանը՝ շոգ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 8)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Մեքենա : Ճանապարհ :: Նավ : Ջուր",
+                options: ["Ջուր", "Օդ", "Ռելս", "Անտառ"],
+                correctAnswer: "Ջուր",
+                explanation: "Մեքենան ընթանում է ճանապարհով, նավը՝ ջրով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 9)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գիրք : Կարդալ :: Երաժշտություն : Լսել",
+                options: ["Լսել", "Դիտել", "Գրել", "Երգել"],
+                correctAnswer: "Լսել",
+                explanation: "Գիրքը կարդում են, երաժշտությունը՝ լսում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 10)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կիտրոն : Թթու :: Շաքար : Քաղցր",
+                options: ["Քաղցր", "Դառը", "Աղի", "Անհամ"],
+                correctAnswer: "Քաղցր",
+                explanation: "Կիտրոնը թթու է, իսկ շաքարը՝ քաղցր:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 11)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ծառ : Տերև :: Ծաղիկ : Թերթիկ",
+                options: ["Թերթիկ", "Արմատ", "Ցողուն", "Փուշ"],
+                correctAnswer: "Թերթիկ",
+                explanation: "Ծառն ունի տերևներ, ծաղիկն ունի թերթիկներ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 12)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Անձրև : Թրջել :: Կրակ : Այրել",
+                options: ["Այրել", "Սառեցնել", "Չորացնել", "Լուսավորել"],
+                correctAnswer: "Այրել",
+                explanation: "Անձրևը թրջում է, կրակը՝ այրում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 13)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կոշիկ : Ոտք :: Ձեռնոց : Ձեռք",
+                options: ["Ձեռք", "Ականջ", "Գլուխ", "Պարանոց"],
+                correctAnswer: "Ձեռք",
+                explanation: "Կոշիկը հագնում են ոտքին, ձեռնոցը՝ ձեռքին:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 14)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Առավոտ : Նախաճաշ :: Երեկո : Ընթրիք",
+                options: ["Ընթրիք", "Ճաշ", "Թեյ", "Հոբբի"],
+                correctAnswer: "Ընթրիք",
+                explanation: "Առավոտյան ուտում են նախաճաշ, երեկoյան՝ ընթրիք:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 15)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Սառույց : Կարծր :: Ջուր : Հեղուկ",
+                options: ["Հեղուկ", "Գազային", "Սառը", "Տաք"],
+                correctAnswer: "Հեղուկ",
+                explanation: "Սառույցը պինդ է, ջուրը՝ հեղուկ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 16)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Մուրճ : Մեխ :: Պտուտակահան : Պտուտակ",
+                options: ["Պտուտակ", "Փայտ", "Մետաղ", "Պատ"],
+                correctAnswer: "Պտուտակ",
+                explanation: "Մուրճով խփում են մեխը, պտուտակահանով պտտում պտուտակը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 17)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Դանակ : Կտրել :: Ասեղ : Կարել",
+                options: ["Կարել", "Գործել", "Հագնել", "Կոտրել"],
+                correctAnswer: "Կարել",
+                explanation: "Դանակով կտրում են, ասեղով՝ կարում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 18)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Շուն : Հաչել :: Կատու : Մլավել",
+                options: ["Մլավել", "Մռնչալ", "Կռնչալ", "Ծլվլալ"],
+                correctAnswer: "Մլավել",
+                explanation: "Շունը հաչում է, կատուն՝ մլավում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 19)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գդալ : Ապուր :: Պատառաքաղ : Միս",
+                options: ["Միս", "Ջուր", "Թեյ", "Հյութ"],
+                correctAnswer: "Միս",
+                explanation: "Ապուրը ուտում են գդալով, միսը՝ պատառաքաղով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 20)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Բժիշk : Հիվանդանոց :: Ուսուցիչ : Դպրոց",
+                options: ["Դպրոց", "Գրասենյակ", "Խանութ", "Շուկա"],
+                correctAnswer: "Դպրոց",
+                explanation: "Բժիշկն աշխատում է հիվանդանոցում, ուսուցիչը՝ դպրոցում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 21)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Երկինք : Ամպ :: Գետին : Խոտ",
+                options: ["Խոտ", "Քար", "Ջուր", "Ծառ"],
+                correctAnswer: "Խոտ",
+                explanation: "Երկնքում ամպերն են, գետնին՝ խոտը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 22)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Հյուսիս : Հարավ :: Արևելք : Արևմուտք",
+                options: ["Արևմուտք", "Հյուսիս", "Արևելք", "Երկինք"],
+                correctAnswer: "Արևմուտք",
+                explanation: "Հյուսիսը հարավի հակառակն է, արևելքը՝ արևմուտքի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 23)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կրիա : Դանդաղ :: Ճագար : Արագ",
+                options: ["Արագ", "Դանդաղ", "Զգույշ", "Լուռ"],
+                correctAnswer: "Արագ",
+                explanation: "Կրիան դանդաղաշարժ է, ճագարը՝ արագաշարժ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 24)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ձյուն : Սպիտակ :: Խոտ : Կանաչ",
+                options: ["Կանաչ", "Կարմիր", "Դեղին", "Կապույտ"],
+                correctAnswer: "Կանաչ",
+                explanation: "Ձյունը սպիտակ է, խոտը՝ կանաչ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 25)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Լուսամուտ : Ապակի :: Դուռ : Փայտ",
+                options: ["Փայտ", "Երկաթ", "Պլաստիկ", "Ապակի"],
+                correctAnswer: "Փայտ",
+                explanation: "Լուսամուտը սովորաբար ապակուց է, դուռը՝ փայտից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 26)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ժամացույց : Ժամանակ :: Կշեռք : Քաշ",
+                options: ["Քաշ", "Բարձրություն", "Երկարություն", "Ծավալ"],
+                correctAnswer: "Քաշ",
+                explanation: "Ժամացույցը չափում է ժամանակը, կշեռքը՝ քաշը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 27)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Լամպ : Լույս :: Վառարան : Տաքություն",
+                options: ["Տաքություն", "Սառնություն", "Ծուխ", "Կրակ"],
+                correctAnswer: "Տաքություն",
+                explanation: "Լամպը տալիս է լույս, վառարանը՝ տաքություն:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 28)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Հայր : Որդի :: Մայր : Դուստր",
+                options: ["Դուստր", "Քույր", "Աղջիկ", "Տատիկ"],
+                correctAnswer: "Դուստր",
+                explanation: "Հայրն ունենում է որդի, մայրը՝ դուստր:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 29)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գլխարկ : Գլուխ :: Գուլպա : Ոտք",
+                options: ["Ոտք", "Ձեռք", "Մատ", "Ծունկ"],
+                correctAnswer: "Ոtք",
+                explanation: "Գլխարկը դնում են գլխին, գուլպան հագնում ոտքին:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 30)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Անտառ : Ծառ :: Գրադարան : Գիրք",
+                options: ["Գիրք", "Սեղան", "Դարակ", "Աշխատակից"],
+                correctAnswer: "Գիրք",
+                explanation: "Անտառը կազմված է ծառերից, գրադարանը՝ գրքերից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 31)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Օդանավ : Երկինք :: Նավակ : Լիճ",
+                options: ["Լիճ", "Անտառ", "Ճանապարհ", "Լեռ"],
+                correctAnswer: "Լիճ",
+                explanation: "Օդանավը թռչում է երկնքում, նավակը լողում է լճում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 32)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Մեղու : Փեթակ :: Թռչուն : Բույն",
+                options: ["Բույն", "Ծառ", "Վանդակ", "Երկինք"],
+                correctAnswer: "Բույն",
+                explanation: "Մեղուն ապրում է փեթակում, թռչունը՝ բնում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 33)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ձեռք : Մատ :: Ոտք : Մատներ",
+                options: ["Մատներ", "Կրունկ", "Ծունկ", "Թաթ"],
+                correctAnswer: "Մատներ",
+                explanation: "Ձեռքն ունի մատներ, ոտքը նույնպես ունի մատներ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 34)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ատամնաբույժ : Ատամ :: Ակնաբույժ : աչք",
+                options: ["Աչք", "Ականջ", "Քիթ", "Կոկորդ"],
+                correctAnswer: "Աչք",
+                explanation: "Ատամնաբույժը բուժում է ատամները, ակնաբույժը՝ աչքերը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 35)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Հեռուստացույց : Դիտել :: Ռադիո : Լսել",
+                options: ["Լսել", "Գրել", "Խոսել", "Երգել"],
+                correctAnswer: "Լսել",
+                explanation: "Հեռուստացույցը դիտում են, ռադիոն՝ լսում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 36)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կոպեկ : Մետաղ :: Թղթադրամ : Թուղթ",
+                options: ["Թուղթ", "Պլաստիկ", "Կաշի", "Կտոր"],
+                correctAnswer: "Թուղթ",
+                explanation: "Կոպեկը մետաղից է, թղթադրամը՝ թղթից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 37)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Անձրևանոց : Անձրև :: Արևային ակնոց : Արև",
+                options: ["Արև", "Քամի", "Ամպ", "Ձյուն"],
+                correctAnswer: "Արև",
+                explanation: "Անձրևանոցը պաշտպանում է անձրևից, արևային ակնոցը՝ արևից:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 38)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գազար : Արմատապտուղ :: Խնձոր : Միրգ",
+                options: ["Միրգ", "Բանջարեղեն", "Ծաղիկ", "Տերև"],
+                correctAnswer: "Միրգ",
+                explanation: "Գազարը արմատապտուղ է, խնձորը՝ միրգ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 39)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թեյնիկ : Եռացնել :: Սառնարան : Սառեցնել",
+                options: ["Սառեցնել", "Տաքացնել", "Եփել", "Լվանալ"],
+                correctAnswer: "Սառեցնել",
+                explanation: "Թեյնիկով ջուրն եռացնում են, սառնարանով՝ սառեցնում սնունդը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 40)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Անիվ : Հեծանիվ :: Առագաստ : Նավ",
+                options: ["Նավ", "Մեքենա", "Ինքնաթիռ", "Գնացք"],
+                correctAnswer: "Նավ",
+                explanation: "Անիվը հեծանիվի մաս է, առագաստը՝ նավի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 41)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ձմեռ : Դեկտեմբեր :: Ամառ : Հունիս",
+                options: ["Հունիս", "Մարտ", "Սեպտեմբեր", "Հոկտեմբեր"],
+                correctAnswer: "Հունիս",
+                explanation: "Դեկտեմբերը ձմռան ամիս է, հունիսը՝ ամռան:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 42)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Հաց : Փուռ :: Գիրք : Տպարան",
+                options: ["Տպարան", "Գրախանութ", "Դպրոց", "Գրադարան"],
+                correctAnswer: "Տպարան",
+                explanation: "Հացը թխում են փռում, գիրքը տպագրում տպարանում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 43)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ջուր : Ծարավ :: Սնունդ : Սով",
+                options: ["Սով", "Կուշտ", "Հոգնած", "Քուն"],
+                correctAnswer: "Սով",
+                explanation: "Ջուրը հագեցնում է ծարավը, սնունդը՝ սովը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 44)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կավ : Կավագործ :: Փայտ : Ատաղձագործ",
+                options: ["Ատաղձագործ", "Բժիշկ", "Ուսուցիչ", "Նկարիչ"],
+                correctAnswer: "Ատաղձագործ",
+                explanation: "Կավով աշխատում է կավագործը, փայտով՝ ատաղձագործը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 45)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թանաք : Գրիչ :: Կապար : Մատիտ",
+                options: ["Մատիտ", "Ռետին", "Քանոն", "Սրիչ"],
+                correctAnswer: "Մատիտ",
+                explanation: "Գրիչի մեջ թանաքն է, մատիտի մեջ՝ կապարը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 46)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Արևմուտք : Մայրամուտ :: Արևելք : Արևածագ",
+                options: ["Արևածագ", "Կեսօր", "Երեկո", "Կեսգիշեր"],
+                correctAnswer: "Արևածագ",
+                explanation: "Արևմուտքում լինում է մայրամուտը, արևելքում՝ արևածագը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 47)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Դերասան : Թատրոն :: Լրագրող : Թերթ",
+                options: ["Թերթ", "Դպրոց", "Հիվանդանոց", "Դատարան"],
+                correctAnswer: "Թերթ",
+                explanation: "Դերասանն աշխատում է թատրոնում, լրագրողը՝ թերթում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 48)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Սար : Բարձր :: Ձոր : Խորը",
+                options: ["Խորը", "Տափակ", "Լայն", "Նեղ"],
+                correctAnswer: "Խորը",
+                explanation: "Սարը բարձր է լինում, ձորը՝ խորը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 49)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Շապիկ : Հագուստ :: Սանդալ : Կոշիկ",
+                options: ["Կոշիկ", "Գլխարկ", "Տաբատ", "Գուլպա"],
+                correctAnswer: "Կոշիկ",
+                explanation: "Շապիկը հագուստի տեսակ է, սանդալը՝ կոշիկի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 50)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ոսկի : Մետաղ :: Ադամանդ : Թանկարժեք քար",
+                options: ["Թանկարժեք քար", "Ժայռ", "Ապակի", "Ավազ"],
+                correctAnswer: "Թանկարժեք քար",
+                explanation: "Ոսկին մետաղ է, ադամանդը՝ թանկարժեք քար:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 51)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Աստղ : Աստղադիտակ :: Մանրէ : Մանրադիտակ",
+                options: ["Մանրադիտak", "Ակնոց", "Հայելի", "Լուսանկարչական ապարատ"],
+                correctAnswer: "Մանրադիտակ",
+                explanation: "Աստղը դիտում են աստղադիտակով, մանրէն՝ մանրադիտակով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 52)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կայծակ : Որոտ :: Հրաբուխ : Լավա",
+                options: ["Լավա", "Մոխիր", "Երկրաշարժ", "Ծուխ"],
+                correctAnswer: "Լավա",
+                explanation: "Կայծակին հետևում է որոտը, հրաբխից ժայթքում է լավան:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 53)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Մեղու : Ծաղիկ :: Կով : Խոտ",
+                options: ["Խոտ", "Ջուր", "Ծառ", "Պանիր"],
+                correctAnswer: "Խոտ",
+                explanation: "Մեղուն նեկտար է հավաքում ծաղկից, կովն արածում է խոտ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 54)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Անգլերեն : Լեզու :: Կիթառ : Գործիք",
+                options: ["Գործիք", "Երաժշտություն", "Երգ", "Ձայն"],
+                correctAnswer: "Գործիք",
+                explanation: "Անգլերենը լեզու է, կիթառը՝ երաժշտական գործիք:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 55)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Շուն : Շնիկ :: Կատու : Կատվիկ",
+                options: ["Կատվիկ", "Մուկ", "Ձագուկ", "Կենդանի"],
+                correctAnswer: "Կատվիկ",
+                explanation: "Շան ձագը շնիկն է, կատվինը՝ կատվիկը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 56)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Խաղող : Գինի :: Կաթ : Պանիր",
+                options: ["Պանիր", "Հյութ", "Ջուր", "Մեղր"],
+                correctAnswer: "Պանիր",
+                explanation: "Խաղողից պատրաստում են գինի, կաթից՝ պանիր:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 57)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Սարդ : Սարդոստայն :: Մեղու : Փեթակ",
+                options: ["Փեթակ", "Մեղր", "Ծաղիկ", "Բույն"],
+                correctAnswer: "Փեթակ",
+                explanation: "Սարդը հյուսում է սարդոստայն, մեղուն կառուցում է փեթակ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 58)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Պատուհան : Շրջանակ :: Պատ : Աղյուս",
+                options: ["Աղյուս", "Ցեմենտ", "Ներկ", "Ապակի"],
+                correctAnswer: "Աղյուս",
+                explanation: "Պատուհանն ունի շրջանակ, պատը կառուցվում է աղյուսներով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 59)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Նկարիչ : Վրձին :: Գրող : Գրիչ",
+                options: ["Գրիչ", "Գիրք", "Թուղթ", "Գրասեղան"],
+                correctAnswer: "Գրիչ",
+                explanation: "Նկարիչը նկարում է վրձնով, գրողը գրում է գրիչով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 60)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Սառնարան : Սառը :: Վառարան : Տաք",
+                options: ["Տաք", "Ծուխ", "Կրակ", "Մաքուր"],
+                correctAnswer: "Տաք",
+                explanation: "Սառնարանը սառն է պահում, վառարանը՝ տաք:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 61)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Երկրաշարժ : Ցնցում :: Փոթորիկ : Քամի",
+                options: ["Քամի", "Անձրև", "Ալիք", "Ամպ"],
+                correctAnswer: "Քամի",
+                explanation: "Երկրաշարժը առաջացնում է ցնցում, փոթորիկը՝ ուժեղ քամի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 62)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Ծով : Աղի :: Աղբյուր : Քաղցրահամ",
+                options: ["Քաղցրահամ", "Տաք", "Կեղտոտ", "Խորը"],
+                correctAnswer: "Քաղցրահամ",
+                explanation: "Ծովի ջուրն աղի է, աղբյուրինը՝ քաղցրահամ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 63)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Բարի : Չար :: Լույս : Խավար",
+                options: ["Խավար", "Ճրագ", "Արև", "Աստղ"],
+                correctAnswer: "Խավար",
+                explanation: "Բարին չարի հակառակն է, լույսը՝ խավարի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 64)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Գլուխ : Մազ :: Մարմին : Մաշկ",
+                options: ["Մաշկ", "Ձեռք", "Ոտք", "Սիրտ"],
+                correctAnswer: "Մաշկ",
+                explanation: "Գլուխը պատված է մազերով, մարմինը՝ մաշկով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 65)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թագավոր : Թագ :: Զինվոր : Սաղավարտ",
+                options: ["Սաղավարտ", "Զենք", "Վահան", "Ձի"],
+                correctAnswer: "Սաղավարտ",
+                explanation: "Թագավորը կրում է թագ, զինվորը՝ սաղավարտ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 66)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թեյ : Բաժակ :: Ապուր : Ափսե",
+                options: ["Ափսե", "Գդալ", "Կաթսա", "Վառարան"],
+                correctAnswer: "Ափսե",
+                explanation: "Թեյը լցնում են բաժակի մեջ, ապուրը՝ ափսեի:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 67)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Փիղ : Մեծ :: Մուկ : Փոքր",
+                options: ["Փոքր", "Արագ", "Գորշ", "Թույլ"],
+                correctAnswer: "Փոքր",
+                explanation: "Փիղը հսկայական է, մուկը՝ փոքրիկ:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 68)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կամուրջ : Գետ :: Թունել : Սար",
+                options: ["Սար", "Ճանապարհ", "Գնացք", "Գետին"],
+                correctAnswer: "Սար",
+                explanation: "Կամուրջը կառուցում են գետի վրայով, թունելը՝ սարի միջով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 69)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Օճառ : Մաքրություն :: Կեղտ : Փոշի",
+                options: ["Փոշի", "Ջուր", "Լվացք", "Հիվանդություն"],
+                correctAnswer: "Փոշի",
+                explanation: "Օճառը բերում է մաքրություն, կեղտը կազմված է փոշուց:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 70)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Հեծանիվ : Շղթա :: Ժամացույց : Զսպանակ",
+                options: ["Զսպանակ", "Սլաք", "Թվեր", "Ապակի"],
+                correctAnswer: "Զսպանակ",
+                explanation: "Հեծանիվը շարժվում է շղթայի օգնությամբ, ժամացույցը՝ զսպանակով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 71)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կայծ : Կրակ :: Կաթիլ : Ջուր",
+                options: ["Ջուր", "Անձրև", "Գետ", "Օվկիանոս"],
+                correctAnswer: "Ջուր",
+                explanation: "Կայծից առաջանում է կրակը, կաթիլներից՝ ջուրը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 72)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Խոտ : Դաշտ :: Ավազ : Անապատ",
+                options: ["Անապատ", "Լողափ", "Գետ", "Ծով"],
+                correctAnswer: "Անապատ",
+                explanation: "Դաշտը ծածկված է խոտով, անապատը՝ ավազով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 73)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Շոգենավ : ածուխ :: Ավտոմեքենա : Բենզին",
+                options: ["Բենզին", "Անիվ", "Շարժիչ", "Ճանապարհ"],
+                correctAnswer: "Բենզին",
+                explanation: "Շոգենավն աշխատում էր ածխով, մեքենան՝ բենզինով:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 74)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թատրոն : Բեմ :: Դատարան : Ատյան",
+                options: ["Ատյան", "Դատավոր", "Օրենք", "Գրասենյակ"],
+                correctAnswer: "Ատյան",
+                explanation: "Թատրոնում ներկայացումը բեմի վրա է, դատարանում՝ ատյանում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 75)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կրակ : Մոխիր :: Սառույց : Ջուր",
+                options: ["Ջուր", "Գոլորշի", "Գետին", "Սառնարան"],
+                correctAnswer: "Ջուր",
+                explanation: "Կրակի այրումից մնում է մոխիրը, սառույցի հալվելուց՝ ջուրը:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 76)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Կոշիկ : Կաշի :: Շշեր : Ապակի",
+                options: ["Ապակի", "Պլաստիկ", "Թուղթ", "Մետաղ"],
+                correctAnswer: "Ապակի",
+                explanation: "Կոշիկը սովորաբար կաշվից է, շիշը՝ ապակուց:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 77)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Արծիվ : Ճանկ :: Վագր : Ճանկեր",
+                options: ["Ճանկեր", "Պոչ", "Մորթի", "Ատամ"],
+                correctAnswer: "Ճանկեր",
+                explanation: "Արծիվն ունի ճանկեր, վագրը նույնպես ունի ճանկեր:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 78)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Թիակ : Թիավարել :: Առագաստ : Լողալ",
+                options: ["Լողալ", "Քամի", "Կառավարել", "Կանգնեցնել"],
+                correctAnswer: "Լողալ",
+                explanation: "Թիակով թիավարում են, առագաստով՝ լողում:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 79)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Սոխ : Կծու :: Մեղր : Քաղցր",
+                options: ["Քաղցր", "Թթու", "Աղի", "Դառը"],
+                correctAnswer: "Քաղցր",
+                explanation: "Սոխը կծու է, մեղրը՝ քաղցր:"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavash : Hac :: Gata : ___ (Analogy 80)",
-                options: ["Karah", "Water", "Salt", "Pepper"],
-                correctAnswer: "Karah",
-                explanation: "Analogy comparison."
+                prompt: "Դպրոց : Աշակերտ :: Բանակ : Զինվոր",
+                options: ["Զինվոր", "Հրամանատար", "Զենք", "Պատերազմ"],
+                correctAnswer: "Զինվոր",
+                explanation: "Դպրոցում սովորում է աշակերտը, բանակում ծառայում է զինվորը:"
             )
         ]
     )

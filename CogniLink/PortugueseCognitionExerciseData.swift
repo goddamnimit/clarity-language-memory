@@ -678,528 +678,528 @@ struct PortugueseCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 1)",
+                prompt: "O Consulado Geral do Brasil fica em São Francisco?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Consulado Geral do Brasil na Califórnia está localizado na cidade de São Francisco."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 2)",
+                prompt: "O pão de queijo é feito originalmente com farinha de trigo?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O pão de queijo é feito tradicionalmente com polvilho (doce ou azedo), que é derivado da mandioca, sendo livre de glúten."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 3)",
+                prompt: "A Ponte Golden Gate fica localizada em Los Angeles?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A Golden Gate Bridge fica em São Francisco, não em Los Angeles."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 4)",
+                prompt: "É possível encontrar guaraná Antarctica em supermercados brasileiros em Boston ou São José?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Supermercados brasileiros e latinos na Califórnia importam guaraná do Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 5)",
+                prompt: "O português é a língua oficial falada em Portugal e no Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O português é a língua oficial de ambos os países, embora com diferenças de sotaque e vocabulário."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 6)",
+                prompt: "O estado da Califórnia faz fronteira com o México ao sul?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A Califórnia faz fronteira com o México ao sul."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 7)",
+                prompt: "O brigadeiro é um doce típico de festas brasileiras feito com chocolate e leite condensado?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O brigadeiro é o doce mais popular das festas brasileiras."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 8)",
+                prompt: "O Rio Amazonas é o maior rio do mundo em volume de água?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Rio Amazonas está localizado na América do Sul e tem o maior volume de água do planeta."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 9)",
+                prompt: "A capital da Califórnia é a cidade de Los Angeles?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A capital da Califórnia é Sacramento."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 10)",
+                prompt: "Os imigrantes brasileiros na Bay Area costumam celebrar a Festa Junina em junho?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Comunidades brasileiras no exterior mantêm tradições como as Festas Juninas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 11)",
+                prompt: "O açaí é uma fruta nativa da floresta amazônica brasileira?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O açaí cresce em palmeiras na região amazônica."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 12)",
+                prompt: "A Califórnia é o estado mais populoso dos Estados Unidos?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A Califórnia tem a maior população entre todos os estados americanos."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 13)",
+                prompt: "A feijoada brasileira tradicional é feita com feijão branco?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A feijoada tradicional brasileira é feita com feijão preto e carnes de porco."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 14)",
+                prompt: "O Monte Shasta é um vulcão localizado no norte da Califórnia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Monte Shasta é um vulcão ativo temporariamente adormecido na cordilheira das Cascatas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 15)",
+                prompt: "A Disneylândia original fica localizada na cidade de Anaheim, na Califórnia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A Disneyland original foi inaugurada em Anaheim em 1955."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 16)",
+                prompt: "A caipirinha é preparada tradicionalmente com tequila?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A caipirinha é feita com cachaça, limão, açúcar e gelo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 17)",
+                prompt: "A cidade de San Diego fica perto da fronteira com o México?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "San Diego faz fronteira direta com Tijuana, no México."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 18)",
+                prompt: "O churrasco brasileiro costuma incluir cortes como a picanha?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A picanha é o corte de carne mais famoso e apreciado no churrasco brasileiro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 19)",
+                prompt: "O Vale do Silício é mundialmente conhecido como um centro de tecnologia e inovação?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Localizado na região sul da Bay Area de São Francisco, abriga grandes empresas de tecnologia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 20)",
+                prompt: "O drible é um movimento comum no futebol, esporte muito popular no Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O futebol é considerado o esporte nacional do Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 21)",
+                prompt: "O Oceano Atlântico banha a costa oeste da Califórnia?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A costa oeste da Califórnia é banhada pelo Oceano Pacífico; o Atlântico banha o Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 22)",
+                prompt: "O guaraná é uma fruta energética originária da Amazônia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O guaraná é amplamente consumido no Brasil por suas propriedades estimulantes."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 23)",
+                prompt: "O Parque Nacional de Yosemite fica localizado no estado de Nevada?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O Parque de Yosemite fica inteiramente na Califórnia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 24)",
+                prompt: "Muitos brasileiros que vivem na Califórnia trabalham no setor de tecnologia no Vale do Silício?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A comunidade brasileira na Bay Area tem forte presença no setor tecnológico e de serviços."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 25)",
+                prompt: "O samba é um gênero musical e de dança de origem africana muito forte no Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O samba é um dos maiores símbolos culturais do Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 26)",
+                prompt: "O deserto de Mojave fica localizado no norte da Califórnia?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O deserto de Mojave fica no sul da Califórnia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 27)",
+                prompt: "O pastel de feira é um salgado frito muito comum no Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Pastéis de vento recheados são clássicos das feiras livres brasileiras."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 28)",
+                prompt: "A cidade de Sacramento é mais populosa do que Los Angeles?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "Los Angeles é de longe a maior cidade da Califórnia em termos de população."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 29)",
+                prompt: "A canoa havaiana ou canoagem é um esporte que vem ganhando muitos adeptos no litoral brasileiro?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A prática de esportes náuticos é muito comum no extenso litoral do Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 30)",
+                prompt: "O pão francês brasileiro é comumente recheado com doce de leite antes de assar?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O pão francês é um pão salgado simples de casca crocante consumido no café da manhã."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 31)",
+                prompt: "A rodovia Pacific Coast Highway (PCH) corre ao longo do litoral da Califórnia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A famosa Rota 1 (PCH) oferece vistas espetaculares da costa do Pacífico."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 32)",
+                prompt: "O chimarrão é uma bebida quente feita com erva-mate muito comum no sul do Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O chimarrão é tradicional no Rio Grande do Sul, Santa Catarina e Paraná."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 33)",
+                prompt: "A cidade de Napa Valley é famosa por sua produção de suco de laranja?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "Napa Valley é internacionalmente famosa por suas vinícolas e produção de vinho."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 34)",
+                prompt: "O acarajé é uma especialidade gastronômica da culinária baiana feita com feijão-fradinho?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O acarajé é frito no azeite de dendê e recheado com vatapá e caruru."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 35)",
+                prompt: "O Parque Balboa é uma famosa atração cultural e de lazer na cidade de San Francisco?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O Balboa Park fica na cidade de San Diego."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 36)",
+                prompt: "A bossa nova é um estilo de música brasileira que ganhou fama internacional com 'Garota de Ipanema'?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A bossa nova surgiu no final da década de 1950 no Rio de Janeiro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 37)",
+                prompt: "O estado da Califórnia é conhecido como 'The Golden State'?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O apelido vem da corrida do ouro de 1848 e dos campos de papoulas douradas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 38)",
+                prompt: "A coxinha é um salgado brasileiro recheado tradicionalmente com carne moída?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A coxinha tradicional é recheada com frango desfiado."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 39)",
+                prompt: "O Lago Tahoe é dividido entre os estados da Califórnia e Nevada?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O lago fica na fronteira dos dois estados, no alto das montanhas de Sierra Nevada."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 40)",
+                prompt: "O maracujá é conhecido no Brasil por suas propriedades calmantes?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O suco de maracujá é popularmente consumido para ajudar a relaxar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 41)",
+                prompt: "A Ilha de Alcatraz fica localizada na Baía de São Francisco?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A antiga prisão federal de Alcatraz fica em uma ilha na baía de SF."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 42)",
+                prompt: "O pão de mel brasileiro costuma levar mel na massa e cobertura de chocolate?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "É um doce macio recheado ou simples muito popular no Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 43)",
+                prompt: "A cidade de Los Angeles é famosa pela indústria cinematográfica de Hollywood?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Hollywood é o distrito histórico de Los Angeles conhecido mundialmente pelo cinema."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 44)",
+                prompt: "O curau é um doce cremoso brasileiro feito à base de milho verde?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O curau é uma sobremesa tradicional das festas juninas do interior."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 45)",
+                prompt: "A Universidade de Stanford fica localizada na cidade de Berkeley?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "Stanford fica em Stanford/Palo Alto; a UC Berkeley fica em Berkeley."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 46)",
+                prompt: "O chuchu é um vegetal de sabor muito forte e marcante usado na culinária brasileira?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O chuchu tem sabor muito suave e neutro, abrindo espaço para o tempero dos outros alimentos."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 47)",
+                prompt: "A ponte que liga San Francisco a Oakland é chamada de Golden Gate?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A ponte que liga SF a Oakland é a Bay Bridge; a Golden Gate liga SF ao Condado de Marin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 48)",
+                prompt: "O guaraná em pó é muito usado no Brasil misturado a sucos e açaí para dar energia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O pó de guaraná é rico em cafeína e muito usado como estimulante natural."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 49)",
+                prompt: "O Vale da Morte (Death Valley) é um dos lugares mais quentes e secos da América do Norte?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Localizado no deserto da Califórnia, detém recordes de temperaturas extremas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 50)",
+                prompt: "A pamonha é uma comida típica brasileira feita com milho verde ralado e cozido na palha?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A pamonha pode ser doce ou salgada, muito popular no interior brasileiro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 51)",
+                prompt: "A cidade de San Jose é considerada a maior cidade do Vale do Silício em população?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "San Jose é a terceira maior cidade da Califórnia e o coração urbano do Vale do Silício."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 52)",
+                prompt: "O tacacá é um prato típico da culinária da região norte do Brasil servido bem quente?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O tacacá leva tucupi, goma de mandioca, jambu e camarão seco."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 53)",
+                prompt: "O sequoia-gigante é a maior árvore do mundo em termos de volume de madeira?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Parque Nacional das Sequoias na Califórnia abriga a árvore General Sherman."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 54)",
+                prompt: "O brigadeiro tradicional leva leite de coco em sua receita básica?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O brigadeiro tradicional leva leite condensado, chocolate em pó e manteiga."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 55)",
+                prompt: "A Baía de São Francisco abriga a famosa ponte de pedágio chamada Richmond-San Rafael Bridge?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A ponte Richmond-San Rafael atravessa a parte norte da baía."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 56)",
+                prompt: "O futebol de areia é um esporte praticado comumente nas praias do litoral brasileiro?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Brasil é uma das maiores potências mundiais no futebol de areia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 57)",
+                prompt: "A ilha de Catalina fica situada no litoral sul da Califórnia?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Santa Catalina Island é um destino turístico popular ao largo de Los Angeles."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 58)",
+                prompt: "O empadão é uma torta salgada brasileira com massa podre muito recheada?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O empadão de frango ou palmito é um prato de almoço de domingo comum no Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 59)",
+                prompt: "O bonde histórico de São Francisco é movido por motores elétricos individuais em cada vagão?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "Os famosos bondes de SF são puxados por cabos subterrâneos de aço em movimento contínuo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 60)",
+                prompt: "O Romeu e Julieta é uma combinação brasileira de queijo com goiabada?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A mistura de queijo minas com goiabada cascão é uma sobremesa tradicional brasileira."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 61)",
+                prompt: "O Monte Whitney é o ponto mais alto da Califórnia e de todos os Estados Unidos continentais?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Monte Whitney ergue-se a mais de 4.400 metros de altitude na Sierra Nevada."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 62)",
+                prompt: "O caldinho de feijão é frequentemente servido como aperitivo em bares no Brasil?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "É um caldo quente temperado servido em copo, comum em botecos."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 63)",
+                prompt: "O Muir Woods National Monument protege uma floresta de sequoias costeiras perto de San Francisco?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "Muir Woods fica no Condado de Marin, a poucos minutos ao norte da Golden Gate Bridge."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 64)",
+                prompt: "O beijinho é um doce tradicional brasileiro feito com coco ralado?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O beijinho é o parceiro tradicional do brigadeiro nas festas infantis brasileiras."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 65)",
+                prompt: "O aeroporto internacional de Los Angeles é amplamente conhecido pela sigla SFO?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "O aeroporto de Los Angeles é LAX; SFO é o aeroporto de São Francisco."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 66)",
+                prompt: "A cachaça é uma bebida alcoólica destilada a partir do caldo de cana-de-açúcar fermentado?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A cachaça é a base da caipirinha e o destilado mais popular do Brasil."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 67)",
+                prompt: "A cidade de Sausalito fica localizada ao sul de San Diego?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "Sausalito fica logo ao norte de São Francisco, atravessando a Golden Gate Bridge."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 68)",
+                prompt: "O quindim é um doce amarelo brilhante brasileiro feito com gemas de ovo, açúcar e coco ralado?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O quindim tem consistência brilhante e macia na parte superior e coco na base."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 69)",
+                prompt: "A cidade de Santa Cruz na Califórnia é famosa por sua cultura de surfe e seu calçadão histórico?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Santa Cruz Beach Boardwalk é o parque de diversões à beira-mar mais antigo da Califórnia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 70)",
+                prompt: "A canjica (ou curau) brasileira é feita com sementes de girassol torradas?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                correctAnswer: "No",
+                explanation: "A canjica é feita com grãos de milho branco ou amarelo cozidos com leite e açúcar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 71)",
+                prompt: "A Universidade de Stanford foi fundada em homenagem ao filho do ex-governador da Califórnia Leland Stanford?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A universidade foi estabelecida em 1885 como memorial a Leland Stanford Jr."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 72)",
+                prompt: "O vatapá é um prato cremoso típico da culinária baiana engrossado com pão ou farinha de trigo?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O vatapá leva camarões secos, leite de coco e azeite de dendê."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 73)",
+                prompt: "A rodovia Interstate 5 corta a Califórnia de norte a sul pelo Vale Central?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "A I-5 liga a fronteira do México à fronteira do Canadá, passando pelo interior da Califórnia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 74)",
+                prompt: "O bolo de rolo é uma sobremesa tradicional de Pernambuco feita de camadas finas de massa e goiabada?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O bolo de rolo é patrimônio imaterial de Pernambuco e assemelha-se a um rocambole bem fino."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is pão de queijo a popular traditional food in the Brazilian-American community? (Question 75)",
+                prompt: "A península de Monterey é conhecida por sua famosa reserva marinha e aquário público?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "pão de queijo is a traditional food in the Brazilian-American community."
+                explanation: "O Monterey Bay Aquarium é um dos mais renomados centros de pesquisa e exposição marinha do mundo."
             )
         ]
     )
@@ -1215,563 +1215,423 @@ struct PortugueseCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 1)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
+                prompt: "Pão de queijo : Queijo :: Brigadeiro : Chocolate",
+                options: ["Chocolate", "Água", "Sal", "Pimenta"],
                 correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                explanation: "O pão de queijo leva queijo em sua receita, enquanto o brigadeiro leva chocolate."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 2)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 3)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 4)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 5)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 6)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 7)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 8)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 9)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 10)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 11)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 12)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 13)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 14)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 15)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 16)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 17)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 18)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 19)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Sol : Dia :: Lua : Noite",
+                options: ["Noite", "Nuvem", "Estrela", "Céu"],
+                correctAnswer: "Noite",
+                explanation: "O sol brilha durante o dia, e a lua aparece principalmente à noite."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 20)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 21)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 22)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 23)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Carro : Estrada :: Barco : Rio",
+                options: ["Rio", "Céu", "Trilho", "Floresta"],
+                correctAnswer: "Rio",
+                explanation: "O carro anda na estrada, e o barco navega no rio ou no mar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 24)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Peixe : Água :: Pássaro : Ar",
+                options: ["Ar", "Terra", "Ninho", "Gaiola"],
+                correctAnswer: "Ar",
+                explanation: "O peixe vive e nada na água, o pássaro voa no ar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 25)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Livro : Ler :: Música : Ouvir",
+                options: ["Ouvir", "Escrever", "Cantar", "Tocar"],
+                correctAnswer: "Ouvir",
+                explanation: "Um livro serve para ler, e a música serve para ouvir."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 26)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Limão : Azedo :: Açúcar : Doce",
+                options: ["Doce", "Salgado", "Amargo", "Picante"],
+                correctAnswer: "Doce",
+                explanation: "O limão tem sabor azedo, o açúcar tem sabor doce."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 27)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Garfo : Comer :: Caneta : Escrever",
+                options: ["Escrever", "Desenhar", "Ler", "Pintar"],
+                correctAnswer: "Escrever",
+                explanation: "Usa-se o garfo para comer e a caneta para escrever."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 28)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Médico : Hospital :: Professor : Escola",
+                options: ["Escola", "Escritório", "Teatro", "Tribunal"],
+                correctAnswer: "Escola",
+                explanation: "O médico trabalha no hospital, e o professor trabalha na escola."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 29)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Geladeira : Frio :: Fogão : Quente",
+                options: ["Quente", "Sujo", "Limpo", "Escuro"],
+                correctAnswer: "Quente",
+                explanation: "A geladeira resfria os alimentos, e o fogão os esquenta."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 30)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Sapato : Pé :: Chapéu : Cabeça",
+                options: ["Cabeça", "Mão", "Braço", "Pescoço"],
+                correctAnswer: "Cabeça",
+                explanation: "Usa-se o sapato no pé e o chapéu na cabeça."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 31)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Brasil : Brasília :: EUA : Washington",
+                options: ["Washington", "Nova York", "Miami", "Boston"],
+                correctAnswer: "Washington",
+                explanation: "Brasília é a capital do Brasil, e Washington D.C. é a capital dos EUA."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 32)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Borracha : Apagar :: Lápis : Escrever",
+                options: ["Escrever", "Apontar", "Desenhar", "Pintar"],
+                correctAnswer: "Escrever",
+                explanation: "A borracha serve para apagar e o lápis serve para escrever."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 33)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Pão : Padaria :: Livro : Livraria",
+                options: ["Livraria", "Biblioteca", "Editora", "Escola"],
+                correctAnswer: "Livraria",
+                explanation: "O pão é comprado na padaria, e o livro é comprado na livraria."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 34)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Chuva : Molhar :: Fogo : Queimar",
+                options: ["Queimar", "Esfriar", "Iluminar", "Apagar"],
+                correctAnswer: "Queimar",
+                explanation: "A chuva serve para molhar e o fogo serve para queimar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 35)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Cachorro : Latir :: Gato : Miar",
+                options: ["Miar", "Rugir", "Cantar", "Zumbir"],
+                correctAnswer: "Miar",
+                explanation: "O cachorro late e o gato mia."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 36)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Árvore : Folha :: Flor : Pétala",
+                options: ["Pétala", "Raiz", "Caule", "Fruto"],
+                correctAnswer: "Pétala",
+                explanation: "A folha faz parte da árvore, e a pétala faz parte da flor."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 37)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Inverno : Frio :: Verão : Calor",
+                options: ["Calor", "Chuva", "Nuvem", "Vento"],
+                correctAnswer: "Calor",
+                explanation: "O inverno é associado ao frio, e o verão é associado ao calor."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 38)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Feijão : Preto :: Arroz : Branco",
+                options: ["Branco", "Amarelo", "Vermelho", "Verde"],
+                correctAnswer: "Branco",
+                explanation: "O feijão tradicional da feijoada é preto, e o arroz comum é branco."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 39)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Cachaça : Caipirinha :: Tequila : Margarita",
+                options: ["Margarita", "Mojito", "Martini", "Whisky"],
+                correctAnswer: "Margarita",
+                explanation: "A cachaça é a base da caipirinha, e a tequila é a base da margarita."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 40)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "São Francisco : Bay Bridge :: Nova York : Brooklyn Bridge",
+                options: ["Brooklyn Bridge", "Golden Gate", "Manhattan Bridge", "Queensboro"],
+                correctAnswer: "Brooklyn Bridge",
+                explanation: "A Bay Bridge liga San Francisco a Oakland, e a Brooklyn Bridge liga o Brooklyn a Manhattan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 41)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Martelo : Prego :: Chave de fenda : Parafuso",
+                options: ["Parafuso", "Madeira", "Ferro", "Parede"],
+                correctAnswer: "Parafuso",
+                explanation: "O martelo fixa o prego, e a chave de fenda aperta o parafuso."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 42)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Orelha : Ouvir :: Olho : Ver",
+                options: ["Ver", "Tocar", "Cheirar", "Sentir"],
+                correctAnswer: "Ver",
+                explanation: "A orelha é o órgão do ouvido, e o olho é o órgão da visão."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 43)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Vinho : Uva :: Suco : Laranja",
+                options: ["Laranja", "Água", "Açúcar", "Gelo"],
+                correctAnswer: "Laranja",
+                explanation: "O vinho é produzido a partir da uva, e o suco é feito de laranja."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 44)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Avião : Piloto :: Trem : Maquinista",
+                options: ["Maquinista", "Motorista", "Marinheiro", "Condutor"],
+                correctAnswer: "Maquinista",
+                explanation: "O avião é guiado pelo piloto, e o trem pelo maquinista."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 45)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Mel : Abelha :: Leite : Vaca",
+                options: ["Vaca", "Cabra", "Ovelha", "Galinha"],
+                correctAnswer: "Vaca",
+                explanation: "O mel é produzido pela abelha, e o leite é produzido pela vaca."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 46)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Dia : Acordar :: Noite : Dormir",
+                options: ["Dormir", "Trabalhar", "Estudar", "Brincar"],
+                correctAnswer: "Dormir",
+                explanation: "O dia é o período para acordar, e a noite para dormir."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 47)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Norte : Sul :: Leste : Oeste",
+                options: ["Oeste", "Centro", "Nordeste", "Sudeste"],
+                correctAnswer: "Oeste",
+                explanation: "Norte é o oposto de Sul, e Leste é o oposto de Oeste."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 48)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Futebol : Chutar :: Basquete : Arremessar",
+                options: ["Arremessar", "Correr", "Pular", "Bloquear"],
+                correctAnswer: "Arremessar",
+                explanation: "No futebol chuta-se a bola, no basquete arremessa-se na cesta."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 49)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Mão : Luva :: Pé : Meia",
+                options: ["Meia", "Sapato", "Sandália", "Bota"],
+                correctAnswer: "Meia",
+                explanation: "A luva protege a mão, e a meia protege o pé."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 50)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Pintor : Quadro :: Escritor : Livro",
+                options: ["Livro", "Poema", "Artigo", "Rascunho"],
+                correctAnswer: "Livro",
+                explanation: "O pintor pinta um quadro, e o escritor escreve um livro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 51)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Janela : Vidro :: Parede : Tijolo",
+                options: ["Tijolo", "Tinta", "Cimento", "Porta"],
+                correctAnswer: "Tijolo",
+                explanation: "A janela tem placas de vidro, e a parede é construída com tijolos."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 52)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Bebida : Copo :: Sopa : Prato fundo",
+                options: ["Prato fundo", "Xícara", "Colher", "Garrafa"],
+                correctAnswer: "Prato fundo",
+                explanation: "A bebida é servida no copo, e a sopa no prato fundo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 53)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Elefante : Pesado :: Formiga : Leve",
+                options: ["Leve", "Pequena", "Rápida", "Trabalhadora"],
+                correctAnswer: "Leve",
+                explanation: "O elefante é pesado, e a formiga é leve."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 54)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Ponte : Rio :: Túnel : Montanha",
+                options: ["Montanha", "Estrada", "Trilho", "Cidade"],
+                correctAnswer: "Montanha",
+                explanation: "A ponte cruza o rio, e o túnel atravessa a montanha."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 55)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Sabão : Limpeza :: Sujeira : Poeira",
+                options: ["Poeira", "Água", "Mancha", "Lixo"],
+                correctAnswer: "Poeira",
+                explanation: "O sabão limpa a sujeira, que muitas vezes é composta de poeira."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 56)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Roda : Carro :: Asas : Avião",
+                options: ["Avião", "Barco", "Trem", "Bicicleta"],
+                correctAnswer: "Avião",
+                explanation: "A roda é parte do carro, e as asas do avião."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 57)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Goiabada : Goiaba :: Doce de leite : Leite",
+                options: ["Leite", "Açúcar", "Coco", "Queijo"],
+                correctAnswer: "Leite",
+                explanation: "A goiabada é feita de goiaba, e o doce de leite é feito de leite."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 58)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Natação : Piscina :: Corrida : Pista",
+                options: ["Pista", "Rua", "Parque", "Esteira"],
+                correctAnswer: "Pista",
+                explanation: "A natação é praticada na piscina, e a corrida na pista."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 59)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Queijo : Minas :: Goiabada : Cascão",
+                options: ["Cascão", "Lata", "Pote", "Fatia"],
+                correctAnswer: "Cascão",
+                explanation: "Queijo minas é um tipo clássico de queijo, e goiabada cascão é um tipo clássico de goiabada."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 60)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Teatro : Ator :: Cinema : Diretor",
+                options: ["Diretor", "Espectador", "Câmera", "Roteirista"],
+                correctAnswer: "Diretor",
+                explanation: "No teatro a peça tem ator, e o filme no cinema tem diretor."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 61)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Tinta : Parede :: Verniz : Madeira",
+                options: ["Madeira", "Chão", "Móvel", "Metal"],
+                correctAnswer: "Madeira",
+                explanation: "A tinta colore a parede, e o verniz protege a madeira."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 62)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Violão : Cordas :: Piano : Teclas",
+                options: ["Teclas", "Martelos", "Pedais", "Cordas"],
+                correctAnswer: "Teclas",
+                explanation: "O violão tem cordas, e o piano tem teclas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 63)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Manteiga : Pão :: Molho : Macarrão",
+                options: ["Macarrão", "Arroz", "Salada", "Carne"],
+                correctAnswer: "Macarrão",
+                explanation: "Passa-se manteiga no pão, e coloca-se molho no macarrão."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 64)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Bolo : Assar :: Coxinha : Fritar",
+                options: ["Fritar", "Cozinhar", "Grelhar", "Assar"],
+                correctAnswer: "Fritar",
+                explanation: "O bolo vai ao forno para assar, e a coxinha vai para fritar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 65)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Sal : Comida :: Açúcar : Café",
+                options: ["Café", "Leite", "Suco", "Chá"],
+                correctAnswer: "Café",
+                explanation: "Usa-se sal para a comida, e açúcar para o café."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 66)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Dentista : Dentes :: Pediatra : Crianças",
+                options: ["Crianças", "Bebês", "Idosos", "Olhos"],
+                correctAnswer: "Crianças",
+                explanation: "O dentista cuida dos dentes, e o pediatra das crianças."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 67)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Canteiro : Flores :: Horta : Verduras",
+                options: ["Verduras", "Frutas", "Legumes", "Árvores"],
+                correctAnswer: "Verduras",
+                explanation: "No canteiro plantam-se flores, e na horta verdurinhas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 68)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Passaporte : Viagem :: Ingresso : Show",
+                options: ["Show", "Teatro", "Cinema", "Estádio"],
+                correctAnswer: "Show",
+                explanation: "O passaporte serve para a viagem, e o ingresso para o show."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 69)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Garrafa : Tampa :: Caixa : Tampa",
+                options: ["Tampa", "Papel", "Fita", "Plástico"],
+                correctAnswer: "Tampa",
+                explanation: "A garrafa fecha-se com a tampa, e a caixa também."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 70)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Vela : Cera :: Copo : Vidro",
+                options: ["Vidro", "Plástico", "Metal", "Papel"],
+                correctAnswer: "Vidro",
+                explanation: "A vela é feita de cera, e o copo de vidro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 71)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Farol : Carro :: Poste : Rua",
+                options: ["Rua", "Calçada", "Casa", "Praça"],
+                correctAnswer: "Rua",
+                explanation: "O farol ilumina o caminho do carro, e o poste a rua."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 72)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Sino : Tocar :: Tambor : Bater",
+                options: ["Bater", "Soprar", "Dedilhar", "Sacudir"],
+                correctAnswer: "Bater",
+                explanation: "O sino emite som ao tocar, e o tambor ao bater."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 73)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Chave : Fechadura :: Cartão : Leitor",
+                options: ["Leitor", "Banco", "Carteira", "Bolsa"],
+                correctAnswer: "Leitor",
+                explanation: "A chave entra na fechadura, e o cartão passa no leitor."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 74)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Perna : Joelho :: Braço : Cotovelo",
+                options: ["Cotovelo", "Punho", "Ombro", "Mão"],
+                correctAnswer: "Cotovelo",
+                explanation: "O joelho é da perna, e o cotovelo é do braço."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 75)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Lã : Ovelha :: Seda : Bicho-da-seda",
+                options: ["Bicho-da-seda", "Lagarta", "Aranha", "Casulo"],
+                correctAnswer: "Bicho-da-seda",
+                explanation: "A lã é da ovelha, e a seda é do bicho-da-seda."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 76)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Nuvem : Céu :: Alga : Mar",
+                options: ["Mar", "Rio", "Lago", "Piscina"],
+                correctAnswer: "Mar",
+                explanation: "As nuvens ficam no céu, e as algas no mar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 77)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Ventilador : Vento :: Aquecedor : Calor",
+                options: ["Calor", "Frio", "Ar", "Fumaça"],
+                correctAnswer: "Calor",
+                explanation: "O ventilador gera vento, e o aquecedor calor."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 78)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Vassoura : Varrer :: Pano : Limpar",
+                options: ["Limpar", "Lavar", "Enxugar", "Esfregar"],
+                correctAnswer: "Limpar",
+                explanation: "A vassoura serve para varrer, e o pano para limpar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 79)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Piloto : Avião :: Motorista : Ônibus",
+                options: ["Ônibus", "Carro", "Caminhão", "Moto"],
+                correctAnswer: "Ônibus",
+                explanation: "O piloto guia o avião, e o motorista o ônibus."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : ___ (Analogy 80)",
-                options: ["Chocolate", "Water", "Salt", "Pepper"],
-                correctAnswer: "Chocolate",
-                explanation: "Analogy comparison."
+                prompt: "Gelo : Derreter :: Água : Evaporar",
+                options: ["Evaporar", "Congelar", "Ferver", "Esfriar"],
+                correctAnswer: "Evaporar",
+                explanation: "O gelo derrete, e a água evapora."
             )
         ]
     )
