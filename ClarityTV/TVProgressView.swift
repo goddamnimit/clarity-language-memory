@@ -6,6 +6,7 @@ import Charts
 
 private enum TVProgressFocus: Hashable {
     case card(String)
+    case badge(String)
 }
 
 // MARK: - TVProgressView
@@ -130,6 +131,73 @@ struct TVProgressView: View {
                                 .stroke(focus == .card("weekly_chart") ? Color.white : Color.clear, lineWidth: 3)
                                 .padding(.horizontal, 80)
                         )
+                    }
+
+                    // Streaks & Achievements Section
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(achievementsSectionTitle)
+                            .font(.system(size: 36, weight: .bold, design: .rounded))
+                            .foregroundColor(.white.opacity(0.85))
+                            .padding(.horizontal, 80)
+
+                        HStack(spacing: 40) {
+                            // Current Streak Info Card
+                            VStack(spacing: 8) {
+                                Text("\(profileStore.profile.currentStreak)")
+                                    .font(.system(size: 48, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color(hex: "FF9500"))
+                                Text(dayStreakSuffix)
+                                    .font(.system(size: 22, weight: .medium))
+                                    .foregroundColor(.white.opacity(0.6))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 24)
+                            .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "2D2D44").opacity(0.4)))
+
+                            // Longest Streak Info Card
+                            VStack(spacing: 8) {
+                                Text("\(profileStore.profile.longestStreak)")
+                                    .font(.system(size: 48, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color(hex: "FFD700"))
+                                Text(longestStreakTitle)
+                                    .font(.system(size: 22, weight: .medium))
+                                    .foregroundColor(.white.opacity(0.6))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 24)
+                            .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "2D2D44").opacity(0.4)))
+
+                            // Total Sessions Info Card
+                            VStack(spacing: 8) {
+                                Text("\(profileStore.profile.completionHistory.count)")
+                                    .font(.system(size: 48, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color(hex: "2ECC71"))
+                                Text(totalSessionsTitle)
+                                    .font(.system(size: 22, weight: .medium))
+                                    .foregroundColor(.white.opacity(0.6))
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 24)
+                            .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "2D2D44").opacity(0.4)))
+                        }
+                        .padding(.horizontal, 80)
+
+                        // 7 Achievement Badges horizontal row
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 24) {
+                                ForEach(BadgeManager.evaluateBadges()) { badge in
+                                    Button {
+                                        // Focus navigation only
+                                    } label: {
+                                        badgeCard(badge)
+                                    }
+                                    .buttonStyle(.plain)
+                                    .focused($focus, equals: .badge(badge.id))
+                                }
+                            }
+                            .padding(.horizontal, 80)
+                            .padding(.vertical, 16)
+                        }
                     }
 
                     // Section Accuracy Breakdown
@@ -452,7 +520,20 @@ struct TVProgressView: View {
         switch currentLanguage {
         case .english:    return "based on initial session answers"
         case .spanish:    return "basado en las respuestas iniciales"
-        default:          return "—"
+        case .hindi:      return "प्रारंभिक सत्र के उत्तरों के आधार पर"
+        case .gujarati:   return "પ્રારંભિક સત્રના જવાબોના આધારે"
+        case .chinese:    return "根据初次练习的答案"
+        case .farsi:      return "بر اساس پاسخ‌های جلسه اولیه"
+        case .korean:     return "초기 세션 답변 기준"
+        case .vietnamese: return "dựa trên câu trả lời của phiên đầu tiên"
+        case .arabic:     return "بناءً على إجابات الجلسة الأولى"
+        case .portuguese: return "com base nas respostas da sessão inicial"
+        case .tagalog:    return "batay sa mga sagot sa unang sesyon"
+        case .punjabi:    return "ਸ਼ੁਰੂਆਤੀ ਸੈਸ਼ਨ ਦੇ ਜਵਾਬਾਂ ਦੇ ਆਧਾਰ 'ਤੇ"
+        case .armenian:   return "հիմնված սկզբնական փուլի պատասխանների վրա"
+        case .japanese:   return "初回セッションの回答に基づく"
+        case .french:     return "basé sur les réponses de la première session"
+        case .amharic:    return "በመጀመሪያው ክፍለ ጊዜ መልሶች ላይ የተመሠረተ"
         }
     }
 
@@ -502,7 +583,20 @@ struct TVProgressView: View {
         switch currentLanguage {
         case .english:    return "Today"
         case .spanish:    return "Hoy"
-        default:          return "Today"
+        case .hindi:      return "आज"
+        case .gujarati:   return "આજે"
+        case .chinese:    return "今天"
+        case .farsi:      return "امروز"
+        case .korean:     return "오늘"
+        case .vietnamese: return "Hôm nay"
+        case .arabic:     return "اليوم"
+        case .portuguese: return "Hoje"
+        case .tagalog:    return "Ngayon"
+        case .punjabi:    return "ਅੱਜ"
+        case .armenian:   return "Այսօր"
+        case .japanese:   return "今日"
+        case .french:     return "Aujourd'hui"
+        case .amharic:    return "ዛሬ"
         }
     }
 
@@ -510,7 +604,20 @@ struct TVProgressView: View {
         switch currentLanguage {
         case .english:    return "Previous Days"
         case .spanish:    return "Días Anteriores"
-        default:          return "Previous Days"
+        case .hindi:      return "पिछले दिन"
+        case .gujarati:   return "પાછલા દિવસો"
+        case .chinese:    return "过去几天"
+        case .farsi:      return "روزهای گذشته"
+        case .korean:     return "이전 일수"
+        case .vietnamese: return "Những ngày trước"
+        case .arabic:     return "الأيام السابقة"
+        case .portuguese: return "Dias Anteriores"
+        case .tagalog:    return "Nakaraang mga Araw"
+        case .punjabi:    return "ਪਿਛਲੇ ਦਿਨ"
+        case .armenian:   return "Նախորդ Օրեր"
+        case .japanese:   return "過去の日々"
+        case .french:     return "Jours précédents"
+        case .amharic:    return "ያለፉ ቀናት"
         }
     }
 
@@ -518,7 +625,124 @@ struct TVProgressView: View {
         switch currentLanguage {
         case .english:    return "Note: PDF Report Exporting is only supported on the mobile app."
         case .spanish:    return "Nota: La exportación de informes PDF solo se admite en la aplicación móvil."
-        default:          return "Note: PDF Report Exporting is only supported on the mobile app."
+        case .hindi:      return "नोट: PDF रिपोर्ट एक्सपोर्ट करना केवल मोबाइल ऐप पर समर्थित है।"
+        case .gujarati:   return "નોંધ: PDF રિપોર્ટ એક્સપોર્ટ ફક્ત મોબાઇલ એપ પર જ સપોર્ટેડ છે."
+        case .chinese:    return "注意：PDF 报告导出功能仅在手机应用中支持。"
+        case .farsi:      return "توجه: خروجی گرفتن گزارش PDF فقط در اپلیکیشن موبایل پشتیبانی می‌شود."
+        case .korean:     return "참고: PDF 보고서 내보내기는 모바일 앱에서만 지원됩니다."
+        case .vietnamese: return "Lưu ý: Xuất báo cáo PDF chỉ được hỗ trợ trên ứng dụng di động."
+        case .arabic:     return "ملاحظة: تصدير تقرير PDF مدعوم فقط في تطبيق الهاتف المحمول."
+        case .portuguese: return "Nota: A exportação de relatórios em PDF só é compatível com o aplicativo móvel."
+        case .tagalog:    return "Paalala: Ang pag-export ng PDF Report ay suportado lamang sa mobile app."
+        case .punjabi:    return "ਨੋਟ: PDF ਰਿਪੋਰਟ ਐਕਸਪੋਰਟ ਕਰਨਾ ਸਿਰਫ਼ ਮੋਬਾਈਲ ਐਪ 'ਤੇ ਸਮਰਥਿਤ ਹੈ।"
+        case .armenian:   return "Նշում. PDF հաշվետվության արտահանումը հասանելի է միայն բջջային հավելվածում:"
+        case .japanese:   return "注：PDFレポートのエクスポートはモバイルアプリでのみサポートされています。"
+        case .french:     return "Remarque : L'exportation de rapports PDF n'est prise en charge que sur l'application mobile."
+        case .amharic:    return "ማሳሰቢያ፡ የPDF ሪፖርት ወደ ውጪ መላክ የሚደገፈው በሞባይል መተግበሪያ ላይ ብቻ ነው።"
+        }
+    }
+
+    // MARK: - Achievements Helper
+
+    @ViewBuilder
+    private func badgeCard(_ badge: Badge) -> some View {
+        let isBadgeFocused = focus == .badge(badge.id)
+        let isUnlocked = badge.isUnlocked
+        
+        VStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(isUnlocked ? badge.color.opacity(0.15) : Color.white.opacity(0.05))
+                    .frame(width: 100, height: 100)
+                
+                Image(systemName: badge.iconName)
+                    .font(.system(size: 44))
+                    .foregroundColor(isUnlocked ? badge.color : .gray)
+            }
+            .shadow(color: (isUnlocked && isBadgeFocused) ? badge.color.opacity(0.6) : .clear, radius: 10)
+
+            Text(badge.title)
+                .font(.system(size: 24, weight: .bold, design: .rounded))
+                .foregroundColor(isUnlocked ? .white : .white.opacity(0.4))
+                .multilineTextAlignment(.center)
+                .lineLimit(1)
+        }
+        .padding(20)
+        .frame(width: 220, height: 200)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(isBadgeFocused ? Color(hex: "3D3D60") : Color(hex: "2D2D44").opacity(0.3))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(isBadgeFocused ? Color.white : Color.clear, lineWidth: 3)
+        )
+        .scaleEffect(isBadgeFocused ? 1.04 : 1.0)
+        .grayscale(isUnlocked ? 0.0 : 1.0)
+        .opacity(isUnlocked ? 1.0 : 0.65)
+        .animation(.easeInOut(duration: 0.15), value: isBadgeFocused)
+    }
+
+    private var achievementsSectionTitle: String {
+        switch currentLanguage {
+        case .english:    return "Streaks & Badges"
+        case .spanish:    return "Rachas y Insignias"
+        case .hindi:      return "लकीरें और बैज"
+        case .gujarati:   return "સાતત્ય અને બેજ"
+        case .chinese:    return "连续和徽章"
+        case .farsi:      return "پیوستگی‌ها و نشان‌ها"
+        case .korean:     return "연속 및 배지"
+        case .vietnamese: return "Chuỗi & Huy hiệu"
+        case .arabic:     return "النشاط والشارات"
+        case .portuguese: return "Rachas e Medalhas"
+        case .tagalog:    return "Mga Streak at Badge"
+        case .punjabi:    return "ਲੜੀ ਅਤੇ ਬੈਜ"
+        case .armenian:   return "Շարքեր և Կրծքանշաններ"
+        case .japanese:   return "継続とバッジ"
+        case .french:     return "Séries & Badges"
+        case .amharic:    return "ተከታታይ ቀናት እና ባጆች"
+        }
+    }
+
+    private var dayStreakSuffix: String {
+        switch currentLanguage {
+        case .english:    return "day streak"
+        case .spanish:    return "días de racha"
+        case .hindi:      return "दिनों का सिलसिला"
+        case .gujarati:   return "દિવસ સાતત્ય"
+        case .chinese:    return "天连续"
+        case .farsi:      return "روز متوالی"
+        case .korean:     return "일 연속"
+        case .vietnamese: return "ngày liên tiếp"
+        case .arabic:     return "يوماً متتالياً"
+        case .portuguese: return "dias de racha"
+        case .tagalog:    return "araw na streak"
+        case .punjabi:    return "ਦਿਨਾਂ ਦੀ ਲੜੀ"
+        case .armenian:   return "օրվա շարք"
+        case .japanese:   return "日連続"
+        case .french:     return "jours d'affilée"
+        case .amharic:    return "ተከታታይ ቀናት"
+        }
+    }
+
+    private var totalSessionsTitle: String {
+        switch currentLanguage {
+        case .english:    return "Total Sessions"
+        case .spanish:    return "Sesiones Totales"
+        case .hindi:      return "कुल सत्र"
+        case .gujarati:   return "કુલ સત્રો"
+        case .chinese:    return "总组数"
+        case .farsi:      return "کل جلسات"
+        case .korean:     return "총 세션"
+        case .vietnamese: return "Tổng số phiên"
+        case .arabic:     return "إجمالي الجلسات"
+        case .portuguese: return "Total de Sessões"
+        case .tagalog:    return "Kabuuang Session"
+        case .punjabi:    return "ਕੁੱਲ ਸੈਸ਼ਨ"
+        case .armenian:   return "Ընդհանուր Փուլեր"
+        case .japanese:   return "総セッション数"
+        case .french:     return "Sessions totales"
+        case .amharic:    return "ጠቅላላ ክፍለ ጊዜዎች"
         }
     }
 }

@@ -67,6 +67,7 @@ struct ProfileView: View {
     // MARK: - Body
 
     var body: some View {
+        #if os(iOS)
         ScrollView {
             VStack(spacing: 24) {
 
@@ -459,6 +460,9 @@ struct ProfileView: View {
                 ShareSheet(items: [url])
             }
         }
+        #endif
+        #else
+        EmptyView()
         #endif
     }
 

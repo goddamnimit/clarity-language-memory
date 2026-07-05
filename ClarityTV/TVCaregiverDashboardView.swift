@@ -139,7 +139,20 @@ struct TVCaregiverDashboardView: View {
         switch currentLanguage {
         case .english:    return "Caregiver Hub"
         case .spanish:    return "Centro de Cuidadores"
-        default:          return "Caregiver Hub"
+        case .hindi:      return "देखभालकर्ता हब"
+        case .gujarati:   return "કેરગિવર હબ"
+        case .chinese:    return "照护者中心"
+        case .farsi:      return "مرکز مراقب"
+        case .korean:     return "보호자 허브"
+        case .vietnamese: return "Trung tâm người chăm sóc"
+        case .arabic:     return "مركز مقدم الرعاية"
+        case .portuguese: return "Central do Cuidador"
+        case .tagalog:    return "Sentro ng Tagapag-alaga"
+        case .punjabi:    return "ਦੇਖਭਾਲ ਕਰਤਾ ਹੱਬ"
+        case .armenian:   return "Խնամակալի Կենտրոն"
+        case .japanese:   return "介護者ハブ"
+        case .french:     return "Espace aidant"
+        case .amharic:    return "የእንክብካቤ ሰጪ ማዕከል"
         }
     }
 
@@ -147,7 +160,20 @@ struct TVCaregiverDashboardView: View {
         switch currentLanguage {
         case .english:    return "Manage clinical tracking and assessments"
         case .spanish:    return "Gestionar el seguimiento clínico"
-        default:          return "Manage clinical tracking and assessments"
+        case .hindi:      return "क्लिनिकल ट्रैकिंग और मूल्यांकन प्रबंधित करें"
+        case .gujarati:   return "ક્લિનિકલ ટ્રેકિંગ અને મૂલ્યાંકન સંચાલિત કરો"
+        case .chinese:    return "管理临床追踪与评估"
+        case .farsi:      return "مدیریت ردیابی بالینی و ارزیابی‌ها"
+        case .korean:     return "임상 추적 및 평가 관리"
+        case .vietnamese: return "Quản lý theo dõi lâm sàng và đánh giá"
+        case .arabic:     return "إدارة التتبع السريري والتقييمات"
+        case .portuguese: return "Gerencie o acompanhamento clínico e as avaliações"
+        case .tagalog:    return "Pamahalaan ang klinikal na pagsubaybay at mga pagtatasa"
+        case .punjabi:    return "ਕਲੀਨਿਕਲ ਟਰੈਕਿੰਗ ਅਤੇ ਮੁਲਾਂਕਣ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"
+        case .armenian:   return "Կառավարեք կլինիկական հետևումը և գնահատումները"
+        case .japanese:   return "臨床トラッキングと評価を管理"
+        case .french:     return "Gérez le suivi clinique et les évaluations"
+        case .amharic:    return "ክሊኒካዊ ክትትልን እና ግምገማዎችን ያስተዳድሩ"
         }
     }
 }

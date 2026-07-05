@@ -25,9 +25,11 @@ struct TVCompletionView: View {
         ZStack {
             Color(hex: "1C1C1E").ignoresSafeArea()
 
-            // Confetti overlay — perfect score only
+            // Confetti overlay — perfect score (full burst) or near-perfect (softer burst)
             if score == total {
-                TVConfettiView()
+                TVConfettiView(isPerfect: true)
+            } else if score == total - 1 {
+                TVConfettiView(isPerfect: false)
             }
 
             VStack(spacing: 0) {
@@ -160,22 +162,32 @@ private struct ChangeActivityButton: View {
     }
 }
 
+// MARK: - Confetti Shape Helper
+private enum ConfettiShapeType: CaseIterable {
+    case circle, rectangle, capsule
+}
+
 // MARK: - TVConfettiParticle
 
 private struct TVConfettiParticle: Identifiable {
     let id = UUID()
-    let x: CGFloat
+    let xStart: CGFloat
+    let xEnd: CGFloat
     let color: Color
     let size: CGFloat
+    let shapeType: ConfettiShapeType
     let delay: Double
     let duration: Double
+    let rotationStart: Double
+    let rotationEnd: Double
 }
 
 // MARK: - TVConfettiView
 
 private struct TVConfettiView: View {
+    let isPerfect: Bool
     @State private var particles: [TVConfettiParticle] = []
-    @State private var dropped = false
+    @State private var animate = false
 
     private let palette: [Color] = [
         Color(hex: "FFD700"), Color(hex: "2ECC71"), Color(hex: "3498DB"),
@@ -186,28 +198,51 @@ private struct TVConfettiView: View {
         GeometryReader { geo in
             ZStack {
                 ForEach(particles) { p in
-                    Circle()
-                        .fill(p.color)
-                        .frame(width: p.size, height: p.size)
-                        .position(x: p.x, y: dropped ? geo.size.height + 40 : -20)
-                        .animation(
-                            .easeIn(duration: p.duration).delay(p.delay),
-                            value: dropped
-                        )
+                    Group {
+                        switch p.shapeType {
+                        case .circle:
+                            Circle().fill(p.color)
+                        case .rectangle:
+                            Rectangle().fill(p.color)
+                        case .capsule:
+                            Capsule().fill(p.color)
+                        }
+                    }
+                    .frame(width: p.size, height: p.shapeType == .capsule ? p.size * 1.5 : p.size)
+                    .rotationEffect(Angle.degrees(animate ? p.rotationEnd : p.rotationStart))
+                    .opacity(animate ? 0.0 : 1.0)
+                    .position(
+                        x: animate ? p.xEnd : p.xStart,
+                        y: animate ? geo.size.height + 50 : -50
+                    )
+                    .animation(
+                        Animation.easeIn(duration: p.duration).delay(p.delay),
+                        value: animate
+                    )
                 }
             }
             .onAppear {
-                particles = (0..<20).map { _ in
-                    TVConfettiParticle(
-                        x: CGFloat.random(in: 60...(geo.size.width - 60)),
+                let count = isPerfect ? 35 : 15
+                let sizeRange: ClosedRange<CGFloat> = isPerfect ? 28...56 : 20...36
+                let durationRange: ClosedRange<Double> = isPerfect ? 2.8...4.5 : 2.0...3.5
+                
+                particles = (0..<count).map { _ in
+                    let startX = CGFloat.random(in: 100...(geo.size.width - 100))
+                    let drift = CGFloat.random(in: -150...150)
+                    return TVConfettiParticle(
+                        xStart: startX,
+                        xEnd: startX + drift,
                         color: palette.randomElement()!,
-                        size: CGFloat.random(in: 14...28),
-                        delay: Double.random(in: 0...1.2),
-                        duration: Double.random(in: 2.5...4.0)
+                        size: CGFloat.random(in: sizeRange),
+                        shapeType: ConfettiShapeType.allCases.randomElement()!,
+                        delay: Double.random(in: 0...1.5),
+                        duration: Double.random(in: durationRange),
+                        rotationStart: Double.random(in: 0...360),
+                        rotationEnd: Double.random(in: 720...1440)
                     )
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                    dropped = true
+                    animate = true
                 }
             }
         }

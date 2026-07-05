@@ -72,9 +72,9 @@ extension AppLanguage {
         case .tagalog:    return "Home"
         case .punjabi:    return "ਹੋਮ"
         case .armenian:   return "Գլխավոր"
-        case .japanese:   return "Գլխավոր"
-        case .french:     return "Գլխավոր"
-        case .amharic:    return "Գլխավոր"
+        case .japanese:   return "ホーム"
+        case .french:     return "Accueil"
+        case .amharic:    return "መነሻ"
         }
     }
 
@@ -93,9 +93,9 @@ extension AppLanguage {
         case .tagalog:    return "Mga Aktibidad"
         case .punjabi:    return "ਗਤੀਵਿਧੀਆਂ"
         case .armenian:   return "Վարժություններ"
-        case .japanese:   return "Վարժություններ"
-        case .french:     return "Վարժություններ"
-        case .amharic:    return "Վարժություններ"
+        case .japanese:   return "アクティビティ"
+        case .french:     return "Activités"
+        case .amharic:    return "ተግባራት"
         }
     }
 
@@ -114,9 +114,9 @@ extension AppLanguage {
         case .tagalog:    return "Profile"
         case .punjabi:    return "ਪ੍ਰੋਫਾਈਲ"
         case .armenian:   return "Պրոֆիլ"
-        case .japanese:   return "Պրոֆիլ"
-        case .french:     return "Պրոֆիլ"
-        case .amharic:    return "Պրոֆիլ"
+        case .japanese:   return "プロフィール"
+        case .french:     return "Profil"
+        case .amharic:    return "መገለጫ"
         }
     }
 }

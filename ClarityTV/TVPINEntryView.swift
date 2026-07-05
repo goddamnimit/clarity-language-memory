@@ -143,7 +143,20 @@ struct TVPINEntryView: View {
         switch currentLanguage {
         case .english:    return "Caregiver Mode"
         case .spanish:    return "Modo del Cuidador"
-        default:          return "Caregiver Mode"
+        case .hindi:      return "देखभालकर्ता मोड"
+        case .gujarati:   return "કેરગિવર મોડ"
+        case .chinese:    return "照护者模式"
+        case .farsi:      return "حالت مراقب"
+        case .korean:     return "보호자 모드"
+        case .vietnamese: return "Chế độ người chăm sóc"
+        case .arabic:     return "وضع مقدم الرعاية"
+        case .portuguese: return "Modo Cuidador"
+        case .tagalog:    return "Mode ng Tagapag-alaga"
+        case .punjabi:    return "ਦੇਖਭਾਲ ਕਰਤਾ ਮੋਡ"
+        case .armenian:   return "Խնամակալի Ռեժիմ"
+        case .japanese:   return "介護者モード"
+        case .french:     return "Mode aidant"
+        case .amharic:    return "የእንክብካቤ ሰጪ ሁነታ"
         }
     }
 
@@ -151,7 +164,20 @@ struct TVPINEntryView: View {
         switch currentLanguage {
         case .english:    return "Enter 4-Digit PIN to Access Settings"
         case .spanish:    return "Ingrese el PIN de 4 dígitos para acceder"
-        default:          return "Enter 4-Digit PIN to Access Settings"
+        case .hindi:      return "सेटिंग्स तक पहुंचने के लिए 4-अंकीय पिन दर्ज करें"
+        case .gujarati:   return "સેટિંગ્સ ઍક્સેસ કરવા માટે 4-અંકનો પિન દાખલ કરો"
+        case .chinese:    return "输入4位PIN码以访问设置"
+        case .farsi:      return "برای دسترسی به تنظیمات، پین ۴ رقمی را وارد کنید"
+        case .korean:     return "설정에 접근하려면 4자리 PIN을 입력하세요"
+        case .vietnamese: return "Nhập mã PIN gồm 4 chữ số để truy cập Cài đặt"
+        case .arabic:     return "أدخل رمز PIN المكون من 4 أرقام للوصول إلى الإعدادات"
+        case .portuguese: return "Digite o PIN de 4 dígitos para acessar as configurações"
+        case .tagalog:    return "Ilagay ang 4-Digit na PIN para ma-access ang Mga Setting"
+        case .punjabi:    return "ਸੈਟਿੰਗਾਂ ਤੱਕ ਪਹੁੰਚਣ ਲਈ 4-ਅੰਕਾਂ ਦਾ ਪਿੰਨ ਦਾਖਲ ਕਰੋ"
+        case .armenian:   return "Մուտքագրեք 4-նիշանոց PIN կոդը՝ կարգավորումներ մուտք գործելու համար"
+        case .japanese:   return "設定にアクセスするには4桁のPINを入力してください"
+        case .french:     return "Entrez le code PIN à 4 chiffres pour accéder aux paramètres"
+        case .amharic:    return "ቅንብሮችን ለመድረስ የ4-አሃዝ ፒን ያስገቡ"
         }
     }
 
@@ -159,7 +185,20 @@ struct TVPINEntryView: View {
         switch currentLanguage {
         case .english:    return "Incorrect PIN. Please try again."
         case .spanish:    return "PIN incorrecto. Inténtelo de nuevo."
-        default:          return "Incorrect PIN. Please try again."
+        case .hindi:      return "गलत पिन। कृपया पुनः प्रयास करें।"
+        case .gujarati:   return "ખોટો પિન. કૃપા કરી ફરી પ્રયાસ કરો."
+        case .chinese:    return "PIN码错误，请重试。"
+        case .farsi:      return "پین اشتباه است. لطفاً دوباره امتحان کنید."
+        case .korean:     return "PIN이 올바르지 않습니다. 다시 시도해 주세요."
+        case .vietnamese: return "Mã PIN không đúng. Vui lòng thử lại."
+        case .arabic:     return "رمز PIN غير صحيح. يرجى المحاولة مرة أخرى."
+        case .portuguese: return "PIN incorreto. Tente novamente."
+        case .tagalog:    return "Maling PIN. Pakisubukang muli."
+        case .punjabi:    return "ਗਲਤ ਪਿੰਨ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+        case .armenian:   return "Սխալ PIN կոդ։ Խնդրում ենք փորձել կրկին։"
+        case .japanese:   return "PINが正しくありません。もう一度お試しください。"
+        case .french:     return "Code PIN incorrect. Veuillez réessayer."
+        case .amharic:    return "የተሳሳተ ፒን። እባክዎ እንደገና ይሞክሩ።"
         }
     }
 }

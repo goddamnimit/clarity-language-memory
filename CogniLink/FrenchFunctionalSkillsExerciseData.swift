@@ -17,7 +17,7 @@ struct FrenchFunctionalSkillsExerciseData {
     private static let exercise1 = Exercise(
         id: UUID(),
         title: "Scénarios de sécurité",
-        instructions: "Lisez chaque scénario. Décrivez ce que vous feriez. Appuyez sur "Afficher la réponse" pour voir la meilleure réponse modèle.",
+        instructions: "Lisez chaque scénario. Décrivez ce que vous feriez. Appuyez sur \"Afficher la réponse\" pour voir la meilleure réponse modèle.",
         section: .functionalSkills,
         type: .openEnded,
         difficulty: .medium,
@@ -180,7 +180,7 @@ struct FrenchFunctionalSkillsExerciseData {
     private static let exercise4 = Exercise(
         id: UUID(),
         title: "Rédaction fonctionnelle",
-        instructions: "Rédigez une réponse à chaque consigne. Appuyez sur "Afficher la réponse" pour voir un exemple de message modèle.",
+        instructions: "Rédigez une réponse à chaque consigne. Appuyez sur \"Afficher la réponse\" pour voir un exemple de message modèle.",
         section: .functionalSkills,
         type: .openEnded,
         difficulty: .medium,
@@ -244,7 +244,7 @@ struct FrenchFunctionalSkillsExerciseData {
     private static let exercise6 = Exercise(
         id: UUID(),
         title: "Compétences de la vie quotidienne",
-        instructions: "Pour chaque tâche, décrivez : le matériel nécessaire, les étapes clés et les risques potentiels. Appuyez sur "Afficher la réponse" pour voir la réponse modèle.",
+        instructions: "Pour chaque tâche, décrivez : le matériel nécessaire, les étapes clés et les risques potentiels. Appuyez sur \"Afficher la réponse\" pour voir la réponse modèle.",
         section: .functionalSkills,
         type: .openEnded,
         difficulty: .medium,
