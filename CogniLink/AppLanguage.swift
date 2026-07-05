@@ -76,7 +76,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     var localeIdentifier: String {
         switch self {
         case .english: return "en_US"
-        case .spanish: return "es_ES"
+        case .spanish: return "es-MX"
         case .hindi: return "hi_IN"
         case .gujarati: return "gu_IN"
         case .chinese: return "zh_CN"
