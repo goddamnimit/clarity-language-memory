@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Background Art Collection</title>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+        header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(135deg, #a78bfa, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            color: #9ca3af;
+            margin: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: rgba(31, 41, 55, 0.4);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: rgba(129, 140, 248, 0.4);
+        }
+        .img-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            background-color: #111827;
+        }
+        .img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .info {
+            padding: 1rem;
+        }
+        .filename {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #818cf8;
+            margin-bottom: 0.25rem;
+        }
+        .title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .artist {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clarity Background Art Collection</h1>
+        <p>Curated gallery of 75 public domain background artworks and space photographs.</p>
+    </header>
+    <div class="grid">
+        
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_001.jpg" alt="Women and an Infant Boy in a Public Bath House" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_001.jpg</div>
+                <div class="title" title="Women and an Infant Boy in a Public Bath House">Women and an Infant Boy in a Public Bath House</div>
+                <div class="artist" title="Utagawa Toyokuni I">Utagawa Toyokuni I</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_002.jpg" alt="Poetic Phrases" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_002.jpg</div>
+                <div class="title" title="Poetic Phrases">Poetic Phrases</div>
+                <div class="artist" title="Mu'an Xingtao (Mokuan Shōtō)">Mu'an Xingtao (Mokuan Shōtō)</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_003.jpg" alt="Bairei Picture Album of One Hundred Birds (Bairei hyakuchō gafu) 楳嶺百鳥畫譜" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_003.jpg</div>
+                <div class="title" title="Bairei Picture Album of One Hundred Birds (Bairei hyakuchō gafu) 楳嶺百鳥畫譜">Bairei Picture Album of One Hundred Birds (Bairei hyakuchō gafu) 楳嶺百鳥畫譜</div>
+                <div class="artist" title="Kōno Bairei  幸野楳嶺">Kōno Bairei  幸野楳嶺</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_004.jpg" alt="Fifty-three Stations on the Tōkaidō Road, Fuchū (Tōkaidō gojūsan-tsugi) 東海道五十三次" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_004.jpg</div>
+                <div class="title" title="Fifty-three Stations on the Tōkaidō Road, Fuchū (Tōkaidō gojūsan-tsugi) 東海道五十三次">Fifty-three Stations on the Tōkaidō Road, Fuchū (Tōkaidō gojūsan-tsugi) 東海道五十三次</div>
+                <div class="artist" title="Katsushika Hokusai 葛飾北斎">Katsushika Hokusai 葛飾北斎</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_005.jpg" alt="Pictures after Nature (Hokusai shashin gafu)  北斎写真画譜" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_005.jpg</div>
+                <div class="title" title="Pictures after Nature (Hokusai shashin gafu)  北斎写真画譜">Pictures after Nature (Hokusai shashin gafu)  北斎写真画譜</div>
+                <div class="artist" title="Katsushika Hokusai 葛飾北斎">Katsushika Hokusai 葛飾北斎</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_006.jpg" alt="Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_006.jpg</div>
+                <div class="title" title="Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首">Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_007.jpg" alt="Myriad Birds: Picture Book of Playful Verse (Momo chidori kyōka-awase)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_007.jpg</div>
+                <div class="title" title="Myriad Birds: Picture Book of Playful Verse (Momo chidori kyōka-awase)">Myriad Birds: Picture Book of Playful Verse (Momo chidori kyōka-awase)</div>
+                <div class="artist" title="Kitagawa Utamaro">Kitagawa Utamaro</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_008.jpg" alt="The Actors Ichikawa Ebizō V as the Outlaw Nippon Daemon (right) and Kataoka Gadō as Tokushima Gohei" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_008.jpg</div>
+                <div class="title" title="The Actors Ichikawa Ebizō V as the Outlaw Nippon Daemon (right) and Kataoka Gadō as Tokushima Gohei">The Actors Ichikawa Ebizō V as the Outlaw Nippon Daemon (right) and Kataoka Gadō as Tokushima Gohei</div>
+                <div class="artist" title="Gosōtei Hirosada 五粽亭広貞">Gosōtei Hirosada 五粽亭広貞</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_009.jpg" alt="Snow (Yuki), from the series Fashionable Snow, Moon, and Flowers (Fūryū setsugekka)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_009.jpg</div>
+                <div class="title" title="Snow (Yuki), from the series Fashionable Snow, Moon, and Flowers (Fūryū setsugekka)">Snow (Yuki), from the series Fashionable Snow, Moon, and Flowers (Fūryū setsugekka)</div>
+                <div class="artist" title="Suzuki Harunobu">Suzuki Harunobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_010.jpg" alt="Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_010.jpg</div>
+                <div class="title" title="Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰">Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰</div>
+                <div class="artist" title="Kitagawa Utamaro">Kitagawa Utamaro</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_011.jpg" alt="Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_011.jpg</div>
+                <div class="title" title="Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰">Picture Book of Crawling Creatures (The Insect Book) (Ehon mushi erami) 画本虫撰</div>
+                <div class="artist" title="Kitagawa Utamaro 喜多川歌麿">Kitagawa Utamaro 喜多川歌麿</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_012.jpg" alt="Ōi" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_012.jpg</div>
+                <div class="title" title="Ōi">Ōi</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_013.jpg" alt="Fireworks at Ikenohata" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_013.jpg</div>
+                <div class="title" title="Fireworks at Ikenohata">Fireworks at Ikenohata</div>
+                <div class="artist" title="Kobayashi Kiyochika">Kobayashi Kiyochika</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_014.jpg" alt="Nagakubo" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_014.jpg</div>
+                <div class="title" title="Nagakubo">Nagakubo</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_015.jpg" alt="White Rain at Shōno" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_015.jpg</div>
+                <div class="title" title="White Rain at Shōno">White Rain at Shōno</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_016.jpg" alt="Hatsune Riding Ground, from the series One Hundred Famous Views of Edo  (Meisho Edo hyakkei) 名所江戸百景)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_016.jpg</div>
+                <div class="title" title="Hatsune Riding Ground, from the series One Hundred Famous Views of Edo  (Meisho Edo hyakkei) 名所江戸百景)">Hatsune Riding Ground, from the series One Hundred Famous Views of Edo  (Meisho Edo hyakkei) 名所江戸百景)</div>
+                <div class="artist" title="Utagawa Hiroshige 歌川広重">Utagawa Hiroshige 歌川広重</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_017.jpg" alt="The Abundance of the Mountains" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_017.jpg</div>
+                <div class="title" title="The Abundance of the Mountains">The Abundance of the Mountains</div>
+                <div class="artist" title="Katsuma Ryūsai">Katsuma Ryūsai</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_018.jpg" alt="Ink Traces of Kenzan (Kenzan iboku)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_018.jpg</div>
+                <div class="title" title="Ink Traces of Kenzan (Kenzan iboku)">Ink Traces of Kenzan (Kenzan iboku)</div>
+                <div class="artist" title="Sakai Hōitsu">Sakai Hōitsu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_019.jpg" alt="Kōrin's Painting Style (Kōrin gashiki)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_019.jpg</div>
+                <div class="title" title="Kōrin's Painting Style (Kōrin gashiki)">Kōrin's Painting Style (Kōrin gashiki)</div>
+                <div class="artist" title="Aikawa Minwa">Aikawa Minwa</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_020.jpg" alt="Returning Geese at Katada" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_020.jpg</div>
+                <div class="title" title="Returning Geese at Katada">Returning Geese at Katada</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_021.jpg" alt="Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_021.jpg</div>
+                <div class="title" title="Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首">Portraits for One Hundred Poems about One Hundred Poets (Sugata-e hyakunin isshu) 姿絵百人一首</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_001.jpg" alt="Doradus Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_001.jpg</div>
+                <div class="title" title="Doradus Nebula">Doradus Nebula</div>
+                <div class="artist" title="Select">Select</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_002.jpg" alt="Hubble reveals heart of Lagoon Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_002.jpg</div>
+                <div class="title" title="Hubble reveals heart of Lagoon Nebula">Hubble reveals heart of Lagoon Nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_003.jpg" alt="Hubble Images Searchlight Beams from a Preplanetary Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_003.jpg</div>
+                <div class="title" title="Hubble Images Searchlight Beams from a Preplanetary Nebula">Hubble Images Searchlight Beams from a Preplanetary Nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_004.jpg" alt="Hubble View of a Nitrogen-Rich Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_004.jpg</div>
+                <div class="title" title="Hubble View of a Nitrogen-Rich Nebula">Hubble View of a Nitrogen-Rich Nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_005.jpg" alt="Into the Depths of the Lagoon Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_005.jpg</div>
+                <div class="title" title="Into the Depths of the Lagoon Nebula">Into the Depths of the Lagoon Nebula</div>
+                <div class="artist" title="JPL">JPL</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_006.jpg" alt="Highway to the Danger Zone  Artist Concept" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_006.jpg</div>
+                <div class="title" title="Highway to the Danger Zone  Artist Concept">Highway to the Danger Zone  Artist Concept</div>
+                <div class="artist" title="JPL">JPL</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_007.jpg" alt="History of Hubble Space Telescope (HST)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_007.jpg</div>
+                <div class="title" title="History of Hubble Space Telescope (HST)">History of Hubble Space Telescope (HST)</div>
+                <div class="artist" title="MSFC">MSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_008.jpg" alt="ESO 2.2-m WFI Image of the Tarantula Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_008.jpg</div>
+                <div class="title" title="ESO 2.2-m WFI Image of the Tarantula Nebula">ESO 2.2-m WFI Image of the Tarantula Nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_009.jpg" alt="A nitrogen-rich nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_009.jpg</div>
+                <div class="title" title="A nitrogen-rich nebula">A nitrogen-rich nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_010.jpg" alt="Carina Nebula Detail" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_010.jpg</div>
+                <div class="title" title="Carina Nebula Detail">Carina Nebula Detail</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_011.jpg" alt="Herschel Cool Universe Artist Concept" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_011.jpg</div>
+                <div class="title" title="Herschel Cool Universe Artist Concept">Herschel Cool Universe Artist Concept</div>
+                <div class="artist" title="JPL">JPL</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_012.jpg" alt="Hubble Captures Spectacular "Landscape" in the Carina Nebula" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_012.jpg</div>
+                <div class="title" title="Hubble Captures Spectacular "Landscape" in the Carina Nebula">Hubble Captures Spectacular "Landscape" in the Carina Nebula</div>
+                <div class="artist" title="GSFC">GSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_013.jpg" alt="Space Science" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_013.jpg</div>
+                <div class="title" title="Space Science">Space Science</div>
+                <div class="artist" title="MSFC">MSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_014.jpg" alt="History of Hubble Space Telescope (HST)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_014.jpg</div>
+                <div class="title" title="History of Hubble Space Telescope (HST)">History of Hubble Space Telescope (HST)</div>
+                <div class="artist" title="MSFC">MSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_015.jpg" alt="Aurora Australis, Spiked and Sinuous Red and Green Airglow" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_015.jpg</div>
+                <div class="title" title="Aurora Australis, Spiked and Sinuous Red and Green Airglow">Aurora Australis, Spiked and Sinuous Red and Green Airglow</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_016.jpg" alt="History of Hubble Space Telescope (HST)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_016.jpg</div>
+                <div class="title" title="History of Hubble Space Telescope (HST)">History of Hubble Space Telescope (HST)</div>
+                <div class="artist" title="MSFC">MSFC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_022.jpg" alt="Illustrations of Birds and Flowers (Kachō e-zukushi) 花鳥絵づくし" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_022.jpg</div>
+                <div class="title" title="Illustrations of Birds and Flowers (Kachō e-zukushi) 花鳥絵づくし">Illustrations of Birds and Flowers (Kachō e-zukushi) 花鳥絵づくし</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_023.jpg" alt="Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_023.jpg</div>
+                <div class="title" title="Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし">Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_024.jpg" alt="Illustrations of Various Professions (Wakoku shoshoku e-zukushi) 和国諸職絵尽" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_024.jpg</div>
+                <div class="title" title="Illustrations of Various Professions (Wakoku shoshoku e-zukushi) 和国諸職絵尽">Illustrations of Various Professions (Wakoku shoshoku e-zukushi) 和国諸職絵尽</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_025.jpg" alt="Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_025.jpg</div>
+                <div class="title" title="Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし">Illustrations of Beautiful Women (Bijin e-zukushi) 美人絵づくし</div>
+                <div class="artist" title="Hishikawa Moronobu">Hishikawa Moronobu</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_026.jpg" alt="Evening Rain at Karasaki, Pine Tree" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_026.jpg</div>
+                <div class="title" title="Evening Rain at Karasaki, Pine Tree">Evening Rain at Karasaki, Pine Tree</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_027.jpg" alt="Handscroll of Ten Homoerotic (Nanshoku) Scenes" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_027.jpg</div>
+                <div class="title" title="Handscroll of Ten Homoerotic (Nanshoku) Scenes">Handscroll of Ten Homoerotic (Nanshoku) Scenes</div>
+                <div class="artist" title="Miyagawa Chōshun 宮川長春">Miyagawa Chōshun 宮川長春</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_017.jpg" alt="Aurora Austrailis taken during Expedition Six" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_017.jpg</div>
+                <div class="title" title="Aurora Austrailis taken during Expedition Six">Aurora Austrailis taken during Expedition Six</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_018.jpg" alt="View of Skylab space station cluster in Earth orbit from CSM" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_018.jpg</div>
+                <div class="title" title="View of Skylab space station cluster in Earth orbit from CSM">View of Skylab space station cluster in Earth orbit from CSM</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_019.jpg" alt="View of Skylab space station cluster in Earth orbit from CSM" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_019.jpg</div>
+                <div class="title" title="View of Skylab space station cluster in Earth orbit from CSM">View of Skylab space station cluster in Earth orbit from CSM</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_020.jpg" alt="Earth observations taken during STS-75" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_020.jpg</div>
+                <div class="title" title="Earth observations taken during STS-75">Earth observations taken during STS-75</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_021.jpg" alt="Earth observation taken by the Expedition 43 crew." loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_021.jpg</div>
+                <div class="title" title="Earth observation taken by the Expedition 43 crew.">Earth observation taken by the Expedition 43 crew.</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_022.jpg" alt="Earth Observation" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_022.jpg</div>
+                <div class="title" title="Earth Observation">Earth Observation</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_023.jpg" alt="Earth Observation" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_023.jpg</div>
+                <div class="title" title="Earth Observation">Earth Observation</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/nasa_024.jpg" alt="Earth Sky" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">nasa_024.jpg</div>
+                <div class="title" title="Earth Sky">Earth Sky</div>
+                <div class="artist" title="JSC">JSC</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_028.jpg" alt="Scenes from the Story of the Argonauts" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_028.jpg</div>
+                <div class="title" title="Scenes from the Story of the Argonauts">Scenes from the Story of the Argonauts</div>
+                <div class="artist" title="Jacopo di Arcangelo (called Jacopo del Sellaio)">Jacopo di Arcangelo (called Jacopo del Sellaio)</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_029.jpg" alt="A Village in a Valley" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_029.jpg</div>
+                <div class="title" title="A Village in a Valley">A Village in a Valley</div>
+                <div class="artist" title="Théodore Rousseau">Théodore Rousseau</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_030.jpg" alt="The Arrival in Bethlehem" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_030.jpg</div>
+                <div class="title" title="The Arrival in Bethlehem">The Arrival in Bethlehem</div>
+                <div class="artist" title="Master of the Brussels Calling of Saint Matthew">Master of the Brussels Calling of Saint Matthew</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_031.jpg" alt="Bathers" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_031.jpg</div>
+                <div class="title" title="Bathers">Bathers</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_032.jpg" alt="The Card Players" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_032.jpg</div>
+                <div class="title" title="The Card Players">The Card Players</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_033.jpg" alt="Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle, as a Monk" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_033.jpg</div>
+                <div class="title" title="Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle, as a Monk">Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle, as a Monk</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_034.jpg" alt="Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_034.jpg</div>
+                <div class="title" title="Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle">Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_035.jpg" alt="The House with the Cracked Walls" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_035.jpg</div>
+                <div class="title" title="The House with the Cracked Walls">The House with the Cracked Walls</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_036.jpg" alt="Mont Sainte-Victoire and the Viaduct of the Arc River Valley" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_036.jpg</div>
+                <div class="title" title="Mont Sainte-Victoire and the Viaduct of the Arc River Valley">Mont Sainte-Victoire and the Viaduct of the Arc River Valley</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_037.jpg" alt="The Pool at Jas de Bouffan" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_037.jpg</div>
+                <div class="title" title="The Pool at Jas de Bouffan">The Pool at Jas de Bouffan</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_038.jpg" alt="Wheat Field with Cypresses" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_038.jpg</div>
+                <div class="title" title="Wheat Field with Cypresses">Wheat Field with Cypresses</div>
+                <div class="artist" title="Vincent van Gogh">Vincent van Gogh</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_039.jpg" alt="Morning, An Overcast Day, Rouen" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_039.jpg</div>
+                <div class="title" title="Morning, An Overcast Day, Rouen">Morning, An Overcast Day, Rouen</div>
+                <div class="artist" title="Camille Pissarro">Camille Pissarro</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_040.jpg" alt="The Baptism of Christ" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_040.jpg</div>
+                <div class="title" title="The Baptism of Christ">The Baptism of Christ</div>
+                <div class="artist" title="Sebastiano Ricci">Sebastiano Ricci</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_041.jpg" alt="Scenes from the Story of the Argonauts" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_041.jpg</div>
+                <div class="title" title="Scenes from the Story of the Argonauts">Scenes from the Story of the Argonauts</div>
+                <div class="artist" title="Biagio d'Antonio">Biagio d'Antonio</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_042.jpg" alt="Whalers" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_042.jpg</div>
+                <div class="title" title="Whalers">Whalers</div>
+                <div class="artist" title="Joseph Mallord William Turner">Joseph Mallord William Turner</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_043.jpg" alt="The Harvesters" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_043.jpg</div>
+                <div class="title" title="The Harvesters">The Harvesters</div>
+                <div class="artist" title="Pieter Bruegel the Elder">Pieter Bruegel the Elder</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_044.jpg" alt="Dish of Apples" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_044.jpg</div>
+                <div class="title" title="Dish of Apples">Dish of Apples</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_045.jpg" alt="Seated Peasant" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_045.jpg</div>
+                <div class="title" title="Seated Peasant">Seated Peasant</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_046.jpg" alt="The Fishermen (Fantastic Scene)" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_046.jpg</div>
+                <div class="title" title="The Fishermen (Fantastic Scene)">The Fishermen (Fantastic Scene)</div>
+                <div class="artist" title="Paul Cézanne">Paul Cézanne</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_047.jpg" alt="Clearing Weather at Awazu" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_047.jpg</div>
+                <div class="title" title="Clearing Weather at Awazu">Clearing Weather at Awazu</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_048.jpg" alt="Wild Geese at Haneda" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_048.jpg</div>
+                <div class="title" title="Wild Geese at Haneda">Wild Geese at Haneda</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_049.jpg" alt="Clearing Weather at Shibaura" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_049.jpg</div>
+                <div class="title" title="Clearing Weather at Shibaura">Clearing Weather at Shibaura</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_050.jpg" alt="Asukayama in the Snow at Evening" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_050.jpg</div>
+                <div class="title" title="Asukayama in the Snow at Evening">Asukayama in the Snow at Evening</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="img-container">
+                <img src="ios/met_051.jpg" alt="Boats Returning to Gyotoku" loading="lazy">
+            </div>
+            <div class="info">
+                <div class="filename">met_051.jpg</div>
+                <div class="title" title="Boats Returning to Gyotoku">Boats Returning to Gyotoku</div>
+                <div class="artist" title="Utagawa Hiroshige">Utagawa Hiroshige</div>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

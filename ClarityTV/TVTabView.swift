@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TVTabView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
+    @State private var backgroundOpacity: Double = 0.0
 
     private var isRTL: Bool {
         let currentLanguage = languageManager.currentLanguage
@@ -10,28 +11,43 @@ struct TVTabView: View {
     }
 
     var body: some View {
-        TabView {
-            TVHomeView()
-                .tabItem {
-                    Label(languageManager.currentLanguage.homeTabTitle, systemImage: "house.fill")
-                }
+        ZStack {
+            Image(BackgroundManager.shared.dailyImageName(for: .tvOS))
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .opacity(backgroundOpacity)
+            
+            Color.black.opacity(0.45)
+            
+            TabView {
+                TVHomeView()
+                    .tabItem {
+                        Label(languageManager.currentLanguage.homeTabTitle, systemImage: "house.fill")
+                    }
 
-            TVActivitiesView()
-                .tabItem {
-                    Label(languageManager.currentLanguage.activitiesTabTitle, systemImage: "play.circle.fill")
-                }
+                TVActivitiesView()
+                    .tabItem {
+                        Label(languageManager.currentLanguage.activitiesTabTitle, systemImage: "play.circle.fill")
+                    }
 
-            TVProgressView()
-                .tabItem {
-                    Label(languageManager.currentLanguage.progressTabTitle, systemImage: "chart.bar.fill")
-                }
+                TVProgressView()
+                    .tabItem {
+                        Label(languageManager.currentLanguage.progressTabTitle, systemImage: "chart.bar.fill")
+                    }
 
-            TVProfileView()
-                .tabItem {
-                    Label(languageManager.currentLanguage.profileTabTitle, systemImage: "person.crop.circle.fill")
-                }
+                TVProfileView()
+                    .tabItem {
+                        Label(languageManager.currentLanguage.profileTabTitle, systemImage: "person.crop.circle.fill")
+                    }
+            }
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
         }
-        .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+        .onAppear {
+            withAnimation(.easeIn(duration: 0.8)) {
+                backgroundOpacity = 1.0
+            }
+        }
     }
 }
 

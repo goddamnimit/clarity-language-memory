@@ -5,50 +5,63 @@ struct ContentView: View {
     @State private var selectedTab = 0
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "clarity_onboarding_complete")
     @State private var hasResetTabOnLaunch = false
+    @State private var backgroundOpacity: Double = 0.0
 
     var body: some View {
-        TabView(selection: $selectedTab) {
+        ZStack {
+            Image(BackgroundManager.shared.dailyImageName(for: .iOS))
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .opacity(backgroundOpacity)
             
-            // Tab 1: Localized Home View
-            HomeView()
-                .tabItem {
-                    Label(homeTabTitle, systemImage: "house.fill")
+            Color.black.opacity(0.35)
+            
+            TabView(selection: $selectedTab) {
+                // Tab 1: Localized Home View
+                HomeView()
+                    .tabItem {
+                        Label(homeTabTitle, systemImage: "house.fill")
+                    }
+                    .tag(0)
+                
+                // Tab 2: All Activities View with dedicated NavigationStack
+                NavigationStack {
+                    AllActivitiesView()
                 }
-                .tag(0)
-            
-            // Tab 2: All Activities View with dedicated NavigationStack
-            NavigationStack {
-                AllActivitiesView()
+                .tabItem {
+                    Label(activitiesTabTitle, systemImage: "brain.head.profile")
+                }
+                .tag(1)
+                
+                // Tab 3: Profile View
+                NavigationStack {
+                    ProfileView()
+                }
+                .tabItem {
+                    Label(profileTabTitle, systemImage: "person.fill")
+                }
+                .tag(2)
             }
-            .tabItem {
-                Label(activitiesTabTitle, systemImage: "brain.head.profile")
-            }
-            .tag(1)
-            
-            // Tab 3: Profile View
-            NavigationStack {
-                ProfileView()
-            }
-            .tabItem {
-                Label(profileTabTitle, systemImage: "person.fill")
-            }
-            .tag(2)
+            .environment(\.layoutDirection,
+                [.farsi, .arabic].contains(languageManager.currentLanguage) ? .rightToLeft : .leftToRight)
         }
-        .environment(\.layoutDirection,
-            [.farsi, .arabic].contains(languageManager.currentLanguage) ? .rightToLeft : .leftToRight)
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
-        #if os(iOS)
         .onAppear {
+            withAnimation(.easeIn(duration: 0.8)) {
+                backgroundOpacity = 1.0
+            }
+            #if os(iOS)
             if !hasResetTabOnLaunch {
                 selectedTab = 0
                 hasResetTabOnLaunch = true
             }
             NotificationManager.shared.refreshPermissionStatus()
             NotificationManager.shared.rescheduleAll()
+            #endif
         }
-        #endif
     }
 
     // MARK: - Localized Tab Titles
