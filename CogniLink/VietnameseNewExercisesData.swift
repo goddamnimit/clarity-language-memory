@@ -26,6 +26,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn từ có vần giống hoặc gần giống nhất với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Từ nào hiệp vần với từ “BÀN”?", options: ["Ghế", "Làn", "Sách", "Hoa"], correctAnswer: "Làn", explanation: "Bàn và Làn đều có chung vần “an”."),
@@ -57,6 +58,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn từ có mối liên hệ mật thiết nhất với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "BÁC SĨ", options: ["Bệnh viện", "Sân bay", "Thư viện", "Trang trại"], correctAnswer: "Bệnh viện", explanation: "Bác sĩ làm việc tại bệnh viện để chăm sóc bệnh nhân."),
@@ -88,6 +90,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn từ đúng để hoàn thành câu tục ngữ hoặc thành ngữ quen thuộc.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Ăn quả nhớ kẻ ___ cây.", options: ["trồng", "phá", "mua", "bán"], correctAnswer: "trồng", explanation: "Tục ngữ đầy đủ là “Ăn quả nhớ kẻ trồng cây”, khuyên chúng ta biết ơn người đi trước."),
@@ -119,6 +122,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn từ thích hợp để hoàn thành một từ ghép có nghĩa trong tiếng Việt.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "BÚT + ___", options: ["chì", "vở", "mực", "tẩy"], correctAnswer: "chì", explanation: "Bút + chì = Bút chì (một loại bút dùng ngòi than chì)."),
@@ -150,6 +154,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn thành tố từ vựng (tiền tố/hậu tố) đúng dựa theo nghĩa được mô tả.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Tiền tố nào biểu thị ý nghĩa “không” trong từ “VÔ GIA CƯ”?", options: ["vô-", "bất-", "siêu-", "tái-"], correctAnswer: "vô-", explanation: "Tiền tố “vô-” gốc Hán có nghĩa là không, vô gia cư là không có nhà ở."),
@@ -181,6 +186,7 @@ struct VietnameseNewExercisesData {
         instructions: "Đọc kỹ câu chuyện ngắn sau đây rồi trả lời câu hỏi trắc nghiệm.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Maria đã để quên gì ở nhà?", options: ["Ví tiền", "Chìa khóa", "Danh sách mua sắm", "Điện thoại"], correctAnswer: "Ví tiền", explanation: "Câu chuyện cho biết cô đã quên ví tiền trên bàn bếp.", passage: "Maria đi đến cửa hàng bách hóa để mua sữa và bánh mì. Cô ấy đã bỏ quên ví tiền của mình trên bàn bếp."),
@@ -207,6 +213,7 @@ struct VietnameseNewExercisesData {
         instructions: "Số tiếp theo trong dãy số dưới đây là số nào?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "Quy luật là cộng thêm 2 vào số trước đó."),
@@ -238,6 +245,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn kết quả hợp lý nhất cho tình huống được mô tả.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Bạn để kem trên bàn bếp suốt hai tiếng vào một ngày ấm áp. Điều gì xảy ra?", options: ["Nó cứng hơn", "Nó tan chảy", "Nó đổi màu", "Nó biến mất"], correctAnswer: "Nó tan chảy", explanation: "Nhiệt độ nóng làm kem đông lạnh bị tan chảy."),
@@ -264,6 +272,7 @@ struct VietnameseNewExercisesData {
         instructions: "Đọc tình huống và chọn cảm xúc mà nhân vật có khả năng cao đang trải qua.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Sarah vừa biết tin mình đạt giải nhất trong cuộc thi. Cô ấy cảm thấy thế nào?", options: ["Buồn bã", "Tức giận", "Vui mừng", "Sợ hãi"], correctAnswer: "Vui mừng", explanation: "Đạt giải nhất cuộc thi là một sự kiện đáng mừng và đầy phấn khích."),
@@ -295,6 +304,7 @@ struct VietnameseNewExercisesData {
         instructions: "Tìm điểm bất hợp lý hoặc không thể xảy ra trong câu văn.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "John đã ăn bữa sáng vào lúc nửa đêm trước khi đi ngủ.", options: ["Mọi người không ăn đồ ăn", "Bữa sáng là bữa ăn buổi sáng chứ không phải nửa đêm", "John không nên ngủ", "Nửa đêm là vào buổi chiều"], correctAnswer: "Bữa sáng là bữa ăn buổi sáng chứ không phải nửa đêm", explanation: "Theo định nghĩa, bữa sáng là bữa ăn đầu ngày vào buổi sáng."),
@@ -321,6 +331,7 @@ struct VietnameseNewExercisesData {
         instructions: "Đọc thông tin trên nhãn thuốc và trả lời câu hỏi trắc nghiệm.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Nhãn: Uống 1 viên, ngày 2 lần cùng thức ăn. Tổng số viên thuốc bạn cần uống mỗi ngày là bao nhiêu?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "Uống 1 viên x 2 lần một ngày tức là uống 1 + 1 = 2 viên."),
@@ -347,6 +358,7 @@ struct VietnameseNewExercisesData {
         instructions: "Sử dụng thông tin thực đơn được cung cấp để trả lời câu hỏi.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Thực đơn: Hamburger phô mai 8.00 đô-la, Khoai tây chiên 3.00 đô-la, Nước ngọt 2.00 đô-la. Hamburger phô mai giá bao nhiêu?", options: ["8.00 đô-la", "3.00 đô-la", "2.00 đô-la", "11.00 đô-la"], correctAnswer: "8.00 đô-la", explanation: "Thực đơn liệt kê Hamburger phô mai có giá 8.00 đô-la."),
@@ -373,6 +385,7 @@ struct VietnameseNewExercisesData {
         instructions: "Đọc thông tin hóa đơn và trả lời câu hỏi trắc nghiệm.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Hóa đơn điện: Tổng số tiền phải trả: 45.00 đô-la. Hạn chót: Ngày 15 tháng 7. Bạn cần đóng bao nhiêu tiền?", options: ["15.00 đô-la", "45.00 đô-la", "Ngày 15 tháng 7", "Miễn phí"], correctAnswer: "45.00 đô-la", explanation: "Số tiền cần đóng được ghi rõ là 45.00 đô-la."),
@@ -399,6 +412,7 @@ struct VietnameseNewExercisesData {
         instructions: "Chọn cách giải quyết phù hợp và tối ưu nhất cho tình huống thực tế được đưa ra.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Bạn ngửi thấy mùi khói trong bếp nhưng không thấy có ngọn lửa nào. Bạn nên làm gì đầu tiên?", options: ["Bỏ qua nó", "Mở cửa sổ và kiểm tra bếp nấu", "Gọi điện buôn chuyện với bạn bè", "Đi ngủ tiếp"], correctAnswer: "Mở cửa sổ và kiểm tra bếp nấu", explanation: "Kiểm tra bếp là bước đầu tiên để xác định nguồn khói và xử lý kịp thời các sự cố nấu nướng nhỏ."),

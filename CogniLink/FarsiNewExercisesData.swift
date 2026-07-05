@@ -26,6 +26,7 @@ struct FarsiNewExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که با کلمه داده شده هم‌قافیه است.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "کدام کلمه با «آب» هم‌قافیه است؟", options: ["نان", "خواب", "باد", "باران"], correctAnswer: "خواب", explanation: "آب و خواب صدای پایانی یکسانی دارند."),
@@ -57,6 +58,7 @@ struct FarsiNewExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که بیشترین ارتباط را با کلمه داده شده دارد.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "پزشک", options: ["بیمارستان", "فرودگاه", "کتابخانه", "مزرعه"], correctAnswer: "بیمارستان", explanation: "پزشکان در بیمارستان‌ها برای مراقبت از بیماران کار می‌کنند."),
@@ -88,6 +90,7 @@ struct FarsiNewExercisesData {
         instructions: "ضرب‌المثل یا عبارت معروف را کامل کنید.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "قطره قطره جمع گردد، وانگهی ___ شود.", options: ["دریا", "رودخانه", "سیل", "برکه"], correctAnswer: "دریا", explanation: "ضرب‌المثل معروف این است: قطره قطره جمع گردد وانگهی دریا شود."),
@@ -119,6 +122,7 @@ struct FarsiNewExercisesData {
         instructions: "کلمه مناسب را برای کامل کردن کلمه مرکب انتخاب کنید.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "کتاب + ___", options: ["خانه", "نامه", "چه", "فروش"], correctAnswer: "خانه", explanation: "کتاب + خانه = کتابخانه."),
@@ -150,6 +154,7 @@ struct FarsiNewExercisesData {
         instructions: "پیشوند یا پسوند صحیح را برای کامل کردن کلمه انتخاب کنید.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "کدام پیشوند به معنای نفی در کلمه “ناخوش” است؟", options: ["نا-", "بی-", "هم-", "پیش-"], correctAnswer: "نا-", explanation: "پیشوند “نا-” برای منفی کردن صفت به کار می‌رود."),
@@ -181,6 +186,7 @@ struct FarsiNewExercisesData {
         instructions: "داستان کوتاه زیر را بخوانید و سپس به سوال پاسخ دهید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ماریا چه چیزی را در خانه فراموش کرده بود؟", options: ["کیف پولش", "کلیدهایش", "لیست خریدش", "تلفن همراهش"], correctAnswer: "کیف پولش", explanation: "داستان می‌گوید او کیف پول خود را روی پیشخوان آشپزخانه جا گذاشت.", passage: "ماریا به خواربارفروشی رفت تا شیر و نان بخرد. او کیف پول خود را روی پیشخوان آشپزخانه جا گذاشت."),
@@ -207,6 +213,7 @@ struct FarsiNewExercisesData {
         instructions: "چه عددی در دنباله بعدی قرار می‌گیرد؟",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "هر بار ۲ واحد به عدد قبلی اضافه می‌شود."),
@@ -238,6 +245,7 @@ struct FarsiNewExercisesData {
         instructions: "محتمل‌ترین نتیجه وضعیت توصیف شده را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "بستنی را در یک روز گرم به مدت دو ساعت روی پیشخوان آشپزخانه رها می‌کنید. چه اتفاقی می‌افتد؟", options: ["سفت‌تر می‌شود", "آب می‌شود", "تغییر رنگ می‌دهد", "ناپدید می‌شود"], correctAnswer: "آب می‌شود", explanation: "گرما باعث ذوب شدن بستنی یخ‌زده می‌شود."),
@@ -264,6 +272,7 @@ struct FarsiNewExercisesData {
         instructions: "موقعیت را بخوانید و احساسی را که احتمالاً فرد دارد انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "سارا متوجه شد که در یک مسابقه رتبه اول را کسب کرده است. او چه احساسی دارد؟", options: ["غمگین", "عصبانی", "خوشحال", "ترسیده"], correctAnswer: "خوشحال", explanation: "برنده شدن در مسابقه یک رویداد شاد و هیجان‌انگیز است."),
@@ -295,6 +304,7 @@ struct FarsiNewExercisesData {
         instructions: "مشخص کنید چه چیزی در جمله اشتباه یا غیرممکن است.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "جان نیمه‌شب قبل از رفتن به رختخواب صبحانه خورد.", options: ["مردم غذا نمی‌خورند", "صبحانه وعده غذایی صبح است نه نیمه‌شب", "جان نباید بخوابد", "نیمه‌شب در بعدازظهر است"], correctAnswer: "صبحانه وعده غذایی صبح است نه نیمه‌شب", explanation: "صبحانه طبق تعریف وعده‌ای است که در صبح میل می‌شود."),
@@ -321,6 +331,7 @@ struct FarsiNewExercisesData {
         instructions: "اطلاعات روی نسخه را بخوانید و به سوال پاسخ دهید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "دستورالعمل: روزی ۲ بار، هر بار ۱ قرص همراه با غذا مصرف شود. در مجموع چند قرص در روز باید مصرف کنید؟", options: ["۱", "۲", "۳", "۴"], correctAnswer: "۲", explanation: "روزی ۲ بار و هر بار ۱ قرص یعنی ۱ + ۱ = ۲ قرص در روز."),
@@ -347,6 +358,7 @@ struct FarsiNewExercisesData {
         instructions: "با استفاده از اطلاعات منو به سوال پاسخ دهید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "منو: چیزبرگر ۸۰ هزار تومان، سیب‌زمینی سرخ‌کرده ۳۰ هزار تومان، نوشابه ۲۰ هزار تومان. قیمت چیزبرگر چقدر است؟", options: ["۸۰ هزار تومان", "۳۰ هزار تومان", "۲۰ هزار تومان", "۱۱۰ هزار تومان"], correctAnswer: "۸۰ هزار تومان", explanation: "در منو قیمت چیزبرگر ۸۰ هزار تومان درج شده است."),
@@ -373,6 +385,7 @@ struct FarsiNewExercisesData {
         instructions: "اطلاعات قبض را بخوانید و به سوال پاسخ دهید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "قبض برق: مبلغ قابل پرداخت: ۴۵ هزار تومان. مهلت پرداخت: ۱۵ تیر. چه مبلغی را باید پرداخت کنید؟", options: ["۱۵ هزار تومان", "۴۵ هزار تومان", "۱۵ تیر", "رایگان"], correctAnswer: "۴۵ هزار تومان", explanation: "مبلغ قابل پرداخت ۴۵ هزار تومان است."),
@@ -399,6 +412,7 @@ struct FarsiNewExercisesData {
         instructions: "بهترین واکنش را برای موقعیت توصیف شده انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "بوی دود را در آشپزخانه حس می‌کنید اما آتشی نمی‌بینید. اولین کاری که باید انجام دهید چیست؟", options: ["نادیده گرفتن آن", "باز کردن پنجره‌ها و چک کردن اجاق‌گاز", "تماس با یک دوست برای گپ زدن", "برگشتن به رختخواب و خوابیدن"], correctAnswer: "باز کردن پنجره‌ها و چک کردن اجاق‌گاز", explanation: "چک کردن اجاق‌گاز اولین قدم برای شناسایی و حل ایمن منابع دود کوچک است."),

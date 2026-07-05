@@ -28,6 +28,7 @@ struct CognitionExerciseData {
         instructions: "Answer each question by choosing the correct option.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "What do you call the person who cuts and styles hair?", options: ["Plumber", "Hairdresser or barber", "Electrician", "Optometrist"], correctAnswer: "Hairdresser or barber", explanation: ""),
@@ -60,6 +61,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct answer for where each item or location is found.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Where do you go to swim laps indoors?", options: ["Gym", "Park", "Swimming pool", "Lake"], correctAnswer: "Swimming pool", explanation: ""),
@@ -92,6 +94,7 @@ struct CognitionExerciseData {
         instructions: "Identify the historical figure or professional described.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Who wrote Romeo and Juliet?", options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "John Keats"], correctAnswer: "William Shakespeare", explanation: ""),
@@ -119,6 +122,7 @@ struct CognitionExerciseData {
         instructions: "Identify the correct date or timeframe for each milestone.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "When do Americans celebrate Independence Day?", options: ["June 4th", "July 4th", "August 4th", "September 4th"], correctAnswer: "July 4th", explanation: ""),
@@ -146,6 +150,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct logical explanation for each scenario.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Why do people wash their hands before eating?", options: ["To warm their hands", "To remove germs and prevent illness", "Because it is polite", "To soften their skin"], correctAnswer: "To remove germs and prevent illness", explanation: ""),
@@ -173,6 +178,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct numerical or structural answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "How many days are in a week?", options: ["5", "6", "7", "8"], correctAnswer: "7", explanation: ""),
@@ -205,6 +211,7 @@ struct CognitionExerciseData {
         instructions: "Tap YES or NO.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Is the sun a star?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
@@ -237,6 +244,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Who was the first President of the United States?", options: ["John Adams", "George Washington", "Thomas Jefferson", "Benjamin Franklin"], correctAnswer: "George Washington", explanation: ""),
@@ -264,6 +272,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "What country borders the United States to the north?", options: ["Mexico", "Russia", "Canada", "Greenland"], correctAnswer: "Canada", explanation: ""),
@@ -291,6 +300,7 @@ struct CognitionExerciseData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "What TV show features Ross, Rachel, Monica, Chandler, Joey, and Phoebe?", options: ["Seinfeld", "Friends", "The Office", "Cheers"], correctAnswer: "Friends", explanation: ""),
@@ -318,6 +328,7 @@ struct CognitionExerciseData {
         instructions: "Explain what each expression means in plain language. Tap 'Show Answer' to see the model explanation.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mrs. Hansen has a green thumb.", options: [], correctAnswer: "She is good at growing plants and gardening.", explanation: ""),
@@ -345,6 +356,7 @@ struct CognitionExerciseData {
         instructions: "Choose the most logical or reasonable answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "How long does it typically take to soft-boil an egg?", options: ["1 minute", "6 minutes", "20 minutes", "1 hour"], correctAnswer: "6 minutes", explanation: ""),
@@ -375,6 +387,7 @@ struct CognitionExerciseData {
         instructions: "Read each scenario and choose the most logical conclusion.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Someone is wearing a swimsuit and sunglasses. What are they probably about to do?", options: ["Go to the movies", "Go to the beach or pool", "Attend a formal wedding", "Go grocery shopping"], correctAnswer: "Go to the beach or pool", explanation: ""),
@@ -402,6 +415,7 @@ struct CognitionExerciseData {
         instructions: "These prompts are meant to engage long-term personal memory. There are no wrong answers. Take your time.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "What was the name of the street or neighborhood you grew up on?", options: [], correctAnswer: "", explanation: ""),

@@ -8,6 +8,7 @@ struct AmharicCognitionExerciseData {
             instructions: "ጥያቄዎቹን በጥንቃቄ ይመልሱ።",
             section: .language,
             type: .multipleChoice,
+            trackedType: nil,
             difficulty: .medium,
             items: [
                 ExerciseItem(id: UUID(), prompt: "ጥያቄ 1 ፦ የኢትዮጵያ ዋና ከተማ ማን ትባላለች?", options: ["አዲስ አበባ", "ጎንደር", "ሐዋሳ", "ባህር ዳር"], correctAnswer: "አዲስ አበባ", explanation: ""),

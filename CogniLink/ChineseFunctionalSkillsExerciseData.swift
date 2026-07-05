@@ -25,6 +25,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "阅读每个情景。描述你会怎么做。轻按“显示答案”查看最佳参考回答。",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -353,6 +354,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "根据电视节目表选择正确的答案。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -435,6 +437,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "使用月历回答以下问题。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -503,6 +506,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "步骤显示的顺序不正确。请将它们按1至3的顺序重新排列。",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -740,6 +744,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "针对每项任务，描述：你需要什么用品、关键步骤以及可能出现什么问题。轻按“显示答案”查看参考回答。",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -998,6 +1003,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "回答关于方向和空间位置的问题。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1080,6 +1086,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "选择关于时间、时长和日期的最佳答案。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1317,6 +1324,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "对于每件商品，选择性价比更高的一项。",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1420,6 +1428,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "为每个问题选择正确的答案。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1762,6 +1771,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "针对每个情景写下一段回复。轻按“显示答案”查看参考回答。",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1829,6 +1839,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "阅读菜单并选择正确的答案。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1960,6 +1971,7 @@ struct ChineseFunctionalSkillsExerciseData {
         instructions: "阅读药瓶标签上的指示并选择正确的答案。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

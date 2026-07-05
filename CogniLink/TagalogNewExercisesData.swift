@@ -28,6 +28,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang salitang katugma ng ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Aling salita ang katugma ng ASO?", options: ["Pusa", "Baso", "Ibon", "Dahon"], correctAnswer: "Baso", explanation: "Ang aso at baso ay magkatugma dahil magkapareho ang tunog sa dulo."),
@@ -59,6 +60,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang salitang pinakamalapit ang kaugnayan sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "DOKTOR", options: ["Ospital", "Paliparan", "Aklatan", "Bukid"], correctAnswer: "Ospital", explanation: "Ang mga doktor ay nagtatrabaho sa ospital upang manggamot ng mga pasyente."),
@@ -90,6 +92,7 @@ struct TagalogNewExercisesData {
         instructions: "Kumpletuhin ang kilalang kasabihan o salawikain.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Pag may tiyaga, may ___.", options: ["Nilaga", "Ginhawa", "Ginto", "Pera"], correctAnswer: "Nilaga", explanation: "Ang tradisyonal na kasabihan ay: Pag may tiyaga, may nilaga. Ibig sabihin, ang taong matiyaga ay nagtatamo ng gantimpala."),
@@ -121,6 +124,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang tamang salita upang mabuo ang tambalang salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "BAHAY + ___", options: ["Kubo", "Bata", "Dagat", "Lupa"], correctAnswer: "Kubo", explanation: "Bahay + Kubo = Bahay-kubo."),
@@ -152,6 +156,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang tamang panlapi o salitang may panlapi upang mabuo ang pangungusap o salita.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Anong unlapi ang idinaragdag sa salitang-ugat na 'aral' upang maging 'mag-aaral'?", options: ["mag-", "um-", "in-", "an-"], correctAnswer: "mag-", explanation: "Ang unlaping 'mag-' sa mag-aaral ay tumutukoy sa taong gumagawa ng kilos."),
@@ -183,6 +188,7 @@ struct TagalogNewExercisesData {
         instructions: "Basahin ang maikling kuwento at sagutin ang tanong tungkol dito.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Ano ang naiwan ni Maria sa bahay?", options: ["Kanyang pitaka", "Kanyang mga susi", "Kanyang listahan", "Kanyang telepono"], correctAnswer: "Kanyang pitaka", explanation: "Nabanggit sa kuwento na naiwan niya ang kanyang pitaka sa ibabaw ng counter sa kusina.", passage: "Pumunta si Maria sa tindahan upang bumili ng gatas at tinapay. Naiwan niya ang kanyang pitaka sa ibabaw ng counter sa kusina."),
@@ -209,6 +215,7 @@ struct TagalogNewExercisesData {
         instructions: "Anong numero ang susunod sa serye?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "Ang serye ay nadaragdagan ng 2 bawat hakbang."),
@@ -240,6 +247,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang pinakamalamang na resulta o bunga ng inilarawang sitwasyon.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Naiwan mo ang ice cream sa ibabaw ng counter sa kusina sa loob ng dalawang oras sa isang mainit na araw. Ano ang mangyayari?", options: ["Lalo itong titigas", "Matutunaw ito", "Mag-iiba ang kulay nito", "Mawawala ito"], correctAnswer: "Matutunaw ito", explanation: "Ang init ay nagdudulot ng pagkatunaw ng frozen na ice cream."),
@@ -266,6 +274,7 @@ struct TagalogNewExercisesData {
         instructions: "Basahin ang sitwasyon at piliin ang emosyon na malamang na nararamdaman ng tao.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Nalaman lang ni Sarah na siya ang nakakuha ng unang puwesto sa isang paligsahan. Ano ang nararamdaman niya?", options: ["Malungkot", "Galit", "Masaya", "Takot"], correctAnswer: "Masaya", explanation: "Ang pagkapanalo sa paligsahan ay isang kapana-panabik at nakakatuwang kaganapan."),
@@ -297,6 +306,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin kung ano ang mali o imposible sa ibinigay na pangungusap.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Kumain ng almusal si John sa hatinggabi bago natulog.", options: ["Hindi kumakain ang mga tao", "Ang almusal ay pagkain sa umaga, hindi sa hatinggabi", "Hindi dapat matulog si John", "Ang hatinggabi ay sa hapon"], correctAnswer: "Ang almusal ay pagkain sa umaga, hindi sa hatinggabi", explanation: "Ang almusal ay ang unang pagkain sa umaga pagkatapos ng gabi."),
@@ -323,6 +333,7 @@ struct TagalogNewExercisesData {
         instructions: "Basahin ang impormasyon sa reseta at sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Label: Uminom ng 1 tableta dalawang beses sa isang araw kasabay ng pagkain. Ilang tableta ang dapat mong inumin sa kabuuan bawat araw?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "Ang pag-inom ng 1 tableta dalawang beses sa isang araw ay nangangahulugang 1 + 1 = 2 tableta."),
@@ -349,6 +360,7 @@ struct TagalogNewExercisesData {
         instructions: "Gamitin ang impormasyon sa menu upang sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Menu: Cheeseburger $8.00, French Fries $3.00, Soda $2.00. Magkano ang halaga ng Cheeseburger?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "Nakalista sa menu na ang Cheeseburger ay $8.00."),
@@ -375,6 +387,7 @@ struct TagalogNewExercisesData {
         instructions: "Basahin ang impormasyon sa bill at sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Bill sa Kuryente: Kabuuang Dapat Bayaran: $45.00. Petsa ng Pagbabayad: Hulyo 15. Magkano ang kailangan mong bayaran?", options: ["$15.00", "$45.00", "Hulyo 15", "Libre"], correctAnswer: "$45.00", explanation: "Ang kabuuang dapat bayaran ay $45.00."),
@@ -401,6 +414,7 @@ struct TagalogNewExercisesData {
         instructions: "Piliin ang pinakamabuting tugon sa inilarawang sitwasyon.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Nakakita ka o nakalanghap ng usok sa iyong kusina ngunit wala kang makitang apoy. Ano ang dapat mong gawin muna?", options: ["Balewalain ito", "Buksan ang mga bintana at suriin ang kalan", "Tawagan ang kaibigan para makipag-usap", "Bumalik sa pagtulog"], correctAnswer: "Buksan ang mga bintana at suriin ang kalan", explanation: "Ang pagsusuri sa kalan ang unang hakbang upang matukoy at malutas nang ligtas ang mga karaniwang sanhi ng usok."),

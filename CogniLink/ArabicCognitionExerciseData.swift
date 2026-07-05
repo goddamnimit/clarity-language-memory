@@ -20,6 +20,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اختر المعنى المجازي الصحيح للتعبير المذكور.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -137,6 +138,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اقرأ القصة القصيرة ثم أجب عن السؤال المتعلق بها.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -254,6 +256,7 @@ struct ArabicCognitionExerciseData {
         instructions: "ما الرقم الذي يأتي بعد ذلك في التسلسل؟",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -406,6 +409,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اختر النتيجة الأكثر احتمالا للحالة الموصوفة.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -523,6 +527,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اقرأ الموقف واختر المشاعر التي من المرجح أن يشعر بها الشخص.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -675,6 +680,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اختر ما هو الخطأ أو المستحيل في الجملة.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -792,6 +798,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اختر نعم أو لا لكل سؤال.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1294,6 +1301,7 @@ struct ArabicCognitionExerciseData {
         instructions: "اختر الكلمة المناسبة لإكمال القياس.",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(

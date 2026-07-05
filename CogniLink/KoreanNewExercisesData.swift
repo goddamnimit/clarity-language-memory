@@ -26,6 +26,7 @@ struct KoreanNewExercisesData {
         instructions: "제시된 단어와 끝소리(운율)가 같은 단어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "“가방”과 끝소리가 같은 단어는 무엇인가요?", options: ["강물", "신발", "가방", "책방"], correctAnswer: "책방", explanation: "“가방”과 “책방”은 끝 글자가 “방”으로 같은 소리가 납니다."),
@@ -57,6 +58,7 @@ struct KoreanNewExercisesData {
         instructions: "제시된 단어와 가장 밀접하게 연관된 단어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "의사", options: ["병원", "공항", "도서관", "농장"], correctAnswer: "병원", explanation: "의사는 병원에서 환자를 돌봅니다."),
@@ -88,6 +90,7 @@ struct KoreanNewExercisesData {
         instructions: "널리 알려진 속담이나 격언을 완성하세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "가는 말이 고와야 ___ 말이 곱다.", options: ["오는", "가는", "하는", "듣는"], correctAnswer: "오는", explanation: "내가 남에게 말을 좋게 해야 남도 나에게 좋은 말을 해준다는 뜻입니다."),
@@ -119,6 +122,7 @@ struct KoreanNewExercisesData {
         instructions: "두 단어가 합쳐져 만들어진 단어를 완성하기 위해 알맞은 단어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "눈 + ___", options: ["사람", "하늘", "구름", "바람"], correctAnswer: "사람", explanation: "눈 + 사람 = 눈사람."),
@@ -150,6 +154,7 @@ struct KoreanNewExercisesData {
         instructions: "제시된 뜻에 알맞은 접두사 또는 접미사를 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "단어 “맨손”에서 아무것도 없는 상태를 나타내는 접두사는?", options: ["맨-", "참-", "풋-", "날-"], correctAnswer: "맨-", explanation: "접두사 “맨-”은 아무것도 입지 않거나 가지지 않은 상태를 뜻합니다."),
@@ -181,6 +186,7 @@ struct KoreanNewExercisesData {
         instructions: "짧은 이야기를 읽고 질문에 답하세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "마리아가 집에 두고 온 것은 무엇인가요?", options: ["지갑", "열쇠", "장보기 목록", "휴대전화"], correctAnswer: "지갑", explanation: "이야기에서 마리아는 지갑을 부엌 조리대 위에 두고 나왔다고 했습니다.", passage: "마리아는 우유와 식빵을 사러 식료품점에 갔습니다. 그런데 부엌 조리대 위에 지갑을 두고 나왔습니다."),
@@ -207,6 +213,7 @@ struct KoreanNewExercisesData {
         instructions: "다음에 올 숫자는 무엇인가요?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "숫자가 매번 2씩 늘어나는 패턴입니다."),
@@ -238,6 +245,7 @@ struct KoreanNewExercisesData {
         instructions: "주어진 상황의 결과로 가장 적절한 것을 고르세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "더운 날 아이스크림을 부엌 조리대에 2시간 동안 두었습니다. 어떻게 될까요?", options: ["단단해진다", "녹는다", "색이 변한다", "사라진다"], correctAnswer: "녹는다", explanation: "온도가 오르면 아이스크림이 녹습니다."),
@@ -264,6 +272,7 @@ struct KoreanNewExercisesData {
         instructions: "상황을 읽고 당사자가 느낄 기분을 고르세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "사라는 자신이 대회에서 1등을 했다는 사실을 알게 되었습니다. 사라는 어떤 기분일까요?", options: ["슬픔", "분노", "기쁨", "공포"], correctAnswer: "기쁨", explanation: "대회 우승은 기쁘고 자랑스러운 일입니다."),
@@ -295,6 +304,7 @@ struct KoreanNewExercisesData {
         instructions: "제시된 문장에서 논리적으로 어색하거나 불가능한 부분을 고르세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "존은 밤 12시에 아침 식사를 하고 잠자리에 들었다.", options: ["사람들은 음식을 먹지 않는다", "아침 식사는 아침에 먹는 밥이다", "존은 자면 안 된다", "자정은 오후 시간대이다"], correctAnswer: "아침 식사는 아침에 먹는 밥이다", explanation: "아침 식사는 단어 뜻 그대로 아침에 하루를 시작하며 먹는 식사입니다."),
@@ -321,6 +331,7 @@ struct KoreanNewExercisesData {
         instructions: "처방전 및 라벨 정보를 읽고 질문에 답하세요.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "라벨: 1일 2회, 1회 1정씩 식사와 함께 복용하십시오. 하루에 총 몇 알을 먹어야 합니까?", options: ["1알", "2알", "3알", "4알"], correctAnswer: "2알", explanation: "하루에 2번씩 1알을 먹으므로 1 + 1 = 2알입니다."),
@@ -347,6 +358,7 @@ struct KoreanNewExercisesData {
         instructions: "메뉴 정보를 보고 질문에 답하세요.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "메뉴: 치즈버거 8,000원, 감자튀김 3,000원, 탄산음료 2,000원. 치즈버거의 가격은 얼마인가요?", options: ["8,000원", "3,000원", "2,000원", "11,000원"], correctAnswer: "8,000원", explanation: "메뉴판에 치즈버거는 8,000원이라고 나와 있습니다."),
@@ -373,6 +385,7 @@ struct KoreanNewExercisesData {
         instructions: "고지서 정보를 읽고 질문에 답하세요.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "전기 요금 고지서: 납부 금액: 45달러. 납기일: 7월 15일. 납부해야 하는 총금액은 얼마인가요?", options: ["15달러", "45달러", "7월 15일", "무료"], correctAnswer: "45달러", explanation: "납부해야 하는 총금액은 45달러입니다."),
@@ -399,6 +412,7 @@ struct KoreanNewExercisesData {
         instructions: "주어진 대처 상황에서 가장 올바른 행동을 고르세요.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "부엌에서 탄내가 나지만 불꽃은 보이지 않습니다. 가장 먼저 무엇을 해야 하나요?", options: ["모른 척한다", "창문을 열고 가스레인지를 확인한다", "친구에게 전화를 걸어 수다를 떤다", "다시 자러 간다"], correctAnswer: "창문을 열고 가스레인지를 확인한다", explanation: "가스레인지를 신속하게 점검하여 잠재적 화재나 과열 요인을 확인하는 것이 안전한 대처법입니다."),

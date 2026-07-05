@@ -247,16 +247,9 @@ struct CaregiverDashboardView: View {
                 // Per-Exercise Overrides (only if master toggle is on)
                 if AdaptiveDifficultyStore.shared.isMasterToggleOn {
                     VStack(spacing: 0) {
-                        let overrideItems = [
-                            AdaptiveOverrideItem(id: "homonym", name: "Homonyms"),
-                            AdaptiveOverrideItem(id: "analogyChoice", name: "Analogies"),
-                            AdaptiveOverrideItem(id: "wordassociation", name: "Word Association"),
-                            AdaptiveOverrideItem(id: "sentencecompletion", name: "Sentence Completion"),
-                            AdaptiveOverrideItem(id: "sequencing", name: "Sequencing"),
-                            AdaptiveOverrideItem(id: "causeeffect", name: "Cause and Effect"),
-                            AdaptiveOverrideItem(id: "whatswrong", name: "What's Wrong Here?"),
-                            AdaptiveOverrideItem(id: "completesaying", name: "Complete the Saying")
-                        ]
+                        let overrideItems = TrackedExerciseType.allCases.map {
+                            AdaptiveOverrideItem(id: $0.rawValue, name: $0.displayName)
+                        }
                         ForEach(overrideItems) { item in
                             AdaptiveOverrideRow(item: item)
                             if item.id != overrideItems.last?.id {

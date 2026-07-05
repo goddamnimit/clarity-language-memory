@@ -28,6 +28,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the word that rhymes with the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਕਿਹੜਾ ਸ਼ਬਦ 'ਪਾਣੀ' ਨਾਲ ਮਿਲਦਾ-ਜੁਲਦਾ ਹੈ?", options: ["ਗਰਮੀ", "ਹਾਂਣੀ", "ਕੱਪੜਾ", "ਸੂਰਜ"], correctAnswer: "ਹਾਂਣੀ", explanation: "ਪਾਣੀ ਅਤੇ ਹਾਂਣੀ ਦੀ ਆਖਰੀ ਆਵਾਜ਼ ਇੱਕੋ ਜਿਹੀ ਹੈ।"),
@@ -59,6 +60,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the word most closely associated with the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਡਾਕਟਰ", options: ["ਹਸਪਤਾਲ", "ਹਵਾਈ ਅੱਡਾ", "ਲਾਇਬ੍ਰੇਰੀ", "ਖੇਤ"], correctAnswer: "ਹਸਪਤਾਲ", explanation: "ਡਾਕਟਰ ਮਰੀਜ਼ਾਂ ਦੀ ਦੇਖਭਾਲ ਲਈ ਹਸਪਤਾਲ ਵਿੱਚ ਕੰਮ ਕਰਦੇ ਹਨ।"),
@@ -90,6 +92,7 @@ struct PunjabiNewExercisesData {
         instructions: "Complete the well-known saying or expression.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਉੱਠ ਨਾ ਸਕੇ, ਫਿੱਟੇ ___।", options: ["ਮੂੰਹ", "ਗੋਡੇ", "ਪੈਰ", "ਰਾਹ"], correctAnswer: "ਮੂੰਹ", explanation: "ਪੂਰੀ ਅਖਾਣ ਹੈ: 'ਉੱਠ ਨਾ ਸਕੇ, ਫਿੱਟੇ ਮੂੰਹ ਗੋਡਿਆਂ ਦਾ'। ਇਹ ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਲੁਕਾਉਣ ਲਈ ਬਹਾਨੇ ਬਣਾਉਣ 'ਤੇ ਵਰਤੀ ਜਾਂਦੀ ਹੈ।"),
@@ -121,6 +124,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the correct word to complete the compound word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਸੂਰਜ + ___", options: ["ਮੁਖੀ", "ਫੁੱਲ", "ਚੰਨ", "ਤਾਰਾ"], correctAnswer: "ਮੁਖੀ", explanation: "ਸੂਰਜ + ਮੁਖੀ = ਸੂਰਜਮੁਖੀ।"),
@@ -152,6 +156,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the correct prefix or suffix to complete the word.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਸ਼ਬਦ 'ਬੇਸਮਝ' ਵਿੱਚ ਕਿਹੜਾ ਅਗੇਤਰ ਵਰਤਿਆ ਗਿਆ ਹੈ?", options: ["ਬੇ-", "ਨਾ-", "ਅਣ-", "ਗ਼ੈਰ-"], correctAnswer: "ਬੇ-", explanation: "'ਬੇ-' ਅਗੇਤਰ ਦਾ ਅਰਥ ਹੈ 'ਬਿਨਾਂ', ਇਸ ਲਈ ਬੇਸਮਝ ਦਾ ਅਰਥ ਹੈ ਸਮਝ ਤੋਂ ਬਿਨਾਂ।"),
@@ -183,6 +188,7 @@ struct PunjabiNewExercisesData {
         instructions: "Read the short story then answer the question about it.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਮਾਰੀਆ ਘਰ ਕੀ ਛੱਡ ਗਈ ਸੀ?", options: ["ਆਪਣਾ ਬਟੂਆ", "ਆਪਣੀਆਂ ਚਾਬੀਆਂ", "ਖਰੀਦਦਾਰੀ ਦੀ ਸੂਚੀ", "ਆਪਣਾ ਫ਼ੋਨ"], correctAnswer: "ਆਪਣਾ ਬਟੂਆ", explanation: "ਕਹਾਣੀ ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਉਹ ਰਸੋਈ ਦੇ ਕਾਊਂਟਰ 'ਤੇ ਆਪਣਾ ਬਟੂਆ ਭੁੱਲ ਗਈ ਸੀ।", passage: "ਮਾਰੀਆ ਦੁੱਧ ਅਤੇ ਰੋਟੀ ਖਰੀਦਣ ਲਈ ਕਰਿਆਨੇ ਦੀ ਦੁਕਾਨ 'ਤੇ ਗਈ। ਉਹ ਰਸੋਈ ਦੇ ਕਾਊਂਟਰ 'ਤੇ ਆਪਣਾ ਬਟੂਆ ਭੁੱਲ ਗਈ।"),
@@ -209,6 +215,7 @@ struct PunjabiNewExercisesData {
         instructions: "What number comes next in the sequence?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "ਹਰ ਵਾਰ 2 ਜੋੜ ਕੇ ਲੜੀ ਅੱਗੇ ਵੱਧ ਰਹੀ ਹੈ।"),
@@ -240,6 +247,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the most likely result of the situation described.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਤੁਸੀਂ ਗਰਮ ਦਿਨ 'ਤੇ ਰਸੋਈ ਦੇ ਕਾਊਂਟਰ 'ਤੇ ਦੋ ਘੰਟਿਆਂ ਲਈ ਆਈਸਕ੍ਰੀਮ ਛੱਡ ਦਿੰਦੇ ਹੋ। ਕੀ ਹੁੰਦਾ ਹੈ?", options: ["ਇਹ ਸਖ਼ਤ ਹੋ ਜਾਂਦੀ ਹੈ", "ਇਹ ਪਿਘਲ ਜਾਂਦੀ ਹੈ", "ਇਹ ਰੰਗ ਬਦਲਦੀ ਹੈ", "ਇਹ ਗਾਇਬ ਹੋ ਜਾਂਦੀ ਹੈ"], correctAnswer: "ਇਹ ਪਿਘਲ ਜਾਂਦੀ ਹੈ", explanation: "ਗਰਮੀ ਕਾਰਨ ਜੰਮੀ ਹੋਈ ਆਈਸਕ੍ਰੀਮ ਪਿਘਲ ਜਾਂਦੀ ਹੈ।"),
@@ -266,6 +274,7 @@ struct PunjabiNewExercisesData {
         instructions: "Read the situation and choose the emotion the person most likely feels.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਸਾਰਾਹ ਨੂੰ ਹੁਣੇ ਪਤਾ ਲੱਗਾ ਹੈ ਕਿ ਉਸਨੇ ਇੱਕ ਮੁਕਾਬਲੇ ਵਿੱਚ ਪਹਿਲਾ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕੀਤਾ ਹੈ। ਉਹ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦੀ ਹੈ?", options: ["ਉਦਾਸ", "ਗੁੱਸੇ", "ਖੁਸ਼", "ਡਰੀ ਹੋਈ"], correctAnswer: "ਖੁਸ਼", explanation: "ਮੁਕਾਬਲਾ ਜਿੱਤਣਾ ਇੱਕ ਖੁਸ਼ੀ ਅਤੇ ਉਤਸ਼ਾਹ ਵਾਲੀ ਗੱਲ ਹੈ।"),
@@ -297,6 +306,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose what is wrong or impossible about the sentence.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਜੌਨ ਨੇ ਸੌਣ ਤੋਂ ਪਹਿਲਾਂ ਅੱਧੀ ਰਾਤ ਨੂੰ ਨਾਸ਼ਤਾ ਕੀਤਾ।", options: ["ਲੋਕ ਖਾਣਾ ਨਹੀਂ ਖਾਂਦੇ", "ਨਾਸ਼ਤਾ ਸਵੇਰ ਦਾ ਭੋਜਨ ਹੈ, ਅੱਧੀ ਰਾਤ ਦਾ ਨਹੀਂ", "ਜੌਨ ਨੂੰ ਸੌਣਾ ਨਹੀਂ ਚਾਹੀਦਾ", "ਅੱਧੀ ਰਾਤ ਦੁਪਹਿਰ ਨੂੰ ਹੁੰਦੀ ਹੈ"], correctAnswer: "ਨਾਸ਼ਤਾ ਸਵੇਰ ਦਾ ਭੋਜਨ ਹੈ, ਅੱਧੀ ਰਾਤ ਦਾ ਨਹੀਂ", explanation: "ਨਾਸ਼ਤਾ ਹਮੇਸ਼ਾ ਸਵੇਰੇ ਉੱਠ ਕੇ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਰਾਤ ਨੂੰ ਨਹੀਂ।"),
@@ -323,6 +333,7 @@ struct PunjabiNewExercisesData {
         instructions: "Read the prescription information and answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਲੇਬਲ: ਭੋਜਨ ਦੇ ਨਾਲ ਰੋਜ਼ਾਨਾ ਦੋ ਵਾਰ 1 ਗੋਲੀ ਲਓ। ਤੁਹਾਨੂੰ ਹਰ ਰੋਜ਼ ਕੁੱਲ ਕਿੰਨੀਆਂ ਗੋਲੀਆਂ ਲੈਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "ਰੋਜ਼ਾਨਾ ਦੋ ਵਾਰ 1 ਗੋਲੀ ਲੈਣ ਦਾ ਮਤਲਬ ਹੈ 1 + 1 = 2 ਗੋਲੀਆਂ।"),
@@ -349,6 +360,7 @@ struct PunjabiNewExercisesData {
         instructions: "Use the menu information to answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਮੇਨੂ: ਚੀਜ਼ਬਰਗਰ $8.00, ਫ੍ਰੈਂਚ ਫਰਾਈਜ਼ $3.00, ਸੋਡਾ $2.00। ਚੀਜ਼ਬਰਗਰ ਦੀ ਕੀਮਤ ਕਿੰਨੀ ਹੈ?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "ਮੇਨੂ ਅਨੁਸਾਰ ਚੀਜ਼ਬਰਗਰ ਦੀ ਕੀਮਤ $8.00 ਹੈ।"),
@@ -375,6 +387,7 @@ struct PunjabiNewExercisesData {
         instructions: "Read the bill information and answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਬਿਜਲੀ ਦਾ ਬਿੱਲ: ਕੁੱਲ ਦੇਣਯੋਗ ਰਾਸ਼ੀ: $45.00। ਆਖਰੀ ਮਿਤੀ: 15 ਜੁਲਾਈ। ਤੁਹਾਨੂੰ ਕਿੰਨੀ ਰਕਮ ਅਦਾ ਕਰਨੀ ਪਵੇਗੀ?", options: ["$15.00", "$45.00", "15 ਜੁਲਾਈ", "ਮੁਫ਼ਤ"], correctAnswer: "$45.00", explanation: "ਬਿੱਲ ਅਨੁਸਾਰ ਕੁੱਲ ਦੇਣਯੋਗ ਰਕਮ $45.00 ਹੈ।"),
@@ -401,6 +414,7 @@ struct PunjabiNewExercisesData {
         instructions: "Choose the best response to the situation described.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਤੁਹਾਨੂੰ ਆਪਣੀ ਰਸੋਈ ਵਿੱਚੋਂ ਧੂੰਏਂ ਦੀ ਗੰਧ ਆਉਂਦੀ ਹੈ ਪਰ ਕੋਈ ਅੱਗ ਦਿਖਾਈ ਨਹੀਂ ਦਿੰਦੀ। ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?", options: ["ਇਸਨੂੰ ਅਣਦੇਖਾ ਕਰੋ", "ਖਿੜਕੀਆਂ ਖੋਲ੍ਹੋ ਅਤੇ ਚੁੱਲ੍ਹੇ ਦੀ ਜਾਂਚ ਕਰੋ", "ਗੱਲ ਕਰਨ ਲਈ ਕਿਸੇ ਦੋਸਤ ਨੂੰ ਫ਼ੋਨ ਕਰੋ", "ਦੁਬਾਰਾ ਸੌਣ ਲਈ ਜਾਓ"], correctAnswer: "ਖਿੜਕੀਆਂ ਖੋਲ੍ਹੋ ਅਤੇ ਚੁੱਲ੍ਹੇ ਦੀ ਜਾਂਚ ਕਰੋ", explanation: "ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਚੁੱਲ੍ਹੇ ਦੀ ਜਾਂਚ ਕਰਨਾ ਸਹੀ ਕਦਮ ਹੈ ਤਾਂ ਜੋ ਧੂੰਏਂ ਦੇ ਕਾਰਨ ਦਾ ਪਤਾ ਲੱਗ ਸਕੇ।"),

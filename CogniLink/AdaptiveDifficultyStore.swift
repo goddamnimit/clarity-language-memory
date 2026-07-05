@@ -151,71 +151,12 @@ final class AdaptiveDifficultyStore: ObservableObject {
     }
     
     // MARK: - Helper: Normalization
-    
+
+    /// Returns the adaptive-difficulty bucket identifier for an exercise, read
+    /// directly from its explicitly-authored `trackedType` field. No title or
+    /// ExerciseType inspection — classification is a one-time authoring-time
+    /// decision, not a runtime inference.
     func adaptiveIdentifier(for exercise: Exercise) -> String? {
-        switch exercise.type {
-        case .homonym:
-            return "homonym"
-        case .analogyChoice:
-            return "analogyChoice"
-        case .sequencing:
-            return "sequencing"
-        case .sentenceCompletion:
-            let title = exercise.title.lowercased()
-            let exclude = ["prefix", "suffix", "morphology", "sufix", "panlapi", "morfologia", "접두사", "어형", "형태소", "الصرف", "سوابق", "उपसर्ग", "ਅਗੇਤਰ", "ਪੂਰ੍ਹਵਪ੍ਰਤ੍ਯਯ", "词头", "նախածանց"]
-            if exclude.contains(where: { title.contains($0) }) {
-                return nil
-            }
-            return "sentencecompletion"
-        case .multipleChoice:
-            let title = exercise.title.lowercased()
-            // Word Association
-            let isWordAssoc = title.contains("association") || title.contains("asociación") ||
-                              title.contains("संगति") || title.contains("જોડાણ") ||
-                              title.contains("关联") || title.contains("연상") ||
-                              title.contains("liên kết") || title.contains("ارتباط") ||
-                              title.contains("pag-uugnay") || title.contains("բառերի")
-            if isWordAssoc {
-                return "wordassociation"
-            }
-            
-            // Cause and Effect
-            let isCauseEffect = title.contains("cause and effect") || title.contains("causa y efecto") ||
-                                title.contains("प्रभाव") || title.contains("અસર") ||
-                                title.contains("因果") || title.contains("원인과 결과") ||
-                                title.contains("nguyên nhân") || title.contains("السبب") ||
-                                title.contains("causa e efeito") || title.contains("sanhi") ||
-                                title.contains("պատճառ") || title.contains("علت")
-            if isCauseEffect {
-                return "causeeffect"
-            }
-            
-            // What's Wrong Here / Absurdities
-            let isWhatsWrong = title.contains("wrong") || title.contains("absurd") ||
-                               title.contains("mal aquí") || title.contains("गलत") ||
-                               title.contains("खोટું") || title.contains("不对") ||
-                               title.contains("잘못되었나요") || title.contains("sai ở đây") ||
-                               title.contains("الخطأ") || title.contains("errado") ||
-                               title.contains("mali dito") || title.contains("սխալ") ||
-                               title.contains("اشتباه")
-            if isWhatsWrong {
-                return "whatswrong"
-            }
-            
-            // Complete the Saying / Phrase Completion / Proverbs
-            let isSaying = title.contains("saying") || title.contains("phrase completion") ||
-                           title.contains("dicho") || title.contains("refrán") || title.contains("refran") ||
-                           title.contains("कहावत") || title.contains("કહેવત") ||
-                           title.contains("成语") || title.contains("속담 완성") || title.contains("câu nói") ||
-                           title.contains("المثل") || title.contains("ditado") || title.contains("kumpletuhin") ||
-                           title.contains("ਅਖਾਣ") || title.contains("ասացվածքը") || title.contains("ضرب‌المثل")
-            if isSaying {
-                return "completesaying"
-            }
-            
-            return nil
-        default:
-            return nil
-        }
+        exercise.trackedType?.rawValue
     }
 }

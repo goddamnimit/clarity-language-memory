@@ -28,6 +28,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "什么节日在农历正月初一庆祝，是中国最重要的传统节日？", options: ["春节", "中秋节", "端午节", "清明节"], correctAnswer: "春节"),
@@ -60,6 +61,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "长城在哪里？", options: ["中国北方", "中国南方", "中国西部", "中国东部海岸"], correctAnswer: "中国北方"),
@@ -92,6 +94,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "谁是中国古代最著名的思想家和教育家，创立了儒家学说？", options: ["孔子", "老子", "孟子", "荀子"], correctAnswer: "孔子"),
@@ -119,6 +122,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "中国传统的春节通常在哪个月份庆祝？", options: ["一月或二月", "三月或四月", "五月或六月", "十一月或十二月"], correctAnswer: "一月或二月"),
@@ -146,6 +150,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "为什么中国人在春节期间放鞭炮？", options: ["驱邪避鬼迎接新年", "庆祝皇帝生日", "纪念古代战争胜利", "感谢神灵保佑丰收"], correctAnswer: "驱邪避鬼迎接新年"),
@@ -173,6 +178,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "中国有多少个省级行政区域（包括省、自治区、直辖市和特别行政区）？", options: ["34个", "28个", "32个", "36个"], correctAnswer: "34个"),
@@ -205,6 +211,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请回答是或否。",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "北京是中华人民共和国的首都吗？", options: ["Yes", "No"], correctAnswer: "Yes"),
@@ -237,6 +244,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "中国历史上第一个统一的封建王朝是哪个？", options: ["秦朝", "汉朝", "周朝", "商朝"], correctAnswer: "秦朝"),
@@ -264,6 +272,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "中国的首都在哪里？", options: ["北京", "上海", "广州", "南京"], correctAnswer: "北京"),
@@ -296,6 +305,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出每个问题的正确答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "哪位香港功夫明星主演了《醉拳》和《警察故事》等电影，以搞笑动作风格闻名全球？", options: ["成龙", "李小龙", "李连杰", "甄子丹"], correctAnswer: "成龙"),
@@ -323,6 +333,7 @@ struct ChineseCognitionExerciseData {
         instructions: "用自己的话解释这个成语的意思。",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "请解释成语“一石二鸟”的意思，并用它造一个句子。", options: [], correctAnswer: "一个行动同时达到两个目的。例如：我顺路去超市买菜，又去银行取钱，真是一石二鸟。"),
@@ -350,6 +361,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请选出最合理的答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "如果一袋大米重五磅，您买了三袋，一共有多重？", options: ["15磅", "10磅", "20磅", "12磅"], correctAnswer: "15磅"),
@@ -382,6 +394,7 @@ struct ChineseCognitionExerciseData {
         instructions: "请根据所给信息，选出最合理的答案。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "小明比小红高，小红比小华高。请问谁最高？", options: ["小明", "小红", "小华", "无法判断"], correctAnswer: "小明"),
@@ -409,6 +422,7 @@ struct ChineseCognitionExerciseData {
         instructions: "这些问题没有正确或错误的答案。请分享您的回忆和经历。",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "您是从中国哪个城市或省份来到美国的？那个地方有什么让您最难忘的风景或特色？", options: [], correctAnswer: ""),
@@ -441,6 +455,7 @@ struct ChineseCognitionExerciseData {
         instructions: "在每个类别中说出您能记住的内容，然后查看完整列表。",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "请按顺序说出中国十二生肖的所有动物。", options: [], correctAnswer: "鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪"),

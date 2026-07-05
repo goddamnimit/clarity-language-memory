@@ -28,6 +28,7 @@ struct KoreanLanguageExerciseData {
         instructions: "그룹에 속하지 않는 단어를 탭하세요.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -250,6 +251,7 @@ struct KoreanLanguageExerciseData {
         instructions: "그룹에 속하지 않는 단어를 탭하세요.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -430,6 +432,7 @@ struct KoreanLanguageExerciseData {
         instructions: "빈칸에 공통으로 들어갈 가장 알맞은 단어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -582,6 +585,7 @@ struct KoreanLanguageExerciseData {
         instructions: "주어진 단어와 같은 의미를 갖는 단어를 선택하세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -664,6 +668,7 @@ struct KoreanLanguageExerciseData {
         instructions: "주어진 단어와 같은 의미를 갖는 단어를 선택하세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -746,6 +751,7 @@ struct KoreanLanguageExerciseData {
         instructions: "주어진 단어의 반대말을 의미하는 단어를 선택하세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -828,6 +834,7 @@ struct KoreanLanguageExerciseData {
         instructions: "문장을 가장 잘 완성하는 단어를 선택하세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -980,6 +987,7 @@ struct KoreanLanguageExerciseData {
         instructions: "문장의 흐름에 맞는 올바른 어형을 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1132,6 +1140,7 @@ struct KoreanLanguageExerciseData {
         instructions: "비유를 가장 잘 완성하는 단어를 선택하세요.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1249,6 +1258,7 @@ struct KoreanLanguageExerciseData {
         instructions: "결정하십시오: 이 진술은 사실입니까 아니면 의견입니까?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1436,6 +1446,7 @@ struct KoreanLanguageExerciseData {
         instructions: "단계가 잘못된 순서로 표시됩니다. 1, 2, 3... 번호를 매겨 올바른 순서로 배열하세요.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1504,6 +1515,7 @@ struct KoreanLanguageExerciseData {
         instructions: "제시된 단어와 운(모음과 받침 소리)이 같은 단어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1656,6 +1668,7 @@ struct KoreanLanguageExerciseData {
         instructions: "주어진 단어와 가장 밀접하게 연관된 단어를 선택하십시오.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1808,6 +1821,7 @@ struct KoreanLanguageExerciseData {
         instructions: "문장의 빈칸에 들어갈 알맞은 속담 단어를 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1960,6 +1974,7 @@ struct KoreanLanguageExerciseData {
         instructions: "두 단어가 합쳐져서 만들어지는 올바른 합성어를 고르세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -2112,6 +2127,7 @@ struct KoreanLanguageExerciseData {
         instructions: "접두사나 접미사의 올바른 뜻이나 쓰임을 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

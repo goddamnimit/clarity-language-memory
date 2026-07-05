@@ -26,6 +26,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر الكلمة التي تتناغم (لها نفس القافية) مع الكلمة المعطاة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "أي كلمة تتناغم مع كلمة “كتاب”؟", options: ["شمس", "باب", "شجرة", "كلب"], correctAnswer: "باب", explanation: "كتاب وباب يشتركان في نفس الصوت النهائي."),
@@ -57,6 +58,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر الكلمة الأكثر ارتباطاً بالكلمة المعطاة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "طبيب", options: ["مستشفى", "مطار", "مكتبة", "مزرعة"], correctAnswer: "مستشفى", explanation: "الأطباء يعملون في المستشفيات لرعاية المرضى."),
@@ -88,6 +90,7 @@ struct ArabicNewExercisesData {
         instructions: "أكمل المثل أو الحكمة الشعبية المعروفة.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "الوقت كالسيف إن لم تقطعه ___.", options: ["قطعك", "نفعك", "فاتك", "تركك"], correctAnswer: "قطعك", explanation: "الحكمة المعروفة هي: الوقت كالسيف إن لم تقطعه قطعك، للدلالة على أهمية استغلال الوقت."),
@@ -119,6 +122,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر الكلمة المناسبة لتكوين مصطلح مركب مفيد.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "كرة + ___", options: ["القدم", "الماء", "الهواء", "العشب"], correctAnswer: "القدم", explanation: "كرة + القدم = كرة القدم (الرياضة الشعبية)."),
@@ -150,6 +154,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر السابقة أو اللاحقة الصحيحة بناءً على معناها اللغوي.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ما هي السابقة التي تدل على طلب الشيء في كلمة “استغفر”؟", options: ["استـ", "تـ", "مـ", "يـ"], correctAnswer: "استـ", explanation: "السابقة “استـ” في الأفعال تدل غالباً على الطلب والسعي (مثل استغفر: طلب المغفرة)."),
@@ -181,6 +186,7 @@ struct ArabicNewExercisesData {
         instructions: "اقرأ القصة القصيرة التالية ثم أجب عن السؤال عنها.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ماذا تركت ماريا في المنزل؟", options: ["محفظتها", "مفاتيحها", "قائمة التسوق", "هاتفها"], correctAnswer: "محفظتها", explanation: "تذكر القصة أنها نسيت محفظتها على طاولة المطبخ.", passage: "ذهبت ماريا إلى البقالة لشراء الحليب والخبز. ونسيت محفظتها على طاولة المطبخ."),
@@ -207,6 +213,7 @@ struct ArabicNewExercisesData {
         instructions: "ما الرقم الذي يأتي بعد ذلك في المتتالية؟",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "المتتالية تزداد بإضافة 2 في كل مرة."),
@@ -238,6 +245,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر النتيجة الأكثر احتمالاً للموقف الموصوف.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "تركت الآيس كريم على طاولة المطبخ لمدة ساعتين في يوم دافئ. ماذا يحدث؟", options: ["يصبح أكثر صلابة", "يذوب", "يتغير لونه", "يختفي"], correctAnswer: "يذوب", explanation: "الحرارة تؤدي إلى ذوبان الآيس كريم المجمد."),
@@ -264,6 +272,7 @@ struct ArabicNewExercisesData {
         instructions: "اقرأ الموقف واختر المشاعر التي يشعر بها الشخص على الأرجح.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "عرفت سارة للتو أنها فازت بالمركز الأول في مسابقة. كيف تشعر؟", options: ["حزينة", "غاضبة", "سعيدة", "خائفة"], correctAnswer: "سعيدة", explanation: "الفوز بالمسابقات يجلب البهجة والسرور."),
@@ -295,6 +304,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر ما هو خاطئ أو مستحيل في الجملة المعطاة.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "تناول جون وجبة الإفطار في منتصف الليل قبل الذهاب للنوم.", options: ["الناس لا يأكلون الطعام", "الإفطار وجبة صباحية وليست في منتصف الليل", "لا ينبغي لجون أن ينام", "منتصف الليل في فترة بعد الظهر"], correctAnswer: "الإفطار وجبة صباحية وليست في منتصف الليل", explanation: "وجبة الإفطار هي بالتعريف الوجبة الصباحية التي تكسر صيام الليل."),
@@ -321,6 +331,7 @@ struct ArabicNewExercisesData {
         instructions: "اقرأ معلومات الوصفة الطبية وأجب عن السؤال المعطى.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "الملصق: تناول قرصاً واحداً مرتين يومياً مع الطعام. كم قرصاً يجب أن تتناول في المجموع كل يوم؟", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "تناول قرص واحد مرتين في اليوم يعني قرص + قرص = 2 قرص."),
@@ -347,6 +358,7 @@ struct ArabicNewExercisesData {
         instructions: "استخدم معلومات قائمة الطعام للإجابة عن السؤال.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "القائمة: تشيز برجر 8.00 دولارات، بطاطس مقلية 3.00 دولارات، صودا 2.00 دولار. كم تبلغ تكلفة التشيز برجر؟", options: ["8.00 دولارات", "3.00 دولارات", "2.00 دولار", "11.00 دولاراً"], correctAnswer: "8.00 دولارات", explanation: "توضح القائمة أن سعر التشيز برجر هو 8.00 دولارات."),
@@ -373,6 +385,7 @@ struct ArabicNewExercisesData {
         instructions: "اقرأ معلومات الفاتورة وأجب عن السؤال.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "فاتورة الكهرباء: المبلغ المستحق: 45.00 دولاراً. تاريخ الاستحقاق: 15 يوليو. ما هو المبلغ الذي يتعين عليك دفعه؟", options: ["15.00 دولاراً", "45.00 دولاراً", "15 يوليو", "مجاني"], correctAnswer: "45.00 دولاراً", explanation: "إجمالي المبلغ المستحق للدفع هو 45.00 دولاراً."),
@@ -399,6 +412,7 @@ struct ArabicNewExercisesData {
         instructions: "اختر الاستجابة الفضلى والأكثر أماناً للموقف الموصوف.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "تشتم رائحة دخان في مطبخك ولكنك لا ترى أي نيران. ما الذي يجب عليك فعله أولاً؟", options: ["تجاهل الأمر", "فتح النوافذ وتفقد الموقد", "الاتصال بصديق للدردشة", "العودة إلى النوم"], correctAnswer: "فتح النوافذ وتفقد الموقد", explanation: "تفقد موقد الطهي هو الخطوة الأولى لتحديد وحل مسببات الأدخنة البسيطة والشائعة بأمان."),

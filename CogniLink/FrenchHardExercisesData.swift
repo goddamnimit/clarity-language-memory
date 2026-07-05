@@ -30,6 +30,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez le bon couple d'homonymes pour compléter les phrases.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "[sain / saint] Ce mode de vie est très ___ pour le cœur. Le ___ patron de la ville est célébré en été.", options: ["sain...saint", "saint...sain", "sain...sain", "saint...saint"], correctAnswer: "sain...saint", explanation: "'Sain' signifie en bonne santé, tandis que 'saint' fait référence à un personnage religieux ou sacré."),
@@ -56,6 +57,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez le mot qui complète le mieux la relation d'analogie.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ÉPHÉMÈRE est à PERMANENT ce que TRANSITOIRE est à ___", options: ["Bref", "Rapide", "Durable", "Temporaire"], correctAnswer: "Durable", explanation: "Éphémère et permanent sont des antonymes, tout comme transitoire et durable."),
@@ -82,6 +84,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez le mot le plus étroitement associé au mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ÉPHÉMÈRE", options: ["Permanent", "Transitoire", "Solide", "Infini"], correctAnswer: "Transitoire", explanation: "Éphémère est très proche de transitoire, qualifiant ce qui dure peu de temps."),
@@ -108,6 +111,7 @@ struct FrenchHardExercisesData {
         instructions: "Complétez la phrase en choisissant le mot le plus approprié dans le contexte.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Bien qu'il ait étudié pendant des mois, son échec à l'examen a été ___.", options: ["inévitable", "surprenant", "mérité", "attendu"], correctAnswer: "surprenant", explanation: ""),
@@ -134,6 +138,7 @@ struct FrenchHardExercisesData {
         instructions: "Remettez les étapes logiques de l'activité dans le bon ordre.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Renouvellement d'un permis de conduire au DMV", options: ["Prendre rendez-vous en ligne ou se rendre au DMV", "Présenter les pièces d'identité requises et l'ancien permis", "Passer un test de vision", "Payer les frais de renouvellement par carte ou chèque", "Prendre une nouvelle photo d'identité", "Recevoir le permis temporaire en attendant le permis officiel par la poste"], correctAnswer: "Prendre rendez-vous en ligne ou se rendre au DMV | Présenter les pièces d'identité requises et l'ancien permis | Passer un test de vision | Payer les frais de renouvellement par carte ou chèque | Prendre une nouvelle photo d'identité | Recevoir le permis temporaire en attendant le permis officiel par la poste", explanation: ""),
@@ -160,6 +165,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez la conséquence logique de la situation décrite.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Si l'inflation en Californie augmente rapidement, quel effet direct cela aura-t-il sur le pouvoir d'achat des retraités ayant une pension fixe ?", options: ["Leur pouvoir d'achat va diminuer", "Leur pouvoir d'achat va augmenter", "Leur pouvoir d'achat restera identique", "Les prix des produits vont baisser"], correctAnswer: "Leur pouvoir d'achat va diminuer", explanation: "L'inflation augmente le coût de la vie. Si les revenus restent fixes, le pouvoir d'achat diminue."),
@@ -186,6 +192,7 @@ struct FrenchHardExercisesData {
         instructions: "Identifiez l'erreur de logique dans la situation ou la phrase.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Trouvez l'erreur logique : Il a souscrit à un contrat d'assurance habitation pour couvrir les frais de sa consultation dentaire.", options: ["L'assurance habitation ne couvre pas les soins de santé ou dentaires", "Les soins dentaires sont gratuits pour tous", "Le dentiste est un employé de la compagnie d'assurance", "Les soins de santé sont couverts par l'assurance auto"], correctAnswer: "L'assurance habitation ne couvre pas les soins de santé ou dentaires", explanation: ""),
@@ -212,6 +219,7 @@ struct FrenchHardExercisesData {
         instructions: "Complétez l'expression ou le dicton traditionnel avec le mot approprié.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Complétez l'expression : Qui sème le vent récolte ___.", options: ["la tempête", "la pluie", "les nuages", "la récolte"], correctAnswer: "la tempête", explanation: "C'est l'expression proverbiale traditionnelle."),
@@ -238,6 +246,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez la bonne paire d'homonymes pour compléter les phrases.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "[tante / tente] Ma ___ habite dans une jolie maison à Napa. Nous avons monté la ___ dans le jardin.", options: ["tante...tente", "tente...tante", "tante...tante", "tente...tente"], correctAnswer: "tante...tente", explanation: "'Tante' est la sœur d'un parent, et 'tente' est l'abri de toile."),
@@ -264,6 +273,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez le mot qui complète le mieux la relation d'analogie.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "LE CHAT est à MIAULER ce que LE CHIEN est à ___", options: ["Aboyer", "Rugir", "Chanter", "Siffler"], correctAnswer: "Aboyer", explanation: "Le chat miaule, le chien aboie."),
@@ -290,6 +300,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez la conséquence logique de la situation décrite.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Si vous laissez une casserole d'eau bouillante sur le feu sans surveillance pendant une heure, que se passera-t-il ?", options: ["L'eau va s'évaporer complètement", "L'eau va se transformer en glace", "L'eau va devenir plus froide", "La casserole va grossir"], correctAnswer: "L'eau va s'évaporer complètement", explanation: "L'eau s'évapore sous l'effet de la chaleur continue."),
@@ -316,6 +327,7 @@ struct FrenchHardExercisesData {
         instructions: "Identifiez l'erreur de logique dans la situation ou la phrase.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Trouvez l'erreur logique : Il a mis ses gants en laine pour taper plus vite sur l'écran tactile de son smartphone.", options: ["Les gants en laine isolent et ne fonctionnent pas sur les écrans tactiles", "Les gants vont rayer l'écran en verre", "Les gants rendent le téléphone plus lourd", "Il faut utiliser un marteau"], correctAnswer: "Les gants en laine isolent et ne fonctionnent pas sur les écrans tactiles", explanation: "Les écrans tactiles capacitifs nécessitent le contact direct de la peau ou de gants conducteurs spécialisés."),
@@ -342,6 +354,7 @@ struct FrenchHardExercisesData {
         instructions: "Remettez les étapes logiques de l'activité dans le bon ordre.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Comment faire du thé ?", options: ["Faire chauffer de l'eau", "Placer le sachet de thé dans la tasse", "Verser l'eau chaude sur le sachet", "Laisser infuser et retirer le sachet"], correctAnswer: "Faire chauffer de l'eau | Placer le sachet de thé dans la tasse | Verser l'eau chaude sur le sachet | Laisser infuser et retirer le sachet", explanation: "Ordre logique des étapes pour préparer du thé."),
@@ -358,6 +371,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez le mot le plus étroitement associé au mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ÉCRIVAIN", options: ["Livre", "Pinceau", "Ciseau", "Marteau"], correctAnswer: "Livre", explanation: "L'écrivain écrit des livres."),
@@ -384,6 +398,7 @@ struct FrenchHardExercisesData {
         instructions: "Choisissez la bonne paire d'homonymes pour compléter les phrases.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "[poids / pois] Quel est le ___ net indiqué sur le sachet de ___ chiches ?", options: ["poids...pois", "pois...poids", "poids...poids", "pois...pois"], correctAnswer: "poids...pois", explanation: "'Poids' est la mesure de masse, 'pois' est le légume."),
@@ -400,6 +415,7 @@ struct FrenchHardExercisesData {
         instructions: "Complétez l'expression ou le dicton bien connu.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Une pomme par jour éloigne le ___.", options: ["médecin", "dentiste", "professeur", "pharmacien"], correctAnswer: "médecin", explanation: "Expression proverbiale traditionnelle."),
@@ -426,6 +442,7 @@ struct FrenchHardExercisesData {
         instructions: "Complétez l'expression ou le dicton bien connu.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Qui sème le vent récolte la ___.", options: ["tempête", "pluie", "terre", "fureur"], correctAnswer: "tempête", explanation: "Expression proverbiale traditionnelle."),

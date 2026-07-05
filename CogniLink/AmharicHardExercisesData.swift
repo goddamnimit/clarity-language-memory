@@ -22,6 +22,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[ቀን / ቀን] ዛሬ ምን ___ ነው? የእርሱ ___ አልቀናም ብሎ አዝኗል።", options: ["ቀን...ቀን", "ቀን...ቀን", "ቀን...ሌሊት", "ሌሊት...ቀን"], correctAnswer: "ቀን...ቀን", explanation: "የመጀመሪያው 'ቀን' የሳምንቱን ወይም የወሩን ዕለት ያሳያል፤ ሁለተኛው 'ቀን' ደግሞ ዕድል ወይም ስኬትን ያሳያል።"),
@@ -48,6 +49,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ግብር (Tax) ለ መንግስት (Government) እንደሆነ ሁሉ፥ ደሞዝ (Salary) ለ ___ ነው።", options: ["ቀጣሪ (Employer)", "ገዢ (Buyer)", "ሻጭ (Seller)", "ባንክ (Bank)"], correctAnswer: "ቀጣሪ (Employer)", explanation: "መንግስት ግብርን እንደሚሰበስብ ሁሉ ቀጣሪም ለሰራተኛው ደሞዝ ይከፍላል።"),
@@ -74,6 +76,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ውል", options: ["ስምምነት", "መለያየት", "ጠብ", "ጉዞ"], correctAnswer: "ስምምነት", explanation: "ውል ማለት በሁለት ወገኖች መካከል የሚደረግ አስገዳጅ ስምምነት (Agreement) ነው።"),
@@ -100,6 +103,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "በካሊፎርኒያ የቤት ባለቤት ለመሆን ___ ክፍያዎችን እና የኢንሹራንስ ዋጋን በዝርዝር ማጥናት ያስፈልጋል።", options: ["የሞርጌጅ", "የኪራይ", "የደሞዝ", "የፖስታ"], correctAnswer: "የሞርጌጅ", explanation: "የቤት ግዢን የረጅም ጊዜ ብድር ለመግለጽ የሞርጌጅ ክፍያ ይባላል።"),
@@ -126,6 +130,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "የመንዳት ፈቃድ (Driver License) በ DMV ለማውጣት የሚደረጉ እርምጃዎችን በቅደም ተከተል አስቀምጥ።", options: ["የቀጠሮ ሰዓት መያዝ", "የፎቶ እና የአይን ምርመራ ማድረግ", "የጽሑፍ ፈተና መውሰድ", "የተግባር የመንዳት ፈተና ማለፍ"], correctAnswer: "የቀጠሮ ሰዓት መያዝ | የፎቶ እና የአይን ምርመራ ማድረግ | የጽሑፍ ፈተና መውሰድ | የተግባር የመንዳት ፈተና ማለፍ", explanation: "ፈቃድ ለማውጣት መጀመሪያ ቀጠሮ ይያዛል፥ ከዚያ ፎቶና አይን ይታያል፥ በመቀጠል የጽሑፍ ፈተና ተወስዶ በመጨረሻ የመንዳት ፈተና ያልፋል።"),
@@ -152,6 +157,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "የአሜሪካ ማዕከላዊ ባንክ ወለድን በከፍተኛ ሁኔታ ከፍ ቢያደርገው ምን ይከሰታል?", options: ["ለቤት ግዢ የሚደረግ የባንክ ብድር ዋጋ ይወዳል", "ሰዎች በቀላሉ ብድር ያገኛሉ", "ዋጋዎች በሙሉ ወዲያውኑ ይቀንሳሉ", "ምንም ለውጥ አይኖርም"], correctAnswer: "ለቤት ግዢ የሚደረግ የባንክ ብድር ዋጋ ይወዳል", explanation: "የማዕከላዊ ባንክ ወለድ መጨመር የቤት ብድርን (Mortgage) እና የንግድ ብድርን ወለድ ከፍ ያደርገዋል።"),
@@ -178,6 +184,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "አቶ በቀለ በካሊፎርኒያ የበጋ ወራት ከፍተኛ ሙቀት ስላለባቸው ቅዝቃዜ ለማግኘት ጃኬታቸውን ደራርበው ለበሱ።", options: ["በሙቀት ወቅት ጃኬት መደረብ ሙቀትን ይበልጥ ይጨምራል", "በካሊፎርኒያ በጋ የለም", "ጃኬት መልበስ ሕገ-ወጥ ነው", "ሙቀት ላይ ውሃ መጠጣት ስህተት ነው"], correctAnswer: "በሙቀት ወቅት ጃኬት መደረብ ሙቀትን ይበልጥ ይጨምራል", explanation: "ጃኬት የሰውነት ሙቀትን ጠብቆ ስለሚይዝ በሙቀት ወቅት መልበስ ሙቀትን ያባብሰዋል።"),
@@ -204,6 +211,7 @@ struct AmharicHardExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ይህን አባባል አጠናቅቅ ፦ ቀስ በቀስ ጫካው ___ ይባላል።", options: ["ይለመልማል", "ይጠፋል", "ይቆረጣል", "ያልቃል"], correctAnswer: "ይለመልማል", explanation: "ቀስ በቀስ በጥረታችን ጫካው እንኳን ለምለም እንደሚሆን የሚገልጽ ጥንታዊ አባባል ነው።"),

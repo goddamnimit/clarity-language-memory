@@ -22,6 +22,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "각 시나리오를 읽고 어떻게 할 것인지 설명하세요. '정답 보기'를 누르면 모범 답안이 표시됩니다.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -244,6 +245,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "편성표 내용을 바탕으로 올바른 정답을 선택하십시오.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -326,6 +328,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "달력을 사용해 물음에 알맞은 답을 고르십시오.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -394,6 +397,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "단계가 잘못된 순서로 나열되어 있습니다. 1, 2, 3으로 번호를 매겨 올바른 순서로 놓으세요.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -602,6 +606,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "각 작업에 대해 필요한 도구, 주요 과정, 발생할 수 있는 문제를 설명하십시오. '정답 보기'를 눌러 모범 답안을 확인하세요.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -754,6 +759,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "방향 및 공간적 위치와 관련된 물음에 답하십시오.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -836,6 +842,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "시간, 기간, 날짜와 관련된 질문에 알맞은 답을 선택하십시오.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -960,6 +967,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "각 항목마다 돈의 가격 가치 측면에서 가장 유리한 옵션을 선택하십시오.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1063,6 +1071,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "각 질문에 알맞은 답을 고르십시오.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1145,6 +1154,7 @@ struct KoreanFunctionalSkillsExerciseData {
         instructions: "각 상황에 맞는 글을 작성해 보세요. '정답 보기'를 눌러 모범 답안을 확인하십시오.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

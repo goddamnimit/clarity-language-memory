@@ -29,6 +29,7 @@ struct HindiHardExercisesData {
         instructions: "वाक्यों को पूरा करने के लिए सही समरूपी शब्द युग्म चुनें।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[अनल / अनिल] यज्ञ की ___ तेज थी। आज शीतल ___ बह रही है।", options: ["अनल...अनिल", "अनिल...अनल", "अनल...अनल", "अनिल...अनिल"], correctAnswer: "अनल...अनिल", explanation: "'अनल' का अर्थ अग्नि है; 'अनिल' का अर्थ हवा या वायु है।"),
@@ -55,6 +56,7 @@ struct HindiHardExercisesData {
         instructions: "उस शब्द को चुनें जो सादृश्यता को सबसे अच्छी तरह पूरा करता है।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "सफ़ेद का संबंध शांति से है, तो लाल का संबंध किससे है?", options: ["क्रोध", "शांति", "ठंड", "पानी"], correctAnswer: "क्रोध", explanation: "सफ़ेद रंग शांति का प्रतीक है, और लाल रंग क्रोध या क्रांति का प्रतीक माना जाता है।"),
@@ -81,6 +83,7 @@ struct HindiHardExercisesData {
         instructions: "दिए गए शब्द से सबसे निकटता से जुड़े शब्द को चुनें।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "परोपकार", options: ["दान", "लालच", "क्रोध", "ईर्ष्या"], correctAnswer: "दान", explanation: "परोपकार (दूसरों की भलाई) सीधे दान और दयालुता से जुड़ा हुआ है।"),
@@ -107,6 +110,7 @@ struct HindiHardExercisesData {
         instructions: "वाक्य को पूरा करने के लिए सबसे उपयुक्त शब्द चुनें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "अत्यधिक वर्षा के कारण नदियों का जलस्तर ___ गया और बाढ़ आ गई।", options: ["बढ़", "घट", "सूख", "स्थिर"], correctAnswer: "बढ़", explanation: "वर्षा से नदियों का पानी बढ़ता है, जिससे बाढ़ आती है।"),
@@ -133,6 +137,7 @@ struct HindiHardExercisesData {
         instructions: "दैनिक गतिविधियों के चरणों को सही तार्किक क्रम में व्यवस्थित करें।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "चाय बनाना", options: ["चाय को छानकर कप में डालें", "दूध और चायपत्ती डालें", "बर्तन में पानी गर्म करें और अदरक-इलायची कूटकर डालें", "उबाल आने पर चीनी डालें"], correctAnswer: "बर्तन में पानी गर्म करें और अदरक-इलायची कूटकर डालें | दूध और चायपत्ती डालें | उबाल आने पर चीनी डालें | चाय को छानकर कप में डालें", explanation: "पहले पानी गर्म करके मसाले डालते हैं, फिर चायपत्ती/दूध डालते हैं, उबाल आने पर चीनी डालते हैं और छानते हैं।"),
@@ -159,6 +164,7 @@ struct HindiHardExercisesData {
         instructions: "दिए गए संदर्भ में सबसे तार्किक कारण या प्रभाव चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "कारण: गर्मियों में तापमान 45 डिग्री के पार पहुंच गया।", options: ["लोगों ने घरों में एयर कंडीशनर और कूलर का उपयोग बढ़ा दिया", "सड़कों पर लोगों की भीड़ बहुत बढ़ गई", "गर्म कपड़ों की मांग बाजार में बढ़ गई", "बिजली की खपत में भारी गिरावट दर्ज की गई"], correctAnswer: "लोगों ने घरों में एयर कंडीशनर और कूलर का उपयोग बढ़ा दिया", explanation: "अत्यधिक गर्मी से बचने के लिए कूलर और एसी का उपयोग बढ़ जाता है।"),
@@ -185,6 +191,7 @@ struct HindiHardExercisesData {
         instructions: "दिए गए परिदृश्य में तार्किक रूप से असंभव बात को पहचानें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "रमेश ने बिना आग जलाए, ठंडे बर्तन में चायपत्ती और ठंडा दूध डालकर चाय उबाली।", options: ["बिना गर्मी या आग के कोई भी तरल उबल नहीं सकता", "चाय में ठंडा दूध नहीं डाला जाता", "बर्तन में चायपत्ती डालना मना है", "चाय बनाने के लिए चीनी आवश्यक है"], correctAnswer: "बिना गर्मी या आग के कोई भी तरल उबल नहीं सकता", explanation: "तरल पदार्थों को उबालने के लिए ऊष्मा (गर्मी) की आवश्यकता होती है; ठंडे बर्तन में उबालना असंभव है।"),
@@ -211,6 +218,7 @@ struct HindiHardExercisesData {
         instructions: "दिए गए विकल्पों में से सही शब्द चुनकर कहावत को पूरा करें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "कहावत पूरी करें: अब पछताए होत क्या जब चिड़िया चुग गई ___।", options: ["खेत", "दाना", "फसल", "बाग"], correctAnswer: "खेत", explanation: "कहावत है 'अब पछताए होत क्या जब चिड़िया चुग गई खेत', अर्थात समय निकल जाने के बाद पछताना बेकार है।"),
@@ -237,6 +245,7 @@ struct HindiHardExercisesData {
         instructions: "वाक्यों को पूरा करने के लिए सही समरूपी शब्द युग्म चुनें।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[दिन / दीन] सूरज उगने से नया ___ शुरू हुआ। हमें ___ लोगों की मदद करनी चाहिए।", options: ["दिन...दीन", "दीन...दिन", "दिन...दिन", "दीन...दीन"], correctAnswer: "दिन...दीन", explanation: "'दिन' का अर्थ दिवस है; 'दीन' का अर्थ गरीब या असहाय है।"),
@@ -263,6 +272,7 @@ struct HindiHardExercisesData {
         instructions: "उस शब्द को चुनें जो समरूपता को सबसे सही तरीके से पूरा करता है।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ऊपर का संबंध नीचे से है तो गर्म का संबंध किससे होगा?", options: ["ठंडा", "गुनगुना", "उबलता", "गीला"], correctAnswer: "ठंडा", explanation: "ऊपर और नीचे एक-दूसरे के विपरीत हैं, ठीक वैसे ही जैसे गर्म और ठंडा।"),
@@ -289,6 +299,7 @@ struct HindiHardExercisesData {
         instructions: "उस विकल्प को चुनें जो सबसे तार्किक कारण या प्रभाव को दर्शाता है।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "कारण: आप कंक्रीट के फर्श पर कांच का एक गिलास गिरा देते हैं।", options: ["कांच टूट जाता है", "कांच तैरने लगता है", "कांच मुलायम हो जाता है", "कांच नीला हो जाता है"], correctAnswer: "कांच टूट जाता है", explanation: "कठोर फर्श पर नाजुक कांच गिरने से वह चकनाचूर या टूट जाता है।"),
@@ -315,6 +326,7 @@ struct HindiHardExercisesData {
         instructions: "दिए गए कथन में तार्किक गलती या असंभव बात की पहचान करें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "असंगति: राहुल ने मोज़े पहनने से पहले अपने जूते पहन लिए।", options: ["मोज़े हमेशा जूतों से पहले पहने जाते हैं", "जूते हाथों में पहने जाने चाहिए", "मोज़े सिर पर पहने जाते हैं", "जूते खाने के लिए होते हैं"], correctAnswer: "मोज़े हमेशा जूतों से पहले पहने जाते हैं", explanation: "मोज़े जूतों के अंदर पहने जाते हैं, इसलिए उन्हें पहले पहनना आवश्यक है।"),
@@ -341,6 +353,7 @@ struct HindiHardExercisesData {
         instructions: "गतिविधि के चरणों को सही तार्किक क्रम में व्यवस्थित करें।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "टोस्ट बनाना", options: ["टोस्टर में ब्रेड का टुकड़ा डालें", "सेंकने के लिए लीवर को नीचे दबाएं", "टोस्ट के ऊपर आने का इंतजार करें", "टोस्ट पर मक्खन लगाएं"], correctAnswer: "टोस्टर में ब्रेड का टुकड़ा डालें | सेंकने के लिए लीवर को नीचे दबाएं | टोस्ट के ऊपर आने का इंतजार करें | टोस्ट पर मक्खन लगाएं", explanation: "ब्रेड को टोस्टर में डाला जाता है, फिर गरम किया जाता है, बाहर आने पर मक्खन लगाया जाता है।"),
@@ -357,6 +370,7 @@ struct HindiHardExercisesData {
         instructions: "उस शब्द को चुनें जो दिए गए मुख्य शब्द से सबसे निकटता से संबंधित है।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "पुस्तकालय", options: ["शांति", "शोर", "भीड़", "खेल"], correctAnswer: "शांति", explanation: "पुस्तकालय अध्ययन का स्थान है, जहां शांत वातावरण होना आवश्यक है।"),
@@ -383,6 +397,7 @@ struct HindiHardExercisesData {
         instructions: "वाक्यों को पूरा करने के लिए सही समरूपी शब्द युग्म का चयन करें।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[गृह / ग्रह] हमारा ___ बहुत सुंदर और हरा-भरा है। सौरमंडल का सबसे बड़ा ___ बृहस्पति है।", options: ["गृह...ग्रह", "ग्रह...गृह", "गृह...गृह", "ग्रह...ग्रह"], correctAnswer: "गृह...ग्रह", explanation: "'गृह' का अर्थ घर है, जबकि 'ग्रह' खगोलीय पिंड (प्लैनेट) को कहते हैं।"),
@@ -400,6 +415,7 @@ struct HindiHardExercisesData {
         instructions: "उस शब्द को चुनें जो कहावत को सबसे सही तरीके से पूरा करता है।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "अंत भला तो सब ___", options: ["भला", "बुरा", "नया", "सच्चा"], correctAnswer: "भला", explanation: "कहावत है: 'अंत भला तो सब भला', यानी परिणाम अच्छा हो तो सब ठीक माना जाता है।"),
@@ -426,6 +442,7 @@ struct HindiHardExercisesData {
         instructions: "उस शब्द को चुनें जो कहावत को सबसे सही तरीके से पूरा करता है।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "अधजल गगरी छलकत ___", options: ["जाए", "आए", "गिराए", "बहाए"], correctAnswer: "जाए", explanation: "कम ज्ञान होने पर बहुत अधिक दिखावा करना।"),

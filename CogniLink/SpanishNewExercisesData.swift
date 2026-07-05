@@ -26,6 +26,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige la palabra que rima con la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "¿Qué palabra rima con GATO?", options: ["Perro", "Pato", "Sol", "Árbol"], correctAnswer: "Pato", explanation: "Gato y Pato comparten el mismo sonido final."),
@@ -57,6 +58,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige la palabra más estrechamente asociada con la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "DOCTOR", options: ["Hospital", "Aeropuerto", "Biblioteca", "Granja"], correctAnswer: "Hospital", explanation: "Los doctores trabajan en hospitales para cuidar a los pacientes."),
@@ -88,6 +90,7 @@ struct SpanishNewExercisesData {
         instructions: "Completa el refrán o expresión popular conocida.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Más vale pájaro en mano que ciento ___.", options: ["volando", "corriendo", "cantando", "durmiendo"], correctAnswer: "volando", explanation: "El refrán significa que es mejor asegurar lo que se tiene que buscar cosas inciertas."),
@@ -119,6 +122,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige la palabra correcta para completar la palabra compuesta.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "SACA + ___", options: ["Puntas", "Lápiz", "Hoja", "Mesa"], correctAnswer: "Puntas", explanation: "Saca + Puntas = Sacapuntas."),
@@ -150,6 +154,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige el prefijo o sufijo correcto para completar la palabra.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "¿Qué prefijo significa 'no' en la palabra INFELIZ?", options: ["in-", "re-", "pre-", "des-"], correctAnswer: "in-", explanation: "El prefijo 'in-' aporta valor negativo o de privación."),
@@ -181,6 +186,7 @@ struct SpanishNewExercisesData {
         instructions: "Lee la historia corta y luego responde a la pregunta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "¿Qué dejó María en casa?", options: ["Su billetera", "Sus llaves", "Su lista de compras", "Su teléfono"], correctAnswer: "Su billetera", explanation: "La historia menciona que olvidó su billetera en la cocina.", passage: "María fue a la tienda a comprar leche y pan. Olvidó su billetera en el mostrador de la cocina."),
@@ -207,6 +213,7 @@ struct SpanishNewExercisesData {
         instructions: "¿Qué número sigue en la secuencia?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "La secuencia aumenta sumando 2 cada vez."),
@@ -238,6 +245,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige el resultado más probable de la situación descrita.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Dejas un helado en el mostrador de la cocina por dos horas en un día caluroso. ¿Qué pasa?", options: ["Se pone más duro", "Se derrite", "Cambia de color", "Desaparece"], correctAnswer: "Se derrite", explanation: "El calor hace que el helado congelado pase a estado líquido."),
@@ -264,6 +272,7 @@ struct SpanishNewExercisesData {
         instructions: "Lee la situación y elige la emoción que la persona probablemente siente.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Sara acaba de enterarse de que ganó el primer lugar en una competencia. ¿Cómo se siente?", options: ["Triste", "Enojada", "Feliz", "Asustada"], correctAnswer: "Feliz", explanation: "Ganar una competencia genera alegría y felicidad."),
@@ -295,6 +304,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige qué está mal o es imposible en la oración descrita.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Juan desayunó a la medianoche antes de irse a dormir.", options: ["La gente no come comida", "El desayuno es una comida de la mañana, no de la medianoche", "Juan no debería dormir", "La medianoche es por la tarde"], correctAnswer: "El desayuno es una comida de la mañana, no de la medianoche", explanation: "Por definición, el desayuno es la primera comida del día que se toma por la mañana."),
@@ -321,6 +331,7 @@ struct SpanishNewExercisesData {
         instructions: "Lee la información de la receta médica y responde la pregunta.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Etiqueta: Tome 1 tableta dos veces al día con alimentos. ¿Cuántas tabletas debe tomar en total cada día?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "Tomar una tableta dos veces al día equivale a 1 + 1 = 2 tabletas."),
@@ -347,6 +358,7 @@ struct SpanishNewExercisesData {
         instructions: "Usa la información del menú para responder la pregunta.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Menú: Hamburguesa con queso $8.00, Papas fritas $3.00, Refresco $2.00. ¿Cuánto cuesta la hamburguesa con queso?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "El menú señala que la hamburguesa con queso cuesta $8.00."),
@@ -373,6 +385,7 @@ struct SpanishNewExercisesData {
         instructions: "Lee la información de la factura y responde la pregunta.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Factura de electricidad: Total a pagar: $45.00. Fecha de vencimiento: 15 de julio. ¿Cuál es la cantidad que debes pagar?", options: ["$15.00", "$45.00", "15 de julio", "Gratis"], correctAnswer: "$45.00", explanation: "La factura indica que el total a pagar es de $45.00."),
@@ -399,6 +412,7 @@ struct SpanishNewExercisesData {
         instructions: "Elige la mejor respuesta a la situación descrita.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Hueles a humo en la cocina pero no ves fuego. ¿Qué deberías hacer primero?", options: ["Ignorarlo", "Abrir las ventanas y revisar la estufa", "Llamar a un amigo para charlar", "Volverte a dormir"], correctAnswer: "Abrir las ventanas y revisar la estufa", explanation: "Revisar la cocina permite identificar rápidamente si hay algo quemándose sin peligro."),

@@ -26,6 +26,7 @@ struct HindiNewExercisesData {
         instructions: "दिए गए शब्द के साथ तुकबंदी करने वाला (समान ध्वनि वाला) शब्द चुनें।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "कौन सा शब्द 'राजा' के साथ तुकबंदी करता है?", options: ["कुत्ता", "बाजा", "सूरज", "पेड़"], correctAnswer: "बाजा", explanation: "राजा और बाजा की अंत ध्वनि समान है।"),
@@ -57,6 +58,7 @@ struct HindiNewExercisesData {
         instructions: "दिए गए शब्द के साथ सबसे निकटता से जुड़े शब्द को चुनें।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "डॉक्टर", options: ["अस्पताल", "हवाई अड्डा", "पुस्तकालय", "खेत"], correctAnswer: "अस्पताल", explanation: "डॉक्टर मरीजों की देखभाल के लिए अस्पताल में काम करते हैं।"),
@@ -88,6 +90,7 @@ struct HindiNewExercisesData {
         instructions: "प्रसिद्ध हिंदी कहावत या मुहावरे को पूरा करें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "अधजल गगरी ___ जाये।", options: ["छलकत", "भरत", "गिरत", "बहत"], correctAnswer: "छलकत", explanation: "कहावत है: 'अधजल गगरी छलकत जाये', यानी कम ज्ञान वाला अधिक दिखावा करता है।"),
@@ -119,6 +122,7 @@ struct HindiNewExercisesData {
         instructions: "संयुक्त शब्द को पूरा करने के लिए सही शब्द चुनें।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "रसोई + ___", options: ["घर", "शाला", "कक्ष", "स्थान"], correctAnswer: "घर", explanation: "रसोई + घर = रसोईघर (खाना बनाने की जगह)।"),
@@ -150,6 +154,7 @@ struct HindiNewExercisesData {
         instructions: "सही उपसर्ग या प्रत्यय की पहचान करें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "'अनपढ़' शब्द में उपसर्ग (prefix) क्या है?", options: ["अन", "पढ़", "अ", "न"], correctAnswer: "अन", explanation: "'अनपढ़' में 'अन' उपसर्ग है जो नकारात्मक अर्थ देता है।"),
@@ -181,6 +186,7 @@ struct HindiNewExercisesData {
         instructions: "छोटी कहानी पढ़ें और फिर उसके बारे में पूछे गए प्रश्न का उत्तर दें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "मारिया घर पर क्या छोड़ गई थी?", options: ["अपना बटुआ", "अपनी चाबियां", "अपनी खरीदारी की सूची", "अपना फोन"], correctAnswer: "अपना बटुआ", explanation: "कहानी में लिखा है कि वह अपना बटुआ रसोई के काउंटर पर भूल गई।", passage: "मारिया दूध और ब्रेड खरीदने किराना दुकान गई। वह अपना बटुआ रसोई के काउंटर पर भूल गई।"),
@@ -207,6 +213,7 @@ struct HindiNewExercisesData {
         instructions: "अनुक्रम में अगली संख्या कौन सी आएगी?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "अनुक्रम प्रत्येक बार 2 जोड़कर बढ़ता है।"),
@@ -238,6 +245,7 @@ struct HindiNewExercisesData {
         instructions: "वर्णित स्थिति का सबसे संभावित परिणाम चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "आप गर्म दिन में रसोई के काउंटर पर दो घंटे के लिए आइसक्रीम छोड़ देते हैं। क्या होगा?", options: ["यह और कठोर हो जाएगी", "यह पिघल जाएगी", "इसका रंग बदल जाएगा", "यह गायब हो जाएगी"], correctAnswer: "यह पिघल जाएगी", explanation: "गर्मी के कारण जमी हुई आइसक्रीम पिघल जाती है।"),
@@ -264,6 +272,7 @@ struct HindiNewExercisesData {
         instructions: "स्थिति पढ़ें और उस भावना को चुनें जिसे व्यक्ति महसूस कर रहा है।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "सारा को पता चला कि उसने प्रतियोगिता में प्रथम स्थान प्राप्त किया है। वह कैसा महसूस करती है?", options: ["उदास", "नाराज़", "खुश", "डरी हुई"], correctAnswer: "खुश", explanation: "प्रतियोगिता जीतना एक खुशी का क्षण होता है।"),
@@ -295,6 +304,7 @@ struct HindiNewExercisesData {
         instructions: "चुनें कि वाक्य में क्या गलत या असंभव है।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "जॉन ने सोने जाने से पहले आधी रात को नाश्ता (ब्रेकफास्ट) किया।", options: ["लोग खाना नहीं खाते हैं", "नाश्ता सुबह का भोजन है, आधी रात का नहीं", "जॉन को सोना नहीं चाहिए", "आधी रात दोपहर में होती है"], correctAnswer: "नाश्ता सुबह का भोजन है, आधी रात का नहीं", explanation: "नाश्ता या ब्रेकफास्ट दिन का पहला भोजन होता है जो सुबह खाया जाता है।"),
@@ -321,6 +331,7 @@ struct HindiNewExercisesData {
         instructions: "दिए गए पर्चे की जानकारी पढ़ें और प्रश्न का उत्तर दें।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "लेबल: भोजन के साथ प्रतिदिन दो बार 1 गोली लें। आपको हर दिन कुल कितनी गोलियाँ लेनी चाहिए?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "दिन में दो बार 1 गोली लेने का मतलब है 1 + 1 = 2 गोलियाँ।"),
@@ -347,6 +358,7 @@ struct HindiNewExercisesData {
         instructions: "मेन्यू की जानकारी का उपयोग करके प्रश्न का उत्तर दें।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "मेन्यू: चीज़बर्गर $8.00, फ़्रेंच फ़्राइज़ $3.00, सोडा $2.00। चीज़बर्गर की कीमत कितनी है?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "मेन्यू में चीज़बर्गर की कीमत $8.00 दी गई है।"),
@@ -373,6 +385,7 @@ struct HindiNewExercisesData {
         instructions: "बिल की जानकारी पढ़ें और प्रश्न का उत्तर दें।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "बिजली बिल: कुल देय राशि: $45.00। देय तिथि: 15 जुलाई। आपको कितनी राशि का भुगतान करना है?", options: ["$15.00", "$45.00", "15 जुलाई", "मुफ़्त"], correctAnswer: "$45.00", explanation: "कुल देय राशि $45.00 है।"),
@@ -399,6 +412,7 @@ struct HindiNewExercisesData {
         instructions: "वर्णित स्थिति के लिए सबसे अच्छा विकल्प चुनें।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "आपको अपनी रसोई में धुएं की गंध आती है लेकिन कोई आग नहीं दिखती। आपको सबसे पहले क्या करना चाहिए?", options: ["इसे अनदेखा करें", "खिड़कियां खोलें और चूल्हे की जांच करें", "बात करने के लिए किसी मित्र को कॉल करें", "वापस सो जाएं"], correctAnswer: "खिड़कियां खोलें और चूल्हे की जांच करें", explanation: "धुएं के स्रोत की जांच करना और खिड़की खोलना सुरक्षा का पहला कदम है।"),

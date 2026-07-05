@@ -27,6 +27,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "बाल काटने और संवारने वाले को क्या कहते हैं?", options: ["नाई या हेयरस्टाइलिस्ट", "प्लंबर", "इलेक्ट्रीशियन", "ऑप्टोमेट्रिस्ट"], correctAnswer: "नाई या हेयरस्टाइलिस्ट"),
@@ -59,6 +60,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "इनडोर में तैरने के लिए कहाँ जाते हैं?", options: ["जिम", "पार्क", "तरणताल या स्विमिंग पूल", "झील"], correctAnswer: "तरणताल या स्विमिंग पूल"),
@@ -91,6 +93,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "रोमियो और जूलियट किसने लिखा?", options: ["चार्ल्स डिकेंस", "विलियम शेक्सपियर", "जेन ऑस्टेन", "रवींद्रनाथ टैगोर"], correctAnswer: "विलियम शेक्सपियर"),
@@ -118,6 +121,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "अमेरिकी स्वतंत्रता दिवस कब मनाया जाता है?", options: ["4 जून", "4 जुलाई", "4 अगस्त", "4 सितंबर"], correctAnswer: "4 जुलाई"),
@@ -145,6 +149,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "खाने से पहले हाथ क्यों धोते हैं?", options: ["हाथ गर्म करने के लिए", "कीटाणु हटाने और बीमारी से बचाने के लिए", "शिष्टाचार के लिए", "त्वचा को मुलायम बनाने के लिए"], correctAnswer: "कीटाणु हटाने और बीमारी से बचाने के लिए"),
@@ -172,6 +177,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक प्रश्न का सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "एक सप्ताह में कितने दिन होते हैं?", options: ["5", "6", "7", "8"], correctAnswer: "7"),
@@ -204,6 +210,7 @@ struct HindiCognitionExerciseData {
         instructions: "हाँ या नहीं में जवाब दें।",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "क्या सूर्य एक तारा है?", options: ["Yes", "No"], correctAnswer: "Yes"),
@@ -236,6 +243,7 @@ struct HindiCognitionExerciseData {
         instructions: "सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "अमेरिका के पहले राष्ट्रपति कौन थे?", options: ["जॉन एडम्स", "जॉर्ज वाशिंगटन", "थॉमस जेफरसन", "बेंजामिन फ्रैंकलिन"], correctAnswer: "जॉर्ज वाशिंगटन"),
@@ -263,6 +271,7 @@ struct HindiCognitionExerciseData {
         instructions: "सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "अमेरिका के उत्तर में कौन सा देश है?", options: ["मेक्सिको", "रूस", "कनाडा", "ग्रीनलैंड"], correctAnswer: "कनाडा"),
@@ -295,6 +304,7 @@ struct HindiCognitionExerciseData {
         instructions: "सही उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "रॉस, रेचल, मोनिका, चैंडलर, जोई और फोबे किस टीवी शो के पात्र हैं?", options: ["सेनफेल्ड", "फ्रेंड्स", "द ऑफिस", "चीयर्स"], correctAnswer: "फ्रेंड्स"),
@@ -322,6 +332,7 @@ struct HindiCognitionExerciseData {
         instructions: "मुहावरे का अर्थ अपने शब्दों में बताएं।",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "अपना उल्लू सीधा करना", options: [], correctAnswer: "अपना स्वार्थ सिद्ध करना — केवल अपने फायदे के लिए काम करना"),
@@ -349,6 +360,7 @@ struct HindiCognitionExerciseData {
         instructions: "सबसे सही और उचित उत्तर चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "नरम उबले अंडे में कितना समय लगता है?", options: ["1 मिनट", "6 मिनट", "20 मिनट", "1 घंटा"], correctAnswer: "6 मिनट"),
@@ -379,6 +391,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक स्थिति पढ़ें और सबसे उचित निष्कर्ष चुनें।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "कोई व्यक्ति स्विमसूट और धूप का चश्मा पहने है। वह शायद क्या करने जा रहा है?", options: ["सिनेमा", "समुद्र तट या तरणताल", "शादी में", "किराने का सामान लेने"], correctAnswer: "समुद्र तट या तरणताल"),
@@ -406,6 +419,7 @@ struct HindiCognitionExerciseData {
         instructions: "ये प्रश्न खुले हैं। कोई सही या गलत उत्तर नहीं है। अपनी यादें साझा करें।",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "आप किस गली या मोहल्ले में पले-बढ़े?", options: [], correctAnswer: ""),
@@ -438,6 +452,7 @@ struct HindiCognitionExerciseData {
         instructions: "प्रत्येक श्रेणी में जितने आइटम याद हों उन्हें बताएं। फिर पूरी सूची देखें।",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "हिंदी वर्णमाला के स्वर बताएं", options: [], correctAnswer: "अ, आ, इ, ई, उ, ऊ, ए, ऐ, ओ, औ"),

@@ -12,6 +12,34 @@ enum Difficulty: String, CaseIterable, Hashable {
     case hard
 }
 
+/// The 8 exercise categories tracked by AdaptiveDifficultyStore for
+/// per-category difficulty progression. Set explicitly at authoring time
+/// on every Exercise literal — never inferred from title text or ExerciseType.
+enum TrackedExerciseType: String, CaseIterable, Hashable {
+    case homonym
+    case analogyChoice
+    case wordAssociation
+    case sentenceCompletion
+    case sequencing
+    case causeAndEffect
+    case whatsWrongHere
+    case completeTheSaying
+
+    /// Caregiver-facing label for the Therapy Settings manual override list.
+    var displayName: String {
+        switch self {
+        case .homonym: return "Homonyms"
+        case .analogyChoice: return "Analogies"
+        case .wordAssociation: return "Word Association"
+        case .sentenceCompletion: return "Sentence Completion"
+        case .sequencing: return "Sequencing"
+        case .causeAndEffect: return "Cause and Effect"
+        case .whatsWrongHere: return "What's Wrong Here?"
+        case .completeTheSaying: return "Complete the Saying"
+        }
+    }
+}
+
 enum ExerciseType: CaseIterable, Hashable {
     case categoryCrossOut      // Tap the word that does not belong
     case multipleChoice        // Standard question with 4 options
@@ -51,17 +79,19 @@ struct Exercise: Identifiable, Hashable {
     let instructions: String
     let section: AppSection
     let type: ExerciseType
+    let trackedType: TrackedExerciseType?
     let difficulty: Difficulty
     let items: [ExerciseItem]
-    
+
     let sessionSize = 5
 
-    init(id: UUID = UUID(), title: String, instructions: String, section: AppSection, type: ExerciseType, difficulty: Difficulty, items: [ExerciseItem]) {
+    init(id: UUID = UUID(), title: String, instructions: String, section: AppSection, type: ExerciseType, trackedType: TrackedExerciseType? = nil, difficulty: Difficulty, items: [ExerciseItem]) {
         self.id = id
         self.title = title
         self.instructions = instructions
         self.section = section
         self.type = type
+        self.trackedType = trackedType
         self.difficulty = difficulty
         self.items = items
     }

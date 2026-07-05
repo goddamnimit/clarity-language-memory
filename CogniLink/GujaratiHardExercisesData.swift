@@ -29,6 +29,7 @@ struct GujaratiHardExercisesData {
         instructions: "વાક્યો પૂર્ણ કરવા માટે યોગ્ય સમરૂપી શબ્દ જોડી પસંદ કરો.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[દિન / દીન] સૂર્યોદય સાથે નવો ___ શરૂ થયો. આપણે ___ લોકોની મદદ કરવી જોઈએ.", options: ["દિન...દીન", "દીન...દિન", "દિન...દિન", "દીન...દીન"], correctAnswer: "દિન...દીન", explanation: "'દિન' એટલે દિવસ; 'દીન' એટલે ગરીબ કે રાંક."),
@@ -55,6 +56,7 @@ struct GujaratiHardExercisesData {
         instructions: "આપેલ સમાનતાને પૂર્ણ કરવા માટે યોગ્ય શબ્દ પસંદ કરો.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "સફેદનો સંબંધ શાંતિ સાથે છે, તો લાલનો સંબંધ કોની સાથે છે?", options: ["ક્રોધ", "ઠંડક", "શાંતિ", "ભય"], correctAnswer: "ક્રોધ", explanation: "સફેદ શાંતિનું પ્રતીક છે અને લાલ રંગ ક્રોધ કે વીરતાનું પ્રતીક છે."),
@@ -81,6 +83,7 @@ struct GujaratiHardExercisesData {
         instructions: "આપેલ શબ્દ સાથે સૌથી નજીકથી સંકળાયેલ શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "પરોપકાર", options: ["દાન", "લોભ", "ક્રોધ", "ઈર્ષ્યા"], correctAnswer: "દાન", explanation: "પરોપકાર એટલે બીજાની ભલાઈ કરવી, જે દાન અને દયા સાથે સંકળાયેલ છે."),
@@ -107,6 +110,7 @@ struct GujaratiHardExercisesData {
         instructions: "વાક્ય પૂર્ણ કરવા માટે સૌથી યોગ્ય શબ્દ પસંદ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "અતિશય વરસાદને કારણે નદીઓનું જળસ્તર ___ ગયું અને પૂર આવ્યું.", options: ["વધી", "ઘટી", "સુકાઈ", "સ્થિર"], correctAnswer: "વધી", explanation: "વરસાદથી નદીઓમાં પાણી વધે છે અને પૂરની સ્થિતિ સર્જાય છે."),
@@ -133,6 +137,7 @@ struct GujaratiHardExercisesData {
         instructions: "પગલાંઓને યોગ્ય અને તાર્કિક ક્રમમાં ગોઠવો.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ચા બનાવવી", options: ["ચા ગાળીને કપમાં રેડો", "દૂધ અને ચાની પત્તી ઉમેરો", "વાસણમાં પાણી ગરમ કરવા મૂકી આદુ-ઈલાયચી વાટીને નાખો", "ઉકાળો આવ્યા પછી ખાંડ નાખો"], correctAnswer: "વાસણમાં પાણી ગરમ કરવા મૂકી આદુ-ઈલાયચી વાટીને નાખો | દૂધ અને ચાની પત્તી ઉમેરો | ઉકાળો આવ્યા પછી ખાંડ નાખો | ચા ગાળીને કપમાં રેડો", explanation: "પહેલા પાણી ગરમ કરી મસાલા નાખો, પછી દૂધ-ચા નાખો, ખાંડ ઉમેરો અને ગાળી લો."),
@@ -159,6 +164,7 @@ struct GujaratiHardExercisesData {
         instructions: "દરેક સંદર્ભમાં સૌથી તાર્કિક કારણ અથવા અસર પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "કારણ: ઉનાળામાં તાપમાન 45 ડિગ્રીથી ઉપર પહોંચી ગયું.", options: ["લોકોએ ઘરોમાં એર કંડિશનર અને કૂલરનો વપરાશ વધાર્યો", "રસ્તાઓ પર ટ્રાફિક ખૂબ વધી ગયો", "ગરમ કપડાંની બજારમાં ભારે માંગ ઊભી થઈ", "વીજળીના વપરાશમાં ભારે ઘટાડો થયો"], correctAnswer: "લોકોએ ઘરોમાં એર કંડિશનર અને કૂલરનો વપરાશ વધાર્યો", explanation: "અતિશય ગરમીથી બચવા માટે ઘરમાં એસી અને કૂલર ચાલુ કરવા પડે છે જેથી વીજ વપરાશ વધે છે."),
@@ -185,6 +191,7 @@ struct GujaratiHardExercisesData {
         instructions: "આપેલ વાક્યમાં શું અશક્ય કે વિરોધાભાસી છે તે શોધો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "મહેશે ગેસ સળગાવ્યા વિના, બરફ જેવા ઠંડા વાસણમાં દૂધ અને ચા ઉકાળી લીધી.", options: ["અગ્નિ કે ગરમી વગર કોઈ પ્રવાહી ઉકાળી શકાય નહીં", "ચામાં દૂધ ઠંડુ નાખી ન શકાય", "વાસણમાં ચાપત્તી નાખવી ભૂલ ભરેલી છે", "ચા બનાવવા માટે ખાંડ ખૂબ જરૂરી છે"], correctAnswer: "અગ્નિ કે ગરમી વગર કોઈ પ્રવાહી ઉકાળી શકાય નહીં", explanation: "ઉકાળવા માટે ગરમી જોઈશે; ગરમ કર્યા વિના ઉકાળવું અશક્ય છે."),
@@ -211,6 +218,7 @@ struct GujaratiHardExercisesData {
         instructions: "યોગ્ય વિકલ્પ પસંદ કરીને કહેવત પૂર્ણ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "કહેવત પૂર્ણ કરો: પાણી પહેલાં ___ બાંધવી.", options: ["પાળ", "નદી", "દિવાલ", "પુલ"], correctAnswer: "પાળ", explanation: "કહેવત છે 'પાણી પહેલાં પાળ બાંધવી', એટલે કે મુશ્કેલી આવે તે પહેલાં અગમચેતી રાખવી."),
@@ -237,6 +245,7 @@ struct GujaratiHardExercisesData {
         instructions: "વાક્યો પૂર્ણ કરવા માટે યોગ્ય હોમોફોન જોડી પસંદ કરો.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[દિન / દીન] સૂર્ય ઉગવાથી નવો ___ શરૂ થયો. આપણે ___ ગરીબોની મદદ કરવી જોઈએ.", options: ["દિન...દીન", "દીન...દિન", "દિન...દિન", "દીન...દીન"], correctAnswer: "દિન...દીન", explanation: "'દિન' એટલે દિવસ; 'દીન' એટલે ગરીબ કે લાચાર."),
@@ -263,6 +272,7 @@ struct GujaratiHardExercisesData {
         instructions: "શબ્દ પસંદ કરો જે સમાનતાને શ્રેષ્ઠ રીતે પૂર્ણ કરે છે.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ઉપર નો સંબંધ નીચે સાથે છે, તો ગરમ નો સંબંધ શાની સાથે હશે?", options: ["ઠંડું", "હૂંફાળું", "ઊકળતું", "ભીનું"], correctAnswer: "ઠંડું", explanation: "ઉપર અને નીચે વિરોધી શબ્દો છે, તેવી જ રીતે ગરમ અને ઠંડું વિરોધી છે."),
@@ -289,6 +299,7 @@ struct GujaratiHardExercisesData {
         instructions: "સૌથી તાર્કિક કારણ અથવા અસર રજૂ કરતો વિકલ્પ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "કારણ: કાચનો પ્યાલો કોંક્રિટના ભોંયતળિયે પડે છે.", options: ["કાચ તૂટી જાય છે", "કાચ તરવા લાગે છે", "કાચ નરમ બને છે", "કાચ વાદળી થાય છે"], correctAnswer: "કાચ તૂટી જાય છે", explanation: "નક્કર સપાટી પર નાજુક કાચ પડવાથી તે તૂટી જાય છે."),
@@ -314,6 +325,7 @@ struct GujaratiHardExercisesData {
         instructions: "કથનમાં રહેલી તાર્કિક ભૂલ અથવા અશક્ય બાબત શોધો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "અસંગતતા: રમેશે મોજાં પહેરતા પહેલાં તેના જૂતાં પહેરી લીધાં.", options: ["મોજાં હંમેશા જૂતાં પહેલાં પહેરાય છે", "જૂતાં હાથમાં પહેરવા જોઈએ", "મોજાં માથા પર પહેરાય છે", "જૂતાં ખાવાની વસ્તુ છે"], correctAnswer: "મોજાં હંમેશા જૂતાં પહેલાં પહેરાય છે", explanation: "પગના રક્ષણ માટે મોજાં અંદર અને જૂતાં બહાર પહેરાય છે."),
@@ -340,6 +352,7 @@ struct GujaratiHardExercisesData {
         instructions: "પ્રક્રિયાના પગલાંને યોગ્ય તાર્કિક ક્રમમાં ગોઠવો.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "બ્રેડ ટોસ્ટ કરવી", options: ["ટોસ્ટરમાં બ્રેડનો ટુકડો મૂકો", "શેકવા માટે લીવર નીચે દબાવો", "ટોસ્ટ બહાર આવે ત્યાં સુધી રાહ જુઓ", "ટોસ્ટ પર માખણ લગાવો"], correctAnswer: "ટોસ્ટરમાં બ્રેડનો ટુકડો મૂકો | શેકવા માટે લીવર નીચે દબાવો | ટોસ્ટ બહાર આવે ત્યાં સુધી રાહ જુઓ | ટોસ્ટ પર માખણ લગાવો", explanation: "સૌપ્રથમ બ્રેડ અંદર મુકાય, મશીન ચાલુ કરાય, ટોસ્ટ બહાર આવે પછી માખણ લગાવાય છે."),
@@ -356,6 +369,7 @@ struct GujaratiHardExercisesData {
         instructions: "મુખ્ય શબ્દ સાથે સૌથી વધુ સંબંધિત શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "પુસ્તકાલય", options: ["શાંતિ", "ઘોંઘાટ", "ટોળું", "રમત"], correctAnswer: "શાંતિ", explanation: "પુસ્તકાલય વાંચન માટેનું સ્થળ હોવાથી ત્યાં શાંતિ અનિવાર્ય છે."),
@@ -382,6 +396,7 @@ struct GujaratiHardExercisesData {
         instructions: "વાક્યો પૂર્ણ કરવા માટે સાચો શબ્દ પસંદ કરો.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[દિન / દીન] આજે રવિવારનો ___ ખૂબ સરસ હતો. ગરીબ અને ___ લોકો પ્રત્યે દયા રાખવી જોઈએ.", options: ["દિન...દીન", "દીન...દિન", "દિન...દિન", "દીન...દીન"], correctAnswer: "દિન...દીન", explanation: "'દિન' એટલે દિવસ, જ્યારે 'દીન' એટલે ગરીબ કે રાંક."),
@@ -398,6 +413,7 @@ struct GujaratiHardExercisesData {
         instructions: "કહેવતને યોગ્ય રીતે પૂર્ણ કરતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ઝાઝા હાથ ___", options: ["રળિયામણા", "ભારે", "દુઃખી", "લાંબા"], correctAnswer: "રળિયામણા", explanation: "સંપ અને સહકારથી કામ કરવાથી મુશ્કેલ કાર્ય પણ સરળ બને છે."),
@@ -424,6 +440,7 @@ struct GujaratiHardExercisesData {
         instructions: "કહેવતને યોગ્ય રીતે પૂર્ણ કરતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ચિંતા ચિતા સમાન ___", options: ["છે", "નથી", "ગણાય", "લાગે"], correctAnswer: "છે", explanation: "અતિશય ચિંતા કરવી એ ચિતા પર સૂવા બરાબર છે, જે શરીરનો નાશ કરે છે."),

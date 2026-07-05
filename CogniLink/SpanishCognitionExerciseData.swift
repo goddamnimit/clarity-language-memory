@@ -26,6 +26,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Responde cada pregunta eligiendo la opción correcta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -178,6 +179,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta correcta para el lugar o ubicación de cada pregunta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -330,6 +332,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Identifica a la persona o profesional descrito.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -447,6 +450,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la fecha, día o estación correcta para cada pregunta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -564,6 +568,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la explicación más lógica para cada pregunta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -681,6 +686,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta de medida o número correcta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -833,6 +839,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Toca SÍ o NO.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1300,6 +1307,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta correcta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1382,6 +1390,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta correcta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1464,6 +1473,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta correcta.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1546,6 +1556,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Explica lo que significa cada expresión popular. Toca 'Ver Respuesta' para ver la explicación modelo.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1628,6 +1639,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Elige la respuesta más lógica o razonable.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1696,6 +1708,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Lee el escenario clínico y elige la conclusión más lógica.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1750,6 +1763,7 @@ struct SpanishCognitionExerciseData {
         instructions: "Estas preguntas están diseñadas para estimular la memoria personal a largo plazo. No hay respuestas incorrectas. Tómate tu tiempo.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

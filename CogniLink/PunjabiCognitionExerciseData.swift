@@ -19,6 +19,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ ਫਿਰ ਇਸ ਬਾਰੇ ਸਵਾਲ ਦਾ ਜਵਾਬ ਦਿਓ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਹਰਪ੍ਰੀਤ ਨੇ ਘਰ ਕੀ ਛੱਡਿਆ?", options: ["ਉਸਦਾ ਬਟੂਆ", "ਉਸ ਦੀਆਂ ਚਾਬੀਆਂ", "ਉਸਦੀ ਖਰੀਦਦਾਰੀ ਸੂਚੀ", "ਉਸਦਾ ਫ਼ੋਨ"], correctAnswer: "ਉਸਦਾ ਬਟੂਆ", explanation: "ਕਹਾਣੀ ਦੱਸਦੀ ਹੈ ਕਿ ਉਹ ਰਸੋਈ ਦੇ ਕਾਊਂਟਰ ‘ਤੇ ਆਪਣਾ ਬਟੂਆ ਭੁੱਲ ਗਈ ਸੀ।", passage: "ਹਰਪ੍ਰੀਤ ਦੁੱਧ ਅਤੇ ਬਰੈੱਡ ਖਰੀਦਣ ਲਈ ਜਨਤਾ ਸਟੋਰ ਗਿਆ। ਉਹ ਰਸੋਈ ਦੇ ਕਾਊਂਟਰ ‘ਤੇ ਆਪਣਾ ਬਟੂਆ ਭੁੱਲ ਗਈ।"),
@@ -46,6 +47,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਕ੍ਰਮ ਵਿੱਚ ਅੱਗੇ ਕਿਹੜਾ ਨੰਬਰ ਆਉਂਦਾ ਹੈ?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -198,6 +200,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਵਰਣਿਤ ਸਥਿਤੀ ਦਾ ਸਭ ਤੋਂ ਸੰਭਾਵਿਤ ਨਤੀਜਾ ਚੁਣੋ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -315,6 +318,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਸਥਿਤੀ ਨੂੰ ਪੜ੍ਹੋ ਅਤੇ ਉਹ ਭਾਵਨਾ ਚੁਣੋ ਜੋ ਵਿਅਕਤੀ ਸਭ ਤੋਂ ਵੱਧ ਮਹਿਸੂਸ ਕਰਦਾ ਹੈ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -467,6 +471,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਚੁਣੋ ਕਿ ਵਾਕ ਬਾਰੇ ਕੀ ਗਲਤ ਜਾਂ ਅਸੰਭਵ ਹੈ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -584,6 +589,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਹਰੇਕ ਸਵਾਲ ਲਈ ਹਾਂ ਜਾਂ ਨਾਂ ਚੁਣੋ।",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1121,6 +1127,7 @@ struct PunjabiCognitionExerciseData {
         instructions: "ਸਮਾਨਤਾ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(

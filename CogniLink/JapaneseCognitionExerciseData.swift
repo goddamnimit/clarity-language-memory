@@ -27,6 +27,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "質問に「はい」か「いいえ」で答えてください。",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "東京は日本の首都ですか？", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
@@ -59,6 +60,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "お正月に食べる伝統的な日本料理は何ですか？", options: ["おせち料理", "ケーキ", "ピザ", "パスタ"], correctAnswer: "おせち料理", explanation: ""),
@@ -91,6 +93,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "場所に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "富士山はどこにありますか？", options: ["沖縄県", "静岡県と山梨県の境", "北海道", "大阪府"], correctAnswer: "静岡県と山梨県の境", explanation: ""),
@@ -123,6 +126,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "人物に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "1964年の東京オリンピックで有名になった日本の体操選手は誰ですか？", options: ["田中健二", "遠藤幸雄", "山本太郎", "鈴木一郎"], correctAnswer: "遠藤幸雄", explanation: ""),
@@ -155,6 +159,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "時間や日付に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "お正月はいつですか？", options: ["3月1日", "1月1日", "12月25日", "8月15日"], correctAnswer: "1月1日", explanation: ""),
@@ -187,6 +192,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "理由に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本で地震が多いのはなぜですか？", options: ["人口が多いから", "プレートの境界に位置するから", "山が多いから", "島国だから"], correctAnswer: "プレートの境界に位置するから", explanation: ""),
@@ -214,6 +220,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "方法に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本語でこんにちはと言うとき、どのような挨拶ですか？", options: ["さようなら", "こんにちは", "おやすみなさい", "ただいま"], correctAnswer: "こんにちは", explanation: ""),
@@ -241,6 +248,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "短い物語を読んで、質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "何を買いましたか？", options: ["鮭", "マグロ", "鶏肉", "豆腐"], correctAnswer: "鮭", explanation: "", passage: "田中さんは月曜日に魚屋で鮭を買いました。火曜日に調理しました。"),
@@ -268,6 +276,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "次の数字の並びを続けてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "次の数列を続けてください: 2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: ""),
@@ -300,6 +309,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "原因と結果の関係を答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "雨が降りました。その結果は？", options: ["地面が乾いた", "地面が濡れた", "気温が上がった", "日差しが強くなった"], correctAnswer: "地面が濡れた", explanation: ""),
@@ -327,6 +337,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "この場面でどんな気持ちになりますか？",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "誕生日プレゼントをもらったとき、どんな気持ちになりますか？", options: ["悲しい", "うれしい", "怒る", "退屈"], correctAnswer: "うれしい", explanation: ""),
@@ -359,6 +370,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "この状況でおかしいことは何ですか？",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "山本さんは真夏の日に厚いコートを着て外に出ました。何がおかしいですか？", options: ["季節に合わない服装", "外に出たこと", "山本さんの名前", "何もおかしくない"], correctAnswer: "季節に合わない服装", explanation: ""),
@@ -386,6 +398,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "歴史に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本の強制収容令（大統領令9066号）に署名したアメリカ大統領は誰ですか？", options: ["ハリー・S・トルーマン", "フランクリン・D・ルーズベルト", "ドワイト・D・アイゼンハワー", "ハーバート・フーバー"], correctAnswer: "フランクリン・D・ルーズベルト", explanation: ""),
@@ -413,6 +426,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "地理に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本の首都はどこですか？", options: ["大阪", "京都", "東京", "福岡"], correctAnswer: "東京", explanation: ""),
@@ -440,6 +454,7 @@ struct JapaneseCognitionExerciseData {
         instructions: "日本の文化に関する質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本の伝統的なお正月の挨拶は何ですか？", options: ["明けましておめでとうございます", "こんにちは", "おやすみなさい", "いただきます"], correctAnswer: "明けましておめでとうございます", explanation: ""),

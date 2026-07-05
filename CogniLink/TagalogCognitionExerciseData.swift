@@ -19,6 +19,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Basahin ang maikling kuwento pagkatapos ay sagutin ang tanong tungkol dito.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -136,6 +137,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Anong numero ang susunod sa sequence?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -288,6 +290,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Piliin ang pinaka-malamang na resulta ng sitwasyong inilarawan.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -405,6 +408,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Basahin ang sitwasyon at piliin ang emosyon na malamang na nararamdaman ng tao.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -557,6 +561,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Piliin kung ano ang mali o imposible sa pangungusap.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -674,6 +679,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Pumili ng Oo o Hindi para sa bawat tanong.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1211,6 +1217,7 @@ struct TagalogCognitionExerciseData {
         instructions: "Piliin ang tamang salita para makumpleto ang analohiya.",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(

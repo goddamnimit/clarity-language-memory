@@ -26,6 +26,7 @@ struct GujaratiNewExercisesData {
         instructions: "આપેલા શબ્દ સાથે સમાન પ્રાસ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "કયો શબ્દ 'પાણી' સાથે પ્રાસ ધરાવે છે?", options: ["દૂધ", "રાણી", "લીલો", "ચમચી"], correctAnswer: "રાણી", explanation: "પાણી અને રાણી બંને શબ્દોનો અંતિમ ઉચ્ચાર પ્રાસ સમાન છે."),
@@ -57,6 +58,7 @@ struct GujaratiNewExercisesData {
         instructions: "આપેલા શબ્દ સાથે સૌથી નજીકથી જોડાયેલો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ડૉક્ટર", options: ["હોસ્પિટલ", "એરપોર્ટ", "લાઇબ્રેરી", "ખેતર"], correctAnswer: "હોસ્પિટલ", explanation: "ડૉક્ટરો દર્દીઓની સારવાર માટે હોસ્પિટલમાં કામ કરે છે."),
@@ -88,6 +90,7 @@ struct GujaratiNewExercisesData {
         instructions: "પ્રસિદ્ધ ગુજરાતી કહેવત કે રૂઢિપ્રયોગ પૂર્ણ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ઝાઝા હાથ ___ રળિયામણા.", options: ["રળિયામણા", "ભારે", "કાળા", "મોટા"], correctAnswer: "રળિયામણા", explanation: "મળીને કામ કરવાથી મુશ્કેલ કામ પણ સહેલાઈથી પૂરું થાય છે."),
@@ -119,6 +122,7 @@ struct GujaratiNewExercisesData {
         instructions: "સંયુક્ત શબ્દને પૂર્ણ કરવા માટે સાચો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "રસોઈ + ___", options: ["ઘર", "રૂમ", "ઓરડો", "ખંડ"], correctAnswer: "ઘર", explanation: "રસોઈ + ઘર = રસોઈઘર (રસોઈ બનાવવાની જગ્યા)."),
@@ -150,6 +154,7 @@ struct GujaratiNewExercisesData {
         instructions: "શબ્દમાં વપરાયેલા પૂર્વપ્રત્યય (prefix) કે પરપ્રત્યય (suffix) ઓળખો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "'અણસમજુ' શબ્દમાં પૂર્વપ્રત્યય (prefix) કયો છે?", options: ["અણ", "સમજુ", "અ", "ણ"], correctAnswer: "અણ", explanation: "'અણસમજુ'માં 'અણ' એ નકારાત્મક અર્થ આપતો પૂર્વપ્રત્યય છે."),
@@ -181,6 +186,7 @@ struct GujaratiNewExercisesData {
         instructions: "ટૂંકી વાર્તા વાંચો અને પછી તેના આધારે પૂછાયેલા પ્રશ્નનો ઉત્તર આપો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "મારિયા ઘરે શું ભૂલી ગઈ હતી?", options: ["તેનું પાકીટ", "તેની ચાવીઓ", "તેની ખરીદીની યાદી", "તેનો ફોન"], correctAnswer: "તેનું પાકીટ", explanation: "વાર્તામાં સ્પષ્ટ લખ્યું છે કે તે પોતાનું પાકીટ રસોડાના પ્લેટફોર્મ પર ભૂલી ગઈ હતી.", passage: "મારિયા દૂધ અને બ્રેડ ખરીદવા કરિયાણાની દુકાને ગઈ. તે પોતાનું પાકીટ રસોડાના પ્લેટફોર્મ પર ભૂલી ગઈ."),
@@ -207,6 +213,7 @@ struct GujaratiNewExercisesData {
         instructions: "શ્રેણીમાં હવે પછી કઈ સંખ્યા આવશે?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "આ શ્રેણીમાં દરેક વખતે 2 ઉમેરવામાં આવે છે."),
@@ -238,6 +245,7 @@ struct GujaratiNewExercisesData {
         instructions: "વર્ણવેલી પરિસ્થિતિનું સૌથી સંભવિત પરિણામ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ગરમ દિવસે તમે રસોડાના કાઉન્ટર પર બે કલાક આઈસ્ક્રીમ ખુલ્લો રાખો છો. શું થશે?", options: ["તે વધુ કઠણ થશે", "તે પીગળી જશે", "તેનો રંગ બદલાશે", "તે ગાયબ થઈ જશે"], correctAnswer: "તે પીગળી જશે", explanation: "ગરમીને કારણે થીજી ગયેલો આઈસ્ક્રીમ પીગળીને પ્રવાહી બને છે."),
@@ -264,6 +272,7 @@ struct GujaratiNewExercisesData {
         instructions: "પરિસ્થિતિ વાંચો અને વ્યક્તિ જે લાગણી અનુભવી રહ્યો છે તે પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "સારાને ખબર પડી કે તેણે સ્પર્ધામાં પ્રથમ સ્થાન મેળવ્યું છે. તે કેવું અનુભવે છે?", options: ["ઉદાસ", "ગુસ્સે", "ખુશ", "ડરેલી"], correctAnswer: "ખુશ", explanation: "SPર્ધા જીતવી એ આનંદ અને ઉત્સાહનો વિષય છે."),
@@ -295,6 +304,7 @@ struct GujaratiNewExercisesData {
         instructions: "આપેલા વાક્યમાં શું અસંગત કે અશક્ય છે તે શોધો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "જોને સુવા જતાં પહેલાં મધ્યરાત્રિએ સવારનો નાસ્તો (બ્રેકફાસ્ટ) કર્યો.", options: ["લોકો ખોરાક ખાતા નથી", "નાસ્તો સવારનું ભોજન છે, મધ્યરાત્રિનું નહીં", "જોને સુવું ન જોઈએ", "મધ્યરાત્રિ બપોરે હોય છે"], correctAnswer: "નાસ્તો સવારનું ભોજન છે, મધ્યરાત્રિનું નહીં", explanation: "નાસ્તો એ દિવસનું પ્રથમ ભોજન છે જે સવારના સમયે જ લેવાય છે."),
@@ -321,6 +331,7 @@ struct GujaratiNewExercisesData {
         instructions: "દવાની ચબરખી કે પ્રિસ્ક્રિપ્શન વાંચો અને પ્રશ્નનો ઉત્તર આપો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "લેબલ: જમ્યા પછી દિવસમાં બે વાર ૧ ગોળી લેવી. તમારે આખો દિવસ થઈને કુલ કેટલી ગોળી લેવી જોઈએ?", options: ["૧", "૨", "૩", "૪"], correctAnswer: "૨", explanation: "દિવસમાં બે વાર ૧ ગોળી એટલે ૧ + ૧ = ૨ ગોળીઓ થાય."),
@@ -347,6 +358,7 @@ struct GujaratiNewExercisesData {
         instructions: "મેનૂની વિગતોનો ઉપયોગ કરીને પ્રશ્નનો સાચો જવાબ આપો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "મેનૂ: ચીઝબર્ગર $8.00, ફ્રેન્ચ ફ્રાઈઝ $3.00, સોડા $2.00. ચીઝબર્ગરની કિંમત કેટલી છે?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "મેનૂ પર ચીઝબર્ગરની સામે કિંમત $8.00 દર્શાવેલી છે."),
@@ -373,6 +385,7 @@ struct GujaratiNewExercisesData {
         instructions: "બિલની વિગતો વાંચો અને સાચો ઉત્તર પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "લાઈટ બિલ (ઇલેક્ટ્રિક બિલ): ચૂકવવાપાત્ર રકમ: $45.00. છેલ્લી તારીખ: ૧૫ જુલાઈ. તમારે કેટલા રૂપિયા ચૂકવવાના રહેશે?", options: ["$15.00", "$45.00", "૧૫ જુલાઈ", "મફત"], correctAnswer: "$45.00", explanation: "ચૂકવવાપાત્ર કુલ રકમ $45.00 છે."),
@@ -399,6 +412,7 @@ struct GujaratiNewExercisesData {
         instructions: "આપેલી પ્રતિકૂળ પરિસ્થિતિમાં યોગ્ય પ્રતિક્રિયા કે ઉકેલ પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "તમને રસોડામાં ધુમાડાની ગંધ આવે છે પણ આગ દેખાતી નથી. તમારે સૌથી પહેલાં શું કરવું જોઈએ?", options: ["અવગણના કરવી", "બારીઓ ખોલવી અને ગેસનો ચૂલો તપાસવો", "મિત્ર સાથે ફોન પર વાત કરવી", "પાછા સુઈ જવું"], correctAnswer: "બારીઓ ખોલવી અને ગેસનો ચૂલો તપાસવો", explanation: "રસોઈનો ચૂલો ચેક કરવો એ કોઈ પણ ખતરાને આગળ વધતો અટકાવવાનું પ્રથમ પગલું છે."),

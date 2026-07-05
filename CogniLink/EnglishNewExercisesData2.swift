@@ -20,6 +20,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Choose the correct definition for the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "What does HIBERNATE mean?", options: ["Fly south for the winter", "Sleep through the winter", "Store food underground", "Shed fur in cold weather"], correctAnswer: "Sleep through the winter", explanation: "To hibernate means to sleep through the winter months."),
@@ -51,6 +52,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Choose the action verb that best matches the person or situation.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "A chef in a kitchen:", options: ["Drives", "Cooks", "Swims", "Files"], correctAnswer: "Cooks", explanation: "A chef's main job is to cook food."),
@@ -82,6 +84,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Choose the correct meaning of the common saying.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "\"Don't cry over spilled milk.\"", options: ["Be careful with liquids", "Don't worry about things you can't change", "Clean up your messes right away", "Milk is expensive"], correctAnswer: "Don't worry about things you can't change", explanation: "This saying means there's no use being upset over something that has already happened and cannot be undone."),
@@ -113,6 +116,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Read the sentence and identify what is logically wrong with it.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "\"She wore her winter coat to stay cool in the snow.\" What is wrong?", options: ["She shouldn't go outside in the snow", "Winter coats keep you warm, not cool", "Snow is not cold", "Nothing is wrong"], correctAnswer: "Winter coats keep you warm, not cool", explanation: "Winter coats are designed to keep you warm, so wearing one to stay cool is backwards."),
@@ -144,6 +148,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Three words will be shown briefly. Remember them, then select the correct list.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Words shown: APPLE / CHAIR / BLUE\n\nWhich list did you see?", options: ["Apple, Table, Blue", "Apple, Chair, Green", "Apple, Chair, Blue", "Orange, Chair, Blue"], correctAnswer: "Apple, Chair, Blue", explanation: "The three words shown were Apple, Chair, and Blue."),
@@ -175,6 +180,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Read the sign or label and answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "A door sign says \"PUSH.\" What do you do to open it?", options: ["Pull", "Push", "Knock", "Wait for someone to open it"], correctAnswer: "Push", explanation: "The sign says PUSH, which means you apply forward pressure to open the door."),
@@ -206,6 +212,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Identify where in a store you would find the given item.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Where would you find a loaf of bread?", options: ["Produce", "Dairy", "Bakery", "Frozen foods"], correctAnswer: "Bakery", explanation: "Bread is typically found in the bakery section of a grocery store."),
@@ -237,6 +244,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Answer the question about using a phone or responding to an emergency.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "What number do you call in an emergency?", options: ["411", "311", "911", "211"], correctAnswer: "911", explanation: "911 is the emergency services number in the United States for police, fire, and medical help."),
@@ -268,6 +276,7 @@ struct EnglishNewExercisesData2 {
         instructions: "Identify which step comes first in the everyday task.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "When making coffee, do you add the water BEFORE or AFTER adding the coffee grounds?", options: ["Before — add water first, then grounds", "After — add grounds first, then water", "At the same time", "It doesn't matter"], correctAnswer: "Before — add water first, then grounds", explanation: "In most coffee makers, water is added to the reservoir before or alongside the grounds in the filter."),

@@ -23,6 +23,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه‌ای را انتخاب کنید که در گروه جای نمی‌گیرد.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "سیب (sib) | موز (moz) | هویج (havij) | پرتقال (porteqāl)", options: ["سیب (sib)", "موز (moz)", "هویج (havij)", "پرتقال (porteqāl)"], correctAnswer: "هویج (havij)", explanation: "Apple, banana, and orange are fruits; carrot is a vegetable."),
@@ -65,6 +66,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه‌ای را انتخاب کنید که در گروه جای نمی‌گیرد.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "حافظ (Hāfez) | سعدی (Sa'di) | فردوسی (Ferdowsi) | ابن‌سینا (Ebn-e Sinā)", options: ["حافظ (Hāfez)", "سعدی (Sa'di)", "فردوسی (Ferdowsi)", "ابن‌سینا (Ebn-e Sinā)"], correctAnswer: "ابن‌سینا (Ebn-e Sinā)", explanation: "Hafez, Sa'di, and Ferdowsi are Persian poets; Avicenna was a physician and philosopher."),
@@ -102,6 +104,7 @@ struct FarsiLanguageExerciseData {
         instructions: "ضرب‌المثل را کامل کنید.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "هر که بامش بیش، ...", options: ["برفش بیشتر است", "خانه‌اش بزرگ‌تر است", "ثروتش کمتر است", "دوستانش کمترند"], correctAnswer: "برفش بیشتر است", explanation: "The higher the roof, the more snow — greater responsibility comes with greater position."),
@@ -134,6 +137,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه‌ای را انتخاب کنید که هم‌معنی کلمه داده‌شده است.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "هم‌معنی «خوشحال» کدام است؟", options: ["شاد (shād)", "غمگین (ghamgin)", "خسته (khaste)", "عصبانی (asabāni)"], correctAnswer: "شاد (shād)", explanation: "Both خوشحال and شاد mean happy/joyful."),
@@ -156,6 +160,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه‌ای را انتخاب کنید که هم‌معنی کلمه داده‌شده است.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "هم‌معنی «مشتاق» کدام است؟", options: ["بی‌تفاوت (bi-tafāvot)", "علاقه‌مند (alāqe-mand)", "ناراحت (nārāhat)", "خسته (khaste)"], correctAnswer: "علاقه‌مند (alāqe-mand)", explanation: "Both مشتاق and علاقه‌مند convey eagerness and keen interest."),
@@ -178,6 +183,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه‌ای را انتخاب کنید که مخالف کلمه داده‌شده است.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "مخالف «گرم» کدام است؟", options: ["سرد (sard)", "خوشایند (khoshāyand)", "نرم (narm)", "روشن (roshan)"], correctAnswer: "سرد (sard)", explanation: "گرم means warm; سرد means cold."),
@@ -200,6 +206,7 @@ struct FarsiLanguageExerciseData {
         instructions: "بهترین کلمه را برای کامل کردن جمله انتخاب کنید.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "من هر صبح یک فنجان ___ می‌نوشم.", options: ["چای (chāy)", "نمک (namak)", "برنج (berenj)", "صابون (sābun)"], correctAnswer: "چای (chāy)", explanation: "Tea is the most natural thing to drink from a cup each morning — chai is central to Iranian daily life."),
@@ -233,6 +240,7 @@ struct FarsiLanguageExerciseData {
         instructions: "کلمه یا شکل درست را برای کامل کردن جمله انتخاب کنید.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "دیروز من به پارک ___ .", options: ["می‌روم (mi-ravam)", "رفتم (raftam)", "خواهم رفت (khāham raft)", "می‌رفتم (mi-raftam)"], correctAnswer: "رفتم (raftam)", explanation: "رفتم is simple past tense first person singular — correct for a completed action yesterday."),
@@ -265,6 +273,7 @@ struct FarsiLanguageExerciseData {
         instructions: "رابطه را پیدا کنید و جای خالی را پر کنید.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "روز به شب مثل بهار است به ___", options: ["بارش (bāresh)", "پاییز (pāyiz)", "آفتاب (āftāb)", "گل (gol)"], correctAnswer: "پاییز (pāyiz)", explanation: "Day and night are opposites; spring and autumn are opposites on the seasonal calendar."),
@@ -292,6 +301,7 @@ struct FarsiLanguageExerciseData {
         instructions: "آیا این جمله واقعیت است یا نظر شخصی؟",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "تهران پایتخت ایران است.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "This is a verifiable geographic fact."),
@@ -329,6 +339,7 @@ struct FarsiLanguageExerciseData {
         instructions: "مراحل را به ترتیب درست مرتب کنید.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(

@@ -29,6 +29,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn cặp từ đồng âm đúng để hoàn thành các câu sau.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[đồng / đồng] Chiếc lư hương này được đúc bằng ___. Trẻ em đang chăn trâu trên cánh ___.", options: ["đồng...đồng", "đồng...chì", "chì...đồng", "đồng...sắt"], correctAnswer: "đồng...đồng", explanation: "'Đồng' (kim loại) và 'đồng' (cánh đồng) là hai từ đồng âm khác nghĩa."),
@@ -55,6 +56,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ phù hợp nhất để hoàn thành phép ẩn dụ/tương đồng dưới đây.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ĐỘC THOẠI đối với DIỄN VIÊN cũng như BÀI GIẢNG ĐẠO đối với ___", options: ["Mục sư", "Tín đồ", "Ca đoàn", "Nhà thờ"], correctAnswer: "Mục sư", explanation: "Độc thoại là hành động nói đặc trưng của diễn viên; bài giảng đạo là hành động nói đặc trưng của mục sư/linh mục."),
@@ -81,6 +83,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ có liên tưởng chặt chẽ nhất với từ được cho trước.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "LÒNG VỊ THA", options: ["Không vụ lợi", "Lòng tham", "Sự tức giận", "Lòng đố kỵ"], correctAnswer: "Không vụ lợi", explanation: "Lòng vị tha (altruism) có đặc trưng cốt lõi là sự không vụ lợi, hy sinh vì người khác."),
@@ -107,6 +110,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ thích hợp nhất để điền vào chỗ trống.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Cơn mưa lớn kéo dài đã giúp ___ tình trạng hạn hán nghiêm trọng tại miền Trung.", options: ["giảm bớt", "tăng thêm", "duy trì", "kéo dài"], correctAnswer: "giảm bớt", explanation: "Mưa cung cấp nước trực tiếp giúp giảm bớt hoặc xóa bỏ hạn hán."),
@@ -133,6 +137,7 @@ struct VietnameseHardExercisesData {
         instructions: "Sắp xếp các bước thực hiện hoạt động theo thứ tự hợp lý.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Pha trà ấm kiểu Việt", options: ["Rót nước sôi vào ấm trà có chứa trà khô", "Đặt ấm trà lên trên miệng ấm nước sôi để ủ ấm", "Tráng nóng ấm chén bằng nước sôi", "Đợi vài phút cho trà ngấm rồi rót ra chén thưởng thức"], correctAnswer: "Tráng nóng ấm chén bằng nước sôi | Rót nước sôi vào ấm trà có chứa trà khô | Đặt ấm trà lên trên miệng ấm nước sôi để ủ ấm | Đợi vài phút cho trà ngấm rồi rót ra chén thưởng thức", explanation: "Trình tự pha trà truyền thống: Tráng ấm chén, tráng trà và rót nước sôi, ủ nóng trên hơi nước, rót thưởng thức."),
@@ -159,6 +164,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn câu trả lời thể hiện nguyên nhân hoặc kết quả hợp lý nhất.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Nguyên nhân: Nhiệt độ mùa hè ở miền Bắc vượt quá 40 độ C.", options: ["Lượng điện tiêu thụ tăng vọt do người dân mở điều hòa liên tục", "Người dân đổ xô ra đường đi dạo đông đúc hơn", "Nhu cầu mua áo khoác phao mùa đông tăng mạnh", "Nhà máy điện công bố sản lượng than tiêu thụ giảm mạnh"], correctAnswer: "Lượng điện tiêu thụ tăng vọt do người dân mở điều hòa liên tục", explanation: "Thời tiết nắng nóng gay gắt khiến nhu cầu làm mát bằng máy lạnh/điều hòa tăng cao gây quá tải điện."),
@@ -185,6 +191,7 @@ struct VietnameseHardExercisesData {
         instructions: "Tìm điểm phi lý hoặc không thể xảy ra trong các tình huống dưới đây.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Anh Nam không bật bếp gas, đặt chiếc nồi lạnh ngắt chứa đầy nước và sữa lên đun sôi sùng sục trong 10 phút.", options: ["Không có nhiệt lượng truyền vào thì nước không thể nóng lên hay sôi được", "Nồi sữa không nên bỏ thêm trà khô vào", "Nước sôi sẽ lập tức biến thành băng đá ở nhiệt độ thường", "Muốn đun sôi nước phải sử dụng vỏ chai nhựa"], correctAnswer: "Không có nhiệt lượng truyền vào thì nước không thể nóng lên hay sôi được", explanation: "Sự sôi yêu cầu nhiệt độ đạt tới điểm sôi thông qua nguồn cung cấp nhiệt, không có lửa thì không thể sôi."),
@@ -211,6 +218,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ thích hợp để hoàn thành câu tục ngữ dân gian.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Hoàn thành câu tục ngữ: Gần mực thì đen, gần đèn thì ___.", options: ["sáng", "tối", "rõ", "mờ"], correctAnswer: "sáng", explanation: "Câu tục ngữ đầy đủ là 'Gần mực thì đen, gần đèn thì sáng', nói về ảnh hưởng của môi trường sống xung quanh."),
@@ -237,6 +245,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ thích hợp để hoàn thành các câu sau.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[đường / đường] Con ___ này dẫn ra chợ huyện. Mẹ cho thêm ___ vào cốc nước cam cho ngọt.", options: ["đường...đường", "đường...muối", "muối...đường", "đường...sữa"], correctAnswer: "đường...đường", explanation: "'Đường' (lộ trình/nơi đi lại) và 'đường' (gia vị tạo độ ngọt) là hai từ đồng âm."),
@@ -263,6 +272,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ hoàn thành tốt nhất phép tương đồng.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "TRÊN đối với DƯỚI giống như NÓNG đối với gì?", options: ["LẠNH", "ẤM", "SÔI", "ƯỚT"], correctAnswer: "LẠNH", explanation: "Trên và dưới là hai từ trái nghĩa, tương tự nóng trái nghĩa với lạnh."),
@@ -289,6 +299,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn phương án thể hiện nguyên nhân hoặc kết quả hợp lý nhất.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Nguyên nhân: Bạn làm rơi chiếc cốc thủy tinh xuống sàn bê tông.", options: ["Cốc bị vỡ", "Cốc nổi lên", "Cốc mềm đi", "Cốc biến thành màu xanh"], correctAnswer: "Cốc bị vỡ", explanation: "Thủy tinh giòn, va chạm với sàn cứng sẽ bị rạn nứt hoặc vỡ tan."),
@@ -315,6 +326,7 @@ struct VietnameseHardExercisesData {
         instructions: "Xác định lỗi logic hoặc điều không thể xảy ra trong câu.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Phi lý: Nam đi giày vào chân trước khi đi tất (vớ).", options: ["Tất phải được đi trước khi đi giày", "Giày phải đeo vào tay", "Tất phải đội trên đầu", "Giày dùng để ăn"], correctAnswer: "Tất phải được đi trước khi đi giày", explanation: "Tất giúp bảo vệ chân bên trong giày, vì vậy cần đi tất trước."),
@@ -341,6 +353,7 @@ struct VietnameseHardExercisesData {
         instructions: "Sắp xếp các bước thực hiện hoạt động theo trình tự logic.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Nướng bánh mì", options: ["Đặt lát bánh mì vào lò nướng", "Ấn cần gạt xuống để bắt đầu nướng", "Đợi lát bánh mì nướng tự động nảy lên", "Phết bơ lên lát bánh mì nướng nóng hổi"], correctAnswer: "Đặt lát bánh mì vào lò nướng | Ấn cần gạt xuống để bắt đầu nướng | Đợi lát bánh mì nướng tự động nảy lên | Phết bơ lên lát bánh mì nướng nóng hổi", explanation: "Bánh mì được đưa vào lò, bật nhiệt nướng, nảy lên và phết bơ."),
@@ -357,6 +370,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ có mối quan hệ gần gũi nhất với từ gợi ý.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "THƯ VIỆN", options: ["Im lặng", "Tiếng ồn", "Đám đông", "Trò chơi"], correctAnswer: "Im lặng", explanation: "Thư viện là không gian đọc sách học tập yêu cầu giữ im lặng."),
@@ -383,6 +397,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn cặp từ đồng âm chính xác để hoàn thành các câu sau.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[chín / chín] Quả xoài trên cây đã ___ vàng. Số ___ là số đứng trước số mười.", options: ["chín...chín", "chín...chín", "chín...chín", "chín...chín"], correctAnswer: "chín...chín", explanation: "Từ 'chín' thứ nhất chỉ trạng thái trái cây chín; 'chín' thứ hai là số chín."),
@@ -399,6 +414,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ chính xác để hoàn thành câu tục ngữ phổ biến.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Có công mài sắt, có ngày nên ___", options: ["kim", "xà", "đinh", "đồng"], correctAnswer: "kim", explanation: "Câu tục ngữ khuyên chúng ta kiên trì chịu khó ắt sẽ thành công."),
@@ -425,6 +441,7 @@ struct VietnameseHardExercisesData {
         instructions: "Chọn từ chính xác để hoàn thành câu tục ngữ dân gian.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Lửa thử vàng, gian nan thử ___", options: ["sức", "lòng", "người", "trí"], correctAnswer: "sức", explanation: "Khó khăn thử thách là thước đo sức lực và bản lĩnh con người."),

@@ -20,6 +20,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Lisez chaque scénario. Décrivez ce que vous feriez. Appuyez sur \"Afficher la réponse\" pour voir la meilleure réponse modèle.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Vous glissez dans l'escalier de la cave et pensez vous être tordu la cheville.", options: [], correctAnswer: "Restez immobile. N'essayez pas de marcher dessus. Appelez à l'aide. Si vous êtes seul, composez le 911 ou utilisez votre téléphone. Ne bougez que si vous pouvez le faire en toute sécurité.", explanation: ""),
@@ -87,6 +88,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Choisissez la bonne réponse pour chaque question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Combien d'heures y a-t-il dans une journée complète ?", options: ["12", "24", "48", "36"], correctAnswer: "24", explanation: ""),
@@ -143,6 +145,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Pour chaque produit, choisissez l'option qui offre le meilleur rapport qualité-prix pour votre argent.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Papier toilette : Option A) 4 rouleaux pour 2,00 $ (0,50 $ le rouleau) ou Option B) 6 rouleaux pour 2,70 $ (0,45 $ le rouleau) ?", options: ["Option A — 4 rouleaux pour 2,00 $", "Option B — 6 rouleaux pour 2,70 $"], correctAnswer: "Option B — 6 rouleaux pour 2,70 $", explanation: "Le prix unitaire par rouleau est plus bas dans l'Option B (0,45 $ contre 0,50 $)."),
@@ -183,6 +186,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Rédigez une réponse à chaque consigne. Appuyez sur \"Afficher la réponse\" pour voir un exemple de message modèle.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Écrivez un mot à votre gardienne d'animaux, Line, pour lui expliquer comment nourrir vos deux chats pendant votre absence de 4 jours.", options: [], correctAnswer: "Bonjour Line, merci de t'occuper de Félix et Minou. Donne-leur une demi-tasse de croquettes sèches matin et soir. De l'eau fraîche tous les jours. Minou a tendance à se cacher sous le lit mais sortira s'il a faim. Nettoie la litière une fois par jour. La nourriture est dans le placard de la cuisine. Appelle-moi s'il y a un problème. — [Votre Nom]", explanation: ""),
@@ -213,6 +217,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Les étapes ci-dessous sont dans le MAUVAIS ordre. Remettez-les dans l'ordre chronologique correct.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Œufs brouillés", options: ["Battre les œufs avec une fourchette", "Retirer du feu dès qu'ils sont pris", "Chauffer la poêle à feu moyen-doux et ajouter le beurre", "Casser les œufs dans un bol", "Verser le mélange d'œufs dans la poêle", "Ajouter du sel et un filet de lait", "Servir immédiatement"], correctAnswer: "Casser les œufs dans un bol | Ajouter du sel et un filet de lait | Battre les œufs avec une fourchette | Chauffer la poêle à feu moyen-doux et ajouter le beurre | Verser le mélange d'œufs dans la poêle | Retirer du feu dès qu'ils sont pris | Servir immédiatement", explanation: ""),
@@ -247,6 +252,7 @@ struct FrenchFunctionalSkillsExerciseData {
         instructions: "Pour chaque tâche, décrivez : le matériel nécessaire, les étapes clés et les risques potentiels. Appuyez sur \"Afficher la réponse\" pour voir la réponse modèle.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Comment faire une lessive ?", options: [], correctAnswer: "Matériel : vêtements sales, lessive, adoucissant. Étapes : Trier le linge par couleur et type de tissu. Vérifier les poches. Ajouter la bonne dose de lessive. Choisir la température de l'eau. Transférer dans le sèche-linge dès que c'est fini. Plier rapidement. Risques : mélanger du blanc et du rouge, surcharger la machine.", explanation: ""),

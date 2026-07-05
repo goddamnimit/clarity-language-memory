@@ -22,6 +22,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Lee cada escenario. Describe lo que harías. Toca 'Ver Respuesta' para ver la mejor respuesta modelo.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -244,6 +245,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Elige la respuesta correcta basada en el horario de televisión.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -326,6 +328,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Usa el calendario para responder a las siguientes preguntas.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -394,6 +397,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Los pasos se muestran en el orden INCORRECTO. Ordénalos del 1 al 3 para ponerlos en la secuencia correcta.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -546,6 +550,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Para cada tarea, describe: qué suministros necesitas, los pasos clave y qué podría salir mal. Toca 'Ver Respuesta' para ver la guía modelo.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -698,6 +703,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Responde a las preguntas sobre direcciones y posiciones espaciales.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -780,6 +786,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Elige la mejor respuesta a las preguntas sobre el tiempo, duración y fechas.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -904,6 +911,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Para cada artículo, elige la opción que te ofrezca un mejor valor por tu dinero.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1042,6 +1050,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Elige la respuesta correcta para cada pregunta.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1187,6 +1196,7 @@ struct SpanishFunctionalSkillsExerciseData {
         instructions: "Escribe una respuesta para cada situación. Toca 'Ver Respuesta' para ver una respuesta modelo.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

@@ -18,6 +18,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਨੁਸਖ਼ੇ ਦੀ ਜਾਣਕਾਰੀ ਪੜ੍ਹੋ ਅਤੇ ਸਵਾਲ ਦਾ ਜਵਾਬ ਦਿਓ।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -135,6 +136,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਸਵਾਲ ਦਾ ਜਵਾਬ ਦੇਣ ਲਈ ਮੀਨੂ ਜਾਣਕਾਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -231,6 +233,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਬਿੱਲ ਦੀ ਜਾਣਕਾਰੀ ਪੜ੍ਹੋ ਅਤੇ ਸਵਾਲ ਦਾ ਜਵਾਬ ਦਿਓ।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -334,6 +337,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਦੱਸੀ ਗਈ ਸਥਿਤੀ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਜਵਾਬ ਚੁਣੋ।",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -486,6 +490,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਖਾਣਾ ਪਕਾਉਣ ਦੇ ਪੜਾਵਾਂ ਨੂੰ ਸਹੀ ਕ੍ਰม ਵਿੱਚ ਵਿਵਸਥਿਤ ਕਰੋ।",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -988,6 +993,7 @@ struct PunjabiFunctionalSkillsExerciseData {
         instructions: "ਕੀਮਤਾਂ ਦੀ ਤੁਲਨਾ ਕਰੋ ਅਤੇ ਸਭ ਤੋਂ ਵਧੀਆ ਮੁੱਲ ਵਾਲਾ ਵਿਕਲਪ ਚੁਣੋ।",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

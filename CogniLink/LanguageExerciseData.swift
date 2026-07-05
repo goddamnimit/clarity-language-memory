@@ -25,6 +25,7 @@ struct LanguageExerciseData {
         instructions: "Tap the word that does NOT belong in the group.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "APPLE, PEAR, CARROT, PLUM", options: ["APPLE", "PEAR", "CARROT", "PLUM"], correctAnswer: "CARROT", explanation: "Vegetable, not a fruit"),
@@ -66,6 +67,7 @@ struct LanguageExerciseData {
         instructions: "Tap the word that does NOT belong in the group.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "SIMILE, METAPHOR, HYPERBOLE, PARAGRAPH", options: ["SIMILE", "METAPHOR", "HYPERBOLE", "PARAGRAPH"], correctAnswer: "PARAGRAPH", explanation: "Text structure, not a figure of speech"),
@@ -101,6 +103,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that correctly completes the common phrase.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Bite the ___", options: ["barrel", "bullet", "bandage", "bone"], correctAnswer: "bullet", explanation: ""),
@@ -132,6 +135,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that means the SAME as the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Word: ANGRY", options: ["happy", "furious", "calm", "sad"], correctAnswer: "furious", explanation: ""),
@@ -153,6 +157,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that means the SAME as the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Word: MELANCHOLY", options: ["joyful", "sorrowful", "excited", "content"], correctAnswer: "sorrowful", explanation: ""),
@@ -174,6 +179,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that means the OPPOSITE of the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Word: HOT", options: ["warm", "cold", "cool", "tepid"], correctAnswer: "cold", explanation: ""),
@@ -195,6 +201,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that best completes the sentence.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "She watered the ___.", options: ["flowers", "floors", "flour"], correctAnswer: "flowers", explanation: ""),
@@ -227,6 +234,7 @@ struct LanguageExerciseData {
         instructions: "Choose the correctly formed word to complete the sentence.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "The children ran ___.", options: ["quick", "quickly", "quickful"], correctAnswer: "quickly", explanation: ""),
@@ -258,6 +266,7 @@ struct LanguageExerciseData {
         instructions: "The word pair is shown above the sentence. Choose the correct option to fill BOTH blanks in order.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[right / write] Please ___ your name. Turn ___ at the light.", options: ["right…right", "write…write", "write…right", "right…write"], correctAnswer: "write…right", explanation: ""),
@@ -279,6 +288,7 @@ struct LanguageExerciseData {
         instructions: "Choose the word that best completes the analogy.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "PUPPY is to DOG as KITTEN is to ___", options: ["Cat", "Dog", "Bird", "Fish"], correctAnswer: "Cat", explanation: ""),
@@ -305,6 +315,7 @@ struct LanguageExerciseData {
         instructions: "Decide: is this statement a FACT or an OPINION?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "There are 7 days in a week.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
@@ -341,6 +352,7 @@ struct LanguageExerciseData {
         instructions: "The steps are shown in the WRONG order. Number them 1, 2, 3... to put them in the correct sequence.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(

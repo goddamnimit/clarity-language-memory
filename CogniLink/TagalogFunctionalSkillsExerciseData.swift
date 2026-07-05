@@ -18,6 +18,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Basahin ang impormasyon ng reseta at sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -135,6 +136,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Gamitin ang impormasyon ng menu upang sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -231,6 +233,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Basahin ang impormasyon ng bill at sagutin ang tanong.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -334,6 +337,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Piliin ang pinakamahusay na tugon sa sitwasyong inilarawan.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -486,6 +490,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Ayusin ang mga hakbang ng pagluluto sa tamang pagkakasunod-sunod.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -988,6 +993,7 @@ struct TagalogFunctionalSkillsExerciseData {
         instructions: "Ihambing ang mga presyo at piliin ang pinakamagandang halaga.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

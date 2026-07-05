@@ -25,6 +25,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "هر سناریو را بخوانید. توضیح دهید چه کار خواهید کرد. برای دیدن بهترین پاسخ، روی «نمایش پاسخ» ضربه بزنید.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -353,6 +354,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "با توجه به جدول برنامه‌های تلویزیون، پاسخ صحیح را انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -435,6 +437,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "از تقویم برای پاسخ دادن به سوالات زیر استفاده کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -503,6 +506,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "مراحل به ترتیب نادرست نشان داده شده‌اند. آن‌ها را مرتب کنید.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -733,6 +737,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "برای هر وظیفه، توضیح دهید: چه وسایلی نیاز دارید، مراحل کلیدی چیست و چه چیزی ممکن است اشتباه پیش برود. برای دیدن پاسخ مدل روی «نمایش پاسخ» ضربه بزنید.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -991,6 +996,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "به سوالات مربوط به جهت‌ها و موقعیت‌های فضایی پاسخ دهید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1073,6 +1079,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "بهترین پاسخ را برای سوالات مربوط به زمان، مدت زمان و تاریخ‌ها انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1310,6 +1317,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "برای هر کالا، گزینه‌ای را انتخاب کنید که ارزش بیشتری نسبت به قیمت ارائه می‌دهد.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1413,6 +1421,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "پاسخ صحیح را برای هر سوال انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1755,6 +1764,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "برای هر موقعیت یک پاسخ بنویسید. برای دیدن یک پاسخ مدل روی «نمایش پاسخ» ضربه بزنید.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1822,6 +1832,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "منو را بخوانید و پاسخ صحیح را انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1953,6 +1964,7 @@ struct FarsiFunctionalSkillsExerciseData {
         instructions: "دستورالعمل‌های روی برچسب دارو را بخوانید و پاسخ صحیح را انتخاب کنید.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

@@ -27,6 +27,7 @@ struct TagalogLanguageExerciseData {
         instructions: "I-tap ang salitang HINDI kabilang sa grupo.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "MANSANA, PERAS, KARROT, Plum", options: ["APPLE", "PERAS", "CARROT", "PLUM"], correctAnswer: "CARROT", explanation: "Gulay, hindi prutas"),
@@ -68,6 +69,7 @@ struct TagalogLanguageExerciseData {
         instructions: "I-tap ang salitang HINDI kabilang sa grupo.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "SIMILE, METAPHOR, HYPERBOLE, PARAGRAPH", options: ["SIMILE", "METAPHOR", "HYPERBOLE", "TALATA"], correctAnswer: "TALATA", explanation: "Text structure, hindi isang figure of speech"),
@@ -103,6 +105,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang pinaka-angkop na salita para kumpletuhin ang parirala.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Kumpletuhin ang parirala: “kumain ng ___”", options: ["kanin", "tubig", "hangin", "papel"], correctAnswer: "kanin", explanation: "Sa kulturang Pilipino, ang karaniwang kinakain sa bawat oras ng pagkain ay kanin."),
@@ -134,6 +137,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salita na ang ibig sabihin ay PAREHONG sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Word: GALIT", options: ["masaya", "galit na galit", "kalmado", "malungkot"], correctAnswer: "galit na galit", explanation: ""),
@@ -155,6 +159,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salita na ang ibig sabihin ay PAREHONG sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Salita: MELANCHOLY", options: ["masayahin", "nalulungkot", "nasasabik", "nilalaman"], correctAnswer: "nalulungkot", explanation: ""),
@@ -176,6 +181,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salitang KASALITAN ng ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Word: MAINIT", options: ["mainit-init", "malamig", "astig", "mainit-init"], correctAnswer: "malamig", explanation: ""),
@@ -197,6 +203,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salitang pinakamahusay na kumukumpleto sa pangungusap.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Dinilig niya ang ___.", options: ["mga bulaklak", "mga sahig", "harina"], correctAnswer: "mga bulaklak", explanation: ""),
@@ -228,6 +235,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang tamang anyo ng salita na angkop sa pangungusap.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Piliin ang tamang sagot para sa patlang: “Alin sa mga sumusunod ang tamang pandiwa sa kasalukuyan (imperfective) ng salitang “sulat”?”", options: ["sumusulat", "sumulat", "susulat", "isulat"], correctAnswer: "sumusulat", explanation: "Ang “sumusulat” ay nagpapakita na ang aksyon ng pagsulat ay kasalukuyang ginagawa."),
@@ -259,6 +267,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salitang pinakamahusay na kumukumpleto sa pagkakatulad.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Ang PUPPY ay sa ASO gaya ng KUTING kay ___", options: ["Pusa", "aso", "ibon", "Isda"], correctAnswer: "Pusa", explanation: ""),
@@ -285,6 +294,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Magpasya: ang pahayag na ito ay isang KATOTOHANAN o isang OPINYON?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mayroong 7 araw sa isang linggo.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
@@ -321,6 +331,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Ang mga hakbang ay ipinapakita sa WRONG order. Lagyan ng bilang ng 1, 2, 3... upang mailagay sila sa tamang pagkakasunod-sunod.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Paggawa ng Toast", options: ["Mantikilya ang toast", "Ilagay ang tinapay sa toaster", "Alisin sa toaster", "Kumain"], correctAnswer: "Ilagay ang tinapay sa toaster | Alisin sa toaster | Mantikilya ang toast | Kumain", explanation: ""),
@@ -340,6 +351,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang tamang kahulugan ng sawikain.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Ano ang kahulugan ng sawikaing “balat-sibuyas”?", options: ["maramdamin", "manipis ang balat", "madaling umiyak", "mabango"], correctAnswer: "maramdamin", explanation: "Ang “balat-sibuyas” ay sawikain para sa taong madaling masaktan ang damdamin o maramdamin."),
@@ -366,6 +378,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salitang magkatugma sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Piliin ang salitang magkatugma sa “aso”:", options: ["baso", "ulan", "daan", "laro"], correctAnswer: "baso", explanation: "Ang “aso” at “baso” ay magkatugma dahil parehong nagtatapos sa “-aso”."),
@@ -397,6 +410,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang salitang pinaka malapit na nauugnay sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "DOKTOR", options: ["Ospital", "Paliparan", "Aklatan", "sakahan"], correctAnswer: "Ospital", explanation: "Nagtatrabaho ang mga doktor sa mga ospital para pangalagaan ang mga pasyente."),
@@ -428,6 +442,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang tamang salita para sa patlang sa salawikain.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Kumpletuhin ang salawikain: “Pag may tiyaga, may ___”", options: ["nilaga", "sinigang", "adobo", "tinola"], correctAnswer: "nilaga", explanation: "Ang ibig sabihin ay kapag matiyaga ka sa trabaho, may makukuha kang gantimpala o pagkain."),
@@ -459,6 +474,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang tamang tambalang salita mula sa pagsasama ng dalawang salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Pagsamahin ang dalawang salita: bahay + kubo = ___", options: ["bahay-kubo", "bahay-bakasyunan", "bahay-bata", "bahay-hari"], correctAnswer: "bahay-kubo", explanation: "Ang tradisyonal na kubo sa Pilipinas ay tinatawag na bahay-kubo."),
@@ -490,6 +506,7 @@ struct TagalogLanguageExerciseData {
         instructions: "Piliin ang tamang sagot ukol sa gamit o kahulugan ng panlapi.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Ano ang kahulugan o gamit ng panlaping “mag-” sa salitang “magsapatos”?", options: ["magsapatos", "sumapatos", "sinapatos", "sapatosang"], correctAnswer: "magsapatos", explanation: "Ang 접두사 (prefix) na “mag-” ay ginagamit upang ipakita ang kilos ng pagsuot o paggamit ng sapatos."),

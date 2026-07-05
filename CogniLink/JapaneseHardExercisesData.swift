@@ -17,6 +17,7 @@ struct JapaneseHardExercisesData {
         instructions: "グループに属さない言葉を選んでください（難しい）。",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "比喩、隠喩、擬人法、段落", options: ["比喩", "隠喩", "擬人法", "段落"], correctAnswer: "段落", explanation: "文章の構造で、修辞法ではありません"),
@@ -54,6 +55,7 @@ struct JapaneseHardExercisesData {
         instructions: "与えられた言葉と最も近い意味の言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "言葉：漸進的", options: ["急激な", "徐々の", "突然の", "瞬時の"], correctAnswer: "徐々の", explanation: ""),
@@ -81,6 +83,7 @@ struct JapaneseHardExercisesData {
         instructions: "最初の2つの言葉の関係と同じ関係になる言葉を選んでください。",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "弁護士は法廷、外科医は？", options: ["学校", "手術室", "公園", "図書館"], correctAnswer: "手術室", explanation: ""),
@@ -108,6 +111,7 @@ struct JapaneseHardExercisesData {
         instructions: "より深い知識が必要な質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "日本の元号「昭和」はいつ始まりましたか？", options: ["1912年", "1926年", "1945年", "1989年"], correctAnswer: "1926年", explanation: ""),
@@ -135,6 +139,7 @@ struct JapaneseHardExercisesData {
         instructions: "複雑な場面で最も適切な判断を選んでください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "薬を飲んでいる最中に、知り合いから「同じ症状に効く良い薬がある」と別の薬を勧められました。どうすべきですか？", options: ["すぐにもらって飲む", "まず医師か薬剤師に相談してから判断する", "現在の薬をやめてその薬に変える", "両方一緒に飲む"], correctAnswer: "まず医師か薬剤師に相談してから判断する", explanation: ""),

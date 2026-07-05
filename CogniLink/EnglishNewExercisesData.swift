@@ -28,6 +28,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the word that rhymes with the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Which word rhymes with CAT?", options: ["Dog", "Hat", "Sun", "Tree"], correctAnswer: "Hat", explanation: "Cat and Hat share the same ending sound."),
@@ -59,6 +60,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the word most closely associated with the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "DOCTOR", options: ["Hospital", "Airport", "Library", "Farm"], correctAnswer: "Hospital", explanation: "Doctors work in hospitals to care for patients."),
@@ -90,6 +92,7 @@ struct EnglishNewExercisesData {
         instructions: "Complete the well-known saying or expression.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "An apple a day keeps the ___ away.", options: ["Doctor", "Teacher", "Dentist", "Lawyer"], correctAnswer: "Doctor", explanation: "The traditional saying is: An apple a day keeps the doctor away."),
@@ -121,6 +124,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the correct word to complete the compound word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "SUN + ___", options: ["Flower", "Cloud", "Rain", "Wind"], correctAnswer: "Flower", explanation: "Sun + Flower = Sunflower."),
@@ -152,6 +156,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the correct prefix or suffix to complete the word.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Which prefix means “not” in the word UNHAPPY?", options: ["un-", "re-", "pre-", "dis-"], correctAnswer: "un-", explanation: "The prefix “un-” means “not”, so unhappy means not happy."),
@@ -183,6 +188,7 @@ struct EnglishNewExercisesData {
         instructions: "Read the short story then answer the question about it.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "What did Maria leave at home?", options: ["Her wallet", "Her keys", "Her shopping list", "Her phone"], correctAnswer: "Her wallet", explanation: "The story states she forgot her wallet on the kitchen counter.", passage: "Maria went to the grocery store to buy milk and bread. She forgot her wallet on the kitchen counter."),
@@ -209,6 +215,7 @@ struct EnglishNewExercisesData {
         instructions: "What number comes next in the sequence?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "The sequence increases by adding 2 each time."),
@@ -240,6 +247,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the most likely result of the situation described.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "You leave ice cream on the kitchen counter for two hours on a warm day. What happens?", options: ["It gets harder", "It melts", "It changes color", "It disappears"], correctAnswer: "It melts", explanation: "Heat causes frozen ice cream to melt."),
@@ -266,6 +274,7 @@ struct EnglishNewExercisesData {
         instructions: "Read the situation and choose the emotion the person most likely feels.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Sarah just found out she won first place in a competition. How does she feel?", options: ["Sad", "Angry", "Happy", "Scared"], correctAnswer: "Happy", explanation: "Winning a competition is an exciting and joyful event."),
@@ -297,6 +306,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose what is wrong or impossible about the sentence.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "John ate breakfast at midnight before going to bed.", options: ["People do not eat food", "Breakfast is a morning meal, not midnight", "John should not sleep", "Midnight is in the afternoon"], correctAnswer: "Breakfast is a morning meal, not midnight", explanation: "Breakfast is by definition the morning meal that breaks the overnight fast."),
@@ -323,6 +333,7 @@ struct EnglishNewExercisesData {
         instructions: "Read the prescription information and answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Label: Take 1 tablet twice daily with food. How many tablets should you take in total each day?", options: ["1", "2", "3", "4"], correctAnswer: "2", explanation: "Taking 1 tablet twice a day means 1 + 1 = 2 tablets."),
@@ -349,6 +360,7 @@ struct EnglishNewExercisesData {
         instructions: "Use the menu information to answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Menu: Cheeseburger $8.00, French Fries $3.00, Soda $2.00. How much does a Cheeseburger cost?", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "The menu list states Cheeseburger is $8.00."),
@@ -375,6 +387,7 @@ struct EnglishNewExercisesData {
         instructions: "Read the bill information and answer the question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "Electric Bill: Total Due: $45.00. Due Date: July 15. What is the amount you need to pay?", options: ["$15.00", "$45.00", "July 15", "Free"], correctAnswer: "$45.00", explanation: "The total due is $45.00."),
@@ -401,6 +414,7 @@ struct EnglishNewExercisesData {
         instructions: "Choose the best response to the situation described.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "You smell smoke in your kitchen but do not see any fire. What should you do first?", options: ["Ignore it", "Open windows and check the stove", "Call a friend to chat", "Go back to sleep"], correctAnswer: "Open windows and check the stove", explanation: "Checking the stove is the first step to identify and resolve common minor smoke issues safely."),

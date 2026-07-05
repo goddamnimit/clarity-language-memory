@@ -29,6 +29,7 @@ struct FarsiHardExercisesData {
         instructions: "جفت کلمه هم‌آوای مناسب را برای کامل کردن جملات انتخاب کنید.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[خار / خوار] گل سرخ بدون ___ زیباست. دشمن می‌خواست ما را ___ کند.", options: ["خار...خوار", "خوار...خار", "خار...خار", "خوار...خوار"], correctAnswer: "خار...خوار", explanation: "«خار» به معنای تیغ گیاه است و «خوار» به معنای ذلیل و بی‌ارزش."),
@@ -55,6 +56,7 @@ struct FarsiHardExercisesData {
         instructions: "واژه‌ای را انتخاب کنید که رابطه تمثیلی را به بهترین شکل کامل می‌کند.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "تک‌گویی به بازیگر مربوط است، خطابه به چه کسی مربوط است؟", options: ["خطیب", "شنونده", "گروه کر", "مسجد"], correctAnswer: "خطیب", explanation: "تک‌گویی رفتار گفتاری بازیگر است، و خطابه رفتار گفتاری خطیب یا سخنران است."),
@@ -81,6 +83,7 @@ struct FarsiHardExercisesData {
         instructions: "گزینه‌ای را انتخاب کنید که بیشترین تداعی را با واژه داده شده دارد.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ایثارگری", options: ["فداکاری", "طمع", "خشم", "حسادت"], correctAnswer: "فداکاری", explanation: "ایثارگری و دگرخواهی مستقیماً با فداکاری و بخشش همبسته است."),
@@ -107,6 +110,7 @@ struct FarsiHardExercisesData {
         instructions: "واژه‌ای را انتخاب کنید که جمله را به بهترین شکل کامل می‌کند.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "باران‌های پاییزی باعث سرسبزی و ___ خشکسالی شدید شد.", options: ["تعدیل", "تخریب", "تداوم", "تشدید"], correctAnswer: "تعدیل", explanation: "باران باعث کاهش و تعدیل اثرات خشکسالی می‌شود."),
@@ -133,6 +137,7 @@ struct FarsiHardExercisesData {
         instructions: "مراحل فعالیت داده شده را به ترتیب منطقی مرتب کنید.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "دم کردن چای ایرانی", options: ["آب گرم را روی چای خشک در قوری بریزید", "قوری را روی کتری در حال جوش قرار دهید تا دم بکشد", "کتری را پر از آب کرده و روی شعله بگذارید تا بجوشد", "چای را در استکان ریخته و با قند یا خرما سرو کنید"], correctAnswer: "کتری را پر از آب کرده و روی شعله بگذارید تا بجوشد | آب گرم را روی چای خشک در قوری بریزید | قوری را روی کتری در حال جوش قرار دهید تا دم بکشد | چای را در استکان ریخته و با قند یا خرما سرو کنید", explanation: "اول آب را جوش می‌آوریم، روی چای در قوری می‌ریزیم، قوری را روی کتری می‌گذاریم تا دم بکشد و سپس سرو می‌کنیم."),
@@ -159,6 +164,7 @@ struct FarsiHardExercisesData {
         instructions: "منطقی‌ترین علت یا معلول را برای موقعیت داده شده انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "علت: دمای هوا در تابستان به بالای ۴۵ درجه رسید.", options: ["مصرف برق به دلیل استفاده مکرر از کولر به شدت افزایش یافت", "خیابان‌ها شلوغ‌تر و پر رفت و آمدتر شدند", "تقاضای خرید لباس‌های گرم زمستانی بالا رفت", "نیروگاه‌ها اعلام کردند مصرف سوخت کاهش یافته است"], correctAnswer: "مصرف برق به دلیل استفاده مکرر از کولر به شدت افزایش یافت", explanation: "گرما باعث کارکرد مداوم وسایل سرمایشی و بالا رفتن بار مصرف برق می‌شود."),
@@ -185,6 +191,7 @@ struct FarsiHardExercisesData {
         instructions: "گزینه‌ای را انتخاب کنید که تناقض یا اشتباه منطقی در سناریو را نشان می‌دهد.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "حسن بدون روشن کردن گاز، در کتری کاملاً سرد آب و شیر را ریخت و چای داغ دم کرد.", options: ["بدون حرارت و انرژی، هیچ مایعی به جوش نمی‌آید و دم نمی‌کشد", "چای نباید با شیر سرد مخلوط شود", "ریختن چای خشک در قوری اشتباه است", "برای تهیه چای وجود شکر الزامی است"], correctAnswer: "بدون حرارت و انرژی، هیچ مایعی به جوش نمی‌آید و دم نمی‌کشد", explanation: "حرارت برای جوشیدن و دم کشیدن چای ضروری است؛ آب سرد جوش نمی‌آید."),
@@ -211,6 +218,7 @@ struct FarsiHardExercisesData {
         instructions: "واژه‌ای را انتخاب کنید که ضرب‌المثل را به درستی کامل می‌کند.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "کامل کنید: جوجه را آخر ___ می‌شمارند.", options: ["پاییز", "بهار", "تابستان", "زمستان"], correctAnswer: "پاییز", explanation: "ضرب‌المثل معروف «جوجه را آخر پاییز می‌شمارند» به این معنی است که نتیجه کار را باید در پایان سنجید."),
@@ -237,6 +245,7 @@ struct FarsiHardExercisesData {
         instructions: "کلمه هم‌نام صحیح را برای کامل کردن جملات انتخاب کنید.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[شیر / شیر] کودک یک لیوان ___ گرم نوشید. ___ جنگل حیوان بسیار نیرومندی است.", options: ["شیر...شیر", "شیر...ببر", "ببر...شیر", "شیر...پلنگ"], correctAnswer: "شیر...شیر", explanation: "شیر اول به معنی شیر خوراکی مایع و شیر دوم به معنی سلطان جنگل (حیوان) است."),
@@ -264,6 +273,7 @@ struct FarsiHardExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که رابطه شبه‌سازی را به بهترین شکل کامل کند.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "بالا به پایین مانند گرم به ___ است.", options: ["سرد", "ملایم", "داغ", "خیس"], correctAnswer: "سرد", explanation: "بالا و پایین متضاد هستند، همانطور که گرم و سرد متضادند."),
@@ -291,6 +301,7 @@ struct FarsiHardExercisesData {
         instructions: "گزینه‌ای را انتخاب کنید که منطقی‌ترین علت یا معلول را نشان می‌دهد.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "علت: یک لیوان شیشه‌ای را روی کف سیمانی می‌اندازید.", options: ["لیوان می‌شکند", "لیوان شناور می‌شود", "لیوان نرم می‌شود", "لیوان آبی می‌شود"], correctAnswer: "لیوان می‌شکند", explanation: "شیشه شکننده است و در اثر برخورد با سطح سخت سیمان خرد می‌شود."),
@@ -318,6 +329,7 @@ struct FarsiHardExercisesData {
         instructions: "خطای منطقی یا ناممکن بودن را در عبارت مشخص کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ناممکن: رضا کفش‌هایش را قبل از جوراب‌هایش پوشید.", options: ["باید جوراب‌ها را قبل از کفش پوشید", "کفش‌ها را باید با دست پوشید", "جوراب‌ها روی سر گذاشته می‌شوند", "کفش‌ها را باید خورد"], correctAnswer: "باید جوراب‌ها را قبل از کفش پوشید", explanation: "جوراب درون کفش قرار می‌گیرد تا پا را محافظت کند، پس اول پوشیده می‌شود."),
@@ -345,6 +357,7 @@ struct FarsiHardExercisesData {
         instructions: "مراحل فعالیت را به ترتیب منطقی و درست مرتب کنید.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "درست کردن نان تست", options: ["ورق نان را در توستر قرار دهید", "اهرم را برای شروع گرما پایین بکشید", "منتظر بمانید تا نان تست خودکار بالا بیاید", "کره را روی نان تست داغ بمالید"], correctAnswer: "ورق نان را در توستر قرار دهید | اهرم را برای شروع گرما پایین بکشید | منتظر بمانید تا نان تست خودکار بالا بیاید | کره را روی نان تست داغ بمالید", explanation: "مراحل توست کردن: قرار دادن نان، فشار اهرم، صبر کردن، و مالیدن کره."),
@@ -362,6 +375,7 @@ struct FarsiHardExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که بیشترین ارتباط را با کلمه داده شده دارد.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "کتابخانه", options: ["سکوت", "سر و صدا", "شلوغی", "بازی"], correctAnswer: "سکوت", explanation: "کتابخانه مکانی برای مطالعه و یادگیری است و نیاز به سکوت دارد."),
@@ -389,6 +403,7 @@ struct FarsiHardExercisesData {
         instructions: "جفت کلمه هم‌آوای مناسب را برای کامل کردن جملات انتخاب کنید.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[سد / صد] سد خاکی جلوی هدررفت آب را گرفت. او ___ امتیاز کامل در بازی گرفت.", options: ["سد...صد", "صد...سد", "سد...سد", "صد...صد"], correctAnswer: "سد...صد", explanation: "اولی دیواره مهار آب (سد)؛ دومی عدد ۱۰۰ است."),
@@ -406,6 +421,7 @@ struct FarsiHardExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که ضرب‌المثل معروف را به درستی کامل کند.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "قطره قطره جمع گردد، وانگهی ___ شود", options: ["دریا", "سیل", "رودخانه", "برکه"], correctAnswer: "دریا", explanation: "پس‌انداز کوچک در طول زمان به سرمایه بزرگ تبدیل می‌شود."),
@@ -433,6 +449,7 @@ struct FarsiHardExercisesData {
         instructions: "کلمه‌ای را انتخاب کنید که ضرب‌المثل معروف را به درستی کامل کند.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "شنیدن کی بود مانند ___", options: ["دیدن", "گفتن", "نوشتن", "خواندن"], correctAnswer: "دیدن", explanation: "تفاوت بسیار زیادی بین شنیدن خبرها و دیدن واقعیت با چشم خود وجود دارد."),

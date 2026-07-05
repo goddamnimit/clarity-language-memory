@@ -29,6 +29,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الزوج الصحيح من الكلمات المتشابهة لفظاً لإكمال الجمل.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[ضل / ظل] ___ الرجل طريقه في الصحراء. ___ الطفل تحت الشجرة طوال اليوم.", options: ["ضل...ظل", "ظل...ضل", "ضل...ضل", "ظل...ظل"], correctAnswer: "ضل...ظل", explanation: "'ضل' تعني تاه أو ضاع، بينما 'ظل' تعني بقي واستمر."),
@@ -55,6 +56,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة التي تكمل العلاقة التناظرية بأفضل شكل.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "المناجاة للممثل كالموعظة للـ ___", options: ["واعظ", "مستمع", "جوقة", "مسجد"], correctAnswer: "واعظ", explanation: "المناجاة (الحديث الفردي) سلوك كلامي للممثل، والموعظة سلوك كلامي للواعظ أو الخطيب."),
@@ -81,6 +83,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة الأكثر ارتباطاً بالكلمة المعطاة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "الإيثار", options: ["العطاء", "الطمع", "الغضب", "الحسد"], correctAnswer: "العطاء", explanation: "الإيثار هو تفضيل الآخرين على النفس، وهو يرتبط بالبذل والعطاء السخي."),
@@ -107,6 +110,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة المناسبة لإكمال الفراغ في الجملة.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ساعدت الأمطار الغزيرة في ___ آثار الجفاف الشديد الذي ضرب المنطقة الشمالية.", options: ["تخفيف", "زيادة", "استمرار", "تفاقم"], correctAnswer: "تخفيف", explanation: "الأمطار تروي الأرض وتقلل (تخفف) من وطأة وأضرار الجفاف."),
@@ -133,6 +137,7 @@ struct ArabicHardExercisesData {
         instructions: "رتب خطوات النشاط المعطى بترتيبها المنطقي السليم.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "تحضير القهوة العربية", options: ["اغلي الماء في الدلة على النار مع الهيل والزعفران", "أضف البن المطحون ودعه يغلي على نار هادئة", "ارفع الدلة عن النار ودع القهوة تهدأ قليلاً", "اصب القهوة في الفناجين الصغيرة وقدمها مع التمر"], correctAnswer: "اغلي الماء في الدلة على النار مع الهيل والزعفران | أضف البن المطحون ودعه يغلي على نار هادئة | ارفع الدلة عن النار ودع القهوة تهدأ قليلاً | اصب القهوة في الفناجين الصغيرة وقدمها مع التمر", explanation: "طريقة تحضير القهوة العربية: غلي الماء مع المطيبات، إضافة البن وغليه، تصفية وتهدئة القهوة، ثم تقديمها بالفناجين مع التمر."),
@@ -159,6 +164,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الإجابة التي تمثل السبب أو النتيجة الأكثر منطقية للموقف المعطى.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "السبب: ارتفعت درجات الحرارة في فصل الصيف لتتجاوز 45 درجة مئوية.", options: ["ارتفع استهلاك الكهرباء بشكل كبير نتيجة التشغيل المستمر للمكيفات", "ازدحم الناس في الشوارع للتنزه بشكل ملحوظ", "زادت مبيعات الملابس الشتوية الصوفية الثقيلة في الأسواق", "أعلنت محطات التوليد عن انخفاض حاد في كمية الوقود المستهلك"], correctAnswer: "ارتفع استهلاك الكهرباء بشكل كبير نتيجة التشغيل المستمر للمكيفات", explanation: "الحرارة الشديدة تؤدي لتشغيل المكيفات طوال الوقت مما يرفع استهلاك التيار الكهربائي بشكل قياسي."),
@@ -185,6 +191,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الخيار الذي يوضح عدم المنطقية أو الاستحالة في العبارة المعطاة.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "قام طارق بغلي إبريق من الحليب البارد وتقديمه ساخناً دون إشعال نار الموقد أو استخدام كهرباء.", options: ["لا يمكن غلي أي سائل دون مصدر حراري ينقل له الطاقة", "لا ينبغي خلط الحليب مع الشاي الجاف", "الحليب المغلي يتحول فوراً لثلج في درجة حرارة الغرفة", "لغلي الماء يجب استخدام زجاجة بلاستيكية مغلقة"], correctAnswer: "لا يمكن غلي أي سائل دون مصدر حراري ينقل له الطاقة", explanation: "عملية الغليان تتطلب فيزيائياً تسخين السائل ورفع حرارته؛ غليه دون نار أو كهرباء مستحيل."),
@@ -211,6 +218,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة المناسبة لإكمال المثل الشعبي العربي الشائع.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "أكمل المثل: من حفر حفرة لأخيه وقع ___.", options: ["فيها", "جنبها", "عليها", "خلفها"], correctAnswer: "فيها", explanation: "المثل العربي الشهير هو 'من حفر حفرة لأخيه وقع فيها'، ويدعو لعدم التآمر وإلحاق الأذى بالآخرين."),
@@ -237,6 +245,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة الصحيحة لإكمال الجمل بشكل منطقي وواضح.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[سأل / سال] ___ الولد والده عن موعد السفر. ___ الماء البارد من الحنفية في المطبخ.", options: ["سأل...سال", "سال...سأل", "سأل...سأل", "سال...سال"], correctAnswer: "سأل...سال", explanation: "'سأل' تعني طلب جواباً؛ 'سال' تعني تدفق وجرى للماء."),
@@ -264,6 +273,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة التي تكمل العلاقة التناظرية بأفضل شكل.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "الأعلى بالنسبة للأسفل كالحار بالنسبة للـ ___", options: ["بارد", "دافئ", "مغلي", "رطب"], correctAnswer: "بارد", explanation: "الأعلى والأسفل متضادان، كالحار والبارد."),
@@ -291,6 +301,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الإجابة التي تمثل السبب أو النتيجة الأكثر منطقية.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "السبب: سقط كوب زجاجي على أرضية إسمنتية.", options: ["انكسر الكوب", "طاف الكوب", "صار الكوب ناعماً", "صار الكوب أزرقاً"], correctAnswer: "انكسر الكوب", explanation: "الزجاج مادة قابلة للكسر وتتحطم عند سقوطها على الإسمنت الصلب."),
@@ -318,6 +329,7 @@ struct ArabicHardExercisesData {
         instructions: "حدد الخطأ المنطقي أو المستحيل في العبارة المعطاة.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "مستحيل: ارتدى طارق حذاءه قبل أن يرتدي جواربه.", options: ["يجب ارتداء الجوارب قبل الحذاء", "الحذاء يرتدى باليدين", "الجوارب تلبس على الرأس", "الحذاء يجب أكله"], correctAnswer: "يجب ارتداء الجوارب قبل الحذاء", explanation: "الجوارب تكون داخل الحذاء لحماية القدم، لذا تلبس أولاً."),
@@ -345,6 +357,7 @@ struct ArabicHardExercisesData {
         instructions: "رتب خطوات النشاط بترتيبها المنطقي السليم.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "إعداد توست محمص", options: ["ضع شريحة الخبز في المحمصة", "اضغط المقبض لأسفل للبدء", "انتظر حتى تخرج شريحة التوست تلقائياً", "ادهن التوست الساخن بالزبدة"], correctAnswer: "ضع شريحة الخبز في المحمصة | اضغط المقبض لأسفل للبدء | انتظر حتى تخرج شريحة التوست تلقائياً | ادهن التوست الساخن بالزبدة", explanation: "خطوات التوست: وضع الخبز، تشغيل المحمصة، الانتظار ليرتفع، ثم دهن الزبدة."),
@@ -362,6 +375,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة الأكثر ارتباطاً بالكلمة المعطاة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "المكتبة", options: ["هدوء", "ضوضاء", "ازدحام", "لعبة"], correctAnswer: "هدوء", explanation: "المكتبة مكان للقراءة والدراسة ويتطلب الهدوء."),
@@ -389,6 +403,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الزوج الصحيح من الكلمات المتشابهة لفظاً لإكمال الجمل.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[جد / جد] يتميز التاجر بـ ___ في عمله. ذهبنا لزيارة بيت ___ الحنون.", options: ["جد...جد", "جد...جد", "جد...جد", "جد...جد"], correctAnswer: "جد...جد", explanation: "الأولى تعني الجدية والاجتهاد؛ والثانية تعني والد الأب أو الأم."),
@@ -406,6 +421,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة التي تكمل المثل الشعبي العربي بشكل صحيح.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "من حفر حفرة لأخيه وقع ___", options: ["فيها", "جنبها", "عليها", "خلفها"], correctAnswer: "فيها", explanation: "المثل يدعو لعدم التآمر وإلحاق الأذى بالآخرين لأن الأذى يرتد على صاحبه."),
@@ -433,6 +449,7 @@ struct ArabicHardExercisesData {
         instructions: "اختر الكلمة التي تكمل المثل الشعبي العربي بشكل صحيح.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "اتقِ شر من ___ إليه", options: ["أحسنت", "أسأت", "تحدثت", "ذهبت"], correctAnswer: "أحسنت", explanation: "يحذر من غدر بعض الأشخاص بالرغم من معروفك وإحسانك السابق إليهم."),

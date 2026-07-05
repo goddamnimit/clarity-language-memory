@@ -28,6 +28,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -250,6 +251,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -430,6 +432,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ thích hợp nhất để hoàn thành cụm từ thường dùng.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -582,6 +585,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -664,6 +668,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -746,6 +751,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ có nghĩa ĐỐI LẠI với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -828,6 +834,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ hoàn thành câu tốt nhất.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -980,6 +987,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ loại hoặc lượng từ thích hợp để hoàn thành câu.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1132,6 +1140,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ phù hợp nhất với sự tương tự.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1249,6 +1258,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Quyết định: tuyên bố này là SỰ THẬT hay Ý KIẾN?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1436,6 +1446,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Các bước được hiển thị theo thứ tự SAI. Đánh số 1, 2, 3... để xếp chúng theo đúng thứ tự.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1504,6 +1515,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1726,6 +1738,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1906,6 +1919,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ thích hợp nhất để hoàn thành cụm từ thường dùng.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -2058,6 +2072,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -2140,6 +2155,7 @@ struct VietnameseLanguageExerciseData {
         instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

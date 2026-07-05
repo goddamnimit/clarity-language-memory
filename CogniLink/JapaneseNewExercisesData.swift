@@ -28,6 +28,7 @@ struct JapaneseNewExercisesData {
         instructions: "与えられた言葉と韻が合う言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "つき と韻を踏む言葉は？", options: ["やま", "すき", "かわ", "そら"], correctAnswer: "すき", explanation: ""),
@@ -55,6 +56,7 @@ struct JapaneseNewExercisesData {
         instructions: "与えられた言葉と最も関係が深い言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "柔道 と最も関係が深いのは？", options: ["道着", "ラケット", "バット", "グローブ"], correctAnswer: "道着", explanation: ""),
@@ -82,6 +84,7 @@ struct JapaneseNewExercisesData {
         instructions: "ことわざの空欄に入る言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "三人寄れば文殊の＿", options: ["知恵", "力", "笑い"], correctAnswer: "知恵", explanation: ""),
@@ -109,6 +112,7 @@ struct JapaneseNewExercisesData {
         instructions: "二つの言葉を合わせてできる複合語を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "山 + 道 = ？", options: ["道山", "山道", "山路", "路山"], correctAnswer: "山道", explanation: ""),
@@ -136,6 +140,7 @@ struct JapaneseNewExercisesData {
         instructions: "空欄に入る最も適切な言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "＿化（〜になること）: 高齢", options: ["高齢化", "高齢式", "高齢性"], correctAnswer: "高齢化", explanation: ""),
@@ -165,6 +170,7 @@ struct JapaneseNewExercisesData {
         instructions: "短い物語を読んで、質問に答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "清水さんは毎朝何時に公園を散歩しますか？", options: ["7時", "8時", "9時", "10時"], correctAnswer: "8時", explanation: "", passage: "清水さんは毎朝8時に公園を散歩します。火曜日は雨だったので休みました。"),
@@ -192,6 +198,7 @@ struct JapaneseNewExercisesData {
         instructions: "次の数字の並びを続けてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "次の数列を続けてください: 3, 6, 9, 12, ___", options: ["13", "14", "15", "16"], correctAnswer: "15", explanation: ""),
@@ -219,6 +226,7 @@ struct JapaneseNewExercisesData {
         instructions: "原因と結果の関係を答えてください。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "毎日水を飲まなかったら？", options: ["体が健康になる", "脱水症状になりやすい", "体重が増える", "食欲が増す"], correctAnswer: "脱水症状になりやすい", explanation: ""),
@@ -246,6 +254,7 @@ struct JapaneseNewExercisesData {
         instructions: "この場面でどんな気持ちになりますか？",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "大切にしていたものが壊れたとき、どんな気持ちになりますか？", options: ["うれしい", "悲しい", "ほっとする", "楽しい"], correctAnswer: "悲しい", explanation: ""),
@@ -273,6 +282,7 @@ struct JapaneseNewExercisesData {
         instructions: "この状況でおかしいことは何ですか？",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "田中さんは北海道に旅行するために水着と日焼け止めだけ持っていきました（冬季）。何がおかしいですか？", options: ["旅行の行き先", "冬の北海道に夏の持ち物だけ持っていったこと", "田中さんの名前", "何もおかしくない"], correctAnswer: "冬の北海道に夏の持ち物だけ持っていったこと", explanation: ""),
@@ -302,6 +312,7 @@ struct JapaneseNewExercisesData {
         instructions: "薬の指示を読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "「この薬は冷暗所に保管してください」とあります。どこに保管しますか？", options: ["窓際の明るい場所", "直射日光のあたる棚", "暗くて涼しい場所", "熱い車の中"], correctAnswer: "暗くて涼しい場所", explanation: ""),
@@ -329,6 +340,7 @@ struct JapaneseNewExercisesData {
         instructions: "メニューを読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "「定食A：830円、定食B：950円、定食C：1,100円」。3種類の定食を全部注文したらいくらですか？", options: ["2,780円", "2,880円", "2,980円", "3,080円"], correctAnswer: "2,880円", explanation: ""),
@@ -356,6 +368,7 @@ struct JapaneseNewExercisesData {
         instructions: "請求書や領収書を読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "電気代の請求書に「1月分：5,400円、2月分：6,200円」と2ヶ月分まとめて届きました。合計いくら払いますか？", options: ["10,400円", "11,000円", "11,600円", "12,000円"], correctAnswer: "11,600円", explanation: ""),
@@ -383,6 +396,7 @@ struct JapaneseNewExercisesData {
         instructions: "この状況でどうすれば良いか答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "初めて飲む薬に不安があるとき、どうすれば良いですか？", options: ["飲まない", "薬剤師に副作用や飲み方を確認する", "量を自分で減らして飲む", "他人の体験談だけを参考にする"], correctAnswer: "薬剤師に副作用や飲み方を確認する", explanation: ""),

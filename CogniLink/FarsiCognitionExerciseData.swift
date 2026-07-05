@@ -29,6 +29,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "به کسی که مو می‌برد چه می‌گویند؟", options: ["آرایشگر", "لوله‌کش", "برقکار", "اپتومتریست"], correctAnswer: "آرایشگر"),
@@ -61,6 +62,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "برای شنا در داخل ساختمان به کجا می‌روند؟", options: ["باشگاه", "پارک", "استخر", "دریاچه"], correctAnswer: "استخر"),
@@ -93,6 +95,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "رمئو و ژولیت را چه کسی نوشت؟", options: ["چارلز دیکنز", "ویلیام شکسپیر", "جین آستن", "ویکتور هوگو"], correctAnswer: "ویلیام شکسپیر"),
@@ -120,6 +123,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "عید نوروز کی جشن گرفته می‌شود؟", options: ["اول دی ماه", "اول بهمن", "اول فروردین (۲۱ مارس)", "اول مهر"], correctAnswer: "اول فروردین (۲۱ مارس)"),
@@ -147,6 +151,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "قبل از غذا خوردن چرا دست‌ها را می‌شوییم؟", options: ["گرم کردن دست‌ها", "از بین بردن میکروب‌ها و جلوگیری از بیماری", "رعایت ادب", "نرم کردن پوست"], correctAnswer: "از بین بردن میکروب‌ها و جلوگیری از بیماری"),
@@ -174,6 +179,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "یک هفته چند روز دارد؟", options: ["5", "6", "7", "8"], correctAnswer: "7"),
@@ -206,6 +212,7 @@ struct FarsiCognitionExerciseData {
         instructions: "بله یا خیر جواب دهید.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "آیا خورشید یک ستاره است؟", options: ["Yes", "No"], correctAnswer: "Yes"),
@@ -238,6 +245,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "اولین رئیس‌جمهور آمریکا چه کسی بود؟", options: ["جان آدامز", "جرج واشینگتن", "توماس جفرسون", "بنجامین فرانکلین"], correctAnswer: "جرج واشینگتن"),
@@ -265,6 +273,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "پایتخت ایران کجاست؟", options: ["اصفهان", "شیراز", "مشهد", "تهران"], correctAnswer: "تهران"),
@@ -297,6 +306,7 @@ struct FarsiCognitionExerciseData {
         instructions: "جواب درست را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "فیلم «جدایی نادر از سیمین» ساخته چه کسی است؟", options: ["مجید مجیدی", "عباس کیارستمی", "اصغر فرهادی", "داریوش مهرجویی"], correctAnswer: "اصغر فرهادی"),
@@ -325,6 +335,7 @@ struct FarsiCognitionExerciseData {
         instructions: "معنی ضرب‌المثل را به زبان خودتان توضیح دهید.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "آب در هاون کوبیدن", options: [], correctAnswer: "کار بیهوده انجام دادن — تلاش برای کاری که هیچ نتیجه‌ای ندارد"),
@@ -352,6 +363,7 @@ struct FarsiCognitionExerciseData {
         instructions: "مناسب‌ترین و درست‌ترین جواب را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "پختن تخم‌مرغ آب‌پز نیمه‌سفت چقدر طول می‌کشد؟", options: ["۱ دقیقه", "۶ دقیقه", "۲۰ دقیقه", "۱ ساعت"], correctAnswer: "۶ دقیقه"),
@@ -383,6 +395,7 @@ struct FarsiCognitionExerciseData {
         instructions: "هر موقعیت را بخوانید و مناسب‌ترین نتیجه را انتخاب کنید.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "کسی مایوی شنا و عینک آفتابی دارد. احتمالاً به کجا می‌رود؟", options: ["سینما", "ساحل یا استخر", "عروسی", "خرید مواد غذایی"], correctAnswer: "ساحل یا استخر"),
@@ -410,6 +423,7 @@ struct FarsiCognitionExerciseData {
         instructions: "این سوال‌ها باز هستند. جواب درست یا غلطی وجود ندارد. خاطرات خود را به اشتراک بگذارید.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "در کدام شهر یا محله بزرگ شدید؟", options: [], correctAnswer: ""),
@@ -442,6 +456,7 @@ struct FarsiCognitionExerciseData {
         instructions: "در هر دسته هر چقدر که به خاطر می‌آورید بگویید. سپس لیست کامل را ببینید.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ماه‌های سال شمسی را به ترتیب بگویید", options: [], correctAnswer: "فروردین، اردیبهشت، خرداد، تیر، مرداد، شهریور، مهر، آبان، آذر، دی، بهمن، اسفند"),

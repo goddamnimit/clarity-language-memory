@@ -9,6 +9,7 @@ struct EnglishMinimalPairsData {
             instructions: "Read the question and choose the correct word.",
             section: .language,
             type: .minimalPairs,
+            trackedType: nil,
             difficulty: .easy,
             items: [
                 ExerciseItem(

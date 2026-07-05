@@ -28,6 +28,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اضغط على الكلمة التي لا تنتمي إلى المجموعة.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -250,6 +251,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اضغط على الكلمة التي لا تنتمي إلى المجموعة.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -430,6 +432,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة الأكثر ملاءمة لإكمال التعبير الشائع.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -582,6 +585,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي تعني نفس الكلمة المحددة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -664,6 +668,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي تعني نفس الكلمة المحددة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -746,6 +751,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي تعني عكس الكلمة المحددة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -828,6 +834,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي تكمل الجملة بشكل أفضل.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -980,6 +987,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الصيغة الصرفية الصحيحة للكلمة لتناسب الجملة.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1132,6 +1140,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي تكمل التشبيه بشكل أفضل.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1249,6 +1258,7 @@ struct ArabicLanguageExerciseData {
         instructions: "قرر: هل هذا البيان حقيقة أم رأي؟",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1436,6 +1446,7 @@ struct ArabicLanguageExerciseData {
         instructions: "يتم عرض الخطوات بالترتيب الخاطئ. قم بترقيمها 1، 2، 3... لوضعها بالتسلسل الصحيح.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1504,6 +1515,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة التي لها نفس قافية الكلمة المعطاة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1656,6 +1668,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة الأكثر ارتباطًا بالكلمة المحددة.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1808,6 +1821,7 @@ struct ArabicLanguageExerciseData {
         instructions: "أكمل المثل الشعبي باختيار الكلمة المناسبة.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1960,6 +1974,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الكلمة المركبة الصحيحة الناتجة عن دمج الكلمتين.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -2112,6 +2127,7 @@ struct ArabicLanguageExerciseData {
         instructions: "اختر الوزن الصرفي أو المشتق الصحيح للكلمة المذكورة.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

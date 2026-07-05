@@ -23,6 +23,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "જે શબ્દ જૂથમાં ન આવતો હોય તે પસંદ કરો.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "સફરજન, નાસપાતી, ગાજર, જાંબુ", options: ["સફરજન", "નાસપાતી", "ગાજર", "જાંબુ"], correctAnswer: "ગાજર", explanation: "શાકભાજી, ફળ નહીં"),
@@ -65,6 +66,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "જે શબ્દ જૂથમાં ન આવતો હોય તે પસંદ કરો.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ઉપમા, રૂપક, અતિશયોક્તિ, ફકરો", options: ["ઉપમા", "રૂપક", "અતિશયોક્તિ", "ફકરો"], correctAnswer: "ફકરો", explanation: "લખાણ માળખું, અલંકાર નહીં"),
@@ -103,6 +105,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "સાચો શબ્દ પસંદ કરીને કહેવત પૂરી કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ઊંટ ઉપર ___ ની ઘોડેસવારી.", options: ["ઊંટ", "ઘોડો", "ગધેડો", "ભેંસ"], correctAnswer: "ઊંટ"),
@@ -135,6 +138,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "દિેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "શબ્દ: ગુસ્સો", options: ["ખુશ", "ક્રોધિત", "શાંત", "ઉદાસ"], correctAnswer: "ક્રોધિત"),
@@ -157,6 +161,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "દિેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "શબ્દ: ઉદાસ", options: ["આનંદી", "દુઃખી", "ઉત્સાહી", "સંતુષ્ટ"], correctAnswer: "દુઃખી"),
@@ -179,6 +184,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "દિેલ શબ્દ વિરુદ્ધ અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "શબ્દ: ગરમ", options: ["હૂંફાળું", "ઠંડું", "સુહાવનું", "તપ્ત"], correctAnswer: "ઠંડું"),
@@ -201,6 +207,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "વાક્ય પૂર્ણ કરવા માટે સાચો શબ્દ પસંદ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "એણે ___ ને પાણી પાયું.", options: ["છોડ", "ફ્લોર", "લોટ", "ઘઉં"], correctAnswer: "છોડ"),
@@ -235,6 +242,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "વાક્ય પૂર્ણ કરવા માટે સાચું સ્વરૂપ પસંદ કરો.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "બાળકો ઝડપથી ___.", options: ["દોડ", "દોડ્યા", "દોડવું", "દોડતા"], correctAnswer: "દોડ્યા"),
@@ -267,6 +275,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "સાચો શબ્દ પસંદ કરો જે સામ્ય પૂરું કરે.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "પાડો : ઘોડો :: ગલૂડિયું : ___", options: ["બિલાડી", "કૂતરો", "પક્ષી", "માછલી"], correctAnswer: "બિલાડી"),
@@ -294,6 +303,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "નક્કી કરો: આ કથન હકીકત છે કે મત?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "એક અઠવાડિયામાં ૭ દિવસ હોય છે.", options: ["Fact", "Opinion"], correctAnswer: "Fact"),
@@ -331,6 +341,7 @@ struct GujaratiLanguageExerciseData {
         instructions: "આ પગલાં ખોટા ક્રમમાં છે. સાચા ક્રમમાં ગોઠવો.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(

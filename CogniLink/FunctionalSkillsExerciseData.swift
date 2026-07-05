@@ -20,6 +20,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "Read each scenario. Describe what you would do. Tap 'Show Answer' to see the best response.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "You fall in your basement and think you might have twisted your ankle.", options: [], correctAnswer: "Stay still. Do not try to walk on it. Call out for help. If alone, call 911 or use your phone. Only move if you can do so safely.", explanation: ""),
@@ -57,6 +58,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "Choose the correct answer for each question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "How many hours are in one day?", options: ["12", "24", "48", "36"], correctAnswer: "24", explanation: ""),
@@ -89,6 +91,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "For each item, choose which option gives you better value for your money.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Toilet paper: A) 4 rolls for $2.00 ($0.50 per roll)  B) 6 rolls for $2.70 ($0.45 per roll)", options: ["Option A — 4 rolls for $2.00", "Option B — 6 rolls for $2.70"], correctAnswer: "Option B — 6 rolls for $2.70", explanation: "$0.45 per roll vs $0.50 per roll"),
@@ -114,6 +117,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "Write a response to each prompt. Tap 'Show Answer' to see a sample response.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Write a note to your pet-sitter Doreen explaining how to care for your two cats while you are away for 4 days.", options: [], correctAnswer: "Hi Doreen, Thank you for watching Biscuit and Ginger. Please feed them each half a cup of dry food morning and evening. Fresh water daily. Ginger hides under the bed but will come out when hungry. Scoop the litter box once a day. Litter and food are in the cabinet under the sink. Call me if anything comes up. — [Your Name]", explanation: ""),
@@ -134,6 +138,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "The steps are listed in the WRONG order. Number them 1, 2, 3 to put them in the correct sequence.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -216,6 +221,7 @@ struct FunctionalSkillsExerciseData {
         instructions: "For each task, describe: what supplies you need, the key steps, and what could go wrong. Tap 'Show Answer' to see guidance.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "How do you do laundry?", options: [], correctAnswer: "Supplies: dirty clothes, detergent, dryer sheets. Steps: Sort by color and fabric. Check pockets. Add correct amount of detergent. Set water temperature. Move to dryer when done. Fold promptly. Watch out for: red clothes with whites, overloading the machine, forgetting wet clothes in the washer.", explanation: ""),

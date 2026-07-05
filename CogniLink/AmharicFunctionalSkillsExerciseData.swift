@@ -8,6 +8,7 @@ struct AmharicFunctionalSkillsExerciseData {
             instructions: "ጥያቄዎቹን በጥንቃቄ ይመልሱ።",
             section: .language,
             type: .multipleChoice,
+            trackedType: nil,
             difficulty: .medium,
             items: [
                 ExerciseItem(id: UUID(), prompt: "ተግባራዊ ተግባር 1 ፦ ቡና ለማፍላት መጀመሪያ ምን ይደረጋል?", options: ["ውሃ ማፍላት", "ስኳር መጨመር", "ቡና መቁላት", "መጠጣት"], correctAnswer: "ውሃ ማፍላት", explanation: ""),

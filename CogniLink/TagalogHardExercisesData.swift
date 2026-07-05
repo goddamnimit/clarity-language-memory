@@ -29,6 +29,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang tamang pares ng salita na magkapareho ang baybay upang kumpletuhin ang mga pangungusap.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[baga / baga] Mainit pa ang mga ___ sa kalan. May sakit ang kanyang ___.", options: ["baga...baga", "baga...lungs", "lungs...baga", "baga...apoy"], correctAnswer: "baga...baga", explanation: "Ang unang 'baga' ay tumutukoy sa ningas ng apoy; ang pangalawang 'baga' ay organ sa katawan para sa paghinga (lungs)."),
@@ -55,6 +56,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na pinakamahusay na kumukumpleto sa analohiya.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "SOLILOQUY ay sa AKTOR gaya ng SERMON ay sa ___", options: ["Pari", "Miyembro", "Koro", "Simbahan"], correctAnswer: "Pari", explanation: "Ang soliloquy ay sinasalita ng aktor, habang ang sermon naman ay binibigkas ng pari o pastor."),
@@ -81,6 +83,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na may pinakamalapit na ugnayan sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ALTRUISMO", options: ["Pagkakawanggawa", "Kaguluhan", "Galit", "Inggit"], correctAnswer: "Pagkakawanggawa", explanation: "Ang altruismo ay ang walang pag-iimbot na pagtulong o pagkakawanggawa sa iba."),
@@ -107,6 +110,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang pinakaangkop na salita upang kumpletuhin ang pangungusap.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Nakatulong ang malakas na ulan upang ___ ang matinding tuyot sa lalawigan.", options: ["maibsan", "palalain", "panatilihin", "patagalin"], correctAnswer: "maibsan", explanation: "Ang ulan ay nagbibigay ng tubig na nakababawas o nakagagaan (nakapagpapaiibsan) sa tuyot o tagtuyot."),
@@ -133,6 +137,7 @@ struct TagalogHardExercisesData {
         instructions: "Ayusin ang mga hakbang ng aktibidad sa isang lohikal na pagkakasunod-sunod.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Paggawa ng kape gamit ang filter", options: ["Initin ang tubig ngunit huwag hayaang kumulo nang husto", "Ilagay ang giniling na kape sa salaan na may papel na filter", "Ibuhos ang mainit na tubig nang pabilog sa ibabaw ng kape", "Lagyan ng asukal o gatas at ihain sa tasa"], correctAnswer: "Initin ang tubig ngunit huwag hayaang kumulo nang husto | Ilagay ang giniling na kape sa salaan na may papel na filter | Ibuhos ang mainit na tubig nang pabilog sa ibabaw ng kape | Lagyan ng asukal o gatas at ihain sa tasa", explanation: "Paggawa ng kape: painitin ang tubig, ilagay ang kape sa filter, ibuhos ang tubig, at lagyan ng lasa bago ihain."),
@@ -159,6 +164,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang pinaka-lohikal na sanhi o bunga para sa ibinigay na sitwasyon.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Sanhi: Umabot sa higit 43 degrees Celsius ang temperatura nitong tag-araw.", options: ["Tumaas nang malaki ang konsumo sa kuryente dahil sa aircon", "Dumami ang mga taong namamasyal sa labas ng kalsada", "Tumaas ang benta ng makakapal na jacket sa mga tindahan", "Nag-anunsyo ang mga planta na bumaba ang konsumo sa kuryente"], correctAnswer: "Tumaas nang malaki ang konsumo sa kuryente dahil sa aircon", explanation: "Ang matinding init ay nagiging dahilan ng madalas na paggamit ng aircon, na nagpapataas sa konsumo ng kuryente."),
@@ -185,6 +191,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang sagot na nagpapaliwanag kung bakit imposible o hindi lohikal ang sitwasyon.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Nagluto si Juan ng mainit na tsaang gatas sa malamig na kaldero nang hindi binubuksan ang kalan.", options: ["Hindi makakapagluto o makakapagpakulo ng likido nang walang init", "Hindi dapat hinahaluan ng gatas ang tsaa", "Ang mainit na tsaa ay agad na nagiging yelo sa kuwarto", "Kailangang gumamit ng boteng plastic sa pagpapakulo ng tubig"], correctAnswer: "Hindi makakapagluto o makakapagpakulo ng likido nang walang init", explanation: "Ang pagpapakulo ay nangangailangan ng init; hindi ito mangyayari sa malamig na kalan."),
@@ -211,6 +218,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na tamang kumukumpleto sa salawikain o kasabihang Pilipino.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Kumpletuhin ang kasabihan: Ang hindi lumingon sa pinanggalingan ay hindi makararating sa ___.", options: ["paroroonan", "bahay", "kalsada", "bayan"], correctAnswer: "paroroonan", explanation: "Ang kilalang salawikain ay 'Ang hindi lumingon sa pinanggalingan ay hindi makararating sa paroroonan', na nagtuturo ng pagpapahalaga sa ating pinagmulan."),
@@ -237,6 +245,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang tamang salita upang kumpletuhin ang mga pangungusap.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[saya / saya] Maganda ang kanyang bagong pulang ___. Puno ng ___ ang kanyang kaarawan.", options: ["saya...saya", "saya...lungkot", "lungkot...saya", "saya...damit"], correctAnswer: "saya...saya", explanation: "Ang unang 'saya' ay damit ng babae (skirt); ang pangalawang 'saya' ay kagalakan (happiness)."),
@@ -263,6 +272,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na pinakamahusay na nakakumpleto sa analhiya.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "TAAS ay sa BABA tulad ng MAINIT ay sa MALAMIG", options: ["MALAMIG", "MALAMBING", "KUMUKULO", "BASA"], correctAnswer: "MALAMIG", explanation: "Ang taas at baba ay magkasalungat, tulad ng mainit at malamig."),
@@ -288,6 +298,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang pinaka-lohikal na sanhi o bunga.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Sanhi: Nabitawan mo ang basong bubog sa semento.", options: ["Nabasag ang baso", "Lulutang ang baso", "Lalambot ang baso", "Magiging asul ang baso"], correctAnswer: "Nabasag ang baso", explanation: "Ang bubog ay madaling mabasag kapag bumagsak sa matigas na sahig."),
@@ -314,6 +325,7 @@ struct TagalogHardExercisesData {
         instructions: "Tukuyin ang lohikal na mali o imposible sa pahayag.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Mali: Nagsuot si Juan ng sapatos bago ang kanyang medyas.", options: ["Dapat isuot ang medyas bago ang sapatos", "Dapat ilagay ang sapatos sa kamay", "Ang medyas ay sinusuot sa ulo", "Dapat kainin ang sapatos"], correctAnswer: "Dapat isuot ang medyas bago ang sapatos", explanation: "Ang medyas ay nasa loob ng sapatos, kaya ito ang unang sinusuot."),
@@ -340,6 +352,7 @@ struct TagalogHardExercisesData {
         instructions: "Ayusin ang mga hakbang ng aktibidad sa tamang pagkakasunod-sunod.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Paggawa ng tinapay na tostado (toast)", options: ["Ilagay ang tinapay sa toaster", "Ibaon ang lever para mag-init", "Hintaying lumabas o tumalon ang tinapay", "Pahiran ng mantikilya ang tinapay"], correctAnswer: "Ilagay ang tinapay sa toaster | Ibaon ang lever para mag-init | Hintaying lumabas o tumalon ang tinapay | Pahiran ng mantikilya ang tinapay", explanation: "Ilagay ang tinapay, painitin, hintaying lumabas, saka pahiran ng mantikilya."),
@@ -356,6 +369,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na may pinakamalapit na kaugnayan sa ibinigay na salita.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "AKLATAN (LIBRARY)", options: ["Katahimikan", "Ingay", "Maraming Tao", "Laro"], correctAnswer: "Katahimikan", explanation: "Ang aklatan ay lugar ng pag-aaral kung saan kinakailangan ang katahimikan."),
@@ -382,6 +396,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang tamang pares ng salita upang makumpleto ang mga pangungusap.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[basa / basa] Ang basang papel ay mahirap sulatan. Ang ___ ng libro ay nakakatalino.", options: ["basa...basa", "basa...basa", "basa...basa", "basa...basa"], correctAnswer: "basa...basa", explanation: "Ang unang 'basa' ay may tubig (wet); ang ikalawang 'basa' ay pagbabasa (read)."),
@@ -398,6 +413,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na tamang nakakumpleto sa salawikain.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Aanhin pa ang damo, kung patay na ang ___", options: ["kabayo", "baka", "aso", "pusa"], correctAnswer: "kabayo", explanation: "Walang silbi ang tulong o ibinibigay kung huli na ang lahat."),
@@ -424,6 +440,7 @@ struct TagalogHardExercisesData {
         instructions: "Piliin ang salita na tamang nakakumpleto sa salawikain.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Kapag ang ilog ay matahimik, asahan mong ito ay ___", options: ["malalim", "mababaw", "marumi", "tuyo"], correctAnswer: "malalim", explanation: "Ang taong tahimik ay malalim mag-isip at may malawak na kaalaman."),

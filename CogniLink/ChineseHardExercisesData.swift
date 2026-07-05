@@ -29,6 +29,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择正确的同音词填空以完成句子。",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[权力 / 权利] 保护个人私有财产是公民的___。市长拥有签署这项法令的___。", options: ["权利...权力", "权力...权利", "权利...权利", "权力...权力"], correctAnswer: "权利...权力", explanation: "“权利”指法律赋予的权益，“权力”指行政或统治的力量。"),
@@ -55,6 +56,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择最符合类比关系的词语完成题目。",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "独白之于演员，相当于布道之于___", options: ["传教士", "信徒", "唱诗班", "教堂"], correctAnswer: "传教士", explanation: "独白是演员的职业说话行为，布道是传教士的职业说话行为。"),
@@ -81,6 +83,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择与所给词语联想最紧密的选项。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "利他主义", options: ["无私", "贪婪", "愤怒", "嫉妒"], correctAnswer: "无私", explanation: "利他主义（altruism）的核心特征是无私地奉献和帮助他人。"),
@@ -107,6 +110,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择最合适的词语将句子补充完整。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "这场大雨缓解了我国北方地区持续多月的___灾情。", options: ["旱灾", "水灾", "虫灾", "风灾"], correctAnswer: "旱灾", explanation: "下雨最能直接缓解土地缺水的旱灾。"),
@@ -133,6 +137,7 @@ struct ChineseHardExercisesData {
         instructions: "请将下列日常活动步骤按符合逻辑的顺序进行排列。",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "泡茶", options: ["将沸水冲入茶壶中", "将茶叶放入茶壶中", "用沸水清洗茶具（温壶）", "静置几分钟后倒入茶杯享用"], correctAnswer: "用沸水清洗茶具（温壶） | 将茶叶放入茶壶中 | 将沸水冲入茶壶中 | 静置几分钟后倒入茶杯享用", explanation: "泡茶的一般顺序是：先温壶，放茶叶，冲入热水，最后静置滤出茶水享用。"),
@@ -159,6 +164,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择逻辑上最合理的因或果完成题目。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "原因：夏季全国多地气温突破40摄氏度。", options: ["居民用电量急剧上升，空调负荷创历史新高", "城市街道上的行人流量急剧增加", "市场上厚冬装的销量大幅提升", "发电厂宣布用煤用电量大幅减少"], correctAnswer: "居民用电量急剧上升，空调负荷创历史新高", explanation: "持续高温使得居民长时间使用空调避暑，用电负荷随之飙升。"),
@@ -185,6 +191,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择指出了描述中逻辑上不可能或荒谬之处的选项。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "王师傅在没有生火的炉子上，将一壶冰水放在冰冷的水壶里煮沸了。", options: ["没有热源的情况下，任何液体都无法被加热煮沸", "水壶里不应该加入茶叶", "冰水只能在太阳底下晒干", "煮开水必须使用塑料瓶"], correctAnswer: "没有热源的情况下，任何液体都无法被加热煮沸", explanation: "煮沸需要大量热量，没有火或电源加热是绝对无法烧开水的。"),
@@ -211,6 +218,7 @@ struct ChineseHardExercisesData {
         instructions: "请选择正确的字词将成语或俗语补充完整。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "补全俗语：三个臭皮匠，顶个___。", options: ["诸葛亮", "关云长", "曹孟德", "周公瑾"], correctAnswer: "诸葛亮", explanation: "俗语为“三个臭皮匠，顶个诸葛亮”，比喻人多智慧广。"),
@@ -237,6 +245,7 @@ struct ChineseHardExercisesData {
         instructions: "选择正确的同音词填空，使句子完整。",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[mù / mù] 森林里有很多高大的 ___ 头。 他的双 ___ 炯炯有神。", options: ["木...目", "目...木", "木...木", "目...目"], correctAnswer: "木...目", explanation: "“木”指树木或木头；“目”指眼睛。"),
@@ -263,6 +272,7 @@ struct ChineseHardExercisesData {
         instructions: "选择最能完成类比的词。",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "上之于下 相当于 热之于什么？", options: ["冷", "温", "烫", "湿"], correctAnswer: "冷", explanation: "上和下是反义词，热和冷也是反义词。"),
@@ -289,6 +299,7 @@ struct ChineseHardExercisesData {
         instructions: "选择最合理的因果关系选项。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "原因：你在水泥地上扔了一个玻璃杯。", options: ["玻璃杯碎了", "玻璃杯漂浮", "玻璃杯变软", "玻璃杯变蓝"], correctAnswer: "玻璃杯碎了", explanation: "易碎的玻璃杯掉在坚硬的地面上会摔碎。"),
@@ -315,6 +326,7 @@ struct ChineseHardExercisesData {
         instructions: "找出陈述中逻辑错误或不可能发生的地方。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "荒谬：小明先穿鞋子，再穿袜子。", options: ["袜子应该穿在鞋子里面", "鞋子应该戴在手上", "袜子应该戴在头上", "鞋子应该用来吃"], correctAnswer: "袜子应该穿在鞋子里面", explanation: "常识是先穿袜子保护脚部，再穿鞋子。"),
@@ -341,6 +353,7 @@ struct ChineseHardExercisesData {
         instructions: "将活动的步骤按正确的逻辑顺序排列。",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "烤面包片", options: ["把面包片放进烤面包机", "按压手柄启动加热", "等待烤好的面包片弹起", "在烤面包片上涂抹黄油"], correctAnswer: "把面包片放进烤面包机 | 按压手柄启动加热 | 等待烤好的面包片弹起 | 在烤面包片上涂抹黄油", explanation: "烤面包需要先放入面包，按下开关，弹起后涂黄油食用。"),
@@ -357,6 +370,7 @@ struct ChineseHardExercisesData {
         instructions: "选择与给出提示词关系最密切的词语。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "图书馆", options: ["安静", "噪音", "拥挤", "游戏"], correctAnswer: "安静", explanation: "图书馆是阅读学习的地方，要求保持安静。"),
@@ -383,6 +397,7 @@ struct ChineseHardExercisesData {
         instructions: "选择正确的同音字组合完成句子。",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[权力 / 权利] 保护个人财产是公民的___。宪法规定了国家机关的___。", options: ["权利...权力", "权力...权利", "权利...权利", "权力...权力"], correctAnswer: "权利...权力", explanation: "“权利”指法律赋予的权益，“权力”指控制力。"),
@@ -399,6 +414,7 @@ struct ChineseHardExercisesData {
         instructions: "选择最合适的词语来完成这个常用俗语。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "一寸光阴一寸___", options: ["金", "银", "铁", "土"], correctAnswer: "金", explanation: "俗语“一寸光阴一寸金”比喻时间极其珍贵。"),
@@ -425,6 +441,7 @@ struct ChineseHardExercisesData {
         instructions: "选择最合适的词语来完成这个常用俗语。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "独木不成___", options: ["林", "森", "桥", "板"], correctAnswer: "林", explanation: "一棵树成不了森林，比喻个人力量单薄，必须依靠集体。"),

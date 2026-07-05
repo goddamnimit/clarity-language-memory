@@ -21,6 +21,7 @@ struct KoreanCognitionExerciseData {
         instructions: "제시된 관용적 표현의 올바른 뜻을 고르세요.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -279,6 +280,7 @@ struct KoreanCognitionExerciseData {
         instructions: "짧은 이야기를 읽고 그에 대한 질문에 답해 보세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "최수진이 집에 두고 온 것은?", options: ["그녀의 지갑", "그녀의 열쇠", "그녀의 쇼핑리스트", "그녀의 전화"], correctAnswer: "그녀의 지갑", explanation: "이야기에 따르면 그녀는 부엌 카운터에 지갑을 잊어버렸다고 합니다.", passage: "최수진은 우유와 빵을 사러 H마트에 갔습니다. 그녀는 부엌 카운터에 지갑을 잊어버렸습니다."),
@@ -327,6 +329,7 @@ struct KoreanCognitionExerciseData {
         instructions: "순서대로 다음에 오는 숫자는 무엇입니까?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -479,6 +482,7 @@ struct KoreanCognitionExerciseData {
         instructions: "설명된 상황에 대해 가장 가능성이 높은 결과를 선택하세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -737,6 +741,7 @@ struct KoreanCognitionExerciseData {
         instructions: "상황을 읽고 그 사람이 느낄 가능성이 가장 높은 감정을 선택하십시오.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -995,6 +1000,7 @@ struct KoreanCognitionExerciseData {
         instructions: "문장에서 틀린 점이나 불가능한 점을 선택하세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1218,6 +1224,7 @@ struct KoreanCognitionExerciseData {
         instructions: "질문을 읽고 예 또는 아니오를 선택하세요.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1405,6 +1412,7 @@ struct KoreanCognitionExerciseData {
         instructions: "단어 사이의 관계를 파악하여 빈칸에 알맞은 단어를 선택하세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

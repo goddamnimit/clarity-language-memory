@@ -24,6 +24,7 @@ struct ChineseLanguageExerciseData {
         instructions: "哪个词不属于同一类？请选出来。",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "苹果、香蕉、橙子、胡萝卜", options: ["苹果", "香蕉", "橙子", "胡萝卜"], correctAnswer: "胡萝卜", explanation: "蔬菜，不是水果"),
@@ -66,6 +67,7 @@ struct ChineseLanguageExerciseData {
         instructions: "哪个词不属于同一类？请选出来。",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "唐朝、宋朝、明朝、民国", options: ["唐朝", "宋朝", "明朝", "民国"], correctAnswer: "民国", explanation: "共和政体，不是封建王朝"),
@@ -102,6 +104,7 @@ struct ChineseLanguageExerciseData {
         instructions: "完成以下成语。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "完成这个成语：一石＿＿", options: ["二鸟", "三鸟", "两鸟", "四鸟"], correctAnswer: "二鸟"),
@@ -134,6 +137,7 @@ struct ChineseLanguageExerciseData {
         instructions: "选出与划线词意思最相近的词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "哪个词和“高兴”意思最接近？", options: ["开心", "难过", "生气", "害怕"], correctAnswer: "开心"),
@@ -156,6 +160,7 @@ struct ChineseLanguageExerciseData {
         instructions: "选出与划线词意思最相近的词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "哪个词和“坚持”意思最接近？", options: ["持之以恒", "半途而废", "随波逐流", "犹豫不决"], correctAnswer: "持之以恒"),
@@ -178,6 +183,7 @@ struct ChineseLanguageExerciseData {
         instructions: "选出与划线词意思相反的词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "哪个词是“快乐”的反义词？", options: ["悲伤", "平静", "紧张", "疲惫"], correctAnswer: "悲伤"),
@@ -200,6 +206,7 @@ struct ChineseLanguageExerciseData {
         instructions: "选择最合适的词填入空格，完成句子。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "我每天早上用___刷牙。", options: ["牙刷", "筷子", "钥匙", "雨伞"], correctAnswer: "牙刷"),
@@ -232,6 +239,7 @@ struct ChineseLanguageExerciseData {
         instructions: "选择语法正确的词语形式填入空格。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "她唱歌唱得非常___。", options: ["好听", "好听地", "好听的", "好听了"], correctAnswer: "好听"),
@@ -264,6 +272,7 @@ struct ChineseLanguageExerciseData {
         instructions: "根据前两个词的关系，选出最合适的词完成类比。",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "苹果之于水果，犹如玫瑰之于___", options: ["花", "树", "草", "叶"], correctAnswer: "花"),
@@ -291,6 +300,7 @@ struct ChineseLanguageExerciseData {
         instructions: "判断以下句子是事实还是观点。",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "中国是世界上人口最多的国家之一。", options: ["Fact", "Opinion"], correctAnswer: "Fact"),
@@ -328,6 +338,7 @@ struct ChineseLanguageExerciseData {
         instructions: "以下步骤顺序已被打乱，请将它们排列成正确的顺序。",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(

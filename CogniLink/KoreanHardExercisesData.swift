@@ -29,6 +29,7 @@ struct KoreanHardExercisesData {
         instructions: "문장을 완성하기 위해 빈칸에 가장 적합한 동음이의어 쌍을 선택하십시오.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[의사 / 의사] 그는 환자를 고치는 ___이다. 나는 그의 제안에 찬성할 ___가 없다.", options: ["의사...의사", "의사...의견", "의견...의사", "의사...의지"], correctAnswer: "의사...의사", explanation: "의사(醫師)는 환자를 진료하는 사람이고, 의사(意思)는 마음의 생각을 뜻합니다."),
@@ -55,6 +56,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 단어와 가장 논리적인 유추 관계를 형성하는 단어를 선택하십시오.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "독백이 배우에게 해당된다면, 설교는 누구에게 해당됩니까?", options: ["설교자", "신도", "성가대", "예배당"], correctAnswer: "설교자", explanation: "독백은 배우의 직업적 말하기 행동이고, 설교는 설교자(목사, 신부 등)의 직업적 말하기 행동입니다."),
@@ -81,6 +83,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 단어와 가장 밀접하게 연상되는 단어를 선택하십시오.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "이타주의", options: ["무사심", "탐욕", "분노", "질투"], correctAnswer: "무사심", explanation: "이타주의(altruism)의 핵심적인 특성은 나보다 남을 먼저 생각하는 무사심과 헌신입니다."),
@@ -107,6 +110,7 @@ struct KoreanHardExercisesData {
         instructions: "문장을 가장 자연스럽게 완성하는 단어를 선택하십시오.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "지속적인 폭우로 인해 오랜 기간 이어지던 남부 지방의 ___가 마침내 해소되었다.", options: ["가뭄", "홍수", "산사태", "태풍"], correctAnswer: "가뭄", explanation: "폭우는 땅의 건조함을 해소하여 가뭄을 직접적으로 끝냅니다."),
@@ -133,6 +137,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 일상 활동을 논리적인 순서대로 배열하십시오.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "차 우려내기", options: ["찻주전자에 끓는 물을 붓는다", "찻주전자에 차나무 잎을 넣는다", "끓는 물로 찻잔과 주전자를 헹구어 따뜻하게 한다", "찻잎이 우러나도록 잠시 기다린 후 잔에 따라 마신다"], correctAnswer: "끓는 물로 찻잔과 주전자를 헹구어 따뜻하게 한다 | 찻주전자에 차나무 잎을 넣는다 | 찻주전자에 끓는 물을 붓는다 | 찻잎이 우러나도록 잠시 기다린 후 잔에 따라 마신다", explanation: "다도 기본: 주전자 예열, 찻잎 넣기, 더운물 붓기, 우려내서 마시기."),
@@ -159,6 +164,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 원인에 따른 가장 논리적인 결과 또는 그 원인을 선택하십시오.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "원인: 여름철 서울 지역의 기온이 섭씨 39도까지 치솟았다.", options: ["냉방 시설 사용이 급증하면서 전력 사용량이 최고치를 경신했다", "도심 거리에 지나다니는 행인의 수가 크게 증가했다", "시장에서 방한용 겨울 코트의 판매량이 급증했다", "발전소들이 예비 전력량이 너무 여유롭다고 발표했다"], correctAnswer: "냉방 시설 사용이 급증하면서 전력 사용량이 최고치를 경신했다", explanation: "폭염이 발생하면 에어컨 등 가전 기기 구동이 급증하여 예비 전력이 바닥나며 최대 전력 부하를 기록합니다."),
@@ -185,6 +191,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 글의 내용 중 논리적으로 발생할 수 없는 모순된 사실을 선택하십시오.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "김 씨는 가스레인지를 전혀 켜지 않은 상태에서 얼음처럼 차가운 냄비 속에 든 찻물을 10분 만에 펄펄 끓여냈다.", options: ["열에너지가 공급되지 않으면 어떤 액체도 스스로 가열되어 끓을 수 없다", "냄비 안에는 찻잎을 넣는 것이 규칙에 어긋난다", "찻물은 차갑게 식혀야만 비로소 향이 우러나온다", "물을 끓일 때는 반드시 얇은 플라스틱병만 써야 한다"], correctAnswer: "열에너지가 공급되지 않으면 어떤 액체도 스스로 가열되어 끓을 수 없다", explanation: "물리적 온도를 100도 이상으로 올리려면 전기나 화력 같은 외부 열원 작용이 필수입니다."),
@@ -211,6 +218,7 @@ struct KoreanHardExercisesData {
         instructions: "제시된 한국 전통 속담이나 사자성어를 완성하기에 가장 알맞은 단어를 선택하십시오.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "속담 완성: 꿩 대신 ___.", options: ["닭", "오리", "거위", "참새"], correctAnswer: "닭", explanation: "속담 '꿩 대신 닭'은 적당한 것이 없을 때 그와 비슷한 것으로 대신함을 이르는 말입니다."),
@@ -237,6 +245,7 @@ struct KoreanHardExercisesData {
         instructions: "문장을 완성하기 위해 올바른 동음이의어를 선택하세요.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[배 / 배] 우리는 바다 위에서 큰 ___를 탔다. 나는 달콤하고 시원한 ___를 먹었다.", options: ["배...배", "배...사과", "사과...배", "배...귤"], correctAnswer: "배...배", explanation: "첫 번째 '배'는 물 위를 떠다니는 교통수단(boat)이고, 두 번째 '배'는 달콤한 과일(pear)입니다."),
@@ -263,6 +272,7 @@ struct KoreanHardExercisesData {
         instructions: "유추를 가장 잘 완성하는 단어를 고르세요.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "위 와 아래 의 관계는 덥다 와 무엇의 관계와 같습니까?", options: ["춥다", "따뜻하다", "끓다", "젖다"], correctAnswer: "춥다", explanation: "위와 아래는 반대말이며, 덥다와 춥다 역시 반대말입니다."),
@@ -289,6 +299,7 @@ struct KoreanHardExercisesData {
         instructions: "가장 논리적인 원인이나 결과를 나타내는 옵션을 고르세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "원인: 유리컵을 콘크리트 바닥에 떨어뜨립니다.", options: ["유리가 깨집니다", "유리가 물에 뜹니다", "유리가 부드러워집니다", "유리가 파랗게 변합니다"], correctAnswer: "유리가 깨집니다", explanation: "단단한 바닥에 깨지기 쉬운 유리가 떨어지면 박살나거나 깨집니다."),
@@ -315,6 +326,7 @@ struct KoreanHardExercisesData {
         instructions: "문장에서 논리적 오류나 발생할 수 없는 일을 찾으세요.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "모순: 철수는 양말을 신기 전에 신발을 신었습니다.", options: ["양말은 신발 안에 신어야 합니다", "신발은 손에 신어야 합니다", "양말은 머리에 쓰는 것입니다", "신발은 먹는 것입니다"], correctAnswer: "양말은 신발 안에 신어야 합니다", explanation: "양말은 신발 내부의 쓸림을 막기 위해 신발보다 먼저 신어야 합니다."),
@@ -341,6 +353,7 @@ struct KoreanHardExercisesData {
         instructions: "활동 단계를 올바른 논리적 순서로 배열하세요.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "토스트 굽기", options: ["식빵 한 조각을 토스터에 넣는다", "레버를 아래로 눌러 굽기 시작한다", "다 구워진 토스트가 위로 올라올 때까지 기다린다", "따뜻한 토스트에 버터를 바른다"], correctAnswer: "식빵 한 조각을 토스터에 넣는다 | 레버를 아래로 눌러 굽기 시작한다 | 다 구워진 토스트가 위로 올라올 때까지 기다린다 | 따뜻한 토스트에 버터를 바른다", explanation: "토스트 굽기 과정: 식빵 삽입, 작동, 완성 대기, 버터 도포."),
@@ -357,6 +370,7 @@ struct KoreanHardExercisesData {
         instructions: "주어진 제시어와 가장 관련이 깊은 단어를 선택하세요.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "도서관", options: ["침묵", "소음", "군중", "게임"], correctAnswer: "침묵", explanation: "도서관은 학습과 독서를 하는 조용한 공간입니다."),
@@ -384,6 +398,7 @@ struct KoreanHardExercisesData {
         instructions: "문장을 완성하기에 알맞은 동음이의어 쌍을 고르세요.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[배 / 배] 가을이 되면 달콤한 ___가 맛있습니다. 항구에 커다란 ___가 정박했습니다.", options: ["배...배", "배...배", "배...배", "배...배"], correctAnswer: "배...배", explanation: "첫 번째 '배'는 과일이고, 두 번째 '배'는 탈것(선박)입니다."),
@@ -400,6 +415,7 @@ struct KoreanHardExercisesData {
         instructions: "속담을 올바르게 완성하는 단어를 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "가는 말이 고와야 오는 말이 ___", options: ["곱다", "나쁘다", "많다", "빠르다"], correctAnswer: "곱다", explanation: "남에게 말을 좋게 해야 남도 나에게 좋게 대한다는 뜻입니다."),
@@ -426,6 +442,7 @@ struct KoreanHardExercisesData {
         instructions: "속담을 올바르게 완성하는 단어를 고르세요.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "서당 개 삼 년이면 풍월을 ___", options: ["읊는다", "짖는다", "읽는다", "쓴다"], correctAnswer: "읊는다", explanation: "어떤 분야에 지식이 없는 사람도 오래 보고 들으면 기본은 흉내 낸다는 뜻입니다."),

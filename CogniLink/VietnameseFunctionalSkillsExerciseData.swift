@@ -17,6 +17,7 @@ struct VietnameseFunctionalSkillsExerciseData {
         instructions: "Các bước được liệt kê theo thứ tự SAI. Đánh số 1, 2, 3 để sắp xếp theo đúng thứ tự.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -456,6 +457,7 @@ struct VietnameseFunctionalSkillsExerciseData {
         instructions: "Quyết định: tuyên bố này là SỰ THẬT hay Ý KIẾN?",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -643,6 +645,7 @@ struct VietnameseFunctionalSkillsExerciseData {
         instructions: "Các bước được hiển thị theo thứ tự SAI. Đánh số 1, 2, 3... để xếp chúng theo đúng thứ tự.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -711,6 +714,7 @@ struct VietnameseFunctionalSkillsExerciseData {
         instructions: "Đọc tình huống và cho biết bạn sẽ làm gì.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1073,6 +1077,7 @@ struct VietnameseFunctionalSkillsExerciseData {
         instructions: "So sánh giá cả và chọn sản phẩm tiết kiệm nhất.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

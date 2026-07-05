@@ -27,6 +27,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui n'appartient pas au groupe.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "POMME, BANANE, CAROTTE, POIRE", options: ["POMME", "BANANE", "CAROTTE", "POIRE"], correctAnswer: "CAROTTE", explanation: "C'est un légume, pas un fruit"),
@@ -69,6 +70,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui n'appartient pas au groupe.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "MÉTAPHORE, ALLÉGORIE, PERSONNIFICATION, PARAGRAPHE", options: ["MÉTAPHORE", "ALLÉGORIE", "PERSONNIFICATION", "PARAGRAPHE"], correctAnswer: "PARAGRAPHE", explanation: "C'est une structure textuelle, pas une figure de style"),
@@ -105,6 +107,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui complète le mieux la phrase.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Le train est arrivé à la ___.", options: ["gare", "montagne", "mer"], correctAnswer: "gare", explanation: ""),
@@ -137,6 +140,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui a le MÊME sens que le mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mot: EN COLÈRE", options: ["heureux", "furieux", "calme", "triste"], correctAnswer: "furieux", explanation: ""),
@@ -159,6 +163,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot le plus proche en sens du mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mot: MISÉRICORDIEUX", options: ["cruel", "compatissant", "froid", "strict"], correctAnswer: "compatissant", explanation: ""),
@@ -181,6 +186,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot de sens CONTRAIRE au mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mot: CLAIR", options: ["lumineux", "sombre", "brillant", "blanc"], correctAnswer: "sombre", explanation: ""),
@@ -203,6 +209,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui complète le mieux la phrase.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Aujourd'hui il fait beau ___.", options: ["temps", "repas", "lourd"], correctAnswer: "temps", explanation: ""),
@@ -235,6 +242,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui complète correctement le proverbe.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Mieux vaut ___ que jamais.", options: ["tard", "vite", "bien"], correctAnswer: "tard", explanation: ""),
@@ -267,6 +275,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui complète la relation de la même façon que la paire initiale.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Chien est à animal comme rose est à?", options: ["plante", "métal", "ciel", "nombre"], correctAnswer: "plante", explanation: ""),
@@ -294,6 +303,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Cette affirmation est-elle un fait ou une opinion?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Paris est la capitale de la France.", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
@@ -331,6 +341,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Remettez dans le bon ordre.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Routine matinale:", options: ["Se laver le visage", "S'habiller", "Prendre le petit-déjeuner", "Se lever"], correctAnswer: "Se lever | Se laver le visage | S'habiller | Prendre le petit-déjeuner", explanation: ""),
@@ -351,6 +362,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Quelle est la signification de cette expression?",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Que signifie: Coûter les yeux de la tête?", options: ["Être très cher", "Être très beau", "Être très difficile", "Être inutile"], correctAnswer: "Être très cher", explanation: ""),
@@ -378,6 +390,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot qui rime avec le mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quel mot rime avec FLEUR?", options: ["fille", "coeur", "main", "jour"], correctAnswer: "coeur", explanation: "Son -eur"),
@@ -410,6 +423,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot le plus étroitement associé au mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quel mot s'associe le mieux à BAGUETTE?", options: ["boulangerie", "restaurant", "épicerie", "librairie"], correctAnswer: "boulangerie", explanation: ""),
@@ -442,6 +456,7 @@ struct FrenchLanguageExerciseData {
         instructions: "Choisissez le mot correctement formé.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "In___ (sens contraire): possible", options: ["Impossible", "Inpossible", "Nopossible"], correctAnswer: "Impossible", explanation: ""),

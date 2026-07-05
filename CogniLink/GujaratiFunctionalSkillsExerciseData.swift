@@ -25,6 +25,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દરેક પરિસ્થિતિ વાંચો. તમે શું કરશો તે લખો. શ્રેષ્ઠ પ્રતિભાવ જોવા માટે 'જવાબ જુઓ' પર ટેપ કરો.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -353,6 +354,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "ટીવી કાર્યક્રમ પત્રકના આધારે સાચો જવાબ પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -435,6 +437,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "પ્રશ્નોના જવાબ આપવા માટે કેલેન્ડરનો ઉપયોગ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -503,6 +506,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "તબક્કાઓ ખોટા ક્રમમાં દર્શાવેલ છે. તેમને સાચા ક્રમમાં ગોઠવો.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -726,6 +730,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દરેક કાર્ય માટે વર્ણન કરો: તમારે કઈ સામગ્રીની જરૂર છે, મુખ્ય તબક્કાઓ અને શું ખોટું થઈ શકે છે. મોડેલ જવાબ જોવા માટે 'જવાબ જુઓ' પર ટેપ કરો.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -984,6 +989,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દિશાઓ અને સ્થાનિક સ્થિતિઓ વિશેના પ્રશ્નોના જવાબ આપો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1066,6 +1072,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "સમય, સમયગાળો અને તારીખો વિશેના પ્રશ્નો માટે શ્રેષ્ઠ જવાબ પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1303,6 +1310,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દરેક વસ્તુ માટે, તે વિકલ્પ પસંદ કરો જે તમને તમારા પૈસાનું શ્રેષ્ઠ મૂલ્ય આપે છે.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1406,6 +1414,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દરેક પ્રશ્ન માટે સાચો જવાબ પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1748,6 +1757,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દરેક પરિસ્થિતિ માટે પ્રતિભાવ લખો. મોડેલ જવાબ જોવા માટે 'જવાબ જુઓ' પર ટેપ કરો.",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1815,6 +1825,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "મેન્યુ વાંચો અને પ્રશ્નોના સાચા ઉત્તરો પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1946,6 +1957,7 @@ struct GujaratiFunctionalSkillsExerciseData {
         instructions: "દવાના લેબલ પરની સૂચનાઓ વાંચો અને સાચા ઉત્તરો પસંદ કરો.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(

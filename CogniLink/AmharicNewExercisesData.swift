@@ -28,6 +28,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ከ “ቤት” ጋር የሚመሳሰል (የሚገጥም) ቃል የትኛው ነው?", options: ["መስኮት", "ፊት", "በር", "ወንበር"], correctAnswer: "ፊት", explanation: "ቤት እና ፊት ተመሳሳይ የመጨረሻ ድምፅ አላቸው።"),
@@ -59,6 +60,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ዶክተር", options: ["ሆስፒታል", "አውሮፕላን ማረፊያ", "ቤተ መጻሕፍት", "እርሻ"], correctAnswer: "ሆስፒታል", explanation: "ዶክተሮች በሆስፒታል ውስጥ ታካሚዎችን ያክማሉ።"),
@@ -90,6 +92,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ድር ቢያብር አንበሳ ___።", options: ["ያሥራል", "ይገድላል", "ያሳድዳል", "ይበላል"], correctAnswer: "ያሥራል", explanation: "ኅብረት ካለ የማይቻል ነገር የለም ማለት ነው።"),
@@ -121,6 +124,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ከሚከተሉት ውስጥ ትክክለኛ የጥምር ቃል የትኛው ነው?", options: ["ቤተመንግስት", "የቤትበር", "እቃሳጥን", "መብራትሀይል"], correctAnswer: "ቤተመንግስት", explanation: "“ቤተመንግስት” የመንግስት መስሪያ ቤት ወይም መኖሪያን የሚገልጽ የጥምር ቃል ነው።"),
@@ -152,6 +156,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "“ቤቶች” በሚለው ቃል ውስጥ ድህረ-ቅጥያው ___ ነው።", options: ["ኦች", "ቤት", "ዎች", "ቶች"], correctAnswer: "ኦች", explanation: "“ኦች” የሚለው ድህረ-ቅጥያ ቃሉን ብዙ ቁጥር ያደርገዋል።"),
@@ -183,6 +188,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "አልማዝ የጠፋባትን ሰነድ የት ነው ያገኘችው?", options: ["በመኪናዋ ውስጥ", "በመኝታ ክፍሏ መደርደሪያ ላይ", "በሳሎን ጠረጴዛ ስር", "በኩሽና ካቢኔ ውስጥ"], correctAnswer: "በመኝታ ክፍሏ መደርደሪያ ላይ", explanation: "ታሪኩ እንደሚለው አልማዝ የጠፋባትን ሰነድ ያገኘችው በመኝታ ክፍሏ መደርደሪያ ላይ ነው።", passage: "አልማዝ ወደ ሎስ አንጀለስ የኢሚግሬሽን ቢሮ ለመሄድ ስትዘጋጅ አስፈላጊ ሰነድ ጠፋባት። ቤቱን በሙሉ ካሰሰች በኋላ ሰነዱን በመኝታ ክፍሏ መደርደሪያ ላይ አገኘችው። ከዚያም በሰላም ጉዞዋን ቀጠለች።"),
@@ -209,6 +215,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ይህንን የቁጥር ቅደም ተከተል የሚያጠናቅቀው ቁጥር የትኛው ነው? ፦ 2, 5, 8, 11፥ ___", options: ["14", "15", "13", "16"], correctAnswer: "14", explanation: "እያንዳንዱ ቁጥር በቀደመው ላይ 3 በመጨመር የተገኘ ነው።"),
@@ -240,6 +247,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "በሎስ አንጀለስ ከባድ የበጋ ሙቀት በመኖሩ ምክንያት", options: ["ሰዎች አየር ማቀዝቀዣዎችን በብዛት ተጠቀሙ።", "ሰዎች ጃኬት ለበሱ።", "ወንዞች በረዶ ሆኑ።", "መንገዶች ተዘጉ።"], correctAnswer: "ሰዎች አየር ማቀዝቀዣዎችን በብዛት ተጠቀሙ።", explanation: "ሙቀት አየር ማቀዝቀዣ አጠቃቀምን ይጨምራል።"),
@@ -266,6 +274,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "የልጅ ልጅህ ሰርተፊኬት ይዛ ስትመጣ የሚሰማህ ስሜት", options: ["ኩራት", "ሐዘን", "ፍርሃት", "ንዴት"], correctAnswer: "ኩራት", explanation: "የልጅ ልጅ ስኬት ኩራትንና ደስታን ያመጣል።"),
@@ -297,6 +306,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "አንድ ሰው ዝናብ እየዘነበ በመሆኑ ምክንያት የፀሐይ መነጽር አደረገ።", options: ["ዝናብ ላይ የፀሐይ መነጽር ማድረግ ስህተት ነው።", "ዝናብ ላይ ኮት መልበስ ስህተት ነው።", "ጃንጥላ መያዝ ስህተት ነው።", "ቤት ውስጥ መቆየት ስህተት ነው።"], correctAnswer: "ዝናብ ላይ የፀሐይ መነጽር ማድረግ ስህተት ነው።", explanation: "ዝናብ በሚዘንብበት ጊዜ የፀሐይ ብርሃን ስለማይኖር መነጽር አያስፈልግም።"),
@@ -323,6 +333,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "መመሪያ፦ ይህንን መድኃኒት በቀን 3 ጊዜ ከምግብ በኋላ 1 ክኒን ይውሰዱ። በቀን ስንት ክኒን ይወሰዳል?", options: ["3 ክኒን", "1 ክኒን", "2 ክኒን", "6 ክኒን"], correctAnswer: "3 ክኒን", explanation: "በቀን 3 ጊዜ 1 ክኒን መውሰድ ማለት 3 ክኒን መውሰድ ነው።"),
@@ -349,6 +360,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ምናሌ፦ የዶሮ ወጥ በ $15፥ የበግ ጠብስ በ $18፥ አትክልት በ $12። በጣም ርካሹ የትኛው ነው?", options: ["አትክልት ወጥ", "የዶሮ ወጥ", "የበግ ጠብስ", "ሁሉም እኩል ናቸው"], correctAnswer: "አትክልት ወጥ", explanation: "አትክልት ወጥ ዋጋው $12 በመሆኑ ከሁሉም አነስተኛ ነው።"),
@@ -375,6 +387,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ደረሰኝ፦ የኤሌክትሪክ ሂሳብ $85፥ የውሃ ሂሳብ $40። ጠቅላላ ሂሳቡ ስንት ነው?", options: ["$125", "$85", "$40", "$130"], correctAnswer: "$125", explanation: "የኤሌክትሪክ ($85) እና የውሃ ($40) ድምር $125 ይሆናል።"),
@@ -401,6 +414,7 @@ struct AmharicNewExercisesData {
         instructions: "Choose the correct answer.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "በቤትዎ ውስጥ የውሃ ቧንቧ ቢፈነዳ ምን ያደርጋሉ?", options: ["ዋናውን የውሃ መቆጣጠሪያ ቫልቭ መዝጋት", "ውሃውን በባልዲ ለመቅዳት መሞከር", "ጎረቤት መጥራት", "እስኪቆም መጠበቅ"], correctAnswer: "ዋናውን የውሃ መቆጣጠሪያ ቫልቭ መዝጋት", explanation: "ዋናውን ቫልቭ መዝጋት ተጨማሪ የውሃ ጉዳት እንዳይኖር ይከላከላል።"),

@@ -23,6 +23,7 @@ struct HindiLanguageExerciseData {
         instructions: "वह शब्द चुनें जो समूह में नहीं आता।",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "सेब, नाशपाती, गाजर, बेर", options: ["सेब", "नाशपाती", "गाजर", "बेर"], correctAnswer: "गाजर", explanation: "सब्जी, फल नहीं"),
@@ -65,6 +66,7 @@ struct HindiLanguageExerciseData {
         instructions: "वह शब्द चुनें जो समूह में नहीं आता।",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "उपमा, रूपक, अतिशयोक्ति, अनुच्छेद", options: ["उपमा", "रूपक", "अतिशयोक्ति", "अनुच्छेद"], correctAnswer: "अनुच्छेद", explanation: "पाठ संरचना, अलंकार नहीं"),
@@ -101,6 +103,7 @@ struct HindiLanguageExerciseData {
         instructions: "सही शब्द चुनकर कहावत पूरी करें।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "अब पछताए होत क्या जब ___ चुग गए खेत।", options: ["चिड़िया", "कौवा", "तोता", "मोर"], correctAnswer: "चिड़िया"),
@@ -133,6 +136,7 @@ struct HindiLanguageExerciseData {
         instructions: "वह शब्द चुनें जो दिए गए शब्द के समान अर्थ रखता है।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "शब्द: गुस्सा", options: ["खुश", "क्रोधित", "शांत", "उदास"], correctAnswer: "क्रोधित"),
@@ -155,6 +159,7 @@ struct HindiLanguageExerciseData {
         instructions: "वह शब्द चुनें जो दिए गए शब्द के समान अर्थ रखता है।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "शब्द: उदासीन", options: ["प्रसन्न", "दुःखी", "उत्साहित", "संतुष्ट"], correctAnswer: "दुःखी"),
@@ -177,6 +182,7 @@ struct HindiLanguageExerciseData {
         instructions: "वह शब्द चुनें जो दिए गए शब्द का विपरीत अर्थ रखता है।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "शब्द: गर्म", options: ["गुनगुना", "ठंडा", "सुहाना", "तपता"], correctAnswer: "ठंडा"),
@@ -199,6 +205,7 @@ struct HindiLanguageExerciseData {
         instructions: "वाक्य पूरा करने के लिए सही शब्द चुनें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "उसने ___ को पानी दिया।", options: ["पौधों", "फर्श", "आटा", "दीवार"], correctAnswer: "पौधों"),
@@ -233,6 +240,7 @@ struct HindiLanguageExerciseData {
         instructions: "वाक्य पूरा करने के लिए सही रूप चुनें।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "बच्चे तेज़ी से ___।", options: ["दौड़", "दौड़े", "दौड़ना", "दौड़ता"], correctAnswer: "दौड़े"),
@@ -265,6 +273,7 @@ struct HindiLanguageExerciseData {
         instructions: "सही शब्द चुनें जो सादृश्य पूरा करे।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "पिल्ला : कुत्ता :: बिल्ली का बच्चा : ___", options: ["बिल्ली", "कुत्ता", "पक्षी", "मछली"], correctAnswer: "बिल्ली"),
@@ -292,6 +301,7 @@ struct HindiLanguageExerciseData {
         instructions: "तय करें: यह कथन तथ्य है या राय?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "एक सप्ताह में 7 दिन होते हैं।", options: ["Fact", "Opinion"], correctAnswer: "Fact"),
@@ -329,6 +339,7 @@ struct HindiLanguageExerciseData {
         instructions: "ये चरण गलत क्रम में हैं। उन्हें सही क्रम में लगाएं।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(

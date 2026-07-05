@@ -20,6 +20,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn ý nghĩa chính xác nhất của thành ngữ đã cho.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -137,6 +138,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn từ có nghĩa ĐỐI LẠI với từ đã cho.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -506,6 +508,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn từ hoàn thành câu tốt nhất.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .sentenceCompletion,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -658,6 +661,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn từ loại hoặc lượng từ thích hợp để hoàn thành câu.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -810,6 +814,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn từ phù hợp nhất với sự tương tự.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -927,6 +932,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn Có hoặc Không cho mỗi câu hỏi.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1149,6 +1155,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn từ đúng để hoàn thành phép tương tự.",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1441,6 +1448,7 @@ struct VietnameseCognitionExerciseData {
         instructions: "Chọn cảm xúc đúng cho mỗi tình huống.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

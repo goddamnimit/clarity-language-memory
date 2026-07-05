@@ -27,6 +27,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez par Oui ou Non à la question.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Paris est la capitale de la France?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: ""),
@@ -59,6 +60,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quel est le repas typique du matin en France?", options: ["Petit-déjeuner", "Dîner", "Brunch", "Déjeuner"], correctAnswer: "Petit-déjeuner", explanation: ""),
@@ -91,6 +93,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question sur les lieux.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Où se trouve la Tour Eiffel?", options: ["Lyon", "Paris", "Marseille", "Nice"], correctAnswer: "Paris", explanation: ""),
@@ -123,6 +126,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question sur les personnes.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Qui a peint la Joconde?", options: ["Pablo Picasso", "Léonard de Vinci", "Michel-Ange", "Claude Monet"], correctAnswer: "Léonard de Vinci", explanation: ""),
@@ -155,6 +159,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question de temps.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quand célèbre-t-on Noël?", options: ["25 novembre", "25 décembre", "1er janvier", "6 janvier"], correctAnswer: "25 décembre", explanation: ""),
@@ -187,6 +192,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question sur les raisons.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Pourquoi apprend-on le français?", options: ["Parce que c'est la seule langue du monde", "Pour communiquer avec les francophones et enrichir sa culture", "Parce que c'est la langue la plus facile", "Parce qu'on y est obligé"], correctAnswer: "Pour communiquer avec les francophones et enrichir sa culture", explanation: ""),
@@ -214,6 +220,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à la question sur la méthode.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Comment dit-on bonjour en français?", options: ["Au revoir", "Bonsoir", "Bonjour", "Salut"], correctAnswer: "Bonjour", explanation: ""),
@@ -241,6 +248,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Lisez le texte et répondez à la question.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Qu'a-t-elle acheté?", options: ["Pain, lait et fruits", "Pain, viande et légumes", "Fruits, fromage et eau", "Lait, gâteau et café"], correctAnswer: "Pain, lait et fruits", explanation: "", passage: "Madame Dupont est allée au marché le lundi. Elle a acheté du pain, du lait et des fruits."),
@@ -268,6 +276,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Continuez la suite de nombres.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: ""),
@@ -300,6 +309,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Choisissez l'effet qui correspond à la cause donnée.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Il pleut. Que se passe-t-il?", options: ["Le sol est sec", "Le sol est mouillé", "La température monte", "Il fait plus lumineux"], correctAnswer: "Le sol est mouillé", explanation: ""),
@@ -327,6 +337,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Quel sentiment ressentez-vous dans cette situation?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "On vous offre un cadeau pour votre anniversaire. Que ressentez-vous?", options: ["De la tristesse", "De la joie", "De la colère", "De l'ennui"], correctAnswer: "De la joie", explanation: ""),
@@ -359,6 +370,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Qu'est-ce qui ne va pas dans cette situation?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "En plein été, Madame Martin sort avec un épais manteau d'hiver. Qu'est-ce qui ne va pas?", options: ["La destination", "La tenue ne correspond pas à la saison", "La personne", "Rien ne va pas"], correctAnswer: "La tenue ne correspond pas à la saison", explanation: ""),
@@ -386,6 +398,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à cette question d'histoire.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "En quelle année a eu lieu la Révolution française?", options: ["1689", "1789", "1889", "1989"], correctAnswer: "1789", explanation: ""),
@@ -413,6 +426,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à cette question de géographie.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quelle est la capitale de la France?", options: ["Lyon", "Marseille", "Paris", "Bordeaux"], correctAnswer: "Paris", explanation: ""),
@@ -440,6 +454,7 @@ struct FrenchCognitionExerciseData {
         instructions: "Répondez à cette question de culture française.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quelle est la devise de la France?", options: ["Paix, Justice, Liberté", "Liberté, Égalité, Fraternité", "Unité, Dignité, Paix", "Foi, Espoir, Charité"], correctAnswer: "Liberté, Égalité, Fraternité", explanation: ""),

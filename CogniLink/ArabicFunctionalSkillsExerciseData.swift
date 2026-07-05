@@ -18,6 +18,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "يتم سرد الخطوات بالترتيب الخاطئ. قم بترقيمها 1، 2، 3 لوضعها بالتسلسل الصحيح.",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -492,6 +493,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "اقرأ معلومات الوصفة الطبية وأجب عن السؤال.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -609,6 +611,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "استخدم معلومات القائمة للإجابة على السؤال.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -705,6 +708,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "اقرأ معلومات الفاتورة ثم أجب عن السؤال.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -815,6 +819,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "اختر أفضل استجابة للحالة الموصوفة.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -967,6 +972,7 @@ struct ArabicFunctionalSkillsExerciseData {
         instructions: "قارن الأسعار واختر الخيار الأفضل قيمة.",
         section: .functionalSkills,
         type: .comparison,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(

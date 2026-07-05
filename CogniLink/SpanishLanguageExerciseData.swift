@@ -24,6 +24,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Toca la palabra que NO pertenece al grupo.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -106,6 +107,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Toca la palabra que NO pertenece al grupo.",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -188,6 +190,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que completa correctamente el refrán popular.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -270,6 +273,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que significa lo MISMO que la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -989,6 +993,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que significa lo MISMO que la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(
@@ -1071,6 +1076,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que significa lo OPUESTO de la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1153,6 +1159,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que mejor completa la oración.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -1872,6 +1879,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra formada correctamente para completar la oración.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -1954,6 +1962,7 @@ struct SpanishLanguageExerciseData {
         instructions: "La pareja de palabras se muestra arriba. Elige la opción correcta para completar los espacios en orden.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -2036,6 +2045,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Elige la palabra que completa mejor la analogía.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(
@@ -2083,6 +2093,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Decide: ¿esta afirmación es un HECHO o una OPINIÓN?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(
@@ -2522,6 +2533,7 @@ struct SpanishLanguageExerciseData {
         instructions: "Los pasos están en el orden INCORRECTO. Ordénalos del 1 al 4 para ponerlos en la secuencia correcta.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(

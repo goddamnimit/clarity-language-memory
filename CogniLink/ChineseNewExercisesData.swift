@@ -26,6 +26,7 @@ struct ChineseNewExercisesData {
         instructions: "选择与给出词语押韵的字词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "哪个字与“猫”押韵？", options: ["狗", "包", "太阳", "树"], correctAnswer: "包", explanation: "“猫” (māo) 和 “包” (bāo) 拥有相同的韵母 -ao。"),
@@ -57,6 +58,7 @@ struct ChineseNewExercisesData {
         instructions: "选择与所给词语关系最密切的词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "医生", options: ["医院", "机场", "图书馆", "农场"], correctAnswer: "医院", explanation: "医生在医院工作，为患者提供治疗。"),
@@ -88,6 +90,7 @@ struct ChineseNewExercisesData {
         instructions: "补充中国传统谚语或俗语。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "百闻不如一___。", options: ["见", "听", "读", "写"], correctAnswer: "见", explanation: "“百闻不如一见”意为听别人说一百遍，不如亲眼看一次。"),
@@ -119,6 +122,7 @@ struct ChineseNewExercisesData {
         instructions: "选择合适的字来拼成一个完整的合成词。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "电 + ___ = 电脑", options: ["脑", "手", "眼", "心"], correctAnswer: "脑", explanation: "电 + 脑 = 电脑。"),
@@ -150,6 +154,7 @@ struct ChineseNewExercisesData {
         instructions: "选择正确的词缀（前缀或后缀）来解答题目。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "在“老张”和“老虎”中，“老”起什么作用？", options: ["作前缀表示特定称谓", "作后缀表示人名", "表示年纪很大", "表示反对"], correctAnswer: "作前缀表示特定称谓", explanation: "汉语中的“老”常放在名词或人姓氏前用作构词前缀。"),
@@ -181,6 +186,7 @@ struct ChineseNewExercisesData {
         instructions: "阅读短篇故事，然后回答相关的问题。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "玛丽亚把什么落在家了？", options: ["她的钱包", "她的钥匙", "她的购物清单", "她的手机"], correctAnswer: "她的钱包", explanation: "故事里写到，玛丽亚把她的钱包忘在了厨房的柜台上。", passage: "玛丽亚去超市买牛奶和面包。她把钱包忘在厨房的柜台上。"),
@@ -207,6 +213,7 @@ struct ChineseNewExercisesData {
         instructions: "根据数列规律，下一个数字应该是什么？",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "数列以每次加 2 的规律递增。"),
@@ -238,6 +245,7 @@ struct ChineseNewExercisesData {
         instructions: "选择所描述情境下最可能发生的结果。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "在炎热的晴天里，你把冰淇淋放在厨房柜台上两个小时。会发生什么？", options: ["它变硬了", "它融化了", "它变了颜色", "它消失了"], correctAnswer: "它融化了", explanation: "高温热量会导致冰淇淋从冷冻固体状态融化成液体。"),
@@ -266,6 +274,7 @@ struct ChineseNewExercisesData {
         instructions: "阅读以下情境，选择当事人最可能产生的情绪。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "萨拉得知自己在一次重要比赛中获得了第一名。她感觉如何？", options: ["悲伤", "愤怒", "高兴", "害怕"], correctAnswer: "高兴", explanation: "赢得比赛是令人兴奋和快乐的事情。"),
@@ -297,6 +306,7 @@ struct ChineseNewExercisesData {
         instructions: "选择句子中逻辑错误或现实中不可能的地方。",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "约翰在去睡觉前的午夜时分吃了一顿丰盛的早餐。", options: ["人类是不需要吃东西的", "早餐是早晨的餐饮，而不是在半夜", "约翰此时不应该睡觉", "午夜指的是在下午"], correctAnswer: "早餐是早晨的餐饮，而不是在半夜", explanation: "“早餐”按定义是一天中早晨吃的第一顿饭，不能是午夜。"),
@@ -323,6 +333,7 @@ struct ChineseNewExercisesData {
         instructions: "阅读标签信息，并回答后面的问题。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "药标：每次 1 片，每日 2 次，随餐服用。你一天总共应该吃几片药？", options: ["1片", "2片", "3片", "4片"], correctAnswer: "2片", explanation: "每天吃两次，每次一片，则 1 + 1 = 2 片。"),
@@ -349,6 +360,7 @@ struct ChineseNewExercisesData {
         instructions: "利用菜单信息回答相关问题。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "菜单：芝士汉堡 $8.00，炸薯条 $3.00，苏打水 $2.00。芝士汉堡多少钱？", options: ["$8.00", "$3.00", "$2.00", "$11.00"], correctAnswer: "$8.00", explanation: "菜单价格表上明确标明芝士汉堡为 8.00 美元。"),
@@ -375,6 +387,7 @@ struct ChineseNewExercisesData {
         instructions: "阅读账单里的信息，并解答相关问题。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "电费账单：应付总额：$45.00。到期日：7月15日。你一共需要支付多少钱？", options: ["$15.00", "$45.00", "7月15日", "免费"], correctAnswer: "$45.00", explanation: "账单上列出的应付总额是 45.00 美元。"),
@@ -401,6 +414,7 @@ struct ChineseNewExercisesData {
         instructions: "选择遇到下列情境时最合适、最妥当的做法。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "你闻到厨房有烟味，但没有看到明火。你首先应该做什么？", options: ["不予理会", "打开窗户排烟并检查炉灶", "给朋友打电话聊天", "继续回房睡觉"], correctAnswer: "打开窗户排烟并检查炉灶", explanation: "检查热源和炉灶是排查厨房隐患并防止险情扩大的安全首步。"),

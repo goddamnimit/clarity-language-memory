@@ -29,6 +29,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "グループに属さない言葉を選んでください。",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "りんご、バナナ、にんじん、もも", options: ["りんご", "バナナ", "にんじん", "もも"], correctAnswer: "にんじん", explanation: "野菜で、果物ではありません"),
@@ -71,6 +72,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "グループに属さない言葉を選んでください。",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "俳句、短歌、連歌、散文", options: ["俳句", "短歌", "連歌", "散文"], correctAnswer: "散文", explanation: "詩の形式ではありません"),
@@ -107,6 +109,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "空欄に入る最も適切な言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "電車が＿に着いた。", options: ["駅", "山", "海"], correctAnswer: "駅", explanation: ""),
@@ -139,6 +142,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "与えられた言葉と同じ意味の言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "言葉：うれしい", options: ["悲しい", "楽しい", "怒る", "眠い"], correctAnswer: "楽しい", explanation: ""),
@@ -161,6 +165,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "与えられた言葉と最も近い意味の言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "言葉：慈悲深い", options: ["残酷な", "情け深い", "冷淡な", "厳格な"], correctAnswer: "情け深い", explanation: ""),
@@ -183,6 +188,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "与えられた言葉と反対の意味の言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "言葉：明るい", options: ["輝く", "暗い", "光る", "白い"], correctAnswer: "暗い", explanation: ""),
@@ -205,6 +211,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "文章の空欄に入る最も適切な言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "今日は天気が＿です。", options: ["良い", "料理", "重い"], correctAnswer: "良い", explanation: ""),
@@ -237,6 +244,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "文章の空欄に入る最も適切な言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "私＿東京に住んでいます。", options: ["は", "を", "に"], correctAnswer: "は", explanation: "主格の助詞"),
@@ -269,6 +277,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "最初の2つの言葉の関係と同じ関係になる言葉を選んでください。",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "犬は動物、バラは？", options: ["植物", "金属", "天気", "数字"], correctAnswer: "植物", explanation: ""),
@@ -296,6 +305,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "次の文は事実ですか、それとも意見ですか？",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "東京は日本の首都です。", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
@@ -333,6 +343,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "正しい順序に並び替えてください。",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "朝の準備の順序は？", options: ["顔を洗う", "着替える", "朝食を食べる", "歯を磨く"], correctAnswer: "顔を洗う | 歯を磨く | 着替える | 朝食を食べる", explanation: ""),
@@ -353,6 +364,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "ことわざの意味を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "七転び八起きの意味は？", options: ["何度失敗しても立ち直ること", "毎日運動すること", "転ばないように気をつけること", "7回数えること"], correctAnswer: "何度失敗しても立ち直ること", explanation: ""),
@@ -380,6 +392,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "与えられた言葉と韻が合う言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "さくら と同じ音で終わる言葉は？", options: ["はなら", "あおぞら", "いろいろ", "やまほど"], correctAnswer: "あおぞら", explanation: "「ら」で韻を踏む"),
@@ -412,6 +425,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "与えられた言葉と最も関係が深い言葉を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "お茶 と最も関係が深いのは？", options: ["急須", "鍋", "冷蔵庫", "財布"], correctAnswer: "急須", explanation: ""),
@@ -444,6 +458,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "ことわざの空欄に入る言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "七転び＿", options: ["八起き", "九起き", "十起き"], correctAnswer: "八起き", explanation: ""),
@@ -476,6 +491,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "二つの言葉を合わせてできる複合語を選んでください。",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "図 + 書 = ？", options: ["図書", "書図", "本図", "書本"], correctAnswer: "図書", explanation: ""),
@@ -508,6 +524,7 @@ struct JapaneseLanguageExerciseData {
         instructions: "空欄に入る最も適切な言葉を選んでください。",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "不＿（反対の意味）: 可能", options: ["不可能", "不能力", "不問題"], correctAnswer: "不可能", explanation: ""),

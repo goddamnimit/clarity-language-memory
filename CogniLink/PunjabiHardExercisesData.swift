@@ -29,6 +29,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਵਾਕਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਹੀ ਸ਼ਬਦ ਜੋੜ ਚੁਣੋ।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[ਦਿਨ / ਦੀਨ] ਸੂਰਜ ਚੜ੍ਹਨ ਨਾਲ ਨਵਾਂ ___ ਸ਼ੁਰੂ ਹੋਇਆ। ਸਾਨੂੰ ___ ਲੋਕਾਂ ਦੀ ਮਦਦ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ।", options: ["ਦਿਨ...ਦੀਨ", "ਦੀਨ...ਦਿਨ", "ਦਿਨ...ਦਿਨ", "ਦੀਨ...ਦੀਨ"], correctAnswer: "ਦਿਨ...ਦੀਨ", explanation: "'ਦਿਨ' ਦਾ ਅਰਥ ਦਿਵਸ ਹੈ; 'ਦੀਨ' ਦਾ ਅਰਥ ਗਰੀਬ ਜਾਂ ਲੋੜਵੰਦ ਹੈ।"),
@@ -55,6 +56,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਸ ਸ਼ਬਦ ਨੂੰ ਚੁਣੋ ਜੋ ਸਮਾਨਤਾ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਤਰੀਕੇ ਨਾਲ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਅੱਖ ਦਾ ਸੰਬੰਧ ਦੇਖਣ ਨਾਲ ਹੈ, ਤਾਂ ਕੰਨ ਦਾ ਸੰਬੰਧ ਕਿਸ ਨਾਲ ਹੈ?", options: ["ਸੁਣਨਾ", "ਆਵਾਜ਼", "ਸੰਗੀਤ", "ਗੂੰਜ"], correctAnswer: "ਸੁਣਨਾ", explanation: "ਅੱਖ ਦੇਖਣ ਦਾ ਕੰਮ ਕਰਦੀ ਹੈ, ਕੰਨ ਸੁਣਨ ਦਾ।"),
@@ -81,6 +83,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਨਾਲ ਸਭ ਤੋਂ ਨੇੜਿਓਂ ਜੁੜੇ ਸ਼ਬਦ ਨੂੰ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਪਰਉਪਕਾਰ", options: ["ਦਾਨ", "ਲਾਲਚ", "ਗੁੱਸਾ", "ਈਰਖਾ"], correctAnswer: "ਦਾਨ", explanation: "ਪਰਉਪਕਾਰ ਦੂਜਿਆਂ ਦੀ ਭਲਾਈ ਅਤੇ ਦਾਨ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ।"),
@@ -107,6 +110,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਵਾਕ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਭ ਤੋਂ ਢੁਕਵਾਂ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਭਾਰੀ ਮੀਂਹ ਕਾਰਨ ਦਰਿਆਵਾਂ ਦਾ ਪਾਣੀ ___ ਗਿਆ ਅਤੇ ਹੜ੍ਹ ਆ ਗਏ।", options: ["ਵਧ", "ਘਟ", "ਸੁੱਕ", "ਸਥਿਰ"], correctAnswer: "ਵਧ", explanation: "ਮੀਂਹ ਪੈਣ ਨਾਲ ਪਾਣੀ ਵਧਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਹੜ੍ਹ ਆਉਂਦੇ ਹਨ।"),
@@ -133,6 +137,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਗਤੀਵਿਧੀਆਂ ਦੇ ਪੜਾਵਾਂ ਨੂੰ ਸਹੀ ਤਾਰਕਿਕ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਚਾਹ ਬਣਾਉਣੀ", options: ["ਚਾਹ ਨੂੰ ਪੁਣ ਕੇ ਕੱਪ ਵਿੱਚ ਪਾਓ", "ਦੁੱਧ ਅਤੇ ਚਾਹ ਪੱਤੀ ਪਾਓ", "ਬਰਤਨ ਵਿੱਚ ਪਾਣੀ ਗਰਮ ਕਰੋ ਅਤੇ ਅਦਰਕ-ਇਲਾਇਚੀ ਕੁੱਟ ਕੇ ਪਾਓ", "ਉਬਾਲ ਆਉਣ 'ਤੇ ਖੰਡ ਪਾਓ"], correctAnswer: "ਬਰਤਨ ਵਿੱਚ ਪਾਣੀ ਗਰਮ ਕਰੋ ਅਤੇ ਅਦਰਕ-ਇਲਾਇਚੀ ਕੁੱਟ ਕੇ ਪਾਓ | ਦੁੱਧ ਅਤੇ ਚਾਹ ਪੱਤੀ ਪਾਓ | ਉਬਾਲ ਆਉਣ 'ਤੇ ਖੰਡ ਪਾਓ | ਚਾਹ ਨੂੰ ਪੁਣ ਕੇ ਕੱਪ ਵਿੱਚ ਪਾਓ", explanation: "ਪਹਿਲਾਂ ਪਾਣੀ ਗਰਮ ਕਰਕੇ ਮਸਾਲੇ ਪਾਓ, ਫਿਰ ਚਾਹ ਪੱਤੀ/ਦੁੱਧ ਪਾਓ, ਉਬਾਲ ਆਉਣ 'ਤੇ ਖੰਡ ਪਾਓ ਅਤੇ ਪੁਣ ਲਓ।"),
@@ -159,6 +164,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਦਿੱਤੇ ਗਏ ਸੰਦਰਭ ਵਿੱਚ ਸਭ ਤੋਂ ਤਾਰਕਿਕ ਕਾਰਨ ਜਾਂ ਪ੍ਰਭਾਵ ਚੁਣੋ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਕਾਰਨ: ਗਰਮੀਆਂ ਵਿੱਚ ਤਾਪਮਾਨ 45 ਡਿਗਰੀ ਤੋਂ ਪਾਰ ਚਲਾ ਗਿਆ।", options: ["ਲੋਕਾਂ ਨੇ ਘਰਾਂ ਵਿੱਚ ਏਸੀ ਅਤੇ ਕੂਲਰ ਦੀ ਵਰਤੋਂ ਵਧਾ ਦਿੱਤੀ", "ਸੜਕਾਂ 'ਤੇ ਟ੍ਰੈਫਿਕ ਬਹੁਤ ਵਧ ਗਿਆ", "ਬਾਜ਼ਾਰ ਵਿੱਚ ਗਰਮ ਕੱਪੜਿਆਂ ਦੀ ਮੰਗ ਵਧ ਗਈ", "ਬਿਜਲੀ ਦੀ ਖਪਤ ਵਿੱਚ ਭਾਰੀ ਗਿਰਾਵਟ ਆਈ"], correctAnswer: "ਲੋਕਾਂ ਨੇ ਘਰਾਂ ਵਿੱਚ ਏਸੀ ਅਤੇ ਕੂਲਰ ਦੀ ਵਰਤੋਂ ਵਧਾ ਦਿੱਤੀ", explanation: "ਗਰਮੀ ਤੋਂ ਬਚਣ ਲਈ ਏਸੀ ਅਤੇ ਕੂਲਰ ਚਲਾਉਣੇ ਪੈਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਬਿਜਲੀ ਵਰਤੋਂ ਵਧਦੀ ਹੈ।"),
@@ -185,6 +191,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਦਿੱਤੇ ਗਏ ਵਾਕ ਵਿੱਚ ਕੀ ਅਸੰਭਵ ਜਾਂ ਵਿਰੋਧੀ ਹੈ, ਉਸਦੀ ਪਛਾਣ ਕਰੋ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਰਮੇਸ਼ ਨੇ ਗੈਸ ਜਗਾਏ ਬਿਨਾਂ, ਬਰਫ਼ ਵਰਗੇ ਠੰਢੇ ਬਰਤਨ ਵਿੱਚ ਦੁੱਧ ਅਤੇ ਚਾਹ ਉਬਾਲ ਲਈ।", options: ["ਅੱਗ ਜਾਂ ਗਰਮੀ ਤੋਂ ਬਿਨਾਂ ਕੋਈ ਵੀ ਤਰਲ ਉਬਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ", "ਚਾਹ ਵਿੱਚ ਦੁੱਧ ਠੰਢਾ ਨਹੀਂ ਪਾਇਆ ਜਾਂਦਾ", "ਬਰਤਨ ਵਿੱਚ ਚਾਹ ਪੱਤੀ ਪਾਉਣੀ ਗ਼ਲਤ ਹੈ", "ਚਾਹ ਬਣਾਉਣ ਲਈ ਖੰਡ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੈ"], correctAnswer: "ਅੱਗ ਜਾਂ ਗਰਮੀ ਤੋਂ ਬਿਨਾਂ ਕੋਈ ਵੀ ਤਰਲ ਉਬਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ", explanation: "ਉਬਾਲਣ ਲਈ ਗਰਮੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ; ਗਰਮ ਕੀਤੇ ਬਿਨਾਂ ਉਬਾਲਣਾ ਅਸੰਭਵ ਹੈ।"),
@@ -211,6 +218,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਦਿੱਤੇ ਗਏ ਵਿਕਲਪਾਂ ਵਿੱਚੋਂ ਸਹੀ ਸ਼ਬਦ ਚੁਣ ਕੇ ਅਖਾਣ ਨੂੰ ਪੂਰਾ ਕਰੋ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਅਖਾਣ ਪੂਰਾ ਕਰੋ: ਇੱਕ ਹੱਥ ਨਾਲ ___ ਨਹੀਂ ਵੱਜਦੀ।", options: ["ਤਾੜੀ", "ਘੰਟੀ", "ਸ਼ਹਿਨਾਈ", "ਢੋਲਕ"], correctAnswer: "ਤਾੜੀ", explanation: "ਅਖਾਣ ਹੈ 'ਇੱਕ ਹੱਥ ਨਾਲ ਤਾੜੀ ਨਹੀਂ ਵੱਜਦੀ', ਭਾਵ ਲੜਾਈ ਦੋਵਾਂ ਧਿਰਾਂ ਦੀ ਗ਼ਲਤੀ ਨਾਲ ਹੁੰਦੀ ਹੈ।"),
@@ -237,6 +245,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਵਾਕਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[ਦਿਨ / ਦੀਨ] ਸੂਰਜ ਚੜ੍ਹਨ ਨਾਲ ਨਵਾਂ ___ ਸ਼ੁਰੂ ਹੋਇਆ। ਸਾਨੂੰ ___ ਲੋਕਾਂ ਦੀ ਮਦਦ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ।", options: ["ਦਿਨ...ਦੀਨ", "ਦੀਨ...ਦਿਨ", "ਦਿਨ...ਦਿਨ", "ਦੀਨ...ਦੀਨ"], correctAnswer: "ਦਿਨ...ਦੀਨ", explanation: "'ਦਿਨ' ਦਾ ਅਰਥ ਦਿਵਸ (day) ਹੈ; 'ਦੀਨ' ਦਾ ਅਰਥ ਗਰੀਬ ਜਾਂ ਲੋੜਵੰਦ ਹੈ।"),
@@ -264,6 +273,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਸਮਾਨਤਾ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਉੱਪਰ ਦਾ ਸਬੰਧ ਹੇਠਾਂ ਨਾਲ ਹੈ, ਤਾਂ ਗਰਮ ਦਾ ਸਬੰਧ ਕਿਸ ਨਾਲ ਹੈ?", options: ["ਠੰਡਾ", "ਕੋਸਾ", "ਉਬਲਦਾ", "ਗਿੱਲਾ"], correctAnswer: "ਠੰਡਾ", explanation: "ਉੱਪਰ ਅਤੇ ਹੇਠਾਂ ਵਿਰੋਧੀ ਹਨ, ਜਿਵੇਂ ਗਰਮ ਅਤੇ ਠੰਡਾ।"),
@@ -292,6 +302,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਹ ਵਿਕਲਪ ਚੁਣੋ ਜੋ ਸਭ ਤੋਂ ਵੱਧ ਤਰਕਸੰਗਤ ਕਾਰਨ ਜਾਂ ਪ੍ਰਭਾਵ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਕਾਰਨ: ਤੁਸੀਂ ਕੰਕਰੀਟ ਦੇ ਫਰਸ਼ 'ਤੇ ਕੱਚ ਦਾ ਗਲਾਸ ਡੇਗ ਦਿੱਤਾ।", options: ["ਗਲਾਸ ਟੁੱਟ ਗਿਆ", "ਗਲਾਸ ਤੈਰਨ ਲੱਗ ਪਿਆ", "ਗਲਾਸ ਨਰਮ ਹੋ ਗਿਆ", "ਗਲਾਸ ਨੀਲਾ ਹੋ ਗਿਆ"], correctAnswer: "ਗਲਾਸ ਟੁੱਟ ਗਿਆ", explanation: "ਕੱਚ ਨਾਜ਼ੁਕ ਹੁੰਦਾ ਹੈ ਅਤੇ ਸਖ਼ਤ ਸਤਹ 'ਤੇ ਡਿੱਗਣ ਨਾਲ ਟੁੱਟ ਜਾਂਦਾ ਹੈ।"),
@@ -319,6 +330,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਵਾਕ ਵਿੱਚ ਤਰਕਸੰਗਤ ਗਲਤੀ ਜਾਂ ਅਸੰਭਵ ਗੱਲ ਲੱਭੋ।",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਅਸੰਗਤੀ: ਜਗਦੀਸ਼ ਨੇ ਜੁਰਾਬਾਂ ਪਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਜੁੱਤੇ ਪਾ ਲਏ।", options: ["ਜੁਰਾਬਾਂ ਜੁੱਤਿਆਂ ਤੋਂ ਪਹਿਲਾਂ ਪਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ", "ਜੁੱਤੇ ਹੱਥਾਂ ਵਿੱਚ ਪਾਉਣੇ ਚਾਹੀਦੇ ਹਨ", "ਜੁਰਾਬਾਂ ਸਿਰ 'ਤੇ ਪਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ", "ਜੁੱਤੇ ਖਾਣ ਲਈ ਹੁੰਦੇ ਹਨ"], correctAnswer: "ਜੁਰਾਬਾਂ ਜੁੱਤਿਆਂ ਤੋਂ ਪਹਿਲਾਂ ਪਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ", explanation: "ਜੁਰਾਬਾਂ ਜੁੱਤਿਆਂ ਦੇ ਅੰਦਰ ਹੁੰਦੀਆਂ ਹਨ, ਇਸ ਲਈ ਪਹਿਲਾਂ ਪਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ।"),
@@ -346,6 +358,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਗਤੀਵਿਧੀ ਦੇ ਕਦਮਾਂ ਨੂੰ ਸਹੀ ਤਰਕਸੰਗਤ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਟੋਸਟ ਤਿਆਰ ਕਰਨਾ", options: ["ਰੋਟੀ ਦਾ ਟੁਕੜਾ ਟੋਸਟਰ ਵਿੱਚ ਰੱਖੋ", "ਗਰਮ ਕਰਨ ਲਈ ਲੀਵਰ ਹੇਠਾਂ ਦਬਾਓ", "ਟੋਸਟ ਦੇ ਆਪਣੇ ਆਪ ਬਾਹਰ ਆਉਣ ਦੀ ਉਡੀਕ ਕਰੋ", "ਗਰਮ ਟੋਸਟ 'ਤੇ ਮੱਖਣ ਲਗਾਓ"], correctAnswer: "ਰੋਟੀ ਦਾ ਟੁਕੜਾ ਟੋਸਟਰ ਵਿੱਚ ਰੱਖੋ | ਗਰਮ ਕਰਨ ਲਈ ਲੀਵਰ ਹੇਠਾਂ ਦਬਾਓ | ਟੋਸਟ ਦੇ ਆਪਣੇ ਆਪ ਬਾਹਰ ਆਉਣ ਦੀ ਉਡੀਕ ਕਰੋ | ਗਰਮ ਟੋਸਟ 'ਤੇ ਮੱਖਣ ਲਗਾਓ", explanation: "ਟੋਸਟ ਬਣਾਉਣ ਦਾ ਤਰੀਕਾ: ਰੋਟੀ ਰੱਖੋ, ਚਾਲੂ ਕਰੋ, ਬਾਹਰ ਆਉਣ ਦੀ ਉਡੀਕ ਕਰੋ ਅਤੇ ਮੱਖਣ ਲਗਾਓ।"),
@@ -363,6 +376,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਨਾਲ ਸਭ ਤੋਂ ਵੱਧ ਮੇਲ ਖਾਂਦਾ ਹੈ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਲਾਇਬ੍ਰੇਰੀ", options: ["ਸ਼ਾਂਤੀ", "ਸ਼ੋਰ", "ਭੀੜ", "ਖੇਡ"], correctAnswer: "ਸ਼ਾਂਤੀ", explanation: "ਲਾਇਬ੍ਰੇਰੀ ਪੜ੍ਹਨ ਦੀ ਜਗ੍ਹਾ ਹੈ ਜਿੱਥੇ ਸ਼ਾਂਤੀ ਜ਼ਰੂਰੀ ਹੁੰਦੀ ਹੈ।"),
@@ -390,6 +404,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਵਾਕਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਹੀ ਹਮਨਾਮ ਸ਼ਬਦਾਂ ਦੀ ਚੋਣ ਕਰੋ।",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "ਗਹਿਣੇ ਬਣਾਉਣ ਲਈ ___ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਰਾਤ ਨੂੰ ਜਲਦੀ ___ ਚੰਗੀ ਆਦਤ ਹੈ।", options: ["ਸੋਨਾ...ਸੋਣਾ", "ਸੋਣਾ...ਸੋਨਾ", "ਸੋਨਾ...ਸੋਨਾ", "ਸੋਣਾ...ਸੋਣਾ"], correctAnswer: "ਸੋਨਾ...ਸੋਣਾ", explanation: "ਪਹਿਲਾ 'ਸੋਨਾ' ਕੀਮਤੀ ਧਾਤ ਹੈ, ਅਤੇ ਦੂਜਾ 'ਸੋਣਾ' ਨੀਂਦ ਲੈਣਾ ਹੈ।"),
@@ -407,6 +422,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਇਸ ਪ੍ਰਸਿੱਧ ਪੰਜਾਬੀ ਅਖਾਣ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ਕਰ ਭਲਾ ਹੋ ___", options: ["ਭਲਾ", "ਬੁਰਾ", "ਨੁਕਸਾਨ", "ਫ਼ਾਇਦਾ"], correctAnswer: "ਭਲਾ", explanation: "ਚੰਗੇ ਕੰਮਾਂ ਦਾ ਨਤੀਜਾ ਹਮੇਸ਼ਾ ਚੰਗਾ ਹੁੰਦਾ ਹੈ।"),
@@ -435,6 +451,7 @@ struct PunjabiHardExercisesData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਇਸ ਪ੍ਰਸਿੱਧ ਪੰਜਾਬੀ ਅਖਾਣ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ਅੰਨ੍ਹਿਆਂ ਵਿੱਚ ___ ਰਾਜਾ", options: ["ਕਾਣਾ", "ਸਿਆਣਾ", "ਗੂੰਗਾ", "ਬੋਲਾ"], correctAnswer: "ਕਾਣਾ", explanation: "ਮੂਰਖਾਂ ਵਿੱਚ ਥੋੜੀ ਬਹੁਤ ਸਮਝ ਰੱਖਣ ਵਾਲੇ ਨੂੰ ਵੀ ਵੱਡਾ ਮੰਨ ਲਿਆ ਜਾਂਦਾ ਹੈ।"),

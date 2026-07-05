@@ -20,6 +20,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la combinación correcta de homófonos para completar las oraciones.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[tubo / tuvo] El plomero cambió el ___ de metal. Ella ___ mucha paciencia.", options: ["tubo...tuvo", "tuvo...tubo", "tubo...tubo", "tuvo...tuvo"], correctAnswer: "tubo...tuvo", explanation: "'Tubo' es una pieza cilíndrica hueca; 'tuvo' es el pasado del verbo tener."),
@@ -46,6 +47,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la palabra que mejor completa la analogía.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "SOLILOCUIO es a ACTOR como SERMÓN es a ___", options: ["Feligrés", "Predicador", "Coro", "Templo"], correctAnswer: "Predicador", explanation: "Un soliloquio lo dice un actor, un sermón lo da un predicador."),
@@ -72,6 +74,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la palabra más estrechamente asociada con la palabra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ALTRUISMO", options: ["Generosidad", "Avaricia", "Egoísmo", "Orgullo"], correctAnswer: "Generosidad", explanation: "El altruismo está directamente relacionado con la generosidad y el dar sin esperar nada a cambio."),
@@ -98,6 +101,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la palabra que mejor completa la oración.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "El orador pronunció un discurso tan ___ que conmovió a toda la audiencia.", options: ["elocuente", "insípido", "aburrido", "breve"], correctAnswer: "elocuente", explanation: "Un discurso elocuente tiene la capacidad de conmover y persuadir a quienes lo escuchan."),
@@ -124,6 +128,7 @@ struct SpanishHardExercisesData {
         instructions: "Ordena los pasos de la actividad de forma lógica.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Preparar tamales", options: ["Cocer al vapor en la vaporera", "Preparar la masa de maíz con manteca", "Untar la masa en las hojas de maíz remojadas", "Agregar el relleno de carne o guisado y doblar"], correctAnswer: "Preparar la masa de maíz con manteca | Untar la masa en las hojas de maíz remojadas | Agregar el relleno de carne o guisado y doblar | Cocer al vapor en la vaporera", explanation: "Se prepara la masa, se unta en las hojas, se rellena/dobla y finalmente se cose al vapor."),
@@ -150,6 +155,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la respuesta que muestra la causa o efecto más lógico.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Causa: Hubo una sequía prolongada en la región norte de México.", options: ["Los precios de los cultivos básicos aumentaron debido a la escasez", "Los granjeros tuvieron cosechas récord este año", "Los ríos y lagos se desbordaron en la región", "Las tarifas de luz residencial disminuyeron"], correctAnswer: "Los precios de los cultivos básicos aumentaron debido a la escasez", explanation: "Una sequía disminuye la producción de alimentos, lo que eleva sus precios por escasez."),
@@ -176,6 +182,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la respuesta que explica por qué la situación es imposible.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Juan asó los tomates y chiles en el comal apagado y frío para hacer una salsa picante caliente.", options: ["No se pueden asar ingredientes en un comal frío y apagado sin calor", "Las salsas picantes no llevan tomates verdes", "Los comales solo sirven para calentar tortillas", "Las salsas frías no se asan nunca"], correctAnswer: "No se pueden asar ingredientes en un comal frío y apagado sin calor", explanation: "Asar alimentos requiere calor de fuego; un comal apagado no tiene energía térmica para cocinar."),
@@ -202,6 +209,7 @@ struct SpanishHardExercisesData {
         instructions: "Elige la palabra que completa correctamente el refrán popular.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Completa el refrán: Camarón que se duerme se lo lleva la ___.", options: ["corriente", "marea", "red", "ola"], correctAnswer: "corriente", explanation: "El refrán popular mexicano es 'Camarón que se duerme se lo lleva la corriente', indicando que quien se descuida sufre las consecuencias."),

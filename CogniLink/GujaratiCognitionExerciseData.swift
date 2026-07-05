@@ -27,6 +27,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "વાળ કાપવા અને સ્ટાઇલ કરવાવાળાને શું કહે છે?", options: ["નળિયો", "વાળંદ અથવા સ્ટાઇલિસ્ટ", "વીજળી મિસ્ત્રી", "ઑપ્ટોમેટ્રિસ્ટ"], correctAnswer: "વાળંદ અથવા સ્ટાઇલિસ્ટ"),
@@ -59,6 +60,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ઘરની અંદર તરવા ક્યાં જઈ શકાય?", options: ["જિમ", "ઉદ્યાન", "સ્વિમિંગ પૂલ", "સરોવર"], correctAnswer: "સ્વિમિંગ પૂલ"),
@@ -91,6 +93,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "રોમિઓ અને જ્યૂલિયટ કોણે લખ્યું?", options: ["ચાર્લ્સ ડિકન્સ", "વિલ્યમ શૅક્સપિયર", "જૅન ઑસ્ટિન", "રવીન્દ્રનાથ ટાગોર"], correctAnswer: "વિલ્યમ શૅક્સપિયર"),
@@ -118,6 +121,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "અમેરિકન સ્વાતંત્ર્ય દિવસ ક્યારે ઊજવાય છે?", options: ["4 જૂન", "4 જુલાઈ", "4 ઑગસ્ટ", "4 સપ્ટેમ્બર"], correctAnswer: "4 જુલાઈ"),
@@ -145,6 +149,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ખાવા પહેલાં હાથ શા માટે ધોઈએ છીએ?", options: ["હાથ ગરમ કરવા", "જંતુ હઠાવવા અને બીમારીથી બચવા", "શિષ્ટાચાર માટે", "ત્વચા મુલાયમ કરવા"], correctAnswer: "જંતુ હઠાવવા અને બીમારીથી બચવા"),
@@ -172,6 +177,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પ્રશ્નનો સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "એક અઠવાડિયામાં કેટલા દિવસ હોય છે?", options: ["5", "6", "7", "8"], correctAnswer: "7"),
@@ -204,6 +210,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "હા અથવા ના માં જવાબ આપો.",
         section: .cognition,
         type: .yesNo,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "શું સૂર્ય એક તારો છે?", options: ["Yes", "No"], correctAnswer: "Yes"),
@@ -236,6 +243,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "અમેરિકાના પ્રથમ રાષ્ટ્રપ્રમુખ કોણ હતા?", options: ["જૉન એડમ્સ", "જ્યૉર્જ વૉશિંગ્ટન", "થૉમસ જૅફર્સન", "બૅન્જામિન ફ્રૅન્કલિન"], correctAnswer: "જ્યૉર્જ વૉશિંગ્ટન"),
@@ -263,6 +271,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "અમેરિકાની ઉત્તરે કયો દેશ છે?", options: ["મૅક્સિકો", "રશિયા", "કૅનેડા", "ગ્રીનલૅન્ડ"], correctAnswer: "કૅનેડા"),
@@ -295,6 +304,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "સાચો જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ફિલ્મ 'શોલે' (1975)માં 'ગબ્બર સિંઘ'ની ભૂમિકા કોણે ભજવી હતી?", options: ["અમિતાભ બચ્ચન", "અમજદ ખાન", "ધર્મેન્દ્ર", "સંજીવ કુમાર"], correctAnswer: "અમજદ ખાન"),
@@ -322,6 +332,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "સૌથી સાચો અને ઉચિત જવાબ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "નરમ બાફેલા ઈંડામાં કેટલો સમય લાગે છે?", options: ["1 મિનિટ", "6 મિનિટ", "20 મિનિટ", "1 કલાક"], correctAnswer: "6 મિનિટ"),
@@ -354,6 +365,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક પરિસ્થિતિ વાંચો અને સૌથી ઉચિત નિષ્કર્ષ પસંદ કરો.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "કોઈ વ્યક્તિ સ્વિમસૂટ અને સનગ્લાસ પહેરીને જઈ રહ્યા છે. તેઓ કદાચ ક્યાં જઈ રહ્યા છે?", options: ["સિનેમા", "દરિયાકિનારો અથવા સ્વિમિંગ પૂલ", "લગ્ન", "કરિયાણાની દુકાન"], correctAnswer: "દરિયાકિનારો અથવા સ્વિમિંગ પૂલ"),
@@ -382,6 +394,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "રૂઢિપ્રયોગનો અર્થ તમારા શબ્દોમાં કહો.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ઊંટ ઉપર ઊંટ ચઢ્યો", options: [], correctAnswer: "એક મુશ્કેલી ઉપર બીજી મુશ્કેલી આવવી — પહેલેથી મુશ્કેલ સ્થિતિ વધુ ખરાબ થવી"),
@@ -409,6 +422,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "આ પ્રશ્નોના કોઈ સાચા કે ખોટા જવાબ નથી. તમારી યાદો અને અનુભવો શેર કરો.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "તમે કઈ ગલી કે મહોલ્લામાં ઉછર્યા?", options: [], correctAnswer: ""),
@@ -441,6 +455,7 @@ struct GujaratiCognitionExerciseData {
         instructions: "દરેક વર્ગમાં જેટલી યાદ હોય તેટલી વસ્તુઓ કહો. પછી પૂરી યાદી જુઓ.",
         section: .cognition,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "અઠવાડિયાના સાત દિવસ ગુજરાતીમાં કહો.", options: [], correctAnswer: "સોમવાર, મંગળવાર, બુધવાર, ગુરુવાર, શુક્રવાર, શનિવાર, રવિવાર"),

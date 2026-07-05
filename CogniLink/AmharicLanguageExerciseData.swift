@@ -8,6 +8,7 @@ struct AmharicLanguageExerciseData {
             instructions: "ጥያቄዎቹን በጥንቃቄ ይመልሱ።",
             section: .language,
             type: .multipleChoice,
+            trackedType: nil,
             difficulty: .medium,
             items: [
                 ExerciseItem(id: UUID(), prompt: "ቃል 1 ፦ ከሚከተሉት ቃላት ውስጥ ተመሳሳይ ትርጉም ያለውን ይምረጡ።", options: ["ደስታ", "ሀዘን", "ቁጣ", "ፍርሃት"], correctAnswer: "ደስታ", explanation: ""),

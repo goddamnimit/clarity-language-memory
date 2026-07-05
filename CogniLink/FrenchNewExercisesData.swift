@@ -27,6 +27,7 @@ struct FrenchNewExercisesData {
         instructions: "Choisissez le mot qui rime avec le mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quel mot rime avec CHAT ?", options: ["Chien", "Rat", "Soleil", "Arbre"], correctAnswer: "Rat", explanation: "Chat et Rat partagent le même son de fin."),
@@ -58,6 +59,7 @@ struct FrenchNewExercisesData {
         instructions: "Choisissez le mot le plus étroitement associé au mot donné.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "MÉDECIN", options: ["Hôpital", "Aéroport", "Bibliothèque", "Ferme"], correctAnswer: "Hôpital", explanation: "Les médecins travaillent à l'hôpital pour soigner les patients."),
@@ -89,6 +91,7 @@ struct FrenchNewExercisesData {
         instructions: "Complétez l'expression ou le dicton bien connu.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Une pomme par jour éloigne le ___.", options: ["Médecin", "Professeur", "Dentiste", "Avocat"], correctAnswer: "Médecin", explanation: "Le dicton traditionnel dit qu'une pomme par jour éloigne le médecin."),
@@ -120,6 +123,7 @@ struct FrenchNewExercisesData {
         instructions: "Choisissez le mot qui complète correctement le mot composé.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Quel mot complète le mot composé : Chou-___ ?", options: ["Fleur", "Vert", "Rouge", "Blanc"], correctAnswer: "Fleur", explanation: ""),
@@ -151,6 +155,7 @@ struct FrenchNewExercisesData {
         instructions: "Complétez la phrase en choisissant le mot avec le préfixe ou le suffixe approprié.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Le contraire de possible est ___.", options: ["Impossible", "Malpossible", "Dépossible", "Inpossible"], correctAnswer: "Impossible", explanation: ""),
@@ -182,6 +187,7 @@ struct FrenchNewExercisesData {
         instructions: "Lisez la courte histoire puis répondez à la question de compréhension.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Qu'est-ce que Marie a oublié à la maison ?", options: ["Son portefeuille", "Ses clés", "Sa liste de courses", "Son téléphone"], correctAnswer: "Son portefeuille", explanation: "L'histoire indique qu'elle a oublié son portefeuille sur le comptoir de la cuisine.", passage: "Marie s'est rendue au supermarché local de Glendale pour acheter du lait et du pain. Elle a oublié son portefeuille sur le comptoir de la cuisine."),
@@ -208,6 +214,7 @@ struct FrenchNewExercisesData {
         instructions: "Quel nombre vient ensuite dans la suite ?",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "2, 4, 6, 8, ___", options: ["9", "10", "11", "12"], correctAnswer: "10", explanation: "La suite augmente de 2 à chaque étape."),
@@ -239,6 +246,7 @@ struct FrenchNewExercisesData {
         instructions: "Choisissez l'effet logique découlant de la situation décrite.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Si la température extérieure descend en dessous de zéro, l'eau dans le tuyau va ___.", options: ["Geler", "Bouillir", "S'évaporer", "Chauffer"], correctAnswer: "Geler", explanation: ""),
@@ -265,6 +273,7 @@ struct FrenchNewExercisesData {
         instructions: "Identifiez l'émotion ressentie par la personne décrite.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Julie sourit largement et tape dans ses mains en recevant son cadeau. Quelle émotion ressent-elle ?", options: ["La joie", "La colère", "La peur", "La tristesse"], correctAnswer: "La joie", explanation: ""),
@@ -296,6 +305,7 @@ struct FrenchNewExercisesData {
         instructions: "Trouvez l'erreur de logique dans la situation ou la phrase.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Trouvez l'erreur logique : Il a mis sa soupe au congélateur pour la réchauffer.", options: ["On ne réchauffe pas au congélateur", "La soupe ne se mange pas chaude", "Le bol va fondre", "Il faut utiliser un couteau"], correctAnswer: "On ne réchauffe pas au congélateur", explanation: ""),
@@ -322,6 +332,7 @@ struct FrenchNewExercisesData {
         instructions: "Lisez l'ordonnance médicale donnée et répondez à la question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Sur l'ordonnance : 'Prendre 1 comprimé d'Amoxicilline 500mg trois fois par jour pendant 7 jours.' Combien de comprimés devez-vous prendre par jour ?", options: ["1 comprimé", "2 comprimés", "3 comprimés", "7 comprimés"], correctAnswer: "3 comprimés", explanation: "Trois fois par jour signifie 3 comprimés par jour."),
@@ -348,6 +359,7 @@ struct FrenchNewExercisesData {
         instructions: "Lisez le menu du restaurant donné et répondez à la question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Sur le menu : 'Café : 3,00 $, Croissant : 4,00 $, Formule P'tit Déj (Café + Croissant) : 6,00 $.' Combien économisez-vous en choisissant la formule plutôt que les articles séparés ?", options: ["0,50 $", "1,00 $", "1,50 $", "2,00 $"], correctAnswer: "1,00 $", explanation: "3,00 $ + 4,00 $ = 7,00 $ individuellement. La formule coûte 6,00 $, soit 1,00 $ d'économie."),
@@ -374,6 +386,7 @@ struct FrenchNewExercisesData {
         instructions: "Lisez la facture donnée et répondez à la question.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Sur la facture d'électricité : 'Montant total dû : 85,00 $, Date limite de paiement : 20 juillet. Des frais de retard de 5,00 $ s'appliquent après cette date.' Combien paierez-vous si vous réglez le 25 juillet ?", options: ["85,00 $", "90,00 $", "95,00 $", "80,00 $"], correctAnswer: "90,00 $", explanation: "85,00 $ + 5,00 $ de frais de retard = 90,00 $."),
@@ -400,6 +413,7 @@ struct FrenchNewExercisesData {
         instructions: "Choisissez la meilleure réaction à adopter face à la situation sociale décrite.",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "Vous trouvez une enveloppe contenant de l'argent liquide sur le sol du hall de votre immeuble. Que faites-vous ?", options: ["La garder pour vous", "La remettre au gérant de l'immeuble ou à la police", "La laisser par terre", "La donner à un ami au hasard"], correctAnswer: "La remettre au gérant de l'immeuble ou à la police", explanation: ""),

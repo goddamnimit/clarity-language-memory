@@ -27,6 +27,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਸ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ ਜੋ ਗਰੁੱਪ ਵਿੱਚ ਨਹੀਂ ਹੈ।",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸੇਬ, ਨਾਸ਼ਪਾਤੀ, ਗਾਜਰ, ਬੇਰ", options: ["ਸੇਬ", "PEAR", "ਗਾਜਰ", "PLUM"], correctAnswer: "ਗਾਜਰ", explanation: "ਸਬਜ਼ੀਆਂ, ਫਲ ਨਹੀਂ"),
@@ -68,6 +69,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਸ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ ਜੋ ਗਰੁੱਪ ਵਿੱਚ ਨਹੀਂ ਹੈ।",
         section: .language,
         type: .categoryCrossOut,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸਿਮਾਇਲ, ਮੈਟਾਫਰ, ਹਾਈਪਰਬੋਲ, PARAGRAPH", options: ["ਸਿਮਾਇਲ", "ਰੂਪਕ", "ਹਾਈਪਰਬੋਲ", "PARAGRAPH"], correctAnswer: "PARAGRAPH", explanation: "ਪਾਠ ਦੀ ਬਣਤਰ, ਨਾ ਕਿ ਬੋਲੀ ਦਾ ਚਿੱਤਰ"),
@@ -103,6 +105,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਵਾਕੰਸ਼ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਭ ਤੋਂ ਢੁਕਵਾਂ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਵਾਕ ਪੂਰਾ ਕਰੋ: “ਰੋਟੀ ___”", options: ["ਖਾਣੀ", "ਪੀਣੀ", "ਜਾਣੀ", "ਲਿਖਣੀ"], correctAnswer: "ਖਾਣੀ", explanation: "ਪੰਜਾਬੀ ਵਿੱਚ ਭੋਜਨ ਕਰਨ ਲਈ ‘ਰੋਟੀ ਖਾਣੀ’ ਸ਼ਬਦ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"),
@@ -134,6 +137,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜਿਸਦਾ ਅਰਥ ਹੈ ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਵਾਂਗ ਹੀ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗੁੱਸਾ", options: ["ਖੁਸ਼", "ਗੁੱਸੇ", "ਸ਼ਾਂਤ", "ਉਦਾਸ"], correctAnswer: "ਗੁੱਸੇ", explanation: ""),
@@ -155,6 +159,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜਿਸਦਾ ਅਰਥ ਹੈ ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਵਾਂਗ ਹੀ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਉਦਾਸੀ", options: ["ਅਨੰਦਮਈ", "ਉਦਾਸ", "ਉਤਸ਼ਾਹਿਤ", "ਸਮੱਗਰੀ"], correctAnswer: "ਉਦਾਸ", explanation: ""),
@@ -176,6 +181,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜਿਸਦਾ ਅਰਥ ਹੈ ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਦੇ ਉਲਟ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗਰਮ", options: ["ਗਰਮ", "ਠੰਡਾ", "ਠੰਡਾ", "ਨਰਮ"], correctAnswer: "ਠੰਡਾ", explanation: ""),
@@ -197,6 +203,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਵਾਕ ਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰੇ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਸਿੰਜਿਆ.", options: ["ਫੁੱਲ", "ਮੰਜ਼ਿਲਾਂ", "ਆਟਾ"], correctAnswer: "ਫੁੱਲ", explanation: ""),
@@ -228,6 +235,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਵਾਕ ਦੇ ਪ੍ਰਸੰਗ ਅਨੁਸਾਰ ਸਹੀ ਸ਼ਬਦ-ਰੂਪ ਚੁਣੋ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਵਾਕ ਅਨੁਸਾਰ ਸਹੀ ਵਿਆਕਰਨਕ ਰੂਪ ਚੁਣੋ: “ਮੁੰਡਾ ਰੋਟੀ ___ ਹੈ। (ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ)”", options: ["ਖਾਂਦਾ", "ਖਾਂਦੀ", "ਖਾਂਦੇ", "ਖਾਂਦੀਆਂ"], correctAnswer: "ਖਾਂਦਾ", explanation: "ਪੁਲਿੰਗ ਇਕਵਚਨ (ਮੁੰਡਾ) ਦੇ ਨਾਲ ਕਿਰਿਆ ਦਾ ਰੂਪ ‘ਖਾਂਦਾ’ ਲੱਗੇਗਾ।"),
@@ -259,6 +267,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਸਭ ਤੋਂ ਵਧੀਆ ਸਮਾਨਤਾ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "PUPPY ਕੁੱਤੇ ਲਈ ਹੈ ਜਿਵੇਂ ਕਿ KITEN ਨੂੰ ___", options: ["ਬਿੱਲੀ", "ਕੁੱਤਾ", "ਪੰਛੀ", "ਮੱਛੀ"], correctAnswer: "ਬਿੱਲੀ", explanation: ""),
@@ -285,6 +294,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਫੈਸਲਾ ਕਰੋ: ਕੀ ਇਹ ਬਿਆਨ ਇੱਕ ਤੱਥ ਹੈ ਜਾਂ ਇੱਕ ਰਾਏ?",
         section: .language,
         type: .factOrOpinion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਹਫ਼ਤੇ ਵਿੱਚ 7 ਦਿਨ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
@@ -321,6 +331,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਕਦਮ ਗਲਤ ਕ੍ਰਮ ਵਿੱਚ ਦਿਖਾਏ ਗਏ ਹਨ। ਉਹਨਾਂ ਨੂੰ ਸਹੀ ਤਰਤੀਬ ਵਿੱਚ ਰੱਖਣ ਲਈ ਉਹਨਾਂ ਨੂੰ 1, 2, 3... ਨੰਬਰ ਦਿਓ।",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਟੋਸਟ ਬਣਾਉਣਾ", options: ["ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ", "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ", "ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ", "ਖਾਓ"], correctAnswer: "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ | ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ | ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ | ਖਾਓ", explanation: ""),
@@ -340,6 +351,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਦਿੱਤੇ ਗਏ ਮੁਹਾਵਰੇ ਦਾ ਸਹੀ ਅਰਥ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਮੁਹਾਵਰੇ “ਅੱਖਾਂ ਦਾ ਤਾਰਾ” ਦਾ ਸਹੀ ਅਰਥ ਕੀ ਹੈ?", options: ["ਬਹੁਤ ਪਿਆਰਾ ਹੋਣਾ", "ਅੱਖ ਵਿੱਚ ਨੁਕਸ ਹੋਣਾ", "ਤਾਰੇ ਦੇਖਣਾ", "ਦੂਰ ਦੀ ਸੋਚਣਾ"], correctAnswer: "ਬਹੁਤ ਪਿਆਰਾ ਹੋਣਾ", explanation: "ਮੁਹਾਵਰਾ ‘ਅੱਖਾਂ ਦਾ ਤਾਰਾ’ ਬਹੁਤ ਪਿਆਰੇ ਵਿਅਕਤੀ ਜਾਂ ਬੱਚੇ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"),
@@ -366,6 +378,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਨਾਲ ਮਿਲਦੀ ਆਵਾਜ਼ ਵਾਲਾ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਹੇਠ ਦਿੱਤੇ ਸ਼ਬਦਾਂ ਵਿੱਚੋਂ “ਤਾਰਾ” ਨਾਲ ਮਿਲਦੀ ਆਵਾਜ਼ (Rhyme) ਵਾਲਾ ਸ਼ਬਦ ਚੁਣੋ:", options: ["ਕਾਰਾ", "ਪਾਣੀ", "ਰਾਣੀ", "ਹੱਥ"], correctAnswer: "ਕਾਰਾ", explanation: "‘ਤਾਰਾ’ ਅਤੇ ‘ਕਾਰਾ’ ਦਾ ਉਚਾਰਨ ਅੰਤ ਵਿੱਚ ਇੱਕੋ ਜਿਹਾ ਹੈ (ਆਰਾ)।"),
@@ -397,6 +410,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਦਿੱਤੇ ਗਏ ਸ਼ਬਦ ਨਾਲ ਸਭ ਤੋਂ ਨਜ਼ਦੀਕੀ ਨਾਲ ਜੁੜੇ ਸ਼ਬਦ ਨੂੰ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਡਾਕਟਰ", options: ["ਹਸਪਤਾਲ", "ਹਵਾਈ ਅੱਡਾ", "ਲਾਇਬ੍ਰੇਰੀ", "ਫਾਰਮ"], correctAnswer: "ਹਸਪਤਾਲ", explanation: "ਡਾਕਟਰ ਮਰੀਜ਼ਾਂ ਦੀ ਦੇਖਭਾਲ ਲਈ ਹਸਪਤਾਲਾਂ ਵਿੱਚ ਕੰਮ ਕਰਦੇ ਹਨ।"),
@@ -428,6 +442,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਦਿੱਤੇ ਗਏ ਅਖਾਣ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਦਿੱਤੇ ਗਏ ਅਖਾਣ ਨੂੰ ਪੂਰਾ ਕਰੋ: “ਡੋਲ੍ਹੇ ਦੁੱਧ ਦਾ ___”", options: ["ਕੀ ਝੂਰਨਾ", "ਪੀ ਲੈਣਾ", "ਸੁੱਟ ਦੇਣਾ", "ਬਣਾਉਣਾ"], correctAnswer: "ਕੀ ਝੂਰਨਾ", explanation: "ਇਸਦਾ ਅਰਥ ਹੈ ਕਿ ਨੁਕਸਾਨ ਹੋ ਜਾਣ ਤੋਂ ਬਾਅਦ ਪਛਤਾਉਣ ਦਾ ਕੋਈ ਫ਼ਾਇਦਾ ਨਹੀਂ ਹੁੰਦਾ।"),
@@ -459,6 +474,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਦੋ ਸ਼ਬਦਾਂ ਦੇ ਸੁਮੇਲ ਤੋਂ ਬਣਨ ਵਾਲਾ ਸਹੀ ਸੰਯੁਕਤ ਸ਼ਬਦ ਚੁਣੋ।",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਦੋ ਸ਼ਬਦਾਂ ਨੂੰ ਜੋੜ ਕੇ ਸੰਯੁਕਤ ਸ਼ਬਦ ਬਣਾਓ: ਸਾਗ + ਪਾਤ = ___", options: ["ਸਾਗ-ਪਾਤ", "ਸਾਗ-ਰੋਟੀ", "ਹਰੀ-ਸਬਜ਼ੀ", "ਪੱਤੇ-ਦਾਰ"], correctAnswer: "ਸਾਗ-ਪਾਤ", explanation: "ਹਰੀਆਂ ਸਬਜ਼ੀਆਂ ਜਾਂ ਪੱਤਿਆਂ ਵਾਲੀ ਸਬਜ਼ੀ ਨੂੰ ਸਾਗ-ਪਾਤ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।"),
@@ -490,6 +506,7 @@ struct PunjabiLanguageExerciseData {
         instructions: "ਅਗੇਤਰ ਜਾਂ ਪਿਛੇਤਰ ਦੇ ਸਹੀ ਅਰਥ ਜਾਂ ਵਰਤੋਂ ਦੀ ਚੋਣ ਕਰੋ।",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ “ਅਣਪੜ੍ਹ” ਵਿੱਚ ਵਰਤੇ ਗਏ ਪਿਛੇਤਰ/ਅਗੇਤਰ “ਅਣ-” ਦਾ ਕੀ ਮਤਲਬ ਹੈ?", options: ["ਅਣਪੜ੍ਹ", "ਪੜ੍ਹਿਆ", "ਸਿਆਣਾ", "ਗਿਆਨੀ"], correctAnswer: "ਅਣਪੜ੍ਹ", explanation: "ਅਗੇਤਰ (prefix) ‘ਅਣ-’ ਦਾ ਅਰਥ ਹੈ ‘ਰਹਿਤ’ ਜਾਂ ‘ਬਿਨਾਂ’ (ਅਣਪੜ੍ਹ = ਜੋ ਪੜ੍ਹਿਆ ਨਾ ਹੋਵੇ)।"),

@@ -30,6 +30,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the correct homonym pair to complete the sentences.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[discrete / discreet] The researchers collected ___ data points. She was very ___ about her findings.", options: ["discrete...discreet", "discreet...discrete", "discrete...discrete", "discreet...discreet"], correctAnswer: "discrete...discreet", explanation: "'Discrete' means distinct or separate, while 'discreet' means careful, cautious, or circumspect."),
@@ -56,6 +57,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that best completes the analogy.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "EPHEMERAL is to PERMANENT as TRANSITORY is to ___", options: ["Brief", "Fleet", "Enduring", "Temporary"], correctAnswer: "Enduring", explanation: "Ephemeral and permanent are antonyms, just as transitory and enduring are antonyms."),
@@ -82,6 +84,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word most closely associated with the given word.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "EPHEMERAL", options: ["Permanent", "Transitory", "Solid", "Infinite"], correctAnswer: "Transitory", explanation: "Ephemeral is closely associated with transitory, describing something that lasts only a short time."),
@@ -108,6 +111,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that best completes the sentence.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "The committee decided to ___ the proposal due to a lack of empirical evidence.", options: ["expedite", "shelve", "validate", "support"], correctAnswer: "shelve", explanation: "'Shelve' means to decide not to proceed with a proposal or plan."),
@@ -134,6 +138,7 @@ struct EnglishHardExercisesData {
         instructions: "Put the steps of the activity in the correct logical order.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Put the steps of Publishing a Research Paper in the correct logical order.", options: ["Conduct experiments and collect data", "Draft the manuscript and format it", "Submit to a peer-reviewed journal and revise based on feedback", "Formulate a research question and hypothesis"], correctAnswer: "Formulate a research question and hypothesis | Conduct experiments and collect data | Draft the manuscript and format it | Submit to a peer-reviewed journal and revise based on feedback", explanation: "Publishing research begins with formulation, followed by experimentation, drafting the paper, and journal submission/revision."),
@@ -160,6 +165,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the most logical cause or effect for the given scenario.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "A central bank significantly raises its prime interest rates. What is the most direct macroeconomic effect?", options: ["Borrowing costs decrease for consumers", "Consumer spending and business expansion slow down", "Inflation rises immediately", "Stock market indices double overnight"], correctAnswer: "Consumer spending and business expansion slow down", explanation: "Higher interest rates make borrowing more expensive, which acts to cool down consumer spending and business investments."),
@@ -186,6 +192,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the option that describes why the scenario is logically or physically impossible.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "The ice sculptor heated the gallery to room temperature to preserve the delicate ice carvings from cracking.", options: ["Galleries do not show ice sculptures", "Heating the room would melt the ice sculptures rather than preserve them", "Ice sculptures only crack in freezing weather", "Room temperature is too cold for ice"], correctAnswer: "Heating the room would melt the ice sculptures rather than preserve them", explanation: "Ice melts at temperatures above freezing. Heating the room to room temperature would destroy the sculptures."),
@@ -212,6 +219,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that correctly completes the common proverb or saying.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Complete the saying: A chain is only as strong as its weakest ___.", options: ["link", "part", "metal", "point"], correctAnswer: "link", explanation: "The proverb is 'A chain is only as strong as its weakest link,' meaning a group is only as strong as its weakest member."),
@@ -238,6 +246,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the correct homonym pair to complete the sentences.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[see / sea] I can ___ you. The ship sailed on the ___.", options: ["see...sea", "sea...see", "see...see", "sea...sea"], correctAnswer: "see...sea", explanation: "See refers to vision, while sea refers to the ocean."),
@@ -264,6 +273,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that best completes the analogy.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "UP is to DOWN as HOT is to COLD", options: ["COLD", "WARM", "BOILING", "WET"], correctAnswer: "COLD", explanation: "Up and down are opposites, just as hot and cold are opposites."),
@@ -290,6 +300,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the option that represents the most logical cause or effect.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Cause: You drop a glass cup on the concrete floor.", options: ["The glass breaks", "The glass floats", "The glass gets soft", "The glass turns blue"], correctAnswer: "The glass breaks", explanation: "Dropping a fragile glass cup on a hard floor causes it to shatter or break."),
@@ -316,6 +327,7 @@ struct EnglishHardExercisesData {
         instructions: "Identify the logical error or impossibility in the statement.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Absurdity: John put on his shoes before his socks.", options: ["Socks must go on before shoes", "Shoes should go on the hands", "Socks are worn on the head", "Shoes should be eaten"], correctAnswer: "Socks must go on before shoes", explanation: "Socks are worn inside shoes, so they must be put on first."),
@@ -342,6 +354,7 @@ struct EnglishHardExercisesData {
         instructions: "Arrange the steps of the activity in the correct order.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Making toast", options: ["Put bread in toaster", "Press the lever down", "Wait for toast to pop", "Spread butter on toast"], correctAnswer: "Put bread in toaster | Press the lever down | Wait for toast to pop | Spread butter on toast", explanation: "Toast sequence: place bread in slot, engage heating mechanism, wait for release, apply spread."),
@@ -358,6 +371,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word most closely associated with the given prompt.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "LIBRARY", options: ["Silence", "Noise", "Crowd", "Game"], correctAnswer: "Silence", explanation: "Libraries are traditionally quiet spaces reserved for study, closely associating them with silence."),
@@ -384,6 +398,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the correct homonym pair to complete the sentences.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[bare / bear] The winter trees are completely ___. The brown ___ caught a salmon in the river.", options: ["bare...bear", "bear...bare", "bare...bare", "bear...bear"], correctAnswer: "bare...bear", explanation: "'Bare' means uncovered or naked, while 'bear' is a large mammal."),
@@ -400,6 +415,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that correctly completes the proverb or saying.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "An apple a day keeps the doctor ___", options: ["away", "here", "close", "well"], correctAnswer: "away", explanation: "The traditional proverb is 'An apple a day keeps the doctor away.'"),
@@ -426,6 +442,7 @@ struct EnglishHardExercisesData {
         instructions: "Choose the word that correctly completes the proverb or saying.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Familiarity breeds ___", options: ["contempt", "closeness", "dislike", "friendship"], correctAnswer: "contempt", explanation: "The proverb is 'Familiarity breeds contempt.'"),

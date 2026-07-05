@@ -25,6 +25,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "この場面で最も安全な行動を選んでください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "地震が起きたら最初に何をすべきですか？", options: ["テレビを見る", "安全な場所に隠れる", "外に出る", "電話をかける"], correctAnswer: "安全な場所に隠れる", explanation: ""),
@@ -67,6 +68,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "正しい順序に並び替えてください。",
         section: .functionalSkills,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "味噌汁の作り方は？", options: ["だしを取る", "具材を入れて煮る", "味噌を溶き入れる", "材料を準備する"], correctAnswer: "材料を準備する | だしを取る | 具材を入れて煮る | 味噌を溶き入れる", explanation: ""),
@@ -99,6 +101,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "日常生活の問題に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "洗濯物を干す前に何をすべきですか？", options: ["乾燥機に入れる", "洗濯機で洗う", "アイロンをかける", "折りたたむ"], correctAnswer: "洗濯機で洗う", explanation: ""),
@@ -131,6 +134,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "時間に関する質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "1時間は何分ですか？", options: ["30分", "45分", "60分", "90分"], correctAnswer: "60分", explanation: ""),
@@ -159,6 +163,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "買い物の計算をしてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "りんご1個が200円で、3個買ったら合計いくらですか？", options: ["400円", "500円", "600円", "700円"], correctAnswer: "600円", explanation: ""),
@@ -184,6 +189,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "薬の指示を読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "処方箋に「1日3回、毎食後に1錠」と書いてあります。1日に何錠飲みますか？", options: ["1錠", "2錠", "3錠", "4錠"], correctAnswer: "3錠", explanation: ""),
@@ -211,6 +217,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "メニューを読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "メニューに「にぎり寿司 1,200円、お吸い物 200円」とあります。両方注文するといくらですか？", options: ["1,200円", "1,300円", "1,400円", "1,600円"], correctAnswer: "1,400円", explanation: ""),
@@ -238,6 +245,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "請求書や領収書を読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "電気代の請求書に「今月の使用量：200kWh、料金：6,000円」とあります。1kWhあたりいくらですか？", options: ["25円", "30円", "35円", "40円"], correctAnswer: "30円", explanation: ""),
@@ -265,6 +273,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "この状況でどうすれば良いか答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "友人の誕生日に贈り物をしたいとき、どうすれば良いですか？", options: ["何もしない", "プレゼントを買って贈る", "誕生日を忘れる", "別の日にお祝いを取り消す"], correctAnswer: "プレゼントを買って贈る", explanation: ""),
@@ -297,6 +306,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "空間に関する質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "テーブルの上にコップが置いてあります。コップはテーブルの何にありますか？", options: ["下", "横", "上", "後ろ"], correctAnswer: "上", explanation: ""),
@@ -319,6 +329,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "テレビ番組表を読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "「19:00〜20:00 ニュース番組、20:00〜21:00 ドラマ」という番組表です。ドラマは何時から始まりますか？", options: ["19:00", "19:30", "20:00", "21:00"], correctAnswer: "20:00", explanation: ""),
@@ -341,6 +352,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "カレンダーを読んで質問に答えてください。",
         section: .functionalSkills,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(id: UUID(), prompt: "今日が10月1日（月曜日）なら、10月15日は何曜日ですか？", options: ["月曜日", "火曜日", "水曜日", "木曜日"], correctAnswer: "月曜日", explanation: ""),
@@ -361,6 +373,7 @@ struct JapaneseFunctionalSkillsExerciseData {
         instructions: "考えて答えてみましょう。模範的な回答をご参考ください。",
         section: .functionalSkills,
         type: .openEnded,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(id: UUID(), prompt: "今日の天気について一言書いてください。", options: [], correctAnswer: "例：今日は晴れていて、気持ち良い日です。", explanation: "天気を観察して書きましょう"),
