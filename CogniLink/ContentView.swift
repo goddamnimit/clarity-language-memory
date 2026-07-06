@@ -9,6 +9,10 @@ struct ContentView: View {
     @State private var backgroundOpacity: Double = 0.0
     @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .iOS)
 
+    private var isRTL: Bool {
+        [.farsi, .arabic].contains(languageManager.currentLanguage)
+    }
+
     var body: some View {
         ZStack {
             Group {
@@ -26,35 +30,13 @@ struct ContentView: View {
             .opacity(backgroundOpacity)
 
             Color.black.opacity(0.35)
-            
-            TabView(selection: $selectedTab) {
-                // Tab 1: Localized Home View
-                HomeView()
-                    .tabItem {
-                        Label(homeTabTitle, systemImage: "house.fill")
-                    }
-                    .tag(0)
-                
-                // Tab 2: All Activities View with dedicated NavigationStack
-                NavigationStack {
-                    AllActivitiesView()
-                }
-                .tabItem {
-                    Label(activitiesTabTitle, systemImage: "brain.head.profile")
-                }
-                .tag(1)
-                
-                // Tab 3: Profile View
-                NavigationStack {
-                    ProfileView()
-                }
-                .tabItem {
-                    Label(profileTabTitle, systemImage: "person.fill")
-                }
-                .tag(2)
+
+            if isRTL {
+                tabViewBody
+                    .environment(\.layoutDirection, .rightToLeft)
+            } else {
+                tabViewBody
             }
-            .environment(\.layoutDirection,
-                [.farsi, .arabic].contains(languageManager.currentLanguage) ? .rightToLeft : .leftToRight)
         }
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
@@ -79,6 +61,38 @@ struct ContentView: View {
             withAnimation(.easeInOut(duration: 0.6)) {
                 backgroundImageName = BackgroundManager.shared.dailyImageName(for: .iOS)
             }
+        }
+    }
+
+    // MARK: - Tab View
+
+    @ViewBuilder
+    private var tabViewBody: some View {
+        TabView(selection: $selectedTab) {
+            // Tab 1: Localized Home View
+            HomeView()
+                .tabItem {
+                    Label(homeTabTitle, systemImage: "house.fill")
+                }
+                .tag(0)
+
+            // Tab 2: All Activities View with dedicated NavigationStack
+            NavigationStack {
+                AllActivitiesView()
+            }
+            .tabItem {
+                Label(activitiesTabTitle, systemImage: "brain.head.profile")
+            }
+            .tag(1)
+
+            // Tab 3: Profile View
+            NavigationStack {
+                ProfileView()
+            }
+            .tabItem {
+                Label(profileTabTitle, systemImage: "person.fill")
+            }
+            .tag(2)
         }
     }
 
