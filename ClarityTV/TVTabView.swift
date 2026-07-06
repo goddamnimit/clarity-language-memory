@@ -2,10 +2,20 @@
 import SwiftUI
 import Combine
 
+private enum TVTab: Hashable {
+    case home
+    case activities
+    case progress
+    case profile
+}
+
 struct TVTabView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
     @State private var backgroundOpacity: Double = 0.0
     @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .tvOS)
+    @State private var selectedTab: TVTab = .home
+    @State private var homeTabId = UUID()
+    @State private var activitiesTabId = UUID()
 
     private var isRTL: Bool {
         let currentLanguage = languageManager.currentLanguage
@@ -30,28 +40,41 @@ struct TVTabView: View {
 
             Color.black.opacity(0.45)
             
-            TabView {
+            TabView(selection: $selectedTab) {
                 TVHomeView()
+                    .id(homeTabId)
+                    .tag(TVTab.home)
                     .tabItem {
                         Label(languageManager.currentLanguage.homeTabTitle, systemImage: "house.fill")
                     }
 
                 TVActivitiesView()
+                    .id(activitiesTabId)
+                    .tag(TVTab.activities)
                     .tabItem {
                         Label(languageManager.currentLanguage.activitiesTabTitle, systemImage: "play.circle.fill")
                     }
 
                 TVProgressView()
+                    .tag(TVTab.progress)
                     .tabItem {
                         Label(languageManager.currentLanguage.progressTabTitle, systemImage: "chart.bar.fill")
                     }
 
                 TVProfileView()
+                    .tag(TVTab.profile)
                     .tabItem {
                         Label(languageManager.currentLanguage.profileTabTitle, systemImage: "person.crop.circle.fill")
                     }
             }
             .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+            .onChange(of: selectedTab) { oldTab, newTab in
+                if oldTab == .home && newTab != .home {
+                    homeTabId = UUID()
+                } else if oldTab == .activities && newTab != .activities {
+                    activitiesTabId = UUID()
+                }
+            }
         }
         .onAppear {
             withAnimation(.easeIn(duration: 0.8)) {
