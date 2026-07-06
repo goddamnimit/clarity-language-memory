@@ -75,6 +75,10 @@ struct TVTabView: View {
                     activitiesTabId = UUID()
                 }
             }
+            .onChange(of: languageManager.currentLanguage) {
+                homeTabId = UUID()
+                activitiesTabId = UUID()
+            }
         }
         .onAppear {
             withAnimation(.easeIn(duration: 0.8)) {
