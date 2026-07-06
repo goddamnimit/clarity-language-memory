@@ -12,11 +12,18 @@ struct TVTabView: View {
 
     var body: some View {
         ZStack {
-            Image(BackgroundManager.shared.dailyImageName(for: .tvOS))
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-                .opacity(backgroundOpacity)
+            Group {
+                let imageName = BackgroundManager.shared.dailyImageName(for: .tvOS)
+                if BackgroundManager.shared.imageExists(named: imageName) {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    Color.black
+                }
+            }
+            .ignoresSafeArea()
+            .opacity(backgroundOpacity)
             
             Color.black.opacity(0.45)
             

@@ -9,11 +9,18 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Image(BackgroundManager.shared.dailyImageName(for: .iOS))
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-                .opacity(backgroundOpacity)
+            Group {
+                let imageName = BackgroundManager.shared.dailyImageName(for: .iOS)
+                if BackgroundManager.shared.imageExists(named: imageName) {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    Color.black
+                }
+            }
+            .ignoresSafeArea()
+            .opacity(backgroundOpacity)
             
             Color.black.opacity(0.35)
             

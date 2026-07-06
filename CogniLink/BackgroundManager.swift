@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 enum BackgroundPlatform {
     case iOS
@@ -35,10 +36,14 @@ class BackgroundManager {
             #endif
         case .tvOS:
             #if os(tvOS)
-            return imageNames[index]
+            return "tv_" + imageNames[index]
             #else
             return ""
             #endif
         }
+    }
+
+    func imageExists(named name: String) -> Bool {
+        !name.isEmpty && UIImage(named: name) != nil
     }
 }
