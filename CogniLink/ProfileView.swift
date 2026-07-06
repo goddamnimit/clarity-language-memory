@@ -26,6 +26,7 @@ struct ProfileView: View {
     @State private var exportURL: URL? = nil
     @State private var showKeyboardTip = false
     @State private var keyboardTipLanguage: AppLanguage? = nil
+    @State private var showBackgroundChangedToast = false
 
     // MARK: - Computed Stats
 
@@ -290,6 +291,41 @@ struct ProfileView: View {
                     }
                     .padding(.horizontal)
                     .padding(.top, 4)
+                }
+
+                // MARK: 5.5. Change Background
+                VStack(alignment: .leading, spacing: 8) {
+                    Button {
+                        BackgroundManager.shared.randomizeBackground()
+                        withAnimation { showBackgroundChangedToast = true }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            withAnimation { showBackgroundChangedToast = false }
+                        }
+                    } label: {
+                        HStack {
+                            Image(systemName: "photo.on.rectangle.angled")
+                                .foregroundColor(.accentColor)
+                            Text("Change Background")
+                                .font(.body)
+                                .foregroundColor(.primary)
+                            Spacer()
+                        }
+                        .padding()
+                        .frame(minHeight: 50)
+                        .background(Color.secondaryGroupedBackground)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.horizontal)
+
+                    if showBackgroundChangedToast {
+                        Text("Background updated!")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
+                            .transition(.opacity)
+                    }
                 }
 
                 // MARK: 6. Achievements (unchanged)

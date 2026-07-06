@@ -1,4 +1,5 @@
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     @ObservedObject var languageManager = LanguageManager.shared
@@ -6,22 +7,24 @@ struct ContentView: View {
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "clarity_onboarding_complete")
     @State private var hasResetTabOnLaunch = false
     @State private var backgroundOpacity: Double = 0.0
+    @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .iOS)
 
     var body: some View {
         ZStack {
             Group {
-                let imageName = BackgroundManager.shared.dailyImageName(for: .iOS)
-                if BackgroundManager.shared.imageExists(named: imageName) {
-                    Image(imageName)
+                if BackgroundManager.shared.imageExists(named: backgroundImageName) {
+                    Image(backgroundImageName)
                         .resizable()
                         .scaledToFill()
+                        .id(backgroundImageName)
+                        .transition(.opacity)
                 } else {
                     Color.black
                 }
             }
             .ignoresSafeArea()
             .opacity(backgroundOpacity)
-            
+
             Color.black.opacity(0.35)
             
             TabView(selection: $selectedTab) {
@@ -68,6 +71,14 @@ struct ContentView: View {
             NotificationManager.shared.refreshPermissionStatus()
             NotificationManager.shared.rescheduleAll()
             #endif
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(for: .clarityBackgroundChanged)
+                .receive(on: DispatchQueue.main)
+        ) { _ in
+            withAnimation(.easeInOut(duration: 0.6)) {
+                backgroundImageName = BackgroundManager.shared.dailyImageName(for: .iOS)
+            }
         }
     }
 

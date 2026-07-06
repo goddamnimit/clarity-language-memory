@@ -1,9 +1,11 @@
 #if os(tvOS)
 import SwiftUI
+import Combine
 
 struct TVTabView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
     @State private var backgroundOpacity: Double = 0.0
+    @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .tvOS)
 
     private var isRTL: Bool {
         let currentLanguage = languageManager.currentLanguage
@@ -13,18 +15,19 @@ struct TVTabView: View {
     var body: some View {
         ZStack {
             Group {
-                let imageName = BackgroundManager.shared.dailyImageName(for: .tvOS)
-                if BackgroundManager.shared.imageExists(named: imageName) {
-                    Image(imageName)
+                if BackgroundManager.shared.imageExists(named: backgroundImageName) {
+                    Image(backgroundImageName)
                         .resizable()
                         .scaledToFill()
+                        .id(backgroundImageName)
+                        .transition(.opacity)
                 } else {
                     Color.black
                 }
             }
             .ignoresSafeArea()
             .opacity(backgroundOpacity)
-            
+
             Color.black.opacity(0.45)
             
             TabView {
@@ -53,6 +56,14 @@ struct TVTabView: View {
         .onAppear {
             withAnimation(.easeIn(duration: 0.8)) {
                 backgroundOpacity = 1.0
+            }
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(for: .clarityBackgroundChanged)
+                .receive(on: DispatchQueue.main)
+        ) { _ in
+            withAnimation(.easeInOut(duration: 0.6)) {
+                backgroundImageName = BackgroundManager.shared.dailyImageName(for: .tvOS)
             }
         }
     }

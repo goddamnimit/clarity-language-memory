@@ -4,6 +4,7 @@ import SwiftUI
 private enum TVProfileFocus: Hashable {
     case language(AppLanguage)
     case caregiverMode
+    case changeBackground
 }
 
 struct TVProfileView: View {
@@ -122,6 +123,33 @@ struct TVProfileView: View {
                         }
                         .padding(.horizontal, 100)
                     }
+
+                    // Change Background Tile
+                    Button {
+                        BackgroundManager.shared.randomizeBackground()
+                    } label: {
+                        HStack(spacing: 16) {
+                            Image(systemName: "photo.on.rectangle.angled")
+                                .font(.system(size: 32))
+                                .foregroundColor(Color(hex: "FF9500"))
+                            Text("Change Background")
+                                .font(.system(size: 28, weight: .bold, design: .rounded))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.horizontal, 40)
+                        .padding(.vertical, 24)
+                        .background(
+                            RoundedRectangle(cornerRadius: 18)
+                                .fill(focus == .changeBackground ? Color(hex: "3D3D60") : Color(hex: "2D2D44").opacity(0.5))
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 18)
+                                .stroke(focus == .changeBackground ? Color.white : Color.clear, lineWidth: 3)
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .focused($focus, equals: .changeBackground)
+                    .padding(.horizontal, 100)
 
                     // Caregiver Mode Launch Button
                     Button {

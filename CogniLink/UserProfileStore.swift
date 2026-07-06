@@ -167,6 +167,7 @@ class UserProfileStore: ObservableObject {
         defaults.removeObject(forKey: "clarity_baseline_completed")
         defaults.removeObject(forKey: "clarity_weekly_goal")
         defaults.removeObject(forKey: "tvSoundEnabled")
+        defaults.removeObject(forKey: "clarity_background_override_index")
 
         // Clear all clarity_keyboard_tip_shown_* and clarity_recent_* keys
         let allKeys = defaults.dictionaryRepresentation().keys
