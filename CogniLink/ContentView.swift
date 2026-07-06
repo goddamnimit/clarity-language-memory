@@ -17,11 +17,15 @@ struct ContentView: View {
         ZStack {
             Group {
                 if BackgroundManager.shared.imageExists(named: backgroundImageName) {
-                    Image(backgroundImageName)
-                        .resizable()
-                        .scaledToFill()
-                        .id(backgroundImageName)
-                        .transition(.opacity)
+                    GeometryReader { geo in
+                        Image(backgroundImageName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width, height: geo.size.height)
+                            .clipped()
+                    }
+                    .id(backgroundImageName)
+                    .transition(.opacity)
                 } else {
                     Color.black
                 }
@@ -38,6 +42,8 @@ struct ContentView: View {
                 tabViewBody
             }
         }
+        .clipped()
+        .ignoresSafeArea(edges: .all)
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
