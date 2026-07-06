@@ -177,7 +177,7 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    
+
                     // Welcome Title
                     Text(personalizedGreeting)
                         .font(.system(.title, design: .rounded))
@@ -300,6 +300,7 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                 }
+                .frame(maxWidth: .infinity)
                 .padding(.vertical)
             }
             .onAppear {
