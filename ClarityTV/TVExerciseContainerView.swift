@@ -32,7 +32,7 @@ struct TVExerciseContainerView: View {
 
     var body: some View {
         ZStack {
-            Color(red: 0.1, green: 0.1, blue: 0.18).ignoresSafeArea()
+            Color.clear.ignoresSafeArea()
 
             if isComplete && onSessionComplete == nil {
                 TVCompletionView(

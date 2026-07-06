@@ -410,7 +410,7 @@ struct TVHomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(hex: "16213E").ignoresSafeArea()
+                Color.clear.ignoresSafeArea()
 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 50) {

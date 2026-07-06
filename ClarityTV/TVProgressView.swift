@@ -27,7 +27,7 @@ struct TVProgressView: View {
 
     var body: some View {
         ZStack {
-            Color(hex: "16213E").ignoresSafeArea()
+            Color.clear.ignoresSafeArea()
 
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 50) {
