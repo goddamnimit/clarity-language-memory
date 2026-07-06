@@ -11,6 +11,7 @@ struct TVSequencingView: View {
     @State private var hasChecked = false
     @State private var correctStates: [Bool]? = nil
     @State private var showHint = false
+    @ObservedObject private var languageManager = LanguageManager.shared
 
     private static var hasShownHintThisSession = false
 
@@ -19,7 +20,7 @@ struct TVSequencingView: View {
     }
 
     private var isRTL: Bool {
-        let currentLanguage = LanguageManager.shared.currentLanguage
+        let currentLanguage = languageManager.currentLanguage
         return currentLanguage == .farsi || currentLanguage == .arabic
     }
 
@@ -27,7 +28,7 @@ struct TVSequencingView: View {
         VStack(spacing: 24) {
             // Hint Banner
             if showHint {
-                Text("Select a step, then select where it goes")
+                Text(sequencingHint)
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundColor(Color(hex: "FF9500"))
                     .padding(.vertical, 12)
@@ -137,7 +138,7 @@ struct TVSequencingView: View {
 
     private var submitButton: some View {
         let isFocused = focusedIndex == steps.count
-        return Text("Submit")
+        return Text(submitButtonTitle)
             .font(.system(size: 36, weight: .bold, design: .rounded))
             .foregroundColor(.white)
             .padding(.horizontal, 80)
@@ -223,6 +224,50 @@ struct TVSequencingView: View {
         if isLifted { return Color(hex: "FF9500") }
         guard state == .idle else { return .clear }
         return isFocused ? .white : Color(hex: "FF9500").opacity(0.5)
+    }
+
+    // MARK: - Localized Copy
+
+    private var sequencingHint: String {
+        switch languageManager.currentLanguage {
+        case .english:    return "Select a step, then select where it goes"
+        case .spanish:    return "Seleccione un paso, luego seleccione a dónde va"
+        case .hindi:      return "एक चरण चुनें, फिर चुनें कि वह कहाँ जाता है"
+        case .gujarati:   return "એક પગલું પસંદ કરો, પછી તે ક્યાં જાય છે તે પસંદ કરો"
+        case .chinese:    return "选择一个步骤，然后选择它去哪里"
+        case .farsi:      return "یک مرحله را انتخاب کنید، سپس انتخاب کنید که به کجا می‌رود"
+        case .korean:     return "단계를 선택한 다음 이동할 위치를 선택하세요"
+        case .vietnamese: return "Chọn một bước, sau đó chọn nơi nó đến"
+        case .arabic:     return "حدد خطوة، ثم حدد المكان الذي تذهب إليه"
+        case .portuguese: return "Selecione uma etapa, depois selecione para onde ela vai"
+        case .tagalog:    return "Pumili ng hakbang, pagkatapos ay piliin kung saan ito pupunta"
+        case .punjabi:    return "ਇੱਕ ਕਦਮ ਚੁਣੋ, ਫਿਰ ਚੁਣੋ ਕਿ ਇਹ ਕਿੱਥੇ ਜਾਂਦਾ ਹੈ"
+        case .armenian:   return "Ընտրեք քայլ, այնուհետև ընտրեք, թե ուր է այն գնում"
+        case .japanese:   return "ステップを選択し、次に移動先を選択してください"
+        case .french:     return "Sélectionnez une étape, puis sélectionnez où elle va"
+        case .amharic:    return "አንድ እርምጃ ይምረጡ፣ ከዚያ የት እንደሚሄድ ይምረጡ"
+        }
+    }
+
+    private var submitButtonTitle: String {
+        switch languageManager.currentLanguage {
+        case .english:    return "Submit"
+        case .spanish:    return "Enviar"
+        case .hindi:      return "जमा करें"
+        case .gujarati:   return "સબમિટ કરો"
+        case .chinese:    return "提交"
+        case .farsi:      return "ارسال"
+        case .korean:     return "제출"
+        case .vietnamese: return "Gửi"
+        case .arabic:     return "إرسال"
+        case .portuguese: return "Enviar"
+        case .tagalog:    return "I-submit"
+        case .punjabi:    return "ਜਮ੍ਹਾਂ ਕਰੋ"
+        case .armenian:   return "Ներկայացնել"
+        case .japanese:   return "送信"
+        case .french:     return "Soumettre"
+        case .amharic:    return "አስገባ"
+        }
     }
 }
 
