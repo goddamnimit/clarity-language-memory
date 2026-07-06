@@ -19,7 +19,7 @@ fileprivate extension Color {
 // MARK: - Focus enum
 
 private enum TileFocus: Hashable {
-    case tileA, tileB, tileC, tileD, nextButton
+    case tileA, tileB, tileC, tileD
 }
 
 private let tileFocusCases: [TileFocus] = [.tileA, .tileB, .tileC, .tileD]
@@ -115,7 +115,6 @@ struct TVMultipleChoiceView: View {
             hasAnswered = true
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-            focus = .nextButton
             onAnswered(isCorrect)
         }
     }

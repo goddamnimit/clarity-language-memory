@@ -5,6 +5,7 @@ private enum TVProfileFocus: Hashable {
     case language(AppLanguage)
     case caregiverMode
     case changeBackground
+    case voiceOver
 }
 
 struct TVProfileView: View {
@@ -12,6 +13,7 @@ struct TVProfileView: View {
     @FocusState private var focus: TVProfileFocus?
     @State private var showPinEntry = false
     @State private var showDashboard = false
+    @AppStorage("tvSpeechEnabled") private var speechEnabled: Bool = false
 
     private var currentLanguage: AppLanguage {
         languageManager.currentLanguage
@@ -124,6 +126,33 @@ struct TVProfileView: View {
                         .padding(.horizontal, 100)
                     }
 
+                    // VoiceOver Read Questions Aloud Toggle Button
+                    Button {
+                        speechEnabled.toggle()
+                    } label: {
+                        HStack(spacing: 16) {
+                            Image(systemName: speechEnabled ? "waveform" : "waveform.slash")
+                                .font(.system(size: 32))
+                                .foregroundColor(Color(hex: "FF9500"))
+                            Text("\(readQuestionsAloudLabel): \(speechEnabled ? onLabel : offLabel)")
+                                .font(.system(size: 28, weight: .bold, design: .rounded))
+                                .foregroundColor(.white)
+                        }
+                        .padding(.horizontal, 40)
+                        .padding(.vertical, 24)
+                        .background(
+                            RoundedRectangle(cornerRadius: 18)
+                                .fill(focus == .voiceOver ? Color(hex: "3D3D60") : Color(hex: "2D2D44").opacity(0.5))
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 18)
+                                .stroke(focus == .voiceOver ? Color.white : Color.clear, lineWidth: 3)
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .focused($focus, equals: .voiceOver)
+                    .padding(.horizontal, 100)
+
                     // Change Background Tile
                     Button {
                         BackgroundManager.shared.randomizeBackground()
@@ -234,6 +263,69 @@ struct TVProfileView: View {
         )
         .scaleEffect(isFocused ? 1.04 : 1.0)
         .animation(.easeInOut(duration: 0.15), value: isFocused)
+    }
+
+    private var readQuestionsAloudLabel: String {
+        switch languageManager.currentLanguage {
+        case .english:    return "Read Questions Aloud"
+        case .spanish:    return "Leer preguntas en voz alta"
+        case .hindi:      return "प्रश्नों को जोर से पढ़ें"
+        case .gujarati:   return "પ્રશ્નો મોટેથી વાંચો"
+        case .chinese:    return "大声朗读问题"
+        case .farsi:      return "خواندن سوالات با صدای بلند"
+        case .korean:     return "질문 소리 내어 읽기"
+        case .vietnamese: return "Đọc to câu hỏi"
+        case .arabic:     return "قراءة الأسئلة بصوت عالٍ"
+        case .portuguese: return "Ler perguntas em voz alta"
+        case .tagalog:    return "Basahin nang malakas ang mga tanong"
+        case .punjabi:    return "ਸਵਾਲਾਂ ਨੂੰ ਉੱਚੀ ਆਵਾਜ਼ ਵਿੱਚ ਪੜ੍ਹੋ"
+        case .armenian:   return "Կարդալ հարցերը բարձրաձայն"
+        case .japanese:   return "質問を読み上げる"
+        case .french:     return "Lire les questions à voix haute"
+        case .amharic:    return "ጥያቄዎችን በታላቅ ድምፅ አንብብ"
+        }
+    }
+
+    private var onLabel: String {
+        switch languageManager.currentLanguage {
+        case .english:    return "On"
+        case .spanish:    return "Activado"
+        case .hindi:      return "चालू"
+        case .gujarati:   return "ચાલુ"
+        case .chinese:    return "开"
+        case .farsi:      return "روشن"
+        case .korean:     return "켜짐"
+        case .vietnamese: return "Bật"
+        case .arabic:     return "تشغيل"
+        case .portuguese: return "Ligado"
+        case .tagalog:    return "Naka-on"
+        case .punjabi:    return "ਚਾਲੂ"
+        case .armenian:   return "Միացված"
+        case .japanese:   return "オン"
+        case .french:     return "Activé"
+        case .amharic:    return "በርቷል"
+        }
+    }
+
+    private var offLabel: String {
+        switch languageManager.currentLanguage {
+        case .english:    return "Off"
+        case .spanish:    return "Desactivado"
+        case .hindi:      return "बंद"
+        case .gujarati:   return "બંધ"
+        case .chinese:    return "关"
+        case .farsi:      return "خاموش"
+        case .korean:     return "꺼짐"
+        case .vietnamese: return "Tắt"
+        case .arabic:     return "إيقاف"
+        case .portuguese: return "Desligado"
+        case .tagalog:    return "Naka-off"
+        case .punjabi:    return "ਬੰਦ"
+        case .armenian:   return "Անջատված"
+        case .japanese:   return "オフ"
+        case .french:     return "Désactivé"
+        case .amharic:    return "ጠፍቷል"
+        }
     }
 }
 

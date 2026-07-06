@@ -2,6 +2,14 @@
 import SwiftUI
 import AVFoundation
 
+// MARK: - TVContainerFocus
+
+private enum TVContainerFocus: Hashable {
+    case exerciseContent
+    case replay
+    case next
+}
+
 // MARK: - TVExerciseContainerView
 
 struct TVExerciseContainerView: View {
@@ -30,6 +38,8 @@ struct TVExerciseContainerView: View {
     // MARK: Text-to-speech
     @State private var synthesizer = AVSpeechSynthesizer()
 
+    @FocusState private var containerFocus: TVContainerFocus?
+
     var body: some View {
         ZStack {
             Color.clear.ignoresSafeArea()
@@ -50,6 +60,7 @@ struct TVExerciseContainerView: View {
         .onAppear {
             if currentExercise == nil { pickExerciseAndInit() }
             startPulse()
+            containerFocus = .exerciseContent
         }
         .onChange(of: currentIndex) {
             currentQuestionAnswered = false
@@ -57,6 +68,7 @@ struct TVExerciseContainerView: View {
             if currentIndex < sessionItems.count {
                 speak(sessionItems[currentIndex].prompt)
             }
+            containerFocus = .exerciseContent
         }
         .onDisappear {
             synthesizer.stopSpeaking(at: .immediate)
@@ -144,23 +156,32 @@ struct TVExerciseContainerView: View {
             }
             .id(currentItem.id)
             .padding(.horizontal, 80)
+            .focused($containerFocus, equals: .exerciseContent)
 
             Spacer()
 
-            // Footer: Replay (left) + Next / Skip (right)
-            HStack {
+            // Footer: Centered Replay + Right-aligned Next / Skip
+            ZStack {
+                // Centered Replay Button
                 Button(action: { speak(sessionItems[currentIndex].prompt) }) {
                     TVReplayButton()
                 }
                 .buttonStyle(.plain)
-                Spacer()
-                Button(action: { advanceToNext() }) {
-                    TVNextButton(
-                        label: currentQuestionAnswered ? "Next Question →" : "Skip →",
-                        isPrimary: currentQuestionAnswered
-                    )
+                .focused($containerFocus, equals: .replay)
+
+                // Right-aligned Next Button
+                HStack {
+                    Spacer()
+
+                    Button(action: { advanceToNext() }) {
+                        TVNextButton(
+                            label: currentQuestionAnswered ? "Next Question →" : "Skip →",
+                            isPrimary: currentQuestionAnswered
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .focused($containerFocus, equals: .next)
                 }
-                .buttonStyle(.plain)
             }
             .padding(.horizontal, 80)
             .padding(.bottom, 60)
@@ -341,6 +362,7 @@ struct TVExerciseContainerView: View {
             score += 1
             currentQuestionAnswered = true
         }
+        containerFocus = .next
     }
 
     private func advanceToNext() {
