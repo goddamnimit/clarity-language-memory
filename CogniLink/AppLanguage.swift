@@ -108,8 +108,53 @@ class LanguageManager: ObservableObject {
     }
     
     private init() {
-        let savedLanguage = UserDefaults.standard.string(forKey: "selected_language") ?? "English"
-        self.currentLanguage = AppLanguage(rawValue: savedLanguage) ?? .english
+        let savedLanguage = UserDefaults.standard.string(forKey: "selected_language")
+        let initialLang: AppLanguage
+        if let savedStr = savedLanguage, let appLang = AppLanguage(rawValue: savedStr) {
+            initialLang = appLang
+        } else {
+            let systemLanguages = Locale.preferredLanguages
+            if let firstLang = systemLanguages.first?.lowercased() {
+                if firstLang.hasPrefix("zh-hans") || firstLang.hasPrefix("zh-cn") || firstLang.hasPrefix("zh-sg") {
+                    initialLang = .chinese
+                } else if firstLang.hasPrefix("zh") {
+                    initialLang = .chinese
+                } else if firstLang.hasPrefix("es") {
+                    initialLang = .spanish
+                } else if firstLang.hasPrefix("hi") {
+                    initialLang = .hindi
+                } else if firstLang.hasPrefix("gu") {
+                    initialLang = .gujarati
+                } else if firstLang.hasPrefix("fa") {
+                    initialLang = .farsi
+                } else if firstLang.hasPrefix("ko") {
+                    initialLang = .korean
+                } else if firstLang.hasPrefix("vi") {
+                    initialLang = .vietnamese
+                } else if firstLang.hasPrefix("ar") {
+                    initialLang = .arabic
+                } else if firstLang.hasPrefix("pt") {
+                    initialLang = .portuguese
+                } else if firstLang.hasPrefix("fil") || firstLang.hasPrefix("tl") {
+                    initialLang = .tagalog
+                } else if firstLang.hasPrefix("pa") {
+                    initialLang = .punjabi
+                } else if firstLang.hasPrefix("hy") {
+                    initialLang = .armenian
+                } else if firstLang.hasPrefix("ja") {
+                    initialLang = .japanese
+                } else if firstLang.hasPrefix("fr") {
+                    initialLang = .french
+                } else if firstLang.hasPrefix("am") {
+                    initialLang = .amharic
+                } else {
+                    initialLang = .english
+                }
+            } else {
+                initialLang = .english
+            }
+        }
+        self.currentLanguage = initialLang
     }
     
     var allExercises: [AppLanguage: [Exercise]] {

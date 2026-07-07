@@ -35,15 +35,11 @@ struct ContentView: View {
 
             Color.black.opacity(0.35)
 
-            if isRTL {
-                tabViewBody
-                    .environment(\.layoutDirection, .rightToLeft)
-            } else {
-                tabViewBody
-            }
+            tabViewBody
+                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+                .id(languageManager.currentLanguage)
         }
         .clipped()
-        .ignoresSafeArea(edges: .all)
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }

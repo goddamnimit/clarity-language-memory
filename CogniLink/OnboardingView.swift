@@ -6,8 +6,13 @@ struct OnboardingView: View {
     @ObservedObject private var profileStore = UserProfileStore.shared
     @State private var currentPage = 0
     @State private var name = ""
-    @State private var selectedLanguage: AppLanguage = .english
+    @State private var selectedLanguage: AppLanguage
     @State private var showBaselineAssessment = false
+
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+        self._selectedLanguage = State(initialValue: LanguageManager.shared.currentLanguage)
+    }
 
     var body: some View {
         #if os(iOS)
