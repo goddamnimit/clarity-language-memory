@@ -1,1 +1,9 @@
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
 clarity_full_audit.txt
