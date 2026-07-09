@@ -76,33 +76,45 @@ struct TVMultipleChoiceView: View {
                 }
                 .frame(height: geo.size.height * 0.35)
 
-                // Bottom — 2×2 answer tile grid
-                LazyVGrid(
-                    columns: [GridItem(.flexible()), GridItem(.flexible())],
-                    spacing: 32
-                ) {
-                    ForEach(0..<min(options.count, tileFocusCases.count), id: \.self) { index in
-                        let option = options[index]
-                        let focusCase = tileFocusCases[index]
-                        Button {
-                            guard !hasAnswered else { return }
-                            selectOption(option)
-                        } label: {
-                            AnswerTile(text: option, revealState: revealState(for: option))
+                // Bottom — 2×2 answer tile grid. Rows are flexible-height so the
+                // grid always fits the space the container offers and can never
+                // overflow onto the Replay/Skip footer below.
+                VStack(spacing: 32) {
+                    ForEach(Array(stride(from: 0, to: min(options.count, tileFocusCases.count), by: 2)), id: \.self) { rowStart in
+                        HStack(spacing: 32) {
+                            answerButton(index: rowStart)
+                            if rowStart + 1 < min(options.count, tileFocusCases.count) {
+                                answerButton(index: rowStart + 1)
+                            } else {
+                                Color.clear.frame(maxWidth: .infinity)
+                            }
                         }
-                        .buttonStyle(.plain)
-                        .focused($focus, equals: focusCase)
-                        .disabled(hasAnswered)
                     }
                 }
-                .frame(maxHeight: .infinity, alignment: .top)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.top, 16)
+                .padding(.bottom, 12)
             }
         }
         .onAppear {
             focus = .tileA
         }
         .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+    }
+
+    @ViewBuilder
+    private func answerButton(index: Int) -> some View {
+        let option = options[index]
+        let focusCase = tileFocusCases[index]
+        Button {
+            guard !hasAnswered else { return }
+            selectOption(option)
+        } label: {
+            AnswerTile(text: option, revealState: revealState(for: option))
+        }
+        .buttonStyle(.plain)
+        .focused($focus, equals: focusCase)
+        .disabled(hasAnswered)
     }
 
     // MARK: - Logic
@@ -172,7 +184,10 @@ private struct AnswerTile: View {
                 .font(.system(size: 38, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
+                .lineLimit(3)
+                .minimumScaleFactor(0.5)
                 .padding(.horizontal, 16)
+                .padding(.vertical, 12)
 
             if revealState == .correct {
                 Image(systemName: "checkmark.circle.fill")
@@ -186,8 +201,7 @@ private struct AnswerTile: View {
                     .transition(.scale.combined(with: .opacity))
             }
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 160)
+        .frame(maxWidth: .infinity, minHeight: 80, maxHeight: 160)
         .scaleEffect(isFocused && revealState == .idle ? 1.06 : 1.0)
         .scaleEffect(punchScale)
         .offset(x: shakeOffset)

@@ -158,7 +158,9 @@ struct TVExerciseContainerView: View {
             .padding(.horizontal, 80)
             .focused($containerFocus, equals: .exerciseContent)
 
-            Spacer()
+            // Guaranteed clearance between exercise content and the footer so
+            // answer tiles can never share vertical space with Replay/Skip.
+            Spacer(minLength: 32)
 
             // Footer: Centered Replay + Right-aligned Next / Skip
             ZStack {

@@ -44,7 +44,9 @@ struct TVOptionGridView: View {
                 }
                 .frame(height: geo.size.height * 0.35)
 
-                // Options layout (2x1 for 2 options, 2x2 for 4 options)
+                // Options layout (2x1 for 2 options, 2x2 for 4 options).
+                // Rows are flexible-height so the grid always fits the space the
+                // container offers and can never overflow onto the footer below.
                 Group {
                     if options.count == 2 {
                         HStack(spacing: 40) {
@@ -53,18 +55,23 @@ struct TVOptionGridView: View {
                             }
                         }
                     } else {
-                        LazyVGrid(
-                            columns: [GridItem(.flexible()), GridItem(.flexible())],
-                            spacing: 32
-                        ) {
-                            ForEach(0..<min(options.count, 4), id: \.self) { index in
-                                optionTile(index: index)
+                        VStack(spacing: 32) {
+                            ForEach(Array(stride(from: 0, to: min(options.count, 4), by: 2)), id: \.self) { rowStart in
+                                HStack(spacing: 32) {
+                                    optionTile(index: rowStart)
+                                    if rowStart + 1 < min(options.count, 4) {
+                                        optionTile(index: rowStart + 1)
+                                    } else {
+                                        Color.clear.frame(maxWidth: .infinity)
+                                    }
+                                }
                             }
                         }
                     }
                 }
-                .frame(maxHeight: .infinity, alignment: .top)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.top, 16)
+                .padding(.bottom, 12)
                 .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
             }
         }
@@ -142,7 +149,10 @@ struct TVOptionGridTile: View {
                 .font(.system(size: 38, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
+                .lineLimit(3)
+                .minimumScaleFactor(0.5)
                 .padding(.horizontal, 16)
+                .padding(.vertical, 12)
 
             if revealState == .correct {
                 Image(systemName: "checkmark.circle.fill")
@@ -156,8 +166,7 @@ struct TVOptionGridTile: View {
                     .transition(.scale.combined(with: .opacity))
             }
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 160)
+        .frame(maxWidth: .infinity, minHeight: 80, maxHeight: 160)
         .scaleEffect(correctScale)
         .opacity(revealState == .dimmed ? 0.35 : 1.0)
         .animation(.easeOut(duration: 0.4), value: correctRevealed)

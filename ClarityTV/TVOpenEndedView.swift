@@ -64,6 +64,8 @@ struct TVOpenEndedView: View {
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
+                            .lineLimit(6)
+                            .minimumScaleFactor(0.6)
                             .padding(.horizontal, 40)
                     }
                     .padding(.vertical, 32)
