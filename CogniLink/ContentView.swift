@@ -34,12 +34,12 @@ struct ContentView: View {
             .opacity(backgroundOpacity)
 
             Color.black.opacity(0.35)
+                .ignoresSafeArea()
 
             tabViewBody
                 .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
                 .id(languageManager.currentLanguage)
         }
-        .clipped()
         .fullScreenCover(isPresented: $showOnboarding) {
             OnboardingView(isPresented: $showOnboarding)
         }
