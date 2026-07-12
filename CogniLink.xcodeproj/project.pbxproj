@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C1A211D000000000000000B1 /* ClarityWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C1A211D000000000000000A1 /* ClarityWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C1A211D000000000000000B2 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A211D000000000000000A2 /* AppTheme.swift */; };
+		C1A211D000000000000000B3 /* WidgetSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A211D000000000000000A3 /* WidgetSnapshot.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		C1A211D000000000000000E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1A211D000000000000000D1;
+			remoteInfo = ClarityWidget;
+		};
 		096B04082FCD05DC004A96A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
@@ -44,7 +57,20 @@
 		09987EB72FE46B5300EDF7C1 /* ClarityTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClarityTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09987EC82FE46B5600EDF7C1 /* ClarityTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClarityTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClarityTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A211D000000000000000A1 /* ClarityWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ClarityWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1A211D000000000000000A2 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTheme.swift; path = CogniLink/AppTheme.swift; sourceTree = "<group>"; };
+		C1A211D000000000000000A3 /* WidgetSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WidgetSnapshot.swift; path = CogniLink/WidgetSnapshot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C1A211D000000000000000C2 /* Exceptions for "ClarityWidget" folder in "ClarityWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C1A211D000000000000000D1 /* ClarityWidget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		096B03FC2FCD05D9004A96A3 /* CogniLink */ = {
@@ -77,7 +103,29 @@
 			path = ClarityTVUITests;
 			sourceTree = "<group>";
 		};
+		C1A211D000000000000000C1 /* ClarityWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C1A211D000000000000000C2 /* Exceptions for "ClarityWidget" folder in "ClarityWidget" target */,
+			);
+			path = ClarityWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1A211D000000000000000E4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C1A211D000000000000000B1 /* ClarityWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		096B03F72FCD05D9004A96A3 /* Frameworks */ = {
@@ -122,6 +170,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1A211D000000000000000E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,6 +189,7 @@
 				09987EB82FE46B5300EDF7C1 /* ClarityTV */,
 				09987ECB2FE46B5600EDF7C1 /* ClarityTVTests */,
 				09987ED52FE46B5600EDF7C1 /* ClarityTVUITests */,
+				C1A211D000000000000000C1 /* ClarityWidget */,
 				096B03FB2FCD05D9004A96A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +203,7 @@
 				09987EB72FE46B5300EDF7C1 /* ClarityTV.app */,
 				09987EC82FE46B5600EDF7C1 /* ClarityTVTests.xctest */,
 				09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */,
+				C1A211D000000000000000A1 /* ClarityWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,10 +218,12 @@
 				096B03F62FCD05D9004A96A3 /* Sources */,
 				096B03F72FCD05D9004A96A3 /* Frameworks */,
 				096B03F82FCD05D9004A96A3 /* Resources */,
+				C1A211D000000000000000E4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C1A211D000000000000000E6 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				096B03FC2FCD05D9004A96A3 /* CogniLink */,
@@ -291,6 +350,28 @@
 			productReference = 09987ED22FE46B5600EDF7C1 /* ClarityTVUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C1A211D000000000000000D1 /* ClarityWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A211D000000000000000F1 /* Build configuration list for PBXNativeTarget "ClarityWidget" */;
+			buildPhases = (
+				C1A211D000000000000000E1 /* Sources */,
+				C1A211D000000000000000E2 /* Frameworks */,
+				C1A211D000000000000000E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C1A211D000000000000000C1 /* ClarityWidget */,
+			);
+			name = ClarityWidget;
+			packageProductDependencies = (
+			);
+			productName = ClarityWidget;
+			productReference = C1A211D000000000000000A1 /* ClarityWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -323,6 +404,9 @@
 						CreatedOnToolsVersion = 27.0;
 						TestTargetID = 09987EB62FE46B5300EDF7C1;
 					};
+					C1A211D000000000000000D1 = {
+						CreatedOnToolsVersion = 27.0;
+					};
 				};
 			};
 			buildConfigurationList = 096B03F52FCD05D9004A96A3 /* Build configuration list for PBXProject "CogniLink" */;
@@ -345,6 +429,7 @@
 				09987EB62FE46B5300EDF7C1 /* ClarityTV */,
 				09987EC72FE46B5600EDF7C1 /* ClarityTVTests */,
 				09987ED12FE46B5600EDF7C1 /* ClarityTVUITests */,
+				C1A211D000000000000000D1 /* ClarityWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -386,6 +471,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		09987ED02FE46B5600EDF7C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A211D000000000000000E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,6 +529,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C1A211D000000000000000E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A211D000000000000000B2 /* AppTheme.swift in Sources */,
+				C1A211D000000000000000B3 /* WidgetSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -459,6 +560,11 @@
 			isa = PBXTargetDependency;
 			target = 09987EB62FE46B5300EDF7C1 /* ClarityTV */;
 			targetProxy = 09987ED32FE46B5600EDF7C1 /* PBXContainerItemProxy */;
+		};
+		C1A211D000000000000000E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1A211D000000000000000D1 /* ClarityWidget */;
+			targetProxy = C1A211D000000000000000E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -599,6 +705,7 @@
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -636,6 +743,7 @@
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -906,6 +1014,58 @@
 			};
 			name = Release;
 		};
+		C1A211D000000000000000F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClarityWidget/ClarityWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClarityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.CogniLink.ClarityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1A211D000000000000000F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClarityWidget/ClarityWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 457KDWNT7S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClarityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = Main.CogniLink.ClarityWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -968,6 +1128,15 @@
 			buildConfigurations = (
 				09987EDC2FE46B5600EDF7C1 /* Debug */,
 				09987EDD2FE46B5600EDF7C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1A211D000000000000000F1 /* Build configuration list for PBXNativeTarget "ClarityWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A211D000000000000000F2 /* Debug */,
+				C1A211D000000000000000F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

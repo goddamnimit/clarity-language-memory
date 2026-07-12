@@ -25,9 +25,32 @@ struct ContentView: View {
                 }
                 NotificationManager.shared.refreshPermissionStatus()
                 NotificationManager.shared.rescheduleAll()
+                WidgetSnapshotWriter.refresh()
                 #endif
             }
+            #if os(iOS)
+            .onOpenURL { url in
+                handleDeepLink(url)
+            }
+            #endif
     }
+
+    #if os(iOS)
+    /// Handles clarity://exercise?title=<encoded>&section=<encoded> from the widget.
+    private func handleDeepLink(_ url: URL) {
+        guard url.scheme == "clarity",
+              (url.host ?? url.pathComponents.dropFirst().first) == "exercise",
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
+        let title = components.queryItems?.first(where: { $0.name == "title" })?.value
+        let sectionKey = components.queryItems?.first(where: { $0.name == "section" })?.value
+        guard title != nil || sectionKey != nil else { return }
+        selectedTab = 0
+        NotificationCenter.default.post(
+            name: .clarityOpenExerciseDeepLink,
+            object: nil,
+            userInfo: ["title": title as Any, "section": sectionKey as Any])
+    }
+    #endif
 
     // MARK: - Tab View
 
@@ -287,6 +310,21 @@ struct HomeView: View {
             .navigationDestination(item: $recommendedExercise) { exercise in
                 ExerciseContainerView(exercise: exercise)
             }
+            #if os(iOS)
+            .onReceive(NotificationCenter.default.publisher(for: .clarityOpenExerciseDeepLink)) { note in
+                // Route widget deep links through the same path as tapping a
+                // recommendation card on the Home tab.
+                let title = note.userInfo?["title"] as? String
+                let sectionKey = note.userInfo?["section"] as? String
+                launchRecommendation(Recommendation(
+                    id: "deeplink",
+                    headline: "",
+                    explanation: "",
+                    sfSymbolName: "",
+                    targetExerciseTitle: title,
+                    targetSection: sectionKey.flatMap { WidgetSnapshotWriter.section(forKey: $0) }))
+            }
+            #endif
             .navigationTitle("Clarity")
             .appBackground()
             .toolbar {

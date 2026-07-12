@@ -442,6 +442,9 @@ struct ExerciseContainerView: View {
         // Practicing today changes what should fire — recompute reminders
         #if os(iOS)
         NotificationManager.shared.rescheduleAll()
+
+        // Streak and recommendations just changed — republish the widget snapshot
+        WidgetSnapshotWriter.refresh()
         #endif
 
         // Haptic feedback on session completion
