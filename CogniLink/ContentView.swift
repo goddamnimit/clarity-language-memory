@@ -1,69 +1,32 @@
 import SwiftUI
-import Combine
 
 struct ContentView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @State private var selectedTab = 0
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "clarity_onboarding_complete")
     @State private var hasResetTabOnLaunch = false
-    @State private var backgroundOpacity: Double = 0.0
-    @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .iOS)
 
     private var isRTL: Bool {
         [.farsi, .arabic].contains(languageManager.currentLanguage)
     }
 
     var body: some View {
-        ZStack {
-            Group {
-                if BackgroundManager.shared.imageExists(named: backgroundImageName) {
-                    GeometryReader { geo in
-                        Image(backgroundImageName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geo.size.width, height: geo.size.height)
-                            .clipped()
-                    }
-                    .id(backgroundImageName)
-                    .transition(.opacity)
-                } else {
-                    Color.black
+        tabViewBody
+            .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
+            .id(languageManager.currentLanguage)
+            .fullScreenCover(isPresented: $showOnboarding) {
+                OnboardingView(isPresented: $showOnboarding)
+            }
+            .onAppear {
+                #if os(iOS)
+                if !hasResetTabOnLaunch {
+                    selectedTab = 0
+                    hasResetTabOnLaunch = true
                 }
+                NotificationManager.shared.refreshPermissionStatus()
+                NotificationManager.shared.rescheduleAll()
+                #endif
             }
-            .ignoresSafeArea()
-            .opacity(backgroundOpacity)
-
-            Color.black.opacity(0.35)
-                .ignoresSafeArea()
-
-            tabViewBody
-                .environment(\.layoutDirection, isRTL ? .rightToLeft : .leftToRight)
-                .id(languageManager.currentLanguage)
-        }
-        .fullScreenCover(isPresented: $showOnboarding) {
-            OnboardingView(isPresented: $showOnboarding)
-        }
-        .onAppear {
-            withAnimation(.easeIn(duration: 0.8)) {
-                backgroundOpacity = 1.0
-            }
-            #if os(iOS)
-            if !hasResetTabOnLaunch {
-                selectedTab = 0
-                hasResetTabOnLaunch = true
-            }
-            NotificationManager.shared.refreshPermissionStatus()
-            NotificationManager.shared.rescheduleAll()
-            #endif
-        }
-        .onReceive(
-            NotificationCenter.default.publisher(for: .clarityBackgroundChanged)
-                .receive(on: DispatchQueue.main)
-        ) { _ in
-            withAnimation(.easeInOut(duration: 0.6)) {
-                backgroundImageName = BackgroundManager.shared.dailyImageName(for: .iOS)
-            }
-        }
     }
 
     // MARK: - Tab View
