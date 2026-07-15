@@ -29,6 +29,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a combinação correta de homófonos para completar as frases.",
         section: .language,
         type: .homonym,
+        trackedType: .homonym,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "[conserto / concerto] O carro precisa de um ___. Nós fomos ao ___ de violino.", options: ["conserto...concerto", "concerto...conserto", "conserto...conserto", "concerto...concerto"], correctAnswer: "conserto...concerto", explanation: "'Conserto' refere-se a reparação de algo quebrado; 'concerto' é uma apresentação musical."),
@@ -55,6 +56,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que melhor completa a analogia.",
         section: .language,
         type: .analogyChoice,
+        trackedType: .analogyChoice,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "SOLILÓQUIO está para ATOR assim como SERMÃO está para ___", options: ["Sacerdote", "Fiel", "Coro", "Templo"], correctAnswer: "Sacerdote", explanation: "Um solilóquio é proferido por um ator, enquanto um sermão é proferido por um sacerdote ou pregador."),
@@ -81,6 +83,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra mais estreitamente associada com a palavra dada.",
         section: .language,
         type: .multipleChoice,
+        trackedType: .wordAssociation,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "ALTRUÍSMO", options: ["Generosidade", "Ganância", "Ira", "Inveja"], correctAnswer: "Generosidade", explanation: "O altruísmo é pautado pela generosidade e empatia desinteressada para com o próximo."),
@@ -107,6 +110,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que melhor completa a frase de forma coerente.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .sentenceCompletion,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "A chuva forte e constante ajudou a ___ a grave estiagem que assolava o Nordeste.", options: ["atenuar", "agravar", "manter", "prolongar"], correctAnswer: "atenuar", explanation: "A chuva reduz e alivia (atenua) a secura da terra e a estiagem."),
@@ -133,6 +137,7 @@ struct PortugueseHardExercisesData {
         instructions: "Ordene as etapas da atividade descrita em uma sequência lógica.",
         section: .language,
         type: .sequencing,
+        trackedType: .sequencing,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Preparar café de coador", options: ["Aquecer a água sem deixar ferver totalmente", "Colocar o pó de café no filtro de papel ou pano", "Despejar a água quente em movimentos circulares sobre o pó", "Adoçar a gosto ou servir o café fresco nas xícaras"], correctAnswer: "Aquecer a água sem deixar ferver totalmente | Colocar o pó de café no filtro de papel ou pano | Despejar a água quente em movimentos circulares sobre o pó | Adoçar a gosto ou servir o café fresco nas xícaras", explanation: "Preparo clássico: aquecer água, colocar pó no filtro, passar a água em círculos e servir."),
@@ -159,6 +164,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a resposta que expressa o efeito ou causa mais lógico na situação dada.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .causeAndEffect,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Causa: A temperatura no verão ultrapassou os 42 graus Celsius.", options: ["O consumo de eletricidade disparou devido ao uso intenso de ar-condicionado", "As pessoas saíram em maior quantidade para passear na rua", "A venda de agasalhos de lã pesada cresceu muito nas lojas", "As usinas hidrelétricas relataram queda no consumo de eletricidade"], correctAnswer: "O consumo de eletricidade disparou devido ao uso intenso de ar-condicionado", explanation: "O calor excessivo exige o uso constante de climatizadores de ar, aumentando o consumo elétrico de forma imediata."),
@@ -185,6 +191,7 @@ struct PortugueseHardExercisesData {
         instructions: "Identifique a afirmação que demonstra a impossibilidade ou contradição lógica na narrativa.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: .whatsWrongHere,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "O cozinheiro ferveu o leite gelado na panela totalmente fria e sem ligar o fogo ou usar eletricidade.", options: ["Sem fonte térmica de calor é impossível esquentar ou ferver qualquer líquido", "A panela de leite não pode receber grãos de arroz cru", "O leite fervente congela instantaneamente em temperatura ambiente", "Para esquentar água deve-se usar uma garrafa plástica fechada"], correctAnswer: "Sem fonte térmica de calor é impossível esquentar ou ferver qualquer líquido", explanation: "Fervura exige atingir o ponto de ebulição via absorção de calor; sem fogo/eletricidade nada aquece."),
@@ -211,6 +218,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que completa corretamente o ditado popular português.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: .completeTheSaying,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Complete o ditado: Água mole em pedra dura, tanto bate até que ___.", options: ["fura", "quebra", "racha", "amacia"], correctAnswer: "fura", explanation: "O provérbio é 'Água mole em pedra dura, tanto bate até que fura', exortando à persistência diante das barreiras."),
@@ -237,6 +245,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra correta para completar as frases.",
         section: .language,
         type: .homonym,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "[sem / cem] Comprei um bolo ___ açúcar. O número ___ vem depois de noventa e nove.", options: ["sem...cem", "cem...sem", "sem...sem", "cem...cem"], correctAnswer: "sem...cem", explanation: "'Sem' indica falta de algo; 'cem' é o número 100."),
@@ -263,6 +272,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que melhor completa a analogia.",
         section: .language,
         type: .analogyChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "ALTO está para BAIXO assim como QUENTE está para FRIO", options: ["FRIO", "MORNO", "FERVENDO", "MOLHADO"], correctAnswer: "FRIO", explanation: "Alto e baixo são opostos, assim como quente e frio."),
@@ -289,6 +299,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a opção que representa a causa ou efeito mais lógico.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Causa: Você deixa cair um copo de vidro no chão de concreto.", options: ["O copo quebra", "O copo flutua", "O copo fica macio", "O copo fica azul"], correctAnswer: "O copo quebra", explanation: "O vidro é frágil e quebra quando cai em uma superfície dura."),
@@ -315,6 +326,7 @@ struct PortugueseHardExercisesData {
         instructions: "Identifique o erro lógico ou impossibilidade na frase.",
         section: .cognition,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Absurdo: O João calçou os sapatos antes das meias.", options: ["As meias devem ser calçadas antes dos sapatos", "Os sapatos devem ser colocados nas mãos", "As meias são usadas na cabeça", "Os sapatos devem ser comidos"], correctAnswer: "As meias devem ser calçadas antes dos sapatos", explanation: "As meias ficam dentro dos sapatos, por isso devem ser calçadas primeiro."),
@@ -341,6 +353,7 @@ struct PortugueseHardExercisesData {
         instructions: "Ordene os passos da atividade de forma lógica.",
         section: .language,
         type: .sequencing,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Fazer uma torrada", options: ["Colocar a fatia de pão na torradeira", "Abaixar a alavanca para começar", "Esperar a torrada subir", "Passar manteiga na torrada quente"], correctAnswer: "Colocar a fatia de pão na torradeira | Abaixar a alavanca para começar | Esperar a torrada subir | Passar manteiga na torrada quente", explanation: "Primeiro insere-se o pão, inicia-se o calor, aguarda-se o término e passa-se o ingrediente."),
@@ -357,6 +370,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra mais relacionada com o termo fornecido.",
         section: .language,
         type: .multipleChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "BIBLIOTECA", options: ["Silêncio", "Barulho", "Multidão", "Jogo"], correctAnswer: "Silêncio", explanation: "A biblioteca é um espaço de leitura onde se exige silêncio."),
@@ -383,6 +397,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha as palavras corretas para completar as orações.",
         section: .language,
         type: .homonym,
+        trackedType: nil,
         difficulty: .medium,
         items: [
             ExerciseItem(prompt: "[noz / nos] Comemos doce de ___ no Natal. Ela ___ ajudou com a mudança.", options: ["noz...nos", "nos...noz", "noz...nos", "nos...nos"], correctAnswer: "noz...nos", explanation: "'Noz' é a semente comestível; 'nos' é o pronome oblíquo."),
@@ -399,6 +414,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que completa corretamente o ditado popular.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .easy,
         items: [
             ExerciseItem(prompt: "Mais vale um pássaro na mão do que dois ___", options: ["voando", "cantando", "presos", "comendo"], correctAnswer: "voando", explanation: "É melhor ter uma garantia pequena do que arriscar tudo por algo incerto."),
@@ -425,6 +441,7 @@ struct PortugueseHardExercisesData {
         instructions: "Escolha a palavra que completa corretamente o ditado popular.",
         section: .language,
         type: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .hard,
         items: [
             ExerciseItem(prompt: "Água mole em pedra dura, tanto bate até que ___", options: ["fura", "quebra", "racha", "molha"], correctAnswer: "fura", explanation: "A persistência vence qualquer obstáculo difícil."),
@@ -433,7 +450,7 @@ struct PortugueseHardExercisesData {
             ExerciseItem(prompt: "De noite todos os gatos são ___", options: ["pardos", "pretos", "brancos", "cinzas"], correctAnswer: "pardos", explanation: "Na escuridão ou sem detalhes, as diferenças desaparecem."),
             ExerciseItem(prompt: "Quem cala ___", options: ["consente", "fala", "sabe", "pensa"], correctAnswer: "consente", explanation: "Quem não discorda ou fica em silêncio concorda tacitamente."),
             ExerciseItem(prompt: "Não se deve colocar todos os ovos na mesma ___", options: ["cesta", "galinha", "cozinha", "caixa"], correctAnswer: "cesta", explanation: "Não concentre todos os seus recursos ou riscos em um único lugar."),
-            ExerciseItem(prompt: "A cavalo dado não se olha os ___", options: ["dentes", "cascos", "olhos", "pêlos"], correctAnswer: "dentes", explanation: "Não se deve reclamar de algo recebido de graça."),
+            ExerciseItem(prompt: "Quem semeia vento, colhe ___", options: ["tempestades", "chuvas", "ventanias", "folhas"], correctAnswer: "tempestades", explanation: "Quem semeia vento, colhe tempestades. Nossas ações negativas têm consequências graves."),
             ExerciseItem(prompt: "Nem tudo o que reluz é ___", options: ["ouro", "prata", "brilhante", "metal"], correctAnswer: "ouro", explanation: "Aparências bonitas podem esconder realidades ruins ou falsas."),
             ExerciseItem(prompt: "Vão-se os anéis, fiquem os ___", options: ["dedos", "braços", "amigos", "bens"], correctAnswer: "dedos", explanation: "É melhor perder bens materiais do que a própria vida ou integridade."),
             ExerciseItem(prompt: "Não cutuque o cão com vara ___", options: ["curta", "longa", "verde", "grossa"], correctAnswer: "curta", explanation: "Não se deve provocar o perigo desnecessariamente."),
