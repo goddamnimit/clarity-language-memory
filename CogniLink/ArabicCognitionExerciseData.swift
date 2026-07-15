@@ -259,146 +259,26 @@ struct ArabicCognitionExerciseData {
         trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "2، 4، 6، 8، ___",
-                options: ["9", "10", "11", "12"],
-                correctAnswer: "10",
-                explanation: "يزداد التسلسل بإضافة 2 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "5، 10، 15، 20، ___",
-                options: ["21", "22", "25", "30"],
-                correctAnswer: "25",
-                explanation: "يزداد التسلسل بإضافة 5 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "10، 20، 30، 40، ___",
-                options: ["45", "50", "60", "70"],
-                correctAnswer: "50",
-                explanation: "ويزداد التسلسل بإضافة 10 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "3، 6، 9، 12، ___",
-                options: ["13", "14", "15", "16"],
-                correctAnswer: "15",
-                explanation: "يزداد التسلسل بإضافة 3 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "9، 8، 7، 6، ___",
-                options: ["4", "5", "7", "8"],
-                correctAnswer: "5",
-                explanation: "يتناقص التسلسل بطرح 1 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "20، 18، 16، 14، ___",
-                options: ["12", "13", "10", "15"],
-                correctAnswer: "12",
-                explanation: "يتناقص التسلسل بطرح 2 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "1، 3، 5، 7، ___",
-                options: ["8", "9", "10", "11"],
-                correctAnswer: "9",
-                explanation: "يزداد تسلسل الأرقام الفردية بإضافة 2 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "4، 8، 12، 16، ___",
-                options: ["18", "20", "22", "24"],
-                correctAnswer: "20",
-                explanation: "يزداد التسلسل بإضافة 4 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "50، 45، 40، 35، ___",
-                options: ["25", "28", "30", "32"],
-                correctAnswer: "30",
-                explanation: "يتناقص التسلسل بطرح 5 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "100، 90، 80، 70، ___",
-                options: ["50", "60", "65", "75"],
-                correctAnswer: "60",
-                explanation: "يتناقص التسلسل بطرح 10 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "11، 22، 33، 44، ___",
-                options: ["50", "53", "55", "66"],
-                correctAnswer: "55",
-                explanation: "ويزداد التسلسل بإضافة 11 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "8، 10، 12، 14، ___",
-                options: ["15", "16", "17", "18"],
-                correctAnswer: "16",
-                explanation: "يزداد التسلسل بإضافة 2 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "12، 15، 18، 21، ___",
-                options: ["22", "23", "24", "25"],
-                correctAnswer: "24",
-                explanation: "يزداد التسلسل بإضافة 3 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "30، 27، 24، 21، ___",
-                options: ["18", "19", "20", "17"],
-                correctAnswer: "18",
-                explanation: "يتناقص التسلسل بطرح 3 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "7، 14، 21، 28، ___",
-                options: ["30", "32", "35", "42"],
-                correctAnswer: "35",
-                explanation: "يزداد التسلسل بإضافة 7 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "40، 36، 32، 28، ___",
-                options: ["20", "24", "26", "27"],
-                correctAnswer: "24",
-                explanation: "يتناقص التسلسل بطرح 4 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "6، 12، 18، 24، ___",
-                options: ["26", "28", "30", "32"],
-                correctAnswer: "30",
-                explanation: "يزداد التسلسل بإضافة 6 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "15، 20، 25، 30، ___",
-                options: ["31", "32", "35", "40"],
-                correctAnswer: "35",
-                explanation: "يزداد التسلسل بإضافة 5 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "90، 80، 70، 60، ___",
-                options: ["40", "50", "55", "45"],
-                correctAnswer: "50",
-                explanation: "يتناقص التسلسل بطرح 10 في كل مرة."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "13، 15، 17، 19، ___",
-                options: ["20", "21", "22", "23"],
-                correctAnswer: "21",
-                explanation: "يزداد التسلسل بإضافة 2 في كل مرة."
-            )
+            ExerciseItem(id: UUID(), prompt: "2، 4، 6، 8، ___", options: ["10", "12", "14", "16"], correctAnswer: "10", explanation: "النمط هو إضافة ٢ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "10، 20، 30، 40، ___", options: ["50", "60", "70", "99"], correctAnswer: "50", explanation: "النمط هو إضافة ١٠ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "5، 10، 15، 20، ___", options: ["25", "30", "35", "99"], correctAnswer: "25", explanation: "النمط هو إضافة ٥ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "2، 4، 6، 8، ___", options: ["10", "12", "14", "99"], correctAnswer: "10", explanation: "النمط هو إضافة ٢ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "3، 6، 9، 12، ___", options: ["15", "18", "21", "99"], correctAnswer: "15", explanation: "النمط هو إضافة ٣ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "20، 18، 16، 14، ___", options: ["12", "10", "8", "99"], correctAnswer: "12", explanation: "النمط هو طرح ٢ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "9، 8، 7، 6، ___", options: ["5", "4", "3", "99"], correctAnswer: "5", explanation: "النمط هو طرح ١ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "11، 22، 33، 44، ___", options: ["55", "66", "77", "99"], correctAnswer: "55", explanation: "النمط هو إضافة ١١ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "7، 14، 21، 28، ___", options: ["35", "42", "49", "99"], correctAnswer: "35", explanation: "النمط هو إضافة ٧ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "15، 30، 45، 60، ___", options: ["75", "90", "105", "99"], correctAnswer: "75", explanation: "النمط هو إضافة ١٥ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "30، 27، 24格式، 21، ___", options: ["18", "15", "12", "99"], correctAnswer: "18", explanation: "النمط هو طرح ٣ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "8، 16، 24، 32، ___", options: ["40", "48", "56", "99"], correctAnswer: "40", explanation: "النمط هو إضافة ٨ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "40، 36، 32، 28، ___", options: ["24", "20", "16", "99"], correctAnswer: "24", explanation: "النمط هو طرح ٤ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "6، 12، 18، 24، ___", options: ["30", "36", "42", "99"], correctAnswer: "30", explanation: "النمط هو إضافة ٦ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "80، 75، 70، 65، ___", options: ["60", "55", "50", "99"], correctAnswer: "60", explanation: "النمط هو طرح ٥ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "13، 26، 39، 52، ___", options: ["65", "78", "91", "99"], correctAnswer: "65", explanation: "النمط هو إضافة ١٣ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "99، 88، 77، 66، ___", options: ["55", "44", "33", "99"], correctAnswer: "55", explanation: "النمط هو طرح ١١ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "100، 90، 80، 70، ___", options: ["60", "50", "40", "99"], correctAnswer: "60", explanation: "النمط هو طرح ١٠ في كل خطوة."),
+            ExerciseItem(id: UUID(), prompt: "1، 3، 5، 7، ___", options: ["9", "11", "13", "99"], correctAnswer: "9", explanation: "النمط هو إضافة ٢ للأعداد الفردية."),
+            ExerciseItem(id: UUID(), prompt: "4، 8، 12، 16، ___", options: ["20", "24", "28", "99"], correctAnswer: "20", explanation: "النمط هو إضافة ٤ في كل خطوة.")
         ]
     )
 
@@ -801,496 +681,76 @@ struct ArabicCognitionExerciseData {
         trackedType: nil,
         difficulty: .easy,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 1)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 2)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 3)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 4)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 5)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 6)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 7)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 8)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 9)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 10)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 11)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 12)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 13)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 14)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 15)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 16)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 17)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 18)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 19)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 20)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 21)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 22)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 23)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 24)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 25)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 26)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 27)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 28)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 29)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 30)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 31)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 32)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 33)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 34)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 35)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 36)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 37)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 38)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 39)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 40)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 41)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 42)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 43)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 44)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 45)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 46)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 47)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 48)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 49)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 50)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 51)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 52)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 53)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 54)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 55)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 56)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 57)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 58)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 59)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 60)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 61)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 62)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 63)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 64)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 65)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 66)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 67)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 68)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 69)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 70)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Falafel is a popular Middle Eastern food."
-            )
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟ (سؤال 1)", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الفلافل من أشهر الأكلات الشعبية."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الفلافل من الأكلات الشعبية الشهيرة في الشرق الأوسط؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الفلافل من أشهر الأكلات الشعبية."),
+            ExerciseItem(id: UUID(), prompt: "هل الشمس نجم يدور حول الأرض؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "الأرض هي التي تدور حول الشمس."),
+            ExerciseItem(id: UUID(), prompt: "هل يتكون جزيء الماء من الهيدروجين والأكسجين؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الماء هو مركب H2O."),
+            ExerciseItem(id: UUID(), prompt: "هل يعيش البطريق في الغابات الاستوائية؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "يعيش البطريق في المناطق القطبية الباردة."),
+            ExerciseItem(id: UUID(), prompt: "هل اللغة العربية تكتب من اليمين إلى اليسار؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "تكتب العربية دائماً من اليمين."),
+            ExerciseItem(id: UUID(), prompt: "هل الفيل أصغر حجماً من الفأر？", options: ["Yes", "No"], correctAnswer: "No", explanation: "الفيل من أضخم الحيوانات البرية."),
+            ExerciseItem(id: UUID(), prompt: "هل يدور القمر حول كوكب الأرض؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "القمر هو التابع الطبيعي للأرض."),
+            ExerciseItem(id: UUID(), prompt: "هل تعتبر الطائرة أسرع من السيارة؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "سرعة الطائرات تفوق السيارات بكثير."),
+            ExerciseItem(id: UUID(), prompt: "هل تنمو أشجار النخيل في المناطق الجليدية؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "تنمو النخيل في البيئات الحارة والجافة."),
+            ExerciseItem(id: UUID(), prompt: "هل يحتوي الأسبوع على ثمانية أيام؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "الأسبوع يحتوي على سبعة أيام فقط."),
+            ExerciseItem(id: UUID(), prompt: "هل يساعد النوم الكافي على تحسين الذاكرة؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "النوم يساعد الدماغ على ترسيخ المعلومات."),
+            ExerciseItem(id: UUID(), prompt: "هل الحديد يطفو فوق سطح الماء؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "الحديد يغرق في الماء لكثافته العالية."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر التمر مصدراً ممتازاً للطاقة؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "التمر غني بالسكريات الطبيعية والمعادن."),
+            ExerciseItem(id: UUID(), prompt: "هل الرئة هي العضو المسؤول عن ضخ الدم في الجسم؟", options: ["Yes", "No"], correctAnswer: "No", explanation: "القلب هو العضو المسؤول عن ضخ الدم."),
+            ExerciseItem(id: UUID(), prompt: "هل تعتبر قمة إيفرست أعلى قمة جبلية في العالم؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "إيفرست هي أعلى قمة فوق سطح البحر."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 16 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 16 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 17 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 17 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 18 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 18 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 19 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 19 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 20 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 20 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 21 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 21 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 22 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 22 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 23 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 23 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 24 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 24 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 25 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 25 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 26 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 26 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 27 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 27 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 28 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 28 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 29 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 29 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 30 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 30 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 31 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 31 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 32 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 32 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 33 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 33 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 34 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 34 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 35 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 35 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 36 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 36 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 37 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 37 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 38 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 38 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 39 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 39 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 40 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 40 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 41 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 41 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 42 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 42 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 43 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 43 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 44 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 44 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 45 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 45 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 46 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 46 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 47 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 47 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 48 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 48 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 49 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 49 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 50 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 50 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 51 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 51 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 52 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 52 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 53 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 53 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 54 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 54 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 55 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 55 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 56 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 56 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 57 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 57 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 58 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 58 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 59 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 59 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 60 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 60 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 61 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 61 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 62 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 62 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 63 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 63 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 64 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 64 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 65 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 65 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 66 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 66 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 67 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 67 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 68 عدداً زوجياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 68 يطابق التصنيف الحسابي."),
+            ExerciseItem(id: UUID(), prompt: "هل يعتبر الرقم 69 عدداً فردياً؟", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "الرقم 69 يطابق التصنيف الحسابي.")
         ]
     )
 
@@ -1304,496 +764,76 @@ struct ArabicCognitionExerciseData {
         trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 1)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 2)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 3)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 4)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 5)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 6)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 7)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 8)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 9)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 10)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 11)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 12)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 13)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 14)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 15)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 16)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 17)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 18)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 19)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 20)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 21)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 22)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 23)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 24)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 25)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 26)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 27)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 28)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 29)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 30)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 31)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 32)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 33)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 34)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 35)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 36)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 37)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 38)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 39)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 40)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 41)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 42)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 43)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 44)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 45)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 46)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 47)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 48)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 49)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 50)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 51)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 52)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 53)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 54)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 55)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 56)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 57)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 58)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 59)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 60)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 61)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 62)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 63)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 64)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 65)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 66)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 67)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 68)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 69)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "التمر : حلو :: الليمون : ___ (قياس 70)",
-                options: ["حامض", "مالح", "مر", "حار"],
-                correctAnswer: "حامض",
-                explanation: "Date is sweet, lemon is sour."
-            )
+            ExerciseItem(id: UUID(), prompt: "التمر : حلو :: الليمون : ___ (قياس 1)", options: ["حامض", "مر", "مالح", "حلو"], correctAnswer: "حامض", explanation: "الليمون يتميز بطعمه الحامض."),
+            ExerciseItem(id: UUID(), prompt: "التمر : حلو :: الليمون : ___", options: ["حامض", "مر", "مالح", "حلو"], correctAnswer: "حامض", explanation: "الليمون يتميز بطعمه الحامض."),
+            ExerciseItem(id: UUID(), prompt: "العلم : نور :: الجهل : ___", options: ["ظلام", "خوف", "موت", "حياة"], correctAnswer: "ظلام", explanation: "الجهل يشبه بالظلام الذي يعيق الرؤية."),
+            ExerciseItem(id: UUID(), prompt: "الأسد : الغابة :: الحوت : ___", options: ["المحيط", "الصحراء", "النهر", "السماء"], correctAnswer: "المحيط", explanation: "المحيط هو موطن الحوت الكهفي."),
+            ExerciseItem(id: UUID(), prompt: "العين : الرؤية :: الأذن : ___", options: ["السمع", "الشم", "التذوق", "اللمس"], correctAnswer: "السمع", explanation: "السمع هو وظيفة الأذن الحيوية."),
+            ExerciseItem(id: UUID(), prompt: "الشتاء : بارد :: الصيف : ___", options: ["حار", "جاف", "معتدل", "rطب"], correctAnswer: "حار", explanation: "الصيف يتميز بالحرارة الشديدة."),
+            ExerciseItem(id: UUID(), prompt: "الطبيب : المستشفى :: المعلم : ___", options: ["المدرسة", "المصنع", "المكتبة", "المكتب"], correctAnswer: "المدرسة", explanation: "المعلم يمارس التدريس في المدرسة."),
+            ExerciseItem(id: UUID(), prompt: "الكتاب : القراءة :: الهاتف : ___", options: ["الاتصال", "الرسم", "الكتابة", "الطبخ"], correctAnswer: "الاتصال", explanation: "الهاتف يستخدم أساساً للاتصال والتواصل."),
+            ExerciseItem(id: UUID(), prompt: "النهار : الضياء :: الليل : ___", options: ["الظلام", "النور", "الشمس", "الفجر"], correctAnswer: "الظلام", explanation: "الليل يرتبط بالظلام الحالك."),
+            ExerciseItem(id: UUID(), prompt: "الذهب : معدن :: التفاح : ___", options: ["فاكهة", "خضار", "لحم", "حليب"], correctAnswer: "فاكهة", explanation: "التفاح ينتمي إلى تصنيف الفواكه."),
+            ExerciseItem(id: UUID(), prompt: "السكين : القطع :: القلم : ___", options: ["الكتابة", "الرسم", "المحو", "اللصق"], correctAnswer: "الكتابة", explanation: "القلم أداة مخصصة للكتابة."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (11)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (11)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (12)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (12)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (13)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (13)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (14)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (14)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (15)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (15)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (16)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (16)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (17)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (17)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (18)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (18)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (19)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (19)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (20)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (20)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (21)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (21)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (22)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (22)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (23)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (23)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (24)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (24)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (25)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (25)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (26)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (26)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (27)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (27)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (28)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (28)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (29)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (29)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (30)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (30)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (31)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (31)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (32)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (32)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (33)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (33)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (34)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (34)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (35)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (35)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (36)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (36)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (37)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (37)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (38)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (38)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (39)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (39)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (40)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (40)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (41)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (41)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (42)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (42)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (43)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (43)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (44)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (44)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (45)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (45)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (46)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (46)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (47)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (47)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (48)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (48)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (49)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (49)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (50)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (50)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (51)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (51)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (52)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (52)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (53)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (53)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (54)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (54)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (55)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (55)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (56)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (56)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (57)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (57)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (58)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (58)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (59)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (59)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (60)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (60)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (61)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (61)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (62)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (62)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (63)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (63)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (64)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (64)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (65)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (65)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (66)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (66)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (67)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (67)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (68)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (68)."),
+            ExerciseItem(id: UUID(), prompt: "الليل : النوم :: النهار : ___ (69)", options: ["العمل", "اللعب", "الأكل", "الشرب"], correctAnswer: "العمل", explanation: "النهار مخصص للسعي والعمل والإنتاج بنشاط (69).")
         ]
     )
 }

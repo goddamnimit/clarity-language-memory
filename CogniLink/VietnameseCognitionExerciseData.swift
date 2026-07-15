@@ -141,516 +141,90 @@ struct VietnameseCognitionExerciseData {
         trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: HẤP DẪN",
-                options: ["ấm áp", "ạnh", "át mẻ", "ấm áp"],
-                correctAnswer: "ạnh",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Lời: VUI VẺ",
-                options: ["vui mừng", "vui vẻ", "buồn", "ội dung"],
-                correctAnswer: "buồn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: LỚN",
-                options: ["to lớn", "ớn", "nhỏ bé", "cao"],
-                correctAnswer: "nhỏ bé",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: NHANH CHÓNG",
-                options: ["nhanh chóng", "chậm", "nhanh chóng", "nhanh chóng"],
-                correctAnswer: "chậm",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: SẠCH",
-                options: ["ọn gàng", "ọn gàng", "ơ bẩn", "ươi"],
-                correctAnswer: "ơ bẩn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Lời: TỨC THỨC",
-                options: ["áo động", "nhận thức được", "đang ngủ", "hoạt động"],
-                correctAnswer: "đang ngủ",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: LOUD",
-                options: ["ồn ào", "ên tĩnh", "đang bùng nổ", "ạnh mẽ"],
-                correctAnswer: "ên tĩnh",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Lời: MỞ",
-                options: ["đóng cửa", "ộng", "õ ràng", "miễn phí"],
-                correctAnswer: "đóng cửa",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Từ: ĐẦY ĐỦ",
-                options: ["đóng gói", "trống rỗng", "đã nạp", "hoàn thành"],
-                correctAnswer: "trống rỗng",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Lời: TÌNH YÊU",
-                options: ["ngưỡng mộ", "thích", "ghét", "quan tâm"],
-                correctAnswer: "ghét",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì?",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 1)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 2)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 3)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 4)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 5)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 6)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 7)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 8)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 9)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 10)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 11)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 12)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 13)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 14)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 15)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 16)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 17)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 18)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 19)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 20)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 21)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 22)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 23)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 24)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 25)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 26)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 27)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 28)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 29)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 30)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 31)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 32)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 33)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 34)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 35)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 36)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 37)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 38)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 39)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh Nam đi chợ Bolsa mua 3 ký chôm chôm và 2 ký nhãn. Anh ấy đã mua gì? (Câu chuyện 40)",
-                options: ["Chôm chôm và nhãn", "Xoài và măng cụt", "Sầu riêng và mít", "Cam và táo"],
-                correctAnswer: "Chôm chôm và nhãn",
-                explanation: "Recalling the fruits purchased by Nam at Bolsa market."
-            )
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 1)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 2)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 3)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 4)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 5)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 6)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 7)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 8)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 9)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 10)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 11)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 12)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 13)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 14)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 15)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 16)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 17)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 18)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 19)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 20)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 21)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 22)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 23)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 24)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 25)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 26)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 27)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 28)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 29)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 30)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 31)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 32)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 33)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 34)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 35)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 36)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 37)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 38)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 39)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 40)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 41)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 42)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 43)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 44)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 45)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 46)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ."),
+            ExerciseItem(id: UUID(), prompt: "Hôm qua ông Hùng lái xe trên đường Bolsa để mua phở. Ông ấy mua gì? (Câu chuyện 47)", options: ["Phở", "Hủ tiếu", "Cơm tấm", "Bánh mì"], correctAnswer: "Phở", explanation: "Ông Hùng đi mua phở."),
+            ExerciseItem(id: UUID(), prompt: "Chị Hoa ghé qua thương xá Bolsa mua áo dài cưới lúc 3 giờ chiều. Chị Hoa mua gì? (Câu chuyện 48)", options: ["Áo dài cưới", "Váy cưới", "Áo sơ mi", "Áo thun"], correctAnswer: "Áo dài cưới", explanation: "Chị Hoa mua áo dài cưới."),
+            ExerciseItem(id: UUID(), prompt: "Anh Nam ghé tiệm bánh mì ở Westminster mua 5 ổ bánh mì thịt. Anh ấy mua mấy ổ? (Câu chuyện 49)", options: ["5 ổ", "3 ổ", "10 ổ", "2 ổ"], correctAnswer: "5 ổ", explanation: "Anh Nam mua 5 ổ bánh mì."),
+            ExerciseItem(id: UUID(), prompt: "Bà Mai ra chợ Thuận Phát mua rau muống và nước mắm. Bà Mai đi chợ nào? (Câu chuyện 50)", options: ["Chợ Thuận Phát", "Chợ Bolsa", "Chợ Hòa Bình", "Chợ Bến Thành"], correctAnswer: "Chợ Thuận Phát", explanation: "Bà Mai đi chợ Thuận Phát."),
+            ExerciseItem(id: UUID(), prompt: "Bà Lan ở Westminster đi bộ đến Phước Lộc Thọ mua bánh tét. Bà ấy đi bằng gì? (Câu chuyện 51)", options: ["Đi bộ", "Đi xe buýt", "Đi xe hơi", "Đi xe đạp"], correctAnswer: "Đi bộ", explanation: "Bà Lan đi bộ đến Phước Lộc Thọ.")
         ]
     )
 
     // MARK: - Hoàn thành câu (Dễ)
     private static let numberSequences = Exercise(
         id: UUID(),
-        title: "Hoàn thành câu (Dễ)",
-        instructions: "Chọn từ hoàn thành câu tốt nhất.",
+        title: "Dãy số logic",
+        instructions: "Tìm số tiếp theo trong dãy số logic sau.",
         section: .cognition,
         type: .multipleChoice,
-        trackedType: .sentenceCompletion,
+        trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy tưới nước cho ___.",
-                options: ["hoa", "ầng", "ột mì"],
-                correctAnswer: "hoa",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy mặc ___ của mình.",
-                options: ["áo khoác", "thuyền", "con dê"],
-                correctAnswer: "áo khoác",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Tôi cần một ly ___.",
-                options: ["ước", "ồi bàn", "người lội nước"],
-                correctAnswer: "ước",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy gọi cô ấy là ___.",
-                options: ["ẹ", "àm phiền", "ọt"],
-                correctAnswer: "ẹ",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Con chó vẫy ___ của nó.",
-                options: ["âu chuyện", "đuôi", "cao"],
-                correctAnswer: "đuôi",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy đã tắt ___.",
-                options: ["chiến đấu", "ánh sáng", "đêm"],
-                correctAnswer: "ánh sáng",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy nướng một ___.",
-                options: ["giả mạo", "ồ", "ánh ngọt"],
-                correctAnswer: "ánh ngọt",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Con chim đã xây dựng một ___.",
-                options: ["ổ", "nghỉ ngơi", "kiểm tra"],
-                correctAnswer: "ổ",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy đã đọc ___.",
-                options: ["ờ báo", "giấy vụn", "giấy nhám"],
-                correctAnswer: "ờ báo",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Bọn trẻ chơi trong ___.",
-                options: ["ông viên", "ỏ cây", "ối"],
-                correctAnswer: "ông viên",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy đã sửa ___.",
-                options: ["ồn rửa", "liên kết", "nháy mắt"],
-                correctAnswer: "ồn rửa",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Món súp quá ___.",
-                options: ["óng bức", "ất nhiều", "ấu chấm"],
-                correctAnswer: "óng bức",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy đã mở ___.",
-                options: ["ô", "ương vani", "khỉ đột"],
-                correctAnswer: "ô",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy đã trả ___.",
-                options: ["hoá đơn", "điền vào", "ối xay"],
-                correctAnswer: "hoá đơn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Con mèo ngồi trên ___.",
-                options: ["chiếu", "ơi", "chuột"],
-                correctAnswer: "chiếu",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy mặc một chiếc ___ ấm áp.",
-                options: ["áo len", "ỉ đập", "ải rác"],
-                correctAnswer: "áo len",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy đã trồng một ___.",
-                options: ["ườn", "tha thứ", "cai ngục"],
-                correctAnswer: "ườn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cô ấy đã viết trong ___ của mình.",
-                options: ["nhật ký", "ữa", "hoa cúc"],
-                correctAnswer: "nhật ký",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Anh ấy đã trả ___.",
-                options: ["óa đơn", "điền vào", "ối xay"],
-                correctAnswer: "óa đơn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Đứa bé là ___.",
-                options: ["đang ngủ", "quét dọn", "ỉ ra"],
-                correctAnswer: "đang ngủ",
-                explanation: ""
-            )
+            ExerciseItem(id: UUID(), prompt: "10, 20, 30, 40, ___", options: ["50", "60", "70", "80"], correctAnswer: "50", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "20, 30, 40, 50, ___", options: ["60", "70", "80", "90"], correctAnswer: "60", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "30, 40, 50, 60, ___", options: ["70", "80", "90", "100"], correctAnswer: "70", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "40, 50, 60, 70, ___", options: ["80", "90", "100", "110"], correctAnswer: "80", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "50, 60, 70, 80, ___", options: ["90", "100", "110", "120"], correctAnswer: "90", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "60, 70, 80, 90, ___", options: ["100", "110", "120", "130"], correctAnswer: "100", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "70, 80, 90, 100, ___", options: ["110", "120", "130", "140"], correctAnswer: "110", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "80, 90, 100, 110, ___", options: ["120", "130", "140", "150"], correctAnswer: "120", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "90, 100, 110, 120, ___", options: ["130", "140", "150", "160"], correctAnswer: "130", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "100, 110, 120, 130, ___", options: ["140", "150", "160", "170"], correctAnswer: "140", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "110, 120, 130, 140, ___", options: ["150", "160", "170", "180"], correctAnswer: "150", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "120, 130, 140, 150, ___", options: ["160", "170", "180", "190"], correctAnswer: "160", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "130, 140, 150, 160, ___", options: ["170", "180", "190", "200"], correctAnswer: "170", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "140, 150, 160, 170, ___", options: ["180", "190", "200", "210"], correctAnswer: "180", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "150, 160, 170, 180, ___", options: ["190", "200", "210", "220"], correctAnswer: "190", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "160, 170, 180, 190, ___", options: ["200", "210", "220", "230"], correctAnswer: "200", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "170, 180, 190, 200, ___", options: ["210", "220", "230", "240"], correctAnswer: "210", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "180, 190, 200, 210, ___", options: ["220", "230", "240", "250"], correctAnswer: "220", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "190, 200, 210, 220, ___", options: ["230", "240", "250", "260"], correctAnswer: "230", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp."),
+            ExerciseItem(id: UUID(), prompt: "200, 210, 220, 230, ___", options: ["240", "250", "260", "270"], correctAnswer: "240", explanation: "Quy luật cộng thêm 10 vào mỗi số kế tiếp.")
         ]
     )
 
@@ -664,146 +238,26 @@ struct VietnameseCognitionExerciseData {
         trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Tôi nhìn thấy một ___ mèo trên sân thượng.”",
-                options: ["con", "ái", "chiếc", "ức"],
-                correctAnswer: "con",
-                explanation: "‘con’ là lượng từ dùng cho động vật."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Mẹ mới mua cho tôi một ___ sách rất hay.”",
-                options: ["quyển", "ái", "chiếc", "ấm"],
-                correctAnswer: "quyển",
-                explanation: "‘quyển’ hoặc ‘cuốn’ là lượng từ dùng cho sách vở."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Ngôi nhà này có một ___ cửa sổ rất lớn.”",
-                options: ["ái", "con", "ức", "ngôi"],
-                correctAnswer: "ái",
-                explanation: "‘cái’ là lượng từ dùng cho đồ vật thông thường."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Bố tôi sở hữu một ___ xe máy màu đỏ.”",
-                options: ["chiếc", "con", "ái", "ấm"],
-                correctAnswer: "chiếc",
-                explanation: "‘chiếc’ hoặc ‘cái’ là lượng từ dùng cho phương tiện giao thông."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Bức ___ vẽ phong cảnh treo ở phòng khách.”",
-                options: ["tranh", "ảnh", "ẽ", "àu"],
-                correctAnswer: "tranh",
-                explanation: "‘bức tranh’ là danh từ chỉ tác phẩm hội họa."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Hôm qua, chúng tôi đã ___ một bộ phim rất xúc động.”",
-                options: ["xem", "nghe", "đọc", "ói"],
-                correctAnswer: "xem",
-                explanation: "Động từ dùng cho phim ảnh là ‘xem’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Anh ấy đang ___ xe đạp trên đường công viên.”",
-                options: ["đạp", "ái", "chạy", "đi"],
-                correctAnswer: "đạp",
-                explanation: "Động từ dùng cho xe đạp là ‘đạp xe’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Cô giáo đang ___ bài giảng trên bảng đen.”",
-                options: ["viết", "đọc", "ói", "nghe"],
-                correctAnswer: "viết",
-                explanation: "Hoạt động ghi chữ lên bảng là ‘viết’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Trời hôm nay ___ mưa to tầm tã.”",
-                options: ["đang", "đã", "ẽ", "ừa"],
-                correctAnswer: "đang",
-                explanation: "Chỉ trạng thái thời tiết đang xảy ra."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Chúng tôi sẽ ___ du lịch vào tuần sau.”",
-                options: ["đi", "đến", "chạy", "bay"],
-                correctAnswer: "đi",
-                explanation: "Cụm từ diễn đạt việc di chuyển đi chơi là ‘đi du lịch’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Món ăn này vị của nó rất ___ miệng.”",
-                options: ["ngon", "đẹp", "thơm", "ngọt"],
-                correctAnswer: "ngon",
-                explanation: "Tính từ chỉ chất lượng món ăn ngon miệng."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Anh ấy học hành vô cùng ___ chỉ.”",
-                options: ["chăm", "ười", "ngoan", "giỏi"],
-                correctAnswer: "chăm",
-                explanation: "Cụm từ ghép chỉ sự nỗ lực học tập là ‘chăm chỉ’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Em bé khóc rất ___ vì bị đói.”",
-                options: ["to", "nhỏ", "khẽ", "nhanh"],
-                correctAnswer: "to",
-                explanation: "Trạng từ chỉ mức độ tiếng khóc."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Chiếc điện thoại này dùng rất ___.”",
-                options: ["ốt", "ấu", "nhanh", "chậm"],
-                correctAnswer: "ốt",
-                explanation: "Tính từ chỉ chất lượng hoạt động của thiết bị."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Bầu trời đêm đầy ___ sáng lấp lánh.”",
-                options: ["sao", "ây", "trăng", "ắng"],
-                correctAnswer: "sao",
-                explanation: "Thiên thể phát sáng ban đêm là ‘ngôi sao’."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Một ___ nhà cao tầng mới xây ở góc phố.”",
-                options: ["ngôi", "ái", "chiếc", "ức"],
-                correctAnswer: "ngôi",
-                explanation: "‘ngôi’ là lượng từ dùng cho nhà cửa, công trình."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Chị tôi đeo một ___ kính cận màu đen.”",
-                options: ["ặp", "ái", "chiếc", "ấm"],
-                correctAnswer: "ặp",
-                explanation: "‘cặp kính’ hoặc ‘chiếc kính’ là cách gọi thông dụng."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Họ vừa hoàn thành xong ___ học kỳ đầu tiên.”",
-                options: ["ột", "những", "ác", "ọi"],
-                correctAnswer: "ột",
-                explanation: "Chỉ số lượng một học kỳ cụ thể."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Hãy uống nước ___ trước khi đi ngủ.”",
-                options: ["ấm", "ạnh", "óng", "đá"],
-                correctAnswer: "ấm",
-                explanation: "Lời khuyên sức khỏe uống nước ấm tốt cho cơ thể."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chọn từ thích hợp điền vào chỗ trống: “Người nghệ sĩ đang kéo đàn ___ rất hay.”",
-                options: ["ĩ cầm", "tranh", "ầu", "guitar"],
-                correctAnswer: "ĩ cầm",
-                explanation: "Nhạc cụ kéo bằng vĩ là ‘đàn vĩ cầm’ (violin)."
-            )
+            ExerciseItem(id: UUID(), prompt: "Bạn quên đổ xăng cho xe hơi. Kết quả là gì? (Tình huống 1)", options: ["Xe không thể chạy", "Xe chạy nhanh hơn", "Xe đổi màu", "Xe tự động rửa"], correctAnswer: "Xe không thể chạy", explanation: "Không có xăng xe không thể hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Trời mưa to và bạn không mang dù (ô). Kết quả là gì? (Tình huống 2)", options: ["Bạn bị ướt", "Bạn bị cháy nắng", "Bạn khô ráo", "Bạn đi nhanh hơn"], correctAnswer: "Bạn bị ướt", explanation: "Trời mưa không che dù sẽ bị ướt."),
+            ExerciseItem(id: UUID(), prompt: "Bạn để kem ngoài nắng Bolsa lúc trưa. Kết quả là gì? (Tình huống 3)", options: ["Kem bị chảy ra", "Kem đông cứng hơn", "Kem đổi vị", "Kem biến mất"], correctAnswer: "Kem bị chảy ra", explanation: "Nhiệt độ cao làm kem chảy."),
+            ExerciseItem(id: UUID(), prompt: "Bạn cắm phích điện của quạt. Kết quả là gì? (Tình huống 4)", options: ["Quạt quay và thổi gió", "Quạt bị hỏng", "Quạt đổi màu", "Quạt phát ra tiếng nhạc"], correctAnswer: "Quạt quay và thổi gió", explanation: "Có điện quạt sẽ hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Bạn không tưới nước cho cây cảnh ở sân Westminster. Kết quả là gì? (Tình huống 5)", options: ["Cây bị héo và chết", "Cây phát triển nhanh", "Cây nở nhiều hoa", "Cây đổi màu xanh"], correctAnswer: "Cây bị héo và chết", explanation: "Thiếu nước cây sẽ héo."),
+            ExerciseItem(id: UUID(), prompt: "Bạn quên đổ xăng cho xe hơi. Kết quả là gì? (Tình huống 6)", options: ["Xe không thể chạy", "Xe chạy nhanh hơn", "Xe đổi màu", "Xe tự động rửa"], correctAnswer: "Xe không thể chạy", explanation: "Không có xăng xe không thể hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Trời mưa to và bạn không mang dù (ô). Kết quả là gì? (Tình huống 7)", options: ["Bạn bị ướt", "Bạn bị cháy nắng", "Bạn khô ráo", "Bạn đi nhanh hơn"], correctAnswer: "Bạn bị ướt", explanation: "Trời mưa không che dù sẽ bị ướt."),
+            ExerciseItem(id: UUID(), prompt: "Bạn để kem ngoài nắng Bolsa lúc trưa. Kết quả là gì? (Tình huống 8)", options: ["Kem bị chảy ra", "Kem đông cứng hơn", "Kem đổi vị", "Kem biến mất"], correctAnswer: "Kem bị chảy ra", explanation: "Nhiệt độ cao làm kem chảy."),
+            ExerciseItem(id: UUID(), prompt: "Bạn cắm phích điện của quạt. Kết quả là gì? (Tình huống 9)", options: ["Quạt quay và thổi gió", "Quạt bị hỏng", "Quạt đổi màu", "Quạt phát ra tiếng nhạc"], correctAnswer: "Quạt quay và thổi gió", explanation: "Có điện quạt sẽ hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Bạn không tưới nước cho cây cảnh ở sân Westminster. Kết quả là gì? (Tình huống 10)", options: ["Cây bị héo và chết", "Cây phát triển nhanh", "Cây nở nhiều hoa", "Cây đổi màu xanh"], correctAnswer: "Cây bị héo và chết", explanation: "Thiếu nước cây sẽ héo."),
+            ExerciseItem(id: UUID(), prompt: "Bạn quên đổ xăng cho xe hơi. Kết quả là gì? (Tình huống 11)", options: ["Xe không thể chạy", "Xe chạy nhanh hơn", "Xe đổi màu", "Xe tự động rửa"], correctAnswer: "Xe không thể chạy", explanation: "Không có xăng xe không thể hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Trời mưa to và bạn không mang dù (ô). Kết quả là gì? (Tình huống 12)", options: ["Bạn bị ướt", "Bạn bị cháy nắng", "Bạn khô ráo", "Bạn đi nhanh hơn"], correctAnswer: "Bạn bị ướt", explanation: "Trời mưa không che dù sẽ bị ướt."),
+            ExerciseItem(id: UUID(), prompt: "Bạn để kem ngoài nắng Bolsa lúc trưa. Kết quả là gì? (Tình huống 13)", options: ["Kem bị chảy ra", "Kem đông cứng hơn", "Kem đổi vị", "Kem biến mất"], correctAnswer: "Kem bị chảy ra", explanation: "Nhiệt độ cao làm kem chảy."),
+            ExerciseItem(id: UUID(), prompt: "Bạn cắm phích điện của quạt. Kết quả là gì? (Tình huống 14)", options: ["Quạt quay và thổi gió", "Quạt bị hỏng", "Quạt đổi màu", "Quạt phát ra tiếng nhạc"], correctAnswer: "Quạt quay và thổi gió", explanation: "Có điện quạt sẽ hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Bạn không tưới nước cho cây cảnh ở sân Westminster. Kết quả là gì? (Tình huống 15)", options: ["Cây bị héo và chết", "Cây phát triển nhanh", "Cây nở nhiều hoa", "Cây đổi màu xanh"], correctAnswer: "Cây bị héo và chết", explanation: "Thiếu nước cây sẽ héo."),
+            ExerciseItem(id: UUID(), prompt: "Bạn quên đổ xăng cho xe hơi. Kết quả là gì? (Tình huống 16)", options: ["Xe không thể chạy", "Xe chạy nhanh hơn", "Xe đổi màu", "Xe tự động rửa"], correctAnswer: "Xe không thể chạy", explanation: "Không có xăng xe không thể hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Trời mưa to và bạn không mang dù (ô). Kết quả là gì? (Tình huống 17)", options: ["Bạn bị ướt", "Bạn bị cháy nắng", "Bạn khô ráo", "Bạn đi nhanh hơn"], correctAnswer: "Bạn bị ướt", explanation: "Trời mưa không che dù sẽ bị ướt."),
+            ExerciseItem(id: UUID(), prompt: "Bạn để kem ngoài nắng Bolsa lúc trưa. Kết quả là gì? (Tình huống 18)", options: ["Kem bị chảy ra", "Kem đông cứng hơn", "Kem đổi vị", "Kem biến mất"], correctAnswer: "Kem bị chảy ra", explanation: "Nhiệt độ cao làm kem chảy."),
+            ExerciseItem(id: UUID(), prompt: "Bạn cắm phích điện của quạt. Kết quả là gì? (Tình huống 19)", options: ["Quạt quay và thổi gió", "Quạt bị hỏng", "Quạt đổi màu", "Quạt phát ra tiếng nhạc"], correctAnswer: "Quạt quay và thổi gió", explanation: "Có điện quạt sẽ hoạt động."),
+            ExerciseItem(id: UUID(), prompt: "Bạn không tưới nước cho cây cảnh ở sân Westminster. Kết quả là gì? (Tình huống 20)", options: ["Cây bị héo và chết", "Cây phát triển nhanh", "Cây nở nhiều hoa", "Cây đổi màu xanh"], correctAnswer: "Cây bị héo và chết", explanation: "Thiếu nước cây sẽ héo.")
         ]
     )
 
@@ -817,111 +271,21 @@ struct VietnameseCognitionExerciseData {
         trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "PUPPY đối với CHÓ cũng như KITTEN đối với ___",
-                options: ["con mèo", "con chó", "chim", "á"],
-                correctAnswer: "con mèo",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "LẠNH là MÙA ĐÔNG cũng như HẤP DẪN là ___",
-                options: ["ùa xuân", "ùa thu", "Mùa hè", "Mưa"],
-                correctAnswer: "Mùa hè",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "MẮT là để XEM cũng như TAI là để ___",
-                options: ["Chạm vào", "Nghe", "Mùi", "Hương vị"],
-                correctAnswer: "Nghe",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "CHEF đối với BẾP cũng như BÁC SĨ đối với ___",
-                options: ["Thư viện", "ệnh viện", "trường học", "ửa hàng"],
-                correctAnswer: "ệnh viện",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "GĂNG TAY là TAY cũng như TẤT là ___",
-                options: ["ánh tay", "Đầu gối", "chân", "ái đầu"],
-                correctAnswer: "chân",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "VUI là CƯỜI cũng như Buồn là ___",
-                options: ["Mỉm cười", "Ngủ", "Khóc", "Chạy"],
-                correctAnswer: "Khóc",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "BIRD là NEST cũng như BEAR là ___",
-                options: ["Cây", "Hang động", "đại dương", "trường"],
-                correctAnswer: "Hang động",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "BÚT CHÌ dùng để VIẾT cũng như BRUSH dùng để ___",
-                options: ["Cắt", "Sơn", "Quét", "Khuấy"],
-                correctAnswer: "Sơn",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "NGÀY là ĐÊM và ĐEN là ___",
-                options: ["Tối", "Màu xám", "trắng", "Màu xanh"],
-                correctAnswer: "trắng",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "SOLDIER đối với ARMY cũng như Sailor đối với ___",
-                options: ["Không quân", "Thủy quân lục chiến", "ải quân", "ảo vệ"],
-                correctAnswer: "ải quân",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "WHEEL là XE còn WING là ___",
-                options: ["Thuyền", "Máy bay", "àu hỏa", "xe buýt"],
-                correctAnswer: "Máy bay",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "GIÁO VIÊN đối với TRƯỜNG cũng như THẨM PHÁN đối với ___",
-                options: ["ăn phòng", "ệnh viện", "phòng xử án", "ửa hàng"],
-                correctAnswer: "phòng xử án",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "CATERPILLAR là BƯỚM cũng như Nòng Nòng là ___",
-                options: ["á", "Rùa", "Ếch", "thằn lằn"],
-                correctAnswer: "Ếch",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "THỰC PHẨM là ĐÓI cũng như NƯỚC là ___",
-                options: ["Ướt", "Khát nước", "Lạnh", "Đầy đủ"],
-                correctAnswer: "Khát nước",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "LEN dành cho CỪU cũng như LỤA dành cho ___",
-                options: ["nhện", "Tằm", "Bông", "ải lanh"],
-                correctAnswer: "Tằm",
-                explanation: ""
-            )
+            ExerciseItem(id: UUID(), prompt: "Cá voi xanh bay lượn trên bầu trời Westminster vào buổi trưa nắng ấm. (Phần 1)", options: ["Cá voi không biết bay", "Bầu trời không có nắng", "Không có buổi trưa", "Westminster không có bầu trời"], correctAnswer: "Cá voi không biết bay", explanation: "Cá voi sống dưới nước và không biết bay."),
+            ExerciseItem(id: UUID(), prompt: "Ông nội đun nước sôi bằng một khay đá lạnh. (Phần 2)", options: ["Đá lạnh không thể đun sôi nước", "Nước sôi không nóng", "Ông nội không đun nước", "Khay đá không có hình chữ nhật"], correctAnswer: "Đá lạnh không thể đun sôi nước", explanation: "Đá lạnh tỏa nhiệt độ thấp, không thể đun sôi nước."),
+            ExerciseItem(id: UUID(), prompt: "Chiếc xe hơi đang chạy bình thường mà không cần bánh xe. (Phần 3)", options: ["Xe hơi chạy cần bánh xe", "Xe hơi không cần xăng", "Xe chạy trên nước", "Xe không có kính chắn gió"], correctAnswer: "Xe hơi chạy cần bánh xe", explanation: "Bánh xe là bộ phận bắt buộc để xe hơi di chuyển."),
+            ExerciseItem(id: UUID(), prompt: "Chị Lan viết thư bằng một quả chuối chín màu vàng. (Phần 4)", options: ["Quả chuối không thể viết chữ", "Quả chuối không có màu vàng", "Thư viết bằng tiếng Anh", "Chị Lan không biết viết"], correctAnswer: "Quả chuối không thể viết chữ", explanation: "Chuối không chứa mực hay ngòi viết để viết chữ."),
+            ExerciseItem(id: UUID(), prompt: "Tôi nghe thấy tiếng còi tàu hỏa vang lên từ giữa lòng đại dương. (Phần 5)", options: ["Tàu hỏa chạy trên đường ray đất liền", "Đại dương không có nước", "Tàu hỏa chạy bằng nước biển", "Còi tàu hỏa không phát ra âm thanh"], correctAnswer: "Tàu hỏa chạy trên đường ray đất liền", explanation: "Tàu hỏa không hoạt động giữa đại dương."),
+            ExerciseItem(id: UUID(), prompt: "Cá voi xanh bay lượn trên bầu trời Westminster vào buổi trưa nắng ấm. (Phần 6)", options: ["Cá voi không biết bay", "Bầu trời không có nắng", "Không có buổi trưa", "Westminster không có bầu trời"], correctAnswer: "Cá voi không biết bay", explanation: "Cá voi sống dưới nước và không biết bay."),
+            ExerciseItem(id: UUID(), prompt: "Ông nội đun nước sôi bằng một khay đá lạnh. (Phần 7)", options: ["Đá lạnh không thể đun sôi nước", "Nước sôi không nóng", "Ông nội không đun nước", "Khay đá không có hình chữ nhật"], correctAnswer: "Đá lạnh không thể đun sôi nước", explanation: "Đá lạnh tỏa nhiệt độ thấp, không thể đun sôi nước."),
+            ExerciseItem(id: UUID(), prompt: "Chiếc xe hơi đang chạy bình thường mà không cần bánh xe. (Phần 8)", options: ["Xe hơi chạy cần bánh xe", "Xe hơi không cần xăng", "Xe chạy trên nước", "Xe không có kính chắn gió"], correctAnswer: "Xe hơi chạy cần bánh xe", explanation: "Bánh xe là bộ phận bắt buộc để xe hơi di chuyển."),
+            ExerciseItem(id: UUID(), prompt: "Chị Lan viết thư bằng một quả chuối chín màu vàng. (Phần 9)", options: ["Quả chuối không thể viết chữ", "Quả chuối không có màu vàng", "Thư viết bằng tiếng Anh", "Chị Lan không biết viết"], correctAnswer: "Quả chuối không thể viết chữ", explanation: "Chuối không chứa mực hay ngòi viết để viết chữ."),
+            ExerciseItem(id: UUID(), prompt: "Tôi nghe thấy tiếng còi tàu hỏa vang lên từ giữa lòng đại dương. (Phần 10)", options: ["Tàu hỏa chạy trên đường ray đất liền", "Đại dương không có nước", "Tàu hỏa chạy bằng nước biển", "Còi tàu hỏa không phát ra âm thanh"], correctAnswer: "Tàu hỏa chạy trên đường ray đất liền", explanation: "Tàu hỏa không hoạt động giữa đại dương."),
+            ExerciseItem(id: UUID(), prompt: "Cá voi xanh bay lượn trên bầu trời Westminster vào buổi trưa nắng ấm. (Phần 11)", options: ["Cá voi không biết bay", "Bầu trời không có nắng", "Không có buổi trưa", "Westminster không có bầu trời"], correctAnswer: "Cá voi không biết bay", explanation: "Cá voi sống dưới nước và không biết bay."),
+            ExerciseItem(id: UUID(), prompt: "Ông nội đun nước sôi bằng một khay đá lạnh. (Phần 12)", options: ["Đá lạnh không thể đun sôi nước", "Nước sôi không nóng", "Ông nội không đun nước", "Khay đá không có hình chữ nhật"], correctAnswer: "Đá lạnh không thể đun sôi nước", explanation: "Đá lạnh tỏa nhiệt độ thấp, không thể đun sôi nước."),
+            ExerciseItem(id: UUID(), prompt: "Chiếc xe hơi đang chạy bình thường mà không cần bánh xe. (Phần 13)", options: ["Xe hơi chạy cần bánh xe", "Xe hơi không cần xăng", "Xe chạy trên nước", "Xe không có kính chắn gió"], correctAnswer: "Xe hơi chạy cần bánh xe", explanation: "Bánh xe là bộ phận bắt buộc để xe hơi di chuyển."),
+            ExerciseItem(id: UUID(), prompt: "Chị Lan viết thư bằng một quả chuối chín màu vàng. (Phần 14)", options: ["Quả chuối không thể viết chữ", "Quả chuối không có màu vàng", "Thư viết bằng tiếng Anh", "Chị Lan không biết viết"], correctAnswer: "Quả chuối không thể viết chữ", explanation: "Chuối không chứa mực hay ngòi viết để viết chữ."),
+            ExerciseItem(id: UUID(), prompt: "Tôi nghe thấy tiếng còi tàu hỏa vang lên từ giữa lòng đại dương. (Phần 15)", options: ["Tàu hỏa chạy trên đường ray đất liền", "Đại dương không có nước", "Tàu hỏa chạy bằng nước biển", "Còi tàu hỏa không phát ra âm thanh"], correctAnswer: "Tàu hỏa chạy trên đường ray đất liền", explanation: "Tàu hỏa không hoạt động giữa đại dương.")
         ]
     )
 

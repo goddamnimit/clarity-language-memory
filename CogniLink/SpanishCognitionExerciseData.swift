@@ -842,461 +842,81 @@ struct SpanishCognitionExerciseData {
         trackedType: nil,
         difficulty: .easy,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el sol una estrella?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Flota el hielo en el agua?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Is Paris the capital of Germany?",
-                options: ["Yes", "No"],
-                correctAnswer: "No",
-                explanation: "Berlín es la capital de Alemania"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Produce la luna su propia luz?",
-                options: ["Yes", "No"],
-                correctAnswer: "No",
-                explanation: "Refleja la luz del sol"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el Océano Pacífico el más grande de la Tierra?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿El corazón humano tiene cuatro cavidades?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Los murciélagos son mamíferos?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Los murciélagos son mamíferos, no aves"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Fue Neil Armstrong el primer humano en caminar sobre la luna?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "El 20 de julio de 1969"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Tiene un bebé humano más huesos que un adulto?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Los bebés tienen de 270 a 300 huesos; los adultos tienen 206"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el Sahara el desierto cálido más grande del mundo?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Está Brasil ubicado en América del Sur?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es un pingüino un ave?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Los pingüinos son aves, aunque no vuelan"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Is a dolphin classified as a mammal?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Los delfines respiran aire y amamantan a sus crías"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Sale el sol por el este?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: ""
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México?",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 1)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 2)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 3)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 4)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 5)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 6)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 7)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 8)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 9)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 10)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 11)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 12)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 13)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 14)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 15)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 16)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 17)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 18)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 19)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 20)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 21)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 22)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 23)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 24)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 25)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 26)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 27)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 28)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 29)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 30)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 31)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 32)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 33)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 34)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 35)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 36)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 37)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 38)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 39)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 40)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 41)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 42)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 43)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 44)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 45)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 46)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 47)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 48)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 49)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "¿Es el mariachi un género musical tradicional originario de México? (Pregunta 50)",
-                options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "Mariachi music originated in Mexico."
-            )
+            ExerciseItem(id: UUID(), prompt: "¿Es el mariachi un género musical tradicional originario de México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El mariachi es de México."),
+            ExerciseItem(id: UUID(), prompt: "¿Es el Sol una estrella que brilla en el centro de nuestro sistema solar?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El Sol es una estrella."),
+            ExerciseItem(id: UUID(), prompt: "¿Tienen todos los insectos un total de ocho patas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los insectos tienen seis patas."),
+            ExerciseItem(id: UUID(), prompt: "¿Es la Ciudad de México la capital oficial del país de México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La CDMX es la capital."),
+            ExerciseItem(id: UUID(), prompt: "¿Pueden las personas volar de forma natural sin ayuda de máquinas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos no vuelan solos."),
+            ExerciseItem(id: UUID(), prompt: "¿Tiene un año regular un total de 365 días?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Un año tiene 365 días."),
+            ExerciseItem(id: UUID(), prompt: "¿Es el agua un elemento compuesto por hidrógeno y oxígeno?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El agua es H2O."),
+            ExerciseItem(id: UUID(), prompt: "¿Viven los osos polares de forma natural en el desierto del Sahara?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Viven en el Ártico."),
+            ExerciseItem(id: UUID(), prompt: "¿Es la Luna el satélite natural que órbita la Tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La Luna es el satélite de la Tierra."),
+            ExerciseItem(id: UUID(), prompt: "¿Tienen todos los seres humanos dos corazones?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos tienen un corazón."),
+            ExerciseItem(id: UUID(), prompt: "¿Es el español el idioma oficial de España y México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es el idioma oficial."),
+            ExerciseItem(id: UUID(), prompt: "¿Tienen los elephants dos trompas largas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Tienen una sola trompa."),
+            ExerciseItem(id: UUID(), prompt: "¿Es la Antártida el lugar más frío de la Tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es la zona más fría."),
+            ExerciseItem(id: UUID(), prompt: "¿Crecen las manzanas en arbustos bajo el suelo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Crecen en árboles de manzano."),
+            ExerciseItem(id: UUID(), prompt: "¿Es el Everest la montaña más alta sobre el nivel del mar?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es la montaña más alta."),
+            ExerciseItem(id: UUID(), prompt: "¿Son las zanahorias raíces que crecen bajo la tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Las zanahorias son raíces."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el mariachi un género musical tradicional originario de México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El mariachi es de México."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el Sol una estrella que brilla en el centro de nuestro sistema solar?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El Sol es una estrella."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Tienen todos los insectos un total de ocho patas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los insectos tienen seis patas."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es la Ciudad de México la capital oficial del país de México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La CDMX es la capital."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Pueden las personas volar de forma natural sin ayuda de máquinas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos no vuelan solos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Tiene un año regular un total de 365 días?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Un año tiene 365 días."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el agua un elemento compuesto por hidrógeno y oxígeno?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El agua es H2O."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Viven los osos polares de forma natural en el desierto del Sahara?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Viven en el Ártico."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es la Luna el satélite natural que órbita la Tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La Luna es el satélite de la Tierra."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Tienen todos los seres humanos dos corazones?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos tienen un corazón."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el español el idioma oficial de España y México?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es el idioma oficial."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Tienen los elefantes dos trompas largas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Tienen una sola trompa."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es la Antártida el lugar más frío de la Tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es la zona más fría."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Crecen las manzanas en arbustos bajo el suelo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Crecen en árboles de manzano."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el Everest la montaña más alta sobre el nivel del mar?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Es la montaña más alta."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Son las zanahorias raíces que crecen bajo la tierra?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Las zanahorias son raíces."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El agua hierve a cien grados Celsius?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El agua hierve a 100 grados Celsius."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El hielo flota en el agua?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El hielo tiene menor densidad."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los seres humanos pueden respirar bajo el agua sin equipo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos carecen de branquias."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el color rojo un color primario?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El rojo es color primario en el modelo RYB."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Un triángulo tiene cuatro esquinas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Un triángulo tiene tres esquinas."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El sol se oculta por el este?", options: ["Yes", "No"], correctAnswer: "No", explanation: "El sol se oculta por el oeste."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es la Tierra el tercer planeta desde el Sol?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La Tierra sigue a Mercurio y Venus."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los delfines son peces?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los delfines son mamíferos marinos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Un siglo tiene cien años?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Un siglo equivale a 100 años."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La madera se obtiene de los árboles?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La madera es tejido leñoso de árboles."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Las abejas producen miel?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Las abejas recolectan néctar para miel."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El acero es un elemento natural?", options: ["Yes", "No"], correctAnswer: "No", explanation: "El acero es una aleación artificial."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los pingüinos pueden volar alto en el cielo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los pingüinos no vuelan en el aire."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Es el desierto del Sahara el más cálido?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El Sahara es el desierto cálido más grande."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El hierro es atraído por los imanes?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El hierro is ferromagnético."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El cuerpo humano tiene un total de diez costillas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los humanos tienen 24 costillas."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Las plantas necesitan luz solar para realizar la fotosíntesis?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La luz solar aporta energía química."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El papel se fabrica a partir de la madera?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La celulosa vegetal es la base."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los leones son herbívoros?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los leones son carnívoros depredadores."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Una semana tiene siete días?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La semana consta de 7 días."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El cerebro es el órgano que controla el pensamiento?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El cerebro procesa la cognición."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los plátanos crecen en el suelo como patatas?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los plátanos crecen en racimos aéreos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El océano Atlántico es el más grande del mundo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "El Pacífico es el más grande."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los caballos tienen pezuñas en lugar de dedos?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Los caballos son ungulados monodáctilos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El cobre es un buen conductor de la electricidad?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El cobre tiene baja resistividad eléctrica."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los cocodrilos son aves de corral?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los cocodrilos son reptiles semiacuáticos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Un día completo tiene veinticuatro horas?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La Tierra tarda 24 horas por rotación."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Las ballenas respiran por medio de pulmones?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Las ballenas son mamíferos y respiran aire."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La manzana es una verdura de hoja verde?", options: ["Yes", "No"], correctAnswer: "No", explanation: "La manzana là un fruto del manzano."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El café se extrae de granos de una planta?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Se obtiene de los cafetos."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Las arañas pertenecen a la familia de los insectos?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Las arañas son arácnidos de 8 patas."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El violín es un instrumento de percusión?", options: ["Yes", "No"], correctAnswer: "No", explanation: "El violín es un instrumento de cuerda."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La capoeira es una danza de combate de Brasil?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Se originó como arte marcial en Brasil."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La capital de España es Barcelona?", options: ["Yes", "No"], correctAnswer: "No", explanation: "La capital de España es Madrid."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El petróleo es un recurso renovable a corto plazo?", options: ["Yes", "No"], correctAnswer: "No", explanation: "El petróleo tarda millones de años en formarse."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los murciélagos son mamíferos que vuelan?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Son los únicos mamíferos voladores."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El termómetro sirve para medir la presión del aire?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Mide la temperatura térmica."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿Los pulmones sirven para procesar los alimentos?", options: ["Yes", "No"], correctAnswer: "No", explanation: "Los pulmones procesan el aire respirado."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El Amazonas es el río más largo o caudaloso?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "El Amazonas es el más caudaloso del mundo."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿El ajo es conocido por su fuerte sabor y olor?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Contiene alicina que le da olor fuerte."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La penicilina es un tipo de antibiótico?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "Fue el primer antibiótico descubierto."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La seda es producida por gusanos de seda?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La oruga del bombix mori segrega seda."),
+            ExerciseItem(id: UUID(), prompt: "Pregunta lógica: ¿La gravedad de la Tierra atrae los objetos hacia su centro?", options: ["Yes", "No"], correctAnswer: "Yes", explanation: "La gravedad ejerce atracción descendente.")
         ]
     )
 
