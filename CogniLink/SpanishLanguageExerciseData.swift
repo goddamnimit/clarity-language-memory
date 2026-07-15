@@ -198,70 +198,70 @@ struct SpanishLanguageExerciseData {
                 prompt: "Más vale pájaro en mano que cien ___",
                 options: ["volando", "corriendo", "cantando", "comiendo"],
                 correctAnswer: "volando",
-                explanation: ""
+                explanation: "Es un refrán popular que enseña el valor de conservar lo seguro frente a la ambición de conseguir algo mayor pero incierto."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "A caballo regalado no se le mira el ___",
                 options: ["pelo", "ojo", "diente", "casco"],
                 correctAnswer: "diente",
-                explanation: ""
+                explanation: "Este dicho aconseja que cuando se recibe un regalo, no se le deben buscar defectos ni criticarlo."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "En boca cerrada no entran ___",
                 options: ["moscas", "abejas", "comidas", "palabras"],
                 correctAnswer: "moscas",
-                explanation: ""
+                explanation: "Un proverbio que advierte sobre los peligros de hablar de más, sugiriendo que la discreción evita muchos problemas."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Al que madruga, Dios lo ___",
                 options: ["ayuda", "mira", "llama", "salva"],
                 correctAnswer: "ayuda",
-                explanation: ""
+                explanation: "Este refrán resalta la importancia de la diligencia, el esfuerzo temprano y la proactividad para alcanzar el éxito."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Dime con quién andas, y te dire quién ___",
                 options: ["eres", "vas", "hablas", "vives"],
                 correctAnswer: "eres",
-                explanation: ""
+                explanation: "Subraya la influencia que tienen las amistades y el entorno social en el comportamiento y la reputación de una persona."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ojos que no ven, corazón que no ___",
                 options: ["siente", "llora", "ama", "sabe"],
                 correctAnswer: "siente",
-                explanation: ""
+                explanation: "Expresa la idea de que la ignorancia sobre algo doloroso o perjudicial evita el sufrimiento emocional."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Perro que ladra, no ___",
                 options: ["muerde", "corriendo", "come", "juega"],
                 correctAnswer: "muerde",
-                explanation: ""
+                explanation: "Significa que las personas que amenazan mucho o hacen mucho ruido rara vez pasan a la acción o cumplen sus amenazas."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Camarón que se duerme se lo lleva la ___",
                 options: ["corriente", "marea", "ola", "red"],
                 correctAnswer: "corriente",
-                explanation: ""
+                explanation: "Advierte contra la pereza y el descuido, señalando que la falta de atención o acción puede llevar al fracaso o a perder oportunidades."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "De tal palo, tal ___",
                 options: ["astilla", "rama", "hoja", "árbol"],
                 correctAnswer: "astilla",
-                explanation: ""
+                explanation: "Refrán que señala la similitud en carácter, comportamiento o apariencia entre padres e hijos."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Más vale tarde que ___",
                 options: ["nunca", "mañana", "ayer", "tarde"],
                 correctAnswer: "nunca",
-                explanation: ""
+                explanation: "Sugiere que es preferible hacer algo después de lo esperado o planeado, en lugar de no hacerlo en absoluto."
             )
         ]
     )
@@ -395,70 +395,70 @@ struct SpanishLanguageExerciseData {
                 prompt: "Palabra: MELANCOLÍA",
                 options: ["alegría", "tristeza", "entusiasmo", "calma"],
                 correctAnswer: "tristeza",
-                explanation: ""
+                explanation: "Ambas palabras describen un estado de ánimo de aflicción o pena; melancolía es un tipo de tristeza profunda y sosegada, por lo que funcionan como sinónimos."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: APACIBLE",
                 options: ["ruidoso", "agitado", "pacífico", "frenético"],
                 correctAnswer: "pacífico",
-                explanation: ""
+                explanation: "Son sinónimos porque ambos términos se refieren a algo o alguien que es tranquilo, libre de violencia, y que transmite paz y calma."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: VALEROSO",
                 options: ["tímido", "temeroso", "audaz", "cobarde"],
                 correctAnswer: "audaz",
-                explanation: ""
+                explanation: "Ambas palabras son sinónimos ya que describen a una persona que tiene coraje, valentía y disposición para enfrentar peligros o situaciones difíciles."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: PECULIAR",
                 options: ["común", "extraño", "normal", "típico"],
                 correctAnswer: "extraño",
-                explanation: ""
+                explanation: "Son sinónimos en ciertos contextos porque ambos indican que algo se sale de lo común o habitual, teniendo características singulares o inusuales."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: COPIOSO",
                 options: ["escaso", "abundante", "raro", "limitado"],
                 correctAnswer: "abundante",
-                explanation: ""
+                explanation: "Funcionan como sinónimos porque ambos adjetivos expresan que algo existe o se produce en gran cantidad."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: ENFEBLECIDO",
                 options: ["fuerte", "vigoroso", "débil", "robusto"],
                 correctAnswer: "débil",
-                explanation: ""
+                explanation: "Son sinónimos porque ambas palabras describen una falta de fuerza física o vigor; enfeblecido implica haber perdido fuerza, resultando en debilidad."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: NÍTIDO",
                 options: ["borroso", "pálido", "claro", "difuso"],
                 correctAnswer: "claro",
-                explanation: ""
+                explanation: "Actúan como sinónimos al describir algo que se percibe o comprende sin confusión, con bordes definidos o con gran pureza y transparencia."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: PARCO",
                 options: ["derrochador", "frugal", "espléndido", "generoso"],
                 correctAnswer: "frugal",
-                explanation: ""
+                explanation: "Son sinónimos porque ambos términos se refieren a la moderación y la sobriedad, especialmente en la comida, el gasto o el comportamiento."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: LOCUAZ",
                 options: ["mudo", "hablador", "silencioso", "torpe"],
                 correctAnswer: "hablador",
-                explanation: ""
+                explanation: "Estas palabras son sinónimos porque describen a una persona que habla mucho o con demasiada facilidad."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: TENAZ",
                 options: ["débil", "inconstante", "persistente", "flexible"],
                 correctAnswer: "persistente",
-                explanation: ""
+                explanation: "Ambas palabras significan mantener firmeza en un propósito o actitud, sin rendirse ante las dificultades, por lo que son sinónimos."
             )
         ]
     )
@@ -478,70 +478,70 @@ struct SpanishLanguageExerciseData {
                 prompt: "Palabra: CALIENTE",
                 options: ["cálido", "frío", "fresco", "tibio"],
                 correctAnswer: "frío",
-                explanation: ""
+                explanation: "Representan temperaturas opuestas en la escala térmica humana, siendo los extremos comunes de percepción de temperatura."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: FELIZ",
                 options: ["alegre", "contento", "triste", "satisfecho"],
                 correctAnswer: "triste",
-                explanation: ""
+                explanation: "Son estados emocionales diametralmente opuestos; uno representa alegría y bienestar, mientras que el otro representa pena y dolor emocional."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: GRANDE",
                 options: ["enorme", "gigante", "pequeño", "alto"],
                 correctAnswer: "pequeño",
-                explanation: ""
+                explanation: "Son conceptos opuestos en relación al tamaño, volumen o dimensión de un objeto o ser."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: RÁPIDO",
                 options: ["veloz", "lento", "acelerado", "pronto"],
                 correctAnswer: "lento",
-                explanation: ""
+                explanation: "Describen velocidades contrarias; uno se refiere a moverse en poco tiempo y el otro a tomarse mucho tiempo para el mismo recorrido."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: LIMPIO",
                 options: ["ordenado", "despejado", "sucio", "fresco"],
                 correctAnswer: "sucio",
-                explanation: ""
+                explanation: "Son estados opuestos de higiene; uno carece de manchas y suciedad, mientras que el otro las posee."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: DESPIERTO",
                 options: ["alerta", "atento", "dormido", "activo"],
                 correctAnswer: "dormido",
-                explanation: ""
+                explanation: "Son estados de consciencia biológicamente incompatibles en un mismo momento."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: RUIDOSO",
                 options: ["fuerte", "alto", "silencioso", "potente"],
                 correctAnswer: "silencioso",
-                explanation: ""
+                explanation: "Contrastan el volumen del sonido; uno implica altos niveles acústicos y el otro la ausencia de sonido."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: ABIERTO",
                 options: ["cerrado", "ancho", "despejado", "libre"],
                 correctAnswer: "cerrado",
-                explanation: ""
+                explanation: "Representan estados físicos opuestos respecto a la accesibilidad o permeabilidad de un objeto, como una puerta o un recipiente."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: LLENO",
                 options: ["cargado", "vacío", "repleto", "completo"],
                 correctAnswer: "vacío",
-                explanation: ""
+                explanation: "Son condiciones contrarias respecto a la capacidad de un contenedor y su contenido."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Palabra: AMOR",
                 options: ["adorar", "querer", "odio", "afecto"],
                 correctAnswer: "odio",
-                explanation: ""
+                explanation: "Representan los extremos opuestos en el espectro de los sentimientos de afecto y rechazo hacia alguien o algo."
             )
         ]
     )
@@ -675,70 +675,70 @@ struct SpanishLanguageExerciseData {
                 prompt: "Los niños corrieron ___.",
                 options: ["rápido", "rápidamente", "rapidísimo"],
                 correctAnswer: "rápidamente",
-                explanation: ""
+                explanation: "La oración requiere un adverbio para modificar el verbo, indicando la manera rápida en que los niños realizaron la acción de correr."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ella es la estudiante más ___ de la clase.",
                 options: ["inteligente", "inteligentísima", "inteligentoso"],
                 correctAnswer: "inteligentísima",
-                explanation: ""
+                explanation: "El contexto requiere un adjetivo en grado superlativo que concuerde en género (femenino) y número (singular) con estudiante, enfatizando su gran intelecto."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Él necesita ___ su ensayo.",
                 options: ["reescribir", "unscribir", "describir"],
                 correctAnswer: "reescribir",
-                explanation: ""
+                explanation: "Después del verbo necesita, se requiere un verbo en infinitivo para completar la idea de la acción requerida, en este caso, volver a escribir."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ella se sintió ___ después de la caminata.",
                 options: ["cansar", "cansada", "cansancio"],
                 correctAnswer: "cansada",
-                explanation: ""
+                explanation: "Se requiere un adjetivo que funcione como atributo del sujeto femenino singular, para describir su estado físico agotado tras el esfuerzo."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "La puerta estaba ___.",
                 options: ["cerrar", "cerrada", "cerrando"],
                 correctAnswer: "cerrada",
-                explanation: ""
+                explanation: "Se necesita un participio pasado o adjetivo que concuerde en género y número (femenino singular) con la puerta para describir su estado físico."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Él actuó muy ___.",
                 options: ["niño", "niñería", "infantilmente"],
                 correctAnswer: "infantilmente",
-                explanation: ""
+                explanation: "Se requiere un adverbio de modo para modificar el verbo actuó, explicando la forma inmadura en que se comportó el sujeto."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ella tiene dos ___.",
                 options: ["hijo", "hijos", "hije"],
                 correctAnswer: "hijos",
-                explanation: ""
+                explanation: "El numeral dos indica pluralidad, por lo que se requiere un sustantivo en plural que tenga sentido en el contexto de la familia o descendencia."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Él habló ___ sobre el accidente.",
                 options: ["cuidadoso", "cuidadosamente", "cuidadito"],
                 correctAnswer: "cuidadosamente",
-                explanation: ""
+                explanation: "Se necesita un adverbio para describir la actitud prudente o la manera atenta en que se realizó la acción del verbo hablar."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "El pastel estaba ___.",
                 options: ["decorar", "decorado", "decorando"],
                 correctAnswer: "decorado",
-                explanation: ""
+                explanation: "Requiere un adjetivo o participio que concuerde en género y número (masculino singular) con el pastel para describir su estado o apariencia estética."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Ella es más ___ que su hermano.",
                 options: ["alto", "alta", "altísima"],
                 correctAnswer: "alta",
-                explanation: ""
+                explanation: "La estructura comparativa exige un adjetivo que concuerde en género femenino con el sujeto para describir una cualidad física de estatura."
             )
         ]
     )
@@ -758,70 +758,70 @@ struct SpanishLanguageExerciseData {
                 prompt: "[tubo / tuvo] El plomero arregló el ___ de agua. Ella ___ que ir al médico.",
                 options: ["tubo…tuvo", "tuvo…tubo", "tubo…tubo", "tuvo…tuvo"],
                 correctAnswer: "tubo…tuvo",
-                explanation: ""
+                explanation: "El término con b es un sustantivo que se refiere a una pieza cilíndrica hueca; el término con v es el pretérito perfecto del verbo tener."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[vaya / valla] Espero que él ___ pronto. El jardín tiene una ___ blanca.",
                 options: ["vaya…valla", "valla…vaya", "vaya…vaya", "valla…valla"],
                 correctAnswer: "vaya…valla",
-                explanation: ""
+                explanation: "El término con y es el subjuntivo del verbo ir; el término con ll es un sustantivo que se refiere a una cerca u obstáculo."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[bello / vello] El paisaje es muy ___. Él tiene ___ en los brazos.",
                 options: ["bello…vello", "vello…bello", "bello…bello", "vello…vello"],
                 correctAnswer: "bello…vello",
-                explanation: ""
+                explanation: "El término con b es un adjetivo sinónimo de hermoso; el término con v es el sustantivo para el pelo corto y suave del cuerpo."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[casa / caza] Vivimos en una ___ pequeña. La ___ de animales está prohibida.",
                 options: ["casa…caza", "caza…casa", "casa…casa", "caza…caza"],
                 correctAnswer: "casa…caza",
-                explanation: ""
+                explanation: "El término con s es una vivienda o edificación; el término con z se refiere a la acción de perseguir y atrapar animales."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[hola / ola] Ella dijo ___ al entrar. Una gran ___ golpeó la playa.",
                 options: ["hola…ola", "ola…hola", "hola…hola", "ola…ola"],
                 correctAnswer: "hola…ola",
-                explanation: ""
+                explanation: "El término con h es una expresión común de saludo; el término sin h es una onda de agua formada en la superficie del mar."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[echo / hecho] Siempre ___ la basura en su lugar. El pastel ya está ___.",
                 options: ["echo…hecho", "hecho…echo", "echo…echo", "hecho…hecho"],
                 correctAnswer: "echo…hecho",
-                explanation: ""
+                explanation: "El término sin h es del verbo echar (tirar, poner); el término con h es el participio del verbo hacer o un sustantivo que significa acontecimiento."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[cien / sien] Ella contó hasta ___ dólares. Le duele la ___ derecha.",
                 options: ["cien…sien", "sien…cien", "cien…cien", "sien…sien"],
                 correctAnswer: "cien…sien",
-                explanation: ""
+                explanation: "El término con c representa el número 100; el término con s es la parte lateral de la cabeza situada entre la frente, la oreja y la mejilla."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[hierba / hierva] La ___ crece en el jardín. Espere a que el agua ___.",
                 options: ["hierba…hierva", "hierva…hierba", "hierba…hierba", "hierva…hierva"],
                 correctAnswer: "hierba…hierva",
-                explanation: ""
+                explanation: "El término con b es una planta pequeña; el término con v es la forma subjuntiva del verbo hervir."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[savia / sabia] La ___ nutre al árbol. Ella es una mujer muy ___.",
                 options: ["savia…sabia", "sabia…savia", "savia…savia", "sabia…sabia"],
                 correctAnswer: "savia…sabia",
-                explanation: ""
+                explanation: "El término con v es el líquido nutritivo de las plantas; el término con b es un adjetivo para una persona que posee gran sabiduría."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "[cabo / cavo] Él es ___ en el ejército. Yo ___ un hoyo en la tierra.",
                 options: ["cabo…cavo", "cavo…cabo", "cabo…cabo", "cavo…cavo"],
                 correctAnswer: "cabo…cavo",
-                explanation: ""
+                explanation: "El término con b es un rango militar o geográfico; el término con v es la primera persona del presente del verbo cavar."
             )
         ]
     )
@@ -841,35 +841,35 @@ struct SpanishLanguageExerciseData {
                 prompt: "CACHORRO es a PERRO como GATITO es a ___",
                 options: ["Gato", "Perro", "Pájaro", "Pez"],
                 correctAnswer: "Gato",
-                explanation: ""
+                explanation: "La relación analógica es de cría a adulto de la misma especie; un cachorro es la cría del perro, así como un gatito es la cría del gato."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "FRÍO es a INVIERNO como CALIENTE es a ___",
                 options: ["Primavera", "Otoño", "Verano", "Lluvia"],
                 correctAnswer: "Verano",
-                explanation: ""
+                explanation: "La analogía asocia una temperatura característica con su estación del año correspondiente (invierno para frío, verano para caliente)."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "OJO es a VER como OÍDO es a ___",
                 options: ["Tocar", "Oír", "Oler", "Gustar"],
                 correctAnswer: "Oír",
-                explanation: ""
+                explanation: "Se establece una relación directa entre un órgano sensorial humano y su función biológica o sentido primario correspondiente."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "CHEF es a COCINA como DOCTOR es a ___",
                 options: ["Biblioteca", "Hospital", "Escuela", "Tienda"],
                 correctAnswer: "Hospital",
-                explanation: ""
+                explanation: "La relación vincula a un tipo de profesional con el espacio o entorno físico que sirve como su lugar de trabajo habitual principal."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "GUANTE es a MANO como CALCETÍN es a ___",
                 options: ["Brazo", "Rodilla", "Pie", "Cabeza"],
                 correctAnswer: "Pie",
-                explanation: ""
+                explanation: "Esta es una analogía de correspondencia anatómica entre una prenda de vestir específica y la extremidad del cuerpo que protege o cubre."
             )
         ]
     )
@@ -963,21 +963,21 @@ struct SpanishLanguageExerciseData {
                 prompt: "Preparar pan tostado",
                 options: ["Untar mantequilla", "Poner el pan en la tostadora", "Retirar de la tostadora", "Comer"],
                 correctAnswer: "Poner el pan en la tostadora | Retirar de la tostadora | Untar mantequilla | Comer",
-                explanation: ""
+                explanation: "Describe la secuencia lógica y cronológica básica de las acciones físicas requeridas para preparar y consumir este alimento común."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lavarse las manos",
                 options: ["Secarse con una toalla", "Aplicar jabón", "Abrir el llave de agua", "Frotar por 20 segundos", "Enjuagar el jabón", "Mojarse las manos"],
                 correctAnswer: "Abrir el llave de agua | Mojarse las manos | Aplicar jabón | Frotar por 20 segundos | Enjuagar el jabón | Secarse con una toalla",
-                explanation: ""
+                explanation: "Representa el algoritmo de higiene personal estándar paso a paso, diseñado para probar el ordenamiento secuencial de tareas rutinarias de limpieza."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hacer café de filtro",
                 options: ["Servir en la taza", "Poner café molido en el filtro", "Presionar el botón de inicio", "Llenar el depósito de agua"],
                 correctAnswer: "Llenar el depósito de agua | Poner café molido en el filtro | Presionar el botón de inicio | Servir en la taza",
-                explanation: ""
+                explanation: "Pide la reconstrucción ordenada de los pasos operativos necesarios para utilizar un electrodoméstico común, evaluando la memoria procedimental."
             )
         ]
     )

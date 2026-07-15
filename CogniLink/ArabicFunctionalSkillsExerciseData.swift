@@ -265,7 +265,7 @@ struct ArabicFunctionalSkillsExerciseData {
                 prompt: "القائمة: آيس كريم الشوكولاتة 4.00 دولار، فطيرة التفاح 5.00 دولار، إضافة آيس كريم الفانيليا إلى الفطيرة 1.50 دولار. كم سعر فطيرة التفاح مع آيس كريم الفانيليا؟",
                 options: ["$5.00", "$6.50", "$9.00", "$4.00"],
                 correctAnswer: "$6.50",
-                explanation: ""
+                explanation: "\"$6.50\" هي الإجابة الصحيحة."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -383,7 +383,7 @@ struct ArabicFunctionalSkillsExerciseData {
                 prompt: "عضوية الصالة الرياضية: الرسوم السنوية: 120.00 دولارًا. الرسوم الشهرية: 10.00 دولار. كم هي الرسوم السنوية؟",
                 options: ["$10.00", "$120.00", "$130.00", "$12.00"],
                 correctAnswer: "$120.00",
-                explanation: ""
+                explanation: "\"$120.00\" هي الإجابة الصحيحة."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -637,3 +637,5 @@ struct ArabicFunctionalSkillsExerciseData {
         ]
     )
 }
+
+

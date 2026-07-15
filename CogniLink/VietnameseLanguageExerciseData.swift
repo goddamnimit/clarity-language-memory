@@ -593,70 +593,70 @@ struct VietnameseLanguageExerciseData {
                 prompt: "Lời: GIẬN",
                 options: ["hạnh phúc", "giận dữ", "bình tĩnh", "buồn"],
                 correctAnswer: "giận dữ",
-                explanation: ""
+                explanation: "'Giận' và 'giận dữ' là hai từ đồng nghĩa. 'Giận' là cảm xúc bực tức, trong khi 'giận dữ' là trạng thái thể hiện sự bực tức đó một cách mạnh mẽ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LẠNH",
                 options: ["ấm áp", "đóng băng", "óng bức", "nhẹ nhàng"],
                 correctAnswer: "đóng băng",
-                explanation: ""
+                explanation: "'Lạnh' và 'đóng băng' đều miêu tả nhiệt độ thấp, là những từ đồng nghĩa. 'Đóng băng' là trạng thái lạnh đến mức đông cứng, thể hiện mức độ lạnh cực điểm."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LỚN",
                 options: ["nhỏ bé", "ớn", "ngắn", "ầy"],
                 correctAnswer: "ớn",
-                explanation: ""
+                explanation: "'Lớn' và 'nhỏ bé' là cặp từ trái nghĩa miêu tả kích thước. Lớn có nghĩa là có kích thước to, còn nhỏ bé thì ngược lại."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: MỆT MỎI",
                 options: ["áo động", "thức dậy", "kiệt sức", "nghỉ ngơi"],
                 correctAnswer: "kiệt sức",
-                explanation: ""
+                explanation: "'Mệt mỏi' và 'kiệt sức' là từ đồng nghĩa. 'Kiệt sức' là trạng thái mệt mỏi ở mức độ cao nhất, cạn kiệt năng lượng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: SỢ",
                 options: ["ũng cảm", "kinh hoàng", "bình tĩnh", "in đậm"],
                 correctAnswer: "kinh hoàng",
-                explanation: ""
+                explanation: "'Sợ' và 'kinh hoàng' đều diễn tả cảm xúc lo lắng, hoảng sợ. 'Kinh hoàng' là đồng nghĩa chỉ mức độ sợ hãi tột độ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LOẠI",
                 options: ["nghĩa là", "độc ác", "nhẹ nhàng", "thô lỗ"],
                 correctAnswer: "nhẹ nhàng",
-                explanation: ""
+                explanation: "Từ gốc tiếng Anh là 'KIND', có thể dịch là 'loại' hoặc 'nhẹ nhàng, tử tế'. Ở đây từ 'loại' được gán nghĩa đồng nghĩa với 'nhẹ nhàng' do cách dịch từ đồng âm tiếng Anh."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: NHANH CHÓNG",
                 options: ["chậm", "nhanh chóng", "ười biếng", "đần độn"],
                 correctAnswer: "nhanh chóng",
-                explanation: ""
+                explanation: "'Nhanh chóng' và 'chậm' là cặp từ trái nghĩa về mặt tốc độ. Một bên diễn ra với thời gian ngắn, bên kia mất nhiều thời gian."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: CŨ",
                 options: ["trẻ", "ổ xưa", "ới", "ươi"],
                 correctAnswer: "ổ xưa",
-                explanation: ""
+                explanation: "'Cũ' và 'ổ xưa' (lỗi đánh máy của 'cổ xưa') đều chỉ những sự vật đã tồn tại từ lâu, thuộc về quá khứ và không còn mới, do đó chúng là từ đồng nghĩa."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "từ: BẨN",
                 options: ["ạch sẽ", "ẩn thỉu", "ọn gàng", "ọn gàng"],
                 correctAnswer: "ẩn thỉu",
-                explanation: ""
+                explanation: "'Bẩn' và 'ẩn thỉu' (lỗi đánh máy của 'bẩn thỉu') là từ đồng nghĩa. Cả hai đều chỉ trạng thái dơ dáy, không sạch sẽ, bám nhiều bụi đất."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: SÁNG",
                 options: ["ờ", "ối", "ực rỡ", "đần độn"],
                 correctAnswer: "ực rỡ",
-                explanation: ""
+                explanation: "'Sáng' và 'ực rỡ' (lỗi đánh máy của 'rực rỡ') là hai từ đồng nghĩa đều miêu tả ánh sáng tỏa ra mạnh mẽ và rất đẹp mắt."
             )
         ]
     )
@@ -676,70 +676,70 @@ struct VietnameseLanguageExerciseData {
                 prompt: "Lời: SUY NIỆM",
                 options: ["vui vẻ", "buồn bã", "vui mừng", "ội dung"],
                 correctAnswer: "buồn bã",
-                explanation: ""
+                explanation: "'Suy niệm' (thường liên quan đến suy nghĩ sâu xa, trầm ngâm) ở đây đồng nghĩa với 'buồn bã' vì cả hai đều thể hiện trạng thái nội tâm tĩnh lặng, mang nhiều tâm sự u buồn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: TÌNH TRẠNG",
                 options: ["ồn ào", "ị kích động", "ên bình", "điên cuồng"],
                 correctAnswer: "ên bình",
-                explanation: ""
+                explanation: "Từ 'Tình trạng' có thể dịch từ tiếng Anh 'STATE' hoặc 'CONDITION', nhưng được liên kết đồng nghĩa với 'ên bình' (lỗi đánh máy của 'yên bình'), ám chỉ trạng thái tĩnh lặng, không có sóng gió."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: CAN ĐẢM",
                 options: ["ụt rè", "đáng sợ", "ũng cảm", "èn nhát"],
                 correctAnswer: "ũng cảm",
-                explanation: ""
+                explanation: "'Can đảm' và 'ũng cảm' (lỗi đánh máy của 'dũng cảm') là hai từ đồng nghĩa hoàn toàn, đều chỉ phẩm chất gan dạ, không sợ hãi trước khó khăn và nguy hiểm."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: ĐẶC BIỆT",
                 options: ["ình thường", "ỳ lạ", "ình thường", "điển hình"],
                 correctAnswer: "ỳ lạ",
-                explanation: ""
+                explanation: "'Đặc biệt' và 'ỳ lạ' (lỗi đánh máy của 'kỳ lạ') đều là từ đồng nghĩa miêu tả những sự vật, sự việc khác thường, không giống với đại đa số bình thường."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: Dồi dào",
                 options: ["khan hiếm", "ồi dào", "hiếm", "ạn chế"],
                 correctAnswer: "ồi dào",
-                explanation: ""
+                explanation: "'Dồi dào' và 'ồi dào' (lỗi đánh máy) là đồng nghĩa vì cùng mang ý nghĩa là số lượng rất nhiều, phong phú và đầy đủ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: FEEBLE",
                 options: ["ạnh mẽ", "ùng mạnh", "ếu đuối", "khỏe mạnh"],
                 correctAnswer: "ếu đuối",
-                explanation: ""
+                explanation: "Từ tiếng Anh 'FEEBLE' mang nghĩa yếu ớt. Đồng nghĩa của nó là 'ếu đuối' (lỗi đánh máy của 'yếu đuối'), chỉ sự thiếu hụt về sức mạnh thể chất hoặc tinh thần."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: SỐNG ĐỘNG",
                 options: ["đần độn", "ngất xỉu", "đầy màu sắc", "nhợt nhạt"],
                 correctAnswer: "đầy màu sắc",
-                explanation: ""
+                explanation: "'Sống động' và 'đầy màu sắc' đồng nghĩa với nhau vì cả hai từ đều gợi lên hình ảnh tươi tắn, đa dạng, phong phú và tràn đầy năng lượng tích cực."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: TIẾT KIỆM",
                 options: ["ãng phí", "tiết kiệm", "xa hoa", "ào phóng"],
                 correctAnswer: "tiết kiệm",
-                explanation: ""
+                explanation: "Hai từ 'tiết kiệm' giống hệt nhau về chữ viết và ý nghĩa, đều chỉ việc sử dụng tài sản, tiền bạc một cách cẩn thận, không lãng phí."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: HIỆU QUẢ",
                 options: ["ầm bầm", "ói rõ ràng", "ên tĩnh", "ụng về"],
                 correctAnswer: "ói rõ ràng",
-                explanation: ""
+                explanation: "'Hiệu quả' trong giao tiếp (như từ gốc ARTICULATE) thường đồng nghĩa với việc 'ói rõ ràng' (lỗi đánh máy của 'nói rõ ràng'), giúp truyền đạt thông điệp chính xác."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ ngữ: BỀN BỎ",
                 options: ["ếu đuối", "ỏ cuộc", "kiên trì", "linh hoạt"],
                 correctAnswer: "kiên trì",
-                explanation: ""
+                explanation: "'Bền bỏ' (lỗi đánh máy của 'bền bỉ') và 'kiên trì' là đồng nghĩa. Cả hai đều chỉ tính cách không chịu bỏ cuộc, cố gắng theo đuổi mục tiêu đến cùng."
             )
         ]
     )
@@ -759,70 +759,70 @@ struct VietnameseLanguageExerciseData {
                 prompt: "Từ: HẤP DẪN",
                 options: ["ấm áp", "ạnh", "át mẻ", "ấm áp"],
                 correctAnswer: "ạnh",
-                explanation: ""
+                explanation: "Từ gốc có thể là 'HOT' (được dịch là hấp dẫn) và trái nghĩa với nó là 'ạnh' (lỗi đánh máy của 'lạnh'). Chúng là từ trái nghĩa về nhiệt độ hoặc sắc thái."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: VUI VẺ",
                 options: ["vui mừng", "vui vẻ", "buồn", "ội dung"],
                 correctAnswer: "buồn",
-                explanation: ""
+                explanation: "'Vui vẻ' và 'buồn' là cặp từ trái nghĩa cơ bản. Vui vẻ miêu tả cảm xúc tích cực, hạnh phúc, trong khi buồn là cảm xúc tiêu cực, âu sầu."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LỚN",
                 options: ["to lớn", "ớn", "nhỏ bé", "cao"],
                 correctAnswer: "nhỏ bé",
-                explanation: ""
+                explanation: "'Lớn' và 'nhỏ bé' là cặp từ trái nghĩa miêu tả kích thước. Lớn có nghĩa là có kích thước to, còn nhỏ bé thì ngược lại."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: NHANH CHÓNG",
                 options: ["nhanh chóng", "chậm", "nhanh chóng", "nhanh chóng"],
                 correctAnswer: "chậm",
-                explanation: ""
+                explanation: "'Nhanh chóng' và 'chậm' là cặp từ trái nghĩa về mặt tốc độ. Một bên diễn ra với thời gian ngắn, bên kia mất nhiều thời gian."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: SẠCH",
                 options: ["ọn gàng", "ọn gàng", "ơ bẩn", "ươi"],
                 correctAnswer: "ơ bẩn",
-                explanation: ""
+                explanation: "'Sạch' và 'ơ bẩn' (lỗi đánh máy của 'dơ bẩn') trái nghĩa nhau. Sạch là trạng thái không có tạp chất hay bụi bẩn, còn dơ bẩn là tình trạng bị vấy bẩn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: TỨC THỨC",
                 options: ["áo động", "nhận thức được", "đang ngủ", "hoạt động"],
                 correctAnswer: "đang ngủ",
-                explanation: ""
+                explanation: "'Tức thức' (lỗi dịch/đánh máy của thức giấc/tỉnh thức) và 'đang ngủ' là trạng thái sinh lý trái ngược nhau hoàn toàn của con người và động vật."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LOUD",
                 options: ["ồn ào", "ên tĩnh", "đang bùng nổ", "ạnh mẽ"],
                 correctAnswer: "ên tĩnh",
-                explanation: ""
+                explanation: "Từ tiếng Anh 'LOUD' (ồn ào, to tiếng) trái nghĩa với 'ên tĩnh' (lỗi đánh máy của 'yên tĩnh'), thể hiện sự đối lập tuyệt đối về mức độ âm thanh."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: MỞ",
                 options: ["đóng cửa", "ộng", "õ ràng", "miễn phí"],
                 correctAnswer: "đóng cửa",
-                explanation: ""
+                explanation: "'Mở' và 'đóng cửa' là hai hành động có chiều hướng ngược nhau, thường dùng cho cửa, sách, hoặc không gian."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: ĐẦY ĐỦ",
                 options: ["đóng gói", "trống rỗng", "đã nạp", "hoàn thành"],
                 correctAnswer: "trống rỗng",
-                explanation: ""
+                explanation: "'Đầy đủ' và 'trống rỗng' trái nghĩa nhau về mặt không gian hoặc số lượng. Một bên chứa đầy dung lượng, bên kia hoàn toàn không có gì bên trong."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Lời: TÌNH YÊU",
                 options: ["ngưỡng mộ", "thích", "ghét", "quan tâm"],
                 correctAnswer: "ghét",
-                explanation: ""
+                explanation: "'Tình yêu' và 'ghét' là cảm xúc hoàn toàn trái ngược. Tình yêu là sự gắn bó, quý mến sâu sắc, trong khi ghét là cảm giác thù địch, ác cảm."
             )
         ]
     )
@@ -842,140 +842,140 @@ struct VietnameseLanguageExerciseData {
                 prompt: "Cô ấy tưới nước cho ___.",
                 options: ["hoa", "ầng", "ột mì"],
                 correctAnswer: "hoa",
-                explanation: ""
+                explanation: "Từ 'hoa' phù hợp với ngữ cảnh 'tưới nước', vì người ta thường tưới nước cho hoa để chúng phát triển."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy mặc ___ của mình.",
                 options: ["áo khoác", "thuyền", "con dê"],
                 correctAnswer: "áo khoác",
-                explanation: ""
+                explanation: "Từ 'áo khoác' chỉ một loại trang phục, phù hợp với động từ 'mặc' và thích hợp để giữ ấm."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Tôi cần một ly ___.",
                 options: ["ước", "ồi bàn", "người lội nước"],
                 correctAnswer: "ước",
-                explanation: ""
+                explanation: "Từ 'nước' (trong đáp án ghi là 'ước') đi cùng với lượng từ 'một ly' tạo thành cụm từ chỉ thức uống thường dùng để giải khát."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy gọi cô ấy là ___.",
                 options: ["ẹ", "àm phiền", "ọt"],
                 correctAnswer: "ẹ",
-                explanation: ""
+                explanation: "Từ 'mẹ' (trong đáp án là 'ẹ') chỉ người sinh ra mình, phù hợp trong ngữ cảnh xưng hô hoặc gọi tên người thân trong gia đình."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Con chó vẫy ___ của nó.",
                 options: ["âu chuyện", "đuôi", "cao"],
                 correctAnswer: "đuôi",
-                explanation: ""
+                explanation: "Hành động 'vẫy đuôi' là đặc trưng của loài chó khi chúng cảm thấy vui vẻ hoặc háo hức."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy đã tắt ___.",
                 options: ["chiến đấu", "ánh sáng", "đêm"],
                 correctAnswer: "ánh sáng",
-                explanation: ""
+                explanation: "Động từ 'tắt' thường đi liền với các thiết bị phát sáng như đèn hoặc 'ánh sáng' khi không cần sử dụng nữa."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy nướng một ___.",
                 options: ["giả mạo", "ồ", "ánh ngọt"],
                 correctAnswer: "ánh ngọt",
-                explanation: ""
+                explanation: "Động từ 'nướng' phù hợp với các loại bánh, đặc biệt là 'bánh ngọt' (đáp án ghi 'ánh ngọt'), một món tráng miệng phổ biến."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Con chim đã xây dựng một ___.",
                 options: ["ổ", "nghỉ ngơi", "kiểm tra"],
                 correctAnswer: "ổ",
-                explanation: ""
+                explanation: "Loài chim có tập tính tự nhiên là xây dựng 'tổ' (trong đáp án là 'ổ') để đẻ trứng và nuôi con."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy đã đọc ___.",
                 options: ["ờ báo", "giấy vụn", "giấy nhám"],
                 correctAnswer: "ờ báo",
-                explanation: ""
+                explanation: "Động từ 'đọc' kết hợp với 'tờ báo' (đáp án ghi 'ờ báo') tạo thành một hoạt động cập nhật tin tức thường ngày."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Bọn trẻ chơi trong ___.",
                 options: ["ông viên", "ỏ cây", "ối"],
                 correctAnswer: "ông viên",
-                explanation: ""
+                explanation: "Từ 'công viên' (đáp án ghi 'ông viên') là không gian rộng rãi, an toàn và lý tưởng cho các hoạt động vui chơi của trẻ em."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy đã sửa ___.",
                 options: ["ồn rửa", "liên kết", "nháy mắt"],
                 correctAnswer: "ồn rửa",
-                explanation: ""
+                explanation: "'Bồn rửa' (đáp án ghi 'ồn rửa') là một thiết bị gia dụng có thể bị hỏng và cần được 'sửa' chữa để tiếp tục sử dụng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Món súp quá ___.",
                 options: ["óng bức", "ất nhiều", "ấu chấm"],
                 correctAnswer: "óng bức",
-                explanation: ""
+                explanation: "Món súp khi mới nấu xong thường có nhiệt độ cao, nên tính từ mô tả trạng thái 'nóng' (đáp án ghi 'óng bức') là hoàn toàn phù hợp."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy đã mở ___.",
                 options: ["ô", "ương vani", "khỉ đột"],
                 correctAnswer: "ô",
-                explanation: ""
+                explanation: "Động từ 'mở' kết hợp với 'ô' (hay dù) mô tả hành động thường làm khi trời mưa hoặc nắng gắt để che chắn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy đã trả ___.",
                 options: ["óa đơn", "điền vào", "ối xay"],
                 correctAnswer: "óa đơn",
-                explanation: ""
+                explanation: "Tương tự như trên, 'trả hoá đơn' là một hành động thanh toán chi phí phổ biến trong đời sống hàng ngày."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Con mèo ngồi trên ___.",
                 options: ["chiếu", "ơi", "chuột"],
                 correctAnswer: "chiếu",
-                explanation: ""
+                explanation: "Từ 'chiếu' chỉ một vật dụng lót trên sàn, là một vị trí êm ái mà loài mèo thường thích nằm hoặc ngồi lên."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy mặc một chiếc ___ ấm áp.",
                 options: ["áo len", "ỉ đập", "ải rác"],
                 correctAnswer: "áo len",
-                explanation: ""
+                explanation: "Từ 'áo len' là loại trang phục có khả năng giữ nhiệt tốt, rất phù hợp với tính từ 'ấm áp' trong câu."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy đã trồng một ___.",
                 options: ["ườn", "tha thứ", "cai ngục"],
                 correctAnswer: "ườn",
-                explanation: ""
+                explanation: "Động từ 'trồng' thường đi liền với cây cối hoặc cả một khu 'vườn' (đáp án ghi 'ườn'), thể hiện hoạt động làm vườn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Cô ấy đã viết trong ___ của mình.",
                 options: ["nhật ký", "ữa", "hoa cúc"],
                 correctAnswer: "nhật ký",
-                explanation: ""
+                explanation: "'Nhật ký' là nơi mang tính cá nhân để ghi lại cảm xúc và sự kiện hàng ngày, phù hợp với hành động 'viết'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Anh ấy đã trả ___.",
                 options: ["hoá đơn", "điền vào", "ối xay"],
                 correctAnswer: "hoá đơn",
-                explanation: ""
+                explanation: "Tương tự như trên, 'trả hoá đơn' là một hành động thanh toán chi phí phổ biến trong đời sống hàng ngày."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đứa bé là ___.",
                 options: ["đang ngủ", "quét dọn", "ỉ ra"],
                 correctAnswer: "đang ngủ",
-                explanation: ""
+                explanation: "Cụm từ 'đang ngủ' mô tả trạng thái yên bình và tự nhiên thường thấy ở một đứa bé."
             )
         ]
     )
@@ -1148,105 +1148,105 @@ struct VietnameseLanguageExerciseData {
                 prompt: "PUPPY đối với CHÓ cũng như KITTEN đối với ___",
                 options: ["con mèo", "con chó", "chim", "á"],
                 correctAnswer: "con mèo",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa con non và con trưởng thành. Puppy là chó con, tương tự Kitten là mèo con, nên đáp án là 'con mèo'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "LẠNH là MÙA ĐÔNG cũng như HẤP DẪN là ___",
                 options: ["ùa xuân", "ùa thu", "Mùa hè", "Mưa"],
                 correctAnswer: "Mùa hè",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa đặc trưng nhiệt độ và mùa. Lạnh là đặc trưng của mùa đông, tương tự như nhiệt độ nóng (từ gốc 'HOT' bị dịch nhầm thành 'HẤP DẪN') là đặc trưng của 'Mùa hè'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "MẮT là để XEM cũng như TAI là để ___",
                 options: ["Chạm vào", "Nghe", "Mùi", "Hương vị"],
                 correctAnswer: "Nghe",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa cơ quan cảm giác và chức năng của chúng. Mắt dùng để nhìn (xem), tương tự tai dùng để 'Nghe'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "CHEF đối với BẾP cũng như BÁC SĨ đối với ___",
                 options: ["Thư viện", "ệnh viện", "trường học", "ửa hàng"],
                 correctAnswer: "ệnh viện",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa nghề nghiệp và nơi làm việc. Đầu bếp (chef) làm việc trong bếp, tương tự bác sĩ làm việc tại 'bệnh viện' (đáp án ghi 'ệnh viện')."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "GĂNG TAY là TAY cũng như TẤT là ___",
                 options: ["ánh tay", "Đầu gối", "chân", "ái đầu"],
                 correctAnswer: "chân",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa trang phục và bộ phận cơ thể tương ứng. Găng tay dùng để đeo ở tay, tương tự tất dùng để mang ở 'chân'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "VUI là CƯỜI cũng như Buồn là ___",
                 options: ["Mỉm cười", "Ngủ", "Khóc", "Chạy"],
                 correctAnswer: "Khóc",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa cảm xúc và biểu hiện thể chất. Vui vẻ dẫn đến tiếng cười, tương tự nỗi buồn thường dẫn đến việc 'Khóc'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "BIRD là NEST cũng như BEAR là ___",
                 options: ["Cây", "Hang động", "đại dương", "trường"],
                 correctAnswer: "Hang động",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa loài vật và nơi trú ẩn tự nhiên. Chim (bird) sống trong tổ (nest), tương tự gấu (bear) sống trong 'Hang động'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "BÚT CHÌ dùng để VIẾT cũng như BRUSH dùng để ___",
                 options: ["Cắt", "Sơn", "Quét", "Khuấy"],
                 correctAnswer: "Sơn",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa dụng cụ và công dụng của nó. Bút chì dùng để viết, tương tự cọ (brush) dùng để 'Sơn' hoặc vẽ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "NGÀY là ĐÊM và ĐEN là ___",
                 options: ["Tối", "Màu xám", "trắng", "Màu xanh"],
                 correctAnswer: "trắng",
-                explanation: ""
+                explanation: "Đây là mối quan hệ đối lập (trái nghĩa). Ngày đối lập với đêm, tương tự như màu đen đối lập với màu 'trắng'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "SOLDIER đối với ARMY cũng như Sailor đối với ___",
                 options: ["Không quân", "Thủy quân lục chiến", "ải quân", "ảo vệ"],
                 correctAnswer: "ải quân",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa cá nhân và lực lượng quân sự mà họ phục vụ. Người lính (soldier) thuộc quân đội (army), tương tự lính thủy (sailor) thuộc về 'Hải quân' (đáp án ghi 'ải quân')."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "WHEEL là XE còn WING là ___",
                 options: ["Thuyền", "Máy bay", "àu hỏa", "xe buýt"],
                 correctAnswer: "Máy bay",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa bộ phận và tổng thể di chuyển. Bánh xe (wheel) là bộ phận giúp xe di chuyển, tương tự cánh (wing) là bộ phận của 'Máy bay'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "GIÁO VIÊN đối với TRƯỜNG cũng như THẨM PHÁN đối với ___",
                 options: ["ăn phòng", "ệnh viện", "phòng xử án", "ửa hàng"],
                 correctAnswer: "phòng xử án",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa nghề nghiệp và nơi làm việc đặc trưng. Giáo viên làm việc tại trường học, tương tự thẩm phán làm việc tại 'phòng xử án' (tòa án)."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "CATERPILLAR là BƯỚM cũng như Nòng Nòng là ___",
                 options: ["á", "Rùa", "Ếch", "thằn lằn"],
                 correctAnswer: "Ếch",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa giai đoạn ấu trùng và con trưởng thành. Sâu bướm (caterpillar) lớn lên thành bướm, tương tự nòng nọc (viết sai thành nòng nòng) lớn lên thành 'Ếch'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "THỰC PHẨM là ĐÓI cũng như NƯỚC là ___",
                 options: ["Ướt", "Khát nước", "Lạnh", "Đầy đủ"],
                 correctAnswer: "Khát nước",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa nhu cầu thể chất và thứ để giải quyết nó. Thực phẩm giải quyết cơn đói, tương tự nước giải quyết cơn 'Khát nước'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "LEN dành cho CỪU cũng như LỤA dành cho ___",
                 options: ["nhện", "Tằm", "Bông", "ải lanh"],
                 correctAnswer: "Tằm",
-                explanation: ""
+                explanation: "Đây là mối quan hệ giữa chất liệu và loài vật tạo ra nó. Len được lấy từ lông cừu, tương tự lụa được dệt từ tơ của con 'Tằm'."
             )
         ]
     )
@@ -1266,175 +1266,175 @@ struct VietnameseLanguageExerciseData {
                 prompt: "Có 7 ngày trong một tuần.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật khách quan và có thể được chứng minh dựa trên hệ thống lịch tiêu chuẩn được toàn cầu công nhận."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Vani là hương vị ngon nhất của kem.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến chủ quan vì sở thích về hương vị kem là khác nhau tùy thuộc vào cảm nhận cá nhân của mỗi người."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Nước đóng băng ở nhiệt độ 32 độ F.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật khoa học đã được đo lường và chứng minh chính xác theo thang đo nhiệt độ Fahrenheit."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Chó là vật nuôi tốt nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến cá nhân vì khái niệm 'tốt nhất' phụ thuộc vào sở thích và điều kiện sống của từng người đối với các loài vật nuôi khác nhau."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Một hình tam giác có ba cạnh.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật mang tính định nghĩa cơ bản trong hình học toán học không thể bác bỏ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Chương trình truyền hình đó thật buồn cười.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một quan điểm chủ quan bởi vì khiếu hài hước là tùy thuộc vào gu thưởng thức của từng cá nhân."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Abraham Lincoln là một Tổng thống Hoa Kỳ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự kiện lịch sử có thật và được ghi nhận chính thức trong các tài liệu lịch sử của nước Mỹ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Trái đất là hành tinh tốt nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một đánh giá mang tính chủ quan vì không có tiêu chuẩn khoa học tuyệt đối nào để định nghĩa thế nào là một hành tinh 'tốt nhất'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 60 phút trong một giờ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật về quy ước đo lường thời gian đã được chuẩn hóa và áp dụng trên toàn thế giới."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hoa tulip đẹp hơn hoa hồng.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến cá nhân vì tiêu chuẩn về vẻ đẹp của các loài hoa phụ thuộc hoàn toàn vào thẩm mỹ của từng người."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Washington D.C. là thủ đô của Hoa Kỳ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một thực tế địa lý và chính trị khách quan có thể xác minh được qua các tài liệu chính thức."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Thật thô lỗ khi nói chuyện với cái miệng đầy thức ăn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Dù được nhiều người đồng tình, đây vẫn là một quan điểm về phép lịch sự xã hội và có thể khác biệt giữa các nền văn hóa."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 12 tháng trong một năm.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật khách quan dựa trên hệ thống lịch Gregorian được sử dụng phổ biến nhất hiện nay."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Dậy sớm là tốt cho bạn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến đánh giá vì 'tốt' hay không còn phụ thuộc vào nhịp sinh học và lối sống của từng cá nhân."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "2 + 2 = 4.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một định lý toán học cơ bản, đúng tuyệt đối và có thể chứng minh một cách logic."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đại dương được làm từ nước mặn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật khoa học về thành phần của các đại dương trên Trái đất đã được kiểm chứng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Làm vườn là một sở thích tuyệt vời.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một nhận định chủ quan vì sự hứng thú với việc làm vườn khác nhau ở mỗi người."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đá nặng hơn lông có cùng kích thước.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật khoa học dựa trên tính chất vật lý về mật độ, vì đá có khối lượng riêng lớn hơn nhiều so với lông."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hoa Kỳ có 50 tiểu bang.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật chính trị và địa lý khách quan được ghi nhận chính thức bởi chính phủ Mỹ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Pizza là món ăn ngon nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến chủ quan hoàn toàn phụ thuộc vào sở thích ẩm thực cá nhân."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Tập thể dục có lợi cho sức khỏe của bạn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật y khoa đã được nhiều nghiên cứu khoa học chứng minh là mang lại các lợi ích sinh lý."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Nhạc cổ điển chán quá.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến cá nhân đánh giá về cảm thụ âm nhạc, điều mà mỗi người sẽ có cảm nhận khác nhau."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Táo và cam đều là trái cây.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật hiển nhiên dựa trên phân loại thực vật học cơ bản."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Mèo dễ nuôi hơn chó.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "Đây là một ý kiến đánh giá chủ quan vì mức độ 'dễ nuôi' phụ thuộc vào kinh nghiệm và hoàn cảnh của người nuôi."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 24 giờ trong một ngày.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "Đây là một sự thật được xác lập dựa trên chu kỳ tự quay của Trái đất và quy ước thời gian quốc tế."
             )
         ]
     )
@@ -1454,56 +1454,56 @@ struct VietnameseLanguageExerciseData {
                 prompt: "làm bánh mì nướng",
                 options: ["Bơ bánh mì nướng", "Cho bánh mì vào lò nướng", "Loại bỏ khỏi máy nướng bánh mì", "ăn"],
                 correctAnswer: "Cho bánh mì vào lò nướng | Loại bỏ khỏi máy nướng bánh mì | Bơ bánh mì nướng | ăn",
-                explanation: ""
+                explanation: "Đây là trình tự logic các bước để làm món bánh mì nướng: đầu tiên nướng bánh, sau đó lấy ra, phết bơ lên bề mặt và cuối cùng là thưởng thức."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Rửa tay",
                 options: ["Lau khô tay bằng khăn", "Thoa xà phòng lên tay", "Bật nước", "Chà trong 20 giây", "Xả sạch xà phòng", "Làm ướt tay bạn"],
                 correctAnswer: "Bật nước | Làm ướt tay bạn | Thoa xà phòng lên tay | Chà trong 20 giây | Xả sạch xà phòng | Lau khô tay bằng khăn",
-                explanation: ""
+                explanation: "Đây là trình tự chuẩn theo hướng dẫn vệ sinh: bắt đầu bằng việc làm ướt tay với nước, dùng xà phòng chà sát đủ lâu để diệt khuẩn, rửa sạch lại rồi lau khô."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Pha cà phê",
                 options: ["Đổ cà phê vào cốc của bạn", "Thêm bã cà phê vào bộ lọc", "Nhấn nút pha", "Đổ đầy hồ chứa nước"],
                 correctAnswer: "Đổ đầy hồ chứa nước | Thêm bã cà phê vào bộ lọc | Nhấn nút pha | Đổ cà phê vào cốc của bạn",
-                explanation: ""
+                explanation: "Đây là quy trình thao tác máy pha cà phê cơ bản: chuẩn bị nước và bột cà phê, sau đó kích hoạt quá trình pha rồi mới rót thành phẩm ra cốc."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Thực hiện cuộc gọi điện thoại",
                 options: ["Nói xin chào", "Cúp máy", "Nhấc điện thoại lên", "Quay số", "Có cuộc trò chuyện của bạn"],
                 correctAnswer: "Nhấc điện thoại lên | Quay số | Nói xin chào | Có cuộc trò chuyện của bạn | Cúp máy",
-                explanation: ""
+                explanation: "Đây là chuỗi hành động hợp lý theo thứ tự thời gian của một cuộc gọi: chuẩn bị thiết bị, kết nối (quay số), chào hỏi, trò chuyện và kết thúc bằng việc cúp máy."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Mặc quần áo",
                 options: ["Mang giày vào", "Mặc áo vào", "Mặc đồ lót", "Mang tất vào", "Mặc quần vào"],
                 correctAnswer: "Mặc đồ lót | Mặc áo vào | Mặc quần vào | Mang tất vào | Mang giày vào",
-                explanation: ""
+                explanation: "Trình tự ăn mặc đi từ các lớp quần áo bên trong ra bên ngoài, từ thân trên xuống thân dưới rồi mới đến các phụ kiện đi lại như giày tất."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Quét sàn",
                 options: ["Vứt vào thùng rác", "Lấy chổi ra", "Đổ rác vào thùng rác", "Quét các mảnh vụn thành một đống"],
                 correctAnswer: "Lấy chổi ra | Quét các mảnh vụn thành một đống | Đổ rác vào thùng rác | Vứt vào thùng rác",
-                explanation: ""
+                explanation: "Trình tự dọn dẹp logic: lấy dụng cụ, gom rác lại một chỗ bằng chổi, thu gom lại và cuối cùng đem vứt bỏ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đặt hàng tại nhà hàng",
                 options: ["Ăn bữa ăn của bạn", "Báo cho máy chủ biết đơn đặt hàng của bạn", "ngồi xuống", "Đợi đồ ăn của bạn", "Xem lại thực đơn"],
                 correctAnswer: "ngồi xuống | Xem lại thực đơn | Báo cho máy chủ biết đơn đặt hàng của bạn | Đợi đồ ăn của bạn | Ăn bữa ăn của bạn",
-                explanation: ""
+                explanation: "Quy trình ăn uống tại nhà hàng thông thường đi từ việc ổn định chỗ ngồi, chọn món, gọi món với nhân viên, chờ phục vụ và thưởng thức bữa ăn."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "bánh nướng",
                 options: ["Để bánh nguội", "Nướng trong lò", "Làm nóng lò trước", "Trộn các thành phần", "Múc bột lên khay nướng"],
                 correctAnswer: "Làm nóng lò trước | Trộn các thành phần | Múc bột lên khay nướng | Nướng trong lò | Để bánh nguội",
-                explanation: ""
+                explanation: "Trình tự làm bánh chuẩn xác đòi hỏi lò phải nóng trước, song song với việc chuẩn bị bột, sau đó tiến hành nướng và phải chờ bánh nguội bớt trước khi lấy hoặc thưởng thức."
             )
         ]
     )

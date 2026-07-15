@@ -99,175 +99,175 @@ struct VietnameseFunctionalSkillsExerciseData {
                 prompt: "Có 7 ngày trong một tuần.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Vani là hương vị ngon nhất của kem.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Nước đóng băng ở nhiệt độ 32 độ F.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Chó là vật nuôi tốt nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Một hình tam giác có ba cạnh.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Chương trình truyền hình đó thật buồn cười.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Abraham Lincoln là một Tổng thống Hoa Kỳ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Trái đất là hành tinh tốt nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 60 phút trong một giờ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hoa tulip đẹp hơn hoa hồng.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Washington D.C. là thủ đô của Hoa Kỳ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Thật thô lỗ khi nói chuyện với cái miệng đầy thức ăn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 12 tháng trong một năm.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Dậy sớm là tốt cho bạn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "2 + 2 = 4.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đại dương được làm từ nước mặn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Làm vườn là một sở thích tuyệt vời.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đá nặng hơn lông có cùng kích thước.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hoa Kỳ có 50 tiểu bang.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Pizza là món ăn ngon nhất.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Tập thể dục có lợi cho sức khỏe của bạn.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Nhạc cổ điển chán quá.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Táo và cam đều là trái cây.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Mèo dễ nuôi hơn chó.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "\"Opinion\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Có 24 giờ trong một ngày.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "\"Fact\" là câu trả lời đúng."
             )
         ]
     )
@@ -287,56 +287,56 @@ struct VietnameseFunctionalSkillsExerciseData {
                 prompt: "làm bánh mì nướng",
                 options: ["Bơ bánh mì nướng", "Cho bánh mì vào lò nướng", "Loại bỏ khỏi máy nướng bánh mì", "ăn"],
                 correctAnswer: "Bơ bánh mì nướng",
-                explanation: ""
+                explanation: "\"Bơ bánh mì nướng\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Rửa tay",
                 options: ["Lau khô tay bằng khăn", "Thoa xà phòng lên tay", "Bật nước", "Chà trong 20 giây", "Xả sạch xà phòng", "Làm ướt tay bạn"],
                 correctAnswer: "Lau khô tay bằng khăn",
-                explanation: ""
+                explanation: "\"Lau khô tay bằng khăn\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Pha cà phê",
                 options: ["Đổ cà phê vào cốc của bạn", "Thêm bã cà phê vào bộ lọc", "Nhấn nút pha", "Đổ đầy hồ chứa nước"],
                 correctAnswer: "Đổ cà phê vào cốc của bạn",
-                explanation: ""
+                explanation: "\"Đổ cà phê vào cốc của bạn\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Thực hiện cuộc gọi điện thoại",
                 options: ["Nói xin chào", "Cúp máy", "Nhấc điện thoại lên", "Quay số", "Có cuộc trò chuyện của bạn"],
                 correctAnswer: "Nói xin chào",
-                explanation: ""
+                explanation: "\"Nói xin chào\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Mặc quần áo",
                 options: ["Mang giày vào", "Mặc áo vào", "Mặc đồ lót", "Mang tất vào", "Mặc quần vào"],
                 correctAnswer: "Mang giày vào",
-                explanation: ""
+                explanation: "\"Mang giày vào\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Quét sàn",
                 options: ["Vứt vào thùng rác", "Lấy chổi ra", "Đổ rác vào thùng rác", "Quét các mảnh vụn thành một đống"],
                 correctAnswer: "Vứt vào thùng rác",
-                explanation: ""
+                explanation: "\"Vứt vào thùng rác\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Đặt hàng tại nhà hàng",
                 options: ["Ăn bữa ăn của bạn", "Báo cho máy chủ biết đơn đặt hàng của bạn", "ngồi xuống", "Đợi đồ ăn của bạn", "Xem lại thực đơn"],
                 correctAnswer: "Ăn bữa ăn của bạn",
-                explanation: ""
+                explanation: "\"Ăn bữa ăn của bạn\" là câu trả lời đúng."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "bánh nướng",
                 options: ["Để bánh nguội", "Nướng trong lò", "Làm nóng lò trước", "Trộn các thành phần", "Múc bột lên khay nướng"],
                 correctAnswer: "Để bánh nguội",
-                explanation: ""
+                explanation: "\"Để bánh nguội\" là câu trả lời đúng."
             )
         ]
     )
@@ -477,3 +477,5 @@ struct VietnameseFunctionalSkillsExerciseData {
         ]
     )
 }
+
+

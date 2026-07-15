@@ -593,70 +593,70 @@ struct ArabicLanguageExerciseData {
                 prompt: "الكلمة: غاضب",
                 options: ["سعيد", "غاضب", "الهدوء", "حزين"],
                 correctAnswer: "غاضب",
-                explanation: ""
+                explanation: "الكلمتان 'غاضب' و'غاضب' متطابقتان، فهما تحملان نفس المعنى الذي يعبر عن الشعور بالانفعال الشديد."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: بارد",
                 options: ["دافئ", "تجميد", "حار", "خفيف"],
                 correctAnswer: "تجميد",
-                explanation: ""
+                explanation: "'تجميد' هو مرادف لكلمة 'بارد' لأنه يصف درجة حرارة منخفضة جداً تصل إلى حد التجمد."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: كبير",
                 options: ["صغير", "كبير", "قصيرة", "رقيقة"],
                 correctAnswer: "كبير",
-                explanation: ""
+                explanation: "'صغير' هو عكس 'كبير' لأنهما يصفان أحجاماً متباينة الأطراف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: متعب",
                 options: ["تنبيه", "مستيقظا", "استنفدت", "استراح"],
                 correctAnswer: "استنفدت",
-                explanation: ""
+                explanation: "'استنفدت' (مرهق) هي مرادف لكلمة 'متعب' لأنها تعبر عن أقصى درجات التعب وفقدان الطاقة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: خائفة",
                 options: ["شجاع", "مرعوب", "الهدوء", "جريئة"],
                 correctAnswer: "مرعوب",
-                explanation: ""
+                explanation: "'مرعوب' هو مرادف لكلمة 'خائفة' لأنه يعبر عن الخوف الشديد والهلع."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: النوع",
                 options: ["يعني", "قاسية", "لطيف", "فظ"],
                 correctAnswer: "لطيف",
-                explanation: ""
+                explanation: "'لطيف' مرادف لكلمة 'النوع' (بمعنى عطوف) لأن كلتا الكلمتين تصفان الشخص الذي يتسم بالرقة والطيبة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: سريع",
                 options: ["بطيء", "سريع", "كسول", "مملة"],
                 correctAnswer: "سريع",
-                explanation: ""
+                explanation: "'بطيء' هو عكس 'سريع' لأنهما يصفان سرعات متعاكسة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: قديم",
                 options: ["شاب", "القديمة", "جديد", "طازجة"],
                 correctAnswer: "القديمة",
-                explanation: ""
+                explanation: "الكلمتان 'قديم' و'القديمة' مترادفتان وتدلان على الشيء الذي مر عليه زمن طويل."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: القذرة",
                 options: ["نظيفة", "قذرة", "أنيق", "مرتب"],
                 correctAnswer: "قذرة",
-                explanation: ""
+                explanation: "الكلمتان 'القذرة' و'قذرة' مترادفتان وتعبران عن عدم النظافة والاتساخ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: مشرق",
                 options: ["خافت", "داكن", "رائعة", "مملة"],
                 correctAnswer: "رائعة",
-                explanation: ""
+                explanation: "'رائعة' (بمعنى متألقة) هي مرادف لـ 'مشرق' لأن كلتيهما تصفان الشيء الذي يبعث نوراً أو يتسم باللمعان."
             )
         ]
     )
@@ -676,70 +676,70 @@ struct ArabicLanguageExerciseData {
                 prompt: "الكلمة: حزن",
                 options: ["بهيجة", "حزين", "متحمس", "المحتوى"],
                 correctAnswer: "حزين",
-                explanation: ""
+                explanation: "'حزين' هو الصفة من 'حزن'، وهما مترادفان يعبران عن الشعور بالأسى والكآبة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: هادئ",
                 options: ["صاخبة", "مضطرب", "سلمية", "المحمومة"],
                 correctAnswer: "سلمية",
-                explanation: ""
+                explanation: "'سلمية' (بمعنى مسالم أو هادئ) هي مرادف لـ 'هادئ' لأنها تعبر عن غياب الضجيج والاضطراب."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: شجاع",
                 options: ["خجول", "مخيف", "شجاع", "جبان"],
                 correctAnswer: "شجاع",
-                explanation: ""
+                explanation: "الكلمتان 'شجاع' و'شجاع' متطابقتان وتعبران عن الجرأة والإقدام."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: غريب",
                 options: ["عادي", "غريب", "عادي", "نموذجي"],
                 correctAnswer: "غريب",
-                explanation: ""
+                explanation: "الكلمتان 'غريب' و'غريب' متطابقتان وتصفان الشيء غير المألوف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: غزير",
                 options: ["نادر", "وفيرة", "نادر", "محدودة"],
                 correctAnswer: "وفيرة",
-                explanation: ""
+                explanation: "'وفيرة' هي مرادف لـ 'غزير' لأن كلتيهما تدلان على الكثرة والوفرة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: ضعيف",
                 options: ["قوي", "عظيم", "ضعيف", "قوية"],
                 correctAnswer: "ضعيف",
-                explanation: ""
+                explanation: "الكلمتان 'ضعيف' و'ضعيف' متطابقتان وتعبران عن قلة القوة أو العجز."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: حية",
                 options: ["مملة", "خافت", "ملون", "شاحب"],
                 correctAnswer: "ملون",
-                explanation: ""
+                explanation: "'ملون' مرادف لـ 'حية' (بمعنى زاهية) لأن الألوان الزاهية تضفي حيوية وإشراقاً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: مقتصد",
                 options: ["مسرف", "مقتصد", "فخم", "سخية"],
                 correctAnswer: "مقتصد",
-                explanation: ""
+                explanation: "الكلمتان 'مقتصد' و'مقتصد' متطابقتان وتعبران عن التوفير وعدم الإسراف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: فصيح",
                 options: ["الغمغمة", "واضح", "هادئ", "أخرق"],
                 correctAnswer: "واضح",
-                explanation: ""
+                explanation: "'واضح' مرادف لـ 'فصيح' لأن الكلام الفصيح يكون بيناً وواضحاً ومفهوماً بسهولة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: المثابر",
                 options: ["ضعيف", "الإقلاع عن التدخين", "مستمر", "مرنة"],
                 correctAnswer: "مستمر",
-                explanation: ""
+                explanation: "'مستمر' مرادف لـ 'المثابر' لأن الشخص المثابر هو الذي يستمر في عمله دون انقطاع أو يأس."
             )
         ]
     )
@@ -759,70 +759,70 @@ struct ArabicLanguageExerciseData {
                 prompt: "الكلمة: حار",
                 options: ["دافئ", "بارد", "رائع", "فاتر"],
                 correctAnswer: "بارد",
-                explanation: ""
+                explanation: "'بارد' هو عكس 'حار' لأنهما يمثلان درجات حرارة متعاكسة تماماً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: سعيد",
                 options: ["سعيد", "بهيجة", "حزين", "المحتوى"],
                 correctAnswer: "حزين",
-                explanation: ""
+                explanation: "'حزين' هو عكس 'سعيد' لأنهما يمثلان مشاعر وعواطف متناقضة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: كبير",
                 options: ["ضخمة", "كبير", "صغير", "طويل القامة"],
                 correctAnswer: "صغير",
-                explanation: ""
+                explanation: "'صغير' هو عكس 'كبير' لأنهما يصفان أحجاماً متباينة الأطراف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: سريع",
                 options: ["سريع", "بطيء", "سريع", "سريع"],
                 correctAnswer: "بطيء",
-                explanation: ""
+                explanation: "'بطيء' هو عكس 'سريع' لأنهما يصفان سرعات متعاكسة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: نظيفة",
                 options: ["أنيق", "مرتب", "قذر", "طازجة"],
                 correctAnswer: "قذر",
-                explanation: ""
+                explanation: "'قذر' هو عكس 'نظيفة' لأنهما يصفان حالتين متعاكستين للنظافة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: مستيقظا",
                 options: ["تنبيه", "على علم", "نائما", "نشط"],
                 correctAnswer: "نائما",
-                explanation: ""
+                explanation: "'نائما' هو عكس 'مستيقظا' لأنهما يصفان حالتي الوعي واللاوعي للإنسان."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: بصوت عال",
                 options: ["صاخبة", "هادئ", "مزدهر", "قوي"],
                 correctAnswer: "هادئ",
-                explanation: ""
+                explanation: "'هادئ' هو عكس 'بصوت عال' لأنهما يصفان مستويات متعاكسة للصوت."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: مفتوح",
                 options: ["مغلق", "واسعة", "واضح", "مجانا"],
                 correctAnswer: "مغلق",
-                explanation: ""
+                explanation: "'مغلق' هو عكس 'مفتوح' لأنهما يصفان حالتين متعاكستين للأبواب أو الأشياء."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: كامل",
                 options: ["معبأة", "فارغ", "محملة", "كامل"],
                 correctAnswer: "فارغ",
-                explanation: ""
+                explanation: "'فارغ' هو عكس 'كامل' (ممتلئ) لأنهما يصفان حالتي امتلاء وخلو السعة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلمة: الحب",
                 options: ["أعشق", "مثل", "الكراهية", "رعاية"],
                 correctAnswer: "الكراهية",
-                explanation: ""
+                explanation: "'الكراهية' هي عكس 'الحب' لأنهما من المشاعر الإنسانية المتناقضة."
             )
         ]
     )
@@ -842,140 +842,140 @@ struct ArabicLanguageExerciseData {
                 prompt: "لقد سقي ___.",
                 options: ["زهور", "طوابق", "دقيق"],
                 correctAnswer: "زهور",
-                explanation: ""
+                explanation: "الزهور تحتاج إلى الماء وتُسقى، لذلك 'زهور' تكمل الجملة بشكل منطقي."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "لقد ارتدى ___.",
                 options: ["معطف", "قارب", "عنزة"],
                 correctAnswer: "معطف",
-                explanation: ""
+                explanation: "المعطف هو قطعة ملابس تُرتدى، لذلك 'معطف' تكمل الجملة بشكل صحيح."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "أحتاج إلى كوب من ___.",
                 options: ["الماء", "نادل", "الخواض"],
                 correctAnswer: "الماء",
-                explanation: ""
+                explanation: "الماء يُشرب عادة في أكواب، لذلك 'الماء' تكمل جملة 'كوب من...'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "اتصلت بها ___.",
                 options: ["الأم", "يزعج", "رغوة الصابون"],
                 correctAnswer: "الأم",
-                explanation: ""
+                explanation: "'الأم' هي شخص يمكن الاتصال به والتحدث إليه، مما يجعلها تكملة مناسبة للجملة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "هز الكلب ___.",
                 options: ["حكاية", "الذيل", "طويل القامة"],
                 correctAnswer: "الذيل",
-                explanation: ""
+                explanation: "الكلب يعبر عن فرحته بهز ذيله، لذلك 'الذيل' تكمل الجملة منطقياً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "قام بإيقاف ___.",
                 options: ["قتال", "ضوء", "ليلة"],
                 correctAnswer: "ضوء",
-                explanation: ""
+                explanation: "الضوء هو جهاز يمكن تشغيله وإيقافه، مما يجعله تكملة مناسبة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "لقد خبزت ___.",
                 options: ["مزيف", "بحيرة", "كعكة"],
                 correctAnswer: "كعكة",
-                explanation: ""
+                explanation: "الكعكة تُخبز في الفرن، لذلك 'كعكة' تكمل الفعل 'خبزت' بشكل صحيح."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "بنى الطائر ___.",
                 options: ["عش", "راحة", "اختبار"],
                 correctAnswer: "عش",
-                explanation: ""
+                explanation: "الطيور تبني أعشاشها، لذلك 'عش' هي التكملة المنطقية للجملة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "قرأ ___.",
                 options: ["صحيفة", "سلة المهملات", "ورق زجاج"],
                 correctAnswer: "صحيفة",
-                explanation: ""
+                explanation: "الصحيفة تُقرأ للحصول على الأخبار، مما يجعلها تكملة مناسبة للفعل 'قرأ'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "لعب الأطفال في ___.",
                 options: ["حديقة", "النباح", "داكن"],
                 correctAnswer: "حديقة",
-                explanation: ""
+                explanation: "الحديقة هي مكان مخصص للعب الأطفال، مما يجعلها تكملة منطقية للجملة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "قام بإصلاح ___.",
                 options: ["بالوعة", "رابط", "غمزة"],
                 correctAnswer: "بالوعة",
-                explanation: ""
+                explanation: "البالوعة يمكن أن تتعطل وتحتاج إلى إصلاح، لذا فهي تكملة مناسبة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "كان الحساء أيضًا ___.",
                 options: ["حار", "الكثير", "نقطة"],
                 correctAnswer: "حار",
-                explanation: ""
+                explanation: "الحساء يُقدم عادة دافئاً أو ساخناً، لذا فكلمة 'حار' تصف حالته المنطقية."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "فتحت لها ___.",
                 options: ["مظلة", "الفانيليا", "غوريلا"],
                 correctAnswer: "مظلة",
-                explanation: ""
+                explanation: "المظلة تُفتح للحماية من المطر أو الشمس، مما يجعلها تكملة صحيحة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "لقد دفع ___.",
                 options: ["فاتورة", "ملء", "مطحنة"],
                 correctAnswer: "فاتورة",
-                explanation: ""
+                explanation: "الفاتورة هي مستند يتطلب دفع مبلغ مالي، لذلك تكمل الفعل 'دفع' منطقياً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "جلست القطة على ___.",
                 options: ["حصيرة", "الخفافيش", "فأر"],
                 correctAnswer: "حصيرة",
-                explanation: ""
+                explanation: "الحصيرة هي مكان مسطح تجلس عليه القطة عادة، مما يجعلها تكملة منطقية."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "كانت ترتدي ___ دافئة.",
                 options: ["سترة", "منشة", "مبعثر"],
                 correctAnswer: "سترة",
-                explanation: ""
+                explanation: "السترة هي قطعة ملابس دافئة تُرتدى في البرد، لذا هي التكملة الصحيحة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "زرعت ___.",
                 options: ["حديقة", "عفوا", "آمر"],
                 correctAnswer: "حديقة",
-                explanation: ""
+                explanation: "الحديقة تُزرع بالنباتات والزهور، مما يجعلها تكملة منطقية للفعل 'زرعت'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "كتبت فيها ___.",
                 options: ["مذكرات", "منتجات الألبان", "ديزي"],
                 correctAnswer: "مذكرات",
-                explanation: ""
+                explanation: "المذكرات هي كتاب مخصص للكتابة والتدوين الشخصي، لذا تكمل الجملة بشكل صحيح."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "لقد دفع ___.",
                 options: ["فاتورة", "ملء", "مطحنة"],
                 correctAnswer: "فاتورة",
-                explanation: ""
+                explanation: "الفاتورة هي مستند يتطلب دفع مبلغ مالي، لذلك تكمل الفعل 'دفع' منطقياً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الطفل ___.",
                 options: ["النوم", "كنس", "تتسرب"],
                 correctAnswer: "النوم",
-                explanation: ""
+                explanation: "النوم هو حالة طبيعية يحتاجها الطفل، لذا فإن 'النوم' يكمل الجملة بصورة منطقية."
             )
         ]
     )
@@ -1148,105 +1148,105 @@ struct ArabicLanguageExerciseData {
                 prompt: "الجرو بالنسبة إلى الكلب كما هو الحال مع KITTEN ___",
                 options: ["قطة", "كلب", "طائر", "السمك"],
                 correctAnswer: "قطة",
-                explanation: ""
+                explanation: "العلاقة هي 'الصغير إلى الكبير' من نفس النوع؛ الجرو هو صغير الكلب، والقطة الصغيرة هي صغير القطة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "البرد إلى الشتاء كما هو حار إلى ___",
                 options: ["الربيع", "سقوط", "الصيف", "المطر"],
                 correctAnswer: "الصيف",
-                explanation: ""
+                explanation: "العلاقة هي 'الصفة إلى الفصل المرتبط بها'؛ البرد يميز فصل الشتاء، والحر يميز فصل الصيف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "العين هي التي ترى كما الأذن هي ___",
                 options: ["المس", "اسمع", "رائحة", "الذوق"],
                 correctAnswer: "اسمع",
-                explanation: ""
+                explanation: "العلاقة هي 'العضو ووظيفته الحيوية'؛ وظيفة العين هي الرؤية، ووظيفة الأذن هي السمع."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الشيف إلى المطبخ كما الطبيب إلى ___",
                 options: ["مكتبة", "مستشفى", "المدرسة", "متجر"],
                 correctAnswer: "مستشفى",
-                explanation: ""
+                explanation: "العلاقة هي 'الشخص ومكان عمله'؛ الطاهي يعمل في المطبخ، والطبيب يعمل في المستشفى."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "القفاز في اليد كما هو الحال في الجورب ___",
                 options: ["ذراع", "الركبة", "قدم", "رئيس"],
                 correctAnswer: "قدم",
-                explanation: ""
+                explanation: "العلاقة هي 'اللباس وموضع ارتدائه'؛ القفاز يُرتدى في اليد، والجورب يُرتدى في القدم."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "السعادة هي أن تضحك كما أن الحزن هو ___",
                 options: ["ابتسم", "النوم", "صرخة", "تشغيل"],
                 correctAnswer: "صرخة",
-                explanation: ""
+                explanation: "العلاقة هي 'الشعور ورد الفعل المرتبط به'؛ السعادة تجعلنا نضحك، والحزن يجعلنا نبكي (نصرخ)."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "BIRD هو NEST كما BEAR هو ___",
                 options: ["شجرة", "كهف", "المحيط", "الميدان"],
                 correctAnswer: "كهف",
-                explanation: ""
+                explanation: "العلاقة هي 'الحيوان ومكان مأواه'؛ الطائر يعيش في العش، والدب يعيش في الكهف."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "يجب على قلم الرصاص أن يكتب كما تفعل الفرشاة ___",
                 options: ["قطع", "الطلاء", "اكتساح", "اثارة"],
                 correctAnswer: "الطلاء",
-                explanation: ""
+                explanation: "العلاقة هي 'الأداة ووظيفتها'؛ القلم يُستخدم للكتابة، والفرشاة تُستخدم للطلاء (التلوين)."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "النهار إلى الليل كما الأسود إلى ___",
                 options: ["الظلام", "رمادي", "أبيض", "أزرق"],
                 correctAnswer: "أبيض",
-                explanation: ""
+                explanation: "العلاقة هي 'الشيء ونقيضه'؛ النهار عكس الليل، واللون الأسود عكس اللون الأبيض."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الجندي بالنسبة للجيش كما البحار هو ___",
                 options: ["القوة الجوية", "مشاة البحرية", "البحرية", "حارس"],
                 correctAnswer: "البحرية",
-                explanation: ""
+                explanation: "العلاقة هي 'الشخص والمؤسسة التي ينتمي إليها'؛ الجندي ينتمي إلى الجيش، والبحار ينتمي إلى القوات البحرية."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "العجلة بالنسبة إلى السيارة كما هو الحال مع الجناح ___",
                 options: ["قارب", "طائرة", "قطار", "حافلة"],
                 correctAnswer: "طائرة",
-                explanation: ""
+                explanation: "العلاقة هي 'الجزء إلى الكل'؛ العجلة جزء أساسي من السيارة، والجناح جزء أساسي من الطائرة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "المعلم هو المدرسة كما القاضي هو ___",
                 options: ["مكتب", "مستشفى", "قاعة المحكمة", "متجر"],
                 correctAnswer: "قاعة المحكمة",
-                explanation: ""
+                explanation: "العلاقة هي 'المهنة ومكان ممارستها'؛ المعلم يعمل في المدرسة، والقاضي يعمل في قاعة المحكمة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "تمثل اليرقة الفراشة مثل الشرغوف ___",
                 options: ["السمك", "سلحفاة", "الضفدع", "سحلية"],
                 correctAnswer: "الضفدع",
-                explanation: ""
+                explanation: "العلاقة هي 'مرحلة النمو الأولى إلى البلوغ'؛ اليرقة تتحول إلى فراشة، والشرغوف يتحول إلى ضفدع."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الطعام للجوع مثل الماء لـ ___",
                 options: ["مبلل", "عطشان", "بارد", "كامل"],
                 correctAnswer: "عطشان",
-                explanation: ""
+                explanation: "العلاقة هي 'الشيء وما يعالجه'؛ الطعام يسد الجوع، والماء يروي العطشان."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الصوف للأغنام كما الحرير ___",
                 options: ["العنكبوت", "دودة القز", "قطن", "الكتان"],
                 correctAnswer: "دودة القز",
-                explanation: ""
+                explanation: "العلاقة هي 'المادة ومصدرها الحيواني'؛ الصوف يُؤخذ من الأغنام، والحرير يُؤخذ من دودة القز."
             )
         ]
     )
@@ -1266,175 +1266,175 @@ struct ArabicLanguageExerciseData {
                 prompt: "هناك 7 أيام في الأسبوع.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة يمكن التحقق منها ومثبتة عالمياً بأن الأسبوع يتكون من 7 أيام."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الفانيليا هي أفضل نكهة للآيس كريم.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي شخصي لأن تفضيل نكهات الآيس كريم يختلف من شخص لآخر."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "يتجمد الماء عند درجة حرارة 32 درجة فهرنهايت.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة علمية مثبتة ومقاسة بأن الماء يتجمد عند 32 درجة فهرنهايت (0 درجة مئوية)."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الكلاب هي أفضل الحيوانات الأليفة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي لأنه يعبر عن تفضيل شخصي لنوع معين من الحيوانات الأليفة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "المثلث له ثلاثة جوانب.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة هندسية ورياضية مثبتة بأن المثلث يتكون دائماً من ثلاثة جوانب."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "هذا البرنامج التلفزيوني مضحك.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي لأن تقدير ما هو مضحك يعتمد على ذوق الشخص وحسه الفكاهي."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "كان أبراهام لينكولن رئيسًا للولايات المتحدة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة تاريخية يمكن التحقق منها بسهولة في السجلات الرسمية."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الأرض هي أفضل كوكب.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي لأنه يعتمد على التفضيل والمقارنة الذاتية، ولا يمكن إثباته علمياً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "هناك 60 دقيقة في الساعة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة مثبتة لأن نظام قياس الوقت يعتمد 60 دقيقة في الساعة الواحدة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "التوليب أجمل من الورد .",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي شخصي يعبر عن ذوق فردي في جمال الزهور."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "واشنطن العاصمة هي عاصمة الولايات المتحدة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة جغرافية وسياسية مثبتة ومعروفة عالمياً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "من الوقاحة أن تتحدث وفمك ممتلئ.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي يعكس معايير الذوق الاجتماعي التي قد تختلف بين الثقافات، رغم شيوعه."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "هناك 12 شهرا في السنة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة فلكية وتقويمية مثبتة بأن السنة تتكون من 12 شهراً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الاستيقاظ مبكرًا مفيد لك.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي عام أو نصيحة، فرغم فوائده العديدة، قد لا يكون الاستيقاظ مبكراً مناسباً لكل شخص."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "2 + 2 = 4.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة رياضية بسيطة ومثبتة وقابلة للتحقق دائماً."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "المحيط مصنوع من المياه المالحة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة علمية وجغرافية مثبتة بأن المحيطات تتكون من مياه مالحة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "البستنة هي هواية عظيمة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي لأنه يعبر عن تقييم شخصي وتفضيل لهواية معينة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الصخور أثقل من الريش من نفس الحجم.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة فيزيائية لأن كثافة الصخور أعلى بكثير من كثافة الريش للحجم نفسه."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الولايات المتحدة لديها 50 ولاية.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة جغرافية وسياسية مثبتة وتعتمد على الوثائق الرسمية للولايات المتحدة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "البيتزا هي أفضل طعام.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي شخصي يعتمد على الذوق الخاص في تفضيل الأطعمة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "ممارسة الرياضة مفيدة لصحتك.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة طبية وعلمية مثبتة بالدراسات حول الفوائد الجسدية للرياضة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الموسيقى الكلاسيكية مملة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي يمثل ذوقاً شخصياً في الموسيقى ولا يمثل حقيقة موضوعية."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "التفاح والبرتقال كلاهما فاكهة.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة علمية نباتية وتصنيفية مثبتة بأن كليهما ينتميان لفئة الفواكه."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "رعاية القطط أسهل من رعاية الكلاب.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "هذا رأي لأن تقييم مدى سهولة الرعاية يعتمد على أسلوب حياة الشخص وخبرته."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "هناك 24 ساعة في اليوم.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "هذه حقيقة فلكية وتقويمية مثبتة بأن دوران الأرض اليومي يستغرق 24 ساعة."
             )
         ]
     )
@@ -1454,56 +1454,56 @@ struct ArabicLanguageExerciseData {
                 prompt: "صنع الخبز المحمص",
                 options: ["ادهني الخبز المحمص بالزبدة", "ضعي الخبز في المحمصة", "إزالة من محمصة", "أكل"],
                 correctAnswer: "ادهني الخبز المحمص بالزبدة",
-                explanation: ""
+                explanation: "هذا هو جزء من خطوات الإعداد المتسلسلة؛ فبعد تحضير الخبز المحمص يتم دهنه بالزبدة لإكمال الوجبة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "غسل اليدين",
                 options: ["تجفيف اليدين بمنشفة", "ضع الصابون على اليدين", "قم بتشغيل الماء", "فرك لمدة 20 ثانية", "شطف الصابون", "بلل يديك"],
                 correctAnswer: "تجفيف اليدين بمنشفة",
-                explanation: ""
+                explanation: "هذه خطوة منطقية متسلسلة في النظافة؛ فبعد غسل اليدين بالماء يجب تجفيفهما بمنشفة."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "صنع القهوة",
                 options: ["صب القهوة في فنجانك", "أضف القهوة المطحونة إلى الفلتر", "اضغط على زر المشروب", "ملء خزان المياه"],
                 correctAnswer: "صب القهوة في فنجانك",
-                explanation: ""
+                explanation: "هذه الخطوة هي النتيجة المتسلسلة؛ فبعد إعداد القهوة يتم صبها في الفنجان لشربها."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "إجراء مكالمة هاتفية",
                 options: ["قل مرحبا", "شنق", "التقط الهاتف", "اطلب الرقم", "قم بمحادثتك"],
                 correctAnswer: "قل مرحبا",
-                explanation: ""
+                explanation: "هذه هي الخطوة الأولى المتسلسلة في المحادثة؛ عند إجراء مكالمة هاتفية، تبدأ بإلقاء التحية بقول 'مرحبا'."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "ارتداء الملابس",
                 options: ["ارتدي حذاءً", "ارتدي القميص", "ارتدي الملابس الداخلية", "ارتدي الجوارب", "ارتدي البنطال"],
                 correctAnswer: "ارتدي حذاءً",
-                explanation: ""
+                explanation: "هذه خطوة تكميلية في التسلسل؛ فبعد ارتداء الملابس الأساسية، يتم انتعال الحذاء لإنهاء التجهيز."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "كنس الكلمة",
                 options: ["تجاهل في سلة المهملات", "اخرج المكنسة", "مغرفة الحطام في مجرود", "اكتساح الحطام في كومة"],
                 correctAnswer: "تجاهل في سلة المهملات",
-                explanation: ""
+                explanation: "هذه الخطوة تمثل نهاية العملية؛ فبعد كنس الأوساخ من الأرضية يتم التخلص منها في سلة المهملات."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "الطلب في مطعم",
                 options: ["تناول وجبتك", "أخبر الخادم طلبك", "اجلس", "انتظر طعامك", "قم بمراجعة القائمة"],
                 correctAnswer: "تناول وجبتك",
-                explanation: ""
+                explanation: "هذه هي الخطوة اللاحقة في التسلسل الزمني؛ فبعد الطلب في المطعم وانتظار الطعام، تقوم بتناول وجبتك."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "خبز الكوكيز",
                 options: ["دع ملفات تعريف الارتباط تبرد", "اخبز في الفرن", "سخني الفرن", "امزج المكونات", "اغرفي العجينة على صينية الخبز"],
                 correctAnswer: "دع ملفات تعريف الارتباط تبرد",
-                explanation: ""
+                explanation: "هذه الخطوة ضرورية في تسلسل الخبز؛ فبعد إخراج الكوكيز من الفرن يجب تركها لتبرد قبل تناولها."
             )
         ]
     )

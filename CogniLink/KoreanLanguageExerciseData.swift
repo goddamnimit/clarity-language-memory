@@ -593,70 +593,70 @@ struct KoreanLanguageExerciseData {
                 prompt: "단어: 분노",
                 options: ["행복하다", "맹렬한", "진정", "슬픈"],
                 correctAnswer: "맹렬한",
-                explanation: ""
+                explanation: "'분노'와 '맹렬한'은 모두 화가 나거나 감정이 격렬한 상태를 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 춥다",
                 options: ["따뜻한", "냉동", "뜨거운", "온화한"],
                 correctAnswer: "냉동",
-                explanation: ""
+                explanation: "'춥다'와 '냉동'은 모두 온도가 매우 낮아 차가운 상태를 의미하는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 빅",
                 options: ["작은", "큰", "짧은", "얇은"],
                 correctAnswer: "큰",
-                explanation: ""
+                explanation: "'빅(Big)'은 크기가 큰 것을, '작은'은 크기가 작음을 의미하여 서로 반대되는 크기를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 피곤하다",
                 options: ["경고", "깨어", "지쳐", "쉬었다"],
                 correctAnswer: "지쳐",
-                explanation: ""
+                explanation: "'피곤하다'와 '지쳐'는 모두 체력이나 기력이 떨어져 힘든 상태를 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 겁이 났다",
                 options: ["용감한", "겁에 질린", "진정", "대담한"],
                 correctAnswer: "겁에 질린",
-                explanation: ""
+                explanation: "'겁이 났다'와 '겁에 질린'은 둘 다 두려움이나 무서움을 느끼는 상태를 표현하는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 종류",
                 options: ["뜻", "잔인한", "온화한", "무례한"],
                 correctAnswer: "온화한",
-                explanation: ""
+                explanation: "원래 영어 단어 'Kind'는 '친절한, 온화한'이라는 뜻을 가지므로, '온화한'과 유의어 관계에 있기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 빠르다",
                 options: ["천천히", "빨리", "게으른", "둔한"],
                 correctAnswer: "빨리",
-                explanation: ""
+                explanation: "'빠르다'는 속도가 높은 것을, '천천히'는 속도가 느린 것을 의미하여 서로 반대되는 속도를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: OLD",
                 options: ["젊은", "고대의", "새로운", "신선한"],
                 correctAnswer: "고대의",
-                explanation: ""
+                explanation: "'OLD'는 오래되었다는 뜻으로, 아주 먼 옛날을 의미하는 '고대의'와 뜻이 상통하는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 더러운",
                 options: ["깨끗한", "더러운", "깔끔한", "깔끔한"],
                 correctAnswer: "더러운",
-                explanation: ""
+                explanation: "두 단어는 완전히 동일한 형태와 의미를 가진 동의어로서 깨끗하지 않은 상태를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 밝다",
                 options: ["희미한", "어두운", "빛나는", "둔한"],
                 correctAnswer: "빛나는",
-                explanation: ""
+                explanation: "'밝다'와 '빛나는'은 모두 빛이 나서 환하고 눈부신 상태를 나타내는 유의어이기 때문입니다."
             )
         ]
     )
@@ -676,70 +676,70 @@ struct KoreanLanguageExerciseData {
                 prompt: "단어: 우울함",
                 options: ["즐거운", "슬픈", "흥분하다", "내용"],
                 correctAnswer: "슬픈",
-                explanation: ""
+                explanation: "'우울함'과 '슬픈'은 둘 다 마음이 어둡고 가라앉아 기분이 좋지 않은 감정을 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 고요함",
                 options: ["시끄러운", "동요된", "평화로운", "광적인"],
                 correctAnswer: "평화로운",
-                explanation: ""
+                explanation: "'고요함'과 '평화로운'은 모두 소음이나 소란이 없이 조용하고 안정된 상태를 의미하는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 용기 있는",
                 options: ["소심한", "두려운", "용감한", "비겁한"],
                 correctAnswer: "용감한",
-                explanation: ""
+                explanation: "'용기 있는'과 '용감한'은 모두 두려움을 모르고 씩씩한 태도를 나타내는 같은 의미의 단어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 특별하다",
                 options: ["평범한", "이상한", "정상", "전형적인"],
                 correctAnswer: "이상한",
-                explanation: ""
+                explanation: "'특별하다'는 보통과 다름을 의미하고, '이상한' 역시 평범하지 않고 색다른 상태를 나타내어 넓은 의미에서 비슷한 맥락을 가지기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 풍부함",
                 options: ["부족한", "풍부한", "드문", "제한된"],
                 correctAnswer: "풍부한",
-                explanation: ""
+                explanation: "'풍부함'은 넉넉하고 많은 명사형이며, '풍부한'은 그 형용사형으로 의미가 상통하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 미약하다",
                 options: ["강한", "강력한", "약한", "견고한"],
                 correctAnswer: "약한",
-                explanation: ""
+                explanation: "'미약하다'와 '약한'은 둘 다 힘이나 세력이 강하지 못하고 부족한 상태를 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 생생한",
                 options: ["둔한", "희미하다", "화려한", "창백한"],
                 correctAnswer: "화려한",
-                explanation: ""
+                explanation: "'생생한'과 '화려한'은 모두 색채나 모습이 뚜렷하고 눈에 띄게 밝은 느낌을 준다는 점에서 비슷한 의미를 갖기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 검소하다",
                 options: ["낭비적인", "검소한", "호화로운", "관대한"],
                 correctAnswer: "검소한",
-                explanation: ""
+                explanation: "'검소하다'의 관형사형이 '검소한'으로, 사치하지 않고 수수하다는 완전히 동일한 의미를 지니기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: ELOQUENT",
                 options: ["중얼거리는", "명확하게 표현하다", "조용한", "서투른"],
                 correctAnswer: "명확하게 표현하다",
-                explanation: ""
+                explanation: "'Eloquent'는 말을 잘하고 설득력 있다는 뜻으로, '명확하게 표현하다'와 의미가 통하는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 강인함",
                 options: ["약한", "그만두다", "끈질긴", "유연한"],
                 correctAnswer: "끈질긴",
-                explanation: ""
+                explanation: "'강인함'과 '끈질긴'은 둘 다 쉽게 포기하거나 굴복하지 않고 굳세게 버티는 성질을 나타내어 의미가 비슷하기 때문입니다."
             )
         ]
     )
@@ -759,70 +759,70 @@ struct KoreanLanguageExerciseData {
                 prompt: "단어: 뜨거워요",
                 options: ["따뜻한", "감기", "멋지다", "미지근한"],
                 correctAnswer: "감기",
-                explanation: ""
+                explanation: "영어 단어 'Hot(뜨거운)'의 반대말인 'Cold'가 '감기'로 번역되었으나, 원래 온도가 차갑다는 뜻에서 뜨거운 것과 반대되는 개념이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 행복하다",
                 options: ["기쁘다", "즐거운", "슬픈", "내용"],
                 correctAnswer: "슬픈",
-                explanation: ""
+                explanation: "'행복하다'는 기분이 좋은 상태를, '슬픈'은 마음이 아프고 괴로운 상태를 나타내어 서로 반대되는 감정이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 빅",
                 options: ["거대한", "큰", "작은", "키가 큰"],
                 correctAnswer: "작은",
-                explanation: ""
+                explanation: "'빅(Big)'은 크기가 큰 것을, '작은'은 크기가 작음을 의미하여 서로 반대되는 크기를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 빠르다",
                 options: ["빨리", "천천히", "빠른", "빠른"],
                 correctAnswer: "천천히",
-                explanation: ""
+                explanation: "'빠르다'는 속도가 높은 것을, '천천히'는 속도가 느린 것을 의미하여 서로 반대되는 속도를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 깨끗하다",
                 options: ["깔끔한", "깔끔한", "더러운", "신선한"],
                 correctAnswer: "더러운",
-                explanation: ""
+                explanation: "'깨끗하다'는 오염이 없는 상태를, '더러운'은 오염된 상태를 의미하여 서로 반대되는 상태를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 깨어나다",
                 options: ["경고", "알고 있다", "자고", "활성"],
                 correctAnswer: "자고",
-                explanation: ""
+                explanation: "'깨어나다'는 의식이 있는 상태를, '자고'는 의식이 없는 수면 상태를 의미하여 서로 반대되기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 시끄러운",
                 options: ["시끄러운", "조용한", "호황을 누리고 있는", "강한"],
                 correctAnswer: "조용한",
-                explanation: ""
+                explanation: "'시끄러운'은 소리가 크고 소란스러운 것을, '조용한'은 소리가 없고 고요한 것을 의미하여 서로 반대되기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 열려있다",
                 options: ["폐쇄", "넓은", "명확한", "무료"],
                 correctAnswer: "폐쇄",
-                explanation: ""
+                explanation: "'열려있다'는 닫혀있지 않은 상태를, '폐쇄'는 닫혀서 막힌 상태를 의미하여 서로 반대되는 개념이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 전체",
                 options: ["포장된", "비어 있음", "로드됨", "완료"],
                 correctAnswer: "비어 있음",
-                explanation: ""
+                explanation: "'전체(가득 참)'은 공간이 꽉 차 있는 상태를, '비어 있음'은 아무것도 없는 상태를 의미하여 서로 반대되기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 사랑",
                 options: ["좋아하다", "같은", "증오", "배려"],
                 correctAnswer: "증오",
-                explanation: ""
+                explanation: "'사랑'은 아끼고 좋아하는 감정을, '증오'는 몹시 미워하는 감정을 의미하여 서로 반대되는 감정이기 때문입니다."
             )
         ]
     )
@@ -842,140 +842,140 @@ struct KoreanLanguageExerciseData {
                 prompt: "그녀는 ___에 물을 주었다.",
                 options: ["꽃", "바닥", "밀가루"],
                 correctAnswer: "꽃",
-                explanation: ""
+                explanation: "물을 주는 대상으로서 식물인 '꽃'이 문맥상 가장 자연스럽고 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을 입었습니다.",
                 options: ["코트", "보트", "염소"],
                 correctAnswer: "코트",
-                explanation: ""
+                explanation: "'입다'라는 동사의 목적어로 옷의 한 종류인 '코트'가 문맥에 가장 잘 어울리기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "___ 한 잔이 필요해요.",
                 options: ["물", "웨이터", "방수 바지"],
                 correctAnswer: "물",
-                explanation: ""
+                explanation: "'한 잔'이라는 단위를 세는 대상으로서 마실 수 있는 '물'이 문맥상 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 그녀에게 ___라고 전화했습니다.",
                 options: ["어머니", "귀찮게 하다", "거품을 내다"],
                 correctAnswer: "어머니",
-                explanation: ""
+                explanation: "통화의 대상이자 호칭으로 가족 관계인 '어머니'가 문맥상 가장 자연스럽기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "개는 ___을 흔들었다.",
                 options: ["이야기", "꼬리", "키가 큰"],
                 correctAnswer: "꼬리",
-                explanation: ""
+                explanation: "개가 기분 좋을 때 흔드는 신체 부위가 '꼬리'이므로 문맥상 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을 껐습니다.",
                 options: ["싸움", "빛", "밤"],
                 correctAnswer: "빛",
-                explanation: ""
+                explanation: "'끄다'라는 동작의 대상으로서 스위치로 조작하는 '빛(전등)'이 가장 자연스럽기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 ___을 구웠어요.",
                 options: ["가짜", "호수", "케이크"],
                 correctAnswer: "케이크",
-                explanation: ""
+                explanation: "'굽다'라는 요리 과정의 대상으로서 오븐에서 굽는 '케이크'가 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "새는 ___을(를) 만들었습니다.",
                 options: ["둥지", "휴식", "테스트"],
                 correctAnswer: "둥지",
-                explanation: ""
+                explanation: "새가 알을 낳고 살기 위해 짓는 집이 '둥지'이므로 문맥상 가장 올바르기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을 읽었습니다.",
                 options: ["신문", "폐지", "사포"],
                 correctAnswer: "신문",
-                explanation: ""
+                explanation: "'읽다'라는 동작의 대상으로서 글이 적힌 '신문'이 가장 자연스럽기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "아이들은 ___에서 놀았습니다.",
                 options: ["공원", "나무껍질", "어두운"],
                 correctAnswer: "공원",
-                explanation: ""
+                explanation: "아이들이 뛰어놀 수 있는 넓은 장소인 '공원'이 문맥상 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을(를) 고쳤습니다.",
                 options: ["싱크대", "링크", "윙크"],
                 correctAnswer: "싱크대",
-                explanation: ""
+                explanation: "고장 나서 수리해야 하는 대상으로 '싱크대'가 문맥에 가장 잘 어울리기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "국물이 너무 ___.",
                 options: ["뜨거운", "많이", "점"],
                 correctAnswer: "뜨거운",
-                explanation: ""
+                explanation: "국물의 온도나 상태를 설명하는 형용사로 '뜨거운'이 가장 자연스럽고 알맞기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 ___을 열었습니다.",
                 options: ["우산", "바닐라", "고릴라"],
                 correctAnswer: "우산",
-                explanation: ""
+                explanation: "비가 올 때 펼쳐서 사용하는 대상으로서 '우산'을 '열다(펴다)'라는 표현이 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을(를) 지불했습니다.",
                 options: ["계산서", "채우다", "밀"],
                 correctAnswer: "계산서",
-                explanation: ""
+                explanation: "비용을 치르는 행위인 '지불하다'의 목적어로 '계산서'가 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "고양이는 ___에 앉았습니다.",
                 options: ["매트", "박쥐", "쥐"],
                 correctAnswer: "매트",
-                explanation: ""
+                explanation: "고양이가 올라가서 앉기 좋은 부드러운 깔개인 '매트'가 문맥상 가장 자연스럽기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 따뜻한 ___을 입었습니다.",
                 options: ["스웨터", "찰싹 때리다", "흩어지다"],
                 correctAnswer: "스웨터",
-                explanation: ""
+                explanation: "'따뜻한'이라는 수식어와 '입다'라는 동사에 어울리는 겨울옷 '스웨터'가 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 ___을 심었습니다.",
                 options: ["정원", "용서하다", "소장"],
                 correctAnswer: "정원",
-                explanation: ""
+                explanation: "'심다'라는 행위와 관련하여 식물을 가꾸는 공간인 '정원'이 문맥상 자연스럽게 연결되기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그녀는 ___에 썼습니다.",
                 options: ["일기", "유제품", "데이지"],
                 correctAnswer: "일기",
-                explanation: ""
+                explanation: "개인적인 생각이나 하루의 일을 '쓰는' 대상으로서 '일기'가 가장 알맞기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그는 ___을(를) 지불했습니다.",
                 options: ["계산서", "채우다", "밀"],
                 correctAnswer: "계산서",
-                explanation: ""
+                explanation: "비용을 치르는 행위인 '지불하다'의 목적어로 '계산서'가 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "아기는 ___입니다.",
                 options: ["자고", "청소", "스며드는"],
                 correctAnswer: "자고",
-                explanation: ""
+                explanation: "아기의 현재 상태를 설명하는 말로 곤히 '자고(있는 상태)'가 문맥상 가장 자연스럽기 때문입니다."
             )
         ]
     )
@@ -1148,105 +1148,105 @@ struct KoreanLanguageExerciseData {
                 prompt: "PUPPY는 DOG에게, KITTEN은 ___에게",
                 options: ["고양이", "개", "새", "물고기"],
                 correctAnswer: "고양이",
-                explanation: ""
+                explanation: "강아지(Puppy)가 자라서 개(Dog)가 되는 것처럼, 새끼 고양이(Kitten)가 자라서 성체 고양이(Cat)가 되는 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "COLD는 WINTER에, HOT는 ___에 해당합니다.",
                 options: ["봄", "가을", "여름", "비"],
                 correctAnswer: "여름",
-                explanation: ""
+                explanation: "추운(Cold) 계절이 겨울(Winter)인 것처럼, 더운(Hot) 계절은 여름(Summer)이라는 속성-계절 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "눈은 보는 것입니다. 귀는 ___하는 것입니다.",
                 options: ["터치", "듣기", "냄새", "맛"],
                 correctAnswer: "듣기",
-                explanation: ""
+                explanation: "눈의 주요 기능이 시각(보는 것)인 것처럼, 귀의 주요 기능은 청각(듣기)이라는 기관과 기능의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "CHEF는 KITCHEN에, DOCTOR는 ___에 속합니다.",
                 options: ["도서관", "병원", "학교", "매장"],
                 correctAnswer: "병원",
-                explanation: ""
+                explanation: "요리사(Chef)가 일하는 장소가 주방(Kitchen)인 것처럼, 의사(Doctor)가 일하는 장소는 병원(Hospital)이라는 직업-장소 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "GLOVE는 HAND이고 SOCK은 ___입니다.",
                 options: ["팔", "무릎", "발", "머리"],
                 correctAnswer: "발",
-                explanation: ""
+                explanation: "장갑(Glove)을 손(Hand)에 끼는 것처럼, 양말(Sock)은 발(Foot)에 신는다는 착용 부위 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "행복한 것은 웃는 것이고, 슬픈 것은 ___이다.",
                 options: ["미소", "수면", "울다", "실행"],
                 correctAnswer: "울다",
-                explanation: ""
+                explanation: "행복할 때 웃음이 나오는 것처럼, 슬플 때는 눈물(울다, Cry)이 나온다는 감정과 그에 따른 행동의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "BIRD는 BEAR가 ___인 것처럼 NEST입니다.",
                 options: ["나무", "동굴", "바다", "필드"],
                 correctAnswer: "동굴",
-                explanation: ""
+                explanation: "새(Bird)가 사는 집이 둥지(Nest)인 것처럼, 곰(Bear)이 서식하는 장소가 동굴(Cave)이라는 동물-거주지 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "PENCIL은 WRITE이고 BRUSH는 ___입니다.",
                 options: ["컷", "페인트", "스윕", "저어"],
                 correctAnswer: "페인트",
-                explanation: ""
+                explanation: "연필(Pencil)이 글씨를 쓰는(Write) 도구인 것처럼, 붓(Brush)은 색칠하거나 그림을 그리는(Paint) 도구라는 사물과 용도의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "DAY는 NIGHT에, BLACK은 ___에 해당합니다.",
                 options: ["어둠", "그레이", "화이트", "블루"],
                 correctAnswer: "화이트",
-                explanation: ""
+                explanation: "낮(Day)과 밤(Night)이 정반대인 것처럼, 검은색(Black)의 정반대 색상은 흰색(White)이라는 반의어 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "SOLDIER는 ARMY에게, SAILOR는 ___에게",
                 options: ["공군", "해병대", "해군", "가드"],
                 correctAnswer: "해군",
-                explanation: ""
+                explanation: "군인(Soldier)이 육군(Army)에 속하는 것처럼, 선원/수병(Sailor)은 해군(Navy)에 속한다는 직업과 소속 군대의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "WHEEL은 CAR에, WING은 ___에 속합니다.",
                 options: ["보트", "비행기", "기차", "버스"],
                 correctAnswer: "비행기",
-                explanation: ""
+                explanation: "바퀴(Wheel)가 자동차(Car)의 부품인 것처럼, 날개(Wing)는 비행기(Airplane)의 부품이라는 부분과 전체의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "교사는 학교에 있고 판사는 ___에 있습니다.",
                 options: ["사무실", "병원", "법정", "매장"],
                 correctAnswer: "법정",
-                explanation: ""
+                explanation: "교사가 일하는 장소가 학교인 것처럼, 판사가 재판을 진행하는 일터는 법정이라는 직업-장소 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "CATERPILLAR는 BUTTERFLY를 하고, TADPOLE은 ___을(를) 합니다.",
                 options: ["물고기", "거북이", "개구리", "도마뱀"],
                 correctAnswer: "개구리",
-                explanation: ""
+                explanation: "애벌레(Caterpillar)가 자라서 나비(Butterfly)가 되는 것처럼, 올챙이(Tadpole)가 자라면 개구리(Frog)가 된다는 성장 단계 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "음식은 배고프고 물은 ___입니다.",
                 options: ["젖은", "목마름", "감기", "전체"],
                 correctAnswer: "목마름",
-                explanation: ""
+                explanation: "배고픔을 달래기 위해 음식을 먹는 것처럼, 목마름을 해소하기 위해 물을 마신다는 결핍과 해결책의 관계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "WOOL은 양에게, 실크는 ___에 해당합니다.",
                 options: ["거미", "누에", "면", "리넨"],
                 correctAnswer: "누에",
-                explanation: ""
+                explanation: "양모(Wool)가 양(Sheep)에게서 얻어지는 것처럼, 비단(Silk)은 누에(Silkworm)가 만든 고치에서 얻어진다는 소재와 생산자의 관계이기 때문입니다."
             )
         ]
     )
@@ -1266,175 +1266,175 @@ struct KoreanLanguageExerciseData {
                 prompt: "일주일은 7일입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "누구나 인정하는 객관적인 역법의 기준이자 변하지 않는 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "바닐라는 아이스크림 중 가장 맛이 좋습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "맛에 대한 평가는 개인의 취향에 따라 다르게 나타나는 주관적인 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "물은 화씨 32도에서 언다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "과학적으로 증명되고 측정 가능한 자연 법칙이자 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "개는 최고의 애완동물이다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "어떤 동물이 최고의 애완동물인지는 개인의 선호도에 따라 달라지는 주관적인 생각이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "삼각형에는 세 개의 변이 있습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "수학과 기하학에서 삼각형을 정의하는 변하지 않는 객관적인 조건이자 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "그 TV 쇼는 재미있어요.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "TV 프로그램에 대한 재미와 흥미는 보는 사람마다 다르게 느끼는 주관적인 감상이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "에이브러햄 링컨은 미국 대통령이었습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "역사적 기록을 통해 증명된 객관적이고 논박할 수 없는 과거의 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "지구는 최고의 행성이다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "'최고'라는 기준은 사람마다 다를 수 있으며, 객관적 수치가 아닌 주관적 가치 판단이 들어간 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "한 시간은 60분입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "시간 측정의 표준 단위로 전 세계적으로 합의된 변하지 않는 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "튤립은 장미보다 더 아름답습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "꽃의 아름다움은 그것을 보는 사람의 주관적 미적 기준에 따라 다르게 평가되는 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "워싱턴 D.C.는 미국의 수도입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "법적으로 지정되어 있고 지도에 명시된 국가와 관련된 공식적이고 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "입에 가득 채우고 말하는 것은 실례입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "문화나 개인의 가치관에 따라 예절의 기준이 다를 수 있는 사회적 규범에 대한 주관적 판단이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "1년은 12개월입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "우리가 사용하는 달력 체계에서 전 세계적으로 합의된 객관적이고 정확한 수치이자 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "일찍 일어나는 것이 당신에게 좋습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "건강이나 생활 패턴은 개인의 생체 리듬에 따라 다를 수 있으므로 주관적인 판단이 들어간 조언이자 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "2 + 2 = 4.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "수학적인 논리와 규칙에 의해 예외 없이 언제나 동일하게 도출되는 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "바다는 바닷물로 이루어져 있습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "바다라는 자연 환경이 소금물이 포함된 바닷물로 구성되어 있다는 것은 과학적이고 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "정원 가꾸기는 훌륭한 취미입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "정원 가꾸기가 훌륭한지 지루한지는 사람의 성향에 따라 평가가 달라지는 주관적 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "돌은 같은 크기의 깃털보다 무겁습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "물질의 밀도를 통해 과학적으로 측정 및 증명할 수 있는 객관적인 물리적 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "미국에는 50개의 주가 있습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "국가의 행정 구역에 대한 정치적, 법적 기록으로 확인 가능한 명백하고 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "피자는 최고의 음식이다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "피자가 최고인지 아닌지는 개인의 입맛과 식성에 따라 철저히 달라지는 주관적인 생각이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "운동은 건강에 유익합니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "의학적, 과학적 연구를 통해 신체 기능 향상과 질병 예방에 도움이 된다는 것이 입증된 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "클래식 음악은 지루해요.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "음악 장르에 대해 지루함을 느끼는 것은 청취자의 음악적 취향에 따른 지극히 주관적인 감상이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "사과와 오렌지는 모두 과일입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "식물학적 분류와 일상적인 언어 정의에 따라 누구나 인정하는 객관적인 사실이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "고양이는 개보다 돌보기가 더 쉽습니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Opinion",
-                explanation: ""
+                explanation: "동물을 돌보는 난이도는 기르는 사람의 생활 환경과 경험에 따라 다르게 느껴지는 주관적 의견이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "하루는 24시간입니다.",
                 options: ["Fact", "Opinion"],
                 correctAnswer: "Fact",
-                explanation: ""
+                explanation: "지구의 자전 주기를 바탕으로 정해진 시간 측정의 공통된 기준이자 변함없는 객관적 사실이기 때문입니다."
             )
         ]
     )
@@ -1454,56 +1454,56 @@ struct KoreanLanguageExerciseData {
                 prompt: "토스트 만들기",
                 options: ["토스트에 버터를 바르세요", "토스터에 빵을 넣어주세요", "토스터에서 제거", "먹다"],
                 correctAnswer: "토스터에 빵을 넣어주세요 | 토스터에서 제거 | 토스트에 버터를 바르세요 | 먹다",
-                explanation: ""
+                explanation: "먼저 빵을 토스터에 넣고, 다 구워지면 꺼낸 다음 맛을 내기 위해 버터를 바르고, 마지막으로 먹는 조리 및 식사 순서이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "손 씻기",
                 options: ["수건으로 손을 말리세요", "손에 비누를 바르세요", "물을 켜세요", "20초간 문지르기", "비누를 헹구세요", "손을 적셔라"],
                 correctAnswer: "물을 켜세요 | 손을 적셔라 | 손에 비누를 바르세요 | 20초간 문지르기 | 비누를 헹구세요 | 수건으로 손을 말리세요",
-                explanation: ""
+                explanation: "물을 틀어 손을 적신 후 비누칠을 하여 세균을 문질러 닦아내고, 거품을 헹군 뒤 수건으로 물기를 닦는 위생적인 세척 단계이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "커피 만들기",
                 options: ["컵에 커피를 부어주세요", "필터에 커피가루를 넣어주세요", "추출 버튼을 누르세요", "물통을 채우세요"],
                 correctAnswer: "물통을 채우세요 | 필터에 커피가루를 넣어주세요 | 추출 버튼을 누르세요 | 컵에 커피를 부어주세요",
-                explanation: ""
+                explanation: "커피 머신에 물과 원두 가루를 세팅한 후, 기계를 작동시켜 커피를 추출하고 컵에 담는 논리적인 기기 사용 순서이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "전화 걸기",
                 options: ["인사해", "끊으세요", "전화를 받아", "전화번호를 누르세요", "대화를 나누세요"],
                 correctAnswer: "전화를 받아 | 전화번호를 누르세요 | 인사해 | 대화를 나누세요 | 끊으세요",
-                explanation: ""
+                explanation: "통화를 위해 수화기를 들고 번호를 누른 뒤, 상대방과 연결되면 대화를 나누고 통화가 끝난 후 끊는 통상적인 소통 흐름이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "옷 입기",
                 options: ["신발을 신다", "셔츠를 입으세요", "속옷을 입으세요", "양말을 신으세요", "바지를 입으세요"],
                 correctAnswer: "속옷을 입으세요 | 셔츠를 입으세요 | 바지를 입으세요 | 양말을 신으세요 | 신발을 신다",
-                explanation: ""
+                explanation: "가장 안쪽에 입는 속옷부터 시작해 상의와 하의를 입고, 마지막에 양말과 외출용 신발을 신는 실용적인 착의 순서이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "바닥 청소",
                 options: ["쓰레기통에 버리세요", "빗자루를 꺼내라", "잔해물을 쓰레받기에 담으세요.", "잔해물을 쓸어 모아 더미로 만든다"],
                 correctAnswer: "빗자루를 꺼내라 | 잔해물을 쓸어 모아 더미로 만든다 | 잔해물을 쓰레받기에 담으세요. | 쓰레기통에 버리세요",
-                explanation: ""
+                explanation: "청소 도구를 준비한 뒤 바닥의 쓰레기를 한 곳으로 모으고, 그것을 쓰레받기로 옮겨 담아 쓰레기통에 폐기하는 과정이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "레스토랑에서 주문하기",
                 options: ["식사하세요", "서버에게 주문을 말해주세요", "앉아", "음식을 기다려라", "메뉴 검토"],
                 correctAnswer: "앉아 | 메뉴 검토 | 서버에게 주문을 말해주세요 | 음식을 기다려라 | 식사하세요",
-                explanation: ""
+                explanation: "자리를 잡고 메뉴를 선택한 다음 종업원에게 주문을 하고, 음식이 나오기를 기다렸다가 식사하는 식당 이용의 시간적 흐름이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "쿠키 굽기",
                 options: ["쿠키를 식혀주세요", "오븐에 굽는다", "오븐을 예열하세요", "재료를 섞는다", "베이킹 시트에 반죽을 떠서 올려주세요"],
                 correctAnswer: "오븐을 예열하세요 | 재료를 섞는다 | 베이킹 시트에 반죽을 떠서 올려주세요 | 오븐에 굽는다 | 쿠키를 식혀주세요",
-                explanation: ""
+                explanation: "쿠키를 굽는 과정은 먼저 오븐을 예열하는 것으로 시작합니다. 그다음 재료를 섞고, 반죽을 베이킹 시트에 떠서 올립니다. 오븐에 넣어 굽고 난 후, 마지막으로 쿠키를 식혀주는 순서로 진행됩니다."
             )
         ]
     )

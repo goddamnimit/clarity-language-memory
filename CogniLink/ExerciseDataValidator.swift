@@ -216,6 +216,36 @@ enum ExerciseDataValidator {
     return []
   }
 
+  // MARK: - Warnings (non-blocking)
+
+  /// Non-blocking content-quality warnings; empty explanations are flagged here
+  /// rather than as errors because legacy catalogs are still being backfilled.
+  static func warnings(item: ExerciseItem, exerciseType: ExerciseType) -> [String] {
+    var warnings: [String] = []
+    if item.explanation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+      warnings.append("explanation is empty")
+    }
+    return warnings
+  }
+
+  /// Collects warnings across every catalog.
+  static func warningsForAllCatalogs() -> [ExerciseValidationIssue] {
+    catalogs.flatMap { catalog in
+      catalog.exercises().flatMap { exercise in
+        exercise.items.enumerated().flatMap { index, item in
+          warnings(item: item, exerciseType: exercise.type).map { message in
+            ExerciseValidationIssue(
+              sourceName: catalog.name,
+              exerciseTitle: exercise.title,
+              itemIndex: index,
+              message: message
+            )
+          }
+        }
+      }
+    }
+  }
+
   private static func validateSequencingAnswer(item: ExerciseItem) -> [String] {
     let steps = item.correctAnswer
       .split(separator: "|")
