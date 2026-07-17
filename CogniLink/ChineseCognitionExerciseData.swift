@@ -197,7 +197,7 @@ struct ChineseCognitionExerciseData {
             ExerciseItem(id: UUID(), prompt: "一个世纪有多少年？", options: ["100年", "50年", "1000年", "10年"], correctAnswer: "100年"),
             ExerciseItem(id: UUID(), prompt: "标准麻将牌有多少张？", options: ["144张", "108张", "136张", "160张"], correctAnswer: "144张"),
             ExerciseItem(id: UUID(), prompt: "人体有多少颗恒牙（成年人的牙齿）？", options: ["32颗", "28颗", "30颗", "34颗"], correctAnswer: "32颗"),
-            ExerciseItem(id: UUID(), prompt: "中国举办2008年夏季奥运会时共获得了多少枚金牌？", options: ["51枚", "36枚", "48枚", "42枚"], correctAnswer: "51枚"),
+            ExerciseItem(id: UUID(), prompt: "中国举办2008年夏季奥运会时共获得了多少枚金牌？", options: ["51枚", "36枚", "48枚", "42枚"], correctAnswer: "48枚"),
             ExerciseItem(id: UUID(), prompt: "美国总统任期是多少年？", options: ["4年", "2年", "6年", "8年"], correctAnswer: "4年"),
             ExerciseItem(id: UUID(), prompt: "一副标准扑克牌有多少张（不含大小王）？", options: ["52张", "48张", "54张", "40张"], correctAnswer: "52张"),
             ExerciseItem(id: UUID(), prompt: "中国传统节气一共有多少个？", options: ["24个", "12个", "18个", "36个"], correctAnswer: "24个")

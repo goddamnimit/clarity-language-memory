@@ -457,7 +457,7 @@ struct ChineseHardExercisesData {
             ExerciseItem(prompt: "桃李不言，下自成___", options: ["蹊", "路", "林", "市"], correctAnswer: "蹊", explanation: "桃树李树不会说话，但因花果美丽，树下自然会被踩出小路。"),
             ExerciseItem(prompt: "机不可失，时不再___", options: ["来", "有", "去", "现"], correctAnswer: "来", explanation: "机会非常难得，一旦失去就不会再来。"),
             ExerciseItem(prompt: "欲速则不___", options: ["达", "成", "快", "慢"], correctAnswer: "达", explanation: "过于性急图快，反而达不到目的。"),
-            ExerciseItem(prompt: "前事不忘，后事之___", options: ["师", "友", "鉴", "路"], correctAnswer: "师", explanation: "记住以前의 经验教训..."),
+            ExerciseItem(prompt: "千里之堤，溃于蚁___", options: ["穴", "河", "水", "桥"], correctAnswer: "穴", explanation: "堤坝虽然坚固漫长，却可能因为蚂蚁挖的小洞而崩溃，比喻微小的疏忽可能酿成大祸。"),
             ExerciseItem(prompt: "前事不忘，后事之___", options: ["师", "友", "鉴", "路"], correctAnswer: "师", explanation: "记住以前的经验教训，作为后世借鉴。"),
             ExerciseItem(prompt: "海纳百川，有容乃___", options: ["大", "深", "广", "多"], correctAnswer: "大", explanation: "比喻胸怀宽广。")
         ]
