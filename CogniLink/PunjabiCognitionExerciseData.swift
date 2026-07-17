@@ -594,528 +594,528 @@ struct PunjabiCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 1)",
+                prompt: "ਕੀ ਰੋਟੀ ਆਟੇ ਤੋਂ ਬਣਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਰੋਟੀ ਕਣਕ ਦੇ ਆਟੇ ਨੂੰ ਗੁੰਨ੍ਹ ਕੇ ਬਣਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 2)",
+                prompt: "ਕੀ ਲੱਸੀ ਦਹੀਂ ਤੋਂ ਬਣਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਲੱਸੀ ਦਹੀਂ ਨੂੰ ਰਿੜਕ ਕੇ ਬਣਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 3)",
+                prompt: "ਕੀ ਸਰ੍ਹੋਂ ਦਾ ਸਾਗ ਮੱਕੀ ਦੀ ਰੋਟੀ ਨਾਲ ਖਾਧਾ ਜਾਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਾਗ ਅਤੇ ਮੱਕੀ ਦੀ ਰੋਟੀ ਇੱਕ ਮਸ਼ਹੂਰ ਪੰਜਾਬੀ ਜੋੜੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 4)",
+                prompt: "ਕੀ ਲੱਸੀ ਆਮ ਤੌਰ 'ਤੇ ਗਰਮ ਕਰਕੇ ਪੀਤੀ ਜਾਂਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਲੱਸੀ ਠੰਢੀ ਪੀਤੀ ਜਾਂਦੀ ਹੈ, ਖ਼ਾਸ ਕਰਕੇ ਗਰਮੀਆਂ ਵਿੱਚ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 5)",
+                prompt: "ਕੀ ਗੁਰਦੁਆਰੇ ਅੰਦਰ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜੁੱਤੀ ਉਤਾਰੀ ਜਾਂਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗੁਰਦੁਆਰੇ ਵਿੱਚ ਜੁੱਤੀ ਉਤਾਰ ਕੇ ਅਤੇ ਸਿਰ ਢੱਕ ਕੇ ਜਾਇਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 6)",
+                prompt: "ਕੀ ਲੰਗਰ ਵਿੱਚ ਸਾਰੇ ਲੋਕ ਇਕੱਠੇ ਬੈਠ ਕੇ ਖਾਂਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਲੰਗਰ ਵਿੱਚ ਸਭ ਲੋਕ ਬਰਾਬਰ ਬੈਠ ਕੇ ਭੋਜਨ ਛਕਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 7)",
+                prompt: "ਕੀ ਵਿਸਾਖੀ ਦਸੰਬਰ ਦੇ ਮਹੀਨੇ ਵਿੱਚ ਮਨਾਈ ਜਾਂਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਵਿਸਾਖੀ ਅਪ੍ਰੈਲ ਦੇ ਮਹੀਨੇ ਵਿੱਚ ਮਨਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 8)",
+                prompt: "ਕੀ ਗੁਰਦੁਆਰੇ ਵਿੱਚ ਸਿਰ ਢੱਕਣਾ ਜ਼ਰੂਰੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗੁਰਦੁਆਰੇ ਵਿੱਚ ਸਤਿਕਾਰ ਵਜੋਂ ਸਿਰ ਢੱਕਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 9)",
+                prompt: "ਕੀ ਪਨੀਰ ਦੁੱਧ ਤੋਂ ਬਣਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਦੁੱਧ ਨੂੰ ਫਾੜ ਕੇ ਪਨੀਰ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 10)",
+                prompt: "ਕੀ ਜਲੇਬੀ ਇੱਕ ਨਮਕੀਨ ਚੀਜ਼ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਜਲੇਬੀ ਸ਼ੀਰੇ ਵਿੱਚ ਡੁੱਬੀ ਮਿੱਠੀ ਮਠਿਆਈ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 11)",
+                prompt: "ਕੀ ਚਾਹ ਬਣਾਉਣ ਲਈ ਪਾਣੀ ਉਬਾਲਣਾ ਪੈਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਚਾਹ ਪੱਤੀ ਉਬਲਦੇ ਪਾਣੀ ਵਿੱਚ ਪਾ ਕੇ ਚਾਹ ਬਣਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 12)",
+                prompt: "ਕੀ ਅਚਾਰ ਦਾ ਸੁਆਦ ਆਮ ਤੌਰ 'ਤੇ ਖੱਟਾ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਅਚਾਰ ਖੱਟਾ ਅਤੇ ਮਸਾਲੇਦਾਰ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 13)",
+                prompt: "ਕੀ ਸਮੋਸਾ ਤਲ ਕੇ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਮੋਸਾ ਤੇਲ ਵਿੱਚ ਤਲਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 14)",
+                prompt: "ਕੀ ਖੀਰ ਚੌਲਾਂ ਅਤੇ ਦੁੱਧ ਤੋਂ ਬਣਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਖੀਰ ਦੁੱਧ ਵਿੱਚ ਚੌਲ ਉਬਾਲ ਕੇ ਬਣਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 15)",
+                prompt: "ਕੀ ਮੱਖਣ ਪਾਣੀ ਤੋਂ ਬਣਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਮੱਖਣ ਦੁੱਧ ਦੀ ਮਲਾਈ ਜਾਂ ਦਹੀਂ ਰਿੜਕ ਕੇ ਬਣਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 16)",
+                prompt: "ਕੀ ਸੂਰਜ ਪੂਰਬ ਵੱਲੋਂ ਚੜ੍ਹਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸੂਰਜ ਪੂਰਬ ਵੱਲੋਂ ਚੜ੍ਹਦਾ ਅਤੇ ਪੱਛਮ ਵੱਲ ਛਿਪਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 17)",
+                prompt: "ਕੀ ਹਫ਼ਤੇ ਵਿੱਚ ਅੱਠ ਦਿਨ ਹੁੰਦੇ ਹਨ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਹਫ਼ਤੇ ਵਿੱਚ ਸੱਤ ਦਿਨ ਹੁੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 18)",
+                prompt: "ਕੀ ਬਰਫ਼ ਗਰਮ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਬਰਫ਼ ਬਹੁਤ ਠੰਢੀ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 19)",
+                prompt: "ਕੀ ਦਵਾਈ ਡਾਕਟਰ ਦੀ ਸਲਾਹ ਨਾਲ ਲੈਣੀ ਚਾਹੀਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਦਵਾਈ ਹਮੇਸ਼ਾ ਡਾਕਟਰ ਦੀ ਦੱਸੀ ਮਾਤਰਾ ਅਨੁਸਾਰ ਲੈਣੀ ਚਾਹੀਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 20)",
+                prompt: "ਕੀ ਰਾਤ ਨੂੰ ਸੌਣ ਤੋਂ ਪਹਿਲਾਂ ਦੰਦ ਸਾਫ਼ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸੌਣ ਤੋਂ ਪਹਿਲਾਂ ਦੰਦ ਸਾਫ਼ ਕਰਨ ਨਾਲ ਦੰਦ ਤੰਦਰੁਸਤ ਰਹਿੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 21)",
+                prompt: "ਕੀ ਲਾਲ ਬੱਤੀ ਹੋਣ 'ਤੇ ਗੱਡੀ ਰੋਕਣੀ ਚਾਹੀਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਲਾਲ ਬੱਤੀ ਰੁਕਣ ਦਾ ਇਸ਼ਾਰਾ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 22)",
+                prompt: "ਕੀ ਮੱਛੀ ਪਾਣੀ ਵਿੱਚ ਰਹਿੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਮੱਛੀ ਪਾਣੀ ਤੋਂ ਬਿਨਾਂ ਜੀਅ ਨਹੀਂ ਸਕਦੀ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 23)",
+                prompt: "ਕੀ ਕੁੱਕੜ ਦੁੱਧ ਦਿੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਦੁੱਧ ਗਾਂ ਜਾਂ ਮੱਝ ਵਰਗੇ ਪਸ਼ੂ ਦਿੰਦੇ ਹਨ, ਕੁੱਕੜ ਨਹੀਂ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 24)",
+                prompt: "ਕੀ ਸਾਲ ਵਿੱਚ ਬਾਰਾਂ ਮਹੀਨੇ ਹੁੰਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਾਲ ਵਿੱਚ ਜਨਵਰੀ ਤੋਂ ਦਸੰਬਰ ਤੱਕ ਬਾਰਾਂ ਮਹੀਨੇ ਹੁੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 25)",
+                prompt: "ਕੀ ਗਰਮੀਆਂ ਵਿੱਚ ਵੱਧ ਪਾਣੀ ਪੀਣਾ ਚੰਗਾ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗਰਮੀ ਵਿੱਚ ਪਸੀਨਾ ਆਉਣ ਕਰਕੇ ਸਰੀਰ ਨੂੰ ਵੱਧ ਪਾਣੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 26)",
+                prompt: "ਕੀ ਅੱਗ ਛੂਹਣ ਨਾਲ ਹੱਥ ਸੜ ਸਕਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਅੱਗ ਬਹੁਤ ਗਰਮ ਹੁੰਦੀ ਹੈ ਅਤੇ ਛੂਹਣ ਨਾਲ ਸਾੜ ਦਿੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 27)",
+                prompt: "ਕੀ ਚੰਦ ਦਿਨ ਵੇਲੇ ਸਭ ਤੋਂ ਵੱਧ ਚਮਕਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਚੰਦ ਰਾਤ ਨੂੰ ਚਮਕਦਾ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 28)",
+                prompt: "ਕੀ ਕੱਪੜੇ ਧੋਣ ਲਈ ਸਾਬਣ ਜਾਂ ਡਿਟਰਜੈਂਟ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਾਬਣ ਜਾਂ ਡਿਟਰਜੈਂਟ ਕੱਪੜਿਆਂ ਦੀ ਮੈਲ ਕੱਢਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 29)",
+                prompt: "ਕੀ ਤਰਬੂਜ਼ ਸਰਦੀਆਂ ਦਾ ਫਲ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਤਰਬੂਜ਼ ਗਰਮੀਆਂ ਦੀ ਰੁੱਤ ਦਾ ਫਲ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 30)",
+                prompt: "ਕੀ ਅੰਬ ਨੂੰ ਫਲਾਂ ਦਾ ਰਾਜਾ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਅੰਬ ਆਪਣੇ ਸੁਆਦ ਕਰਕੇ ਫਲਾਂ ਦਾ ਰਾਜਾ ਅਖਵਾਉਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 31)",
+                prompt: "ਕੀ ਗਾਜਰ ਜ਼ਮੀਨ ਹੇਠਾਂ ਉੱਗਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗਾਜਰ ਇੱਕ ਜੜ੍ਹ ਵਾਲੀ ਸਬਜ਼ੀ ਹੈ ਜੋ ਮਿੱਟੀ ਹੇਠਾਂ ਵਧਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 32)",
+                prompt: "ਕੀ ਦਹੀਂ ਜਮਾਉਣ ਲਈ ਦੁੱਧ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਕੋਸੇ ਦੁੱਧ ਵਿੱਚ ਜਾਗ ਲਾ ਕੇ ਦਹੀਂ ਜਮਾਇਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 33)",
+                prompt: "ਕੀ ਪੰਜਾਬੀ ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿੱਚ ਲਿਖੀ ਜਾਂਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਲਿਖਣ ਲਈ ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਰਤੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 34)",
+                prompt: "ਕੀ ਢੋਲ ਇੱਕ ਸਾਜ਼ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਢੋਲ ਵਜਾਉਣ ਵਾਲਾ ਇੱਕ ਲੋਕ ਸਾਜ਼ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 35)",
+                prompt: "ਕੀ ਭੰਗੜਾ ਇੱਕ ਪੰਜਾਬੀ ਲੋਕ ਨਾਚ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਭੰਗੜਾ ਪੰਜਾਬ ਦਾ ਮਸ਼ਹੂਰ ਲੋਕ ਨਾਚ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 36)",
+                prompt: "ਕੀ ਗਿੱਧਾ ਸਿਰਫ਼ ਮਰਦ ਪਾਉਂਦੇ ਹਨ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਗਿੱਧਾ ਮੁੱਖ ਤੌਰ 'ਤੇ ਔਰਤਾਂ ਦਾ ਲੋਕ ਨਾਚ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 37)",
+                prompt: "ਕੀ ਫੁਲਕਾਰੀ ਕਢਾਈ ਦੀ ਇੱਕ ਕਿਸਮ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਫੁਲਕਾਰੀ ਪੰਜਾਬ ਦੀ ਰਵਾਇਤੀ ਕਢਾਈ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 38)",
+                prompt: "ਕੀ ਸਰਦੀਆਂ ਵਿੱਚ ਗਰਮ ਕੱਪੜੇ ਪਾਉਣੇ ਚਾਹੀਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗਰਮ ਕੱਪੜੇ ਸਰੀਰ ਨੂੰ ਠੰਢ ਤੋਂ ਬਚਾਉਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 39)",
+                prompt: "ਕੀ ਪੌਦਿਆਂ ਨੂੰ ਵਧਣ ਲਈ ਪਾਣੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਪਾਣੀ ਤੋਂ ਬਿਨਾਂ ਪੌਦੇ ਸੁੱਕ ਜਾਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 40)",
+                prompt: "ਕੀ ਹਸਪਤਾਲ ਵਿੱਚ ਉੱਚੀ ਆਵਾਜ਼ ਵਿੱਚ ਗੱਲ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਹਸਪਤਾਲ ਵਿੱਚ ਮਰੀਜ਼ਾਂ ਦੇ ਆਰਾਮ ਲਈ ਹੌਲੀ ਬੋਲਣਾ ਚਾਹੀਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 41)",
+                prompt: "ਕੀ ਖਾਣਾ ਖਾਣ ਤੋਂ ਪਹਿਲਾਂ ਹੱਥ ਧੋਣੇ ਚਾਹੀਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਹੱਥ ਧੋਣ ਨਾਲ ਕੀਟਾਣੂ ਪੇਟ ਵਿੱਚ ਜਾਣ ਤੋਂ ਬਚਾਅ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 42)",
+                prompt: "ਕੀ ਦੁੱਧ ਫਰਿੱਜ ਵਿੱਚ ਰੱਖਣ ਨਾਲ ਦੇਰ ਤੱਕ ਠੀਕ ਰਹਿੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਠੰਢ ਵਿੱਚ ਦੁੱਧ ਜਲਦੀ ਖਰਾਬ ਨਹੀਂ ਹੁੰਦਾ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 43)",
+                prompt: "ਕੀ ਬੱਸ ਹਵਾ ਵਿੱਚ ਉੱਡਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਬੱਸ ਸੜਕ 'ਤੇ ਚੱਲਦੀ ਹੈ; ਹਵਾ ਵਿੱਚ ਜਹਾਜ਼ ਉੱਡਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 44)",
+                prompt: "ਕੀ ਐਤਵਾਰ ਹਫ਼ਤੇ ਦਾ ਇੱਕ ਦਿਨ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਐਤਵਾਰ ਹਫ਼ਤੇ ਦੇ ਸੱਤ ਦਿਨਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 45)",
+                prompt: "ਕੀ ਮੀਂਹ ਵਿੱਚ ਛਤਰੀ ਕੰਮ ਆਉਂਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਛਤਰੀ ਮੀਂਹ ਦੇ ਪਾਣੀ ਤੋਂ ਬਚਾਉਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 46)",
+                prompt: "ਕੀ ਸ਼ਹਿਦ ਮਿੱਠਾ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸ਼ਹਿਦ ਕੁਦਰਤੀ ਤੌਰ 'ਤੇ ਮਿੱਠਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 47)",
+                prompt: "ਕੀ ਨਿੰਬੂ ਦਾ ਸੁਆਦ ਮਿੱਠਾ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਨਿੰਬੂ ਦਾ ਸੁਆਦ ਖੱਟਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 48)",
+                prompt: "ਕੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚੋਂ ਕਿਤਾਬਾਂ ਉਧਾਰ ਮਿਲ ਸਕਦੀਆਂ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਲਾਇਬ੍ਰੇਰੀ ਕਾਰਡ ਨਾਲ ਕਿਤਾਬਾਂ ਉਧਾਰ ਲਈਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 49)",
+                prompt: "ਕੀ ਡਾਕਖਾਨੇ ਤੋਂ ਚਿੱਠੀ ਭੇਜੀ ਜਾ ਸਕਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਡਾਕਖਾਨਾ ਚਿੱਠੀਆਂ ਅਤੇ ਪਾਰਸਲ ਭੇਜਣ ਦਾ ਕੰਮ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 50)",
+                prompt: "ਕੀ ਹਰੀਆਂ ਸਬਜ਼ੀਆਂ ਸਿਹਤ ਲਈ ਚੰਗੀਆਂ ਹੁੰਦੀਆਂ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਹਰੀਆਂ ਸਬਜ਼ੀਆਂ ਵਿੱਚ ਵਿਟਾਮਿਨ ਅਤੇ ਲੋਹਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 51)",
+                prompt: "ਕੀ ਰਾਤ ਦਿਨ ਨਾਲੋਂ ਵੱਧ ਰੋਸ਼ਨੀ ਵਾਲੀ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਦਿਨ ਵੇਲੇ ਸੂਰਜ ਕਰਕੇ ਰੋਸ਼ਨੀ ਵੱਧ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 52)",
+                prompt: "ਕੀ ਫ਼ੋਨ ਨਾਲ ਦੂਰ ਬੈਠੇ ਰਿਸ਼ਤੇਦਾਰਾਂ ਨਾਲ ਗੱਲ ਹੋ ਸਕਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਫ਼ੋਨ ਰਾਹੀਂ ਦੂਰ-ਦੁਰਾਡੇ ਬੈਠੇ ਲੋਕਾਂ ਨਾਲ ਗੱਲਬਾਤ ਹੋ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 53)",
+                prompt: "ਕੀ ਪੈਸੇ ਬੈਂਕ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਰੱਖੇ ਜਾ ਸਕਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਬੈਂਕ ਖਾਤੇ ਵਿੱਚ ਪੈਸੇ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 54)",
+                prompt: "ਕੀ ਅਸੀਂ ਅੱਖਾਂ ਨਾਲ ਸੁਣਦੇ ਹਾਂ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਸੁਣਨ ਦਾ ਕੰਮ ਕੰਨ ਕਰਦੇ ਹਨ, ਅੱਖਾਂ ਵੇਖਣ ਦਾ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 55)",
+                prompt: "ਕੀ ਸਾਈਕਲ ਚਲਾਉਣ ਲਈ ਪੈਟਰੋਲ ਚਾਹੀਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਸਾਈਕਲ ਪੈਡਲ ਮਾਰ ਕੇ ਚੱਲਦਾ ਹੈ, ਪੈਟਰੋਲ ਨਾਲ ਨਹੀਂ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 56)",
+                prompt: "ਕੀ ਤਾਜ਼ੇ ਫਲ ਧੋ ਕੇ ਖਾਣੇ ਚਾਹੀਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਫਲ ਧੋਣ ਨਾਲ ਮਿੱਟੀ ਅਤੇ ਕੀਟਾਣੂ ਲਹਿ ਜਾਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 57)",
+                prompt: "ਕੀ ਬਹੁਤ ਗਰਮ ਚਾਹ ਇੱਕਦਮ ਵੱਡੇ ਘੁੱਟ ਭਰ ਕੇ ਪੀਣੀ ਚਾਹੀਦੀ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਬਹੁਤ ਗਰਮ ਚਾਹ ਨਾਲ ਮੂੰਹ ਸੜ ਸਕਦਾ ਹੈ; ਹੌਲੀ-ਹੌਲੀ ਪੀਣੀ ਚਾਹੀਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 58)",
+                prompt: "ਕੀ ਕਣਕ ਦੀ ਵਾਢੀ ਵਿਸਾਖੀ ਦੇ ਨੇੜੇ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਵਿਸਾਖੀ ਕਣਕ ਦੀ ਵਾਢੀ ਦਾ ਤਿਉਹਾਰ ਵੀ ਮੰਨੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 59)",
+                prompt: "ਕੀ ਪਤੰਗ ਹਵਾ ਨਾਲ ਉੱਡਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਪਤੰਗ ਉਡਾਉਣ ਲਈ ਹਵਾ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 60)",
+                prompt: "ਕੀ ਇੱਕ ਘੰਟੇ ਵਿੱਚ ਸੱਠ ਮਿੰਟ ਹੁੰਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਇੱਕ ਘੰਟਾ ਸੱਠ ਮਿੰਟਾਂ ਦਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 61)",
+                prompt: "ਕੀ ਪੱਕਾ ਟਮਾਟਰ ਨੀਲੇ ਰੰਗ ਦਾ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਪੱਕਾ ਟਮਾਟਰ ਲਾਲ ਰੰਗ ਦਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 62)",
+                prompt: "ਕੀ ਸਵੇਰ ਦੀ ਸੈਰ ਸਿਹਤ ਲਈ ਚੰਗੀ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਵੇਰ ਦੀ ਸੈਰ ਨਾਲ ਸਰੀਰ ਚੁਸਤ ਅਤੇ ਮਨ ਤਾਜ਼ਾ ਰਹਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 63)",
+                prompt: "ਕੀ ਛੋਟੀ ਅੱਗ ਬੁਝਾਉਣ ਲਈ ਪਾਣੀ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਪਾਣੀ ਅੱਗ ਨੂੰ ਠੰਢਾ ਕਰਕੇ ਬੁਝਾ ਦਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 64)",
+                prompt: "ਕੀ ਗੁਰਦੁਆਰੇ ਵਿੱਚ ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਵਰਤਾਇਆ ਜਾਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਗੁਰਦੁਆਰੇ ਵਿੱਚ ਸੰਗਤ ਨੂੰ ਕੜਾਹ ਪ੍ਰਸ਼ਾਦ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 65)",
+                prompt: "ਕੀ ਚੌਲ ਬਿਨਾਂ ਪਕਾਏ ਕੱਚੇ ਹੀ ਖਾਧੇ ਜਾਂਦੇ ਹਨ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਚੌਲ ਉਬਾਲ ਕੇ ਜਾਂ ਪਕਾ ਕੇ ਖਾਧੇ ਜਾਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 66)",
+                prompt: "ਕੀ ਸਰਦੀਆਂ ਵਿੱਚ ਦਿਨ ਛੋਟੇ ਹੁੰਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਰਦੀਆਂ ਵਿੱਚ ਦਿਨ ਛੋਟੇ ਅਤੇ ਰਾਤਾਂ ਲੰਮੀਆਂ ਹੁੰਦੀਆਂ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 67)",
+                prompt: "ਕੀ ਦਰਜ਼ੀ ਕੱਪੜੇ ਸਿਉਂਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਦਰਜ਼ੀ ਦਾ ਕੰਮ ਕੱਪੜੇ ਸਿਉਣਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 68)",
+                prompt: "ਕੀ ਮੋਚੀ ਦੰਦਾਂ ਦਾ ਇਲਾਜ ਕਰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਮੋਚੀ ਜੁੱਤੀਆਂ ਦੀ ਮੁਰੰਮਤ ਕਰਦਾ ਹੈ; ਦੰਦਾਂ ਦਾ ਇਲਾਜ ਡਾਕਟਰ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 69)",
+                prompt: "ਕੀ ਖੰਡ ਦਾ ਸੁਆਦ ਨਮਕੀਨ ਹੁੰਦਾ ਹੈ?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                correctAnswer: "No",
+                explanation: "ਖੰਡ ਮਿੱਠੀ ਹੁੰਦੀ ਹੈ, ਨਮਕੀਨ ਸੁਆਦ ਲੂਣ ਦਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 70)",
+                prompt: "ਕੀ ਬਜ਼ੁਰਗਾਂ ਦਾ ਸਤਿਕਾਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਵੱਡਿਆਂ ਦਾ ਆਦਰ ਕਰਨਾ ਚੰਗੇ ਸੰਸਕਾਰ ਦੀ ਨਿਸ਼ਾਨੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 71)",
+                prompt: "ਕੀ ਤੰਦੂਰ ਵਿੱਚ ਰੋਟੀ ਲਾਈ ਜਾ ਸਕਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਤੰਦੂਰ ਦੀ ਗਰਮ ਕੰਧ 'ਤੇ ਰੋਟੀ ਲਾ ਕੇ ਸੇਕੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 72)",
+                prompt: "ਕੀ ਸਾਗ ਬਣਨ ਵਿੱਚ ਕਾਫ਼ੀ ਸਮਾਂ ਲੱਗਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਸਾਗ ਹੌਲੀ-ਹੌਲੀ ਪੱਕ ਕੇ ਹੀ ਸੁਆਦ ਬਣਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 73)",
+                prompt: "ਕੀ ਅਮਰੀਕਾ ਵਿੱਚ ਕਾਰ ਚਲਾਉਣ ਲਈ ਲਾਇਸੰਸ ਚਾਹੀਦਾ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਕਾਰ ਚਲਾਉਣ ਲਈ ਡਰਾਈਵਿੰਗ ਲਾਇਸੰਸ ਲਾਜ਼ਮੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 74)",
+                prompt: "ਕੀ ਰਾਤ ਦੀ ਚੰਗੀ ਨੀਂਦ ਨਾਲ ਥਕਾਵਟ ਦੂਰ ਹੁੰਦੀ ਹੈ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਪੂਰੀ ਨੀਂਦ ਸਰੀਰ ਅਤੇ ਦਿਮਾਗ ਨੂੰ ਆਰਾਮ ਦਿੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is roti a popular traditional food in the Punjabi-American community? (Question 75)",
+                prompt: "ਕੀ ਪਕੌੜੇ ਮੀਂਹ ਦੇ ਮੌਸਮ ਵਿੱਚ ਚਾਹ ਨਾਲ ਖਾਧੇ ਜਾਂਦੇ ਹਨ?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "roti is a traditional food in the Punjabi-American community."
+                explanation: "ਮੀਂਹ ਵਾਲੇ ਦਿਨ ਗਰਮ ਪਕੌੜੇ ਅਤੇ ਚਾਹ ਬਹੁਤ ਪਸੰਦ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।"
             )
         ]
     )
@@ -1132,563 +1132,563 @@ struct PunjabiCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 1)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਰੋਟੀ : ਆਟਾ :: ਲੱਸੀ : ___",
+                options: ["ਦਹੀਂ", "ਪਾਣੀ", "ਲੂਣ", "ਖੰਡ"],
+                correctAnswer: "ਦਹੀਂ",
+                explanation: "ਜਿਵੇਂ ਰੋਟੀ ਆਟੇ ਤੋਂ ਬਣਦੀ ਹੈ, ਉਵੇਂ ਲੱਸੀ ਦਹੀਂ ਤੋਂ ਬਣਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 2)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦਿਨ : ਸੂਰਜ :: ਰਾਤ : ___",
+                options: ["ਤਾਰਾ", "ਚੰਦ", "ਬੱਦਲ", "ਦੀਵਾ"],
+                correctAnswer: "ਚੰਦ",
+                explanation: "ਦਿਨ ਵੇਲੇ ਸੂਰਜ ਅਤੇ ਰਾਤ ਨੂੰ ਚੰਦ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 3)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੱਖ : ਵੇਖਣਾ :: ਕੰਨ : ___",
+                options: ["ਬੋਲਣਾ", "ਸੁੰਘਣਾ", "ਸੁਣਨਾ", "ਛੂਹਣਾ"],
+                correctAnswer: "ਸੁਣਨਾ",
+                explanation: "ਅੱਖ ਦਾ ਕੰਮ ਵੇਖਣਾ ਹੈ ਅਤੇ ਕੰਨ ਦਾ ਕੰਮ ਸੁਣਨਾ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 4)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪੈਰ : ਜੁੱਤੀ :: ਹੱਥ : ___",
+                options: ["ਟੋਪੀ", "ਜੁਰਾਬ", "ਘੜੀ", "ਦਸਤਾਨਾ"],
+                correctAnswer: "ਦਸਤਾਨਾ",
+                explanation: "ਜੁੱਤੀ ਪੈਰ ਵਿੱਚ ਅਤੇ ਦਸਤਾਨਾ ਹੱਥ ਵਿੱਚ ਪਾਇਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 5)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪੰਛੀ : ਆਲ੍ਹਣਾ :: ਮਧੂਮੱਖੀ : ___",
+                options: ["ਛੱਤਾ", "ਖੁੱਡ", "ਗੁਫਾ", "ਪਿੰਜਰਾ"],
+                correctAnswer: "ਛੱਤਾ",
+                explanation: "ਪੰਛੀ ਆਲ੍ਹਣੇ ਵਿੱਚ ਅਤੇ ਮਧੂਮੱਖੀ ਛੱਤੇ ਵਿੱਚ ਰਹਿੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 6)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਗਰਮੀ : ਪੱਖਾ :: ਸਰਦੀ : ___",
+                options: ["ਕੂਲਰ", "ਹੀਟਰ", "ਛਤਰੀ", "ਫਰਿੱਜ"],
+                correctAnswer: "ਹੀਟਰ",
+                explanation: "ਗਰਮੀ ਵਿੱਚ ਪੱਖਾ ਅਤੇ ਸਰਦੀ ਵਿੱਚ ਹੀਟਰ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 7)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਿਤਾਬ : ਪੜ੍ਹਨਾ :: ਗੀਤ : ___",
+                options: ["ਲਿਖਣਾ", "ਵੇਖਣਾ", "ਸੁਣਨਾ", "ਖਾਣਾ"],
+                correctAnswer: "ਸੁਣਨਾ",
+                explanation: "ਕਿਤਾਬ ਪੜ੍ਹੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਗੀਤ ਸੁਣਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 8)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਮੱਛੀ : ਪਾਣੀ :: ਪੰਛੀ : ___",
+                options: ["ਮਿੱਟੀ", "ਜੰਗਲ", "ਸਮੁੰਦਰ", "ਅਸਮਾਨ"],
+                correctAnswer: "ਅਸਮਾਨ",
+                explanation: "ਮੱਛੀ ਪਾਣੀ ਵਿੱਚ ਤੈਰਦੀ ਹੈ ਅਤੇ ਪੰਛੀ ਅਸਮਾਨ ਵਿੱਚ ਉੱਡਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 9)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਡਾਕਟਰ : ਹਸਪਤਾਲ :: ਅਧਿਆਪਕ : ___",
+                options: ["ਸਕੂਲ", "ਦੁਕਾਨ", "ਬੈਂਕ", "ਖੇਤ"],
+                correctAnswer: "ਸਕੂਲ",
+                explanation: "ਡਾਕਟਰ ਹਸਪਤਾਲ ਵਿੱਚ ਅਤੇ ਅਧਿਆਪਕ ਸਕੂਲ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 10)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਚਾਹ : ਕੱਪ :: ਦਾਲ : ___",
+                options: ["ਥਾਲੀ", "ਕੌਲੀ", "ਗਲਾਸ", "ਚਮਚ"],
+                correctAnswer: "ਕੌਲੀ",
+                explanation: "ਚਾਹ ਕੱਪ ਵਿੱਚ ਅਤੇ ਦਾਲ ਕੌਲੀ ਵਿੱਚ ਪਰੋਸੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 11)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਲਮ : ਲਿਖਣਾ :: ਕੈਂਚੀ : ___",
+                options: ["ਸਿਉਣਾ", "ਮਿਟਾਉਣਾ", "ਕੱਟਣਾ", "ਜੋੜਨਾ"],
+                correctAnswer: "ਕੱਟਣਾ",
+                explanation: "ਕਲਮ ਲਿਖਣ ਲਈ ਅਤੇ ਕੈਂਚੀ ਕੱਟਣ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 12)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਭੁੱਖ : ਰੋਟੀ :: ਪਿਆਸ : ___",
+                options: ["ਦੁੱਧ", "ਫਲ", "ਹਵਾ", "ਪਾਣੀ"],
+                correctAnswer: "ਪਾਣੀ",
+                explanation: "ਭੁੱਖ ਰੋਟੀ ਨਾਲ ਅਤੇ ਪਿਆਸ ਪਾਣੀ ਨਾਲ ਮਿਟਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 13)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਗਾਂ : ਵੱਛਾ :: ਮੱਝ : ___",
+                options: ["ਕੱਟਾ", "ਬੱਕਰਾ", "ਵਹਿੜਾ", "ਲੇਲਾ"],
+                correctAnswer: "ਕੱਟਾ",
+                explanation: "ਗਾਂ ਦੇ ਬੱਚੇ ਨੂੰ ਵੱਛਾ ਅਤੇ ਮੱਝ ਦੇ ਬੱਚੇ ਨੂੰ ਕੱਟਾ ਕਹਿੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 14)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੰਬ : ਫਲ :: ਗਾਜਰ : ___",
+                options: ["ਫੁੱਲ", "ਸਬਜ਼ੀ", "ਅਨਾਜ", "ਮਠਿਆਈ"],
+                correctAnswer: "ਸਬਜ਼ੀ",
+                explanation: "ਅੰਬ ਇੱਕ ਫਲ ਹੈ ਅਤੇ ਗਾਜਰ ਇੱਕ ਸਬਜ਼ੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 15)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸਵੇਰ : ਨਾਸ਼ਤਾ :: ਰਾਤ : ___",
+                options: ["ਚਾਹ", "ਲੱਸੀ", "ਰਾਤ ਦਾ ਖਾਣਾ", "ਮਠਿਆਈ"],
+                correctAnswer: "ਰਾਤ ਦਾ ਖਾਣਾ",
+                explanation: "ਸਵੇਰੇ ਨਾਸ਼ਤਾ ਅਤੇ ਰਾਤ ਨੂੰ ਰਾਤ ਦਾ ਖਾਣਾ ਖਾਧਾ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 16)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਢੋਲ : ਵਜਾਉਣਾ :: ਭੰਗੜਾ : ___",
+                options: ["ਗਾਉਣਾ", "ਸੁਣਨਾ", "ਲਿਖਣਾ", "ਨੱਚਣਾ"],
+                correctAnswer: "ਨੱਚਣਾ",
+                explanation: "ਢੋਲ ਵਜਾਇਆ ਜਾਂਦਾ ਹੈ ਅਤੇ ਭੰਗੜਾ ਨੱਚਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 17)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੱਗ : ਗਰਮ :: ਬਰਫ਼ : ___",
+                options: ["ਠੰਢੀ", "ਗਿੱਲੀ", "ਸੁੱਕੀ", "ਨਰਮ"],
+                correctAnswer: "ਠੰਢੀ",
+                explanation: "ਅੱਗ ਗਰਮ ਹੁੰਦੀ ਹੈ ਅਤੇ ਬਰਫ਼ ਠੰਢੀ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 18)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਖੰਡ : ਮਿੱਠੀ :: ਨਿੰਬੂ : ___",
+                options: ["ਮਿੱਠਾ", "ਖੱਟਾ", "ਕੌੜਾ", "ਨਮਕੀਨ"],
+                correctAnswer: "ਖੱਟਾ",
+                explanation: "ਖੰਡ ਦਾ ਸੁਆਦ ਮਿੱਠਾ ਅਤੇ ਨਿੰਬੂ ਦਾ ਖੱਟਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 19)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦਰਜ਼ੀ : ਕੱਪੜੇ :: ਮੋਚੀ : ___",
+                options: ["ਭਾਂਡੇ", "ਗਹਿਣੇ", "ਜੁੱਤੀਆਂ", "ਕਿਤਾਬਾਂ"],
+                correctAnswer: "ਜੁੱਤੀਆਂ",
+                explanation: "ਦਰਜ਼ੀ ਕੱਪੜੇ ਸਿਉਂਦਾ ਹੈ ਅਤੇ ਮੋਚੀ ਜੁੱਤੀਆਂ ਬਣਾਉਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 20)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਰੇਲ : ਪਟੜੀ :: ਕਾਰ : ___",
+                options: ["ਨਦੀ", "ਪੁਲ", "ਹਵਾ", "ਸੜਕ"],
+                correctAnswer: "ਸੜਕ",
+                explanation: "ਰੇਲ ਪਟੜੀ 'ਤੇ ਅਤੇ ਕਾਰ ਸੜਕ 'ਤੇ ਚੱਲਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 21)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪਿੰਡ : ਛੋਟਾ :: ਸ਼ਹਿਰ : ___",
+                options: ["ਵੱਡਾ", "ਛੋਟਾ", "ਖਾਲੀ", "ਹਨੇਰਾ"],
+                correctAnswer: "ਵੱਡਾ",
+                explanation: "ਪਿੰਡ ਆਮ ਤੌਰ 'ਤੇ ਛੋਟਾ ਅਤੇ ਸ਼ਹਿਰ ਵੱਡਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 22)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਮੀਜ਼ : ਬਟਨ :: ਜੁੱਤੀ : ___",
+                options: ["ਜੇਬ", "ਤਸਮਾ", "ਕਾਲਰ", "ਟੋਪੀ"],
+                correctAnswer: "ਤਸਮਾ",
+                explanation: "ਕਮੀਜ਼ ਬਟਨ ਨਾਲ ਅਤੇ ਜੁੱਤੀ ਤਸਮੇ ਨਾਲ ਬੰਦ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 23)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਿਸਾਨ : ਖੇਤ :: ਦੁਕਾਨਦਾਰ : ___",
+                options: ["ਹਸਪਤਾਲ", "ਸਕੂਲ", "ਦੁਕਾਨ", "ਦਫ਼ਤਰ"],
+                correctAnswer: "ਦੁਕਾਨ",
+                explanation: "ਕਿਸਾਨ ਖੇਤ ਵਿੱਚ ਅਤੇ ਦੁਕਾਨਦਾਰ ਦੁਕਾਨ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 24)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦੁੱਧ : ਚਿੱਟਾ :: ਘਾਹ : ___",
+                options: ["ਲਾਲ", "ਪੀਲਾ", "ਕਾਲਾ", "ਹਰਾ"],
+                correctAnswer: "ਹਰਾ",
+                explanation: "ਦੁੱਧ ਦਾ ਰੰਗ ਚਿੱਟਾ ਅਤੇ ਘਾਹ ਦਾ ਹਰਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 25)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੱਖਾਂ : ਦੋ :: ਉਂਗਲਾਂ : ___",
+                options: ["ਦਸ", "ਪੰਜ", "ਚਾਰ", "ਵੀਹ"],
+                correctAnswer: "ਦਸ",
+                explanation: "ਸਰੀਰ ਵਿੱਚ ਦੋ ਅੱਖਾਂ ਅਤੇ ਹੱਥਾਂ ਦੀਆਂ ਦਸ ਉਂਗਲਾਂ ਹੁੰਦੀਆਂ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 26)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹਾਥੀ : ਵੱਡਾ :: ਚੂਹਾ : ___",
+                options: ["ਭਾਰਾ", "ਛੋਟਾ", "ਲੰਮਾ", "ਤੇਜ਼"],
+                correctAnswer: "ਛੋਟਾ",
+                explanation: "ਹਾਥੀ ਬਹੁਤ ਵੱਡਾ ਅਤੇ ਚੂਹਾ ਬਹੁਤ ਛੋਟਾ ਜਾਨਵਰ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 27)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਿਸ਼ਤੀ : ਪਾਣੀ :: ਜਹਾਜ਼ : ___",
+                options: ["ਸੜਕ", "ਪਟੜੀ", "ਹਵਾ", "ਮਿੱਟੀ"],
+                correctAnswer: "ਹਵਾ",
+                explanation: "ਕਿਸ਼ਤੀ ਪਾਣੀ ਵਿੱਚ ਅਤੇ ਜਹਾਜ਼ ਹਵਾ ਵਿੱਚ ਚੱਲਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 28)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਚਾਬੀ : ਤਾਲਾ :: ਢੱਕਣ : ___",
+                options: ["ਦਰਵਾਜ਼ਾ", "ਖਿੜਕੀ", "ਅਲਮਾਰੀ", "ਡੱਬਾ"],
+                correctAnswer: "ਡੱਬਾ",
+                explanation: "ਚਾਬੀ ਤਾਲਾ ਖੋਲ੍ਹਦੀ ਹੈ ਅਤੇ ਢੱਕਣ ਡੱਬਾ ਬੰਦ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 29)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਣਕ : ਆਟਾ :: ਗੰਨਾ : ___",
+                options: ["ਗੁੜ", "ਲੂਣ", "ਦਹੀਂ", "ਤੇਲ"],
+                correctAnswer: "ਗੁੜ",
+                explanation: "ਕਣਕ ਤੋਂ ਆਟਾ ਅਤੇ ਗੰਨੇ ਤੋਂ ਗੁੜ ਬਣਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 30)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਮੁਰਗੀ : ਆਂਡਾ :: ਗਾਂ : ___",
+                options: ["ਪਾਣੀ", "ਦੁੱਧ", "ਮੀਟ", "ਘਾਹ"],
+                correctAnswer: "ਦੁੱਧ",
+                explanation: "ਮੁਰਗੀ ਆਂਡਾ ਦਿੰਦੀ ਹੈ ਅਤੇ ਗਾਂ ਦੁੱਧ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 31)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸੋਮਵਾਰ : ਮੰਗਲਵਾਰ :: ਜਨਵਰੀ : ___",
+                options: ["ਮਾਰਚ", "ਦਸੰਬਰ", "ਫਰਵਰੀ", "ਜੂਨ"],
+                correctAnswer: "ਫਰਵਰੀ",
+                explanation: "ਸੋਮਵਾਰ ਤੋਂ ਬਾਅਦ ਮੰਗਲਵਾਰ ਅਤੇ ਜਨਵਰੀ ਤੋਂ ਬਾਅਦ ਫਰਵਰੀ ਆਉਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 32)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਤਰਾਜ਼ੂ : ਤੋਲਣਾ :: ਫੀਤਾ : ___",
+                options: ["ਕੱਟਣਾ", "ਬੰਨ੍ਹਣਾ", "ਲਿਖਣਾ", "ਮਾਪਣਾ"],
+                correctAnswer: "ਮਾਪਣਾ",
+                explanation: "ਤਰਾਜ਼ੂ ਨਾਲ ਤੋਲਿਆ ਅਤੇ ਫੀਤੇ ਨਾਲ ਮਾਪਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 33)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਬੱਦਲ : ਮੀਂਹ :: ਅੱਗ : ___",
+                options: ["ਧੂੰਆਂ", "ਪਾਣੀ", "ਹਵਾ", "ਬਿਜਲੀ"],
+                correctAnswer: "ਧੂੰਆਂ",
+                explanation: "ਬੱਦਲਾਂ ਤੋਂ ਮੀਂਹ ਪੈਂਦਾ ਹੈ ਅਤੇ ਅੱਗ ਤੋਂ ਧੂੰਆਂ ਨਿਕਲਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 34)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਬਿਮਾਰੀ : ਦਵਾਈ :: ਭੁੱਖ : ___",
+                options: ["ਪਾਣੀ", "ਖਾਣਾ", "ਨੀਂਦ", "ਸੈਰ"],
+                correctAnswer: "ਖਾਣਾ",
+                explanation: "ਬਿਮਾਰੀ ਦਾ ਇਲਾਜ ਦਵਾਈ ਅਤੇ ਭੁੱਖ ਦਾ ਹੱਲ ਖਾਣਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 35)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕੁਰਸੀ : ਬੈਠਣਾ :: ਮੰਜਾ : ___",
+                options: ["ਖੜ੍ਹਨਾ", "ਤੁਰਨਾ", "ਸੌਣਾ", "ਦੌੜਨਾ"],
+                correctAnswer: "ਸੌਣਾ",
+                explanation: "ਕੁਰਸੀ ਬੈਠਣ ਲਈ ਅਤੇ ਮੰਜਾ ਸੌਣ ਲਈ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 36)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਟੋਪੀ : ਸਿਰ :: ਐਨਕ : ___",
+                options: ["ਕੰਨ", "ਨੱਕ", "ਹੱਥ", "ਅੱਖਾਂ"],
+                correctAnswer: "ਅੱਖਾਂ",
+                explanation: "ਟੋਪੀ ਸਿਰ 'ਤੇ ਅਤੇ ਐਨਕ ਅੱਖਾਂ 'ਤੇ ਲਗਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 37)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਤਾਰੇ : ਰਾਤ :: ਸੂਰਜ : ___",
+                options: ["ਦਿਨ", "ਸ਼ਾਮ", "ਰਾਤ", "ਬੱਦਲ"],
+                correctAnswer: "ਦਿਨ",
+                explanation: "ਤਾਰੇ ਰਾਤ ਨੂੰ ਅਤੇ ਸੂਰਜ ਦਿਨ ਵੇਲੇ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 38)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਗੁਰਦੁਆਰਾ : ਸਿੱਖ :: ਮੰਦਰ : ___",
+                options: ["ਸਿੱਖ", "ਹਿੰਦੂ", "ਈਸਾਈ", "ਬੋਧੀ"],
+                correctAnswer: "ਹਿੰਦੂ",
+                explanation: "ਗੁਰਦੁਆਰਾ ਸਿੱਖਾਂ ਦਾ ਅਤੇ ਮੰਦਰ ਹਿੰਦੂਆਂ ਦਾ ਧਾਰਮਿਕ ਸਥਾਨ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 39)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਵਿਸਾਖੀ : ਅਪ੍ਰੈਲ :: ਲੋਹੜੀ : ___",
+                options: ["ਮਈ", "ਅਗਸਤ", "ਜਨਵਰੀ", "ਅਕਤੂਬਰ"],
+                correctAnswer: "ਜਨਵਰੀ",
+                explanation: "ਵਿਸਾਖੀ ਅਪ੍ਰੈਲ ਵਿੱਚ ਅਤੇ ਲੋਹੜੀ ਜਨਵਰੀ ਵਿੱਚ ਮਨਾਈ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 40)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਠੰਢ : ਸਵੈਟਰ :: ਮੀਂਹ : ___",
+                options: ["ਪੱਖਾ", "ਐਨਕ", "ਟੋਪੀ", "ਛਤਰੀ"],
+                correctAnswer: "ਛਤਰੀ",
+                explanation: "ਠੰਢ ਤੋਂ ਸਵੈਟਰ ਅਤੇ ਮੀਂਹ ਤੋਂ ਛਤਰੀ ਬਚਾਉਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 41)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਚਿੱਠੀ : ਡਾਕੀਆ :: ਦੁੱਧ : ___",
+                options: ["ਦੋਧੀ", "ਦਰਜ਼ੀ", "ਮੋਚੀ", "ਹਲਵਾਈ"],
+                correctAnswer: "ਦੋਧੀ",
+                explanation: "ਚਿੱਠੀ ਡਾਕੀਆ ਪਹੁੰਚਾਉਂਦਾ ਹੈ ਅਤੇ ਦੁੱਧ ਦੋਧੀ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 42)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਖੇਤ : ਕਣਕ :: ਬਾਗ : ___",
+                options: ["ਪਾਣੀ", "ਫਲ", "ਘਾਹ", "ਰੇਤ"],
+                correctAnswer: "ਫਲ",
+                explanation: "ਖੇਤ ਵਿੱਚ ਕਣਕ ਅਤੇ ਬਾਗ ਵਿੱਚ ਫਲ ਉੱਗਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 43)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸ਼ੇਰ : ਜੰਗਲ :: ਊਠ : ___",
+                options: ["ਸਮੁੰਦਰ", "ਪਹਾੜ", "ਰੇਗਿਸਤਾਨ", "ਖੇਤ"],
+                correctAnswer: "ਰੇਗਿਸਤਾਨ",
+                explanation: "ਸ਼ੇਰ ਜੰਗਲ ਵਿੱਚ ਅਤੇ ਊਠ ਰੇਗਿਸਤਾਨ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 44)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪਾਣੀ : ਪੀਣਾ :: ਰੋਟੀ : ___",
+                options: ["ਪੀਣਾ", "ਸੁੰਘਣਾ", "ਵੇਖਣਾ", "ਖਾਣਾ"],
+                correctAnswer: "ਖਾਣਾ",
+                explanation: "ਪਾਣੀ ਪੀਤਾ ਜਾਂਦਾ ਹੈ ਅਤੇ ਰੋਟੀ ਖਾਧੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 45)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸਿਰ : ਵਾਲ :: ਪੰਛੀ : ___",
+                options: ["ਖੰਭ", "ਚੁੰਝ", "ਪੰਜੇ", "ਆਲ੍ਹਣਾ"],
+                correctAnswer: "ਖੰਭ",
+                explanation: "ਸਿਰ 'ਤੇ ਵਾਲ ਹੁੰਦੇ ਹਨ ਅਤੇ ਪੰਛੀ ਦੇ ਸਰੀਰ 'ਤੇ ਖੰਭ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 46)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਘੜੀ : ਸਮਾਂ :: ਕੈਲੰਡਰ : ___",
+                options: ["ਮੌਸਮ", "ਤਾਰੀਖ਼", "ਭਾਰ", "ਦੂਰੀ"],
+                correctAnswer: "ਤਾਰੀਖ਼",
+                explanation: "ਘੜੀ ਸਮਾਂ ਦੱਸਦੀ ਹੈ ਅਤੇ ਕੈਲੰਡਰ ਤਾਰੀਖ਼।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 47)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਨਰਸ : ਹਸਪਤਾਲ :: ਰਸੋਈਆ : ___",
+                options: ["ਬਗੀਚਾ", "ਦਫ਼ਤਰ", "ਰਸੋਈ", "ਦੁਕਾਨ"],
+                correctAnswer: "ਰਸੋਈ",
+                explanation: "ਨਰਸ ਹਸਪਤਾਲ ਵਿੱਚ ਅਤੇ ਰਸੋਈਆ ਰਸੋਈ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 48)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹਥੌੜਾ : ਠੋਕਣਾ :: ਆਰੀ : ___",
+                options: ["ਜੋੜਨਾ", "ਮਾਪਣਾ", "ਰੰਗਣਾ", "ਚੀਰਨਾ"],
+                correctAnswer: "ਚੀਰਨਾ",
+                explanation: "ਹਥੌੜੇ ਨਾਲ ਕਿੱਲ ਠੋਕੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਆਰੀ ਨਾਲ ਲੱਕੜ ਚੀਰੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 49)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੰਗੂਰ : ਵੇਲ :: ਅੰਬ : ___",
+                options: ["ਰੁੱਖ", "ਝਾੜੀ", "ਘਾਹ", "ਜੜ੍ਹ"],
+                correctAnswer: "ਰੁੱਖ",
+                explanation: "ਅੰਗੂਰ ਵੇਲ ਨੂੰ ਅਤੇ ਅੰਬ ਰੁੱਖ ਨੂੰ ਲੱਗਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 50)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹੌਲੀ : ਤੇਜ਼ :: ਠੰਢਾ : ___",
+                options: ["ਠੰਢਾ", "ਗਰਮ", "ਗਿੱਲਾ", "ਨਰਮ"],
+                correctAnswer: "ਗਰਮ",
+                explanation: "ਜਿਵੇਂ ਹੌਲੀ ਦਾ ਉਲਟ ਤੇਜ਼ ਹੈ, ਉਵੇਂ ਠੰਢੇ ਦਾ ਉਲਟ ਗਰਮ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 51)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹਨੇਰਾ : ਰੋਸ਼ਨੀ :: ਸਵਾਲ : ___",
+                options: ["ਸਵਾਲ", "ਕਹਾਣੀ", "ਜਵਾਬ", "ਗੀਤ"],
+                correctAnswer: "ਜਵਾਬ",
+                explanation: "ਹਨੇਰੇ ਦਾ ਉਲਟ ਰੋਸ਼ਨੀ ਅਤੇ ਸਵਾਲ ਦਾ ਜੋੜ ਜਵਾਬ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 52)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕੈਂਚੀ : ਦਰਜ਼ੀ :: ਹਲ : ___",
+                options: ["ਡਾਕਟਰ", "ਮੋਚੀ", "ਦੁਕਾਨਦਾਰ", "ਕਿਸਾਨ"],
+                correctAnswer: "ਕਿਸਾਨ",
+                explanation: "ਕੈਂਚੀ ਦਰਜ਼ੀ ਦਾ ਅਤੇ ਹਲ ਕਿਸਾਨ ਦਾ ਸੰਦ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 53)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦਵਾਈ : ਫਾਰਮੇਸੀ :: ਸਬਜ਼ੀ : ___",
+                options: ["ਮੰਡੀ", "ਬੈਂਕ", "ਲਾਇਬ੍ਰੇਰੀ", "ਡਾਕਖਾਨਾ"],
+                correctAnswer: "ਮੰਡੀ",
+                explanation: "ਦਵਾਈ ਫਾਰਮੇਸੀ ਤੋਂ ਅਤੇ ਸਬਜ਼ੀ ਮੰਡੀ ਤੋਂ ਮਿਲਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 54)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪੈਸਾ : ਬਟੂਆ :: ਕੱਪੜੇ : ___",
+                options: ["ਡੱਬਾ", "ਅਲਮਾਰੀ", "ਥੈਲਾ", "ਜੇਬ"],
+                correctAnswer: "ਅਲਮਾਰੀ",
+                explanation: "ਪੈਸੇ ਬਟੂਏ ਵਿੱਚ ਅਤੇ ਕੱਪੜੇ ਅਲਮਾਰੀ ਵਿੱਚ ਰੱਖੇ ਜਾਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 55)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅਧਿਆਪਕ : ਪੜ੍ਹਾਉਣਾ :: ਡਾਕਟਰ : ___",
+                options: ["ਗਾਉਣਾ", "ਵੇਚਣਾ", "ਇਲਾਜ ਕਰਨਾ", "ਸਿਉਣਾ"],
+                correctAnswer: "ਇਲਾਜ ਕਰਨਾ",
+                explanation: "ਅਧਿਆਪਕ ਪੜ੍ਹਾਉਂਦਾ ਹੈ ਅਤੇ ਡਾਕਟਰ ਇਲਾਜ ਕਰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 56)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਗਰਮੀ : ਜੂਨ :: ਸਰਦੀ : ___",
+                options: ["ਅਪ੍ਰੈਲ", "ਜੁਲਾਈ", "ਸਤੰਬਰ", "ਦਸੰਬਰ"],
+                correctAnswer: "ਦਸੰਬਰ",
+                explanation: "ਜੂਨ ਵਿੱਚ ਗਰਮੀ ਅਤੇ ਦਸੰਬਰ ਵਿੱਚ ਸਰਦੀ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 57)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਲੂਣ : ਨਮਕੀਨ :: ਸ਼ਹਿਦ : ___",
+                options: ["ਮਿੱਠਾ", "ਖੱਟਾ", "ਕੌੜਾ", "ਫਿੱਕਾ"],
+                correctAnswer: "ਮਿੱਠਾ",
+                explanation: "ਲੂਣ ਦਾ ਸੁਆਦ ਨਮਕੀਨ ਅਤੇ ਸ਼ਹਿਦ ਦਾ ਮਿੱਠਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 58)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕੁੱਤਾ : ਭੌਂਕਣਾ :: ਬਿੱਲੀ : ___",
+                options: ["ਦਹਾੜਨਾ", "ਮਿਆਉਂ ਕਰਨਾ", "ਹਿਣਕਣਾ", "ਚਹਿਕਣਾ"],
+                correctAnswer: "ਮਿਆਉਂ ਕਰਨਾ",
+                explanation: "ਕੁੱਤਾ ਭੌਂਕਦਾ ਹੈ ਅਤੇ ਬਿੱਲੀ ਮਿਆਉਂ ਕਰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 59)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਚਿੜੀ : ਚਹਿਕਣਾ :: ਸ਼ੇਰ : ___",
+                options: ["ਭੌਂਕਣਾ", "ਮਿਆਉਂ ਕਰਨਾ", "ਦਹਾੜਨਾ", "ਰੰਭਣਾ"],
+                correctAnswer: "ਦਹਾੜਨਾ",
+                explanation: "ਚਿੜੀ ਚਹਿਕਦੀ ਹੈ ਅਤੇ ਸ਼ੇਰ ਦਹਾੜਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 60)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸਾਈਕਲ : ਦੋ ਪਹੀਏ :: ਕਾਰ : ___",
+                options: ["ਤਿੰਨ ਪਹੀਏ", "ਛੇ ਪਹੀਏ", "ਇੱਕ ਪਹੀਆ", "ਚਾਰ ਪਹੀਏ"],
+                correctAnswer: "ਚਾਰ ਪਹੀਏ",
+                explanation: "ਸਾਈਕਲ ਦੇ ਦੋ ਅਤੇ ਕਾਰ ਦੇ ਚਾਰ ਪਹੀਏ ਹੁੰਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 61)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੱਖਰ : ਸ਼ਬਦ :: ਸ਼ਬਦ : ___",
+                options: ["ਵਾਕ", "ਅੱਖਰ", "ਕਿਤਾਬ", "ਕਲਮ"],
+                correctAnswer: "ਵਾਕ",
+                explanation: "ਅੱਖਰਾਂ ਤੋਂ ਸ਼ਬਦ ਅਤੇ ਸ਼ਬਦਾਂ ਤੋਂ ਵਾਕ ਬਣਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 62)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਰੁੱਖ : ਛਾਂ :: ਦੀਵਾ : ___",
+                options: ["ਹਨੇਰਾ", "ਰੋਸ਼ਨੀ", "ਧੂੰਆਂ", "ਹਵਾ"],
+                correctAnswer: "ਰੋਸ਼ਨੀ",
+                explanation: "ਰੁੱਖ ਛਾਂ ਦਿੰਦਾ ਹੈ ਅਤੇ ਦੀਵਾ ਰੋਸ਼ਨੀ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 63)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਭੈਣ : ਭਰਾ :: ਮਾਤਾ : ___",
+                options: ["ਚਾਚਾ", "ਪੁੱਤਰ", "ਪਿਤਾ", "ਦਾਦਾ"],
+                correctAnswer: "ਪਿਤਾ",
+                explanation: "ਭੈਣ-ਭਰਾ ਅਤੇ ਮਾਤਾ-ਪਿਤਾ ਰਿਸ਼ਤਿਆਂ ਦੇ ਜੋੜੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 64)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਬੇਲਣ : ਵੇਲਣਾ :: ਤਵਾ : ___",
+                options: ["ਧੋਣਾ", "ਕੱਟਣਾ", "ਭਰਨਾ", "ਸੇਕਣਾ"],
+                correctAnswer: "ਸੇਕਣਾ",
+                explanation: "ਬੇਲਣ ਨਾਲ ਰੋਟੀ ਵੇਲੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਤਵੇ 'ਤੇ ਸੇਕੀ ਜਾਂਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 65)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਖੂਹ : ਪਾਣੀ :: ਖਾਣ : ___",
+                options: ["ਕੋਲਾ", "ਰੇਤ", "ਆਟਾ", "ਦੁੱਧ"],
+                correctAnswer: "ਕੋਲਾ",
+                explanation: "ਖੂਹ ਵਿੱਚੋਂ ਪਾਣੀ ਅਤੇ ਖਾਣ ਵਿੱਚੋਂ ਕੋਲਾ ਨਿਕਲਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 66)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਚਿੱਠੀ : ਲਿਫ਼ਾਫ਼ਾ :: ਕਿਤਾਬ : ___",
+                options: ["ਕਲਮ", "ਜਿਲਦ", "ਮੇਜ਼", "ਥੈਲਾ"],
+                correctAnswer: "ਜਿਲਦ",
+                explanation: "ਚਿੱਠੀ ਲਿਫ਼ਾਫ਼ੇ ਵਿੱਚ ਅਤੇ ਕਿਤਾਬ ਜਿਲਦ ਵਿੱਚ ਰਹਿੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 67)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹਵਾਈ ਜਹਾਜ਼ : ਪਾਇਲਟ :: ਬੱਸ : ___",
+                options: ["ਕੰਡਕਟਰ", "ਸਵਾਰੀ", "ਡਰਾਈਵਰ", "ਮਕੈਨਿਕ"],
+                correctAnswer: "ਡਰਾਈਵਰ",
+                explanation: "ਹਵਾਈ ਜਹਾਜ਼ ਪਾਇਲਟ ਚਲਾਉਂਦਾ ਹੈ ਅਤੇ ਬੱਸ ਡਰਾਈਵਰ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 68)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਫੁੱਲ : ਖੁਸ਼ਬੂ :: ਫਲ : ___",
+                options: ["ਰੰਗ", "ਪੱਤੇ", "ਕੰਡੇ", "ਸੁਆਦ"],
+                correctAnswer: "ਸੁਆਦ",
+                explanation: "ਫੁੱਲ ਦੀ ਪਛਾਣ ਖੁਸ਼ਬੂ ਅਤੇ ਫਲ ਦੀ ਪਛਾਣ ਸੁਆਦ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 69)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸਕੂਲ : ਵਿਦਿਆਰਥੀ :: ਹਸਪਤਾਲ : ___",
+                options: ["ਮਰੀਜ਼", "ਡਾਕਟਰ", "ਅਧਿਆਪਕ", "ਗਾਹਕ"],
+                correctAnswer: "ਮਰੀਜ਼",
+                explanation: "ਸਕੂਲ ਵਿੱਚ ਵਿਦਿਆਰਥੀ ਅਤੇ ਹਸਪਤਾਲ ਵਿੱਚ ਮਰੀਜ਼ ਆਉਂਦੇ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 70)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸੂਈ : ਧਾਗਾ :: ਕਲਮ : ___",
+                options: ["ਪਾਣੀ", "ਸਿਆਹੀ", "ਕਾਗਜ਼", "ਰਬੜ"],
+                correctAnswer: "ਸਿਆਹੀ",
+                explanation: "ਸੂਈ ਧਾਗੇ ਨਾਲ ਅਤੇ ਕਲਮ ਸਿਆਹੀ ਨਾਲ ਕੰਮ ਕਰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 71)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਹਾਸਾ : ਖੁਸ਼ੀ :: ਹੰਝੂ : ___",
+                options: ["ਖੁਸ਼ੀ", "ਗੁੱਸਾ", "ਗ਼ਮੀ", "ਹੈਰਾਨੀ"],
+                correctAnswer: "ਗ਼ਮੀ",
+                explanation: "ਹਾਸਾ ਖੁਸ਼ੀ ਦੀ ਅਤੇ ਹੰਝੂ ਗ਼ਮੀ ਦੀ ਨਿਸ਼ਾਨੀ ਹਨ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 72)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਪਾਣੀ : ਘੜਾ :: ਆਟਾ : ___",
+                options: ["ਗਲਾਸ", "ਤਵਾ", "ਚਮਚ", "ਪਰਾਤ"],
+                correctAnswer: "ਪਰਾਤ",
+                explanation: "ਪਾਣੀ ਘੜੇ ਵਿੱਚ ਅਤੇ ਆਟਾ ਪਰਾਤ ਵਿੱਚ ਗੁੰਨ੍ਹਿਆ ਜਾਂਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 73)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸੋਨਾ : ਗਹਿਣਾ :: ਲੱਕੜ : ___",
+                options: ["ਮੇਜ਼", "ਪੱਥਰ", "ਕਾਗਜ਼", "ਕੱਚ"],
+                correctAnswer: "ਮੇਜ਼",
+                explanation: "ਸੋਨੇ ਤੋਂ ਗਹਿਣੇ ਅਤੇ ਲੱਕੜ ਤੋਂ ਮੇਜ਼ ਬਣਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 74)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦਿਨ : ਕੰਮ :: ਰਾਤ : ___",
+                options: ["ਕੰਮ", "ਆਰਾਮ", "ਖੇਡ", "ਸਫ਼ਰ"],
+                correctAnswer: "ਆਰਾਮ",
+                explanation: "ਦਿਨ ਕੰਮ ਕਰਨ ਲਈ ਅਤੇ ਰਾਤ ਆਰਾਮ ਕਰਨ ਲਈ ਹੁੰਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 75)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦੁੱਧ : ਦਹੀਂ :: ਦਹੀਂ : ___",
+                options: ["ਪਨੀਰ", "ਮੱਖਣ", "ਲੱਸੀ", "ਖੀਰ"],
+                correctAnswer: "ਲੱਸੀ",
+                explanation: "ਦੁੱਧ ਤੋਂ ਦਹੀਂ ਜੰਮਦਾ ਹੈ ਅਤੇ ਦਹੀਂ ਰਿੜਕ ਕੇ ਲੱਸੀ ਬਣਦੀ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 76)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੰਮ੍ਰਿਤਸਰ : ਪੰਜਾਬ :: ਸੈਕਰਾਮੈਂਟੋ : ___",
+                options: ["ਟੈਕਸਸ", "ਨਿਊਯਾਰਕ", "ਓਹਾਇਓ", "ਕੈਲੀਫੋਰਨੀਆ"],
+                correctAnswer: "ਕੈਲੀਫੋਰਨੀਆ",
+                explanation: "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਦਾ ਸ਼ਹਿਰ ਹੈ ਅਤੇ ਸੈਕਰਾਮੈਂਟੋ ਕੈਲੀਫੋਰਨੀਆ ਦਾ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 77)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਕਣਕ : ਹਾੜ੍ਹੀ :: ਝੋਨਾ : ___",
+                options: ["ਸਾਉਣੀ", "ਹਾੜ੍ਹੀ", "ਬਸੰਤ", "ਪੱਤਝੜ"],
+                correctAnswer: "ਸਾਉਣੀ",
+                explanation: "ਕਣਕ ਹਾੜ੍ਹੀ ਦੀ ਅਤੇ ਝੋਨਾ ਸਾਉਣੀ ਦੀ ਫ਼ਸਲ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 78)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਦਾਦਾ : ਪੋਤਾ :: ਨਾਨਾ : ___",
+                options: ["ਭਤੀਜਾ", "ਦੋਹਤਾ", "ਭਾਣਜਾ", "ਜਵਾਈ"],
+                correctAnswer: "ਦੋਹਤਾ",
+                explanation: "ਪੁੱਤਰ ਦਾ ਪੁੱਤਰ ਪੋਤਾ ਅਤੇ ਧੀ ਦਾ ਪੁੱਤਰ ਦੋਹਤਾ ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 79)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਅੱਧਾ : ਪੂਰਾ :: ਥੋੜ੍ਹਾ : ___",
+                options: ["ਖਾਲੀ", "ਅੱਧਾ", "ਬਹੁਤਾ", "ਹਲਕਾ"],
+                correctAnswer: "ਬਹੁਤਾ",
+                explanation: "ਅੱਧੇ ਦਾ ਉਲਟ ਪੂਰਾ ਅਤੇ ਥੋੜ੍ਹੇ ਦਾ ਉਲਟ ਬਹੁਤਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Roti : Atta :: Lassi : ___ (Analogy 80)",
-                options: ["Dahi", "Water", "Salt", "Pepper"],
-                correctAnswer: "Dahi",
-                explanation: "Analogy comparison."
+                prompt: "ਸਾਬਣ : ਨਹਾਉਣਾ :: ਸ਼ੈਂਪੂ : ___",
+                options: ["ਦੰਦ ਸਾਫ਼ ਕਰਨੇ", "ਕੱਪੜੇ ਧੋਣੇ", "ਭਾਂਡੇ ਧੋਣੇ", "ਵਾਲ ਧੋਣੇ"],
+                correctAnswer: "ਵਾਲ ਧੋਣੇ",
+                explanation: "ਸਾਬਣ ਨਹਾਉਣ ਲਈ ਅਤੇ ਸ਼ੈਂਪੂ ਵਾਲ ਧੋਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
             )
         ]
     )

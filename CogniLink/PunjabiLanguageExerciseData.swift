@@ -140,16 +140,16 @@ struct PunjabiLanguageExerciseData {
         trackedType: nil,
         difficulty: .easy,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗੁੱਸਾ", options: ["ਖੁਸ਼", "ਗੁੱਸੇ", "ਸ਼ਾਂਤ", "ਉਦਾਸ"], correctAnswer: "ਗੁੱਸੇ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਠੰਡਾ", options: ["ਗਰਮ", "ਠੰਢ", "ਗਰਮ", "ਹਲਕੇ"], correctAnswer: "ਠੰਢ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵੱਡਾ", options: ["ਛੋਟਾ", "ਵੱਡਾ", "ਛੋਟਾ", "ਪਤਲਾ"], correctAnswer: "ਵੱਡਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਥੱਕਿਆ ਹੋਇਆ", options: ["ਚੇਤਾਵਨੀ", "ਜਾਗਣਾ", "ਥੱਕ ਗਿਆ", "ਆਰਾਮ ਕੀਤਾ"], correctAnswer: "ਥੱਕ ਗਿਆ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਡਰਿਆ ਹੋਇਆ", options: ["ਬਹਾਦਰ", "ਡਰੇ ਹੋਏ", "ਸ਼ਾਂਤ", "ਬੋਲਡ"], correctAnswer: "ਡਰੇ ਹੋਏ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਕਿਸਮ", options: ["ਮਤਲਬ", "ਬੇਰਹਿਮ", "ਕੋਮਲ", "ਰੁੱਖਾ"], correctAnswer: "ਕੋਮਲ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਤੇਜ਼", options: ["ਹੌਲੀ", "ਤੇਜ਼", "ਆਲਸੀ", "ਸੰਜੀਵ"], correctAnswer: "ਤੇਜ਼", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪੁਰਾਣਾ", options: ["ਨੌਜਵਾਨ", "ਪ੍ਰਾਚੀਨ", "ਨਵਾਂ", "ਤਾਜ਼ਾ"], correctAnswer: "ਪ੍ਰਾਚੀਨ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗੰਦਾ", options: ["ਸਾਫ਼", "ਗੰਦਾ", "ਸਾਫ਼-ਸੁਥਰਾ", "ਸੁਥਰਾ"], correctAnswer: "ਗੰਦਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਚਮਕਦਾਰ", options: ["ਮੱਧਮ", "ਹਨੇਰਾ", "ਸ਼ਾਨਦਾਰ", "ਸੰਜੀਵ"], correctAnswer: "ਸ਼ਾਨਦਾਰ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗੁੱਸਾ", options: ["ਖੁਸ਼", "ਗੁੱਸੇ", "ਸ਼ਾਂਤ", "ਉਦਾਸ"], correctAnswer: "ਗੁੱਸੇ", explanation: "'ਗੁੱਸੇ' (Angry) 'ਗੁੱਸਾ' (Anger) ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਨਾਰਾਜ਼ਗੀ ਜਾਂ ਕ੍ਰੋਧ ਦੀ ਭਾਵਨਾ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਠੰਡਾ", options: ["ਗਰਮ", "ਠੰਢ", "ਗਰਮ", "ਹਲਕੇ"], correctAnswer: "ਠੰਢ", explanation: "'ਠੰਢ' 'ਠੰਡਾ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਘੱਟ ਤਾਪਮਾਨ ਜਾਂ ਸਰਦੀ ਦਾ ਅਹਿਸਾਸ ਕਰਵਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵੱਡਾ", options: ["ਛੋਟਾ", "ਵੱਡਾ", "ਛੋਟਾ", "ਪਤਲਾ"], correctAnswer: "ਵੱਡਾ", explanation: "'ਛੋਟਾ' 'ਵੱਡਾ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਆਕਾਰ ਜਾਂ ਮਾਤਰਾ ਦੇ ਦੋ ਉਲਟ ਪਹਿਲੂਆਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਥੱਕਿਆ ਹੋਇਆ", options: ["ਚੇਤਾਵਨੀ", "ਜਾਗਣਾ", "ਥੱਕ ਗਿਆ", "ਆਰਾਮ ਕੀਤਾ"], correctAnswer: "ਥੱਕ ਗਿਆ", explanation: "'ਥੱਕ ਗਿਆ' 'ਥੱਕਿਆ ਹੋਇਆ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਊਰਜਾ ਦੀ ਕਮੀ ਜਾਂ ਥਕਾਵਟ ਦੀ ਸਥਿਤੀ ਨੂੰ ਪ੍ਰਗਟ ਕਰਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਡਰਿਆ ਹੋਇਆ", options: ["ਬਹਾਦਰ", "ਡਰੇ ਹੋਏ", "ਸ਼ਾਂਤ", "ਬੋਲਡ"], correctAnswer: "ਡਰੇ ਹੋਏ", explanation: "'ਡਰੇ ਹੋਏ' 'ਡਰਿਆ ਹੋਇਆ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਡਰ ਜਾਂ ਭੈਅ ਮਹਿਸੂਸ ਕਰਨ ਦੀ ਸਥਿਤੀ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਕਿਸਮ", options: ["ਮਤਲਬ", "ਬੇਰਹਿਮ", "ਕੋਮਲ", "ਰੁੱਖਾ"], correctAnswer: "ਕੋਮਲ", explanation: "'ਕੋਮਲ' (ਨਰਮ ਜਾਂ ਦਿਆਲੂ) ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦ 'Kind' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ, ਜਿਸਦਾ ਅਰਥ ਦੂਜਿਆਂ ਪ੍ਰਤੀ ਚੰਗਾ ਵਿਵਹਾਰ ਕਰਨਾ ਹੁੰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਤੇਜ਼", options: ["ਹੌਲੀ", "ਤੇਜ਼", "ਆਲਸੀ", "ਸੰਜੀਵ"], correctAnswer: "ਤੇਜ਼", explanation: "'ਹੌਲੀ' 'ਤੇਜ਼' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਤੀ ਜਾਂ ਰਫ਼ਤਾਰ ਦੇ ਦੋ ਉਲਟ ਪੱਧਰਾਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪੁਰਾਣਾ", options: ["ਨੌਜਵਾਨ", "ਪ੍ਰਾਚੀਨ", "ਨਵਾਂ", "ਤਾਜ਼ਾ"], correctAnswer: "ਪ੍ਰਾਚੀਨ", explanation: "'ਪ੍ਰਾਚੀਨ' 'ਪੁਰਾਣਾ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਉਹਨਾਂ ਚੀਜ਼ਾਂ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ ਜੋ ਬਹੁਤ ਸਮਾਂ ਪਹਿਲਾਂ ਦੀਆਂ ਹੋਣ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗੰਦਾ", options: ["ਸਾਫ਼", "ਗੰਦਾ", "ਸਾਫ਼-ਸੁਥਰਾ", "ਸੁਥਰਾ"], correctAnswer: "ਗੰਦਾ", explanation: "ਇਹ ਸ਼ਬਦ ਆਪਣੇ ਆਪ ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ, ਜੋ ਕਿ ਕਿਸੇ ਚੀਜ਼ ਦੇ ਸਾਫ਼ ਨਾ ਹੋਣ ਜਾਂ ਮੈਲੇ ਹੋਣ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਚਮਕਦਾਰ", options: ["ਮੱਧਮ", "ਹਨੇਰਾ", "ਸ਼ਾਨਦਾਰ", "ਸੰਜੀਵ"], correctAnswer: "ਸ਼ਾਨਦਾਰ", explanation: "'ਸ਼ਾਨਦਾਰ' 'ਚਮਕਦਾਰ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੋ ਸਕਦਾ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਕਿਸੇ ਚੀਜ਼ ਦੀ ਬਹੁਤ ਵਧੀਆ, ਖੂਬਸੂਰਤ ਜਾਂ ਰੌਸ਼ਨ ਦਿੱਖ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।")
         ]
     )
 
@@ -162,16 +162,16 @@ struct PunjabiLanguageExerciseData {
         trackedType: nil,
         difficulty: .hard,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਉਦਾਸੀ", options: ["ਅਨੰਦਮਈ", "ਉਦਾਸ", "ਉਤਸ਼ਾਹਿਤ", "ਸਮੱਗਰੀ"], correctAnswer: "ਉਦਾਸ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਸ਼ਾਂਤ", options: ["ਰੌਲਾ", "ਪਰੇਸ਼ਾਨ", "ਸ਼ਾਂਤੀਪੂਰਨ", "ਪਾਗਲ"], correctAnswer: "ਸ਼ਾਂਤੀਪੂਰਨ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਦਲੇਰ", options: ["ਡਰਪੋਕ", "ਡਰਾਉਣਾ", "ਬਹਾਦਰ", "ਡਰਪੋਕ"], correctAnswer: "ਬਹਾਦਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵਿਸ਼ੇਸ਼", options: ["ਆਮ", "ਅਜੀਬ", "ਆਮ", "ਆਮ"], correctAnswer: "ਅਜੀਬ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਭਰਪੂਰ", options: ["ਦੁਰਲੱਭ", "ਭਰਪੂਰ", "ਦੁਰਲੱਭ", "ਸੀਮਿਤ"], correctAnswer: "ਭਰਪੂਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਕਮਜ਼ੋਰ", options: ["ਮਜ਼ਬੂਤ", "ਸ਼ਕਤੀਸ਼ਾਲੀ", "ਕਮਜ਼ੋਰ", "ਮਜ਼ਬੂਤ"], correctAnswer: "ਕਮਜ਼ੋਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵਿਵਿਧ", options: ["ਸੰਜੀਵ", "ਬੇਹੋਸ਼", "ਰੰਗੀਨ", "ਫ਼ਿੱਕੇ"], correctAnswer: "ਰੰਗੀਨ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਫਰੂਗਲ", options: ["ਫਾਲਤੂ", "ਕਿਫ਼ਾਇਤੀ", "ਸ਼ਾਨਦਾਰ", "ਉਦਾਰ"], correctAnswer: "ਕਿਫ਼ਾਇਤੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ELOQUENT", options: ["ਬੁੜਬੁੜਾਉਣਾ", "ਸਪਸ਼ਟ", "ਸ਼ਾਂਤ", "ਬੇਢੰਗੇ"], correctAnswer: "ਸਪਸ਼ਟ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਟਿਕਾਊ", options: ["ਕਮਜ਼ੋਰ", "ਛੱਡਣਾ", "ਨਿਰੰਤਰ", "ਲਚਕਦਾਰ"], correctAnswer: "ਨਿਰੰਤਰ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਉਦਾਸੀ", options: ["ਅਨੰਦਮਈ", "ਉਦਾਸ", "ਉਤਸ਼ਾਹਿਤ", "ਸਮੱਗਰੀ"], correctAnswer: "ਉਦਾਸ", explanation: "'ਉਦਾਸ' 'ਉਦਾਸੀ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਖੁਸ਼ੀ ਦੀ ਕਮੀ ਅਤੇ ਨਿਰਾਸ਼ਾ ਵਾਲੀ ਮਨੋਸਥਿਤੀ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਸ਼ਾਂਤ", options: ["ਰੌਲਾ", "ਪਰੇਸ਼ਾਨ", "ਸ਼ਾਂਤੀਪੂਰਨ", "ਪਾਗਲ"], correctAnswer: "ਸ਼ਾਂਤੀਪੂਰਨ", explanation: "'ਸ਼ਾਂਤੀਪੂਰਨ' 'ਸ਼ਾਂਤ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਅਜਿਹੀ ਸਥਿਤੀ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ ਜਿੱਥੇ ਕੋਈ ਰੌਲਾ-ਰੱਪਾ ਜਾਂ ਬੇਚੈਨੀ ਨਾ ਹੋਵੇ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਦਲੇਰ", options: ["ਡਰਪੋਕ", "ਡਰਾਉਣਾ", "ਬਹਾਦਰ", "ਡਰਪੋਕ"], correctAnswer: "ਬਹਾਦਰ", explanation: "'ਬਹਾਦਰ' 'ਦਲੇਰ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਉਸ ਵਿਅਕਤੀ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ ਜੋ ਡਰਦਾ ਨਹੀਂ ਅਤੇ ਹਿੰਮਤ ਵਾਲਾ ਹੁੰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵਿਸ਼ੇਸ਼", options: ["ਆਮ", "ਅਜੀਬ", "ਆਮ", "ਆਮ"], correctAnswer: "ਅਜੀਬ", explanation: "ਕਈ ਵਾਰ 'ਅਜੀਬ' (ਵਿਲੱਖਣ ਜਾਂ ਵੱਖਰਾ) ਨੂੰ 'ਵਿਸ਼ੇਸ਼' ਦੇ ਸੰਦਰਭ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਕਿਉਂਕਿ ਦੋਵੇਂ ਆਮ ਨਾਲੋਂ ਵੱਖਰੇ ਹੋਣ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਭਰਪੂਰ", options: ["ਦੁਰਲੱਭ", "ਭਰਪੂਰ", "ਦੁਰਲੱਭ", "ਸੀਮਿਤ"], correctAnswer: "ਭਰਪੂਰ", explanation: "ਇਹ ਸ਼ਬਦ ਆਪਣੇ ਆਪ ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ, ਜਿਸਦਾ ਅਰਥ ਹੈ ਕਿਸੇ ਚੀਜ਼ ਦਾ ਬਹੁਤ ਵੱਡੀ ਮਾਤਰਾ ਵਿੱਚ ਹੋਣਾ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਕਮਜ਼ੋਰ", options: ["ਮਜ਼ਬੂਤ", "ਸ਼ਕਤੀਸ਼ਾਲੀ", "ਕਮਜ਼ੋਰ", "ਮਜ਼ਬੂਤ"], correctAnswer: "ਕਮਜ਼ੋਰ", explanation: "ਇਹ ਸ਼ਬਦ ਆਪਣੇ ਆਪ ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ, ਜੋ ਕਿ ਸਰੀਰਕ ਜਾਂ ਮਾਨਸਿਕ ਤੌਰ 'ਤੇ ਤਾਕਤ ਨਾ ਹੋਣ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵਿਵਿਧ", options: ["ਸੰਜੀਵ", "ਬੇਹੋਸ਼", "ਰੰਗੀਨ", "ਫ਼ਿੱਕੇ"], correctAnswer: "ਰੰਗੀਨ", explanation: "'ਰੰਗੀਨ' ਨੂੰ 'ਵਿਵਿਧ' ਦੇ ਰੂਪਕ ਸਮਾਨਾਰਥੀ ਵਜੋਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਬਹੁਤ ਸਾਰੀਆਂ ਵੱਖ-ਵੱਖ ਕਿਸਮਾਂ ਜਾਂ ਰੰਗਾਂ ਦੇ ਹੋਣ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਫਰੂਗਲ", options: ["ਫਾਲਤੂ", "ਕਿਫ਼ਾਇਤੀ", "ਸ਼ਾਨਦਾਰ", "ਉਦਾਰ"], correctAnswer: "ਕਿਫ਼ਾਇਤੀ", explanation: "'ਕਿਫ਼ਾਇਤੀ' ਅੰਗਰੇਜ਼ੀ ਸ਼ਬਦ 'Frugal' ਦਾ ਪੰਜਾਬੀ ਅਨੁਵਾਦ ਅਤੇ ਸਮਾਨਾਰਥੀ ਹੈ, ਜਿਸਦਾ ਅਰਥ ਹੈ ਪੈਸੇ ਦੀ ਸੋਚ-ਸਮਝ ਕੇ ਵਰਤੋਂ ਕਰਨਾ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ELOQUENT", options: ["ਬੁੜਬੁੜਾਉਣਾ", "ਸਪਸ਼ਟ", "ਸ਼ਾਂਤ", "ਬੇਢੰਗੇ"], correctAnswer: "ਸਪਸ਼ਟ", explanation: "'ਸਪਸ਼ਟ' (ਜਾਂ ਪ੍ਰਭਾਵਸ਼ਾਲੀ) 'Eloquent' ਦਾ ਸਮਾਨਾਰਥੀ ਹੈ, ਕਿਉਂਕਿ ਦੋਵਾਂ ਦਾ ਅਰਥ ਆਪਣੇ ਵਿਚਾਰਾਂ ਨੂੰ ਬਹੁਤ ਸਪੱਸ਼ਟ ਅਤੇ ਵਧੀਆ ਢੰਗ ਨਾਲ ਪੇਸ਼ ਕਰਨਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਟਿਕਾਊ", options: ["ਕਮਜ਼ੋਰ", "ਛੱਡਣਾ", "ਨਿਰੰਤਰ", "ਲਚਕਦਾਰ"], correctAnswer: "ਨਿਰੰਤਰ", explanation: "'ਨਿਰੰਤਰ' 'ਟਿਕਾਊ' ਦਾ ਸਮਾਨਾਰਥੀ ਹੋ ਸਕਦਾ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਸ਼ਬਦ ਲੰਮੇ ਸਮੇਂ ਤੱਕ ਚੱਲਣ ਵਾਲੀ ਜਾਂ ਕਾਇਮ ਰਹਿਣ ਵਾਲੀ ਚੀਜ਼ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।")
         ]
     )
 
@@ -184,16 +184,16 @@ struct PunjabiLanguageExerciseData {
         trackedType: nil,
         difficulty: .easy,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗਰਮ", options: ["ਗਰਮ", "ਠੰਡਾ", "ਠੰਡਾ", "ਨਰਮ"], correctAnswer: "ਠੰਡਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਧੰਨ", options: ["ਖੁਸ਼", "ਅਨੰਦਮਈ", "ਉਦਾਸ", "ਸਮੱਗਰੀ"], correctAnswer: "ਉਦਾਸ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵੱਡਾ", options: ["ਵਿਸ਼ਾਲ", "ਵੱਡਾ", "ਛੋਟਾ", "ਲੰਬਾ"], correctAnswer: "ਛੋਟਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਤੇਜ਼", options: ["ਤੇਜ਼", "ਹੌਲੀ", "ਤੇਜ਼", "ਤੇਜ਼"], correctAnswer: "ਹੌਲੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਸਾਫ਼", options: ["ਸਾਫ਼-ਸੁਥਰਾ", "ਸੁਥਰਾ", "ਗੰਦਾ", "ਤਾਜ਼ਾ"], correctAnswer: "ਗੰਦਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਜਾਗਦੇ ਰਹੋ", options: ["ਚੇਤਾਵਨੀ", "ਜਾਣੂ", "ਸੁੱਤੇ ਹੋਏ", "ਕਿਰਿਆਸ਼ੀਲ"], correctAnswer: "ਸੁੱਤੇ ਹੋਏ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਉੱਚਾ", options: ["ਰੌਲਾ", "ਸ਼ਾਂਤ", "ਬੂਮਿੰਗ", "ਮਜ਼ਬੂਤ"], correctAnswer: "ਸ਼ਾਂਤ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਖੋਲ੍ਹੋ", options: ["ਬੰਦ", "ਚੌੜਾ", "ਸਾਫ਼", "ਮੁਫ਼ਤ"], correctAnswer: "ਬੰਦ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪੂਰਾ", options: ["ਪੈਕ", "ਖਾਲੀ", "ਲੋਡ ਕੀਤਾ", "ਪੂਰਾ"], correctAnswer: "ਖਾਲੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪਿਆਰ", options: ["ਪਿਆਰ ਕਰਨਾ", "ਪਸੰਦ", "ਨਫ਼ਰਤ", "ਦੇਖਭਾਲ"], correctAnswer: "ਨਫ਼ਰਤ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਗਰਮ", options: ["ਗਰਮ", "ਠੰਡਾ", "ਠੰਡਾ", "ਨਰਮ"], correctAnswer: "ਠੰਡਾ", explanation: "'ਠੰਡਾ' 'ਗਰਮ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਤਾਪਮਾਨ ਦੇ ਦੋ ਬਿਲਕੁਲ ਉਲਟ ਸਿਰਿਆਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਧੰਨ", options: ["ਖੁਸ਼", "ਅਨੰਦਮਈ", "ਉਦਾਸ", "ਸਮੱਗਰੀ"], correctAnswer: "ਉਦਾਸ", explanation: "'ਉਦਾਸ' 'ਧੰਨ' (ਖੁਸ਼) ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇੱਕ ਖੁਸ਼ੀ ਦੀ ਅਵਸਥਾ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ ਅਤੇ ਦੂਜਾ ਗ਼ਮੀ ਦੀ ਸਥਿਤੀ ਨੂੰ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਵੱਡਾ", options: ["ਵਿਸ਼ਾਲ", "ਵੱਡਾ", "ਛੋਟਾ", "ਲੰਬਾ"], correctAnswer: "ਛੋਟਾ", explanation: "'ਛੋਟਾ' 'ਵੱਡਾ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਆਕਾਰ ਜਾਂ ਮਾਤਰਾ ਦੇ ਦੋ ਉਲਟ ਪਹਿਲੂਆਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਤੇਜ਼", options: ["ਤੇਜ਼", "ਹੌਲੀ", "ਤੇਜ਼", "ਤੇਜ਼"], correctAnswer: "ਹੌਲੀ", explanation: "'ਹੌਲੀ' 'ਤੇਜ਼' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਤੀ ਜਾਂ ਰਫ਼ਤਾਰ ਦੇ ਦੋ ਉਲਟ ਪੱਧਰਾਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਸਾਫ਼", options: ["ਸਾਫ਼-ਸੁਥਰਾ", "ਸੁਥਰਾ", "ਗੰਦਾ", "ਤਾਜ਼ਾ"], correctAnswer: "ਗੰਦਾ", explanation: "'ਗੰਦਾ' 'ਸਾਫ਼' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇੱਕ ਸਫਾਈ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ ਅਤੇ ਦੂਜਾ ਮੈਲਾ ਹੋਣ ਨੂੰ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਜਾਗਦੇ ਰਹੋ", options: ["ਚੇਤਾਵਨੀ", "ਜਾਣੂ", "ਸੁੱਤੇ ਹੋਏ", "ਕਿਰਿਆਸ਼ੀਲ"], correctAnswer: "ਸੁੱਤੇ ਹੋਏ", explanation: "'ਸੁੱਤੇ ਹੋਏ' 'ਜਾਗਦੇ ਰਹੋ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਚੇਤਨਤਾ ਅਤੇ ਨੀਂਦ ਦੀਆਂ ਦੋ ਉਲਟ ਸਥਿਤੀਆਂ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਉੱਚਾ", options: ["ਰੌਲਾ", "ਸ਼ਾਂਤ", "ਬੂਮਿੰਗ", "ਮਜ਼ਬੂਤ"], correctAnswer: "ਸ਼ਾਂਤ", explanation: "'ਸ਼ਾਂਤ' 'ਉੱਚਾ' (ਰੌਲੇ ਵਾਲਾ) ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਆਵਾਜ਼ ਦੇ ਦੋ ਬਿਲਕੁਲ ਉਲਟ ਪੱਧਰ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਖੋਲ੍ਹੋ", options: ["ਬੰਦ", "ਚੌੜਾ", "ਸਾਫ਼", "ਮੁਫ਼ਤ"], correctAnswer: "ਬੰਦ", explanation: "'ਬੰਦ' 'ਖੋਲ੍ਹੋ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕਿਸੇ ਚੀਜ਼ ਦੀ ਪਹੁੰਚ ਦੀਆਂ ਦੋ ਉਲਟ ਸਥਿਤੀਆਂ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪੂਰਾ", options: ["ਪੈਕ", "ਖਾਲੀ", "ਲੋਡ ਕੀਤਾ", "ਪੂਰਾ"], correctAnswer: "ਖਾਲੀ", explanation: "'ਖਾਲੀ' 'ਪੂਰਾ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇੱਕ ਭਰੇ ਹੋਣ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ ਅਤੇ ਦੂਜਾ ਉਸ ਵਿੱਚ ਕੁਝ ਨਾ ਹੋਣ ਨੂੰ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸ਼ਬਦ: ਪਿਆਰ", options: ["ਪਿਆਰ ਕਰਨਾ", "ਪਸੰਦ", "ਨਫ਼ਰਤ", "ਦੇਖਭਾਲ"], correctAnswer: "ਨਫ਼ਰਤ", explanation: "'ਨਫ਼ਰਤ' 'ਪਿਆਰ' ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇਨਸਾਨੀ ਭਾਵਨਾਵਾਂ ਦੇ ਦੋ ਬਿਲਕੁਲ ਉਲਟ ਸਿਰੇ ਹਨ।")
         ]
     )
 
@@ -206,26 +206,26 @@ struct PunjabiLanguageExerciseData {
         trackedType: .sentenceCompletion,
         difficulty: .easy,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਸਿੰਜਿਆ.", options: ["ਫੁੱਲ", "ਮੰਜ਼ਿਲਾਂ", "ਆਟਾ"], correctAnswer: "ਫੁੱਲ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਆਪਣਾ ___ ਪਹਿਨ ਲਿਆ।", options: ["ਕੋਟ", "ਕਿਸ਼ਤੀ", "ਬੱਕਰੀ"], correctAnswer: "ਕੋਟ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਮੈਨੂੰ ___ ਦਾ ਗਲਾਸ ਚਾਹੀਦਾ ਹੈ।", options: ["ਪਾਣੀ", "ਵੇਟਰ", "ਵਾਡਰ"], correctAnswer: "ਪਾਣੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਉਸਨੂੰ ਬੁਲਾਇਆ___", options: ["ਮਾਂ", "ਪਰੇਸ਼ਾਨ", "ਝੱਗ"], correctAnswer: "ਮਾਂ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤੇ ਨੇ ਹਿਲਾ ਦਿੱਤਾ___।", options: ["ਕਹਾਣੀ", "ਪੂਛ", "ਲੰਬਾ"], correctAnswer: "ਪੂਛ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ।", options: ["ਲੜਾਈ", "ਰੋਸ਼ਨੀ", "ਰਾਤ"], correctAnswer: "ਰੋਸ਼ਨੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ___ ਪਕਾਇਆ.", options: ["ਜਾਅਲੀ", "ਝੀਲ", "ਕੇਕ"], correctAnswer: "ਕੇਕ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਪੰਛੀ ਨੇ ਇੱਕ ___ ਬਣਾਇਆ.", options: ["ਆਲ੍ਹਣਾ", "ਆਰਾਮ", "ਟੈਸਟ"], correctAnswer: "ਆਲ੍ਹਣਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਪੜ੍ਹਿਆ।", options: ["ਅਖਬਾਰ", "ਵੇਸਟ ਪੇਪਰ", "ਸੈਂਡਪੇਪਰ"], correctAnswer: "ਅਖਬਾਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਬੱਚੇ ___ ਵਿੱਚ ਖੇਡਦੇ ਸਨ।", options: ["ਪਾਰਕ", "ਸੱਕ", "ਹਨੇਰਾ"], correctAnswer: "ਪਾਰਕ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਠੀਕ ਕੀਤਾ.", options: ["ਡੁੱਬ", "ਲਿੰਕ", "ਅੱਖ ਝਪਕਣਾ"], correctAnswer: "ਡੁੱਬ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸੂਪ ਵੀ ਸੀ___।", options: ["ਗਰਮ", "ਬਹੁਤ", "ਬਿੰਦੀ"], correctAnswer: "ਗਰਮ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਉਸਨੂੰ ਖੋਲ੍ਹਿਆ ___", options: ["ਛੱਤਰੀ", "ਵਨੀਲਾ", "ਗੋਰਿਲਾ"], correctAnswer: "ਛੱਤਰੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਦਾ ਭੁਗਤਾਨ ਕੀਤਾ।", options: ["ਬਿੱਲ", "ਭਰੋ", "ਮਿੱਲ"], correctAnswer: "ਬਿੱਲ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਬਿੱਲੀ ___ ਤੇ ਬੈਠ ਗਈ।", options: ["ਚਟਾਈ", "ਬੱਲੇ", "ਚੂਹਾ"], correctAnswer: "ਚਟਾਈ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ਨਿੱਘਾ ਪਹਿਨਿਆ ___.", options: ["ਸਵੈਟਰ", "swatter", "ਸਕੈਟਰ"], correctAnswer: "ਸਵੈਟਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ___ ਲਾਇਆ.", options: ["ਬਾਗ", "ਮਾਫ਼ੀ", "ਵਾਰਡਨ"], correctAnswer: "ਬਾਗ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਆਪਣੇ ਵਿੱਚ ਲਿਖਿਆ___.", options: ["ਡਾਇਰੀ", "ਡੇਅਰੀ", "ਡੇਜ਼ੀ"], correctAnswer: "ਡਾਇਰੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਦਾ ਭੁਗਤਾਨ ਕੀਤਾ।", options: ["ਬਿੱਲ", "ਭਰੋ", "ਮਿੱਲ"], correctAnswer: "ਬਿੱਲ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਬੱਚਾ ___ ਹੈ।", options: ["ਸੌਣਾ", "ਸਵੀਪਿੰਗ", "ਸੀਪਿੰਗ"], correctAnswer: "ਸੌਣਾ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਸਿੰਜਿਆ.", options: ["ਫੁੱਲ", "ਮੰਜ਼ਿਲਾਂ", "ਆਟਾ"], correctAnswer: "ਫੁੱਲ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ ਕਿਉਂਕਿ ਪੌਦਿਆਂ ਜਾਂ 'ਫੁੱਲਾਂ' ਨੂੰ ਹੀ ਪਾਣੀ ਨਾਲ ਸਿੰਜਿਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਆਪਣਾ ___ ਪਹਿਨ ਲਿਆ।", options: ["ਕੋਟ", "ਕਿਸ਼ਤੀ", "ਬੱਕਰੀ"], correctAnswer: "ਕੋਟ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਸਾਰਥਕ ਬਣਾਉਂਦਾ ਹੈ ਕਿਉਂਕਿ 'ਕੋਟ' ਇੱਕ ਕੱਪੜਾ ਹੈ ਜਿਸਨੂੰ ਪਹਿਨਿਆ ਜਾ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਮੈਨੂੰ ___ ਦਾ ਗਲਾਸ ਚਾਹੀਦਾ ਹੈ।", options: ["ਪਾਣੀ", "ਵੇਟਰ", "ਵਾਡਰ"], correctAnswer: "ਪਾਣੀ", explanation: "ਇਹ ਵਾਕ ਲਈ ਸਹੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਆਮ ਤੌਰ 'ਤੇ ਗਲਾਸ ਵਿੱਚ ਪੀਣ ਲਈ 'ਪਾਣੀ' ਮੰਗਿਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਉਸਨੂੰ ਬੁਲਾਇਆ___", options: ["ਮਾਂ", "ਪਰੇਸ਼ਾਨ", "ਝੱਗ"], correctAnswer: "ਮਾਂ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ, ਜੋ ਦਰਸਾਉਂਦਾ ਹੈ ਕਿ ਉਸਨੇ ਕਿਸੇ ਨੂੰ ਆਵਾਜ਼ ਮਾਰੀ ਜਾਂ ਸੰਬੋਧਿਤ ਕੀਤਾ, ਜਿਵੇਂ ਕਿ ਆਪਣੀ 'ਮਾਂ' ਨੂੰ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤੇ ਨੇ ਹਿਲਾ ਦਿੱਤਾ___।", options: ["ਕਹਾਣੀ", "ਪੂਛ", "ਲੰਬਾ"], correctAnswer: "ਪੂਛ", explanation: "ਇਹ ਸਹੀ ਜਵਾਬ ਹੈ ਕਿਉਂਕਿ ਕੁੱਤੇ ਆਪਣੀ ਖੁਸ਼ੀ ਜਾਂ ਉਤਸ਼ਾਹ ਪ੍ਰਗਟ ਕਰਨ ਲਈ ਆਮ ਤੌਰ 'ਤੇ ਆਪਣੀ 'ਪੂਛ' ਹਿਲਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ।", options: ["ਲੜਾਈ", "ਰੋਸ਼ਨੀ", "ਰਾਤ"], correctAnswer: "ਰੋਸ਼ਨੀ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ ਕਿਉਂਕਿ ਜਦੋਂ ਲੋੜ ਨਾ ਹੋਵੇ ਤਾਂ ਬੱਤੀ ਜਾਂ 'ਰੋਸ਼ਨੀ' ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ___ ਪਕਾਇਆ.", options: ["ਜਾਅਲੀ", "ਝੀਲ", "ਕੇਕ"], correctAnswer: "ਕੇਕ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ ਕਿਉਂਕਿ 'ਕੇਕ' ਇੱਕ ਅਜਿਹੀ ਚੀਜ਼ ਹੈ ਜਿਸਨੂੰ ਓਵਨ ਵਿੱਚ ਪਕਾਇਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਪੰਛੀ ਨੇ ਇੱਕ ___ ਬਣਾਇਆ.", options: ["ਆਲ੍ਹਣਾ", "ਆਰਾਮ", "ਟੈਸਟ"], correctAnswer: "ਆਲ੍ਹਣਾ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਸਾਰਥਕ ਬਣਾਉਂਦਾ ਹੈ ਕਿਉਂਕਿ ਪੰਛੀ ਆਪਣੇ ਰਹਿਣ ਅਤੇ ਆਂਡੇ ਦੇਣ ਲਈ 'ਆਲ੍ਹਣਾ' ਬਣਾਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਪੜ੍ਹਿਆ।", options: ["ਅਖਬਾਰ", "ਵੇਸਟ ਪੇਪਰ", "ਸੈਂਡਪੇਪਰ"], correctAnswer: "ਅਖਬਾਰ", explanation: "ਇਹ ਵਾਕ ਲਈ ਢੁਕਵਾਂ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਖ਼ਬਰਾਂ ਜਾਣਨ ਲਈ ਰੋਜ਼ਾਨਾ 'ਅਖਬਾਰ' ਪੜ੍ਹਿਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਬੱਚੇ ___ ਵਿੱਚ ਖੇਡਦੇ ਸਨ।", options: ["ਪਾਰਕ", "ਸੱਕ", "ਹਨੇਰਾ"], correctAnswer: "ਪਾਰਕ", explanation: "ਇਹ ਸਹੀ ਜਵਾਬ ਹੈ ਕਿਉਂਕਿ 'ਪਾਰਕ' ਬੱਚਿਆਂ ਦੇ ਖੇਡਣ ਅਤੇ ਮਨੋਰੰਜਨ ਲਈ ਇੱਕ ਆਮ ਜਗ੍ਹਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਨੂੰ ਠੀਕ ਕੀਤਾ.", options: ["ਡੁੱਬ", "ਲਿੰਕ", "ਅੱਖ ਝਪਕਣਾ"], correctAnswer: "ਡੁੱਬ", explanation: "ਇੱਥੇ 'ਡੁੱਬ' (ਸਿੰਕ) ਨੂੰ ਠੀਕ ਕਰਨ (ਮੁਰੰਮਤ ਕਰਨ) ਦੀ ਗੱਲ ਕੀਤੀ ਗਈ ਹੈ। ਹਾਲਾਂਕਿ ਪੰਜਾਬੀ ਵਿੱਚ ਸਿੰਕ ਨੂੰ ਬੇਸਿਨ ਕਿਹਾ ਜਾਂਦਾ ਹੈ, ਪਰ ਇੱਥੇ ਸ਼ਬਦੀ ਅਨੁਵਾਦ ਵਰਤਿਆ ਗਿਆ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸੂਪ ਵੀ ਸੀ___।", options: ["ਗਰਮ", "ਬਹੁਤ", "ਬਿੰਦੀ"], correctAnswer: "ਗਰਮ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ, ਜੋ ਦੱਸਦਾ ਹੈ ਕਿ ਸੂਪ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਯਾਨੀ 'ਗਰਮ' ਸੀ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਉਸਨੂੰ ਖੋਲ੍ਹਿਆ ___", options: ["ਛੱਤਰੀ", "ਵਨੀਲਾ", "ਗੋਰਿਲਾ"], correctAnswer: "ਛੱਤਰੀ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਸਾਰਥਕ ਬਣਾਉਂਦਾ ਹੈ ਕਿਉਂਕਿ ਮੀਂਹ ਜਾਂ ਧੁੱਪ ਤੋਂ ਬਚਣ ਲਈ 'ਛੱਤਰੀ' ਖੋਲ੍ਹੀ ਜਾਂਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਦਾ ਭੁਗਤਾਨ ਕੀਤਾ।", options: ["ਬਿੱਲ", "ਭਰੋ", "ਮਿੱਲ"], correctAnswer: "ਬਿੱਲ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ, ਕਿਉਂਕਿ ਖਰੀਦੀ ਗਈ ਚੀਜ਼ ਜਾਂ ਸੇਵਾ ਬਦਲੇ ਪੈਸੇ ਦੇਣ ਦੀ ਪ੍ਰਕਿਰਿਆ ਨੂੰ 'ਬਿੱਲ' ਦਾ ਭੁਗਤਾਨ ਕਰਨਾ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਬਿੱਲੀ ___ ਤੇ ਬੈਠ ਗਈ।", options: ["ਚਟਾਈ", "ਬੱਲੇ", "ਚੂਹਾ"], correctAnswer: "ਚਟਾਈ", explanation: "ਇਹ ਸਹੀ ਸ਼ਬਦ ਹੈ ਕਿਉਂਕਿ ਪਾਲਤੂ ਜਾਨਵਰ ਜਿਵੇਂ ਕਿ ਬਿੱਲੀਆਂ ਆਮ ਤੌਰ 'ਤੇ 'ਚਟਾਈ' 'ਤੇ ਬੈਠਣਾ ਪਸੰਦ ਕਰਦੀਆਂ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ਨਿੱਘਾ ਪਹਿਨਿਆ ___.", options: ["ਸਵੈਟਰ", "swatter", "ਸਕੈਟਰ"], correctAnswer: "ਸਵੈਟਰ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ ਕਿਉਂਕਿ ਸਰਦੀਆਂ ਵਿੱਚ ਸਰੀਰ ਨੂੰ ਨਿੱਘਾ ਰੱਖਣ ਲਈ 'ਸਵੈਟਰ' ਪਹਿਨਿਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਇੱਕ ___ ਲਾਇਆ.", options: ["ਬਾਗ", "ਮਾਫ਼ੀ", "ਵਾਰਡਨ"], correctAnswer: "ਬਾਗ", explanation: "ਇਹ ਵਾਕ ਨੂੰ ਸਾਰਥਕ ਬਣਾਉਂਦਾ ਹੈ ਕਿਉਂਕਿ ਪੌਦੇ ਲਗਾਉਣ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਉਗਾਉਣ ਦੀ ਜਗ੍ਹਾ ਨੂੰ 'ਬਾਗ' ਲਗਾਉਣਾ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ਆਪਣੇ ਵਿੱਚ ਲਿਖਿਆ___.", options: ["ਡਾਇਰੀ", "ਡੇਅਰੀ", "ਡੇਜ਼ੀ"], correctAnswer: "ਡਾਇਰੀ", explanation: "ਇਹ ਸਹੀ ਜਵਾਬ ਹੈ ਕਿਉਂਕਿ ਲੋਕ ਆਪਣੀਆਂ ਨਿੱਜੀ ਗੱਲਾਂ ਜਾਂ ਰੋਜ਼ਾਨਾ ਦੇ ਵਿਚਾਰ ਲਿਖਣ ਲਈ 'ਡਾਇਰੀ' ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਸਨੇ ___ ਦਾ ਭੁਗਤਾਨ ਕੀਤਾ।", options: ["ਬਿੱਲ", "ਭਰੋ", "ਮਿੱਲ"], correctAnswer: "ਬਿੱਲ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ, ਕਿਉਂਕਿ ਖਰੀਦੀ ਗਈ ਚੀਜ਼ ਜਾਂ ਸੇਵਾ ਬਦਲੇ ਪੈਸੇ ਦੇਣ ਦੀ ਪ੍ਰਕਿਰਿਆ ਨੂੰ 'ਬਿੱਲ' ਦਾ ਭੁਗਤਾਨ ਕਰਨਾ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਬੱਚਾ ___ ਹੈ।", options: ["ਸੌਣਾ", "ਸਵੀਪਿੰਗ", "ਸੀਪਿੰਗ"], correctAnswer: "ਸੌਣਾ", explanation: "ਇਹ ਵਾਕ ਪੂਰਾ ਕਰਦਾ ਹੈ ਕਿ ਬੱਚਾ ਆਰਾਮ ਕਰ ਰਿਹਾ ਹੈ ਜਾਂ ਉਸਨੂੰ ਨੀਂਦ ਆਈ ਹੋਈ ਹੈ ('ਸੌਂ ਰਿਹਾ ਹੈ')।")
         ]
     )
 
@@ -270,21 +270,21 @@ struct PunjabiLanguageExerciseData {
         trackedType: .analogyChoice,
         difficulty: .medium,
         items: [
-            ExerciseItem(id: UUID(), prompt: "PUPPY ਕੁੱਤੇ ਲਈ ਹੈ ਜਿਵੇਂ ਕਿ KITEN ਨੂੰ ___", options: ["ਬਿੱਲੀ", "ਕੁੱਤਾ", "ਪੰਛੀ", "ਮੱਛੀ"], correctAnswer: "ਬਿੱਲੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਠੰਡ ਸਰਦੀਆਂ ਲਈ ਹੁੰਦੀ ਹੈ ਜਿਵੇਂ ਗਰਮ ਹੁੰਦੀ ਹੈ___", options: ["ਬਸੰਤ", "ਗਿਰਾਵਟ", "ਗਰਮੀਆਂ", "ਮੀਂਹ"], correctAnswer: "ਗਰਮੀਆਂ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਅੱਖ ਨੂੰ ਵੇਖਣਾ ਹੈ ਜਿਵੇਂ ਕੰਨ ਨੂੰ ___", options: ["ਛੋਹਵੋ", "ਸੁਣੋ", "ਗੰਧ", "ਸੁਆਦ"], correctAnswer: "ਸੁਣੋ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "CHEF ਰਸੋਈ ਲਈ ਹੈ ਜਿਵੇਂ ਡਾਕਟਰ ਨੂੰ ___", options: ["ਲਾਇਬ੍ਰੇਰੀ", "ਹਸਪਤਾਲ", "ਸਕੂਲ", "ਸਟੋਰ"], correctAnswer: "ਹਸਪਤਾਲ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਦਸਤਾਨੇ ਹੱਥ ਵਾਂਗ ਹੈ ਜਿਵੇਂ ਸੋਕ ਨੂੰ ___", options: ["ਬਾਂਹ", "ਗੋਡਾ", "ਪੈਰ", "ਸਿਰ"], correctAnswer: "ਪੈਰ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਖੁਸ਼ੀ ਹੱਸਣ ਲਈ ਹੈ ਜਿਵੇਂ SAD ਨੂੰ ___", options: ["ਮੁਸਕਰਾਓ", "ਸਲੀਪ", "ਰੋਣਾ", "ਚਲਾਓ"], correctAnswer: "ਰੋਣਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "BIRD NEST ਲਈ ਹੈ ਜਿਵੇਂ BEAR ਨੂੰ ___", options: ["ਰੁੱਖ", "ਗੁਫਾ", "ਸਾਗਰ", "ਖੇਤਰ"], correctAnswer: "ਗੁਫਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਪੈਨਸਿਲ ਨੂੰ ਲਿਖਣਾ ਹੈ ਜਿਵੇਂ ਬੁਰਸ਼ ਨੂੰ ___", options: ["ਕੱਟੋ", "ਪੇਂਟ", "ਸਵੀਪ ਕਰੋ", "ਹਿਲਾਓ"], correctAnswer: "ਪੇਂਟ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਦਿਨ ਤੋਂ ਰਾਤ ਹੈ ਜਿਵੇਂ ਕਾਲੀ ਹੈ___", options: ["ਹਨੇਰਾ", "ਸਲੇਟੀ", "ਚਿੱਟਾ", "ਨੀਲਾ"], correctAnswer: "ਚਿੱਟਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸਿਪਾਹੀ ਆਰਮੀ ਲਈ ਹੈ ਜਿਵੇਂ ਮਲਾਹ ਨੂੰ ___", options: ["ਹਵਾਈ ਸੈਨਾ", "ਮਰੀਨ", "ਨੇਵੀ", "ਗਾਰਡ"], correctAnswer: "ਨੇਵੀ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "WHEEL ਕਾਰ ਨੂੰ ਹੈ ਜਿਵੇਂ WING ਨੂੰ ___", options: ["ਕਿਸ਼ਤੀ", "ਹਵਾਈ ਜਹਾਜ਼", "ਰੇਲਗੱਡੀ", "ਬੱਸ"], correctAnswer: "ਹਵਾਈ ਜਹਾਜ਼", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "TEACHER SCHOOL ਲਈ ਹੈ ਜਿਵੇਂ JUDGE ਨੂੰ ___", options: ["ਦਫ਼ਤਰ", "ਹਸਪਤਾਲ", "ਕੋਰਟਰੂਮ", "ਸਟੋਰ"], correctAnswer: "ਕੋਰਟਰੂਮ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੈਟਰਪਿਲਰ ਬਟਰਫਲਾਈ ਨੂੰ ਹੈ ਜਿਵੇਂ ਕਿ ਟੈਡਪੋਲ ਨੂੰ ___", options: ["ਮੱਛੀ", "ਕੱਛੂ", "ਡੱਡੂ", "ਕਿਰਲੀ"], correctAnswer: "ਡੱਡੂ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਭੋਜਨ ਭੁੱਖੇ ਲਈ ਹੈ ਜਿਵੇਂ ਪਾਣੀ ਨੂੰ ___", options: ["ਗਿੱਲਾ", "ਪਿਆਸਾ", "ਠੰਡਾ", "ਪੂਰਾ"], correctAnswer: "ਪਿਆਸਾ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉੱਨ ਭੇਡ ਲਈ ਹੈ ਜਿਵੇਂ ਰੇਸ਼ਮ ਨੂੰ ___", options: ["ਮੱਕੜੀ", "ਰੇਸ਼ਮ ਦਾ ਕੀੜਾ", "ਕਪਾਹ", "ਲਿਨਨ"], correctAnswer: "ਰੇਸ਼ਮ ਦਾ ਕੀੜਾ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "PUPPY ਕੁੱਤੇ ਲਈ ਹੈ ਜਿਵੇਂ ਕਿ KITEN ਨੂੰ ___", options: ["ਬਿੱਲੀ", "ਕੁੱਤਾ", "ਪੰਛੀ", "ਮੱਛੀ"], correctAnswer: "ਬਿੱਲੀ", explanation: "ਜਿਸ ਤਰ੍ਹਾਂ ਕੁੱਤੇ ਦੇ ਬੱਚੇ ਨੂੰ ਪਪੀ (Puppy) ਕਿਹਾ ਜਾਂਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਬਿੱਲੀ ਦੇ ਬੱਚੇ ਨੂੰ ਕਿਟਨ (Kitten) ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਜਾਨਵਰ ਅਤੇ ਉਸਦੇ ਬੱਚੇ ਦਾ ਰਿਸ਼ਤਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਠੰਡ ਸਰਦੀਆਂ ਲਈ ਹੁੰਦੀ ਹੈ ਜਿਵੇਂ ਗਰਮ ਹੁੰਦੀ ਹੈ___", options: ["ਬਸੰਤ", "ਗਿਰਾਵਟ", "ਗਰਮੀਆਂ", "ਮੀਂਹ"], correctAnswer: "ਗਰਮੀਆਂ", explanation: "ਜਿਵੇਂ ਸਰਦੀਆਂ ਦੇ ਮੌਸਮ ਵਿੱਚ ਠੰਡ ਹੁੰਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਗਰਮੀਆਂ ਦੇ ਮੌਸਮ ਵਿੱਚ ਗਰਮੀ ਹੁੰਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਅੱਖ ਨੂੰ ਵੇਖਣਾ ਹੈ ਜਿਵੇਂ ਕੰਨ ਨੂੰ ___", options: ["ਛੋਹਵੋ", "ਸੁਣੋ", "ਗੰਧ", "ਸੁਆਦ"], correctAnswer: "ਸੁਣੋ", explanation: "ਜਿਵੇਂ ਅੱਖਾਂ ਦੀ ਵਰਤੋਂ ਵੇਖਣ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਕੰਨਾਂ ਦੀ ਵਰਤੋਂ ਸੁਣਨ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "CHEF ਰਸੋਈ ਲਈ ਹੈ ਜਿਵੇਂ ਡਾਕਟਰ ਨੂੰ ___", options: ["ਲਾਇਬ੍ਰੇਰੀ", "ਹਸਪਤਾਲ", "ਸਕੂਲ", "ਸਟੋਰ"], correctAnswer: "ਹਸਪਤਾਲ", explanation: "ਜਿਵੇਂ ਇੱਕ ਸ਼ੈੱਫ ਰਸੋਈ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਇੱਕ ਡਾਕਟਰ ਹਸਪਤਾਲ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਦਸਤਾਨੇ ਹੱਥ ਵਾਂਗ ਹੈ ਜਿਵੇਂ ਸੋਕ ਨੂੰ ___", options: ["ਬਾਂਹ", "ਗੋਡਾ", "ਪੈਰ", "ਸਿਰ"], correctAnswer: "ਪੈਰ", explanation: "ਜਿਵੇਂ ਦਸਤਾਨੇ ਹੱਥਾਂ ਵਿੱਚ ਪਹਿਨੇ ਜਾਂਦੇ ਹਨ, ਉਸੇ ਤਰ੍ਹਾਂ ਜੁਰਾਬਾਂ ਪੈਰਾਂ ਵਿੱਚ ਪਹਿਨੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਖੁਸ਼ੀ ਹੱਸਣ ਲਈ ਹੈ ਜਿਵੇਂ SAD ਨੂੰ ___", options: ["ਮੁਸਕਰਾਓ", "ਸਲੀਪ", "ਰੋਣਾ", "ਚਲਾਓ"], correctAnswer: "ਰੋਣਾ", explanation: "ਜਦੋਂ ਅਸੀਂ ਖੁਸ਼ ਹੁੰਦੇ ਹਾਂ ਤਾਂ ਅਸੀਂ ਹੱਸਦੇ ਹਾਂ, ਅਤੇ ਜਦੋਂ ਅਸੀਂ ਉਦਾਸ ਹੁੰਦੇ ਹਾਂ ਤਾਂ ਅਸੀਂ ਰੋਂਦੇ ਹਾਂ।"),
+            ExerciseItem(id: UUID(), prompt: "BIRD NEST ਲਈ ਹੈ ਜਿਵੇਂ BEAR ਨੂੰ ___", options: ["ਰੁੱਖ", "ਗੁਫਾ", "ਸਾਗਰ", "ਖੇਤਰ"], correctAnswer: "ਗੁਫਾ", explanation: "ਜਿਵੇਂ ਪੰਛੀ ਆਲ੍ਹਣੇ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਭਾਲੂ ਗੁਫਾ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਪੈਨਸਿਲ ਨੂੰ ਲਿਖਣਾ ਹੈ ਜਿਵੇਂ ਬੁਰਸ਼ ਨੂੰ ___", options: ["ਕੱਟੋ", "ਪੇਂਟ", "ਸਵੀਪ ਕਰੋ", "ਹਿਲਾਓ"], correctAnswer: "ਪੇਂਟ", explanation: "ਜਿਵੇਂ ਪੈਨਸਿਲ ਦੀ ਵਰਤੋਂ ਲਿਖਣ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਬੁਰਸ਼ ਦੀ ਵਰਤੋਂ ਪੇਂਟ ਕਰਨ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਦਿਨ ਤੋਂ ਰਾਤ ਹੈ ਜਿਵੇਂ ਕਾਲੀ ਹੈ___", options: ["ਹਨੇਰਾ", "ਸਲੇਟੀ", "ਚਿੱਟਾ", "ਨੀਲਾ"], correctAnswer: "ਚਿੱਟਾ", explanation: "ਜਿਵੇਂ ਦਿਨ ਅਤੇ ਰਾਤ ਇੱਕ ਦੂਜੇ ਦੇ ਉਲਟ ਹਨ, ਉਸੇ ਤਰ੍ਹਾਂ ਕਾਲਾ ਅਤੇ ਚਿੱਟਾ ਵੀ ਉਲਟ ਰੰਗ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸਿਪਾਹੀ ਆਰਮੀ ਲਈ ਹੈ ਜਿਵੇਂ ਮਲਾਹ ਨੂੰ ___", options: ["ਹਵਾਈ ਸੈਨਾ", "ਮਰੀਨ", "ਨੇਵੀ", "ਗਾਰਡ"], correctAnswer: "ਨੇਵੀ", explanation: "ਜਿਵੇਂ ਸਿਪਾਹੀ ਫੌਜ ਦਾ ਹਿੱਸਾ ਹੁੰਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਮਲਾਹ ਜਲ ਸੈਨਾ (ਨੇਵੀ) ਦਾ ਹਿੱਸਾ ਹੁੰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "WHEEL ਕਾਰ ਨੂੰ ਹੈ ਜਿਵੇਂ WING ਨੂੰ ___", options: ["ਕਿਸ਼ਤੀ", "ਹਵਾਈ ਜਹਾਜ਼", "ਰੇਲਗੱਡੀ", "ਬੱਸ"], correctAnswer: "ਹਵਾਈ ਜਹਾਜ਼", explanation: "ਜਿਵੇਂ ਪਹੀਏ ਕਾਰ ਦਾ ਇੱਕ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹਨ, ਉਸੇ ਤਰ੍ਹਾਂ ਖੰਭ ਹਵਾਈ ਜਹਾਜ਼ ਦਾ ਜ਼ਰੂਰੀ ਹਿੱਸਾ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "TEACHER SCHOOL ਲਈ ਹੈ ਜਿਵੇਂ JUDGE ਨੂੰ ___", options: ["ਦਫ਼ਤਰ", "ਹਸਪਤਾਲ", "ਕੋਰਟਰੂਮ", "ਸਟੋਰ"], correctAnswer: "ਕੋਰਟਰੂਮ", explanation: "ਜਿਵੇਂ ਇੱਕ ਅਧਿਆਪਕ ਸਕੂਲ ਵਿੱਚ ਪੜ੍ਹਾਉਂਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਇੱਕ ਜੱਜ ਕੋਰਟਰੂਮ (ਅਦਾਲਤ) ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੈਟਰਪਿਲਰ ਬਟਰਫਲਾਈ ਨੂੰ ਹੈ ਜਿਵੇਂ ਕਿ ਟੈਡਪੋਲ ਨੂੰ ___", options: ["ਮੱਛੀ", "ਕੱਛੂ", "ਡੱਡੂ", "ਕਿਰਲੀ"], correctAnswer: "ਡੱਡੂ", explanation: "ਜਿਵੇਂ ਕੈਟਰਪਿਲਰ ਵੱਡਾ ਹੋ ਕੇ ਤਿਤਲੀ ਬਣਦਾ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਟੈਡਪੋਲ ਵੱਡਾ ਹੋ ਕੇ ਡੱਡੂ ਬਣਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਭੋਜਨ ਭੁੱਖੇ ਲਈ ਹੈ ਜਿਵੇਂ ਪਾਣੀ ਨੂੰ ___", options: ["ਗਿੱਲਾ", "ਪਿਆਸਾ", "ਠੰਡਾ", "ਪੂਰਾ"], correctAnswer: "ਪਿਆਸਾ", explanation: "ਜਿਵੇਂ ਭੁੱਖ ਲੱਗਣ 'ਤੇ ਭੋਜਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਪਿਆਸ ਲੱਗਣ 'ਤੇ ਪਾਣੀ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉੱਨ ਭੇਡ ਲਈ ਹੈ ਜਿਵੇਂ ਰੇਸ਼ਮ ਨੂੰ ___", options: ["ਮੱਕੜੀ", "ਰੇਸ਼ਮ ਦਾ ਕੀੜਾ", "ਕਪਾਹ", "ਲਿਨਨ"], correctAnswer: "ਰੇਸ਼ਮ ਦਾ ਕੀੜਾ", explanation: "ਜਿਵੇਂ ਉੱਨ ਭੇਡ ਤੋਂ ਪ੍ਰਾਪਤ ਹੁੰਦੀ ਹੈ, ਉਸੇ ਤਰ੍ਹਾਂ ਰੇਸ਼ਮ ਰੇਸ਼ਮ ਦੇ ਕੀੜੇ ਤੋਂ ਪ੍ਰਾਪਤ ਹੁੰਦਾ ਹੈ।")
         ]
     )
 
@@ -297,31 +297,31 @@ struct PunjabiLanguageExerciseData {
         trackedType: nil,
         difficulty: .easy,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਹਫ਼ਤੇ ਵਿੱਚ 7 ਦਿਨ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਵਨੀਲਾ ਆਈਸ ਕਰੀਮ ਦਾ ਸਭ ਤੋਂ ਵਧੀਆ ਸੁਆਦ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਪਾਣੀ 32 ਡਿਗਰੀ ਫਾਰਨਹੀਟ 'ਤੇ ਜੰਮ ਜਾਂਦਾ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤੇ ਸਭ ਤੋਂ ਵਧੀਆ ਪਾਲਤੂ ਜਾਨਵਰ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਤਿਕੋਣ ਦੇ ਤਿੰਨ ਪਾਸੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਉਹ ਟੀਵੀ ਸ਼ੋਅ ਮਜ਼ਾਕੀਆ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਅਬ੍ਰਾਹਮ ਲਿੰਕਨ ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਦੇ ਰਾਸ਼ਟਰਪਤੀ ਸਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਧਰਤੀ ਸਭ ਤੋਂ ਉੱਤਮ ਗ੍ਰਹਿ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਘੰਟੇ ਵਿੱਚ 60 ਮਿੰਟ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਟਿਊਲਿਪਸ ਗੁਲਾਬ ਨਾਲੋਂ ਸੁੰਦਰ ਹਨ.", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਵਾਸ਼ਿੰਗਟਨ ਡੀ.ਸੀ. ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਦੀ ਰਾਜਧਾਨੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਮੂੰਹ ਭਰ ਕੇ ਗੱਲ ਕਰਨੀ ਬੇਈਮਾਨੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸਾਲ ਵਿੱਚ 12 ਮਹੀਨੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਜਲਦੀ ਉੱਠਣਾ ਤੁਹਾਡੇ ਲਈ ਚੰਗਾ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "2 + 2 = 4।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸਮੁੰਦਰ ਖਾਰੇ ਪਾਣੀ ਤੋਂ ਬਣਿਆ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਬਾਗਬਾਨੀ ਇੱਕ ਬਹੁਤ ਵਧੀਆ ਸ਼ੌਕ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਚੱਟਾਨਾਂ ਇੱਕੋ ਆਕਾਰ ਦੇ ਖੰਭਾਂ ਨਾਲੋਂ ਭਾਰੀ ਹੁੰਦੀਆਂ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਵਿੱਚ 50 ਰਾਜ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਪੀਜ਼ਾ ਸਭ ਤੋਂ ਵਧੀਆ ਭੋਜਨ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕਸਰਤ ਤੁਹਾਡੀ ਸਿਹਤ ਲਈ ਫਾਇਦੇਮੰਦ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕਲਾਸੀਕਲ ਸੰਗੀਤ ਬੋਰਿੰਗ ਹੈ.", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਸੇਬ ਅਤੇ ਸੰਤਰਾ ਦੋਵੇਂ ਫਲ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤਿਆਂ ਨਾਲੋਂ ਬਿੱਲੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰਨੀ ਸੌਖੀ ਹੁੰਦੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਦਿਨ ਵਿੱਚ 24 ਘੰਟੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਹਫ਼ਤੇ ਵਿੱਚ 7 ਦਿਨ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਤੱਥ ਹੈ ਕਿਉਂਕਿ ਕੈਲੰਡਰ ਅਨੁਸਾਰ ਇੱਕ ਹਫ਼ਤੇ ਵਿੱਚ ਹਮੇਸ਼ਾ ਸੱਤ ਦਿਨ ਹੀ ਹੁੰਦੇ ਹਨ, ਜਿਸ ਨੂੰ ਸਾਬਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਵਨੀਲਾ ਆਈਸ ਕਰੀਮ ਦਾ ਸਭ ਤੋਂ ਵਧੀਆ ਸੁਆਦ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਵੱਖ-ਵੱਖ ਲੋਕਾਂ ਦੀ ਪਸੰਦ ਵੱਖਰੀ ਹੋ ਸਕਦੀ ਹੈ; ਕੁਝ ਲੋਕਾਂ ਨੂੰ ਚਾਕਲੇਟ ਜਾਂ ਹੋਰ ਸੁਆਦ ਜ਼ਿਆਦਾ ਪਸੰਦ ਹੋ ਸਕਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਪਾਣੀ 32 ਡਿਗਰੀ ਫਾਰਨਹੀਟ 'ਤੇ ਜੰਮ ਜਾਂਦਾ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਵਿਗਿਆਨਕ ਤੱਥ ਹੈ ਜਿਸ ਨੂੰ ਤਾਪਮਾਨ ਮਾਪ ਕੇ ਸਾਬਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ ਕਿ ਪਾਣੀ 32°F 'ਤੇ ਬਰਫ਼ ਬਣ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤੇ ਸਭ ਤੋਂ ਵਧੀਆ ਪਾਲਤੂ ਜਾਨਵਰ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਕੁਝ ਲੋਕ ਬਿੱਲੀਆਂ, ਪੰਛੀਆਂ ਜਾਂ ਹੋਰ ਜਾਨਵਰਾਂ ਨੂੰ ਬਿਹਤਰ ਪਾਲਤੂ ਜਾਨਵਰ ਮੰਨ ਸਕਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਤਿਕੋਣ ਦੇ ਤਿੰਨ ਪਾਸੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਗਣਿਤਿਕ ਤੱਥ ਹੈ; ਪਰਿਭਾਸ਼ਾ ਅਨੁਸਾਰ ਤਿਕੋਣ ਦੀਆਂ ਹਮੇਸ਼ਾ ਤਿੰਨ ਹੀ ਭੁਜਾਵਾਂ ਹੁੰਦੀਆਂ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਉਹ ਟੀਵੀ ਸ਼ੋਅ ਮਜ਼ਾਕੀਆ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਜੋ ਸ਼ੋਅ ਇੱਕ ਵਿਅਕਤੀ ਨੂੰ ਮਜ਼ਾਕੀਆ ਲੱਗਦਾ ਹੈ, ਹੋ ਸਕਦਾ ਹੈ ਉਹ ਦੂਜੇ ਨੂੰ ਬੋਰਿੰਗ ਲੱਗੇ।"),
+            ExerciseItem(id: UUID(), prompt: "ਅਬ੍ਰਾਹਮ ਲਿੰਕਨ ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਦੇ ਰਾਸ਼ਟਰਪਤੀ ਸਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਇਤਿਹਾਸਕ ਤੱਥ ਹੈ ਜਿਸ ਨੂੰ ਇਤਿਹਾਸ ਦੀਆਂ ਕਿਤਾਬਾਂ ਅਤੇ ਦਸਤਾਵੇਜ਼ਾਂ ਰਾਹੀਂ ਸਾਬਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਧਰਤੀ ਸਭ ਤੋਂ ਉੱਤਮ ਗ੍ਰਹਿ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ 'ਸਭ ਤੋਂ ਉੱਤਮ' ਹੋਣਾ ਇੱਕ ਵਿਅਕਤੀਗਤ ਸੋਚ ਹੈ ਅਤੇ ਇਸਨੂੰ ਵਿਗਿਆਨਕ ਤੌਰ 'ਤੇ ਸਾਬਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"),
+            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਘੰਟੇ ਵਿੱਚ 60 ਮਿੰਟ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਪ੍ਰਮਾਣਿਤ ਤੱਥ ਹੈ ਕਿ ਸਮੇਂ ਦੇ ਮਿਆਰੀ ਮਾਪ ਅਨੁਸਾਰ ਹਰ ਇੱਕ ਘੰਟੇ ਵਿੱਚ 60 ਮਿੰਟ ਹੁੰਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਟਿਊਲਿਪਸ ਗੁਲਾਬ ਨਾਲੋਂ ਸੁੰਦਰ ਹਨ.", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਸੁੰਦਰਤਾ ਵਿਅਕਤੀਗਤ ਪਸੰਦ 'ਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ; ਕੋਈ ਗੁਲਾਬ ਨੂੰ ਜ਼ਿਆਦਾ ਸੁੰਦਰ ਮੰਨ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਵਾਸ਼ਿੰਗਟਨ ਡੀ.ਸੀ. ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਦੀ ਰਾਜਧਾਨੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਭੂਗੋਲਿਕ ਅਤੇ ਰਾਜਨੀਤਿਕ ਤੱਥ ਹੈ ਜਿਸ ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਮੂੰਹ ਭਰ ਕੇ ਗੱਲ ਕਰਨੀ ਬੇਈਮਾਨੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਸ਼ਿਸ਼ਟਾਚਾਰ ਅਤੇ ਸਲੀਕੇ ਵੱਖ-ਵੱਖ ਸਭਿਆਚਾਰਾਂ ਅਤੇ ਲੋਕਾਂ ਲਈ ਵੱਖਰੇ ਹੋ ਸਕਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸਾਲ ਵਿੱਚ 12 ਮਹੀਨੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਤੱਥ ਹੈ ਕਿਉਂਕਿ ਆਧੁਨਿਕ ਕੈਲੰਡਰ ਅਨੁਸਾਰ ਹਰ ਸਾਲ ਵਿੱਚ ਬਾਰਾਂ ਮਹੀਨੇ ਹੀ ਹੁੰਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਜਲਦੀ ਉੱਠਣਾ ਤੁਹਾਡੇ ਲਈ ਚੰਗਾ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਕੁਝ ਲੋਕ ਰਾਤ ਨੂੰ ਦੇਰ ਤੱਕ ਜਾਗ ਕੇ ਵਧੀਆ ਕੰਮ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਦੇਰ ਨਾਲ ਉੱਠਣਾ ਪਸੰਦ ਕਰਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "2 + 2 = 4।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਗਣਿਤਿਕ ਤੱਥ ਹੈ ਜਿਸ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਗਿਣ ਕੇ ਸਾਬਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸਮੁੰਦਰ ਖਾਰੇ ਪਾਣੀ ਤੋਂ ਬਣਿਆ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਵਿਗਿਆਨਕ ਤੱਥ ਹੈ ਜਿਸ ਨੂੰ ਸਮੁੰਦਰ ਦੇ ਪਾਣੀ ਦੀ ਜਾਂਚ ਕਰਕੇ ਸਾਬਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ ਕਿ ਇਸ ਵਿੱਚ ਲੂਣ ਹੁੰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਬਾਗਬਾਨੀ ਇੱਕ ਬਹੁਤ ਵਧੀਆ ਸ਼ੌਕ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਹਰ ਕਿਸੇ ਦੀਆਂ ਰੁਚੀਆਂ ਵੱਖਰੀਆਂ ਹੁੰਦੀਆਂ ਹਨ; ਕੁਝ ਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਜਾਂ ਖੇਡਣਾ ਜ਼ਿਆਦਾ ਵਧੀਆ ਲੱਗ ਸਕਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਚੱਟਾਨਾਂ ਇੱਕੋ ਆਕਾਰ ਦੇ ਖੰਭਾਂ ਨਾਲੋਂ ਭਾਰੀ ਹੁੰਦੀਆਂ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਵਿਗਿਆਨਕ ਤੱਥ ਹੈ ਕਿਉਂਕਿ ਚੱਟਾਨ ਦੀ ਘਣਤਾ ਖੰਭਾਂ ਨਾਲੋਂ ਕਿਤੇ ਜ਼ਿਆਦਾ ਹੁੰਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸੰਯੁਕਤ ਰਾਜ ਅਮਰੀਕਾ ਵਿੱਚ 50 ਰਾਜ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਭੂਗੋਲਿਕ ਅਤੇ ਰਾਜਨੀਤਿਕ ਤੱਥ ਹੈ ਜਿਸ ਦੀ ਅਧਿਕਾਰਤ ਦਸਤਾਵੇਜ਼ਾਂ ਦੁਆਰਾ ਪੁਸ਼ਟੀ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਪੀਜ਼ਾ ਸਭ ਤੋਂ ਵਧੀਆ ਭੋਜਨ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਭੋਜਨ ਦੀ ਪਸੰਦ ਹਰ ਵਿਅਕਤੀ ਲਈ ਵੱਖਰੀ ਹੁੰਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕਸਰਤ ਤੁਹਾਡੀ ਸਿਹਤ ਲਈ ਫਾਇਦੇਮੰਦ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਡਾਕਟਰੀ ਤੱਥ ਹੈ ਜਿਸ ਦੇ ਵਿਗਿਆਨਕ ਸਬੂਤ ਹਨ ਕਿ ਕਸਰਤ ਸਰੀਰ ਨੂੰ ਸਿਹਤਮੰਦ ਰੱਖਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕਲਾਸੀਕਲ ਸੰਗੀਤ ਬੋਰਿੰਗ ਹੈ.", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਸੰਗੀਤ ਦੀ ਪਸੰਦ ਨਿੱਜੀ ਹੁੰਦੀ ਹੈ; ਬਹੁਤ ਸਾਰੇ ਲੋਕ ਕਲਾਸੀਕਲ ਸੰਗੀਤ ਦਾ ਆਨੰਦ ਵੀ ਲੈਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਸੇਬ ਅਤੇ ਸੰਤਰਾ ਦੋਵੇਂ ਫਲ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਬਨਸਪਤੀ ਤੱਥ ਹੈ ਕਿ ਸੇਬ ਅਤੇ ਸੰਤਰੇ ਦੋਵੇਂ ਰੁੱਖਾਂ 'ਤੇ ਉੱਗਦੇ ਹਨ ਅਤੇ ਫਲਾਂ ਦੀ ਸ਼੍ਰੇਣੀ ਵਿੱਚ ਆਉਂਦੇ ਹਨ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੁੱਤਿਆਂ ਨਾਲੋਂ ਬਿੱਲੀਆਂ ਦੀ ਦੇਖਭਾਲ ਕਰਨੀ ਸੌਖੀ ਹੁੰਦੀ ਹੈ।", options: ["Fact", "Opinion"], correctAnswer: "Opinion", explanation: "ਇਹ ਇੱਕ ਰਾਏ ਹੈ ਕਿਉਂਕਿ ਇਹ ਜਾਨਵਰ ਦੇ ਸੁਭਾਅ ਅਤੇ ਵਿਅਕਤੀ ਦੇ ਤਜ਼ਰਬੇ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਦਿਨ ਵਿੱਚ 24 ਘੰਟੇ ਹੁੰਦੇ ਹਨ।", options: ["Fact", "Opinion"], correctAnswer: "Fact", explanation: "ਇਹ ਇੱਕ ਵਿਗਿਆਨਕ ਤੱਥ ਹੈ ਜੋ ਧਰਤੀ ਦੇ ਆਪਣੀ ਧੁਰੀ ਦੁਆਲੇ ਇੱਕ ਚੱਕਰ ਪੂਰਾ ਕਰਨ ਦੇ ਸਮੇਂ 'ਤੇ ਅਧਾਰਤ ਹੈ।")
         ]
     )
 
@@ -334,14 +334,14 @@ struct PunjabiLanguageExerciseData {
         trackedType: .sequencing,
         difficulty: .medium,
         items: [
-            ExerciseItem(id: UUID(), prompt: "ਟੋਸਟ ਬਣਾਉਣਾ", options: ["ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ", "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ", "ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ", "ਖਾਓ"], correctAnswer: "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ | ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ | ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ | ਖਾਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਹੱਥ ਧੋਣਾ", options: ["ਤੌਲੀਏ ਨਾਲ ਹੱਥ ਸੁਕਾਓ", "ਹੱਥਾਂ 'ਤੇ ਸਾਬਣ ਲਗਾਓ", "ਪਾਣੀ ਨੂੰ ਚਾਲੂ ਕਰੋ", "20 ਸਕਿੰਟਾਂ ਲਈ ਰਗੜੋ", "ਸਾਬਣ ਬੰਦ ਕੁਰਲੀ", "ਆਪਣੇ ਹੱਥ ਗਿੱਲੇ ਕਰੋ"], correctAnswer: "ਪਾਣੀ ਨੂੰ ਚਾਲੂ ਕਰੋ | ਆਪਣੇ ਹੱਥ ਗਿੱਲੇ ਕਰੋ | ਹੱਥਾਂ 'ਤੇ ਸਾਬਣ ਲਗਾਓ | 20 ਸਕਿੰਟਾਂ ਲਈ ਰਗੜੋ | ਸਾਬਣ ਬੰਦ ਕੁਰਲੀ | ਤੌਲੀਏ ਨਾਲ ਹੱਥ ਸੁਕਾਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੌਫੀ ਬਣਾਉਣਾ", options: ["ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਕੌਫੀ ਡੋਲ੍ਹ ਦਿਓ", "ਫਿਲਟਰ ਵਿੱਚ ਕੌਫੀ ਦੇ ਮੈਦਾਨ ਸ਼ਾਮਲ ਕਰੋ", "ਬਰਿਊ ਬਟਨ ਨੂੰ ਦਬਾਓ", "ਪਾਣੀ ਦੇ ਭੰਡਾਰ ਨੂੰ ਭਰੋ"], correctAnswer: "ਪਾਣੀ ਦੇ ਭੰਡਾਰ ਨੂੰ ਭਰੋ | ਫਿਲਟਰ ਵਿੱਚ ਕੌਫੀ ਦੇ ਮੈਦਾਨ ਸ਼ਾਮਲ ਕਰੋ | ਬਰਿਊ ਬਟਨ ਨੂੰ ਦਬਾਓ | ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਕੌਫੀ ਡੋਲ੍ਹ ਦਿਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਫ਼ੋਨ ਕਾਲ ਕਰਨਾ", options: ["ਹੈਲੋ ਕਹੋ", "ਬੰਦ ਕਰੋ", "ਫ਼ੋਨ ਚੁੱਕੋ", "ਨੰਬਰ ਡਾਇਲ ਕਰੋ", "ਆਪਣੀ ਗੱਲਬਾਤ ਕਰੋ"], correctAnswer: "ਫ਼ੋਨ ਚੁੱਕੋ | ਨੰਬਰ ਡਾਇਲ ਕਰੋ | ਹੈਲੋ ਕਹੋ | ਆਪਣੀ ਗੱਲਬਾਤ ਕਰੋ | ਬੰਦ ਕਰੋ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਕੱਪੜੇ ਪਾਉਣੇ", options: ["ਜੁੱਤੀ ਪਾਓ", "ਕਮੀਜ਼ ਪਾਓ", "ਅੰਡਰਵੀਅਰ ਪਾਓ", "ਜੁਰਾਬਾਂ ਪਾਓ", "ਪੈਂਟ ਪਾਓ"], correctAnswer: "ਅੰਡਰਵੀਅਰ ਪਾਓ | ਕਮੀਜ਼ ਪਾਓ | ਪੈਂਟ ਪਾਓ | ਜੁਰਾਬਾਂ ਪਾਓ | ਜੁੱਤੀ ਪਾਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਫਰਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰਨਾ", options: ["ਰੱਦੀ ਵਿੱਚ ਸੁੱਟ ਦਿਓ", "ਝਾੜੂ ਕੱਢੋ", "ਮਲਬੇ ਨੂੰ ਡਸਟਪੈਨ ਵਿੱਚ ਸਕੂਪ ਕਰੋ", "ਇੱਕ ਢੇਰ ਵਿੱਚ ਮਲਬੇ ਨੂੰ ਝਾੜੋ"], correctAnswer: "ਝਾੜੂ ਕੱਢੋ | ਇੱਕ ਢੇਰ ਵਿੱਚ ਮਲਬੇ ਨੂੰ ਝਾੜੋ | ਮਲਬੇ ਨੂੰ ਡਸਟਪੈਨ ਵਿੱਚ ਸਕੂਪ ਕਰੋ | ਰੱਦੀ ਵਿੱਚ ਸੁੱਟ ਦਿਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਰੈਸਟੋਰੈਂਟ ਵਿੱਚ ਆਰਡਰ ਕਰਨਾ", options: ["ਆਪਣਾ ਭੋਜਨ ਖਾਓ", "ਸਰਵਰ ਨੂੰ ਆਪਣਾ ਆਰਡਰ ਦੱਸੋ", "ਬੈਠੋ", "ਆਪਣੇ ਭੋਜਨ ਦੀ ਉਡੀਕ ਕਰੋ", "ਮੀਨੂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ"], correctAnswer: "ਬੈਠੋ | ਮੀਨੂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ | ਸਰਵਰ ਨੂੰ ਆਪਣਾ ਆਰਡਰ ਦੱਸੋ | ਆਪਣੇ ਭੋਜਨ ਦੀ ਉਡੀਕ ਕਰੋ | ਆਪਣਾ ਭੋਜਨ ਖਾਓ", explanation: ""),
-            ExerciseItem(id: UUID(), prompt: "ਬੇਕਿੰਗ ਕੂਕੀਜ਼", options: ["ਕੂਕੀਜ਼ ਨੂੰ ਠੰਡਾ ਹੋਣ ਦਿਓ", "ਓਵਨ ਵਿੱਚ ਬਿਅੇਕ ਕਰੋ", "ਓਵਨ ਨੂੰ ਪਹਿਲਾਂ ਤੋਂ ਹੀਟ ਕਰੋ", "ਸਮੱਗਰੀ ਨੂੰ ਮਿਲਾਓ", "ਬੇਕਿੰਗ ਸ਼ੀਟ 'ਤੇ ਆਟੇ ਨੂੰ ਸਕੂਪ ਕਰੋ"], correctAnswer: "ਓਵਨ ਨੂੰ ਪਹਿਲਾਂ ਤੋਂ ਹੀਟ ਕਰੋ | ਸਮੱਗਰੀ ਨੂੰ ਮਿਲਾਓ | ਬੇਕਿੰਗ ਸ਼ੀਟ 'ਤੇ ਆਟੇ ਨੂੰ ਸਕੂਪ ਕਰੋ | ਓਵਨ ਵਿੱਚ ਬਿਅੇਕ ਕਰੋ | ਕੂਕੀਜ਼ ਨੂੰ ਠੰਡਾ ਹੋਣ ਦਿਓ", explanation: "")
+            ExerciseItem(id: UUID(), prompt: "ਟੋਸਟ ਬਣਾਉਣਾ", options: ["ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ", "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ", "ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ", "ਖਾਓ"], correctAnswer: "ਟੋਸਟਰ ਵਿੱਚ ਰੋਟੀ ਪਾਓ | ਟੋਸਟਰ ਤੋਂ ਹਟਾਓ | ਟੋਸਟ ਨੂੰ ਮੱਖਣ ਦਿਓ | ਖਾਓ", explanation: "ਪਹਿਲਾਂ ਬਰੈੱਡ ਨੂੰ ਟੋਸਟਰ ਵਿੱਚ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਗਰਮ ਹੋਣ ਤੋਂ ਬਾਅਦ ਬਾਹਰ ਕੱਢਿਆ ਜਾਂਦਾ ਹੈ, ਉਸ ਉੱਤੇ ਮੱਖਣ ਲਗਾਇਆ ਜਾਂਦਾ ਹੈ, ਅਤੇ ਅੰਤ ਵਿੱਚ ਇਸਨੂੰ ਖਾਧਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਹੱਥ ਧੋਣਾ", options: ["ਤੌਲੀਏ ਨਾਲ ਹੱਥ ਸੁਕਾਓ", "ਹੱਥਾਂ 'ਤੇ ਸਾਬਣ ਲਗਾਓ", "ਪਾਣੀ ਨੂੰ ਚਾਲੂ ਕਰੋ", "20 ਸਕਿੰਟਾਂ ਲਈ ਰਗੜੋ", "ਸਾਬਣ ਬੰਦ ਕੁਰਲੀ", "ਆਪਣੇ ਹੱਥ ਗਿੱਲੇ ਕਰੋ"], correctAnswer: "ਪਾਣੀ ਨੂੰ ਚਾਲੂ ਕਰੋ | ਆਪਣੇ ਹੱਥ ਗਿੱਲੇ ਕਰੋ | ਹੱਥਾਂ 'ਤੇ ਸਾਬਣ ਲਗਾਓ | 20 ਸਕਿੰਟਾਂ ਲਈ ਰਗੜੋ | ਸਾਬਣ ਬੰਦ ਕੁਰਲੀ | ਤੌਲੀਏ ਨਾਲ ਹੱਥ ਸੁਕਾਓ", explanation: "ਹੱਥ ਧੋਣ ਲਈ ਪਹਿਲਾਂ ਟੂਟੀ ਚਲਾ ਕੇ ਹੱਥ ਗਿੱਲੇ ਕੀਤੇ ਜਾਂਦੇ ਹਨ, ਫਿਰ ਸਾਬਣ ਲਗਾ ਕੇ 20 ਸਕਿੰਟਾਂ ਲਈ ਰਗੜਿਆ ਜਾਂਦਾ ਹੈ, ਪਾਣੀ ਨਾਲ ਧੋ ਕੇ ਅੰਤ ਵਿੱਚ ਤੌਲੀਏ ਨਾਲ ਸੁਕਾਇਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੌਫੀ ਬਣਾਉਣਾ", options: ["ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਕੌਫੀ ਡੋਲ੍ਹ ਦਿਓ", "ਫਿਲਟਰ ਵਿੱਚ ਕੌਫੀ ਦੇ ਮੈਦਾਨ ਸ਼ਾਮਲ ਕਰੋ", "ਬਰਿਊ ਬਟਨ ਨੂੰ ਦਬਾਓ", "ਪਾਣੀ ਦੇ ਭੰਡਾਰ ਨੂੰ ਭਰੋ"], correctAnswer: "ਪਾਣੀ ਦੇ ਭੰਡਾਰ ਨੂੰ ਭਰੋ | ਫਿਲਟਰ ਵਿੱਚ ਕੌਫੀ ਦੇ ਮੈਦਾਨ ਸ਼ਾਮਲ ਕਰੋ | ਬਰਿਊ ਬਟਨ ਨੂੰ ਦਬਾਓ | ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਕੌਫੀ ਡੋਲ੍ਹ ਦਿਓ", explanation: "ਪਹਿਲਾਂ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਣੀ ਭਰਿਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਫਿਲਟਰ ਵਿੱਚ ਕੌਫੀ ਪਾਈ ਜਾਂਦੀ ਹੈ, ਬਟਨ ਦਬਾ ਕੇ ਕੌਫੀ ਬਣਾਈ ਜਾਂਦੀ ਹੈ, ਅਤੇ ਫਿਰ ਕੱਪ ਵਿੱਚ ਪਾ ਕੇ ਪੀਤੀ ਜਾਂਦੀ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਫ਼ੋਨ ਕਾਲ ਕਰਨਾ", options: ["ਹੈਲੋ ਕਹੋ", "ਬੰਦ ਕਰੋ", "ਫ਼ੋਨ ਚੁੱਕੋ", "ਨੰਬਰ ਡਾਇਲ ਕਰੋ", "ਆਪਣੀ ਗੱਲਬਾਤ ਕਰੋ"], correctAnswer: "ਫ਼ੋਨ ਚੁੱਕੋ | ਨੰਬਰ ਡਾਇਲ ਕਰੋ | ਹੈਲੋ ਕਹੋ | ਆਪਣੀ ਗੱਲਬਾਤ ਕਰੋ | ਬੰਦ ਕਰੋ", explanation: "ਕਾਲ ਕਰਨ ਲਈ ਪਹਿਲਾਂ ਫ਼ੋਨ ਚੁੱਕਿਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਨੰਬਰ ਡਾਇਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਦੂਜੇ ਪਾਸੇ ਵਾਲੇ ਨੂੰ ਹੈਲੋ ਕਿਹਾ ਜਾਂਦਾ ਹੈ, ਗੱਲਬਾਤ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਅੰਤ ਵਿੱਚ ਫ਼ੋਨ ਕੱਟ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਕੱਪੜੇ ਪਾਉਣੇ", options: ["ਜੁੱਤੀ ਪਾਓ", "ਕਮੀਜ਼ ਪਾਓ", "ਅੰਡਰਵੀਅਰ ਪਾਓ", "ਜੁਰਾਬਾਂ ਪਾਓ", "ਪੈਂਟ ਪਾਓ"], correctAnswer: "ਅੰਡਰਵੀਅਰ ਪਾਓ | ਕਮੀਜ਼ ਪਾਓ | ਪੈਂਟ ਪਾਓ | ਜੁਰਾਬਾਂ ਪਾਓ | ਜੁੱਤੀ ਪਾਓ", explanation: "ਕੱਪੜੇ ਪਾਉਣ ਦਾ ਸਹੀ ਤਰੀਕਾ ਪਹਿਲਾਂ ਅੰਦਰੂਨੀ ਕੱਪੜੇ ਪਾਉਣਾ ਹੈ, ਫਿਰ ਕਮੀਜ਼ ਅਤੇ ਪੈਂਟ ਪਹਿਨਣਾ ਹੈ, ਅਤੇ ਅੰਤ ਵਿੱਚ ਜੁਰਾਬਾਂ ਅਤੇ ਜੁੱਤੀਆਂ ਪਾਉਣਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਫਰਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰਨਾ", options: ["ਰੱਦੀ ਵਿੱਚ ਸੁੱਟ ਦਿਓ", "ਝਾੜੂ ਕੱਢੋ", "ਮਲਬੇ ਨੂੰ ਡਸਟਪੈਨ ਵਿੱਚ ਸਕੂਪ ਕਰੋ", "ਇੱਕ ਢੇਰ ਵਿੱਚ ਮਲਬੇ ਨੂੰ ਝਾੜੋ"], correctAnswer: "ਝਾੜੂ ਕੱਢੋ | ਇੱਕ ਢੇਰ ਵਿੱਚ ਮਲਬੇ ਨੂੰ ਝਾੜੋ | ਮਲਬੇ ਨੂੰ ਡਸਟਪੈਨ ਵਿੱਚ ਸਕੂਪ ਕਰੋ | ਰੱਦੀ ਵਿੱਚ ਸੁੱਟ ਦਿਓ", explanation: "ਫਰਸ਼ ਸਾਫ਼ ਕਰਨ ਲਈ ਪਹਿਲਾਂ ਝਾੜੂ ਨਾਲ ਕੂੜਾ ਇਕੱਠਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਉਸਨੂੰ ਡਸਟਪੈਨ ਵਿੱਚ ਪਾਇਆ ਜਾਂਦਾ ਹੈ, ਅਤੇ ਅੰਤ ਵਿੱਚ ਰੱਦੀ ਵਾਲੇ ਡੱਬੇ ਵਿੱਚ ਸੁੱਟਿਆ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਇੱਕ ਰੈਸਟੋਰੈਂਟ ਵਿੱਚ ਆਰਡਰ ਕਰਨਾ", options: ["ਆਪਣਾ ਭੋਜਨ ਖਾਓ", "ਸਰਵਰ ਨੂੰ ਆਪਣਾ ਆਰਡਰ ਦੱਸੋ", "ਬੈਠੋ", "ਆਪਣੇ ਭੋਜਨ ਦੀ ਉਡੀਕ ਕਰੋ", "ਮੀਨੂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ"], correctAnswer: "ਬੈਠੋ | ਮੀਨੂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ | ਸਰਵਰ ਨੂੰ ਆਪਣਾ ਆਰਡਰ ਦੱਸੋ | ਆਪਣੇ ਭੋਜਨ ਦੀ ਉਡੀਕ ਕਰੋ | ਆਪਣਾ ਭੋਜਨ ਖਾਓ", explanation: "ਰੈਸਟੋਰੈਂਟ ਵਿੱਚ ਪਹਿਲਾਂ ਮੇਜ਼ 'ਤੇ ਬੈਠਿਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਮੀਨੂ ਦੇਖ ਕੇ ਵੇਟਰ ਨੂੰ ਆਰਡਰ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ, ਭੋਜਨ ਦੀ ਉਡੀਕ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਫਿਰ ਖਾਧਾ ਜਾਂਦਾ ਹੈ।"),
+            ExerciseItem(id: UUID(), prompt: "ਬੇਕਿੰਗ ਕੂਕੀਜ਼", options: ["ਕੂਕੀਜ਼ ਨੂੰ ਠੰਡਾ ਹੋਣ ਦਿਓ", "ਓਵਨ ਵਿੱਚ ਬਿਅੇਕ ਕਰੋ", "ਓਵਨ ਨੂੰ ਪਹਿਲਾਂ ਤੋਂ ਹੀਟ ਕਰੋ", "ਸਮੱਗਰੀ ਨੂੰ ਮਿਲਾਓ", "ਬੇਕਿੰਗ ਸ਼ੀਟ 'ਤੇ ਆਟੇ ਨੂੰ ਸਕੂਪ ਕਰੋ"], correctAnswer: "ਓਵਨ ਨੂੰ ਪਹਿਲਾਂ ਤੋਂ ਹੀਟ ਕਰੋ | ਸਮੱਗਰੀ ਨੂੰ ਮਿਲਾਓ | ਬੇਕਿੰਗ ਸ਼ੀਟ 'ਤੇ ਆਟੇ ਨੂੰ ਸਕੂਪ ਕਰੋ | ਓਵਨ ਵਿੱਚ ਬਿਅੇਕ ਕਰੋ | ਕੂਕੀਜ਼ ਨੂੰ ਠੰਡਾ ਹੋਣ ਦਿਓ", explanation: "ਪਹਿਲਾਂ ਓਵਨ ਨੂੰ ਗਰਮ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਸਮੱਗਰੀ ਮਿਲਾ ਕੇ ਆਟੇ ਨੂੰ ਟਰੇਅ 'ਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ, ਫਿਰ ਓਵਨ ਵਿੱਚ ਪਕਾਇਆ ਜਾਂਦਾ ਹੈ ਅਤੇ ਠੰਡਾ ਹੋਣ ਲਈ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ।")
         ]
     )
 
