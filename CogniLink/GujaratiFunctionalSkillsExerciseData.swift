@@ -1643,10 +1643,10 @@ struct GujaratiFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલા પાણીના બિલની વિગતો વાંચો:",
+                prompt: "નીચે આપેલા પાણીના બિલની વિગતો વાંચો: કુલ પાણીનું બિલ કેટલું થશે?",
                 options: ["$40", "$50", "$35", "$45"],
                 correctAnswer: "$40",
-                explanation: "Usage is 5300 - 4500 = 800 gallons. Cost = 800 * 0.05 = $40."
+                explanation: "Usage is 5300 - 4500 = 800 gallons. Cost = 800 * 0.05 = $40.", passage: "પાણીનું બિલ: પાછલું મીટર રીડિંગ – 4500 ગેલન, ચાલુ મીટર રીડિંગ – 5300 ગેલન, દર ગેલન દીઠ દર – $0.05."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -1664,10 +1664,10 @@ struct GujaratiFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલા કેબલ ટીવી બિલની વિગતો જુઓ:",
+                prompt: "નીચે આપેલા કેબલ ટીવી બિલની વિગતો જુઓ: કુલ કેબલ ટીવી બિલ કેટલું થશે?",
                 options: ["$80", "$75", "$85", "$70"],
                 correctAnswer: "$80",
-                explanation: "65 + 10 + 5 = $80."
+                explanation: "65 + 10 + 5 = $80.", passage: "કેબલ ટીવી બિલ: મૂળ પેકેજ – $65.00, સાધનો ભાડું – $10.00, કર – $5.00."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -1692,10 +1692,10 @@ struct GujaratiFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "ગેસ બિલની વિગતો જુઓ:",
+                prompt: "ગેસ બિલની વિગતો જુઓ: કુલ ગેસ બિલ કેટલું થશે?",
                 options: ["$55", "$45", "$50", "$60"],
                 correctAnswer: "$55",
-                explanation: "30 * 1.50 = 45. Total = 45 + 10 = $55."
+                explanation: "30 * 1.50 = 45. Total = 45 + 10 = $55.", passage: "ગેસ બિલ: વપરાશ – 30 થર્મ, દર થર્મ દીઠ દર – $1.50, સેવા શુલ્ક – $10.00."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -1713,10 +1713,10 @@ struct GujaratiFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "કચરા વ્યવસ્થાપન બિલની વિગતો વાંચો:",
+                prompt: "કચરા વ્યવસ્થાપન બિલની વિગતો વાંચો: કુલ કચરા વ્યવસ્થાપન બિલ કેટલું થશે?",
                 options: ["$105", "$95", "$100", "$110"],
                 correctAnswer: "$105",
-                explanation: "90 + 15 = $105."
+                explanation: "90 + 15 = $105.", passage: "કચરા વ્યવસ્થાપન બિલ: મૂળભૂત સેવા – $90.00, વધારાનું રિસાયક્લિંગ બિન – $15.00."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -1830,122 +1830,122 @@ struct GujaratiFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"સ્વાદ રેસ્ટોરન્ટ\" (Swaad Restaurant) ના નીચેના લંચ મેન્યુને વાંચો:",
+                prompt: "\"સ્વાદ રેસ્ટોરન્ટ\" (Swaad Restaurant) ના નીચેના લંચ મેન્યુને વાંચો: જો તમે થેપલા અને લસ્સી ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$14.00", "$12.00", "$16.00", "$18.00"],
                 correctAnswer: "$14.00",
-                explanation: "10.00 (Thepla) + 4.00 (Lassi) = $14.00."
+                explanation: "10.00 (Thepla) + 4.00 (Lassi) = $14.00.", passage: "સ્વાદ રેસ્ટોરન્ટ – લંચ મેન્યુ: થેપલા – $10.00, ઢોકળા – $8.00, સમોસા (2 પીસ) – $5.00, થેપલા દહીં સાથે – $9.00, ખીચડી કઢી – $12.00, ઊંધિયું પુરી સાથે – $15.00, લસ્સી – $4.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "મેન્યુ મુજબ, જો હેતલ ફક્ત એક પ્લેટ ઢોકળા અને સમોસા (2 પીસ) ઓર્ડર કરવા માંગે છે, તો તેણે કુલ કેટલો ખર્ચ કરવો પડશે?",
                 options: ["$13.00", "$10.00", "$12.00", "$15.00"],
                 correctAnswer: "$13.00",
-                explanation: "8.00 (Dhokla) + 5.00 (Samosa) = $13.00."
+                explanation: "8.00 (Dhokla) + 5.00 (Samosa) = $13.00.", passage: "સ્વાદ રેસ્ટોરન્ટ – લંચ મેન્યુ: થેપલા – $10.00, ઢોકળા – $8.00, સમોસા (2 પીસ) – $5.00, થેપલા દહીં સાથે – $9.00, ખીચડી કઢી – $12.00, ઊંધિયું પુરી સાથે – $15.00, લસ્સી – $4.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"કેલિફોર્નિયા કાફે\" (California Cafe) મેન્યુ:",
+                prompt: "\"કેલિફોર્નિયા કાફે\" (California Cafe) મેન્યુ: જો તમે ખીચડી અને 2 રોટી ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$15.00", "$13.50", "$16.50", "$14.00"],
                 correctAnswer: "$15.00",
-                explanation: "12.00 (Khichdi) + 2 * 1.50 (Roti) = 12.00 + 3.00 = $15.00."
+                explanation: "12.00 (Khichdi) + 2 * 1.50 (Roti) = 12.00 + 3.00 = $15.00.", passage: "કેલિફોર્નિયા કાફે મેન્યુ: ખીચડી – $12.00, રોટી (દરેક) – $1.50."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "મેન્યુ મુજબ, કઈ મુખ્ય વાનગી સૌથી મોંઘી છે?",
                 options: ["ઊંધિયું પુરી સાથે", "ખીચડી કઢી", "થેપલા દહીં સાથે", "ઢોકળા"],
                 correctAnswer: "ઊંધિયું પુરી સાથે",
-                explanation: "Undhiyu is priced at $15.00, which is the highest."
+                explanation: "Undhiyu is priced at $15.00, which is the highest.", passage: "સ્વાદ રેસ્ટોરન્ટ – મુખ્ય વાનગીઓ: ઊંધિયું પુરી સાથે – $15.00, ખીચડી કઢી – $12.00, થેપલા દહીં સાથે – $9.00, ઢોકળા – $8.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"મુંબઈ ચૌપાટી\" (Mumbai Chowpatty) મેન્યુ:",
+                prompt: "\"મુંબઈ ચૌપાટી\" (Mumbai Chowpatty) મેન્યુ: જો તમે ફાફડા અને ચા ઓર્ડર કરો અને $20 થી ચૂકવણી કરો, તો તમને કેટલા પાછા મળશે?",
                 options: ["$5.00", "$7.00", "$6.00", "$8.00"],
                 correctAnswer: "$5.00",
-                explanation: "Cost = 12.00 (Fafda) + 3.00 (Chai) = $15.00. Change = 20 - 15 = $5.00."
+                explanation: "Cost = 12.00 (Fafda) + 3.00 (Chai) = $15.00. Change = 20 - 15 = $5.00.", passage: "મુંબઈ ચૌપાટી મેન્યુ: ફાફડા – $12.00, મસાલા ચા – $3.00, સેવ પૂરી – $6.00, પાવ ભાજી – $9.00, ફાફડા જલેબી – $10.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "મેન્યુ મુજબ, સૌથી સસ્તી વાનગી કઈ છે?",
                 options: ["મસાલા ચા", "સેવ પૂરી", "પાવ ભાજી", "ફાફડા જલેબી"],
                 correctAnswer: "મસાલા ચા",
-                explanation: "Masala Chai costs $3.00, the cheapest on the list."
+                explanation: "Masala Chai costs $3.00, the cheapest on the list.", passage: "મુંબઈ ચૌપાટી મેન્યુ: ફાફડા – $12.00, મસાલા ચા – $3.00, સેવ પૂરી – $6.00, પાવ ભાજી – $9.00, ફાફડા જલેબી – $10.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"નમસ્તે બેકરી\" (Namaste Bakery) મેન્યુ:",
+                prompt: "\"નમસ્તે બેકરી\" (Namaste Bakery) મેન્યુ: જો તમે 2 કોફી અને ખમણ ઢોકળા ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$13.00", "$11.00", "$14.00", "$12.00"],
                 correctAnswer: "$13.00",
-                explanation: "2 * 3.50 (Coffee) + 6.00 (Khaman) = 7.00 + 6.00 = $13.00."
+                explanation: "2 * 3.50 (Coffee) + 6.00 (Khaman) = 7.00 + 6.00 = $13.00.", passage: "નમસ્તે બેકરી મેન્યુ: કોફી – $3.50, ખમણ ઢોકળા – $6.00, કેસર દૂધ – $4.50, વેજ પફ – $3.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "બેકરીના મેન્યુમાં કયું પીણું સૌથી મોંઘું છે?",
                 options: ["કેસર દૂધ", "કોફી", "વેજ પफ", "ખમણ ઢોકળા"],
                 correctAnswer: "કેસર દૂધ",
-                explanation: "Kesar Milk is $4.50, more expensive than Coffee ($3.50)."
+                explanation: "Kesar Milk is $4.50, more expensive than Coffee ($3.50).", passage: "નમસ્તે બેકરી મેન્યુ: કોફી – $3.50, ખમણ ઢોકળા – $6.00, કેસર દૂધ – $4.50, વેજ પફ – $3.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"કાઠિયાવાડી ઢાબા\" (Kathiyawadi Dhaba) મેન્યુ:",
+                prompt: "\"કાઠિયાવાડી ઢાબા\" (Kathiyawadi Dhaba) મેન્યુ: જો તમે ઓરો રોટલો અને છાશ ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$18.00", "$17.00", "$19.00", "$20.00"],
                 correctAnswer: "$18.00",
-                explanation: "16.00 (Oro Rotlo) + 2.00 (Buttermilk) = $18.00."
+                explanation: "16.00 (Oro Rotlo) + 2.00 (Buttermilk) = $18.00.", passage: "કાઠિયાવાડી ઢાબા મેન્યુ: ઓરો રોટલો – $16.00, છાશ – $2.00, મોહનથાળ (મીઠાઈ) – $4.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "કાઠિયાવાડી ઢાબાના મેન્યુમાં મીઠાઈની કિંમત શું છે?",
                 options: ["$4.00", "$2.00", "$14.00", "$16.00"],
                 correctAnswer: "$4.00",
-                explanation: "Mohanthal costs $4.00."
+                explanation: "Mohanthal costs $4.00.", passage: "કાઠિયાવાડી ઢાબા મેન્યુ: ઓરો રોટલો – $16.00, છાશ – $2.00, મોહનથાળ (મીઠાઈ) – $4.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"દક્ષિણ સ્વાદ\" (South Swaad) મેન્યુ:",
+                prompt: "\"દક્ષિણ સ્વાદ\" (South Swaad) મેન્યુ: જો તમે ડોસા અને કોફી ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$13.00", "$12.00", "$14.00", "$15.00"],
                 correctAnswer: "$13.00",
-                explanation: "10.00 (Dosa) + 3.00 (Coffee) = $13.00."
+                explanation: "10.00 (Dosa) + 3.00 (Coffee) = $13.00.", passage: "દક્ષિણ સ્વાદ મેન્યુ: ડોસા – $10.00, કોફી – $3.00, ઈડલી – $6.00, મેદુ વડા – $7.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "મેન્યુ મુજબ, ઈડલી અને મેદુ વડાની કુલ કિંમત કેટલી છે?",
                 options: ["$13.00", "$12.00", "$14.00", "$15.00"],
                 correctAnswer: "$13.00",
-                explanation: "6.00 (Idli) + 7.00 (Vada) = $13.00."
+                explanation: "6.00 (Idli) + 7.00 (Vada) = $13.00.", passage: "દક્ષિણ સ્વાદ મેન્યુ: ડોસા – $10.00, કોફી – $3.00, ઈડલી – $6.00, મેદુ વડા – $7.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"અમદાવાદી જંક્શન\" (Ahmedabadi Junction) મેન્યુ:",
+                prompt: "\"અમદાવાદી જંક્શન\" (Ahmedabadi Junction) મેન્યુ: જો તમે 2 વડાપાવ અને કચ્છી આઈસ્ક્રીમ ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$19.00", "$17.00", "$18.00", "$12.00"],
                 correctAnswer: "$19.00",
-                explanation: "2 * 7.00 (Vadapav) + 5.00 (Ice cream) = 14.00 + 5.00 = $19.00."
+                explanation: "2 * 7.00 (Vadapav) + 5.00 (Ice cream) = 14.00 + 5.00 = $19.00.", passage: "અમદાવાદી જંક્શન મેન્યુ: વડાપાવ (દરેક) – $7.00, કચ્છી આઈસ્ક્રીમ – $5.00, દાબેલી – $6.00, રગડા પેટિસ – $6.50."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "મેન્યુમાં મીઠાઈ (Dessert) તરીકે શું સૂચિબદ્ધ છે?",
                 options: ["કચ્છી આઈસ્ક્રીમ", "દાબેલી", "વડાપાવ", "રગડા પેટિસ"],
                 correctAnswer: "કચ્છી આઈસ્ક્રીમ",
-                explanation: "Kutchi Ice Cream is the dessert listed."
+                explanation: "Kutchi Ice Cream is the dessert listed.", passage: "અમદાવાદી જંક્શન મેન્યુ: વડાપાવ (દરેક) – $7.00, કચ્છી આઈસ્ક્રીમ – $5.00, દાબેલી – $6.00, રગડા પેટિસ – $6.50."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"હિમાલયન હાઉસ\" (Himalayan House) મેન્યુ:",
+                prompt: "\"હિમાલયન હાઉસ\" (Himalayan House) મેન્યુ: જો તમે 2 મોમો અને ચા ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$23.00", "$20.00", "$25.00", "$22.00"],
                 correctAnswer: "$23.00",
-                explanation: "2 * 10.00 (Momo) + 3.00 (Tea) = $23.00."
+                explanation: "2 * 10.00 (Momo) + 3.00 (Tea) = $23.00.", passage: "હિમાલયન હાઉસ મેન્યુ: મોમો – $10.00, ચા – $3.00, થુકપા (નૂડલ સૂપ) – $12.00."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "હિમાલયન હાઉસના મેન્યુમાં નૂડલ સૂપની કિંમત કેટલી છે?",
                 options: ["$12.00", "$10.00", "$5.00", "$3.00"],
                 correctAnswer: "$12.00",
-                explanation: "Thukpa soup costs $12.00."
+                explanation: "Thukpa soup costs $12.00.", passage: "હિમાલયન હાઉસ મેન્યુ: મોમો – $10.00, ચા – $3.00, થુકપા (નૂડલ સૂપ) – $12.00."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "\"ગુજરાતી સ્નેક્સ\" (Gujarati Snacks) મેન્યુ:",
+                prompt: "\"ગુજરાતી સ્નેક્સ\" (Gujarati Snacks) મેન્યુ: જો તમે ખાંડવી, પાત્રા અને છાશ ઓર્ડર કરો, તો કુલ કેટલો ખર્ચ થશે?",
                 options: ["$17.00", "$14.00", "$16.00", "$20.00"],
                 correctAnswer: "$17.00",
-                explanation: "7.00 (Khandvi) + 7.00 (Patra) + 3.00 (Buttermilk) = $17.00."
+                explanation: "7.00 (Khandvi) + 7.00 (Patra) + 3.00 (Buttermilk) = $17.00.", passage: "ગુજરાતી સ્નેક્સ મેન્યુ: ખાંડવી – $7.00, પાત્રા – $7.00, છાશ – $3.00."
             )
         ]
     )
@@ -1962,122 +1962,122 @@ struct GujaratiFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલા દવાના પ્રિસ્ક્રિપ્શન લેબલને ધ્યાનથી વાંચો:",
+                prompt: "નીચે આપેલા દવાના પ્રિસ્ક્રિપ્શન લેબલને ધ્યાનથી વાંચો: લેબલ મુજબ, આ દવા કેવી રીતે લેવી જોઈએ?",
                 options: ["દિવસમાં બે વાર, ભોજન સાથે", "દિવસમાં એક વાર, ભૂખ્યા પેટે", "રાત્રે સૂતી વખતે ફક્ત એક વાર", "દર ચાર કલાકે પાણી વગર"],
                 correctAnswer: "દિવસમાં બે વાર, ભોજન સાથે",
-                explanation: "Directions state \"Take twice daily with meals\"."
+                explanation: "Directions state \"Take twice daily with meals\".", passage: "પ્રિસ્ક્રિપ્શન લેબલ: મેટફોર્મિન 500mg. સૂચના: દિવસમાં બે વાર, ભોજન સાથે લો. રિફિલ: 3. ડૉક્ટર: ડૉ. પટેલ."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "પ્રિસ્ક્રિપ્શન લેબલ મુજબ, વિવેક પાસે આ દવાની કુલ કેટલી રિફિલ ઉપલબ્ધ છે?",
                 options: ["3", "2", "4", "કોઈ નહીં"],
                 correctAnswer: "3",
-                explanation: "Refills listed is 3."
+                explanation: "Refills listed is 3.", passage: "પ્રિસ્ક્રિપ્શન લેબલ: મેટફોર્મિન 500mg. સૂચના: દિવસમાં બે વાર, ભોજન સાથે લો. રિફિલ: 3. ડૉક્ટર: ડૉ. પટેલ."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલી દવાની સૂચના વાંચો:",
+                prompt: "નીચે આપેલી દવાની સૂચના વાંચો: આ દવા ક્યારે લેવી જોઈએ?",
                 options: ["રાત્રે સૂતા પહેલા", "સવારે ઉઠતાની સાથે જ", "બપોરના ભોજન સાથે", "કસરત કર્યા પછી તરત જ"],
                 correctAnswer: "રાત્રે સૂતા પહેલા",
-                explanation: "\"Take 1 tablet daily at bedtime\"."
+                explanation: "\"Take 1 tablet daily at bedtime\".", passage: "દવાની સૂચના: 1 ગોળી દરરોજ રાત્રે સૂતી વખતે લો. ચેતવણી: ગ્રેપફ્રૂટ જ્યુસ સાથે ન લેવી."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "આ દવાની સાથે કયું પીણું પીવાની મનાઈ કરવામાં આવી છે?",
                 options: ["ગ્રેપફ્રૂટ જ્યુસ", "દૂધ", "નારંગીનો જ્યુસ", "નવશેકું પાણી"],
                 correctAnswer: "ગ્રેપફ્રૂટ જ્યુસ",
-                explanation: "Warning states \"Do not take with grapefruit juice\"."
+                explanation: "Warning states \"Do not take with grapefruit juice\".", passage: "દવાની સૂચના: 1 ગોળી દરરોજ રાત્રે સૂતી વખતે લો. ચેતવણી: ગ્રેપફ્રૂટ જ્યુસ સાથે ન લેવી."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલ પ્રિસ્ક્રિપ્શન જુઓ:",
+                prompt: "નીચે આપેલ પ્રિસ્ક્રિપ્શન જુઓ: આ દવા કઈ સ્થિતિ માટે સૂચવવામાં આવી છે?",
                 options: ["હાઈ બ્લડ પ્રેશર", "ડાયાબિટીસ", "સાંધાનો દુખાવો", "અસ્થમા"],
                 correctAnswer: "હાઈ બ્લડ પ્રેશર",
-                explanation: "Lisinopril is for blood pressure."
+                explanation: "Lisinopril is for blood pressure.", passage: "પ્રિસ્ક્રિપ્શન: લિસિનોપ્રિલ (Lisinopril) 10mg – હાઈ બ્લડ પ્રેશર માટે. સૂચના: દરરોજ 1 ગોળી લો."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "સૂચના મુજબ, દર્દીએ દરરોજ કેટલી ગોળીઓ લેવાની છે?",
                 options: ["1 ગોળી", "2 ગોળી", "અડધી ગોળી", "જરૂરિયાત મુજબ"],
                 correctAnswer: "1 ગોળી",
-                explanation: "\"Take 1 tablet daily\"."
+                explanation: "\"Take 1 tablet daily\".", passage: "પ્રિસ્ક્રિપ્શન: લિસિનોપ્રિલ (Lisinopril) 10mg – હાઈ બ્લડ પ્રેશર માટે. સૂચના: દરરોજ 1 ગોળી લો."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલ આંખની દવાની સૂચના વાંચો:",
+                prompt: "નીચે આપેલ આંખની દવાની સૂચના વાંચો: આ ટીપાં કેવી રીતે વાપરવા જોઈએ?",
                 options: ["દિવસમાં બે વાર 1 ટીપું", "દિવસમાં ત્રણ વાર 2 ટીપાં", "રાત્રે સૂતી વખતે 4 ટીપાં", "દર કલાકે 1 ટીપું"],
                 correctAnswer: "દિવસમાં બે વાર 1 ટીપું",
-                explanation: "\"Instill 1 drop in affected eye twice daily\"."
+                explanation: "\"Instill 1 drop in affected eye twice daily\".", passage: "આંખના ટીપાંની સૂચના: અસરગ્રસ્ત આંખમાં દિવસમાં બે વાર 1 ટીપું નાખો. સાવચેતી: ડ્રોપરની ટોચને સ્પર્શ કરવો નહીં."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "ડ્રોપ્સની બોટલનો ઉપયોગ કરતી વખતે કઈ સાવચેતી રાખવી જરૂરી છે?",
                 options: ["ડ્રોપરની ટોચને સ્પર્શ કરવો નહીં", "બોટલને ગરમ પાણીમાં રાખવી", "ઉપયોગ પછી હલાવવી નહીં", "ખુલ્લા તડકામાં રાખવી"],
                 correctAnswer: "ડ્રોપરની ટોચને સ્પર્શ કરવો નહીં",
-                explanation: "Precaution warning says not to touch the dropper tip."
+                explanation: "Precaution warning says not to touch the dropper tip.", passage: "આંખના ટીપાંની સૂચના: અસરગ્રસ્ત આંખમાં દિવસમાં બે વાર 1 ટીપું નાખો. સાવચેતી: ડ્રોપરની ટોચને સ્પર્શ કરવો નહીં."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "દુખાવાની દવાની સૂચના વાંચો:",
+                prompt: "દુખાવાની દવાની સૂચના વાંચો: 24 કલાકમાં વધુમાં વધુ કેટલી ગોળી લઈ શકાય?",
                 options: ["4 ગોળી", "6 ગોળી", "3 ગોળી", "8 ગોળી"],
                 correctAnswer: "4 ગોળી",
-                explanation: "Limit is \"Do not exceed 4 tablets in 24 hours\"."
+                explanation: "Limit is \"Do not exceed 4 tablets in 24 hours\".", passage: "દુખાવાની દવાની સૂચના: દર 6 કલાકે 1-2 ગોળી લો. 24 કલાકમાં 4 ગોળીથી વધુ ન લો."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "બે ડોઝ વચ્ચે ઓછામાં ઓછો કેટલો સમયગાળો હોવો જોઈએ?",
                 options: ["6 કલાક", "4 કલાક", "12 કલાક", "8 કલાક"],
                 correctAnswer: "6 કલાક",
-                explanation: "Dose frequency is \"every 6 hours\"."
+                explanation: "Dose frequency is \"every 6 hours\".", passage: "દુખાવાની દવાની સૂચના: દર 6 કલાકે 1-2 ગોળી લો. 24 કલાકમાં 4 ગોળીથી વધુ ન લો."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "નીચે આપેલ કફ સિરપની સૂચના વાંચો:",
+                prompt: "નીચે આપેલ કફ સિરપની સૂચના વાંચો: આ સિરપ સાથે શું ન કરવું જોઈએ?",
                 options: ["વાહન કે મશીનરી ચલાવવી", "સૂઈ જવું", "ગરમ પાણી પીવું", "વાંચવું"],
                 correctAnswer: "વાહન કે મશીનરી ચલાવવી",
-                explanation: "\"Do not operate machinery or drive\"."
+                explanation: "\"Do not operate machinery or drive\".", passage: "કફ સિરપની સૂચના: પુખ્ત વયના લોકો માટે 10 મિલીલિટર દર 6 કલાકે લો. ચેતવણી: આ દવા લીધા પછી વાહન કે મશીનરી ચલાવવી નહીં."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "પુખ્ત વયના લોકો માટે એક સમયની માત્રા કેટલી સૂચવવામાં આવી છે?",
                 options: ["10 મિલીલિટર", "5 મિલીલિટર", "15 મિલીલિટર", "20 મિલીલિટર"],
                 correctAnswer: "10 મિલીલિટર",
-                explanation: "Adult dose is 10ml."
+                explanation: "Adult dose is 10ml.", passage: "કફ સિરપની સૂચના: પુખ્ત વયના લોકો માટે 10 મિલીલિટર દર 6 કલાકે લો. ચેતવણી: આ દવા લીધા પછી વાહન કે મશીનરી ચલાવવી નહીં."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "એન્ટિબાયોટિક દવાની સૂચના વાંચો:",
+                prompt: "એન્ટિબાયોટિક દવાની સૂચના વાંચો: આ એન્ટિબાયોટિક કેટલા દિવસ સુધી લેવાની છે?",
                 options: ["7 દિવસ", "5 દિવસ", "10 દિવસ", "14 દિવસ"],
                 correctAnswer: "7 દિવસ",
-                explanation: "\"Take 3 times daily for 7 days\"."
+                explanation: "\"Take 3 times daily for 7 days\".", passage: "એન્ટિબાયોટિક સૂચના: દિવસમાં 3 વાર, 7 દિવસ સુધી લો. મહત્વની સૂચના: સારું લાગે તો પણ કોર્સ પૂરો કરવો."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "એન્ટિબાયોટિક માટે સૌથી મહત્વની સલાહ શું છે?",
                 options: ["કોર્સ પૂરો કરવો", "સારું લાગે એટલે બંધ કરી દેવી", "ફક્ત દૂધ સાથે લેવી", "ઠંડા પાણી સાથે લેવી નહીં"],
                 correctAnswer: "કોર્સ પૂરો કરવો",
-                explanation: "Completing the antibiotic course prevents resistance."
+                explanation: "Completing the antibiotic course prevents resistance.", passage: "એન્ટિબાયોટિક સૂચના: દિવસમાં 3 વાર, 7 દિવસ સુધી લો. મહત્વની સૂચના: સારું લાગે તો પણ કોર્સ પૂરો કરવો."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "ઇન્સ્યુલિન પેનની સૂચના વાંચો:",
+                prompt: "ઇન્સ્યુલિન પેનની સૂચના વાંચો: ઇન્સ્યુલિન ક્યારે આપવું જોઈએ?",
                 options: ["15 મિનિટ પહેલાં", "30 મિનિટ પહેલાં", "જમ્યા પછી તરત જ", "1 કલાક પહેલાં"],
                 correctAnswer: "15 મિનિટ પહેલાં",
-                explanation: "Inject 15 minutes prior to meal."
+                explanation: "Inject 15 minutes prior to meal.", passage: "ઇન્સ્યુલિન પેનની સૂચના: ભોજનના 15 મિનિટ પહેલાં પેટમાં ઇન્જેક્શન આપો."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "ઇન્સ્યુલિન કઈ જગ્યાએ આપવાનું નિર્દેશિત છે?",
                 options: ["પેટમાં", "હાથમાં", "પગમાં", "પીઠ પર"],
                 correctAnswer: "પેટમાં",
-                explanation: "Inject \"into the abdomen (પેટ)\"."
+                explanation: "Inject \"into the abdomen (પેટ)\".", passage: "ઇન્સ્યુલિન પેનની સૂચના: ભોજનના 15 મિનિટ પહેલાં પેટમાં ઇન્જેક્શન આપો."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "એલર્જીની દવાની સૂચના વાંચો:",
+                prompt: "એલર્જીની દવાની સૂચના વાંચો: આ દવા ક્યારે લેવી જોઈએ?",
                 options: ["સવારે ખાલી પેટે", "બપોરે જમ્યા પછી", "રાત્રે પાણી વગર", "સાંજે ચા સાથે"],
                 correctAnswer: "સવારે ખાલી પેટે",
-                explanation: "\"Take daily in the morning on an empty stomach\"."
+                explanation: "\"Take daily in the morning on an empty stomach\".", passage: "એલર્જીની દવાની સૂચના: દરરોજ સવારે ખાલી પેટે લો."
             )
         ]
     )
