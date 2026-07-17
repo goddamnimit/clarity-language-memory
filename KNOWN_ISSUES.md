@@ -62,4 +62,14 @@ Status: fixes staged as uncommitted working-tree changes per language (not yet c
 - Same file, literary synonym pairings (ደስታ/ሐሤት, ሀዘን/ትካዜ, ክብር/ሞገስ) — more formal/literary register than the rest of the set; confirm register is appropriate for the app.
 - `AmharicCognitionExerciseData.swift` cause-and-effect items — verb-form naturalness should be checked.
 
+**English** (`EnglishNewExercisesData.swift`, Exercise 4 "Compound Words")
+- **DEFECT, not yet fixed:** 6 additional items in this same exercise have the identical distractor-ambiguity problem found and fixed (2026-07-17) in FIRE/EAR/PLAY/TOOTH/FOOT/KEY/SNOW/RAIN/SUN/LIGHT, but were outside that task's explicit scope:
+  - `BUTTER + ___` (Fly/Milk/Cup/Knife, correctAnswer "Fly") — Milk and Cup are also real compounds (buttermilk, buttercup).
+  - `CAMP + ___` (Fire/Ground/Site/Bag, correctAnswer "Fire") — Ground and Site are also real compounds (campground, campsite).
+  - `STAR + ___` (Fish/Light/Dust/Gaze, correctAnswer "Fish") — Light, Dust, and Gaze are all arguably real compounds/terms (starlight, stardust, stargaze).
+  - `WATER + ___` (Melon/Fall/Color/Bottle, correctAnswer "Melon") — Fall and Color are also real compounds (waterfall, watercolor).
+  - `PINE + ___` (Apple/Cone/Tree/Needle, correctAnswer "Apple") — Cone is also a real compound (pinecone).
+  - `WHEEL + ___` (Chair/Barrow/Base/Alignment, correctAnswer "Chair") — Barrow and Base are also real compounds (wheelbarrow, wheelbase).
+  Same fix approach recommended as the completed 10 items: redesign the 3 distractors per item to genuinely non-compounding words, verified via dictionary cross-check (catch self-introduced ambiguities like the "sunlamp" near-miss found during the first pass) before finalizing.
+
 **Commit plan:** per-language diffs are being kept independently reviewable (French / Portuguese / Armenian / Tagalog / Punjabi / Amharic each as their own commit) rather than one combined commit — mirrors how each language's rebuild should be verifiable and revertable on its own.
