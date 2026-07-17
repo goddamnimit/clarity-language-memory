@@ -684,528 +684,528 @@ struct TagalogCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 1)",
+                prompt: "Ang adobo ba ay karaniwang niluluto gamit ang toyo at suka?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang toyo at suka ang pangunahing pampalasa ng adobo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 2)",
+                prompt: "Ang sinigang ba ay isang matamis na panghimagas?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang sinigang ay maasim na sabaw, hindi panghimagas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 3)",
+                prompt: "Ang lumpia ba ay karaniwang inihahain sa mga handaan ng pamilya?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang lumpia ay paboritong putahe sa mga salu-salo ng pamilyang Pilipino."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 4)",
+                prompt: "Ang kanin ba ay karaniwang kasama sa pagkaing Pilipino araw-araw?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang kanin ang pangunahing pagkain sa halos bawat hapag Pilipino."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 5)",
+                prompt: "Ang halo-halo ba ay isang mainit na sabaw?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang halo-halo ay malamig na panghimagas na may yelo at gatas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 6)",
+                prompt: "Ang pandesal ba ay karaniwang kinakain sa almusal?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pandesal ay tradisyonal na tinapay na pang-almusal."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 7)",
+                prompt: "Ang lechon ba ay karaniwang inihahain sa malalaking pagdiriwang?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang lechon ang madalas na pangunahing putahe sa pista at kasalan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 8)",
+                prompt: "Ang taho ba ay gawa sa karne ng baboy?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang taho ay gawa sa malambot na tokwa, arnibal, at sago."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 9)",
+                prompt: "Ang balut ba ay isang uri ng itlog?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang balut ay itlog ng itik na may sisiw sa loob."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 10)",
+                prompt: "Ang bibingka ba ay karaniwang kinakain tuwing Pasko?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang bibingka ay tradisyonal na kakanin tuwing Simbang Gabi at Pasko."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 11)",
+                prompt: "Ang kape ba ay karaniwang iniinom sa umaga?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Maraming tao ang umiinom ng kape upang magsimula ng araw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 12)",
+                prompt: "Ang sorbetes ba ay inihahain nang mainit?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang sorbetes ay malamig na panghimagas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 13)",
+                prompt: "Ang pansit ba ay inihahanda sa kaarawan bilang simbolo ng mahabang buhay?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Sa tradisyong Pilipino, ang pansit ay simbolo ng mahabang buhay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 14)",
+                prompt: "Ang bagoong ba ay isang uri ng prutas?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang bagoong ay pampalasang gawa sa binurong isda o hipon."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 15)",
+                prompt: "Ang mangga ba ay isang prutas na matamis kapag hinog?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang hinog na mangga ay kilala sa tamis nito."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 16)",
+                prompt: "Ang kalamansi ba ay mas malaki kaysa sa pakwan?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang kalamansi ay maliit na prutas; ang pakwan ay napakalaki."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 17)",
+                prompt: "Ang tinapay ba ay gawa sa harina?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang harina ang pangunahing sangkap ng tinapay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 18)",
+                prompt: "Ang gatas ba ay isang inumin?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang gatas ay likidong iniinom at ginagamit din sa pagluluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 19)",
+                prompt: "Ang kutsara ba ay ginagamit sa pagsusulat?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang kutsara ay gamit sa pagkain; ang panulat ang pansulat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 20)",
+                prompt: "Ang palengke ba ay lugar kung saan bumibili ng pagkain?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Sa palengke bumibili ng sariwang gulay, isda, at karne."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 21)",
+                prompt: "Ang lola ba ay ina ng iyong magulang?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang lola ay ina ng iyong ama o ina."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 22)",
+                prompt: "Ang pinsan ba ay anak ng iyong kapatid?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang pinsan ay anak ng iyong tiyuhin o tiyahin; ang anak ng kapatid ay pamangkin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 23)",
+                prompt: "Ang pagmamano ba ay isang paraan ng paggalang sa nakatatanda?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pagmamano ay tradisyonal na tanda ng paggalang sa matatanda."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 24)",
+                prompt: "Ang bayanihan ba ay tumutukoy sa pagtutulungan ng komunidad?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang bayanihan ay diwa ng sama-samang pagtulong sa kapwa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 25)",
+                prompt: "Ang pista ba ay karaniwang idinaraos nang walang pagkain at kasiyahan?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang pista ay puno ng pagkain, musika, at pagtitipon ng pamilya."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 26)",
+                prompt: "Ang Simbang Gabi ba ay ginaganap tuwing Disyembre?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang Simbang Gabi ay siyam na misa bago sumapit ang Pasko."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 27)",
+                prompt: "Ang Tagalog ba ay isang wikang sinasalita sa Pilipinas?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang Tagalog ang batayan ng wikang Filipino."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 28)",
+                prompt: "Ang Maynila ba ay isang lungsod sa Amerika?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang Maynila ay kabisera ng Pilipinas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 29)",
+                prompt: "Ang jeepney ba ay isang uri ng pampublikong sasakyan?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang jeepney ay tanyag na pampublikong sasakyan sa Pilipinas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 30)",
+                prompt: "Ang karaoke ba ay sikat na libangan sa mga pagtitipon ng pamilyang Pilipino?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pagkanta sa karaoke ay paboritong libangan sa mga salu-salo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 31)",
+                prompt: "Ang tsinelas ba ay isinusuot sa ulo?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang tsinelas ay isinusuot sa paa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 32)",
+                prompt: "Ang payong ba ay ginagamit kapag umuulan?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang payong ay pananggalang sa ulan at init ng araw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 33)",
+                prompt: "Ang sabon ba ay ginagamit sa paglilinis?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang sabon ay panlinis ng katawan, damit, at kagamitan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 34)",
+                prompt: "Ang refrigerator ba ay nagpapainit ng pagkain?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang refrigerator ay nagpapalamig upang hindi mapanis ang pagkain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 35)",
+                prompt: "Ang gunting ba ay ginagamit sa paggupit?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang gunting ay panggupit ng papel, tela, o buhok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 36)",
+                prompt: "Ang orasan ba ay nagsasabi ng oras?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang orasan ay nagpapakita kung anong oras na."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 37)",
+                prompt: "Ang unan ba ay ginagamit sa pagluluto?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang unan ay gamit sa pagtulog, hindi sa kusina."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 38)",
+                prompt: "Ang walis ba ay ginagamit sa paglilinis ng sahig?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang walis ay pangwalis ng dumi at alikabok sa sahig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 39)",
+                prompt: "Ang telepono ba ay ginagamit sa pakikipag-usap sa malayo?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Sa telepono nakakausap ang pamilya kahit magkalayo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 40)",
+                prompt: "Ang bintana ba ay karaniwang gawa sa tubig?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang bintana ay karaniwang gawa sa salamin, kahoy, o bakal."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 41)",
+                prompt: "Ang araw ba ay sumisikat sa umaga?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pagsikat ng araw ang hudyat ng umaga."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 42)",
+                prompt: "Ang buwan ba ay mas maliwanag kaysa sa araw tuwing tanghali?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang araw ang pinakamaliwanag tuwing tanghali."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 43)",
+                prompt: "Ang ulan ba ay tubig na bumabagsak mula sa langit?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang ulan ay patak ng tubig mula sa mga ulap."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 44)",
+                prompt: "May pitong araw ba sa isang linggo?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang isang linggo ay may pitong araw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 45)",
+                prompt: "Ang Disyembre ba ang unang buwan ng taon?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang Enero ang unang buwan; ang Disyembre ang huli."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 46)",
+                prompt: "Ang tag-init ba ay mas mainit kaysa sa tag-lamig?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Mas mataas ang temperatura tuwing tag-init."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 47)",
+                prompt: "Ang yelo ba ay mainit?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang yelo ay nagyeyelong tubig kaya napakalamig nito."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 48)",
+                prompt: "Ang isda ba ay nabubuhay sa tubig?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang mga isda ay nabubuhay sa dagat, ilog, at lawa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 49)",
+                prompt: "Ang ibon ba ay may pakpak?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang mga ibon ay may pakpak na ginagamit sa paglipad."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 50)",
+                prompt: "Ang aso ba ay isang uri ng halaman?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang aso ay hayop, hindi halaman."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 51)",
+                prompt: "Ang puso ba ay nagbobomba ng dugo sa katawan?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang puso ang nagpapadaloy ng dugo sa buong katawan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 52)",
+                prompt: "Ang mata ba ay ginagamit sa pakikinig?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang mata ay para sa paningin; ang tainga ang pandinig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 53)",
+                prompt: "Ang paglalakad araw-araw ba ay mabuti sa kalusugan?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang regular na paglalakad ay nagpapalakas ng katawan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 54)",
+                prompt: "Mahalaga ba ang paghuhugas ng kamay bago kumain?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang malinis na kamay ay pumipigil sa pagkalat ng sakit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 55)",
+                prompt: "Dapat bang inumin ang gamot ayon sa reseta ng doktor?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pagsunod sa reseta ay nagsisiguro ng tamang dosis."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 56)",
+                prompt: "Mabuti ba sa kalusugan ang magpuyat gabi-gabi?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Kailangan ng katawan ang sapat na tulog upang manatiling malusog."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 57)",
+                prompt: "Mas malusog bang inumin ang tubig kaysa sa matatamis na inumin?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang tubig ay walang asukal at mas mabuti sa katawan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 58)",
+                prompt: "Masama ba sa katawan ang pagkain ng gulay?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang gulay ay puno ng bitamina at mabuti sa kalusugan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 59)",
+                prompt: "Dapat bang magsipilyo ng ngipin araw-araw?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang araw-araw na pagsisipilyo ay nag-iiwas sa sira ng ngipin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 60)",
+                prompt: "Ang doktor ba ang tinatawagan kapag may sunog?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang bumbero ang tinatawagan kapag may sunog."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 61)",
+                prompt: "Ang nars ba ay tumutulong sa pag-aalaga ng mga pasyente?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang nars ay katuwang ng doktor sa pag-aalaga ng maysakit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 62)",
+                prompt: "Ang guro ba ay nagtuturo sa mga mag-aaral?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pagtuturo ang pangunahing gawain ng guro."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 63)",
+                prompt: "Ang tsuper ba ay nagluluto sa restawran?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang tsuper ay nagmamaneho; ang kusinero ang nagluluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 64)",
+                prompt: "Kailangan bang huminto kapag pula ang ilaw-trapiko?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pulang ilaw ay senyales na dapat huminto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 65)",
+                prompt: "Ligtas bang tumawid sa kalsada nang hindi tumitingin sa magkabilang panig?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Dapat tumingin sa kaliwa at kanan bago tumawid."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 66)",
+                prompt: "Kailangan ba ng selyo sa pagpapadala ng sulat sa koreo?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang selyo ang bayad sa pagpapadala ng sulat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 67)",
+                prompt: "Ang susi ba ay ginagamit sa pagbubukas ng pinto?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang susi ang pambukas ng kandado ng pinto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 68)",
+                prompt: "Ang pera ba ay ginagamit sa pamimili?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang pera ang ipinambabayad sa mga binibili."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 69)",
+                prompt: "Libre ba ang lahat ng bilihin sa groseri?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Ang mga bilihin sa groseri ay may kani-kaniyang presyo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 70)",
+                prompt: "Ang resibo ba ay patunay ng iyong ibinayad?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang resibo ay katibayan ng naganap na bayaran."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 71)",
+                prompt: "Mas malaki ba ang halaga ng sampung dolyar kaysa sa limang dolyar?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang sampu ay dalawang beses na mas malaki kaysa sa lima."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 72)",
+                prompt: "Ang kalendaryo ba ay nagpapakita ng mga petsa?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Sa kalendaryo makikita ang mga araw, linggo, at buwan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 73)",
+                prompt: "Mas maliwanag ba ang gabi kaysa sa umaga?",
                 options: ["Yes", "No"],
-                correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                correctAnswer: "No",
+                explanation: "Madilim ang gabi dahil wala ang araw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 74)",
+                prompt: "Mahalaga ba ang pamilya sa kulturang Pilipino?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang malapit na ugnayan ng pamilya ay sentro ng kulturang Pilipino."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Is adobo a popular traditional food in the Filipino-American community? (Question 75)",
+                prompt: "Ang pagsasabi ng salamat ba ay nagpapakita ng pasasalamat?",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "adobo is a traditional food in the Filipino-American community."
+                explanation: "Ang salitang salamat ay pagpapahayag ng pasasalamat."
             )
         ]
     )
@@ -1222,563 +1222,563 @@ struct TagalogCognitionExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 1)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
+                prompt: "Adobo : Toyo :: Sinigang : ___",
+                options: ["Sampalok", "Asukal", "Gata", "Mantika"],
                 correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                explanation: "Ang toyo ang nagbibigay lasa sa adobo; ang sampalok ang nagpapaasim sa sinigang."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 2)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Aso : Tahol :: Pusa : ___",
+                options: ["Tilaok", "Ngiyaw", "Huni", "Ungol"],
+                correctAnswer: "Ngiyaw",
+                explanation: "Ang tahol ang tunog ng aso; ang ngiyaw ang tunog ng pusa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 3)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Mata : Paningin :: Tainga : ___",
+                options: ["Pang-amoy", "Panlasa", "Pandinig", "Pandama"],
+                correctAnswer: "Pandinig",
+                explanation: "Ang mata ay para sa paningin; ang tainga ay para sa pandinig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 4)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kutsara : Pagkain :: Baso : ___",
+                options: ["Sabaw", "Kanin", "Ulam", "Inumin"],
+                correctAnswer: "Inumin",
+                explanation: "Ang kutsara ay gamit sa pagkain; ang baso ay gamit sa inumin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 5)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Guro : Paaralan :: Doktor : ___",
+                options: ["Ospital", "Palengke", "Simbahan", "Aklatan"],
+                correctAnswer: "Ospital",
+                explanation: "Ang guro ay nagtatrabaho sa paaralan; ang doktor ay sa ospital."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 6)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Ibon : Himpapawid :: Isda : ___",
+                options: ["Gubat", "Dagat", "Bundok", "Disyerto"],
+                correctAnswer: "Dagat",
+                explanation: "Ang ibon ay lumilipad sa himpapawid; ang isda ay lumalangoy sa dagat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 7)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Araw : Umaga :: Buwan : ___",
+                options: ["Tanghali", "Hapon", "Gabi", "Madaling-araw"],
+                correctAnswer: "Gabi",
+                explanation: "Ang araw ay nakikita sa umaga; ang buwan ay sa gabi."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 8)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sapatos : Paa :: Sumbrero : ___",
+                options: ["Kamay", "Leeg", "Baywang", "Ulo"],
+                correctAnswer: "Ulo",
+                explanation: "Ang sapatos ay isinusuot sa paa; ang sumbrero ay sa ulo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 9)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Init : Tag-init :: Lamig : ___",
+                options: ["Tag-lamig", "Tag-ulan", "Tag-araw", "Tagsibol"],
+                correctAnswer: "Tag-lamig",
+                explanation: "Ang init ay ramdam sa tag-init; ang lamig ay sa tag-lamig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 10)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lapis : Pagsulat :: Gunting : ___",
+                options: ["Pagluluto", "Paggupit", "Paglalaba", "Pagwawalis"],
+                correctAnswer: "Paggupit",
+                explanation: "Ang lapis ay pansulat; ang gunting ay panggupit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 11)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Saging : Dilaw :: Dahon : ___",
+                options: ["Pula", "Asul", "Berde", "Kayumanggi"],
+                correctAnswer: "Berde",
+                explanation: "Ang hinog na saging ay dilaw; ang dahon ay berde."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 12)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Ina : Anak :: Lola : ___",
+                options: ["Pamangkin", "Pinsan", "Bayaw", "Apo"],
+                correctAnswer: "Apo",
+                explanation: "Ang anak ay sa ina; ang apo ay sa lola."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 13)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kalabaw : Bukid :: Jeepney : ___",
+                options: ["Kalsada", "Dagat", "Langit", "Gubat"],
+                correctAnswer: "Kalsada",
+                explanation: "Ang kalabaw ay nasa bukid; ang jeepney ay bumibiyahe sa kalsada."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 14)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Bigas : Kanin :: Harina : ___",
+                options: ["Gatas", "Tinapay", "Itlog", "Asukal"],
+                correctAnswer: "Tinapay",
+                explanation: "Ang bigas ay nagiging kanin; ang harina ay nagiging tinapay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 15)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Susi : Kandado :: Suklay : ___",
+                options: ["Ngipin", "Kuko", "Buhok", "Damit"],
+                correctAnswer: "Buhok",
+                explanation: "Ang susi ay pambukas ng kandado; ang suklay ay pang-ayos ng buhok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 16)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Mainit : Malamig :: Maliwanag : ___",
+                options: ["Makinang", "Maaliwalas", "Makulay", "Madilim"],
+                correctAnswer: "Madilim",
+                explanation: "Magkasalungat ang mainit at malamig, gayundin ang maliwanag at madilim."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 17)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Malaki : Maliit :: Mahaba : ___",
+                options: ["Maikli", "Malapad", "Makitid", "Mataas"],
+                correctAnswer: "Maikli",
+                explanation: "Magkasalungat ang malaki at maliit, gayundin ang mahaba at maikli."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 18)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Pintor : Pintura :: Manunulat : ___",
+                options: ["Martilyo", "Panulat", "Plantsa", "Kutsilyo"],
+                correctAnswer: "Panulat",
+                explanation: "Ang pintor ay gumagamit ng pintura; ang manunulat ay ng panulat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 19)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Bubuyog : Pulot :: Manok : ___",
+                options: ["Gatas", "Balahibo", "Itlog", "Pakpak"],
+                correctAnswer: "Itlog",
+                explanation: "Ang bubuyog ay gumagawa ng pulot; ang manok ay nangingitlog."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 20)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Libro : Pagbasa :: Kanta : ___",
+                options: ["Pagsayaw", "Pagguhit", "Pagtakbo", "Pag-awit"],
+                correctAnswer: "Pag-awit",
+                explanation: "Ang libro ay binabasa; ang kanta ay inaawit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 21)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kamay : Guwantes :: Paa : ___",
+                options: ["Medyas", "Sinturon", "Kuwintas", "Salamin"],
+                correctAnswer: "Medyas",
+                explanation: "Ang guwantes ay pantakip sa kamay; ang medyas ay sa paa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 22)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Ulan : Payong :: Init : ___",
+                options: ["Kumot", "Pamaypay", "Bota", "Kapote"],
+                correctAnswer: "Pamaypay",
+                explanation: "Ang payong ay panangga sa ulan; ang pamaypay ay pantanggal ng init."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 23)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Bumbero : Sunog :: Pulis : ___",
+                options: ["Sakit", "Baha", "Krimen", "Lindol"],
+                correctAnswer: "Krimen",
+                explanation: "Ang bumbero ay tumutugon sa sunog; ang pulis ay sa krimen."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 24)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Halo-halo : Malamig :: Sopas : ___",
+                options: ["Maasim", "Mapait", "Maalat", "Mainit"],
+                correctAnswer: "Mainit",
+                explanation: "Ang halo-halo ay inihahaing malamig; ang sopas ay mainit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 25)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Puno : Ugat :: Bahay : ___",
+                options: ["Pundasyon", "Bubong", "Bintana", "Pinto"],
+                correctAnswer: "Pundasyon",
+                explanation: "Ang ugat ang humahawak sa puno; ang pundasyon ang sa bahay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 26)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kusina : Pagluluto :: Banyo : ___",
+                options: ["Pagtulog", "Paliligo", "Pagkain", "Pag-aaral"],
+                correctAnswer: "Paliligo",
+                explanation: "Sa kusina nagluluto; sa banyo naliligo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 27)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kotse : Garahe :: Eroplano : ___",
+                options: ["Pantalan", "Istasyon", "Hangar", "Paradahan ng bus"],
+                correctAnswer: "Hangar",
+                explanation: "Ang kotse ay iniimbak sa garahe; ang eroplano ay sa hangar."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 28)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Piloto : Eroplano :: Kapitan : ___",
+                options: ["Traysikel", "Kotse", "Tren", "Barko"],
+                correctAnswer: "Barko",
+                explanation: "Ang piloto ang nagpapalipad ng eroplano; ang kapitan ang namumuno sa barko."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 29)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Rosas : Bulaklak :: Mangga : ___",
+                options: ["Prutas", "Gulay", "Puno", "Ugat"],
+                correctAnswer: "Prutas",
+                explanation: "Ang rosas ay uri ng bulaklak; ang mangga ay uri ng prutas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 30)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Tainga : Dalawa :: Daliri ng mga kamay : ___",
+                options: ["Lima", "Sampu", "Apat", "Dalawampu"],
+                correctAnswer: "Sampu",
+                explanation: "Dalawa ang tainga ng tao; sampu ang daliri ng dalawang kamay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 31)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Segundo : Minuto :: Minuto : ___",
+                options: ["Araw", "Linggo", "Oras", "Buwan"],
+                correctAnswer: "Oras",
+                explanation: "Ang mga segundo ay bumubuo ng minuto; ang mga minuto ay bumubuo ng oras."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 32)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lunes : Martes :: Enero : ___",
+                options: ["Disyembre", "Marso", "Hunyo", "Pebrero"],
+                correctAnswer: "Pebrero",
+                explanation: "Ang Martes ang sumusunod sa Lunes; ang Pebrero ang sumusunod sa Enero."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 33)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Umaga : Almusal :: Gabi : ___",
+                options: ["Hapunan", "Meryenda", "Tanghalian", "Minindal"],
+                correctAnswer: "Hapunan",
+                explanation: "Almusal ang kinakain sa umaga; hapunan ang sa gabi."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 34)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Baka : Guya :: Manok : ___",
+                options: ["Biik", "Sisiw", "Kuting", "Tuta"],
+                correctAnswer: "Sisiw",
+                explanation: "Ang anak ng baka ay guya; ang anak ng manok ay sisiw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 35)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sundalo : Hukbo :: Manlalaro : ___",
+                options: ["Paaralan", "Opisina", "Koponan", "Simbahan"],
+                correctAnswer: "Koponan",
+                explanation: "Ang sundalo ay bahagi ng hukbo; ang manlalaro ay bahagi ng koponan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 36)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Panadero : Tinapay :: Magsasaka : ___",
+                options: ["Isda", "Sapatos", "Damit", "Palay"],
+                correctAnswer: "Palay",
+                explanation: "Ang panadero ay gumagawa ng tinapay; ang magsasaka ay nagtatanim ng palay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 37)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lamig : Kumot :: Gutom : ___",
+                options: ["Pagkain", "Tubig", "Gamot", "Tulog"],
+                correctAnswer: "Pagkain",
+                explanation: "Ang kumot ang panlaban sa lamig; ang pagkain ang panlaban sa gutom."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 38)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Ngipin : Sipilyo :: Buhok : ___",
+                options: ["Sabon", "Suklay", "Tuwalya", "Gunting"],
+                correctAnswer: "Suklay",
+                explanation: "Ang sipilyo ay panlinis ng ngipin; ang suklay ay pang-ayos ng buhok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 39)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Bata : Matanda :: Bago : ___",
+                options: ["Sariwa", "Makintab", "Luma", "Malinis"],
+                correctAnswer: "Luma",
+                explanation: "Magkasalungat ang bata at matanda, gayundin ang bago at luma."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 40)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Puti : Itim :: Umaga : ___",
+                options: ["Tanghali", "Hapon", "Bukang-liwayway", "Gabi"],
+                correctAnswer: "Gabi",
+                explanation: "Magkasalungat ang puti at itim, gayundin ang umaga at gabi."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 41)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kandila : Liwanag :: Radyo : ___",
+                options: ["Tunog", "Amoy", "Lasa", "Init"],
+                correctAnswer: "Tunog",
+                explanation: "Ang kandila ay nagbibigay ng liwanag; ang radyo ay ng tunog."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 42)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Dagat : Maalat :: Asukal : ___",
+                options: ["Maasim", "Matamis", "Mapait", "Maanghang"],
+                correctAnswer: "Matamis",
+                explanation: "Maalat ang tubig-dagat; matamis ang asukal."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 43)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Paa : Paglakad :: Pakpak : ___",
+                options: ["Paglangoy", "Pagtakbo", "Paglipad", "Paggapang"],
+                correctAnswer: "Paglipad",
+                explanation: "Ang paa ay ginagamit sa paglakad; ang pakpak ay sa paglipad."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 44)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Doktor : Gamot :: Guro : ___",
+                options: ["Reseta", "Pagkain", "Sasakyan", "Aralin"],
+                correctAnswer: "Aralin",
+                explanation: "Ang doktor ay nagbibigay ng gamot; ang guro ay nagbibigay ng aralin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 45)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Orasan : Oras :: Termometro : ___",
+                options: ["Temperatura", "Timbang", "Bilis", "Layo"],
+                correctAnswer: "Temperatura",
+                explanation: "Ang orasan ay sumusukat ng oras; ang termometro ay ng temperatura."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 46)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Pera : Pitaka :: Damit : ___",
+                options: ["Ref", "Aparador", "Lababo", "Kalan"],
+                correctAnswer: "Aparador",
+                explanation: "Ang pera ay itinatago sa pitaka; ang damit ay sa aparador."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 47)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Isda : Kaliskis :: Ibon : ___",
+                options: ["Sungay", "Buntot", "Balahibo", "Pangil"],
+                correctAnswer: "Balahibo",
+                explanation: "Ang katawan ng isda ay may kaliskis; ang ibon ay may balahibo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 48)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sinigang : Maasim :: Leche flan : ___",
+                options: ["Maalat", "Mapait", "Maanghang", "Matamis"],
+                correctAnswer: "Matamis",
+                explanation: "Maasim ang sinigang; matamis ang leche flan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 49)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Tasa : Kape :: Mangkok : ___",
+                options: ["Sabaw", "Kanin", "Tinapay", "Karne"],
+                correctAnswer: "Sabaw",
+                explanation: "Ang kape ay inilalagay sa tasa; ang sabaw ay sa mangkok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 50)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lungsod : Maynila :: Bansa : ___",
+                options: ["Cebu", "Pilipinas", "Luzon", "Asya"],
+                correctAnswer: "Pilipinas",
+                explanation: "Ang Maynila ay halimbawa ng lungsod; ang Pilipinas ay halimbawa ng bansa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 51)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Aklat : Pahina :: Bahay : ___",
+                options: ["Kalsada", "Bakuran", "Silid", "Bubong"],
+                correctAnswer: "Silid",
+                explanation: "Ang aklat ay binubuo ng mga pahina; ang bahay ay ng mga silid."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 52)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Gutom : Kumain :: Uhaw : ___",
+                options: ["Matulog", "Maglakad", "Magbasa", "Uminom"],
+                correctAnswer: "Uminom",
+                explanation: "Kapag gutom ay kumakain; kapag uhaw ay umiinom."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 53)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Antok : Matulog :: Pagod : ___",
+                options: ["Magpahinga", "Magtrabaho", "Tumakbo", "Maglinis"],
+                correctAnswer: "Magpahinga",
+                explanation: "Kapag inaantok ay natutulog; kapag pagod ay nagpapahinga."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 54)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sinturon : Baywang :: Relo : ___",
+                options: ["Balikat", "Pulso", "Tuhod", "Leeg"],
+                correctAnswer: "Pulso",
+                explanation: "Ang sinturon ay isinusuot sa baywang; ang relo ay sa pulso."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 55)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kalan : Pagpapainit :: Ref : ___",
+                options: ["Paglilinis", "Pagpapatuyo", "Pagpapalamig", "Paghahalo"],
+                correctAnswer: "Pagpapalamig",
+                explanation: "Ang kalan ay nagpapainit ng pagkain; ang ref ay nagpapalamig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 56)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Bola : Bilog :: Kahon : ___",
+                options: ["Tatsulok", "Bituin", "Puso", "Parisukat"],
+                correctAnswer: "Parisukat",
+                explanation: "Bilog ang hugis ng bola; parisukat ang mukha ng kahon."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 57)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Apoy : Usok :: Bulaklak : ___",
+                options: ["Bango", "Tinik", "Dahon", "Ugat"],
+                correctAnswer: "Bango",
+                explanation: "Mula sa apoy ay may usok; mula sa bulaklak ay may bango."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 58)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sastre : Damit :: Karpintero : ___",
+                options: ["Tinapay", "Muwebles", "Gamot", "Litrato"],
+                correctAnswer: "Muwebles",
+                explanation: "Ang sastre ay gumagawa ng damit; ang karpintero ay ng muwebles."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 59)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Ospital : Pasyente :: Paaralan : ___",
+                options: ["Doktor", "Guro", "Mag-aaral", "Nars"],
+                correctAnswer: "Mag-aaral",
+                explanation: "Ang pasyente ay inaalagaan sa ospital; ang mag-aaral ay tinuturuan sa paaralan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 60)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kamera : Litrato :: Radyo : ___",
+                options: ["Pelikula", "Sulat", "Larawan", "Musika"],
+                correctAnswer: "Musika",
+                explanation: "Ang kamera ay kumukuha ng litrato; ang radyo ay nagpapatugtog ng musika."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 61)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Mansanas : Puno :: Ubas : ___",
+                options: ["Baging", "Ugat", "Buto", "Dahon"],
+                correctAnswer: "Baging",
+                explanation: "Ang mansanas ay tumutubo sa puno; ang ubas ay sa baging."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 62)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kalamansi : Maasim :: Pulot : ___",
+                options: ["Maalat", "Matamis", "Mapait", "Maanghang"],
+                correctAnswer: "Matamis",
+                explanation: "Maasim ang kalamansi; matamis ang pulot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 63)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Salita : Pangungusap :: Pangungusap : ___",
+                options: ["Titik", "Tula", "Talata", "Kuwento"],
+                correctAnswer: "Talata",
+                explanation: "Ang mga salita ay bumubuo ng pangungusap; ang mga pangungusap ay bumubuo ng talata."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 64)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Tubig : Baso :: Sabaw : ___",
+                options: ["Plato", "Tasa", "Kaldero", "Mangkok"],
+                correctAnswer: "Mangkok",
+                explanation: "Ang tubig ay iniinom sa baso; ang sabaw ay hinihigop mula sa mangkok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 65)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Barya : Metal :: Perang papel : ___",
+                options: ["Papel", "Plastik", "Tela", "Kahoy"],
+                correctAnswer: "Papel",
+                explanation: "Ang barya ay gawa sa metal; ang perang papel ay sa papel."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 66)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Tulog : Gabi :: Gising : ___",
+                options: ["Hatinggabi", "Umaga", "Hapon", "Takipsilim"],
+                correctAnswer: "Umaga",
+                explanation: "Karaniwang natutulog sa gabi at gumigising sa umaga."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 67)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sakit : Gamot :: Dumi : ___",
+                options: ["Tubig", "Suklay", "Sabon", "Tuwalya"],
+                correctAnswer: "Sabon",
+                explanation: "Ang gamot ang panlaban sa sakit; ang sabon ang panlinis ng dumi."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 68)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lolo : Lola :: Ama : ___",
+                options: ["Anak", "Apo", "Pinsan", "Ina"],
+                correctAnswer: "Ina",
+                explanation: "Ang lolo at lola ay magkapareha, gayundin ang ama at ina."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 69)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kuya : Ate :: Tiyuhin : ___",
+                options: ["Tiyahin", "Lola", "Pamangkin", "Inaanak"],
+                correctAnswer: "Tiyahin",
+                explanation: "Ang kuya ay lalaki at ang ate ay babae; ang tiyuhin ay lalaki at ang tiyahin ay babae."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 70)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Kaarawan : Keyk :: Pasko : ___",
+                options: ["Kandila", "Regalo", "Bandila", "Lobo"],
+                correctAnswer: "Regalo",
+                explanation: "Ang keyk ay simbolo ng kaarawan; ang regalo ay ng Pasko."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 71)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Simbahan : Pari :: Korte : ___",
+                options: ["Nars", "Tindero", "Hukom", "Tsuper"],
+                correctAnswer: "Hukom",
+                explanation: "Ang pari ang namumuno sa simbahan; ang hukom ang sa korte."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 72)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Palengke : Pamimili :: Aklatan : ___",
+                options: ["Pagluluto", "Paglalaro", "Pagtulog", "Pagbabasa"],
+                correctAnswer: "Pagbabasa",
+                explanation: "Sa palengke namimili; sa aklatan nagbabasa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 73)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Gulay : Karot :: Prutas : ___",
+                options: ["Mangga", "Sibuyas", "Kamatis", "Talong"],
+                correctAnswer: "Mangga",
+                explanation: "Ang karot ay halimbawa ng gulay; ang mangga ay ng prutas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 74)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Trak : Malaki :: Bisikleta : ___",
+                options: ["Mabigat", "Maliit", "Mahaba", "Mataas"],
+                correctAnswer: "Maliit",
+                explanation: "Malaki ang trak; maliit ang bisikleta."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 75)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Pako : Martilyo :: Turnilyo : ___",
+                options: ["Lagari", "Liyabe", "Distornilyador", "Plais"],
+                correctAnswer: "Distornilyador",
+                explanation: "Ang pako ay pinupukpok ng martilyo; ang turnilyo ay iniikot ng distornilyador."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 76)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Sulat : Sobre :: Regalo : ___",
+                options: ["Selyo", "Laso", "Papel", "Kahon"],
+                correctAnswer: "Kahon",
+                explanation: "Ang sulat ay inilalagay sa sobre; ang regalo ay sa kahon."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 77)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Puno : Gubat :: Bahay : ___",
+                options: ["Baryo", "Dagat", "Bundok", "Ilog"],
+                correctAnswer: "Baryo",
+                explanation: "Maraming puno sa gubat; maraming bahay sa baryo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 78)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Saya : Ngiti :: Lungkot : ___",
+                options: ["Tawa", "Luha", "Halakhak", "Palakpak"],
+                correctAnswer: "Luha",
+                explanation: "Ang ngiti ay tanda ng saya; ang luha ay ng lungkot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 79)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Lechon : Pista :: Pansit : ___",
+                options: ["Pasko", "Kasal", "Kaarawan", "Binyag"],
+                correctAnswer: "Kaarawan",
+                explanation: "Ang lechon ang pangunahing handa sa pista; ang pansit ay sa kaarawan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Adobo : Toyo :: Sinigang : ___ (Analogy 80)",
-                options: ["Sampalok", "Water", "Salt", "Pepper"],
-                correctAnswer: "Sampalok",
-                explanation: "Analogy comparison."
+                prompt: "Tsaa : Mainit :: Sorbetes : ___",
+                options: ["Maasim", "Maalat", "Mapait", "Malamig"],
+                correctAnswer: "Malamig",
+                explanation: "Ang tsaa ay iniinom nang mainit; ang sorbetes ay kinakain nang malamig."
             )
         ]
     )
