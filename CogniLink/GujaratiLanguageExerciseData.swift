@@ -135,7 +135,7 @@ struct GujaratiLanguageExerciseData {
     private static let synonymsEasy = Exercise(
         id: UUID(),
         title: "સમાનાર્થી — સરળ",
-        instructions: "દિેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
+        instructions: "આપેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
@@ -158,7 +158,7 @@ struct GujaratiLanguageExerciseData {
     private static let synonymsHard = Exercise(
         id: UUID(),
         title: "સમાનાર્થી — કઠિન",
-        instructions: "દિેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
+        instructions: "આપેલ શબ્દ સમાન અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
@@ -181,7 +181,7 @@ struct GujaratiLanguageExerciseData {
     private static let antonymsEasy = Exercise(
         id: UUID(),
         title: "વિરોધી શબ્દ — સરળ",
-        instructions: "દિેલ શબ્દ વિરુદ્ધ અર્થ ધરાવતો શબ્દ પસંદ કરો.",
+        instructions: "આપેલ શબ્દ વિરુદ્ધ અર્થ ધરાવતો શબ્દ પસંદ કરો.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
