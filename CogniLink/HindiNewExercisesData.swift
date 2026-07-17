@@ -131,7 +131,7 @@ struct HindiNewExercisesData {
             ExerciseItem(prompt: "हिम + ___", options: ["आलय", "घर", "पर्वत", "शिला"], correctAnswer: "आलय", explanation: "हिम + आलय = हिमालय।"),
             ExerciseItem(prompt: "डाक + ___", options: ["घर", "खाना", "पेटी", "पत्र"], correctAnswer: "घर", explanation: "डाक + घर = डाकघर।"),
             ExerciseItem(prompt: "राज + ___", options: ["कुमार", "पुरुष", "महल", "दूत"], correctAnswer: "कुमार", explanation: "राज + कुमार = राजकुमार।"),
-            ExerciseItem(prompt: "सूर्य + ___", options: ["ोदय", "अस्त", "प्रकाश", "किरण"], correctAnswer: "ोदय", explanation: "सूर्य + उदय = सूर्योदय।"),
+            ExerciseItem(prompt: "सूर्य + ___", options: ["उदय", "अस्त", "प्रकाश", "किरण"], correctAnswer: "उदय", explanation: "सूर्य + उदय = सूर्योदय।"),
             ExerciseItem(prompt: "विद्या + ___", options: ["आलय", "शाला", "पीठ", "मंदिर"], correctAnswer: "आलय", explanation: "विद्या + आलय = विद्यालय।"),
             ExerciseItem(prompt: "गंगा + ___", options: ["जल", "नदी", "धार", "तट"], correctAnswer: "जल", explanation: "गंगा + जल = गंगाजल।"),
             ExerciseItem(prompt: "चिड़िया + ___", options: ["घर", "वन", "पिंजरा", "घोंसला"], correctAnswer: "घर", explanation: "चिड़िया + घर = चिड़ियाघर।"),
