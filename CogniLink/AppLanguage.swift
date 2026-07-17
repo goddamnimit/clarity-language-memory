@@ -380,3 +380,240 @@ class LanguageManager: ObservableObject {
         }
     }
 }
+
+// MARK: - Flag Content Localization
+// Shared between the iOS and tvOS exercise containers and Caregiver Mode,
+// so these live outside any #if os() gate.
+
+extension AppLanguage {
+    var flagButtonAccessibilityLabel: String {
+        switch self {
+        case .english:    return "Flag this question"
+        case .spanish:    return "Marcar esta pregunta"
+        case .hindi:      return "इस प्रश्न को चिह्नित करें"
+        case .gujarati:   return "આ પ્રશ્નને ફ્લેગ કરો"
+        case .chinese:    return "标记此题目"
+        case .farsi:      return "این سوال را پرچم‌گذاری کنید"
+        case .korean:     return "이 질문 신고하기"
+        case .vietnamese: return "Gắn cờ câu hỏi này"
+        case .arabic:     return "الإبلاغ عن هذا السؤال"
+        case .portuguese: return "Sinalizar esta pergunta"
+        case .tagalog:    return "I-flag ang tanong na ito"
+        case .punjabi:    return "ਇਸ ਸਵਾਲ ਨੂੰ ਫਲੈਗ ਕਰੋ"
+        case .armenian:   return "Դրոշակել այս հարցը"
+        case .japanese:   return "この質問を報告"
+        case .french:     return "Signaler cette question"
+        case .amharic:    return "ይህን ጥያቄ ምልክት አድርግ"
+        }
+    }
+
+    var flagContentAlertTitle: String {
+        switch self {
+        case .english:    return "Flag this question for review?"
+        case .spanish:    return "¿Marcar esta pregunta para revisión?"
+        case .hindi:      return "समीक्षा के लिए इस प्रश्न को चिह्नित करें?"
+        case .gujarati:   return "સમીક્ષા માટે આ પ્રશ્નને ફ્લેગ કરવો છે?"
+        case .chinese:    return "将此题目标记以供审核？"
+        case .farsi:      return "این سوال برای بررسی پرچم‌گذاری شود؟"
+        case .korean:     return "이 질문을 검토용으로 신고하시겠습니까?"
+        case .vietnamese: return "Gắn cờ câu hỏi này để xem xét?"
+        case .arabic:     return "هل تريد الإبلاغ عن هذا السؤال للمراجعة؟"
+        case .portuguese: return "Sinalizar esta pergunta para revisão?"
+        case .tagalog:    return "I-flag ang tanong na ito para sa pagsusuri?"
+        case .punjabi:    return "ਸਮੀਖਿਆ ਲਈ ਇਸ ਸਵਾਲ ਨੂੰ ਫਲੈਗ ਕਰਨਾ ਹੈ?"
+        case .armenian:   return "Դրոշակե՞լ այս հարցը վերանայման համար։"
+        case .japanese:   return "この質問を確認用に報告しますか？"
+        case .french:     return "Signaler cette question pour examen ?"
+        case .amharic:    return "ይህ ጥያቄ ለክለሳ ምልክት ይደረግበት?"
+        }
+    }
+
+    var flagContentAlertMessage: String {
+        switch self {
+        case .english:    return "This saves a local note for your caregiver to review. No personal information is included."
+        case .spanish:    return "Esto guarda una nota local para que la revise su cuidador. No se incluye información personal."
+        case .hindi:      return "यह आपके देखभालकर्ता की समीक्षा के लिए एक स्थानीय नोट सहेजता है। इसमें कोई व्यक्तिगत जानकारी शामिल नहीं है।"
+        case .gujarati:   return "આ તમારા સંભાળકર્તાની સમીક્ષા માટે સ્થાનિક નોંધ સાચવે છે. તેમાં કોઈ વ્યક્તિગત માહિતી શામેલ નથી."
+        case .chinese:    return "这会在本地保存一条记录，供你的看护者查看。不包含任何个人信息。"
+        case .farsi:      return "این یک یادداشت محلی برای بررسی توسط مراقب شما ذخیره می‌کند. هیچ اطلاعات شخصی در آن نیست."
+        case .korean:     return "보호자가 검토할 수 있도록 로컬에 메모가 저장됩니다. 개인정보는 포함되지 않습니다."
+        case .vietnamese: return "Thao tác này lưu một ghi chú cục bộ để người chăm sóc xem xét. Không có thông tin cá nhân nào được lưu."
+        case .arabic:     return "سيؤدي هذا إلى حفظ ملاحظة محلية ليراجعها مقدم الرعاية الخاص بك. لا يتم تضمين أي معلومات شخصية."
+        case .portuguese: return "Isso salva uma nota local para o seu cuidador revisar. Nenhuma informação pessoal é incluída."
+        case .tagalog:    return "Nagse-save ito ng lokal na tala para masuri ng iyong caregiver. Walang personal na impormasyong isasama."
+        case .punjabi:    return "ਇਹ ਤੁਹਾਡੇ ਦੇਖਭਾਲਕਰਤਾ ਦੀ ਸਮੀਖਿਆ ਲਈ ਇੱਕ ਸਥਾਨਕ ਨੋਟ ਸੰਭਾਲਦਾ ਹੈ। ਇਸ ਵਿੱਚ ਕੋਈ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ।"
+        case .armenian:   return "Սա տեղային նշում է պահպանում ձեր խնամողի վերանայման համար։ Անձնական տվյալներ չեն ներառվում։"
+        case .japanese:   return "この操作により、介護者が確認できるようローカルにメモが保存されます。個人情報は含まれません。"
+        case .french:     return "Cela enregistre une note locale que votre aidant pourra consulter. Aucune information personnelle n'est incluse."
+        case .amharic:    return "ይህ ለእንክብካቤ ሰጪዎ ግምገማ የአካባቢ ማስታወሻ ያስቀምጣል። ምንም የግል መረጃ አልተካተተም።"
+        }
+    }
+
+    var flagContentConfirm: String {
+        switch self {
+        case .english:    return "Flag"
+        case .spanish:    return "Marcar"
+        case .hindi:      return "चिह्नित करें"
+        case .gujarati:   return "ફ્લેગ કરો"
+        case .chinese:    return "标记"
+        case .farsi:      return "پرچم‌گذاری"
+        case .korean:     return "신고"
+        case .vietnamese: return "Gắn cờ"
+        case .arabic:     return "إبلاغ"
+        case .portuguese: return "Sinalizar"
+        case .tagalog:    return "I-flag"
+        case .punjabi:    return "ਫਲੈਗ ਕਰੋ"
+        case .armenian:   return "Դրոշակել"
+        case .japanese:   return "報告"
+        case .french:     return "Signaler"
+        case .amharic:    return "ምልክት አድርግ"
+        }
+    }
+
+    var flagContentCancel: String {
+        switch self {
+        case .english:    return "Cancel"
+        case .spanish:    return "Cancelar"
+        case .hindi:      return "रद्द करें"
+        case .gujarati:   return "રદ કરો"
+        case .chinese:    return "取消"
+        case .farsi:      return "لغو"
+        case .korean:     return "취소"
+        case .vietnamese: return "Hủy"
+        case .arabic:     return "إلغاء"
+        case .portuguese: return "Cancelar"
+        case .tagalog:    return "Kanselahin"
+        case .punjabi:    return "ਰੱਦ ਕਰੋ"
+        case .armenian:   return "Չեղարկել"
+        case .japanese:   return "キャンセル"
+        case .french:     return "Annuler"
+        case .amharic:    return "ይቅር"
+        }
+    }
+
+    var flagContentConfirmedToast: String {
+        switch self {
+        case .english:    return "Flagged for review"
+        case .spanish:    return "Marcado para revisión"
+        case .hindi:      return "समीक्षा के लिए चिह्नित"
+        case .gujarati:   return "સમીક્ષા માટે ફ્લેગ કરાયું"
+        case .chinese:    return "已标记以供审核"
+        case .farsi:      return "برای بررسی پرچم‌گذاری شد"
+        case .korean:     return "검토용으로 신고됨"
+        case .vietnamese: return "Đã gắn cờ để xem xét"
+        case .arabic:     return "تم الإبلاغ للمراجعة"
+        case .portuguese: return "Sinalizado para revisão"
+        case .tagalog:    return "Na-flag para sa pagsusuri"
+        case .punjabi:    return "ਸਮੀਖਿਆ ਲਈ ਫਲੈਗ ਕੀਤਾ ਗਿਆ"
+        case .armenian:   return "Դրոշակվել է վերանայման համար"
+        case .japanese:   return "確認用に報告しました"
+        case .french:     return "Signalé pour examen"
+        case .amharic:    return "ለክለሳ ምልክት ተደርጓል"
+        }
+    }
+
+    var flaggedContentSectionLabel: String {
+        switch self {
+        case .english:    return "Flagged Content"
+        case .spanish:    return "Contenido Marcado"
+        case .hindi:      return "चिह्नित सामग्री"
+        case .gujarati:   return "ફ્લેગ કરેલ સામગ્રી"
+        case .chinese:    return "已标记内容"
+        case .farsi:      return "محتوای پرچم‌گذاری‌شده"
+        case .korean:     return "신고된 콘텐츠"
+        case .vietnamese: return "Nội dung đã gắn cờ"
+        case .arabic:     return "المحتوى المُبلَّغ عنه"
+        case .portuguese: return "Conteúdo Sinalizado"
+        case .tagalog:    return "Na-flag na Nilalaman"
+        case .punjabi:    return "ਫਲੈਗ ਕੀਤੀ ਸਮੱਗਰੀ"
+        case .armenian:   return "Դրոշակված Բովանդակություն"
+        case .japanese:   return "報告されたコンテンツ"
+        case .french:     return "Contenu Signalé"
+        case .amharic:    return "ምልክት የተደረገበት ይዘት"
+        }
+    }
+
+    var flaggedContentEmptyState: String {
+        switch self {
+        case .english:    return "No flagged items yet"
+        case .spanish:    return "Aún no hay elementos marcados"
+        case .hindi:      return "अभी तक कोई चिह्नित आइटम नहीं"
+        case .gujarati:   return "હજુ સુધી કોઈ ફ્લેગ કરેલ આઇટમ નથી"
+        case .chinese:    return "暂无已标记的内容"
+        case .farsi:      return "هنوز موردی پرچم‌گذاری نشده است"
+        case .korean:     return "아직 신고된 항목이 없습니다"
+        case .vietnamese: return "Chưa có mục nào được gắn cờ"
+        case .arabic:     return "لا توجد عناصر مُبلَّغ عنها بعد"
+        case .portuguese: return "Ainda não há itens sinalizados"
+        case .tagalog:    return "Wala pang na-flag na item"
+        case .punjabi:    return "ਹਾਲੇ ਤੱਕ ਕੋਈ ਫਲੈਗ ਕੀਤੀ ਆਈਟਮ ਨਹੀਂ"
+        case .armenian:   return "Առայժմ դրոշակված նյութեր չկան"
+        case .japanese:   return "報告された項目はまだありません"
+        case .french:     return "Aucun élément signalé pour le moment"
+        case .amharic:    return "እስካሁን ምልክት የተደረገበት ንጥል የለም"
+        }
+    }
+
+    var flaggedContentCopyAllButton: String {
+        switch self {
+        case .english:    return "Copy All as Text"
+        case .spanish:    return "Copiar Todo como Texto"
+        case .hindi:      return "सभी को टेक्स्ट के रूप में कॉपी करें"
+        case .gujarati:   return "બધું ટેક્સ્ટ તરીકે કૉપિ કરો"
+        case .chinese:    return "全部复制为文本"
+        case .farsi:      return "کپی همه به‌صورت متن"
+        case .korean:     return "모두 텍스트로 복사"
+        case .vietnamese: return "Sao chép tất cả dưới dạng văn bản"
+        case .arabic:     return "نسخ الكل كنص"
+        case .portuguese: return "Copiar Tudo como Texto"
+        case .tagalog:    return "Kopyahin Lahat bilang Teksto"
+        case .punjabi:    return "ਸਭ ਨੂੰ ਟੈਕਸਟ ਵਜੋਂ ਕਾਪੀ ਕਰੋ"
+        case .armenian:   return "Պատճենել Ամբողջը որպես Տեքստ"
+        case .japanese:   return "すべてをテキストとしてコピー"
+        case .french:     return "Copier Tout en Texte"
+        case .amharic:    return "ሁሉንም እንደ ጽሑፍ ቅዳ"
+        }
+    }
+
+    var flaggedContentExportJSONButton: String {
+        switch self {
+        case .english:    return "Export as JSON"
+        case .spanish:    return "Exportar como JSON"
+        case .hindi:      return "JSON के रूप में निर्यात करें"
+        case .gujarati:   return "JSON તરીકે નિકાસ કરો"
+        case .chinese:    return "导出为 JSON"
+        case .farsi:      return "خروجی به‌صورت JSON"
+        case .korean:     return "JSON으로 내보내기"
+        case .vietnamese: return "Xuất dưới dạng JSON"
+        case .arabic:     return "تصدير كملف JSON"
+        case .portuguese: return "Exportar como JSON"
+        case .tagalog:    return "I-export bilang JSON"
+        case .punjabi:    return "JSON ਵਜੋਂ ਐਕਸਪੋਰਟ ਕਰੋ"
+        case .armenian:   return "Արտահանել որպես JSON"
+        case .japanese:   return "JSONとしてエクスポート"
+        case .french:     return "Exporter en JSON"
+        case .amharic:    return "እንደ JSON ላክ"
+        }
+    }
+
+    var flaggedContentCopiedConfirmation: String {
+        switch self {
+        case .english:    return "Copied to clipboard"
+        case .spanish:    return "Copiado al portapapeles"
+        case .hindi:      return "क्लिपबोर्ड पर कॉपी किया गया"
+        case .gujarati:   return "ક્લિપબોર્ડ પર કૉપિ થયું"
+        case .chinese:    return "已复制到剪贴板"
+        case .farsi:      return "در کلیپ‌بورد کپی شد"
+        case .korean:     return "클립보드에 복사됨"
+        case .vietnamese: return "Đã sao chép vào bảng nhớ tạm"
+        case .arabic:     return "تم النسخ إلى الحافظة"
+        case .portuguese: return "Copiado para a área de transferência"
+        case .tagalog:    return "Nakopya sa clipboard"
+        case .punjabi:    return "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ"
+        case .armenian:   return "Պատճենվել է սեղմատախտակին"
+        case .japanese:   return "クリップボードにコピーしました"
+        case .french:     return "Copié dans le presse-papiers"
+        case .amharic:    return "ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
+        }
+    }
+}

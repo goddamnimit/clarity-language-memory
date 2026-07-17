@@ -8,6 +8,9 @@ struct ResearchExportManager {
     static let sessionLogKey  = "clarity_session_log"
     static let maxLogSize     = 500
 
+    static let flaggedContentKey  = "clarity_flagged_content"
+    static let maxFlaggedContentSize = 500
+
     // MARK: - Public API
 
     /// Builds the full anonymous JSON export and returns it as UTF-8 encoded Data.
@@ -125,6 +128,42 @@ struct ResearchExportManager {
             log = Array(log.suffix(maxLogSize))
         }
         UserDefaults.standard.set(log, forKey: sessionLogKey)
+    }
+
+    /// Appends a flagged-content report, capping at maxFlaggedContentSize (drops oldest when over limit).
+    /// Records contain no patient PII — only exercise identifiers, a short question preview, type, language, and a timestamp.
+    static func appendFlaggedContent(_ record: [String: Any]) {
+        var flagged = UserDefaults.standard.array(forKey: flaggedContentKey)
+                      as? [[String: Any]] ?? []
+        flagged.append(record)
+        if flagged.count > maxFlaggedContentSize {
+            flagged = Array(flagged.suffix(maxFlaggedContentSize))
+        }
+        UserDefaults.standard.set(flagged, forKey: flaggedContentKey)
+    }
+
+    /// Returns the flagged-content log, re-encoded through JSON to guarantee clean plist→JSON types.
+    static func flaggedContentList() -> [[String: Any]] {
+        let raw = UserDefaults.standard.array(forKey: flaggedContentKey) ?? []
+        if let jsonData = try? JSONSerialization.data(withJSONObject: raw),
+           let cleaned  = try? JSONSerialization.jsonObject(with: jsonData) as? [[String: Any]] {
+            return cleaned
+        }
+        return []
+    }
+
+    /// Builds a standalone JSON export of just the flagged-content log.
+    static func generateFlaggedContentExport() -> Data? {
+        let exportDict: [String: Any] = [
+            "exportDate": ISO8601DateFormatter().string(from: Date()),
+            "anonymous": true,
+            "flaggedContent": flaggedContentList()
+        ]
+        guard JSONSerialization.isValidJSONObject(exportDict) else { return nil }
+        return try? JSONSerialization.data(
+            withJSONObject: exportDict,
+            options: [.prettyPrinted, .sortedKeys]
+        )
     }
 
     // MARK: - Enum → String helpers (used by ExerciseContainerView when logging)

@@ -69,6 +69,34 @@ struct TVCaregiverDashboardView: View {
                         )
                     }
 
+                    // Flagged Content Block (Explicitly Non-Functional)
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text("Flagged Content")
+                            .font(.system(size: 36, weight: .bold, design: .rounded))
+                            .foregroundColor(.white.opacity(0.85))
+                            .padding(.horizontal, 80)
+
+                        VStack(alignment: .leading, spacing: 16) {
+                            HStack {
+                                Image(systemName: "flag.slash.fill")
+                                    .font(.system(size: 36))
+                                    .foregroundColor(.orange)
+                                Text("Flagged Content review is iOS-only")
+                                    .font(.system(size: 28, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
+                            Text("Apple TV (tvOS) does not support reviewing flagged questions in this version. Questions flagged for review from an exercise must be viewed from the patient's iOS companion application.")
+                                .font(.system(size: 22, weight: .light))
+                                .foregroundColor(Color.white.opacity(0.7))
+                        }
+                        .padding(40)
+                        .background(
+                            RoundedRectangle(cornerRadius: 24)
+                                .fill(Color(hex: "2D2D44").opacity(0.5))
+                                .padding(.horizontal, 80)
+                        )
+                    }
+
                     // Action Controls Block
                     VStack(spacing: 24) {
                         // Baseline Assessment Button

@@ -91,6 +91,11 @@ struct CaregiverDashboardView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     Divider().padding(.leading, 52)
+                    NavigationLink(destination: FlaggedContentView()) {
+                        dashboardRow(icon: "flag.fill", label: languageManager.currentLanguage.flaggedContentSectionLabel)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Divider().padding(.leading, 52)
                     Button(action: { showBaselineAssessment = true }) {
                         dashboardRow(icon: "list.clipboard", label: languageManager.currentLanguage.cgRunBaseline)
                     }

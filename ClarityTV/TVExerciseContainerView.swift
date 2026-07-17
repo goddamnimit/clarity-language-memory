@@ -8,6 +8,7 @@ private enum TVContainerFocus: Hashable {
     case exerciseContent
     case replay
     case next
+    case flag
 }
 
 // MARK: - TVExerciseContainerView
@@ -33,6 +34,8 @@ struct TVExerciseContainerView: View {
     @State private var currentQuestionAnswered = false
     @State private var sessionRecorded = false
     @State private var sessionAttempts: [[String: Any]] = []
+    @State private var showFlagConfirmation = false
+    @State private var showFlagToast = false
     // MARK: tvOS-only pulse state
     @State private var dotPulse = false
     // MARK: Text-to-speech
@@ -56,6 +59,24 @@ struct TVExerciseContainerView: View {
             } else {
                 loadingView
             }
+
+            if showFlagToast {
+                VStack {
+                    flagToastView
+                    Spacer()
+                }
+                .padding(.top, 60)
+                .allowsHitTesting(false)
+                .transition(.move(edge: .top).combined(with: .opacity))
+            }
+        }
+        .alert(languageManager.currentLanguage.flagContentAlertTitle, isPresented: $showFlagConfirmation) {
+            Button(languageManager.currentLanguage.flagContentCancel, role: .cancel) {}
+            Button(languageManager.currentLanguage.flagContentConfirm) {
+                flagCurrentQuestion()
+            }
+        } message: {
+            Text(languageManager.currentLanguage.flagContentAlertMessage)
         }
         .onAppear {
             if currentExercise == nil { pickExerciseAndInit() }
@@ -108,7 +129,10 @@ struct TVExerciseContainerView: View {
             HStack(alignment: .center) {
                 progressDots
                 Spacer()
-                scoreLabel
+                HStack(spacing: 28) {
+                    flagButton
+                    scoreLabel
+                }
             }
             .padding(.horizontal, 80)
             .padding(.top, 60)
@@ -222,6 +246,57 @@ struct TVExerciseContainerView: View {
         Text("Score: \(score)/\(sessionItems.count)")
             .font(.system(size: 36, weight: .medium, design: .rounded))
             .foregroundColor(.white)
+    }
+
+    // MARK: - Flag Content
+
+    private var flagButton: some View {
+        Button(action: { showFlagConfirmation = true }) {
+            TVFlagButton()
+        }
+        .buttonStyle(.plain)
+        .focused($containerFocus, equals: .flag)
+        .accessibilityLabel(languageManager.currentLanguage.flagButtonAccessibilityLabel)
+    }
+
+    private var flagToastView: some View {
+        HStack(spacing: 14) {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 26))
+                .foregroundColor(.green)
+            Text(languageManager.currentLanguage.flagContentConfirmedToast)
+                .font(.system(size: 26, weight: .medium, design: .rounded))
+                .foregroundColor(.white)
+        }
+        .padding(.horizontal, 28)
+        .padding(.vertical, 16)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.black.opacity(0.75))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.white.opacity(0.2), lineWidth: 1)
+        )
+    }
+
+    private func flagCurrentQuestion() {
+        guard let exercise = currentExercise, currentIndex < sessionItems.count else { return }
+        let currentItem = sessionItems[currentIndex]
+        let record: [String: Any] = [
+            "exerciseId": exercise.id.uuidString,
+            "exerciseTitle": exercise.title,
+            "questionPreview": String(currentItem.prompt.prefix(50)),
+            "exerciseType": ResearchExportManager.string(for: exercise.type),
+            "language": ResearchExportManager.string(for: languageManager.currentLanguage),
+            "timestamp": ISO8601DateFormatter().string(from: Date())
+        ]
+        ResearchExportManager.appendFlaggedContent(record)
+
+        withAnimation { showFlagToast = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+            withAnimation { showFlagToast = false }
+        }
     }
 
     // MARK: - Pulse Helpers
@@ -407,6 +482,29 @@ struct TVExerciseContainerView: View {
         case .french:     return "fr-FR"
         case .amharic:    return "am-ET"
         }
+    }
+}
+
+// MARK: - TVFlagButton
+
+private struct TVFlagButton: View {
+    @Environment(\.isFocused) private var isFocused
+
+    var body: some View {
+        Image(systemName: "flag")
+            .font(.system(size: 24, weight: .medium))
+            .foregroundColor(.white.opacity(0.85))
+            .padding(14)
+            .background(
+                Circle()
+                    .fill(isFocused ? Color.white.opacity(0.25) : Color.white.opacity(0.1))
+            )
+            .overlay(
+                Circle()
+                    .stroke(Color.white.opacity(0.3), lineWidth: 1.5)
+            )
+            .scaleEffect(isFocused ? 1.08 : 1.0)
+            .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }
 

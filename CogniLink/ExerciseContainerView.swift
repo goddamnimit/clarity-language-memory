@@ -21,6 +21,8 @@ struct ExerciseContainerView: View {
     @State private var completionScale: CGFloat = 0.8
     @State private var completionOpacity: Double = 0
     @State private var displayedScore: Int = 0
+    @State private var showFlagConfirmation = false
+    @State private var showFlagToast = false
     
     var body: some View {
         VStack {
@@ -178,6 +180,15 @@ struct ExerciseContainerView: View {
                                     .fontWeight(.medium)
 
                                 Spacer()
+
+                                Button(action: { showFlagConfirmation = true }) {
+                                    Image(systemName: "flag")
+                                        .font(.system(size: 15))
+                                        .foregroundColor(.secondary)
+                                        .frame(width: 32, height: 32)
+                                        .contentShape(Rectangle())
+                                }
+                                .accessibilityLabel(languageManager.currentLanguage.flagButtonAccessibilityLabel)
                             }
 
                             // Progress Bar
@@ -321,6 +332,60 @@ struct ExerciseContainerView: View {
         }
         .onChange(of: currentIndex) {
             currentQuestionAnswered = false
+        }
+        .alert(languageManager.currentLanguage.flagContentAlertTitle, isPresented: $showFlagConfirmation) {
+            Button(languageManager.currentLanguage.flagContentCancel, role: .cancel) {}
+            Button(languageManager.currentLanguage.flagContentConfirm) {
+                flagCurrentQuestion()
+            }
+        } message: {
+            Text(languageManager.currentLanguage.flagContentAlertMessage)
+        }
+        .overlay(alignment: .top) {
+            if showFlagToast {
+                flagToastView
+                    .padding(.top, 8)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            }
+        }
+    }
+
+    private var flagToastView: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
+            Text(languageManager.currentLanguage.flagContentConfirmedToast)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .foregroundColor(.primary)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+        .background(Color.systemBackground)
+        .cornerRadius(12)
+        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
+    }
+
+    private func flagCurrentQuestion() {
+        guard currentIndex < sessionItems.count else { return }
+        let currentItem = sessionItems[currentIndex]
+        let record: [String: Any] = [
+            "exerciseId": exercise.id.uuidString,
+            "exerciseTitle": exercise.title,
+            "questionPreview": String(currentItem.prompt.prefix(50)),
+            "exerciseType": ResearchExportManager.string(for: exercise.type),
+            "language": ResearchExportManager.string(for: languageManager.currentLanguage),
+            "timestamp": ISO8601DateFormatter().string(from: Date())
+        ]
+        ResearchExportManager.appendFlaggedContent(record)
+
+        #if os(iOS)
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        #endif
+
+        withAnimation { showFlagToast = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+            withAnimation { showFlagToast = false }
         }
     }
     
