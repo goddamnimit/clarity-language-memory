@@ -8,6 +8,8 @@ struct WidgetSnapshot: Codable {
     let recommendedTitle: String
     let recommendedSection: String
     let recommendedHeadline: String
+    let weeklyGoal: Int
+    let sessionsThisWeek: Int
     let lastUpdated: Date
 
     static let appGroupID = "group.com.nimitdesai.clarity.shared"

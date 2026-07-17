@@ -9,7 +9,11 @@ struct WeeklyGoalStore {
     /// 0 means no goal set.
     static var goal: Int {
         get { UserDefaults.standard.integer(forKey: goalKey) }
-        set { UserDefaults.standard.set(newValue, forKey: goalKey) }
+        set {
+            UserDefaults.standard.set(newValue, forKey: goalKey)
+            // The goal count feeds the widget's weekly-progress bar — republish the snapshot.
+            WidgetSnapshotWriter.refresh()
+        }
     }
 
     @MainActor

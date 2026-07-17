@@ -43,12 +43,13 @@ struct ContentView: View {
               let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
         let title = components.queryItems?.first(where: { $0.name == "title" })?.value
         let sectionKey = components.queryItems?.first(where: { $0.name == "section" })?.value
-        guard title != nil || sectionKey != nil else { return }
+        let isRandom = components.queryItems?.first(where: { $0.name == "random" })?.value == "true"
+        guard title != nil || sectionKey != nil || isRandom else { return }
         selectedTab = 0
         NotificationCenter.default.post(
             name: .clarityOpenExerciseDeepLink,
             object: nil,
-            userInfo: ["title": title as Any, "section": sectionKey as Any])
+            userInfo: ["title": title as Any, "section": sectionKey as Any, "random": isRandom])
     }
     #endif
 
@@ -312,17 +313,26 @@ struct HomeView: View {
             }
             #if os(iOS)
             .onReceive(NotificationCenter.default.publisher(for: .clarityOpenExerciseDeepLink)) { note in
-                // Route widget deep links through the same path as tapping a
-                // recommendation card on the Home tab.
-                let title = note.userInfo?["title"] as? String
-                let sectionKey = note.userInfo?["section"] as? String
-                launchRecommendation(Recommendation(
-                    id: "deeplink",
-                    headline: "",
-                    explanation: "",
-                    sfSymbolName: "",
-                    targetExerciseTitle: title,
-                    targetSection: sectionKey.flatMap { WidgetSnapshotWriter.section(forKey: $0) }))
+                if note.userInfo?["random"] as? Bool == true {
+                    let pool = languageManager.exercisesForSection(.language) +
+                               languageManager.exercisesForSection(.cognition) +
+                               languageManager.exercisesForSection(.functionalSkills)
+                    if let exercise = pool.randomElement() {
+                        recommendedExercise = exercise
+                    }
+                } else {
+                    // Route widget deep links through the same path as tapping a
+                    // recommendation card on the Home tab.
+                    let title = note.userInfo?["title"] as? String
+                    let sectionKey = note.userInfo?["section"] as? String
+                    launchRecommendation(Recommendation(
+                        id: "deeplink",
+                        headline: "",
+                        explanation: "",
+                        sfSymbolName: "",
+                        targetExerciseTitle: title,
+                        targetSection: sectionKey.flatMap { WidgetSnapshotWriter.section(forKey: $0) }))
+                }
             }
             #endif
             .navigationTitle("Clarity")

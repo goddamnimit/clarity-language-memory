@@ -17,6 +17,8 @@ struct ClarityWidgetProvider: TimelineProvider {
                 recommendedTitle: "Word Association",
                 recommendedSection: "language",
                 recommendedHeadline: "Today's exercise",
+                weeklyGoal: 5,
+                sessionsThisWeek: 2,
                 lastUpdated: Date()))
     }
 
@@ -31,7 +33,7 @@ struct ClarityWidgetProvider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<ClarityWidgetEntry>) -> Void) {
         let entry = ClarityWidgetEntry(date: Date(), snapshot: WidgetSnapshot.load())
         // Single entry; refresh after the next local midnight so the
-        // day-seeded recommendation rolls over with the calendar day.
+        // day-seeded recommendation and weekly progress roll over with the calendar day.
         let nextMidnight = Calendar.current.nextDate(
             after: Date(),
             matching: DateComponents(hour: 0, minute: 0),
@@ -60,15 +62,22 @@ private func sectionColor(_ key: String) -> Color {
     }
 }
 
-private func deepLinkURL(for snapshot: WidgetSnapshot) -> URL? {
+/// Deep-links to the specific recommended exercise; falls back to a random
+/// exercise if no recommendation has ever been published (e.g. a brand new
+/// install where the app hasn't launched yet, or no session history exists).
+private func deepLinkURL(for snapshot: WidgetSnapshot?) -> URL {
     var components = URLComponents()
     components.scheme = "clarity"
     components.host = "exercise"
-    components.queryItems = [
-        URLQueryItem(name: "title", value: snapshot.recommendedTitle),
-        URLQueryItem(name: "section", value: snapshot.recommendedSection),
-    ]
-    return components.url
+    if let snapshot {
+        components.queryItems = [
+            URLQueryItem(name: "title", value: snapshot.recommendedTitle),
+            URLQueryItem(name: "section", value: snapshot.recommendedSection),
+        ]
+    } else {
+        components.queryItems = [URLQueryItem(name: "random", value: "true")]
+    }
+    return components.url!
 }
 
 // MARK: - Views
@@ -77,7 +86,7 @@ struct StreakBadgeView: View {
     let streak: Int
 
     var body: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: 2) {
             Image(systemName: "flame.fill")
                 .font(.system(size: 28))
                 .foregroundStyle(.orange)
@@ -86,8 +95,40 @@ struct StreakBadgeView: View {
                 .foregroundStyle(.primary)
                 .contentTransition(.numericText())
             Text("day streak")
-                .font(.caption)
+                .font(.system(size: 11, weight: .medium))
                 .foregroundStyle(.secondary)
+        }
+    }
+}
+
+struct WeeklyGoalBarView: View {
+    let sessionsThisWeek: Int
+    let weeklyGoal: Int
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Weekly Goal")
+                .font(.system(size: 10, weight: .bold))
+                .foregroundColor(.secondary)
+                .textCase(.uppercase)
+
+            Text(weeklyGoal > 0 ? "\(sessionsThisWeek)/\(weeklyGoal) sessions this week" : "\(sessionsThisWeek) sessions this week")
+                .font(.system(size: 12, weight: .semibold, design: .rounded))
+                .foregroundColor(.primary)
+
+            if weeklyGoal > 0 {
+                GeometryReader { geo in
+                    ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(Color.blue.opacity(0.15))
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(Color.blue)
+                            .frame(width: geo.size.width * CGFloat(min(Double(sessionsThisWeek) / Double(weeklyGoal), 1.0)))
+                    }
+                }
+                .frame(height: 6)
+                .padding(.vertical, 2)
+            }
         }
     }
 }
@@ -99,7 +140,7 @@ struct ClarityWidgetSmallView: View {
         if let snapshot = entry.snapshot {
             StreakBadgeView(streak: snapshot.currentStreak)
         } else {
-            VStack(spacing: 4) {
+            VStack(spacing: 2) {
                 Image(systemName: "flame")
                     .font(.system(size: 28))
                     .foregroundStyle(.secondary)
@@ -143,6 +184,8 @@ struct ClarityWidgetMediumView: View {
                         .padding(.vertical, 3)
                         .background(sectionColor(snapshot.recommendedSection).opacity(0.12))
                         .clipShape(Capsule())
+
+                    WeeklyGoalBarView(sessionsThisWeek: snapshot.sessionsThisWeek, weeklyGoal: snapshot.weeklyGoal)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -156,6 +199,7 @@ struct ClarityWidgetMediumView: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
+            .widgetURL(deepLinkURL(for: nil))
         }
     }
 }
@@ -189,7 +233,7 @@ struct ClarityWidget: Widget {
             ClarityWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Clarity Streak")
-        .description("Your practice streak and today's recommended exercise.")
+        .description("Your practice streak, weekly goal progress, and today's recommended exercise.")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

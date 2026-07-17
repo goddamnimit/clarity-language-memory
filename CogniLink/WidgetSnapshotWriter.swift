@@ -66,6 +66,8 @@ enum WidgetSnapshotWriter {
             recommendedTitle: title,
             recommendedSection: key(for: section),
             recommendedHeadline: headline,
+            weeklyGoal: WeeklyGoalStore.goal,
+            sessionsThisWeek: WeeklyGoalStore.sessionsThisWeek(),
             lastUpdated: Date())
 
         guard let data = try? JSONEncoder().encode(snapshot) else { return }
