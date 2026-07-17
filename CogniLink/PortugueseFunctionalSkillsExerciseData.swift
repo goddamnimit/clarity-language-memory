@@ -610,303 +610,303 @@ struct PortugueseFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Preparar um Chá (Opção 21)",
-                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
-                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
+                prompt: "Tomar um Banho",
+                options: ["Molhar o corpo e passar o sabonete", "Enxaguar todo o sabonete", "Fechar o chuveiro e se secar com a toalha", "Ligar o chuveiro e ajustar a temperatura"],
+                correctAnswer: "Ligar o chuveiro e ajustar a temperatura | Molhar o corpo e passar o sabonete | Enxaguar todo o sabonete | Fechar o chuveiro e se secar com a toalha"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavar as Mãos (Opção 22)",
-                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
-                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
+                prompt: "Fazer Arroz",
+                options: ["Adicionar água quente e sal", "Cozinhar em fogo baixo até secar", "Lavar o arroz na água", "Refogar o arroz com um pouco de óleo"],
+                correctAnswer: "Lavar o arroz na água | Refogar o arroz com um pouco de óleo | Adicionar água quente e sal | Cozinhar em fogo baixo até secar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Enviar uma Carta (Opção 23)",
-                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
-                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
+                prompt: "Trocar a Lâmpada",
+                options: ["Colocar a lâmpada nova no lugar", "Desligar o interruptor da luz", "Posicionar a escada embaixo da lâmpada", "Desenroscar a lâmpada queimada"],
+                correctAnswer: "Desligar o interruptor da luz | Posicionar a escada embaixo da lâmpada | Desenroscar a lâmpada queimada | Colocar a lâmpada nova no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Escovar os Dentes (Opção 24)",
-                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
-                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
+                prompt: "Pagar uma Conta no Banco",
+                options: ["Ir até o caixa eletrônico", "Escanear o código de barras da conta", "Confirmar o pagamento e guardar o recibo", "Pegar a conta e o cartão"],
+                correctAnswer: "Pegar a conta e o cartão | Ir até o caixa eletrônico | Escanear o código de barras da conta | Confirmar o pagamento e guardar o recibo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer um Sanduíche (Opção 25)",
-                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
-                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
+                prompt: "Tomar um Remédio",
+                options: ["Encher um copo com água", "Engolir o comprimido com a água", "Ler o rótulo do medicamento", "Separar a dose correta"],
+                correctAnswer: "Ler o rótulo do medicamento | Separar a dose correta | Encher um copo com água | Engolir o comprimido com a água"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Passar Café (Opção 26)",
-                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
-                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
+                prompt: "Pegar um Ônibus",
+                options: ["Subir e pagar a passagem", "Caminhar até o ponto de ônibus", "Esperar o ônibus da linha certa", "Fazer sinal para o motorista parar"],
+                correctAnswer: "Caminhar até o ponto de ônibus | Esperar o ônibus da linha certa | Fazer sinal para o motorista parar | Subir e pagar a passagem"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Regar as Plantas (Opção 27)",
-                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
-                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
+                prompt: "Arrumar a Cama",
+                options: ["Esticar o lençol sobre o colchão", "Colocar a coberta esticada", "Ajeitar o travesseiro na cabeceira", "Retirar o travesseiro e a coberta"],
+                correctAnswer: "Retirar o travesseiro e a coberta | Esticar o lençol sobre o colchão | Colocar a coberta esticada | Ajeitar o travesseiro na cabeceira"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer uma Ligação (Opção 28)",
-                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
-                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
+                prompt: "Lavar a Louça",
+                options: ["Enxaguar tudo em água corrente", "Colocar a louça no escorredor", "Retirar os restos de comida dos pratos", "Passar a esponja com detergente"],
+                correctAnswer: "Retirar os restos de comida dos pratos | Passar a esponja com detergente | Enxaguar tudo em água corrente | Colocar a louça no escorredor"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Vestir-se pela Manhã (Opção 29)",
-                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
-                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
+                prompt: "Fazer Suco de Laranja",
+                options: ["Coar e servir o suco no copo", "Lavar as laranjas", "Cortar as laranjas ao meio", "Espremer as laranjas no espremedor"],
+                correctAnswer: "Lavar as laranjas | Cortar as laranjas ao meio | Espremer as laranjas no espremedor | Coar e servir o suco no copo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Sair de Casa (Opção 30)",
-                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
-                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
+                prompt: "Guardar as Compras",
+                options: ["Separar os alimentos gelados", "Guardar os gelados na geladeira", "Guardar o restante no armário", "Trazer as sacolas para a cozinha"],
+                correctAnswer: "Trazer as sacolas para a cozinha | Separar os alimentos gelados | Guardar os gelados na geladeira | Guardar o restante no armário"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer uma Salada (Opção 31)",
-                options: ["Adicionar sal, azeite e limão", "Misturar tudo em uma tigela", "Lavar bem as verduras em água corrente", "Cortar o tomate e o pepino em fatias"],
-                correctAnswer: "Lavar bem as verduras em água corrente | Cortar o tomate e o pepino em fatias | Adicionar sal, azeite e limão | Misturar tudo em uma tigela"
+                prompt: "Escrever um Bilhete",
+                options: ["Assinar o nome no final", "Deixar o bilhete em um lugar visível", "Pegar papel e caneta", "Escrever a mensagem com letra legível"],
+                correctAnswer: "Pegar papel e caneta | Escrever a mensagem com letra legível | Assinar o nome no final | Deixar o bilhete em um lugar visível"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Limpar a Mesa (Opção 32)",
-                options: ["Secar a mesa com um pano limpo", "Guardar os alimentos na geladeira", "Levar a louça suja para a pia", "Passar um pano úmido na mesa"],
-                correctAnswer: "Guardar os alimentos na geladeira | Levar a louça suja para a pia | Passar um pano úmido na mesa | Secar a mesa com um pano limpo"
+                prompt: "Cuidar de um Corte Pequeno",
+                options: ["Cobrir com um curativo", "Lavar o ferimento com água e sabão", "Secar a área com cuidado", "Passar um antisséptico"],
+                correctAnswer: "Lavar o ferimento com água e sabão | Secar a área com cuidado | Passar um antisséptico | Cobrir com um curativo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Plantar uma Flor (Opção 33)",
-                options: ["Cavar um pequeno buraco na terra", "Colocar a muda de flor no buraco", "Preencher o espaço com terra adubada", "Regar a flor recém-plantada"],
-                correctAnswer: "Cavar um pequeno buraco na terra | Colocar a muda de flor no buraco | Preencher o espaço com terra adubada | Regar a flor recém-plantada"
+                prompt: "Varrer a Cozinha",
+                options: ["Varrer a sujeira em direção a um canto", "Recolher a sujeira com a pá", "Jogar a sujeira no lixo", "Pegar a vassoura e a pá"],
+                correctAnswer: "Pegar a vassoura e a pá | Varrer a sujeira em direção a um canto | Recolher a sujeira com a pá | Jogar a sujeira no lixo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Preparar Ovos Mexidos (Opção 34)",
-                options: ["Quebrar os ovos diretamente na frigideira", "Adicionar uma pitada de sal", "Mexer os ovos até cozinhar", "Aquecer a frigideira com um pouco de manteiga"],
-                correctAnswer: "Aquecer a frigideira com um pouco de manteiga | Quebrar os ovos diretamente na frigideira | Adicionar uma pitada de sal | Mexer os ovos até cozinhar"
+                prompt: "Assar um Bolo Simples",
+                options: ["Despejar a massa na forma", "Assar no forno até dourar", "Misturar os ingredientes na tigela", "Untar a forma com manteiga"],
+                correctAnswer: "Misturar os ingredientes na tigela | Untar a forma com manteiga | Despejar a massa na forma | Assar no forno até dourar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavar Roupa (Opção 35)",
-                options: ["Adicionar o sabão em pó no compartimento", "Selecionar o ciclo e ligar a máquina", "Separar as roupas por cores", "Colocar as roupas na máquina de lavar"],
-                correctAnswer: "Separar as roupas por cores | Colocar as roupas na máquina de lavar | Adicionar o sabão em pó no compartimento | Selecionar o ciclo e ligar a máquina"
+                prompt: "Trocar o Saco de Lixo",
+                options: ["Colocar um saco novo na lixeira", "Amarrar o saco de lixo cheio", "Retirar o saco da lixeira", "Levar o saco para a coleta"],
+                correctAnswer: "Amarrar o saco de lixo cheio | Retirar o saco da lixeira | Levar o saco para a coleta | Colocar um saco novo na lixeira"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Limpar os Sapatos (Opção 36)",
-                options: ["Deixar secar na sombra", "Remover a poeira seca do sapato com pano", "Aplicar a graxa de sapato uniformemente", "Lustrar com a escova apropriada"],
-                correctAnswer: "Remover a poeira seca do sapato com pano | Aplicar a graxa de sapato uniformemente | Lustrar com a escova apropriada | Deixar secar na sombra"
+                prompt: "Escolher Roupa para Sair",
+                options: ["Abrir o guarda-roupa", "Escolher uma roupa adequada ao clima", "Vestir a roupa escolhida", "Verificar a previsão do tempo"],
+                correctAnswer: "Verificar a previsão do tempo | Abrir o guarda-roupa | Escolher uma roupa adequada ao clima | Vestir a roupa escolhida"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Ligar o Computador (Opção 37)",
-                options: ["Pressionar o botão de ligar na CPU", "Aguardar o sistema operacional carregar", "Digitar a senha de usuário", "Abrir o navegador de internet"],
-                correctAnswer: "Pressionar o botão de ligar na CPU | Aguardar o sistema operacional carregar | Digitar a senha de usuário | Abrir o navegador de internet"
+                prompt: "Esquentar Comida no Micro-ondas",
+                options: ["Programar o tempo de aquecimento", "Retirar com cuidado e mexer a comida", "Colocar a comida em um prato próprio", "Cobrir o prato e colocar no micro-ondas"],
+                correctAnswer: "Colocar a comida em um prato próprio | Cobrir o prato e colocar no micro-ondas | Programar o tempo de aquecimento | Retirar com cuidado e mexer a comida"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer Compras (Opção 38)",
-                options: ["Ir até o supermercado local", "Colocar os itens selecionados no carrinho", "Pagar os produtos no caixa", "Escrever a lista de itens necessários"],
-                correctAnswer: "Escrever a lista de itens necessários | Ir até o supermercado local | Colocar os itens selecionados no carrinho | Pagar os produtos no caixa"
+                prompt: "Ir ao Médico",
+                options: ["Apresentar-se na recepção", "Marcar a consulta por telefone", "Separar os documentos e exames", "Chegar à clínica no horário"],
+                correctAnswer: "Marcar a consulta por telefone | Separar os documentos e exames | Chegar à clínica no horário | Apresentar-se na recepção"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Cortar Melancia (Opção 39)",
-                options: ["Cortar ao meio com uma faca grande", "Fatiar em pedaços menores", "Lavar a melancia em água corrente", "Colocar a fruta sobre a tábua de corte"],
-                correctAnswer: "Lavar a melancia em água corrente | Colocar a fruta sobre a tábua de corte | Cortar ao meio com uma faca grande | Fatiar em pedaços menores"
+                prompt: "Alimentar o Cachorro",
+                options: ["Colocar a quantidade certa no comedouro", "Trocar a água do bebedouro", "Chamar o cachorro para comer", "Pegar o pote de ração"],
+                correctAnswer: "Pegar o pote de ração | Colocar a quantidade certa no comedouro | Trocar a água do bebedouro | Chamar o cachorro para comer"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Acender uma Vela (Opção 40)",
-                options: ["Apagar o fósforo com um sopro leve", "Colocar a vela em um castiçal firme", "Pegar a caixa de fósforos ou isqueiro", "Acender o pavio da vela com cuidado"],
-                correctAnswer: "Colocar a vela em um castiçal firme | Pegar a caixa de fósforos ou isqueiro | Acender o pavio da vela com cuidado | Apagar o fósforo com um sopro leve"
+                prompt: "Fazer a Barba",
+                options: ["Passar o barbeador com cuidado", "Enxaguar o rosto e secar", "Molhar o rosto com água morna", "Aplicar a espuma de barbear"],
+                correctAnswer: "Molhar o rosto com água morna | Aplicar a espuma de barbear | Passar o barbeador com cuidado | Enxaguar o rosto e secar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Preparar um Chá (Opção 41)",
-                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
-                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
+                prompt: "Pentear o Cabelo",
+                options: ["Guardar a escova no lugar", "Pegar a escova ou o pente", "Desembaraçar as pontas primeiro", "Pentear da raiz às pontas"],
+                correctAnswer: "Pegar a escova ou o pente | Desembaraçar as pontas primeiro | Pentear da raiz às pontas | Guardar a escova no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavar as Mãos (Opção 42)",
-                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
-                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
+                prompt: "Usar o Elevador",
+                options: ["Esperar a porta abrir e entrar", "Apertar o botão do andar desejado", "Sair quando chegar ao andar", "Apertar o botão para chamar o elevador"],
+                correctAnswer: "Apertar o botão para chamar o elevador | Esperar a porta abrir e entrar | Apertar o botão do andar desejado | Sair quando chegar ao andar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Enviar uma Carta (Opção 43)",
-                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
-                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
+                prompt: "Fazer um Lanche Rápido",
+                options: ["Montar o lanche no prato", "Comer e limpar a bancada", "Lavar as mãos antes de começar", "Pegar os ingredientes na geladeira"],
+                correctAnswer: "Lavar as mãos antes de começar | Pegar os ingredientes na geladeira | Montar o lanche no prato | Comer e limpar a bancada"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Escovar os Dentes (Opção 44)",
-                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
-                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
+                prompt: "Estender a Roupa no Varal",
+                options: ["Prender as peças com prendedores", "Tirar as roupas da máquina", "Levar o cesto até o varal", "Sacudir e pendurar cada peça"],
+                correctAnswer: "Tirar as roupas da máquina | Levar o cesto até o varal | Sacudir e pendurar cada peça | Prender as peças com prendedores"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer um Sanduíche (Opção 45)",
-                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
-                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
+                prompt: "Passar uma Camisa",
+                options: ["Estender a camisa na tábua", "Passar o ferro sem deixar parado", "Pendurar a camisa no cabide", "Ligar o ferro e esperar aquecer"],
+                correctAnswer: "Ligar o ferro e esperar aquecer | Estender a camisa na tábua | Passar o ferro sem deixar parado | Pendurar a camisa no cabide"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Passar Café (Opção 46)",
-                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
-                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
+                prompt: "Cortar as Unhas",
+                options: ["Cortar as unhas com cuidado", "Lixar as pontas para não ficarem ásperas", "Pegar o cortador de unhas", "Lavar e secar as mãos"],
+                correctAnswer: "Pegar o cortador de unhas | Lavar e secar as mãos | Cortar as unhas com cuidado | Lixar as pontas para não ficarem ásperas"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Regar as Plantas (Opção 47)",
-                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
-                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
+                prompt: "Assistir a um Filme em Casa",
+                options: ["Sentar-se confortavelmente para assistir", "Ligar a televisão", "Escolher o filme desejado", "Ajustar o volume"],
+                correctAnswer: "Ligar a televisão | Escolher o filme desejado | Ajustar o volume | Sentar-se confortavelmente para assistir"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer uma Ligação (Opção 48)",
-                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
-                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
+                prompt: "Consultar o Extrato no Caixa Eletrônico",
+                options: ["Digitar a senha com atenção", "Selecionar a opção de extrato", "Retirar o comprovante e o cartão", "Inserir o cartão no caixa eletrônico"],
+                correctAnswer: "Inserir o cartão no caixa eletrônico | Digitar a senha com atenção | Selecionar a opção de extrato | Retirar o comprovante e o cartão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Vestir-se pela Manhã (Opção 49)",
-                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
-                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
+                prompt: "Organizar os Remédios da Semana",
+                options: ["Separar as doses na caixinha organizadora", "Guardar as caixas no armário", "Reunir todas as caixas de remédio", "Conferir a receita médica"],
+                correctAnswer: "Reunir todas as caixas de remédio | Conferir a receita médica | Separar as doses na caixinha organizadora | Guardar as caixas no armário"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Sair de Casa (Opção 50)",
-                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
-                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
+                prompt: "Receber uma Visita",
+                options: ["Convidar a pessoa para entrar", "Ouvir a campainha tocar", "Verificar quem é antes de abrir", "Abrir a porta e cumprimentar"],
+                correctAnswer: "Ouvir a campainha tocar | Verificar quem é antes de abrir | Abrir a porta e cumprimentar | Convidar a pessoa para entrar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer uma Salada (Opção 51)",
-                options: ["Adicionar sal, azeite e limão", "Misturar tudo em uma tigela", "Lavar bem as verduras em água corrente", "Cortar o tomate e o pepino em fatias"],
-                correctAnswer: "Lavar bem as verduras em água corrente | Cortar o tomate e o pepino em fatias | Adicionar sal, azeite e limão | Misturar tudo em uma tigela"
+                prompt: "Fazer uma Vitamina de Banana",
+                options: ["Colocar a banana e o leite no liquidificador", "Bater até ficar homogêneo", "Servir a vitamina no copo", "Descascar a banana"],
+                correctAnswer: "Descascar a banana | Colocar a banana e o leite no liquidificador | Bater até ficar homogêneo | Servir a vitamina no copo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Limpar a Mesa (Opção 52)",
-                options: ["Secar a mesa com um pano limpo", "Guardar os alimentos na geladeira", "Levar a louça suja para a pia", "Passar um pano úmido na mesa"],
-                correctAnswer: "Guardar os alimentos na geladeira | Levar a louça suja para a pia | Passar um pano úmido na mesa | Secar a mesa com um pano limpo"
+                prompt: "Limpar o Banheiro",
+                options: ["Esfregar o vaso e a pia", "Enxaguar e secar tudo", "Colocar as luvas de limpeza", "Aplicar o produto nas superfícies"],
+                correctAnswer: "Colocar as luvas de limpeza | Aplicar o produto nas superfícies | Esfregar o vaso e a pia | Enxaguar e secar tudo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Plantar uma Flor (Opção 53)",
-                options: ["Cavar um pequeno buraco na terra", "Colocar a muda de flor no buraco", "Preencher o espaço com terra adubada", "Regar a flor recém-plantada"],
-                correctAnswer: "Cavar um pequeno buraco na terra | Colocar a muda de flor no buraco | Preencher o espaço com terra adubada | Regar a flor recém-plantada"
+                prompt: "Trocar as Pilhas do Controle",
+                options: ["Fechar a tampa e testar o controle", "Abrir a tampa do controle remoto", "Retirar as pilhas velhas", "Colocar as pilhas novas na posição certa"],
+                correctAnswer: "Abrir a tampa do controle remoto | Retirar as pilhas velhas | Colocar as pilhas novas na posição certa | Fechar a tampa e testar o controle"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Preparar Ovos Mexidos (Opção 54)",
-                options: ["Quebrar os ovos diretamente na frigideira", "Adicionar uma pitada de sal", "Mexer os ovos até cozinhar", "Aquecer a frigideira com um pouco de manteiga"],
-                correctAnswer: "Aquecer a frigideira com um pouco de manteiga | Quebrar os ovos diretamente na frigideira | Adicionar uma pitada de sal | Mexer os ovos até cozinhar"
+                prompt: "Agendar um Corte de Cabelo",
+                options: ["Ligar para o salão", "Escolher o dia e o horário", "Anotar o compromisso na agenda", "Procurar o telefone do salão"],
+                correctAnswer: "Procurar o telefone do salão | Ligar para o salão | Escolher o dia e o horário | Anotar o compromisso na agenda"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavar Roupa (Opção 55)",
-                options: ["Adicionar o sabão em pó no compartimento", "Selecionar o ciclo e ligar a máquina", "Separar as roupas por cores", "Colocar as roupas na máquina de lavar"],
-                correctAnswer: "Separar as roupas por cores | Colocar as roupas na máquina de lavar | Adicionar o sabão em pó no compartimento | Selecionar o ciclo e ligar a máquina"
+                prompt: "Preparar uma Sopa",
+                options: ["Cozinhar até os legumes amolecerem", "Temperar e servir quente", "Lavar e cortar os legumes", "Colocar os legumes na panela com água"],
+                correctAnswer: "Lavar e cortar os legumes | Colocar os legumes na panela com água | Cozinhar até os legumes amolecerem | Temperar e servir quente"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Limpar os Sapatos (Opção 56)",
-                options: ["Deixar secar na sombra", "Remover a poeira seca do sapato com pano", "Aplicar a graxa de sapato uniformemente", "Lustrar com a escova apropriada"],
-                correctAnswer: "Remover a poeira seca do sapato com pano | Aplicar a graxa de sapato uniformemente | Lustrar com a escova apropriada | Deixar secar na sombra"
+                prompt: "Encher uma Garrafa de Água",
+                options: ["Fechar bem a tampa", "Pegar a garrafa vazia", "Abrir a tampa da garrafa", "Encher com água filtrada"],
+                correctAnswer: "Pegar a garrafa vazia | Abrir a tampa da garrafa | Encher com água filtrada | Fechar bem a tampa"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Ligar o Computador (Opção 57)",
-                options: ["Pressionar o botão de ligar na CPU", "Aguardar o sistema operacional carregar", "Digitar a senha de usuário", "Abrir o navegador de internet"],
-                correctAnswer: "Pressionar o botão de ligar na CPU | Aguardar o sistema operacional carregar | Digitar a senha de usuário | Abrir o navegador de internet"
+                prompt: "Colocar o Lixo para Coleta",
+                options: ["Amarrar bem os sacos de lixo", "Levar os sacos até a calçada", "Voltar e lavar as mãos", "Verificar o dia da coleta"],
+                correctAnswer: "Verificar o dia da coleta | Amarrar bem os sacos de lixo | Levar os sacos até a calçada | Voltar e lavar as mãos"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer Compras (Opção 58)",
-                options: ["Ir até o supermercado local", "Colocar os itens selecionados no carrinho", "Pagar os produtos no caixa", "Escrever a lista de itens necessários"],
-                correctAnswer: "Escrever a lista de itens necessários | Ir até o supermercado local | Colocar os itens selecionados no carrinho | Pagar os produtos no caixa"
+                prompt: "Cuidar das Plantas de Casa",
+                options: ["Retirar as folhas secas", "Colocar os vasos perto da luz", "Verificar se a terra está seca", "Regar as plantas que precisam"],
+                correctAnswer: "Verificar se a terra está seca | Regar as plantas que precisam | Retirar as folhas secas | Colocar os vasos perto da luz"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Cortar Melancia (Opção 59)",
-                options: ["Cortar ao meio com uma faca grande", "Fatiar em pedaços menores", "Lavar a melancia em água corrente", "Colocar a fruta sobre a tábua de corte"],
-                correctAnswer: "Lavar a melancia em água corrente | Colocar a fruta sobre a tábua de corte | Cortar ao meio com uma faca grande | Fatiar em pedaços menores"
+                prompt: "Descongelar Carne para o Jantar",
+                options: ["Temperar a carne antes de cozinhar", "Tirar a carne do congelador pela manhã", "Colocar a carne em um recipiente", "Deixar descongelar na geladeira"],
+                correctAnswer: "Tirar a carne do congelador pela manhã | Colocar a carne em um recipiente | Deixar descongelar na geladeira | Temperar a carne antes de cozinhar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Acender uma Vela (Opção 60)",
-                options: ["Apagar o fósforo com um sopro leve", "Colocar a vela em um castiçal firme", "Pegar a caixa de fósforos ou isqueiro", "Acender o pavio da vela com cuidado"],
-                correctAnswer: "Colocar a vela em um castiçal firme | Pegar a caixa de fósforos ou isqueiro | Acender o pavio da vela com cuidado | Apagar o fósforo com um sopro leve"
+                prompt: "Usar um Guarda-chuva",
+                options: ["Pegar o guarda-chuva perto da porta", "Abrir o guarda-chuva ao sair", "Fechar e deixar secar ao voltar", "Verificar se está chovendo"],
+                correctAnswer: "Verificar se está chovendo | Pegar o guarda-chuva perto da porta | Abrir o guarda-chuva ao sair | Fechar e deixar secar ao voltar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Preparar um Chá (Opção 61)",
-                options: ["Ferver a água na chaleira", "Colocar o saquinho de chá na xícara", "Despejar a água quente na xícara", "Esperar 3 minutos e beber"],
-                correctAnswer: "Ferver a água na chaleira | Colocar o saquinho de chá na xícara | Despejar a água quente na xícara | Esperar 3 minutos e beber"
+                prompt: "Fazer Pipoca",
+                options: ["Tampar a panela e esperar estourar", "Colocar a pipoca na tigela e salgar", "Colocar óleo na panela", "Adicionar os grãos de milho"],
+                correctAnswer: "Colocar óleo na panela | Adicionar os grãos de milho | Tampar a panela e esperar estourar | Colocar a pipoca na tigela e salgar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Lavar as Mãos (Opção 62)",
-                options: ["Aplicar o sabonete nas mãos", "Esfregar as mãos por 20 segundos", "Enxaguar o sabonete e secar com a toalha", "Abrir a torneira e molhar as mãos"],
-                correctAnswer: "Abrir a torneira e molhar as mãos | Aplicar o sabonete nas mãos | Esfregar as mãos por 20 segundos | Enxaguar o sabonete e secar com a toalha"
+                prompt: "Enviar uma Mensagem no Celular",
+                options: ["Tocar no botão de enviar", "Desbloquear o celular", "Abrir o aplicativo de mensagens", "Escrever a mensagem para o contato"],
+                correctAnswer: "Desbloquear o celular | Abrir o aplicativo de mensagens | Escrever a mensagem para o contato | Tocar no botão de enviar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Enviar uma Carta (Opção 63)",
-                options: ["Escrever o endereço e colar o selo", "Depositar o envelope na caixa de correio", "Escrever a mensagem no papel", "Colocar a carta dentro do envelope"],
-                correctAnswer: "Escrever a mensagem no papel | Colocar a carta dentro do envelope | Escrever o endereço e colar o selo | Depositar o envelope na caixa de correio"
+                prompt: "Tirar o Pó dos Móveis",
+                options: ["Retirar os objetos de cima do móvel", "Passar o pano em toda a superfície", "Recolocar os objetos no lugar", "Pegar um pano limpo e seco"],
+                correctAnswer: "Pegar um pano limpo e seco | Retirar os objetos de cima do móvel | Passar o pano em toda a superfície | Recolocar os objetos no lugar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Escovar os Dentes (Opção 64)",
-                options: ["Lavar a escova de dente", "Colocar pasta de dente na escova", "Escovar os dentes com movimentos circulares", "Enxaguar a boca com água"],
-                correctAnswer: "Colocar pasta de dente na escova | Escovar os dentes com movimentos circulares | Enxaguar a boca com água | Lavar a escova de dente"
+                prompt: "Preparar a Mesa para o Almoço",
+                options: ["Distribuir os talheres e guardanapos", "Chamar todos para almoçar", "Limpar a mesa antes de começar", "Colocar os pratos e os copos"],
+                correctAnswer: "Limpar a mesa antes de começar | Colocar os pratos e os copos | Distribuir os talheres e guardanapos | Chamar todos para almoçar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer um Sanduíche (Opção 65)",
-                options: ["Pegar duas fatias de pão", "Passar manteiga ou maionese no pão", "Colocar o queijo e o presunto", "Juntar as fatias de pão"],
-                correctAnswer: "Pegar duas fatias de pão | Passar manteiga ou maionese no pão | Colocar o queijo e o presunto | Juntar as fatias de pão"
+                prompt: "Comprar Pão na Padaria",
+                options: ["Voltar para casa com o pão", "Caminhar até a padaria", "Pedir a quantidade de pães desejada", "Pagar no caixa"],
+                correctAnswer: "Caminhar até a padaria | Pedir a quantidade de pães desejada | Pagar no caixa | Voltar para casa com o pão"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Passar Café (Opção 66)",
-                options: ["Colocar o pó de café no filtro", "Ligar a cafeteira para passar o café", "Servir o café quente na xícara", "Colocar água na cafeteira"],
-                correctAnswer: "Colocar água na cafeteira | Colocar o pó de café no filtro | Ligar a cafeteira para passar o café | Servir o café quente na xícara"
+                prompt: "Consultar a Previsão do Tempo",
+                options: ["Procurar a previsão para a cidade", "Verificar se vai chover", "Planejar o dia de acordo", "Pegar o celular ou ligar a TV"],
+                correctAnswer: "Pegar o celular ou ligar a TV | Procurar a previsão para a cidade | Verificar se vai chover | Planejar o dia de acordo"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Regar as Plantas (Opção 67)",
-                options: ["Despejar a água na terra com cuidado", "Guardar o regador no lugar", "Encher o regador com água", "Caminhar até os vasos de plantas"],
-                correctAnswer: "Encher o regador com água | Caminhar até os vasos de plantas | Despejar a água na terra com cuidado | Guardar o regador no lugar"
+                prompt: "Guardar Roupas Limpas",
+                options: ["Separar as roupas por tipo", "Guardar nas gavetas e no armário", "Retirar as roupas secas do varal", "Dobrar cada peça com cuidado"],
+                correctAnswer: "Retirar as roupas secas do varal | Dobrar cada peça com cuidado | Separar as roupas por tipo | Guardar nas gavetas e no armário"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Fazer uma Ligação (Opção 68)",
-                options: ["Conversar e desligar a ligação", "Pegar o celular na mão", "Digitar o número de telefone", "Esperar chamar e saudar a pessoa"],
-                correctAnswer: "Pegar o celular na mão | Digitar o número de telefone | Esperar chamar e saudar a pessoa | Conversar e desligar a ligação"
+                prompt: "Fazer Gelo",
+                options: ["Esperar algumas horas até congelar", "Pegar a forma de gelo", "Encher a forma com água filtrada", "Levar a forma ao congelador com cuidado"],
+                correctAnswer: "Pegar a forma de gelo | Encher a forma com água filtrada | Levar a forma ao congelador com cuidado | Esperar algumas horas até congelar"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Vestir-se pela Manhã (Opção 69)",
-                options: ["Colocar as roupas íntimas", "Vestir a camiseta e a calça", "Calçar as meias nos pés", "Calçar os sapatos e amarrar"],
-                correctAnswer: "Colocar as roupas íntimas | Vestir a camiseta e a calça | Calçar as meias nos pés | Calçar os sapatos e amarrar"
+                prompt: "Ler o Jornal",
+                options: ["Sentar-se em um lugar confortável", "Ler as manchetes principais", "Guardar o jornal depois de ler", "Pegar o jornal do dia"],
+                correctAnswer: "Pegar o jornal do dia | Sentar-se em um lugar confortável | Ler as manchetes principais | Guardar o jornal depois de ler"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Sair de Casa (Opção 70)",
-                options: ["Apagar todas as luzes da casa", "Sair e fechar a porta principal", "Trancar a porta com a chave", "Pegar as chaves e o celular"],
-                correctAnswer: "Pegar as chaves e o celular | Apagar todas as luzes da casa | Sair e fechar a porta principal | Trancar a porta com a chave"
+                prompt: "Preparar-se para Dormir",
+                options: ["Apagar as luzes do quarto", "Deitar-se e cobrir-se", "Vestir o pijama", "Escovar os dentes"],
+                correctAnswer: "Vestir o pijama | Escovar os dentes | Apagar as luzes do quarto | Deitar-se e cobrir-se"
             )
         ]
     )
