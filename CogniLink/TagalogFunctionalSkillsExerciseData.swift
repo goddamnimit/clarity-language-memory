@@ -186,7 +186,7 @@ struct TagalogFunctionalSkillsExerciseData {
                 prompt: "Menu: Chocolate Ice Cream $4.00, Apple Pie $5.00, Magdagdag ng Vanilla Ice Cream sa Pie $1.50. Magkano ang Apple Pie na may Vanilla Ice Cream?",
                 options: ["$5.00", "$6.50", "$9.00", "$4.00"],
                 correctAnswer: "$6.50",
-                explanation: ""
+                explanation: "Ang Apple Pie ay nagkakahalaga ng $5.00, at ang pagdaragdag ng Vanilla Ice Cream ay may dagdag na $1.50, kaya ang $5.00 kasama ang $1.50 ay katumbas ng $6.50."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -297,7 +297,7 @@ struct TagalogFunctionalSkillsExerciseData {
                 prompt: "Membership sa Gym: Taunang Bayad: $120.00. Buwanang Bayad: $10.00. Magkano ang taunang bayad?",
                 options: ["$10.00", "$120.00", "$130.00", "$12.00"],
                 correctAnswer: "$120.00",
-                explanation: ""
+                explanation: "Direktang nakasaad ang taunang bayad bilang $120.00; ang buwanang bayad na $10.00 ay tumutukoy sa ibang paraan ng pagbabayad at hindi bahagi ng pagkalkula para sa tanong na ito."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -495,493 +495,493 @@ struct TagalogFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 1):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng kanin",
+                options: ["Sukatin ang tubig", "Isalang sa kalan", "Hintaying maluto", "Hugasan ang bigas"],
+                correctAnswer: "Hugasan ang bigas | Sukatin ang tubig | Isalang sa kalan | Hintaying maluto",
+                explanation: "Ang tamang pagkakasunod-sunod: hugasan ang bigas, sukatin ang tubig, isalang sa kalan, hintaying maluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 2):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng adobong manok",
+                options: ["Ilagay ang toyo at suka", "Pakuluan hanggang lumambot", "Hiwain ang manok", "Igisa ang bawang"],
+                correctAnswer: "Hiwain ang manok | Igisa ang bawang | Ilagay ang toyo at suka | Pakuluan hanggang lumambot",
+                explanation: "Ang tamang pagkakasunod-sunod: hiwain ang manok, igisa ang bawang, ilagay ang toyo at suka, pakuluan hanggang lumambot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 3):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng sinigang na baboy",
+                options: ["Timplahan bago ihain", "Pakuluan ang baboy", "Ilagay ang sampalok", "Idagdag ang mga gulay"],
+                correctAnswer: "Pakuluan ang baboy | Ilagay ang sampalok | Idagdag ang mga gulay | Timplahan bago ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang baboy, ilagay ang sampalok, idagdag ang mga gulay, timplahan bago ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 4):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagprito ng itlog",
+                options: ["Basagin ang itlog sa kawali", "Budburan ng asin", "Ilipat sa plato", "Magpainit ng mantika"],
+                correctAnswer: "Magpainit ng mantika | Basagin ang itlog sa kawali | Budburan ng asin | Ilipat sa plato",
+                explanation: "Ang tamang pagkakasunod-sunod: magpainit ng mantika, basagin ang itlog sa kawali, budburan ng asin, ilipat sa plato."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 5):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtimpla ng kape",
+                options: ["Ibuhos ang mainit na tubig", "Haluin nang mabuti", "Magpakulo ng tubig", "Ilagay ang kape sa tasa"],
+                correctAnswer: "Magpakulo ng tubig | Ilagay ang kape sa tasa | Ibuhos ang mainit na tubig | Haluin nang mabuti",
+                explanation: "Ang tamang pagkakasunod-sunod: magpakulo ng tubig, ilagay ang kape sa tasa, ibuhos ang mainit na tubig, haluin nang mabuti."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 6):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng sandwich",
+                options: ["Hatiin sa dalawa", "Kumuha ng dalawang hiwa ng tinapay", "Ilagay ang palaman", "Pagpatungin ang tinapay"],
+                correctAnswer: "Kumuha ng dalawang hiwa ng tinapay | Ilagay ang palaman | Pagpatungin ang tinapay | Hatiin sa dalawa",
+                explanation: "Ang tamang pagkakasunod-sunod: kumuha ng dalawang hiwa ng tinapay, ilagay ang palaman, pagpatungin ang tinapay, hatiin sa dalawa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 7):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghuhugas ng pinggan",
+                options: ["Sabunin ang mga pinggan", "Banlawan ng malinis na tubig", "Patuyuin sa lalagyan", "Alisin ang tirang pagkain"],
+                correctAnswer: "Alisin ang tirang pagkain | Sabunin ang mga pinggan | Banlawan ng malinis na tubig | Patuyuin sa lalagyan",
+                explanation: "Ang tamang pagkakasunod-sunod: alisin ang tirang pagkain, sabunin ang mga pinggan, banlawan ng malinis na tubig, patuyuin sa lalagyan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 8):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng pansit bihon",
+                options: ["Ihalo ang bihon", "Timplahan ng toyo", "Ibabad ang bihon sa tubig", "Igisa ang gulay at karne"],
+                correctAnswer: "Ibabad ang bihon sa tubig | Igisa ang gulay at karne | Ihalo ang bihon | Timplahan ng toyo",
+                explanation: "Ang tamang pagkakasunod-sunod: ibabad ang bihon sa tubig, igisa ang gulay at karne, ihalo ang bihon, timplahan ng toyo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 9):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagpiprito ng lumpia",
+                options: ["Patuluin ang mantika", "Magpainit ng mantika sa kawali", "Ilagay ang lumpia", "Baliktarin kapag ginintuan na"],
+                correctAnswer: "Magpainit ng mantika sa kawali | Ilagay ang lumpia | Baliktarin kapag ginintuan na | Patuluin ang mantika",
+                explanation: "Ang tamang pagkakasunod-sunod: magpainit ng mantika sa kawali, ilagay ang lumpia, baliktarin kapag ginintuan na, patuluin ang mantika."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 10):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng lumpia",
+                options: ["Ilagay ang palaman sa balat", "Irolyo nang mahigpit", "Idikit ang dulo ng balat", "Ihanda ang palaman"],
+                correctAnswer: "Ihanda ang palaman | Ilagay ang palaman sa balat | Irolyo nang mahigpit | Idikit ang dulo ng balat",
+                explanation: "Ang tamang pagkakasunod-sunod: ihanda ang palaman, ilagay ang palaman sa balat, irolyo nang mahigpit, idikit ang dulo ng balat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 11):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng tinolang manok",
+                options: ["Ibuhos ang tubig at pakuluan", "Idagdag ang papaya at dahon ng sili", "Igisa ang luya at sibuyas", "Ilagay ang manok"],
+                correctAnswer: "Igisa ang luya at sibuyas | Ilagay ang manok | Ibuhos ang tubig at pakuluan | Idagdag ang papaya at dahon ng sili",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang luya at sibuyas, ilagay ang manok, ibuhos ang tubig at pakuluan, idagdag ang papaya at dahon ng sili."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 12):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng nilagang baka",
+                options: ["Timplahan ng asin at paminta", "Pakuluan ang baka hanggang lumambot", "Ilagay ang patatas", "Idagdag ang repolyo"],
+                correctAnswer: "Pakuluan ang baka hanggang lumambot | Ilagay ang patatas | Idagdag ang repolyo | Timplahan ng asin at paminta",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang baka hanggang lumambot, ilagay ang patatas, idagdag ang repolyo, timplahan ng asin at paminta."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 13):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng arroz caldo",
+                options: ["Ilagay ang bigas at manok", "Ibuhos ang tubig at haluin", "Lutuin hanggang lumapot", "Igisa ang luya at bawang"],
+                correctAnswer: "Igisa ang luya at bawang | Ilagay ang bigas at manok | Ibuhos ang tubig at haluin | Lutuin hanggang lumapot",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang luya at bawang, ilagay ang bigas at manok, ibuhos ang tubig at haluin, lutuin hanggang lumapot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 14):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng champorado",
+                options: ["Ihalo ang tsokolate", "Dagdagan ng asukal at gatas", "Magpakulo ng tubig", "Ilagay ang malagkit na bigas"],
+                correctAnswer: "Magpakulo ng tubig | Ilagay ang malagkit na bigas | Ihalo ang tsokolate | Dagdagan ng asukal at gatas",
+                explanation: "Ang tamang pagkakasunod-sunod: magpakulo ng tubig, ilagay ang malagkit na bigas, ihalo ang tsokolate, dagdagan ng asukal at gatas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 15):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng tortang talong",
+                options: ["Iprito hanggang maluto", "Ihawin ang talong", "Balatan ang talong", "Isawsaw sa binating itlog"],
+                correctAnswer: "Ihawin ang talong | Balatan ang talong | Isawsaw sa binating itlog | Iprito hanggang maluto",
+                explanation: "Ang tamang pagkakasunod-sunod: ihawin ang talong, balatan ang talong, isawsaw sa binating itlog, iprito hanggang maluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 16):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng ginisang monggo",
+                options: ["Igisa ang bawang at sibuyas", "Ihalo ang monggo sa gisa", "Idagdag ang dahon ng ampalaya", "Pakuluan ang monggo hanggang lumambot"],
+                correctAnswer: "Pakuluan ang monggo hanggang lumambot | Igisa ang bawang at sibuyas | Ihalo ang monggo sa gisa | Idagdag ang dahon ng ampalaya",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang monggo hanggang lumambot, igisa ang bawang at sibuyas, ihalo ang monggo sa gisa, idagdag ang dahon ng ampalaya."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 17):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng sinangag",
+                options: ["Ilagay ang lamig na kanin", "Timplahan ng asin at haluin", "Magpainit ng mantika", "Igisa ang bawang"],
+                correctAnswer: "Magpainit ng mantika | Igisa ang bawang | Ilagay ang lamig na kanin | Timplahan ng asin at haluin",
+                explanation: "Ang tamang pagkakasunod-sunod: magpainit ng mantika, igisa ang bawang, ilagay ang lamig na kanin, timplahan ng asin at haluin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 18):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng mango shake",
+                options: ["I-blend hanggang kuminis", "Balatan at hiwain ang mangga", "Ilagay sa blender kasama ang yelo", "Dagdagan ng gatas"],
+                correctAnswer: "Balatan at hiwain ang mangga | Ilagay sa blender kasama ang yelo | Dagdagan ng gatas | I-blend hanggang kuminis",
+                explanation: "Ang tamang pagkakasunod-sunod: balatan at hiwain ang mangga, ilagay sa blender kasama ang yelo, dagdagan ng gatas, i-blend hanggang kuminis."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 19):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtimpla ng calamansi juice",
+                options: ["Salain ang katas", "Dagdagan ng tubig at asukal", "Haluin at lagyan ng yelo", "Pigain ang mga kalamansi"],
+                correctAnswer: "Pigain ang mga kalamansi | Salain ang katas | Dagdagan ng tubig at asukal | Haluin at lagyan ng yelo",
+                explanation: "Ang tamang pagkakasunod-sunod: pigain ang mga kalamansi, salain ang katas, dagdagan ng tubig at asukal, haluin at lagyan ng yelo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 20):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtimpla ng mainit na tsaa",
+                options: ["Ibuhos ang mainit na tubig", "Hayaang lumasa bago inumin", "Magpakulo ng tubig", "Ilagay ang tsaa sa tasa"],
+                correctAnswer: "Magpakulo ng tubig | Ilagay ang tsaa sa tasa | Ibuhos ang mainit na tubig | Hayaang lumasa bago inumin",
+                explanation: "Ang tamang pagkakasunod-sunod: magpakulo ng tubig, ilagay ang tsaa sa tasa, ibuhos ang mainit na tubig, hayaang lumasa bago inumin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 21):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng oatmeal",
+                options: ["Dagdagan ng saging o pulot", "Magpakulo ng tubig o gatas", "Ilagay ang oats", "Haluin hanggang lumapot"],
+                correctAnswer: "Magpakulo ng tubig o gatas | Ilagay ang oats | Haluin hanggang lumapot | Dagdagan ng saging o pulot",
+                explanation: "Ang tamang pagkakasunod-sunod: magpakulo ng tubig o gatas, ilagay ang oats, haluin hanggang lumapot, dagdagan ng saging o pulot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 22):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtusta ng tinapay",
+                options: ["Hintayin itong tumalbog", "Pahiran ng mantikilya", "Ihain habang mainit", "Ilagay ang tinapay sa toaster"],
+                correctAnswer: "Ilagay ang tinapay sa toaster | Hintayin itong tumalbog | Pahiran ng mantikilya | Ihain habang mainit",
+                explanation: "Ang tamang pagkakasunod-sunod: ilagay ang tinapay sa toaster, hintayin itong tumalbog, pahiran ng mantikilya, ihain habang mainit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 23):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng ensalada",
+                options: ["Ilagay sa malaking mangkok", "Lagyan ng dressing at haluin", "Hugasan ang mga gulay", "Hiwain nang maliliit"],
+                correctAnswer: "Hugasan ang mga gulay | Hiwain nang maliliit | Ilagay sa malaking mangkok | Lagyan ng dressing at haluin",
+                explanation: "Ang tamang pagkakasunod-sunod: hugasan ang mga gulay, hiwain nang maliliit, ilagay sa malaking mangkok, lagyan ng dressing at haluin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 24):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng bistek",
+                options: ["Ibuhos ang sarsa at ipatong ang sibuyas", "Ibabad ang karne sa toyo at kalamansi", "Iprito ang sibuyas at itabi", "Iprito ang karne"],
+                correctAnswer: "Ibabad ang karne sa toyo at kalamansi | Iprito ang sibuyas at itabi | Iprito ang karne | Ibuhos ang sarsa at ipatong ang sibuyas",
+                explanation: "Ang tamang pagkakasunod-sunod: ibabad ang karne sa toyo at kalamansi, iprito ang sibuyas at itabi, iprito ang karne, ibuhos ang sarsa at ipatong ang sibuyas."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 25):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng menudo",
+                options: ["Ilagay ang baboy", "Idagdag ang sarsa ng kamatis", "Ilagay ang patatas at karot", "Igisa ang bawang at sibuyas"],
+                correctAnswer: "Igisa ang bawang at sibuyas | Ilagay ang baboy | Idagdag ang sarsa ng kamatis | Ilagay ang patatas at karot",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang bawang at sibuyas, ilagay ang baboy, idagdag ang sarsa ng kamatis, ilagay ang patatas at karot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 26):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng kalderetang kambing",
+                options: ["Ibuhos ang sarsa ng kamatis", "Idagdag ang patatas at paminton", "Ibabad ang karne", "Igisa at ilagay ang karne"],
+                correctAnswer: "Ibabad ang karne | Igisa at ilagay ang karne | Ibuhos ang sarsa ng kamatis | Idagdag ang patatas at paminton",
+                explanation: "Ang tamang pagkakasunod-sunod: ibabad ang karne, igisa at ilagay ang karne, ibuhos ang sarsa ng kamatis, idagdag ang patatas at paminton."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 27):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng halo-halo",
+                options: ["Patungan ng leche flan at ube", "Ilagay ang mga matamis na sangkap sa baso", "Punuin ng kinaskas na yelo", "Buhusan ng gatas"],
+                correctAnswer: "Ilagay ang mga matamis na sangkap sa baso | Punuin ng kinaskas na yelo | Buhusan ng gatas | Patungan ng leche flan at ube",
+                explanation: "Ang tamang pagkakasunod-sunod: ilagay ang mga matamis na sangkap sa baso, punuin ng kinaskas na yelo, buhusan ng gatas, patungan ng leche flan at ube."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 28):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng leche flan",
+                options: ["Batihin ang itlog at gatas", "Ibuhos ang timpla sa hulmahan", "Pasingawan hanggang mamuo", "Tunawin ang asukal sa hulmahan"],
+                correctAnswer: "Tunawin ang asukal sa hulmahan | Batihin ang itlog at gatas | Ibuhos ang timpla sa hulmahan | Pasingawan hanggang mamuo",
+                explanation: "Ang tamang pagkakasunod-sunod: tunawin ang asukal sa hulmahan, batihin ang itlog at gatas, ibuhos ang timpla sa hulmahan, pasingawan hanggang mamuo."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 29):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng turon",
+                options: ["Ibalot sa balat ng lumpia", "Iprito hanggang maging malutong", "Hiwain ang saging", "Igulong sa asukal"],
+                correctAnswer: "Hiwain ang saging | Igulong sa asukal | Ibalot sa balat ng lumpia | Iprito hanggang maging malutong",
+                explanation: "Ang tamang pagkakasunod-sunod: hiwain ang saging, igulong sa asukal, ibalot sa balat ng lumpia, iprito hanggang maging malutong."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 30):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng banana cue",
+                options: ["Tuhugin sa patpat", "Magpainit ng mantika", "Iprito ang saging na saba", "Budburan ng asukal habang nagpiprito"],
+                correctAnswer: "Magpainit ng mantika | Iprito ang saging na saba | Budburan ng asukal habang nagpiprito | Tuhugin sa patpat",
+                explanation: "Ang tamang pagkakasunod-sunod: magpainit ng mantika, iprito ang saging na saba, budburan ng asukal habang nagpiprito, tuhugin sa patpat."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 31):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng hotdog",
+                options: ["Ilagay ang hotdog", "Hintaying maluto", "Patuluin at ihain", "Magpakulo ng tubig sa kawali"],
+                correctAnswer: "Magpakulo ng tubig sa kawali | Ilagay ang hotdog | Hintaying maluto | Patuluin at ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: magpakulo ng tubig sa kawali, ilagay ang hotdog, hintaying maluto, patuluin at ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 32):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng tapa",
+                options: ["Iprito ang tapa", "Ihain kasama ang sinangag at itlog", "Ibabad ang karne magdamag", "Magpainit ng mantika"],
+                correctAnswer: "Ibabad ang karne magdamag | Magpainit ng mantika | Iprito ang tapa | Ihain kasama ang sinangag at itlog",
+                explanation: "Ang tamang pagkakasunod-sunod: ibabad ang karne magdamag, magpainit ng mantika, iprito ang tapa, ihain kasama ang sinangag at itlog."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 33):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng longganisa",
+                options: ["Iprito sa sariling mantika", "Lagyan ng kaunting tubig ang kawali", "Ilagay ang longganisa", "Hintaying matuyo ang tubig"],
+                correctAnswer: "Lagyan ng kaunting tubig ang kawali | Ilagay ang longganisa | Hintaying matuyo ang tubig | Iprito sa sariling mantika",
+                explanation: "Ang tamang pagkakasunod-sunod: lagyan ng kaunting tubig ang kawali, ilagay ang longganisa, hintaying matuyo ang tubig, iprito sa sariling mantika."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 34):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagpiprito ng daing na bangus",
+                options: ["Patuyuin ng tisyu", "Iprito nang nakadapa ang balat", "Baliktarin hanggang maluto", "Banlawan ang daing"],
+                correctAnswer: "Banlawan ang daing | Patuyuin ng tisyu | Iprito nang nakadapa ang balat | Baliktarin hanggang maluto",
+                explanation: "Ang tamang pagkakasunod-sunod: banlawan ang daing, patuyuin ng tisyu, iprito nang nakadapa ang balat, baliktarin hanggang maluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 35):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng nilagang itlog",
+                options: ["Ibabad sa malamig na tubig", "Balatan bago ihain", "Ilagay ang itlog sa kaldero ng tubig", "Pakuluan nang sampung minuto"],
+                correctAnswer: "Ilagay ang itlog sa kaldero ng tubig | Pakuluan nang sampung minuto | Ibabad sa malamig na tubig | Balatan bago ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: ilagay ang itlog sa kaldero ng tubig, pakuluan nang sampung minuto, ibabad sa malamig na tubig, balatan bago ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 36):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng spaghetti",
+                options: ["Ibuhos ang sarsa sa pasta at lagyan ng keso", "Pakuluan ang pasta", "Igisa ang giniling na karne", "Ihalo ang sarsa"],
+                correctAnswer: "Pakuluan ang pasta | Igisa ang giniling na karne | Ihalo ang sarsa | Ibuhos ang sarsa sa pasta at lagyan ng keso",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang pasta, igisa ang giniling na karne, ihalo ang sarsa, ibuhos ang sarsa sa pasta at lagyan ng keso."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 37):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng ginisang corned beef",
+                options: ["Ilagay ang patatas", "Ihalo ang corned beef", "Lutuin hanggang uminit", "Igisa ang bawang at sibuyas"],
+                correctAnswer: "Igisa ang bawang at sibuyas | Ilagay ang patatas | Ihalo ang corned beef | Lutuin hanggang uminit",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang bawang at sibuyas, ilagay ang patatas, ihalo ang corned beef, lutuin hanggang uminit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 38):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng sopas",
+                options: ["Ilagay ang macaroni", "Pakuluan hanggang lumambot", "Igisa ang gulay at manok", "Ibuhos ang tubig at gatas"],
+                correctAnswer: "Igisa ang gulay at manok | Ibuhos ang tubig at gatas | Ilagay ang macaroni | Pakuluan hanggang lumambot",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang gulay at manok, ibuhos ang tubig at gatas, ilagay ang macaroni, pakuluan hanggang lumambot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 39):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng lugaw",
+                options: ["Ihain nang mainit", "Pakuluan ang bigas sa maraming tubig", "Haluin paminsan-minsan", "Timplahan ng asin at luya"],
+                correctAnswer: "Pakuluan ang bigas sa maraming tubig | Haluin paminsan-minsan | Timplahan ng asin at luya | Ihain nang mainit",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang bigas sa maraming tubig, haluin paminsan-minsan, timplahan ng asin at luya, ihain nang mainit."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 40):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagpapasingaw ng puto",
+                options: ["Ibuhos sa mga hulmahan", "Isalang sa pasingawan", "Hintaying mamuo at maluto", "Ihalo ang mga sangkap"],
+                correctAnswer: "Ihalo ang mga sangkap | Ibuhos sa mga hulmahan | Isalang sa pasingawan | Hintaying mamuo at maluto",
+                explanation: "Ang tamang pagkakasunod-sunod: ihalo ang mga sangkap, ibuhos sa mga hulmahan, isalang sa pasingawan, hintaying mamuo at maluto."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 41):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng ginataang gulay",
+                options: ["Ibuhos ang gata", "Pakuluan hanggang lumambot", "Igisa ang bawang at luya", "Ilagay ang kalabasa at sitaw"],
+                correctAnswer: "Igisa ang bawang at luya | Ilagay ang kalabasa at sitaw | Ibuhos ang gata | Pakuluan hanggang lumambot",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang bawang at luya, ilagay ang kalabasa at sitaw, ibuhos ang gata, pakuluan hanggang lumambot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 42):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng ensaladang mangga",
+                options: ["Lagyan ng bagoong", "Hiwain ang hilaw na mangga", "Hiwain ang kamatis at sibuyas", "Pagsamahin sa mangkok"],
+                correctAnswer: "Hiwain ang hilaw na mangga | Hiwain ang kamatis at sibuyas | Pagsamahin sa mangkok | Lagyan ng bagoong",
+                explanation: "Ang tamang pagkakasunod-sunod: hiwain ang hilaw na mangga, hiwain ang kamatis at sibuyas, pagsamahin sa mangkok, lagyan ng bagoong."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 43):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pag-iihaw ng liempo",
+                options: ["Sindihan ang ihawan", "Ihawin at baliktarin paminsan-minsan", "Hiwain bago ihain", "Ibabad ang liempo sa timpla"],
+                correctAnswer: "Ibabad ang liempo sa timpla | Sindihan ang ihawan | Ihawin at baliktarin paminsan-minsan | Hiwain bago ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: ibabad ang liempo sa timpla, sindihan ang ihawan, ihawin at baliktarin paminsan-minsan, hiwain bago ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 44):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng inihaw na isda",
+                options: ["Ibalot sa dahon ng saging", "Ihawin sa baga", "Linisin ang isda", "Lagyan ng asin at kamatis ang loob"],
+                correctAnswer: "Linisin ang isda | Lagyan ng asin at kamatis ang loob | Ibalot sa dahon ng saging | Ihawin sa baga",
+                explanation: "Ang tamang pagkakasunod-sunod: linisin ang isda, lagyan ng asin at kamatis ang loob, ibalot sa dahon ng saging, ihawin sa baga."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 45):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghahanda ng almusal",
+                options: ["Ihain ang lahat sa mesa", "Magtimpla ng kape", "Magprito ng itlog at tapa", "Ihanda ang sinangag"],
+                correctAnswer: "Magtimpla ng kape | Magprito ng itlog at tapa | Ihanda ang sinangag | Ihain ang lahat sa mesa",
+                explanation: "Ang tamang pagkakasunod-sunod: magtimpla ng kape, magprito ng itlog at tapa, ihanda ang sinangag, ihain ang lahat sa mesa."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 46):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghahanda ng baon",
+                options: ["Hayaang lumamig nang kaunti", "Ilagay sa baunan", "Isara nang mahigpit ang takip", "Magluto ng kanin at ulam"],
+                correctAnswer: "Magluto ng kanin at ulam | Hayaang lumamig nang kaunti | Ilagay sa baunan | Isara nang mahigpit ang takip",
+                explanation: "Ang tamang pagkakasunod-sunod: magluto ng kanin at ulam, hayaang lumamig nang kaunti, ilagay sa baunan, isara nang mahigpit ang takip."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 47):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pag-iimbak ng tirang pagkain",
+                options: ["Lagyan ng petsa", "Ilagay sa ref", "Hayaang lumamig ang pagkain", "Ilipat sa lalagyang may takip"],
+                correctAnswer: "Hayaang lumamig ang pagkain | Ilipat sa lalagyang may takip | Lagyan ng petsa | Ilagay sa ref",
+                explanation: "Ang tamang pagkakasunod-sunod: hayaang lumamig ang pagkain, ilipat sa lalagyang may takip, lagyan ng petsa, ilagay sa ref."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 48):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pag-iinit ng pagkain sa microwave",
+                options: ["Haluin bago kainin", "Ilagay ang pagkain sa plato", "Takpan nang bahagya", "Itakda ang oras"],
+                correctAnswer: "Ilagay ang pagkain sa plato | Takpan nang bahagya | Itakda ang oras | Haluin bago kainin",
+                explanation: "Ang tamang pagkakasunod-sunod: ilagay ang pagkain sa plato, takpan nang bahagya, itakda ang oras, haluin bago kainin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 49):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtunaw ng frozen na karne",
+                options: ["Ilagay sa ilalim na bahagi ng ref", "Hintaying tuluyang matunaw", "Lutuin kaagad", "Ilipat ang karne mula sa freezer"],
+                correctAnswer: "Ilipat ang karne mula sa freezer | Ilagay sa ilalim na bahagi ng ref | Hintaying tuluyang matunaw | Lutuin kaagad",
+                explanation: "Ang tamang pagkakasunod-sunod: ilipat ang karne mula sa freezer, ilagay sa ilalim na bahagi ng ref, hintaying tuluyang matunaw, lutuin kaagad."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 50):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagbubukas ng de-lata",
+                options: ["Ikutin hanggang mabuksan", "Ibuhos ang laman sa mangkok", "Kunin ang abrelata", "Ikabit sa gilid ng lata"],
+                correctAnswer: "Kunin ang abrelata | Ikabit sa gilid ng lata | Ikutin hanggang mabuksan | Ibuhos ang laman sa mangkok",
+                explanation: "Ang tamang pagkakasunod-sunod: kunin ang abrelata, ikabit sa gilid ng lata, ikutin hanggang mabuksan, ibuhos ang laman sa mangkok."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 51):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtatakda ng mesa",
+                options: ["Ilagay ang mga baso", "Ilatag ang mantel", "Ilagay ang mga plato", "Iayos ang kubyertos"],
+                correctAnswer: "Ilatag ang mantel | Ilagay ang mga plato | Iayos ang kubyertos | Ilagay ang mga baso",
+                explanation: "Ang tamang pagkakasunod-sunod: ilatag ang mantel, ilagay ang mga plato, iayos ang kubyertos, ilagay ang mga baso."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 52):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paglilinis ng kusina pagkatapos magluto",
+                options: ["Hugasan ang mga gamit sa pagluluto", "Punasan ang mesa at kalan", "Iwalis ang sahig", "Itapon ang mga pinagbalatan"],
+                correctAnswer: "Itapon ang mga pinagbalatan | Hugasan ang mga gamit sa pagluluto | Punasan ang mesa at kalan | Iwalis ang sahig",
+                explanation: "Ang tamang pagkakasunod-sunod: itapon ang mga pinagbalatan, hugasan ang mga gamit sa pagluluto, punasan ang mesa at kalan, iwalis ang sahig."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 53):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtatago ng mga pinamili",
+                options: ["Iayos ang de-lata sa aparador", "Itupi ang mga supot", "Ilabas ang mga pinamili sa supot", "Ilagay ang karne at gulay sa ref"],
+                correctAnswer: "Ilabas ang mga pinamili sa supot | Ilagay ang karne at gulay sa ref | Iayos ang de-lata sa aparador | Itupi ang mga supot",
+                explanation: "Ang tamang pagkakasunod-sunod: ilabas ang mga pinamili sa supot, ilagay ang karne at gulay sa ref, iayos ang de-lata sa aparador, itupi ang mga supot."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 54):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghuhugas ng bigas",
+                options: ["Ulitin hanggang luminaw", "Ilagay ang bigas sa kaldero", "Buhusan ng tubig", "Haluin at ibuhos ang labo ng tubig"],
+                correctAnswer: "Ilagay ang bigas sa kaldero | Buhusan ng tubig | Haluin at ibuhos ang labo ng tubig | Ulitin hanggang luminaw",
+                explanation: "Ang tamang pagkakasunod-sunod: ilagay ang bigas sa kaldero, buhusan ng tubig, haluin at ibuhos ang labo ng tubig, ulitin hanggang luminaw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 55):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagbabalat ng bawang",
+                options: ["Pisain nang bahagya ng kutsilyo", "Alisin ang balat", "Tadtarin ayon sa kailangan", "Ihiwalay ang mga butil"],
+                correctAnswer: "Ihiwalay ang mga butil | Pisain nang bahagya ng kutsilyo | Alisin ang balat | Tadtarin ayon sa kailangan",
+                explanation: "Ang tamang pagkakasunod-sunod: ihiwalay ang mga butil, pisain nang bahagya ng kutsilyo, alisin ang balat, tadtarin ayon sa kailangan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 56):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghihiwa ng sibuyas",
+                options: ["Ihiga sa sangkalan", "Hiwain nang manipis", "Balatan ang sibuyas", "Hatiin sa gitna"],
+                correctAnswer: "Balatan ang sibuyas | Hatiin sa gitna | Ihiga sa sangkalan | Hiwain nang manipis",
+                explanation: "Ang tamang pagkakasunod-sunod: balatan ang sibuyas, hatiin sa gitna, ihiga sa sangkalan, hiwain nang manipis."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 57):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng palamang itlog",
+                options: ["Ipahid sa tinapay", "Pakuluan ang itlog", "Balatan at durugin", "Haluan ng mayonesa"],
+                correctAnswer: "Pakuluan ang itlog | Balatan at durugin | Haluan ng mayonesa | Ipahid sa tinapay",
+                explanation: "Ang tamang pagkakasunod-sunod: pakuluan ang itlog, balatan at durugin, haluan ng mayonesa, ipahid sa tinapay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 58):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagsasaing gamit ang rice cooker",
+                options: ["Ilagay ang tamang dami ng tubig", "Isara ang takip at pindutin ang cook", "Hintaying tumalbog ang pindutan", "Hugasan ang bigas"],
+                correctAnswer: "Hugasan ang bigas | Ilagay ang tamang dami ng tubig | Isara ang takip at pindutin ang cook | Hintaying tumalbog ang pindutan",
+                explanation: "Ang tamang pagkakasunod-sunod: hugasan ang bigas, ilagay ang tamang dami ng tubig, isara ang takip at pindutin ang cook, hintaying tumalbog ang pindutan."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 59):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng gatas para sa almusal",
+                options: ["Buhusan ng maligamgam na tubig", "Haluin hanggang matunaw", "Kumuha ng malinis na baso", "Ilagay ang pulbos na gatas"],
+                correctAnswer: "Kumuha ng malinis na baso | Ilagay ang pulbos na gatas | Buhusan ng maligamgam na tubig | Haluin hanggang matunaw",
+                explanation: "Ang tamang pagkakasunod-sunod: kumuha ng malinis na baso, ilagay ang pulbos na gatas, buhusan ng maligamgam na tubig, haluin hanggang matunaw."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 60):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng ginisang ampalaya",
+                options: ["Timplahan bago ihain", "Hiwain at ibabad ang ampalaya sa asin", "Pigain at banlawan", "Igisa kasama ang itlog"],
+                correctAnswer: "Hiwain at ibabad ang ampalaya sa asin | Pigain at banlawan | Igisa kasama ang itlog | Timplahan bago ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: hiwain at ibabad ang ampalaya sa asin, pigain at banlawan, igisa kasama ang itlog, timplahan bago ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 61):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng pritong manok",
+                options: ["Balutin sa harina", "Iprito sa mainit na mantika", "Patuluin sa tisyu", "Timplahan ang manok"],
+                correctAnswer: "Timplahan ang manok | Balutin sa harina | Iprito sa mainit na mantika | Patuluin sa tisyu",
+                explanation: "Ang tamang pagkakasunod-sunod: timplahan ang manok, balutin sa harina, iprito sa mainit na mantika, patuluin sa tisyu."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 62):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng biko",
+                options: ["Ihalo ang kanin sa gata", "Ilatag sa bilao at patagin", "Lutuin ang malagkit na bigas", "Pakuluan ang gata at asukal"],
+                correctAnswer: "Lutuin ang malagkit na bigas | Pakuluan ang gata at asukal | Ihalo ang kanin sa gata | Ilatag sa bilao at patagin",
+                explanation: "Ang tamang pagkakasunod-sunod: lutuin ang malagkit na bigas, pakuluan ang gata at asukal, ihalo ang kanin sa gata, ilatag sa bilao at patagin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 63):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng palitaw",
+                options: ["Igulong sa niyog at asukal kapag lumutang", "Masahin ang galapong", "Hulmahin nang pipi", "Ilaglag sa kumukulong tubig"],
+                correctAnswer: "Masahin ang galapong | Hulmahin nang pipi | Ilaglag sa kumukulong tubig | Igulong sa niyog at asukal kapag lumutang",
+                explanation: "Ang tamang pagkakasunod-sunod: masahin ang galapong, hulmahin nang pipi, ilaglag sa kumukulong tubig, igulong sa niyog at asukal kapag lumutang."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 64):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng maruya",
+                options: ["Ihalo sa batter na harina", "Iprito hanggang ginintuan", "Budburan ng asukal", "Hiwain ang saging"],
+                correctAnswer: "Hiwain ang saging | Ihalo sa batter na harina | Iprito hanggang ginintuan | Budburan ng asukal",
+                explanation: "Ang tamang pagkakasunod-sunod: hiwain ang saging, ihalo sa batter na harina, iprito hanggang ginintuan, budburan ng asukal."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 65):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagluluto ng ginisang sardinas",
+                options: ["Dagdagan ng kamatis", "Pakuluan sandali at ihain", "Igisa ang bawang at sibuyas", "Ilagay ang sardinas"],
+                correctAnswer: "Igisa ang bawang at sibuyas | Ilagay ang sardinas | Dagdagan ng kamatis | Pakuluan sandali at ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: igisa ang bawang at sibuyas, ilagay ang sardinas, dagdagan ng kamatis, pakuluan sandali at ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 66):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paggawa ng fruit salad",
+                options: ["Palamigin sa ref bago ihain", "Patuluin ang mga de-latang prutas", "Ilagay sa malaking mangkok", "Ihalo ang krema at gatas"],
+                correctAnswer: "Patuluin ang mga de-latang prutas | Ilagay sa malaking mangkok | Ihalo ang krema at gatas | Palamigin sa ref bago ihain",
+                explanation: "Ang tamang pagkakasunod-sunod: patuluin ang mga de-latang prutas, ilagay sa malaking mangkok, ihalo ang krema at gatas, palamigin sa ref bago ihain."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 67):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagpapakulo ng tubig na ligtas inumin",
+                options: ["Isalang sa kalan", "Pakuluan nang ilang minuto", "Hayaang lumamig bago isalin", "Punuin ang kaldero ng tubig"],
+                correctAnswer: "Punuin ang kaldero ng tubig | Isalang sa kalan | Pakuluan nang ilang minuto | Hayaang lumamig bago isalin",
+                explanation: "Ang tamang pagkakasunod-sunod: punuin ang kaldero ng tubig, isalang sa kalan, pakuluan nang ilang minuto, hayaang lumamig bago isalin."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 68):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paglilinis ng ref",
+                options: ["Punasan ang mga istante", "Ibalik nang maayos ang mga laman", "Ilabas ang lahat ng laman", "Itapon ang mga panis na pagkain"],
+                correctAnswer: "Ilabas ang lahat ng laman | Itapon ang mga panis na pagkain | Punasan ang mga istante | Ibalik nang maayos ang mga laman",
+                explanation: "Ang tamang pagkakasunod-sunod: ilabas ang lahat ng laman, itapon ang mga panis na pagkain, punasan ang mga istante, ibalik nang maayos ang mga laman."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 69):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: pagtatapon ng basura sa kusina",
+                options: ["Maghugas ng kamay", "Itali ang supot ng basura", "Ilabas sa tapunan", "Lagyan ng bagong supot ang basurahan"],
+                correctAnswer: "Itali ang supot ng basura | Ilabas sa tapunan | Lagyan ng bagong supot ang basurahan | Maghugas ng kamay",
+                explanation: "Ang tamang pagkakasunod-sunod: itali ang supot ng basura, ilabas sa tapunan, lagyan ng bagong supot ang basurahan, maghugas ng kamay."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Filipino-American meal (Step 70):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "Ayusin ang mga hakbang: paghahanda ng meryenda para sa bisita",
+                options: ["Ihanda ang kakanin sa plato", "Ilagay sa mesa", "Anyayahan ang mga bisita", "Magtimpla ng kape o juice"],
+                correctAnswer: "Magtimpla ng kape o juice | Ihanda ang kakanin sa plato | Ilagay sa mesa | Anyayahan ang mga bisita",
+                explanation: "Ang tamang pagkakasunod-sunod: magtimpla ng kape o juice, ihanda ang kakanin sa plato, ilagay sa mesa, anyayahan ang mga bisita."
             )
         ]
     )
@@ -998,529 +998,531 @@ struct TagalogFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 1):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Bigas: 5 libra sa $6.00 o 10 libra sa $10.00. Alin ang mas sulit?",
+                options: ["5 libra sa $6.00", "10 libra sa $10.00"],
+                correctAnswer: "10 libra sa $10.00",
+                explanation: "Ang 10 libra sa $10.00 ay mas mura bawat libra ($1.00) kaysa sa $1.20 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 2):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Toyo: 10 onsa sa $1.50 o 20 onsa sa $2.40. Alin ang mas sulit?",
+                options: ["10 onsa sa $1.50", "20 onsa sa $2.40"],
+                correctAnswer: "20 onsa sa $2.40",
+                explanation: "Ang 20 onsa sa $2.40 ay mas mura bawat onsa ($0.12) kaysa sa $0.15 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 3):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Suka: 12 onsa sa $1.80 o 24 onsa sa $3.00. Alin ang mas sulit?",
+                options: ["12 onsa sa $1.80", "24 onsa sa $3.00"],
+                correctAnswer: "24 onsa sa $3.00",
+                explanation: "Ang 24 onsa sa $3.00 ay mas mura bawat onsa ($0.12) kaysa sa $0.15 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 4):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Bawang: 1 libra sa $2.00 o 3 libra sa $4.50. Alin ang mas sulit?",
+                options: ["1 libra sa $2.00", "3 libra sa $4.50"],
+                correctAnswer: "3 libra sa $4.50",
+                explanation: "Ang 3 libra sa $4.50 ay mas mura bawat libra ($1.50) kaysa sa $2.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 5):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sibuyas: 2 libra sa $3.00 o 5 libra sa $6.00. Alin ang mas sulit?",
+                options: ["2 libra sa $3.00", "5 libra sa $6.00"],
+                correctAnswer: "5 libra sa $6.00",
+                explanation: "Ang 5 libra sa $6.00 ay mas mura bawat libra ($1.20) kaysa sa $1.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 6):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kamatis: 1 libra sa $2.50 o 4 libra sa $8.00. Alin ang mas sulit?",
+                options: ["1 libra sa $2.50", "4 libra sa $8.00"],
+                correctAnswer: "4 libra sa $8.00",
+                explanation: "Ang 4 libra sa $8.00 ay mas mura bawat libra ($2.00) kaysa sa $2.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 7):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Manok: 3 libra sa $9.00 o 5 libra sa $12.50. Alin ang mas sulit?",
+                options: ["3 libra sa $9.00", "5 libra sa $12.50"],
+                correctAnswer: "5 libra sa $12.50",
+                explanation: "Ang 5 libra sa $12.50 ay mas mura bawat libra ($2.50) kaysa sa $3.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 8):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Baboy: 2 libra sa $8.00 o 4 libra sa $14.00. Alin ang mas sulit?",
+                options: ["2 libra sa $8.00", "4 libra sa $14.00"],
+                correctAnswer: "4 libra sa $14.00",
+                explanation: "Ang 4 libra sa $14.00 ay mas mura bawat libra ($3.50) kaysa sa $4.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 9):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Bangus: 1 piraso sa $6.00 o 2 piraso sa $13.00. Alin ang mas sulit?",
+                options: ["1 piraso sa $6.00", "2 piraso sa $13.00"],
+                correctAnswer: "1 piraso sa $6.00",
+                explanation: "Ang 1 piraso sa $6.00 ay mas mura bawat piraso ($6.00) kaysa sa $6.50 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 10):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Tilapia: 2 libra sa $7.00 o 5 libra sa $15.00. Alin ang mas sulit?",
+                options: ["2 libra sa $7.00", "5 libra sa $15.00"],
+                correctAnswer: "5 libra sa $15.00",
+                explanation: "Ang 5 libra sa $15.00 ay mas mura bawat libra ($3.00) kaysa sa $3.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 11):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Hipon: 1 libra sa $9.00 o 2 libra sa $16.00. Alin ang mas sulit?",
+                options: ["1 libra sa $9.00", "2 libra sa $16.00"],
+                correctAnswer: "2 libra sa $16.00",
+                explanation: "Ang 2 libra sa $16.00 ay mas mura bawat libra ($8.00) kaysa sa $9.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 12):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Itlog: 12 piraso sa $3.60 o 30 piraso sa $7.50. Alin ang mas sulit?",
+                options: ["12 piraso sa $3.60", "30 piraso sa $7.50"],
+                correctAnswer: "30 piraso sa $7.50",
+                explanation: "Ang 30 piraso sa $7.50 ay mas mura bawat piraso ($0.25) kaysa sa $0.30 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 13):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Gatas: 32 onsa sa $3.20 o 64 onsa sa $5.76. Alin ang mas sulit?",
+                options: ["32 onsa sa $3.20", "64 onsa sa $5.76"],
+                correctAnswer: "64 onsa sa $5.76",
+                explanation: "Ang 64 onsa sa $5.76 ay mas mura bawat onsa ($0.09) kaysa sa $0.10 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 14):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Keso: 8 onsa sa $4.00 o 16 onsa sa $6.40. Alin ang mas sulit?",
+                options: ["8 onsa sa $4.00", "16 onsa sa $6.40"],
+                correctAnswer: "16 onsa sa $6.40",
+                explanation: "Ang 16 onsa sa $6.40 ay mas mura bawat onsa ($0.40) kaysa sa $0.50 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 15):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Tinapay: 12 piraso sa $3.00 o 24 piraso sa $5.28. Alin ang mas sulit?",
+                options: ["12 piraso sa $3.00", "24 piraso sa $5.28"],
+                correctAnswer: "24 piraso sa $5.28",
+                explanation: "Ang 24 piraso sa $5.28 ay mas mura bawat piraso ($0.22) kaysa sa $0.25 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 16):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Saging: 3 libra sa $1.80 o 6 libra sa $3.00. Alin ang mas sulit?",
+                options: ["3 libra sa $1.80", "6 libra sa $3.00"],
+                correctAnswer: "6 libra sa $3.00",
+                explanation: "Ang 6 libra sa $3.00 ay mas mura bawat libra ($0.50) kaysa sa $0.60 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 17):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mangga: 2 piraso sa $5.00 o 6 piraso sa $12.00. Alin ang mas sulit?",
+                options: ["2 piraso sa $5.00", "6 piraso sa $12.00"],
+                correctAnswer: "6 piraso sa $12.00",
+                explanation: "Ang 6 piraso sa $12.00 ay mas mura bawat piraso ($2.00) kaysa sa $2.50 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 18):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kalamansi: 1 libra sa $4.00 o 2 libra sa $6.00. Alin ang mas sulit?",
+                options: ["1 libra sa $4.00", "2 libra sa $6.00"],
+                correctAnswer: "2 libra sa $6.00",
+                explanation: "Ang 2 libra sa $6.00 ay mas mura bawat libra ($3.00) kaysa sa $4.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 19):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sampalok na pampasigang: 4 pakete sa $2.00 o 10 pakete sa $4.00. Alin ang mas sulit?",
+                options: ["4 pakete sa $2.00", "10 pakete sa $4.00"],
+                correctAnswer: "10 pakete sa $4.00",
+                explanation: "Ang 10 pakete sa $4.00 ay mas mura bawat pakete ($0.40) kaysa sa $0.50 bawat pakete ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 20):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Patis: 10 onsa sa $2.00 o 25 onsa sa $4.00. Alin ang mas sulit?",
+                options: ["10 onsa sa $2.00", "25 onsa sa $4.00"],
+                correctAnswer: "25 onsa sa $4.00",
+                explanation: "Ang 25 onsa sa $4.00 ay mas mura bawat onsa ($0.16) kaysa sa $0.20 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 21):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Bagoong: 8 onsa sa $3.20 o 12 onsa sa $4.20. Alin ang mas sulit?",
+                options: ["8 onsa sa $3.20", "12 onsa sa $4.20"],
+                correctAnswer: "12 onsa sa $4.20",
+                explanation: "Ang 12 onsa sa $4.20 ay mas mura bawat onsa ($0.35) kaysa sa $0.40 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 22):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kape: 8 onsa sa $6.40 o 16 onsa sa $11.20. Alin ang mas sulit?",
+                options: ["8 onsa sa $6.40", "16 onsa sa $11.20"],
+                correctAnswer: "16 onsa sa $11.20",
+                explanation: "Ang 16 onsa sa $11.20 ay mas mura bawat onsa ($0.70) kaysa sa $0.80 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 23):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Asukal: 2 libra sa $2.60 o 4 libra sa $4.40. Alin ang mas sulit?",
+                options: ["2 libra sa $2.60", "4 libra sa $4.40"],
+                correctAnswer: "4 libra sa $4.40",
+                explanation: "Ang 4 libra sa $4.40 ay mas mura bawat libra ($1.10) kaysa sa $1.30 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 24):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Asin: 1 libra sa $1.00 o 3 libra sa $2.40. Alin ang mas sulit?",
+                options: ["1 libra sa $1.00", "3 libra sa $2.40"],
+                correctAnswer: "3 libra sa $2.40",
+                explanation: "Ang 3 libra sa $2.40 ay mas mura bawat libra ($0.80) kaysa sa $1.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 25):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mantika: 16 onsa sa $3.20 o 48 onsa sa $8.16. Alin ang mas sulit?",
+                options: ["16 onsa sa $3.20", "48 onsa sa $8.16"],
+                correctAnswer: "48 onsa sa $8.16",
+                explanation: "Ang 48 onsa sa $8.16 ay mas mura bawat onsa ($0.17) kaysa sa $0.20 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 26):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Bihon: 8 onsa sa $2.40 o 16 onsa sa $4.00. Alin ang mas sulit?",
+                options: ["8 onsa sa $2.40", "16 onsa sa $4.00"],
+                correctAnswer: "16 onsa sa $4.00",
+                explanation: "Ang 16 onsa sa $4.00 ay mas mura bawat onsa ($0.25) kaysa sa $0.30 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 27):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Balat ng lumpia: 25 piraso sa $2.50 o 50 piraso sa $4.50. Alin ang mas sulit?",
+                options: ["25 piraso sa $2.50", "50 piraso sa $4.50"],
+                correctAnswer: "50 piraso sa $4.50",
+                explanation: "Ang 50 piraso sa $4.50 ay mas mura bawat piraso ($0.09) kaysa sa $0.10 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 28):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Monggo: 1 libra sa $2.20 o 2 libra sa $4.80. Alin ang mas sulit?",
+                options: ["1 libra sa $2.20", "2 libra sa $4.80"],
+                correctAnswer: "1 libra sa $2.20",
+                explanation: "Ang 1 libra sa $2.20 ay mas mura bawat libra ($2.20) kaysa sa $2.40 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 29):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kangkong: 1 bigkis sa $1.50 o 3 bigkis sa $3.60. Alin ang mas sulit?",
+                options: ["1 bigkis sa $1.50", "3 bigkis sa $3.60"],
+                correctAnswer: "3 bigkis sa $3.60",
+                explanation: "Ang 3 bigkis sa $3.60 ay mas mura bawat bigkis ($1.20) kaysa sa $1.50 bawat bigkis ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 30):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Repolyo: 2 libra sa $2.40 o 5 libra sa $5.00. Alin ang mas sulit?",
+                options: ["2 libra sa $2.40", "5 libra sa $5.00"],
+                correctAnswer: "5 libra sa $5.00",
+                explanation: "Ang 5 libra sa $5.00 ay mas mura bawat libra ($1.00) kaysa sa $1.20 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 31):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Karot: 1 libra sa $1.20 o 3 libra sa $3.00. Alin ang mas sulit?",
+                options: ["1 libra sa $1.20", "3 libra sa $3.00"],
+                correctAnswer: "3 libra sa $3.00",
+                explanation: "Ang 3 libra sa $3.00 ay mas mura bawat libra ($1.00) kaysa sa $1.20 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 32):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Patatas: 3 libra sa $3.00 o 10 libra sa $8.00. Alin ang mas sulit?",
+                options: ["3 libra sa $3.00", "10 libra sa $8.00"],
+                correctAnswer: "10 libra sa $8.00",
+                explanation: "Ang 10 libra sa $8.00 ay mas mura bawat libra ($0.80) kaysa sa $1.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 33):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kamote: 2 libra sa $2.60 o 5 libra sa $5.50. Alin ang mas sulit?",
+                options: ["2 libra sa $2.60", "5 libra sa $5.50"],
+                correctAnswer: "5 libra sa $5.50",
+                explanation: "Ang 5 libra sa $5.50 ay mas mura bawat libra ($1.10) kaysa sa $1.30 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 34):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mais: 2 piraso sa $1.60 o 6 piraso sa $5.40. Alin ang mas sulit?",
+                options: ["2 piraso sa $1.60", "6 piraso sa $5.40"],
+                correctAnswer: "2 piraso sa $1.60",
+                explanation: "Ang 2 piraso sa $1.60 ay mas mura bawat piraso ($0.80) kaysa sa $0.90 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 35):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Ube halaya: 12 onsa sa $6.00 o 24 onsa sa $10.80. Alin ang mas sulit?",
+                options: ["12 onsa sa $6.00", "24 onsa sa $10.80"],
+                correctAnswer: "24 onsa sa $10.80",
+                explanation: "Ang 24 onsa sa $10.80 ay mas mura bawat onsa ($0.45) kaysa sa $0.50 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 36):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Gata: 13 onsa sa $1.30 o 26 onsa sa $3.12. Alin ang mas sulit?",
+                options: ["13 onsa sa $1.30", "26 onsa sa $3.12"],
+                correctAnswer: "13 onsa sa $1.30",
+                explanation: "Ang 13 onsa sa $1.30 ay mas mura bawat onsa ($0.10) kaysa sa $0.12 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 37):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sardinas: 5 onsa sa $1.25 o 15 onsa sa $3.00. Alin ang mas sulit?",
+                options: ["5 onsa sa $1.25", "15 onsa sa $3.00"],
+                correctAnswer: "15 onsa sa $3.00",
+                explanation: "Ang 15 onsa sa $3.00 ay mas mura bawat onsa ($0.20) kaysa sa $0.25 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 38):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Corned beef: 12 onsa sa $3.60 o 20 onsa sa $5.00. Alin ang mas sulit?",
+                options: ["12 onsa sa $3.60", "20 onsa sa $5.00"],
+                correctAnswer: "20 onsa sa $5.00",
+                explanation: "Ang 20 onsa sa $5.00 ay mas mura bawat onsa ($0.25) kaysa sa $0.30 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 39):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Hotdog: 10 piraso sa $4.00 o 24 piraso sa $8.40. Alin ang mas sulit?",
+                options: ["10 piraso sa $4.00", "24 piraso sa $8.40"],
+                correctAnswer: "24 piraso sa $8.40",
+                explanation: "Ang 24 piraso sa $8.40 ay mas mura bawat piraso ($0.35) kaysa sa $0.40 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 40):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pasta ng spaghetti: 16 onsa sa $2.40 o 32 onsa sa $4.16. Alin ang mas sulit?",
+                options: ["16 onsa sa $2.40", "32 onsa sa $4.16"],
+                correctAnswer: "32 onsa sa $4.16",
+                explanation: "Ang 32 onsa sa $4.16 ay mas mura bawat onsa ($0.13) kaysa sa $0.15 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 41):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sarsa ng spaghetti: 24 onsa sa $3.60 o 48 onsa sa $6.24. Alin ang mas sulit?",
+                options: ["24 onsa sa $3.60", "48 onsa sa $6.24"],
+                correctAnswer: "48 onsa sa $6.24",
+                explanation: "Ang 48 onsa sa $6.24 ay mas mura bawat onsa ($0.13) kaysa sa $0.15 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 42):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Orange juice: 32 onsa sa $3.84 o 64 onsa sa $7.04. Alin ang mas sulit?",
+                options: ["32 onsa sa $3.84", "64 onsa sa $7.04"],
+                correctAnswer: "64 onsa sa $7.04",
+                explanation: "Ang 64 onsa sa $7.04 ay mas mura bawat onsa ($0.11) kaysa sa $0.12 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 43):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Tubig na de-bote: 12 bote sa $3.00 o 24 bote sa $4.80. Alin ang mas sulit?",
+                options: ["12 bote sa $3.00", "24 bote sa $4.80"],
+                correctAnswer: "24 bote sa $4.80",
+                explanation: "Ang 24 bote sa $4.80 ay mas mura bawat bote ($0.20) kaysa sa $0.25 bawat bote ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 44):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Tisyu: 4 rolyo sa $4.00 o 12 rolyo sa $9.00. Alin ang mas sulit?",
+                options: ["4 rolyo sa $4.00", "12 rolyo sa $9.00"],
+                correctAnswer: "12 rolyo sa $9.00",
+                explanation: "Ang 12 rolyo sa $9.00 ay mas mura bawat rolyo ($0.75) kaysa sa $1.00 bawat rolyo ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 45):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sabong panlaba: 20 onsa sa $5.00 o 50 onsa sa $10.00. Alin ang mas sulit?",
+                options: ["20 onsa sa $5.00", "50 onsa sa $10.00"],
+                correctAnswer: "50 onsa sa $10.00",
+                explanation: "Ang 50 onsa sa $10.00 ay mas mura bawat onsa ($0.20) kaysa sa $0.25 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 46):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sabong pantao: 3 piraso sa $3.00 o 8 piraso sa $6.40. Alin ang mas sulit?",
+                options: ["3 piraso sa $3.00", "8 piraso sa $6.40"],
+                correctAnswer: "8 piraso sa $6.40",
+                explanation: "Ang 8 piraso sa $6.40 ay mas mura bawat piraso ($0.80) kaysa sa $1.00 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 47):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Shampoo: 12 onsa sa $4.80 o 24 onsa sa $8.16. Alin ang mas sulit?",
+                options: ["12 onsa sa $4.80", "24 onsa sa $8.16"],
+                correctAnswer: "24 onsa sa $8.16",
+                explanation: "Ang 24 onsa sa $8.16 ay mas mura bawat onsa ($0.34) kaysa sa $0.40 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 48):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Toothpaste: 4 onsa sa $2.40 o 8 onsa sa $4.00. Alin ang mas sulit?",
+                options: ["4 onsa sa $2.40", "8 onsa sa $4.00"],
+                correctAnswer: "8 onsa sa $4.00",
+                explanation: "Ang 8 onsa sa $4.00 ay mas mura bawat onsa ($0.50) kaysa sa $0.60 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 49):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Harina: 2 libra sa $1.80 o 5 libra sa $4.00. Alin ang mas sulit?",
+                options: ["2 libra sa $1.80", "5 libra sa $4.00"],
+                correctAnswer: "5 libra sa $4.00",
+                explanation: "Ang 5 libra sa $4.00 ay mas mura bawat libra ($0.80) kaysa sa $0.90 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 50):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Malagkit na bigas: 2 libra sa $3.00 o 5 libra sa $6.50. Alin ang mas sulit?",
+                options: ["2 libra sa $3.00", "5 libra sa $6.50"],
+                correctAnswer: "5 libra sa $6.50",
+                explanation: "Ang 5 libra sa $6.50 ay mas mura bawat libra ($1.30) kaysa sa $1.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 51):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Luya: 1 libra sa $3.00 o 2 libra sa $4.80. Alin ang mas sulit?",
+                options: ["1 libra sa $3.00", "2 libra sa $4.80"],
+                correctAnswer: "2 libra sa $4.80",
+                explanation: "Ang 2 libra sa $4.80 ay mas mura bawat libra ($2.40) kaysa sa $3.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 52):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Talong: 2 libra sa $2.40 o 5 libra sa $5.00. Alin ang mas sulit?",
+                options: ["2 libra sa $2.40", "5 libra sa $5.00"],
+                correctAnswer: "5 libra sa $5.00",
+                explanation: "Ang 5 libra sa $5.00 ay mas mura bawat libra ($1.00) kaysa sa $1.20 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 53):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Kalabasa: 2 libra sa $2.00 o 6 libra sa $4.80. Alin ang mas sulit?",
+                options: ["2 libra sa $2.00", "6 libra sa $4.80"],
+                correctAnswer: "6 libra sa $4.80",
+                explanation: "Ang 6 libra sa $4.80 ay mas mura bawat libra ($0.80) kaysa sa $1.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 54):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Sitaw: 1 bigkis sa $2.20 o 3 bigkis sa $5.40. Alin ang mas sulit?",
+                options: ["1 bigkis sa $2.20", "3 bigkis sa $5.40"],
+                correctAnswer: "3 bigkis sa $5.40",
+                explanation: "Ang 3 bigkis sa $5.40 ay mas mura bawat bigkis ($1.80) kaysa sa $2.20 bawat bigkis ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 55):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Ampalaya: 1 piraso sa $1.80 o 3 piraso sa $4.50. Alin ang mas sulit?",
+                options: ["1 piraso sa $1.80", "3 piraso sa $4.50"],
+                correctAnswer: "3 piraso sa $4.50",
+                explanation: "Ang 3 piraso sa $4.50 ay mas mura bawat piraso ($1.50) kaysa sa $1.80 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 56):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Okra: 1 libra sa $2.00 o 2 libra sa $3.20. Alin ang mas sulit?",
+                options: ["1 libra sa $2.00", "2 libra sa $3.20"],
+                correctAnswer: "2 libra sa $3.20",
+                explanation: "Ang 2 libra sa $3.20 ay mas mura bawat libra ($1.60) kaysa sa $2.00 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 57):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pechay: 1 bigkis sa $1.60 o 4 bigkis sa $5.20. Alin ang mas sulit?",
+                options: ["1 bigkis sa $1.60", "4 bigkis sa $5.20"],
+                correctAnswer: "4 bigkis sa $5.20",
+                explanation: "Ang 4 bigkis sa $5.20 ay mas mura bawat bigkis ($1.30) kaysa sa $1.60 bawat bigkis ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 58):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Dahon ng saging: 5 piraso sa $2.50 o 12 piraso sa $4.80. Alin ang mas sulit?",
+                options: ["5 piraso sa $2.50", "12 piraso sa $4.80"],
+                correctAnswer: "12 piraso sa $4.80",
+                explanation: "Ang 12 piraso sa $4.80 ay mas mura bawat piraso ($0.40) kaysa sa $0.50 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 59):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Niyog: 1 piraso sa $2.50 o 3 piraso sa $6.00. Alin ang mas sulit?",
+                options: ["1 piraso sa $2.50", "3 piraso sa $6.00"],
+                correctAnswer: "3 piraso sa $6.00",
+                explanation: "Ang 3 piraso sa $6.00 ay mas mura bawat piraso ($2.00) kaysa sa $2.50 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 60):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pinya: 1 piraso sa $3.00 o 2 piraso sa $5.00. Alin ang mas sulit?",
+                options: ["1 piraso sa $3.00", "2 piraso sa $5.00"],
+                correctAnswer: "2 piraso sa $5.00",
+                explanation: "Ang 2 piraso sa $5.00 ay mas mura bawat piraso ($2.50) kaysa sa $3.00 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 61):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pakwan: 5 libra sa $4.00 o 12 libra sa $7.20. Alin ang mas sulit?",
+                options: ["5 libra sa $4.00", "12 libra sa $7.20"],
+                correctAnswer: "12 libra sa $7.20",
+                explanation: "Ang 12 libra sa $7.20 ay mas mura bawat libra ($0.60) kaysa sa $0.80 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 62):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Papaya: 2 libra sa $3.00 o 5 libra sa $6.00. Alin ang mas sulit?",
+                options: ["2 libra sa $3.00", "5 libra sa $6.00"],
+                correctAnswer: "5 libra sa $6.00",
+                explanation: "Ang 5 libra sa $6.00 ay mas mura bawat libra ($1.20) kaysa sa $1.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 63):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Ubas: 1 libra sa $3.20 o 3 libra sa $8.40. Alin ang mas sulit?",
+                options: ["1 libra sa $3.20", "3 libra sa $8.40"],
+                correctAnswer: "3 libra sa $8.40",
+                explanation: "Ang 3 libra sa $8.40 ay mas mura bawat libra ($2.80) kaysa sa $3.20 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 64):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mansanas: 4 piraso sa $3.20 o 10 piraso sa $7.00. Alin ang mas sulit?",
+                options: ["4 piraso sa $3.20", "10 piraso sa $7.00"],
+                correctAnswer: "10 piraso sa $7.00",
+                explanation: "Ang 10 piraso sa $7.00 ay mas mura bawat piraso ($0.70) kaysa sa $0.80 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 65):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Dalandan: 6 piraso sa $3.00 o 15 piraso sa $6.00. Alin ang mas sulit?",
+                options: ["6 piraso sa $3.00", "15 piraso sa $6.00"],
+                correctAnswer: "15 piraso sa $6.00",
+                explanation: "Ang 15 piraso sa $6.00 ay mas mura bawat piraso ($0.40) kaysa sa $0.50 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 66):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Tokwa: 4 piraso sa $2.80 o 10 piraso sa $6.00. Alin ang mas sulit?",
+                options: ["4 piraso sa $2.80", "10 piraso sa $6.00"],
+                correctAnswer: "10 piraso sa $6.00",
+                explanation: "Ang 10 piraso sa $6.00 ay mas mura bawat piraso ($0.60) kaysa sa $0.70 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 67):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Giniling na baka: 1 libra sa $5.50 o 3 libra sa $15.00. Alin ang mas sulit?",
+                options: ["1 libra sa $5.50", "3 libra sa $15.00"],
+                correctAnswer: "3 libra sa $15.00",
+                explanation: "Ang 3 libra sa $15.00 ay mas mura bawat libra ($5.00) kaysa sa $5.50 bawat libra ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 68):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pulot: 8 onsa sa $5.60 o 16 onsa sa $9.60. Alin ang mas sulit?",
+                options: ["8 onsa sa $5.60", "16 onsa sa $9.60"],
+                correctAnswer: "16 onsa sa $9.60",
+                explanation: "Ang 16 onsa sa $9.60 ay mas mura bawat onsa ($0.60) kaysa sa $0.70 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 69):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mantikilya: 8 onsa sa $3.20 o 16 onsa sa $5.60. Alin ang mas sulit?",
+                options: ["8 onsa sa $3.20", "16 onsa sa $5.60"],
+                correctAnswer: "16 onsa sa $5.60",
+                explanation: "Ang 16 onsa sa $5.60 ay mas mura bawat onsa ($0.35) kaysa sa $0.40 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 70):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Yogurt: 6 onsa sa $1.20 o 32 onsa sa $5.44. Alin ang mas sulit?",
+                options: ["6 onsa sa $1.20", "32 onsa sa $5.44"],
+                correctAnswer: "32 onsa sa $5.44",
+                explanation: "Ang 32 onsa sa $5.44 ay mas mura bawat onsa ($0.17) kaysa sa $0.20 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 71):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Oats: 18 onsa sa $3.60 o 42 onsa sa $7.14. Alin ang mas sulit?",
+                options: ["18 onsa sa $3.60", "42 onsa sa $7.14"],
+                correctAnswer: "42 onsa sa $7.14",
+                explanation: "Ang 42 onsa sa $7.14 ay mas mura bawat onsa ($0.17) kaysa sa $0.20 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 72):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Mani: 8 onsa sa $2.40 o 16 onsa sa $4.32. Alin ang mas sulit?",
+                options: ["8 onsa sa $2.40", "16 onsa sa $4.32"],
+                correctAnswer: "16 onsa sa $4.32",
+                explanation: "Ang 16 onsa sa $4.32 ay mas mura bawat onsa ($0.27) kaysa sa $0.30 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 73):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Suka ng niyog: 12 onsa sa $2.16 o 25 onsa sa $4.00. Alin ang mas sulit?",
+                options: ["12 onsa sa $2.16", "25 onsa sa $4.00"],
+                correctAnswer: "25 onsa sa $4.00",
+                explanation: "Ang 25 onsa sa $4.00 ay mas mura bawat onsa ($0.16) kaysa sa $0.18 bawat onsa ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 74):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Pandesal: 10 piraso sa $3.00 o 30 piraso sa $7.50. Alin ang mas sulit?",
+                options: ["10 piraso sa $3.00", "30 piraso sa $7.50"],
+                correctAnswer: "30 piraso sa $7.50",
+                explanation: "Ang 30 piraso sa $7.50 ay mas mura bawat piraso ($0.25) kaysa sa $0.30 bawat piraso ng kabilang pagpipilian."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for adobo ingredients at local CA market (Option 75):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "Siopao: 4 piraso sa $6.00 o 10 piraso sa $13.00. Alin ang mas sulit?",
+                options: ["4 piraso sa $6.00", "10 piraso sa $13.00"],
+                correctAnswer: "10 piraso sa $13.00",
+                explanation: "Ang 10 piraso sa $13.00 ay mas mura bawat piraso ($1.30) kaysa sa $1.50 bawat piraso ng kabilang pagpipilian."
             )
         ]
     )
 }
+
+
