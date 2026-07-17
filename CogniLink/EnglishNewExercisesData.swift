@@ -34,7 +34,7 @@ struct EnglishNewExercisesData {
             ExerciseItem(prompt: "Which word rhymes with CAT?", options: ["Dog", "Hat", "Sun", "Tree"], correctAnswer: "Hat", explanation: "Cat and Hat share the same ending sound."),
             ExerciseItem(prompt: "Which word rhymes with BLUE?", options: ["Red", "Shoe", "Green", "Fork"], correctAnswer: "Shoe", explanation: "Blue and Shoe share the same ending sound."),
             ExerciseItem(prompt: "Which word rhymes with DAY?", options: ["Play", "Run", "Night", "Walk"], correctAnswer: "Play", explanation: "Day and Play share the same ending sound."),
-            ExerciseItem(prompt: "Which word rhymes with LIGHT?", options: ["Dark", "Bright", "Night", "Heavy"], correctAnswer: "Night", explanation: "Light and Night share the same ending sound."),
+            ExerciseItem(prompt: "Which word rhymes with LIGHT?", options: ["Dark", "Chair", "Night", "Heavy"], correctAnswer: "Night", explanation: "Light and Night share the same ending sound."),
             ExerciseItem(prompt: "Which word rhymes with RING?", options: ["Sing", "Song", "Gold", "Bell"], correctAnswer: "Sing", explanation: "Ring and Sing share the same ending sound."),
             ExerciseItem(prompt: "Which word rhymes with BOAT?", options: ["Water", "Car", "Coat", "Ship"], correctAnswer: "Coat", explanation: "Boat and Coat share the same ending sound."),
             ExerciseItem(prompt: "Which word rhymes with CAKE?", options: ["Bake", "Sweet", "Pie", "Fork"], correctAnswer: "Bake", explanation: "Cake and Bake share the same ending sound."),

@@ -82,7 +82,7 @@ struct LanguageExerciseData {
             ExerciseItem(prompt: "SONNET, HAIKU, LIMERICK, PROSE", options: ["SONNET", "HAIKU", "LIMERICK", "PROSE"], correctAnswer: "PROSE", explanation: "Not a poetry form"),
             ExerciseItem(prompt: "SOPRANO, ALTO, TENOR, CONDUCTOR", options: ["SOPRANO", "ALTO", "TENOR", "CONDUCTOR"], correctAnswer: "CONDUCTOR", explanation: "Leads the orchestra, not a singing voice type"),
             ExerciseItem(prompt: "IMPRESSIONISM, SURREALISM, CUBISM, JAZZ", options: ["IMPRESSIONISM", "SURREALISM", "CUBISM", "JAZZ"], correctAnswer: "JAZZ", explanation: "A music genre, not a visual art movement"),
-            ExerciseItem(prompt: "STOCKHOLM, OSLO, HELSINKI, BRUSSELS", options: ["STOCKHOLM", "OSLO", "HELSINKI", "BRUSSELS"], correctAnswer: "BRUSSELS", explanation: "Belgium, not a Scandinavian capital"),
+            ExerciseItem(prompt: "STOCKHOLM, OSLO, COPENHAGEN, BRUSSELS", options: ["STOCKHOLM", "OSLO", "COPENHAGEN", "BRUSSELS"], correctAnswer: "BRUSSELS", explanation: "Belgium, not a Scandinavian capital"),
             ExerciseItem(prompt: "RUBY, SAPPHIRE, EMERALD, GRANITE", options: ["RUBY", "SAPPHIRE", "EMERALD", "GRANITE"], correctAnswer: "GRANITE", explanation: "A rock, not a gemstone"),
             ExerciseItem(prompt: "APPENDIX, GALLBLADDER, PANCREAS, FEMUR", options: ["APPENDIX", "GALLBLADDER", "PANCREAS", "FEMUR"], correctAnswer: "FEMUR", explanation: "A bone, not an organ"),
             ExerciseItem(prompt: "CELLO, VIOLA, HARP, OBOE", options: ["CELLO", "VIOLA", "HARP", "OBOE"], correctAnswer: "OBOE", explanation: "A woodwind, not a string instrument"),
@@ -123,7 +123,7 @@ struct LanguageExerciseData {
             ExerciseItem(prompt: "Cost an arm and a ___", options: ["foot", "leg", "hand", "knee"], correctAnswer: "leg", explanation: "The idiom 'cost an arm and a leg' means that something is extremely expensive."),
             ExerciseItem(prompt: "Pretty as a ___", options: ["picture", "flower", "rose", "painting"], correctAnswer: "picture", explanation: "The simile 'pretty as a picture' is a common expression used to describe someone or something that is very attractive or visually appealing."),
             ExerciseItem(prompt: "Cool as a ___", options: ["breeze", "cucumber", "iceberg", "fan"], correctAnswer: "cucumber", explanation: "The simile 'cool as a cucumber' means to be very calm and untroubled, especially in a stressful situation."),
-            ExerciseItem(prompt: "Mad as a ___", options: ["bull", "hatter", "hornet", "hen"], correctAnswer: "hatter", explanation: "The simile 'mad as a hatter' is used to describe someone who is completely crazy or behaving very strangely."),
+            ExerciseItem(prompt: "Mad as a ___", options: ["bull", "hatter", "fox", "hen"], correctAnswer: "hatter", explanation: "The simile 'mad as a hatter' is used to describe someone who is completely crazy or behaving very strangely."),
             ExerciseItem(prompt: "Fought tooth and ___", options: ["claw", "bone", "fist", "nail"], correctAnswer: "nail", explanation: "The idiom 'fight tooth and nail' means to fight very fiercely and intensely for something."),
             ExerciseItem(prompt: "In sickness and in ___", options: ["health", "death", "wealth", "life"], correctAnswer: "health", explanation: "The phrase 'in sickness and in health' is a traditional wedding vow promising to remain committed regardless of circumstances.")
         ]
@@ -140,11 +140,11 @@ struct LanguageExerciseData {
         items: [
             ExerciseItem(prompt: "Word: ANGRY", options: ["happy", "furious", "calm", "sad"], correctAnswer: "furious", explanation: "The word 'furious' is a stronger synonym for 'angry', representing an extreme or intense level of anger."),
             ExerciseItem(prompt: "Word: COLD", options: ["warm", "freezing", "hot", "mild"], correctAnswer: "freezing", explanation: "The word 'freezing' is an extreme synonym for 'cold', denoting a temperature that is uncomfortably or dangerously low."),
-            ExerciseItem(prompt: "Word: BIG", options: ["tiny", "large", "short", "thin"], correctAnswer: "large", explanation: "The word 'small' is the antonym of 'big', representing opposite ends of the size spectrum."),
+            ExerciseItem(prompt: "Word: BIG", options: ["tiny", "large", "short", "thin"], correctAnswer: "large", explanation: "The word 'large' is a synonym for 'big', both describing something of considerable size."),
             ExerciseItem(prompt: "Word: TIRED", options: ["alert", "awake", "exhausted", "rested"], correctAnswer: "exhausted", explanation: "The word 'exhausted' is a synonym for 'tired', but it conveys a much deeper state of physical or mental fatigue."),
             ExerciseItem(prompt: "Word: SCARED", options: ["brave", "terrified", "calm", "bold"], correctAnswer: "terrified", explanation: "The word 'terrified' is an intensified synonym for 'scared', indicating a state of extreme fear."),
             ExerciseItem(prompt: "Word: KIND", options: ["mean", "cruel", "gentle", "rude"], correctAnswer: "gentle", explanation: "The word 'gentle' is a synonym for 'kind', focusing on a mild, tender, and considerate temperament."),
-            ExerciseItem(prompt: "Word: FAST", options: ["slow", "quick", "lazy", "dull"], correctAnswer: "quick", explanation: "The word 'slow' is the antonym of 'fast', representing opposite extremes of speed."),
+            ExerciseItem(prompt: "Word: FAST", options: ["slow", "quick", "lazy", "dull"], correctAnswer: "quick", explanation: "The word 'quick' is a synonym for 'fast', both describing rapid speed or motion."),
             ExerciseItem(prompt: "Word: OLD", options: ["young", "ancient", "new", "fresh"], correctAnswer: "ancient", explanation: "The word 'ancient' is a synonym for 'old', specifically referring to something that belongs to the very distant past."),
             ExerciseItem(prompt: "Word: DIRTY", options: ["clean", "filthy", "neat", "tidy"], correctAnswer: "filthy", explanation: "The word 'filthy' is a stronger synonym for 'dirty', implying that something is disgustingly covered with dirt or grime."),
             ExerciseItem(prompt: "Word: BRIGHT", options: ["dim", "dark", "brilliant", "dull"], correctAnswer: "brilliant", explanation: "The word 'brilliant' is a synonym for 'bright', emphasizing an exceptional level of light, color, or intelligence.")
@@ -222,8 +222,7 @@ struct LanguageExerciseData {
             ExerciseItem(prompt: "She wore a warm ___.", options: ["sweater", "swatter", "scatter"], correctAnswer: "sweater", explanation: "The word 'sweater' logically fits the adjective 'warm', describing a piece of clothing worn for comfort."),
             ExerciseItem(prompt: "She planted a ___.", options: ["garden", "pardon", "warden"], correctAnswer: "garden", explanation: "The word 'garden' fits the verb 'planted', representing a common outdoor activity."),
             ExerciseItem(prompt: "She wrote in her ___.", options: ["diary", "dairy", "daisy"], correctAnswer: "diary", explanation: "The word 'diary' is a natural completion, as writing in a diary is a common personal activity."),
-            // Restoring the duplicate element exactly as requested
-            ExerciseItem(prompt: "He paid the ___.", options: ["bill", "fill", "mill"], correctAnswer: "bill", explanation: "The word 'bill' completes the sentence logically, indicating the settlement of a financial obligation."),
+            ExerciseItem(prompt: "She locked the ___.", options: ["door", "more", "core"], correctAnswer: "door", explanation: "The word 'door' completes the sentence logically, describing a common household item that is often locked for security."),
             ExerciseItem(prompt: "The baby is ___.", options: ["sleeping", "sweeping", "seeping"], correctAnswer: "sleeping", explanation: "The word 'sleeping' forms the present continuous tense 'is sleeping', which commonly describes a baby's state.")
         ]
     )
@@ -248,7 +247,7 @@ struct LanguageExerciseData {
             ExerciseItem(prompt: "The cake was ___.", options: ["frost", "frosted", "frosting"], correctAnswer: "frosted", explanation: "The adjective 'frosted' appropriately describes a cake that has been covered with icing or frosting."),
             ExerciseItem(prompt: "She is ___ than her brother.", options: ["tall", "taller", "tallest"], correctAnswer: "taller", explanation: "The comparative adjective 'taller' is correct here, used with 'than' to compare her height to her brother's."),
             ExerciseItem(prompt: "I have ___ my keys again.", options: ["lose", "lost", "losing"], correctAnswer: "lost", explanation: "The past participle 'lost' is used with 'have' to form the present perfect tense, indicating the action of misplacing the keys."),
-            ExerciseItem(prompt: "The instructions were ___.", options: ["clear", "clearly", "unclear"], correctAnswer: "unclear", explanation: "The adjective 'unclear' fits logically, describing instructions that were confusing or not easy to understand."),
+            ExerciseItem(prompt: "The instructions were ___.", options: ["unclear", "misclear", "declear"], correctAnswer: "unclear", explanation: "The prefix 'un-' correctly forms the negative adjective 'unclear'; 'misclear' and 'declear' are not real English words."),
             ExerciseItem(prompt: "He ___ the window yesterday.", options: ["break", "broke", "broken"], correctAnswer: "broke", explanation: "The past tense verb 'broke' is grammatically required here, referring to an action completed in the past ('yesterday')."),
             ExerciseItem(prompt: "She is a very ___ person.", options: ["help", "helpful", "helping"], correctAnswer: "helpful", explanation: "The adjective 'helpful' logically describes a person's character traits, indicating someone who is willing to assist others."),
             ExerciseItem(prompt: "The movie was ___.", options: ["bore", "bored", "boring"], correctAnswer: "boring", explanation: "The adjective 'boring' describes the movie as uninteresting or dull."),
