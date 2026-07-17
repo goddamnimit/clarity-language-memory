@@ -8,6 +8,7 @@ struct OnboardingView: View {
     @State private var name = ""
     @State private var selectedLanguage: AppLanguage
     @State private var showBaselineAssessment = false
+    @FocusState private var nameFieldFocused: Bool
 
     init(isPresented: Binding<Bool>) {
         self._isPresented = isPresented
@@ -25,6 +26,9 @@ struct OnboardingView: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
             .animation(.easeInOut, value: currentPage)
+            .onChange(of: currentPage) {
+                if currentPage != 2 { nameFieldFocused = false }
+            }
         }
         .background(Color.systemBackground.ignoresSafeArea())
         #else
@@ -236,6 +240,7 @@ struct OnboardingView: View {
                 .padding(.top, 12)
 
             TextField("Enter your name", text: $name)
+                .focused($nameFieldFocused)
                 .font(.system(size: 18, design: .rounded))
                 .multilineTextAlignment(.center)
                 .padding()
