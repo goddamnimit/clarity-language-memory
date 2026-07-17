@@ -651,87 +651,87 @@ struct ChineseFunctionalSkillsExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将小梅在加州制作传统热奶茶（Chai）的步骤按正确顺序排列：",
-                options: ["用滤网将茶汤滤入杯中，趁热饮用。 | 将水烧开，加入磨碎的生姜和豆蔻。 | 加入牛奶，让奶茶再次沸腾一次。 | 放入红茶叶，用小火煮2-3分钟。"],
-                correctAnswer: "将水烧开，加入磨碎的生姜 and 豆蔻。 | 放入红茶叶，用小火煮2-3分钟。 | 加入牛奶，让奶茶再次沸腾一次。 | 用滤网将茶汤滤入杯中，趁热饮用。",
-                explanation: "Step by step spiced tea brewing logic."
+                prompt: "请将小梅制作蒜蓉西兰花的步骤按正确顺序排列：",
+                options: ["将西兰花掰成小朵洗净", "锅中烧开水，加少许盐和油，焯烫西兰花一分钟捞出", "热锅倒油，爆香蒜末", "倒入焯好的西兰花大火翻炒", "加盐和少许蚝油调味出锅"],
+                correctAnswer: "将西兰花掰成小朵洗净 | 锅中烧开水，加少许盐和油，焯烫西兰花一分钟捞出 | 热锅倒油，爆香蒜末 | 倒入焯好的西兰花大火翻炒 | 加盐和少许蚝油调味出锅",
+                explanation: "Blanching before stir-frying keeps the broccoli bright and crisp."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将伟强煮巴马香米（Basmati Rice）的步骤按正确顺序排列：",
-                options: ["将香米在冷水中浸泡20分钟。 | 用叉子轻轻搅拌米饭，让多余的蒸汽散发出来。 | 用清水轻轻淘洗香米2-3次。 | 锅中加水烧开，放入香米，盖上锅盖用小火焖煮12分钟。"],
-                correctAnswer: "用清水轻轻淘洗香米2-3次。 | 将香米在冷水中浸泡20分钟。 | 锅中加水烧开，放入香米，盖上锅盖用小火焖煮12分钟。 | 用叉子轻轻搅拌米饭，让多余的蒸汽散发出来。",
-                explanation: "Washing, soaking, cooking, and fluffing rice."
+                prompt: "请将伟强制作木须肉的步骤按正确顺序排列：",
+                options: ["猪肉切丝用酱油和淀粉腌制", "鸡蛋打散炒成蛋碎盛出", "热锅下油滑炒肉丝至变色", "加入黑木耳、黄花菜和葱丝翻炒", "倒入炒蛋碎和调味料炒匀出锅"],
+                correctAnswer: "猪肉切丝用酱油和淀粉腌制 | 鸡蛋打散炒成蛋碎盛出 | 热锅下油滑炒肉丝至变色 | 加入黑木耳、黄花菜和葱丝翻炒 | 倒入炒蛋碎和调味料炒匀出锅",
+                explanation: "Marinating, then cooking egg and pork separately before combining."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作印度黄豆羹（Dal Tadka）的步骤按正确顺序排列：",
-                options: ["将煮好的黄豆中倒入做好的香辣油，并撒上香菜碎。 | 将黄豆放入压力锅中，加入水、姜黄粉和盐，压3声汽笛。 | 在煎锅中加热酥油（Ghee），炒香孜然、大蒜、洋葱和西红柿。 | 将黄豆仔细清洗干净。"],
-                correctAnswer: "将黄豆仔细清洗干净。 | 将黄豆放入压力锅中，加入水、姜黄粉和盐，压3声汽笛。 | 在煎锅中加热酥油（Ghee），炒香孜然、大蒜、洋葱和西红柿。 | 将煮好的黄豆中倒入做好的香辣油，并撒上香菜碎。",
-                explanation: "Dal prep, boiling, tadka seasoning, and combining."
+                prompt: "请将制作宫保鸡丁的步骤按正确顺序排列：",
+                options: ["鸡胸肉切丁用酱油和淀粉腌制", "锅中热油爆香干辣椒和花椒", "放入鸡丁大火炒至变色", "加入黄瓜丁和花生米翻炒", "倒入调好的宫保酱汁炒匀收汁出锅"],
+                correctAnswer: "鸡胸肉切丁用酱油和淀粉腌制 | 锅中热油爆香干辣椒和花椒 | 放入鸡丁大火炒至变色 | 加入黄瓜丁和花生米翻炒 | 倒入调好的宫保酱汁炒匀收汁出锅",
+                explanation: "Aromatics first, then protein, vegetables, and sauce last to finish."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作炒土豆花菜（Aloo Gobi）的步骤按正确顺序排列：",
-                options: ["将土豆和花花菜清洗干净并切成均匀的小块。 | 锅中热油，放入孜然，然后将土豆和花菜连同调料一起翻炒。 | 盖上锅盖，用小火焖煮至蔬菜变软。 | 出锅前撒上印度葛拉姆马萨拉粉和新鲜香菜。"],
-                correctAnswer: "将土豆和花花菜清洗干净并切成均匀的小块。 | 锅中热油，放入孜然，然后将土豆和花菜连同调料一起翻炒。 | 盖上锅盖，用小火焖煮至蔬菜变软。 | 出锅前撒上印度葛拉姆马萨拉粉和新鲜香菜。",
-                explanation: "Sautéing, steaming, and finishing vegetables."
+                prompt: "请将制作麻婆豆腐的步骤按正确顺序排列：",
+                options: ["豆腐切块用盐水焯烫去豆腥味", "锅中热油炒香豆瓣酱和肉末", "加入蒜末姜末和花椒粉炒香", "倒入豆腐块和适量高汤轻轻推匀煮两分钟", "用水淀粉勾芡撒上葱花出锅"],
+                correctAnswer: "豆腐切块用盐水焯烫去豆腥味 | 锅中热油炒香豆瓣酱和肉末 | 加入蒜末姜末和花椒粉炒香 | 倒入豆腐块和适量高汤轻轻推匀煮两分钟 | 用水淀粉勾芡撒上葱花出锅",
+                explanation: "Blanch the tofu, build the aromatic base, simmer, then thicken."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作手工烙饼（Roti/Chapati）的步骤按正确顺序排列：",
-                options: ["加热平底锅，将擀好的面饼两面各煎至微熟。 | 在面粉中加水揉成面团，静置15分钟。 | 取一小块面团揉圆，用擀面杖擀成薄圆饼。 | 将煎过的面饼直接放在火上烤至膨胀，抹上酥油。"],
-                correctAnswer: "在面粉中加水揉成面团，静置15分钟。 | 取一小块面团揉圆，用擀面杖擀成薄圆饼。 | 加热平底锅，将擀好的面饼两面各煎至微熟。 | 将煎过的面饼直接放在火上烤至膨胀，抹上酥油。",
-                explanation: "Kneading, rolling, dry griddle frying, and puffing over fire."
+                prompt: "请将制作糖醋里脊的步骤按正确顺序排列：",
+                options: ["猪里脊切块用盐和料酒腌制", "裹上淀粉糊后下油锅炸至金黄捞出", "锅中留底油炒香糖醋汁料", "倒入炸好的里脊块快速翻炒挂汁", "撒上白芝麻装盘"],
+                correctAnswer: "猪里脊切块用盐和料酒腌制 | 裹上淀粉糊后下油锅炸至金黄捞出 | 锅中留底油炒香糖醋汁料 | 倒入炸好的里脊块快速翻炒挂汁 | 撒上白芝麻装盘",
+                explanation: "Fry first, then coat the fried pork in the sweet-and-sour sauce."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作甜粗麦糊（Suji Halwa）的步骤按正确顺序排列：",
-                options: ["向粗麦中缓缓倒入白糖和热水混合的糖水。 | 在锅中加热酥油，将粗麦炒至金黄色并散发香气。 | 持续搅拌麦糊，直到其变得浓稠并不再粘锅。 | 撒上切碎的坚果和豆蔻粉，装盘趁热食用。"],
-                correctAnswer: "在锅中加热酥油，将粗麦炒至金黄色并散发香气。 | 向粗麦中缓缓倒入白糖和热水混合的糖水。 | 持续搅拌麦糊，直到其变得浓稠并不再粘锅。 | 撒上切碎的坚果和豆蔻粉，装盘趁热食用。",
-                explanation: "Browning wheat grains, boiling with sweet liquid, thickening, and serving."
+                prompt: "请将制作清蒸鱼的步骤按正确顺序排列：",
+                options: ["将鱼清洗干净并在鱼身两面划刀", "鱼身抹盐并铺上姜片放入蒸锅", "大火蒸八到十分钟至鱼肉刚熟", "倒掉蒸出的汤汁并铺上葱丝", "淋上热油和蒸鱼豉油即可上桌"],
+                correctAnswer: "将鱼清洗干净并在鱼身两面划刀 | 鱼身抹盐并铺上姜片放入蒸锅 | 大火蒸八到十分钟至鱼肉刚熟 | 倒掉蒸出的汤汁并铺上葱丝 | 淋上热油和蒸鱼豉油即可上桌",
+                explanation: "Steam just until done, then finish with hot oil and soy sauce."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作印度大米牛奶布丁（Kheer）的步骤按正确顺序排列：",
-                options: ["在牛奶中放入泡好的巴马香米，用小火慢熬。 | 将全脂牛奶倒入厚底大锅中烧开。 | 煮至米粒软烂、牛奶蒸发减少一半，然后加入白糖。 | 撒上豆蔻粉和切碎的开心果、杏仁，冷藏后食用。"],
-                correctAnswer: "将全脂牛奶倒入厚底大锅中烧开。 | 在牛奶中放入泡好的巴马香米，用小火慢熬。 | 煮至米粒软烂、牛奶蒸发减少一半，然后加入白糖。 | 撒上豆蔻粉和切碎的开心果、杏仁，冷藏后食用。",
-                explanation: "Milk heating, rice adding, cooking to reduce, sweetening, and garnishing."
+                prompt: "请将制作蛋花汤的步骤按正确顺序排列：",
+                options: ["锅中加入清水或高汤烧开", "加入盐和少许胡椒粉调味", "用水淀粉勾成薄芡", "将打散的蛋液缓缓淋入锅中划成蛋花", "撒上葱花和香油出锅"],
+                correctAnswer: "锅中加入清水或高汤烧开 | 加入盐和少许胡椒粉调味 | 用水淀粉勾成薄芡 | 将打散的蛋液缓缓淋入锅中划成蛋花 | 撒上葱花和香油出锅",
+                explanation: "Thicken the broth before streaming in the egg for silky ribbons."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作蔬菜酸奶（Raita）的步骤按正确顺序排列：",
-                options: ["将原味酸奶在一只大碗中搅拌至柔滑状态。 | 加入黄瓜丝、少许盐和烤孜然粉。 | 充分搅拌均匀，放入冰箱冷藏。 | 饮用前在表面点缀几片新鲜薄荷叶。"],
-                correctAnswer: "将原味酸奶在一只大碗中搅拌至柔滑状态。 | 加入黄瓜丝、少许盐和烤孜然粉。 | 充分搅拌均匀，放入冰箱冷藏。 | 饮用前在表面点缀几片新鲜薄荷叶。",
-                explanation: "Plain yogurt prep, veggie infusion, cooling, and serving."
+                prompt: "请将制作干煸四季豆的步骤按正确顺序排列：",
+                options: ["四季豆洗净掰成段", "热锅倒油将四季豆炸至表皮起皱捞出", "锅中留底油炒香肉末和姜蒜末", "倒入四季豆和调味料大火翻炒", "炒匀入味后出锅装盘"],
+                correctAnswer: "四季豆洗净掰成段 | 热锅倒油将四季豆炸至表皮起皱捞出 | 锅中留底油炒香肉末和姜蒜末 | 倒入四季豆和调味料大火翻炒 | 炒匀入味后出锅装盘",
+                explanation: "Dry-frying the beans first gives the wrinkled texture before seasoning."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作柠檬苏打水（Shikanji）的步骤按正确顺序排列：",
-                options: ["在杯中倒入冷水，挤入新鲜柠檬汁。 | 加入白糖、黑盐（Black Salt）和烤孜然粉。 | 搅拌均匀直到白糖完全溶解。 | 加入冰块，用薄荷叶装饰。"],
-                correctAnswer: "在杯中倒入冷水，挤入新鲜柠檬汁。 | 加入白糖、黑盐（Black Salt）和烤孜然粉。 | 搅拌均匀直到白糖完全溶解。 | 加入冰块，用薄荷叶装饰。",
-                explanation: "Drink prep logic: mix ingredients, stir, add ice."
+                prompt: "请将制作韭菜盒子的步骤按正确顺序排列：",
+                options: ["韭菜洗净切碎与炒好的鸡蛋碎混合调味", "面粉加水揉成软面团静置", "将面团分成小剂子擀成薄圆皮", "包入韭菜鸡蛋馅料捏紧边缘成半月形", "平底锅刷油将盒子两面煎至金黄"],
+                correctAnswer: "韭菜洗净切碎与炒好的鸡蛋碎混合调味 | 面粉加水揉成软面团静置 | 将面团分成小剂子擀成薄圆皮 | 包入韭菜鸡蛋馅料捏紧边缘成半月形 | 平底锅刷油将盒子两面煎至金黄",
+                explanation: "Filling and dough are prepared separately, then assembled and pan-fried."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作燕麦粥（Oats Porridge）的步骤按正确顺序排列：",
-                options: ["在小锅中加热牛奶，然后倒入生燕麦片。 | 用小火煮5-7分钟，直到燕麦完全变软。 | 关火关炉子，调入蜂蜜或白糖。 | 撒上苹果丁和烤扁桃体碎，装碗食用。"],
-                correctAnswer: "在小锅中加热牛奶，然后倒入生燕麦片。 | 用小火煮5-7分钟，直到燕麦完全变软。 | 关火关炉子，调入蜂蜜或白糖。 | 撒上苹果丁和烤扁桃体碎，装碗食用。",
-                explanation: "Porridge base prep, boiling, sweetening, and topping."
+                prompt: "请将制作白切鸡的步骤按正确顺序排列：",
+                options: ["整鸡清洗干净放入加了姜葱的清水锅中", "大火烧开后转小火保持水微沸浸煮", "关火加盖焖二十分钟至鸡肉刚熟", "将鸡捞出立刻放入冰水中浸泡至凉", "斩件装盘配姜葱蘸料享用"],
+                correctAnswer: "整鸡清洗干净放入加了姜葱的清水锅中 | 大火烧开后转小火保持水微沸浸煮 | 关火加盖焖二十分钟至鸡肉刚熟 | 将鸡捞出立刻放入冰水中浸泡至凉 | 斩件装盘配姜葱蘸料享用",
+                explanation: "The ice-water shock after poaching keeps the skin tender and firm."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作印度炒扁米（Poha）的步骤按正确顺序排列：",
-                options: ["将扁米用水冲洗并沥干，放在一旁备用。 | 在炒锅中热油，爆香芥末籽、咖喱叶、花生米和洋葱。 | 倒入扁米、姜黄粉和盐，盖上锅盖焖2分钟。 | 挤入柠檬汁，撒上香菜叶，装盘即可。"],
-                correctAnswer: "将扁米用水冲洗并沥干，放在一旁备用。 | 在炒锅中热油，爆香芥末籽、咖喱叶、花生米和洋葱。 | 倒入扁米、姜黄粉和盐，盖上锅盖焖2分钟。 | 挤入柠檬汁，撒上香菜叶，装盘即可。",
-                explanation: "Traditional Poha recipe progression."
+                prompt: "请将制作腊肠炒饭的步骤按正确顺序排列：",
+                options: ["腊肠切片，隔夜米饭提前打散备用", "热锅倒油煎香腊肠片盛出", "锅中打入鸡蛋炒散", "倒入米饭和腊肠大火翻炒均匀", "加入葱花和少许生抽调味出锅"],
+                correctAnswer: "腊肠切片，隔夜米饭提前打散备用 | 热锅倒油煎香腊肠片盛出 | 锅中打入鸡蛋炒散 | 倒入米饭和腊肠大火翻炒均匀 | 加入葱花和少许生抽调味出锅",
+                explanation: "Rendering the sausage first flavors the oil used for the rest of the fry."
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "请将制作水煮蛋（Boiled Egg）的步骤按正确顺序排列：",
-                options: ["将鸡蛋放入冷水锅中，水面需高出鸡蛋1英寸。 | 水烧开后关火，盖上锅盖让鸡蛋在热水中浸泡10分钟。 | 将鸡蛋捞出立即放入冰水中冷却2分钟。 | 剥去蛋壳，将鸡蛋对半切开。"],
-                correctAnswer: "将鸡蛋放入冷水锅中，水面需高出鸡蛋1英寸。 | 水烧开后关火，盖上锅盖让鸡蛋在热水中浸泡10分钟。 | 将鸡蛋捞出立即放入冰水中冷却2分钟. | 剥去蛋壳，将鸡蛋对半切开。",
-                explanation: "Boiling eggs safely using the boil-and-cover method."
+                prompt: "请将制作蚝油生菜的步骤按正确顺序排列：",
+                options: ["生菜洗净沥干备用", "锅中烧开水加少许油焯烫生菜十几秒捞出装盘", "小锅中放入蚝油、生抽和少许糖加热调成酱汁", "将热酱汁均匀淋在生菜上", "撒上蒜蓉或炸蒜片即可享用"],
+                correctAnswer: "生菜洗净沥干备用 | 锅中烧开水加少许油焯烫生菜十几秒捞出装盘 | 小锅中放入蚝油、生抽和少许糖加热调成酱汁 | 将热酱汁均匀淋在生菜上 | 撒上蒜蓉或炸蒜片即可享用",
+                explanation: "A quick blanch keeps the lettuce crisp before the sauce is poured on."
             )
         
         ]
