@@ -186,7 +186,7 @@ struct PunjabiFunctionalSkillsExerciseData {
                 prompt: "ਮੀਨੂ: ਚਾਕਲੇਟ ਆਈਸ ਕਰੀਮ $4.00, ਐਪਲ ਪਾਈ $5.00, ਪਾਈ $1.50 ਵਿੱਚ ਵਨੀਲਾ ਆਈਸ ਕਰੀਮ ਸ਼ਾਮਲ ਕਰੋ। ਵਨੀਲਾ ਆਈਸ ਕ੍ਰੀਮ ਦੇ ਨਾਲ ਐਪਲ ਪਾਈ ਕਿੰਨੀ ਹੈ?",
                 options: ["$5.00", "$6.50", "$9.00", "$4.00"],
                 correctAnswer: "$6.50",
-                explanation: ""
+                explanation: "ਐਪਲ ਪਾਈ ਦੀ ਕੀਮਤ $5.00 ਹੈ ਅਤੇ ਵਨੀਲਾ ਆਈਸ ਕਰੀਮ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਹੋਰ $1.50 ਲੱਗਦੇ ਹਨ, ਇਸ ਲਈ $5.00 ਜਮ੍ਹਾਂ $1.50 ਬਰਾਬਰ $6.50 ਹੁੰਦਾ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
@@ -297,7 +297,7 @@ struct PunjabiFunctionalSkillsExerciseData {
                 prompt: "ਜਿਮ ਮੈਂਬਰਸ਼ਿਪ: ਸਲਾਨਾ ਫੀਸ: $120.00। ਮਹੀਨਾਵਾਰ ਫੀਸ: $10.00। ਸਾਲਾਨਾ ਫੀਸ ਕਿੰਨੀ ਹੈ?",
                 options: ["$10.00", "$120.00", "$130.00", "$12.00"],
                 correctAnswer: "$120.00",
-                explanation: ""
+                explanation: "ਸਲਾਨਾ ਫੀਸ ਸਿੱਧੇ ਤੌਰ 'ਤੇ $120.00 ਦੱਸੀ ਗਈ ਹੈ; ਮਹੀਨਾਵਾਰ $10.00 ਦੀ ਫੀਸ ਇੱਕ ਵੱਖਰਾ ਭੁਗਤਾਨ ਵਿਕਲਪ ਹੈ ਅਤੇ ਇਸ ਸਵਾਲ ਦੇ ਜਵਾਬ ਦੀ ਗਣਨਾ ਦਾ ਹਿੱਸਾ ਨਹੀਂ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
@@ -487,7 +487,7 @@ struct PunjabiFunctionalSkillsExerciseData {
     private static let cookingSteps = Exercise(
         id: UUID(),
         title: "ਖਾਣਾ ਪਕਾਉਣ ਦੇ ਪੜਾਅ",
-        instructions: "ਖਾਣਾ ਪਕਾਉਣ ਦੇ ਪੜਾਵਾਂ ਨੂੰ ਸਹੀ ਕ੍ਰม ਵਿੱਚ ਵਿਵਸਥਿਤ ਕਰੋ।",
+        instructions: "ਖਾਣਾ ਪਕਾਉਣ ਦੇ ਪੜਾਵਾਂ ਨੂੰ ਸਹੀ ਕ੍ਰਮ ਵਿੱਚ ਵਿਵਸਥਿਤ ਕਰੋ।",
         section: .functionalSkills,
         type: .sequencing,
         trackedType: .sequencing,
@@ -495,493 +495,493 @@ struct PunjabiFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 1):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਚਾਹ ਬਣਾਉਣ ਦੇ ਕਦਮ ਸਹੀ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਾਣੀ ਉਬਾਲੋ", "ਪੱਤੀ ਅਤੇ ਦੁੱਧ ਪਾਓ", "ਛਾਣ ਕੇ ਕੱਪ ਵਿੱਚ ਪਾਓ"],
+                correctAnswer: "ਪਾਣੀ ਉਬਾਲੋ | ਪੱਤੀ ਅਤੇ ਦੁੱਧ ਪਾਓ | ਛਾਣ ਕੇ ਕੱਪ ਵਿੱਚ ਪਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਾਣੀ ਉਬਾਲੋ, ਪੱਤੀ ਅਤੇ ਦੁੱਧ ਪਾਓ, ਛਾਣ ਕੇ ਕੱਪ ਵਿੱਚ ਪਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 2):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਰੋਟੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਆਟਾ ਗੁੰਨ੍ਹੋ", "ਪੇੜਾ ਬਣਾ ਕੇ ਵੇਲੋ", "ਤਵੇ 'ਤੇ ਸੇਕੋ"],
+                correctAnswer: "ਆਟਾ ਗੁੰਨ੍ਹੋ | ਪੇੜਾ ਬਣਾ ਕੇ ਵੇਲੋ | ਤਵੇ 'ਤੇ ਸੇਕੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਆਟਾ ਗੁੰਨ੍ਹੋ, ਪੇੜਾ ਬਣਾ ਕੇ ਵੇਲੋ, ਤਵੇ 'ਤੇ ਸੇਕੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 3):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਲੱਸੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦਹੀਂ ਭਾਂਡੇ ਵਿੱਚ ਪਾਓ", "ਪਾਣੀ ਅਤੇ ਖੰਡ ਮਿਲਾ ਕੇ ਰਿੜਕੋ", "ਗਲਾਸ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਦਹੀਂ ਭਾਂਡੇ ਵਿੱਚ ਪਾਓ | ਪਾਣੀ ਅਤੇ ਖੰਡ ਮਿਲਾ ਕੇ ਰਿੜਕੋ | ਗਲਾਸ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦਹੀਂ ਭਾਂਡੇ ਵਿੱਚ ਪਾਓ, ਪਾਣੀ ਅਤੇ ਖੰਡ ਮਿਲਾ ਕੇ ਰਿੜਕੋ, ਗਲਾਸ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 4):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਹੱਥ ਧੋਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਹੱਥ ਪਾਣੀ ਨਾਲ ਗਿੱਲੇ ਕਰੋ", "ਸਾਬਣ ਲਗਾ ਕੇ ਮਲੋ", "ਪਾਣੀ ਨਾਲ ਧੋ ਕੇ ਤੌਲੀਏ ਨਾਲ ਪੂੰਝੋ"],
+                correctAnswer: "ਹੱਥ ਪਾਣੀ ਨਾਲ ਗਿੱਲੇ ਕਰੋ | ਸਾਬਣ ਲਗਾ ਕੇ ਮਲੋ | ਪਾਣੀ ਨਾਲ ਧੋ ਕੇ ਤੌਲੀਏ ਨਾਲ ਪੂੰਝੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਹੱਥ ਪਾਣੀ ਨਾਲ ਗਿੱਲੇ ਕਰੋ, ਸਾਬਣ ਲਗਾ ਕੇ ਮਲੋ, ਪਾਣੀ ਨਾਲ ਧੋ ਕੇ ਤੌਲੀਏ ਨਾਲ ਪੂੰਝੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 5):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦੰਦ ਸਾਫ਼ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੁਰਸ਼ 'ਤੇ ਪੇਸਟ ਲਗਾਓ", "ਦੰਦਾਂ ਨੂੰ ਚੰਗੀ ਤਰ੍ਹਾਂ ਬੁਰਸ਼ ਕਰੋ", "ਪਾਣੀ ਨਾਲ ਕੁਰਲੀ ਕਰੋ"],
+                correctAnswer: "ਬੁਰਸ਼ 'ਤੇ ਪੇਸਟ ਲਗਾਓ | ਦੰਦਾਂ ਨੂੰ ਚੰਗੀ ਤਰ੍ਹਾਂ ਬੁਰਸ਼ ਕਰੋ | ਪਾਣੀ ਨਾਲ ਕੁਰਲੀ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੁਰਸ਼ 'ਤੇ ਪੇਸਟ ਲਗਾਓ, ਦੰਦਾਂ ਨੂੰ ਚੰਗੀ ਤਰ੍ਹਾਂ ਬੁਰਸ਼ ਕਰੋ, ਪਾਣੀ ਨਾਲ ਕੁਰਲੀ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 6):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕੱਪੜੇ ਧੋਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਕੱਪੜੇ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ", "ਡਿਟਰਜੈਂਟ ਪਾ ਕੇ ਮਸ਼ੀਨ ਚਲਾਓ", "ਧੋਤੇ ਕੱਪੜੇ ਸੁੱਕਣੇ ਪਾਓ"],
+                correctAnswer: "ਕੱਪੜੇ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ | ਡਿਟਰਜੈਂਟ ਪਾ ਕੇ ਮਸ਼ੀਨ ਚਲਾਓ | ਧੋਤੇ ਕੱਪੜੇ ਸੁੱਕਣੇ ਪਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਕੱਪੜੇ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ, ਡਿਟਰਜੈਂਟ ਪਾ ਕੇ ਮਸ਼ੀਨ ਚਲਾਓ, ਧੋਤੇ ਕੱਪੜੇ ਸੁੱਕਣੇ ਪਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 7):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਚਿੱਠੀ ਭੇਜਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਚਿੱਠੀ ਲਿਖੋ", "ਲਿਫ਼ਾਫ਼ੇ ਵਿੱਚ ਪਾ ਕੇ ਟਿਕਟ ਲਗਾਓ", "ਡਾਕ ਡੱਬੇ ਵਿੱਚ ਪਾਓ"],
+                correctAnswer: "ਚਿੱਠੀ ਲਿਖੋ | ਲਿਫ਼ਾਫ਼ੇ ਵਿੱਚ ਪਾ ਕੇ ਟਿਕਟ ਲਗਾਓ | ਡਾਕ ਡੱਬੇ ਵਿੱਚ ਪਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਚਿੱਠੀ ਲਿਖੋ, ਲਿਫ਼ਾਫ਼ੇ ਵਿੱਚ ਪਾ ਕੇ ਟਿਕਟ ਲਗਾਓ, ਡਾਕ ਡੱਬੇ ਵਿੱਚ ਪਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 8):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਗੁਰਦੁਆਰੇ ਜਾਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਿਰ ਢੱਕੋ ਅਤੇ ਜੁੱਤੀ ਉਤਾਰੋ", "ਹੱਥ ਧੋ ਕੇ ਅੰਦਰ ਜਾ ਕੇ ਮੱਥਾ ਟੇਕੋ", "ਬੈਠ ਕੇ ਕੀਰਤਨ ਸੁਣੋ", "ਲੰਗਰ ਛਕੋ"],
+                correctAnswer: "ਸਿਰ ਢੱਕੋ ਅਤੇ ਜੁੱਤੀ ਉਤਾਰੋ | ਹੱਥ ਧੋ ਕੇ ਅੰਦਰ ਜਾ ਕੇ ਮੱਥਾ ਟੇਕੋ | ਬੈਠ ਕੇ ਕੀਰਤਨ ਸੁਣੋ | ਲੰਗਰ ਛਕੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਿਰ ਢੱਕੋ ਅਤੇ ਜੁੱਤੀ ਉਤਾਰੋ, ਹੱਥ ਧੋ ਕੇ ਅੰਦਰ ਜਾ ਕੇ ਮੱਥਾ ਟੇਕੋ, ਬੈਠ ਕੇ ਕੀਰਤਨ ਸੁਣੋ, ਲੰਗਰ ਛਕੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 9):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਵਾਈ ਲੈਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਡਾਕਟਰ ਦੀ ਪਰਚੀ ਪੜ੍ਹੋ", "ਸਹੀ ਮਾਤਰਾ ਵਿੱਚ ਦਵਾਈ ਕੱਢੋ", "ਪਾਣੀ ਨਾਲ ਦਵਾਈ ਲਓ"],
+                correctAnswer: "ਡਾਕਟਰ ਦੀ ਪਰਚੀ ਪੜ੍ਹੋ | ਸਹੀ ਮਾਤਰਾ ਵਿੱਚ ਦਵਾਈ ਕੱਢੋ | ਪਾਣੀ ਨਾਲ ਦਵਾਈ ਲਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਡਾਕਟਰ ਦੀ ਪਰਚੀ ਪੜ੍ਹੋ, ਸਹੀ ਮਾਤਰਾ ਵਿੱਚ ਦਵਾਈ ਕੱਢੋ, ਪਾਣੀ ਨਾਲ ਦਵਾਈ ਲਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 10):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਬਜ਼ੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਬਜ਼ੀ ਧੋ ਕੇ ਕੱਟੋ", "ਪਿਆਜ਼ ਅਤੇ ਮਸਾਲੇ ਭੁੰਨੋ", "ਸਬਜ਼ੀ ਪਾ ਕੇ ਪਕਾਓ"],
+                correctAnswer: "ਸਬਜ਼ੀ ਧੋ ਕੇ ਕੱਟੋ | ਪਿਆਜ਼ ਅਤੇ ਮਸਾਲੇ ਭੁੰਨੋ | ਸਬਜ਼ੀ ਪਾ ਕੇ ਪਕਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਬਜ਼ੀ ਧੋ ਕੇ ਕੱਟੋ, ਪਿਆਜ਼ ਅਤੇ ਮਸਾਲੇ ਭੁੰਨੋ, ਸਬਜ਼ੀ ਪਾ ਕੇ ਪਕਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 11):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਾਲ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦਾਲ ਧੋ ਕੇ ਪਾਣੀ ਵਿੱਚ ਉਬਾਲੋ", "ਤੜਕਾ ਤਿਆਰ ਕਰੋ", "ਤੜਕਾ ਦਾਲ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਦਾਲ ਧੋ ਕੇ ਪਾਣੀ ਵਿੱਚ ਉਬਾਲੋ | ਤੜਕਾ ਤਿਆਰ ਕਰੋ | ਤੜਕਾ ਦਾਲ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦਾਲ ਧੋ ਕੇ ਪਾਣੀ ਵਿੱਚ ਉਬਾਲੋ, ਤੜਕਾ ਤਿਆਰ ਕਰੋ, ਤੜਕਾ ਦਾਲ ਵਿੱਚ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 12):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਾਗ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਾਗ ਧੋ ਕੇ ਕੱਟੋ", "ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲ ਕੇ ਘੋਟੋ", "ਤੜਕਾ ਲਾ ਕੇ ਮੱਕੀ ਦੀ ਰੋਟੀ ਨਾਲ ਪਰੋਸੋ"],
+                correctAnswer: "ਸਾਗ ਧੋ ਕੇ ਕੱਟੋ | ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲ ਕੇ ਘੋਟੋ | ਤੜਕਾ ਲਾ ਕੇ ਮੱਕੀ ਦੀ ਰੋਟੀ ਨਾਲ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਾਗ ਧੋ ਕੇ ਕੱਟੋ, ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲ ਕੇ ਘੋਟੋ, ਤੜਕਾ ਲਾ ਕੇ ਮੱਕੀ ਦੀ ਰੋਟੀ ਨਾਲ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 13):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਪਰੌਂਠਾ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਆਟਾ ਗੁੰਨ੍ਹ ਕੇ ਪੇੜਾ ਬਣਾਓ", "ਭਰਾਵਟ ਭਰ ਕੇ ਵੇਲੋ", "ਤਵੇ 'ਤੇ ਘਿਓ ਲਾ ਕੇ ਸੇਕੋ"],
+                correctAnswer: "ਆਟਾ ਗੁੰਨ੍ਹ ਕੇ ਪੇੜਾ ਬਣਾਓ | ਭਰਾਵਟ ਭਰ ਕੇ ਵੇਲੋ | ਤਵੇ 'ਤੇ ਘਿਓ ਲਾ ਕੇ ਸੇਕੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਆਟਾ ਗੁੰਨ੍ਹ ਕੇ ਪੇੜਾ ਬਣਾਓ, ਭਰਾਵਟ ਭਰ ਕੇ ਵੇਲੋ, ਤਵੇ 'ਤੇ ਘਿਓ ਲਾ ਕੇ ਸੇਕੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 14):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਖੀਰ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦੁੱਧ ਉਬਾਲੋ", "ਧੋਤੇ ਚੌਲ ਪਾ ਕੇ ਹੌਲੀ ਅੱਗ 'ਤੇ ਪਕਾਓ", "ਖੰਡ ਅਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਦੁੱਧ ਉਬਾਲੋ | ਧੋਤੇ ਚੌਲ ਪਾ ਕੇ ਹੌਲੀ ਅੱਗ 'ਤੇ ਪਕਾਓ | ਖੰਡ ਅਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦੁੱਧ ਉਬਾਲੋ, ਧੋਤੇ ਚੌਲ ਪਾ ਕੇ ਹੌਲੀ ਅੱਗ 'ਤੇ ਪਕਾਓ, ਖੰਡ ਅਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 15):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਹੀਂ ਜਮਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦੁੱਧ ਉਬਾਲ ਕੇ ਕੋਸਾ ਹੋਣ ਦਿਓ", "ਜਾਗ ਲਾ ਕੇ ਹਿਲਾਓ", "ਢੱਕ ਕੇ ਰਾਤ ਭਰ ਰੱਖੋ"],
+                correctAnswer: "ਦੁੱਧ ਉਬਾਲ ਕੇ ਕੋਸਾ ਹੋਣ ਦਿਓ | ਜਾਗ ਲਾ ਕੇ ਹਿਲਾਓ | ਢੱਕ ਕੇ ਰਾਤ ਭਰ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦੁੱਧ ਉਬਾਲ ਕੇ ਕੋਸਾ ਹੋਣ ਦਿਓ, ਜਾਗ ਲਾ ਕੇ ਹਿਲਾਓ, ਢੱਕ ਕੇ ਰਾਤ ਭਰ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 16):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਚੌਲ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਚੌਲ ਧੋਵੋ", "ਪਾਣੀ ਪਾ ਕੇ ਉਬਾਲੋ", "ਪਾਣੀ ਸੁੱਕਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ"],
+                correctAnswer: "ਚੌਲ ਧੋਵੋ | ਪਾਣੀ ਪਾ ਕੇ ਉਬਾਲੋ | ਪਾਣੀ ਸੁੱਕਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਚੌਲ ਧੋਵੋ, ਪਾਣੀ ਪਾ ਕੇ ਉਬਾਲੋ, ਪਾਣੀ ਸੁੱਕਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 17):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਲਾਦ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਬਜ਼ੀਆਂ ਧੋਵੋ", "ਖੀਰਾ, ਟਮਾਟਰ ਅਤੇ ਪਿਆਜ਼ ਕੱਟੋ", "ਲੂਣ ਅਤੇ ਨਿੰਬੂ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਸਬਜ਼ੀਆਂ ਧੋਵੋ | ਖੀਰਾ, ਟਮਾਟਰ ਅਤੇ ਪਿਆਜ਼ ਕੱਟੋ | ਲੂਣ ਅਤੇ ਨਿੰਬੂ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਬਜ਼ੀਆਂ ਧੋਵੋ, ਖੀਰਾ, ਟਮਾਟਰ ਅਤੇ ਪਿਆਜ਼ ਕੱਟੋ, ਲੂਣ ਅਤੇ ਨਿੰਬੂ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 18):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਨਹਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਾਣੀ ਦਾ ਤਾਪਮਾਨ ਠੀਕ ਕਰੋ", "ਸਾਬਣ ਲਗਾ ਕੇ ਸਰੀਰ ਧੋਵੋ", "ਤੌਲੀਏ ਨਾਲ ਸਰੀਰ ਪੂੰਝੋ"],
+                correctAnswer: "ਪਾਣੀ ਦਾ ਤਾਪਮਾਨ ਠੀਕ ਕਰੋ | ਸਾਬਣ ਲਗਾ ਕੇ ਸਰੀਰ ਧੋਵੋ | ਤੌਲੀਏ ਨਾਲ ਸਰੀਰ ਪੂੰਝੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਾਣੀ ਦਾ ਤਾਪਮਾਨ ਠੀਕ ਕਰੋ, ਸਾਬਣ ਲਗਾ ਕੇ ਸਰੀਰ ਧੋਵੋ, ਤੌਲੀਏ ਨਾਲ ਸਰੀਰ ਪੂੰਝੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 19):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਵੇਰ ਦੀ ਰੁਟੀਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਉੱਠ ਕੇ ਮੂੰਹ-ਹੱਥ ਧੋਵੋ", "ਨਹਾ ਕੇ ਕੱਪੜੇ ਪਾਓ", "ਨਾਸ਼ਤਾ ਕਰੋ"],
+                correctAnswer: "ਉੱਠ ਕੇ ਮੂੰਹ-ਹੱਥ ਧੋਵੋ | ਨਹਾ ਕੇ ਕੱਪੜੇ ਪਾਓ | ਨਾਸ਼ਤਾ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਉੱਠ ਕੇ ਮੂੰਹ-ਹੱਥ ਧੋਵੋ, ਨਹਾ ਕੇ ਕੱਪੜੇ ਪਾਓ, ਨਾਸ਼ਤਾ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 20):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸੌਣ ਦੀ ਤਿਆਰੀ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦੰਦ ਸਾਫ਼ ਕਰੋ", "ਸੌਣ ਵਾਲੇ ਕੱਪੜੇ ਪਾਓ", "ਬੱਤੀ ਬੁਝਾ ਕੇ ਲੇਟ ਜਾਓ"],
+                correctAnswer: "ਦੰਦ ਸਾਫ਼ ਕਰੋ | ਸੌਣ ਵਾਲੇ ਕੱਪੜੇ ਪਾਓ | ਬੱਤੀ ਬੁਝਾ ਕੇ ਲੇਟ ਜਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦੰਦ ਸਾਫ਼ ਕਰੋ, ਸੌਣ ਵਾਲੇ ਕੱਪੜੇ ਪਾਓ, ਬੱਤੀ ਬੁਝਾ ਕੇ ਲੇਟ ਜਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 21):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਬੱਸ ਫੜਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੱਸ ਅੱਡੇ 'ਤੇ ਪਹੁੰਚੋ", "ਆਪਣੀ ਬੱਸ ਦਾ ਨੰਬਰ ਵੇਖ ਕੇ ਚੜ੍ਹੋ", "ਕਿਰਾਇਆ ਦੇ ਕੇ ਸੀਟ 'ਤੇ ਬੈਠੋ"],
+                correctAnswer: "ਬੱਸ ਅੱਡੇ 'ਤੇ ਪਹੁੰਚੋ | ਆਪਣੀ ਬੱਸ ਦਾ ਨੰਬਰ ਵੇਖ ਕੇ ਚੜ੍ਹੋ | ਕਿਰਾਇਆ ਦੇ ਕੇ ਸੀਟ 'ਤੇ ਬੈਠੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੱਸ ਅੱਡੇ 'ਤੇ ਪਹੁੰਚੋ, ਆਪਣੀ ਬੱਸ ਦਾ ਨੰਬਰ ਵੇਖ ਕੇ ਚੜ੍ਹੋ, ਕਿਰਾਇਆ ਦੇ ਕੇ ਸੀਟ 'ਤੇ ਬੈਠੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 22):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਡਾਕਟਰ ਕੋਲ ਜਾਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਮੁਲਾਕਾਤ ਦਾ ਸਮਾਂ ਬੁੱਕ ਕਰੋ", "ਸਮੇਂ 'ਤੇ ਕਲੀਨਿਕ ਪਹੁੰਚੋ", "ਡਾਕਟਰ ਨੂੰ ਆਪਣੀ ਤਕਲੀਫ਼ ਦੱਸੋ"],
+                correctAnswer: "ਮੁਲਾਕਾਤ ਦਾ ਸਮਾਂ ਬੁੱਕ ਕਰੋ | ਸਮੇਂ 'ਤੇ ਕਲੀਨਿਕ ਪਹੁੰਚੋ | ਡਾਕਟਰ ਨੂੰ ਆਪਣੀ ਤਕਲੀਫ਼ ਦੱਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਮੁਲਾਕਾਤ ਦਾ ਸਮਾਂ ਬੁੱਕ ਕਰੋ, ਸਮੇਂ 'ਤੇ ਕਲੀਨਿਕ ਪਹੁੰਚੋ, ਡਾਕਟਰ ਨੂੰ ਆਪਣੀ ਤਕਲੀਫ਼ ਦੱਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 23):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕਰਿਆਨਾ ਖਰੀਦਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਮਾਨ ਦੀ ਸੂਚੀ ਬਣਾਓ", "ਸਟੋਰ ਜਾ ਕੇ ਸਮਾਨ ਚੁਣੋ", "ਕਾਊਂਟਰ 'ਤੇ ਪੈਸੇ ਦਿਓ"],
+                correctAnswer: "ਸਮਾਨ ਦੀ ਸੂਚੀ ਬਣਾਓ | ਸਟੋਰ ਜਾ ਕੇ ਸਮਾਨ ਚੁਣੋ | ਕਾਊਂਟਰ 'ਤੇ ਪੈਸੇ ਦਿਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਮਾਨ ਦੀ ਸੂਚੀ ਬਣਾਓ, ਸਟੋਰ ਜਾ ਕੇ ਸਮਾਨ ਚੁਣੋ, ਕਾਊਂਟਰ 'ਤੇ ਪੈਸੇ ਦਿਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 24):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਫ਼ੋਨ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਫ਼ੋਨ ਚੁੱਕ ਕੇ ਨੰਬਰ ਲੱਭੋ", "ਨੰਬਰ ਮਿਲਾਓ", "ਗੱਲ ਕਰਕੇ ਫ਼ੋਨ ਰੱਖੋ"],
+                correctAnswer: "ਫ਼ੋਨ ਚੁੱਕ ਕੇ ਨੰਬਰ ਲੱਭੋ | ਨੰਬਰ ਮਿਲਾਓ | ਗੱਲ ਕਰਕੇ ਫ਼ੋਨ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਫ਼ੋਨ ਚੁੱਕ ਕੇ ਨੰਬਰ ਲੱਭੋ, ਨੰਬਰ ਮਿਲਾਓ, ਗੱਲ ਕਰਕੇ ਫ਼ੋਨ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 25):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਬਿਜਲੀ ਦਾ ਬਿੱਲ ਭਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬਿੱਲ ਦੀ ਰਕਮ ਵੇਖੋ", "ਭੁਗਤਾਨ ਦਾ ਤਰੀਕਾ ਚੁਣੋ", "ਪੈਸੇ ਭਰ ਕੇ ਰਸੀਦ ਸੰਭਾਲੋ"],
+                correctAnswer: "ਬਿੱਲ ਦੀ ਰਕਮ ਵੇਖੋ | ਭੁਗਤਾਨ ਦਾ ਤਰੀਕਾ ਚੁਣੋ | ਪੈਸੇ ਭਰ ਕੇ ਰਸੀਦ ਸੰਭਾਲੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬਿੱਲ ਦੀ ਰਕਮ ਵੇਖੋ, ਭੁਗਤਾਨ ਦਾ ਤਰੀਕਾ ਚੁਣੋ, ਪੈਸੇ ਭਰ ਕੇ ਰਸੀਦ ਸੰਭਾਲੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 26):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਪੌਦਾ ਲਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਮਿੱਟੀ ਵਿੱਚ ਟੋਆ ਪੁੱਟੋ", "ਪੌਦਾ ਰੱਖ ਕੇ ਮਿੱਟੀ ਪਾਓ", "ਪਾਣੀ ਦਿਓ"],
+                correctAnswer: "ਮਿੱਟੀ ਵਿੱਚ ਟੋਆ ਪੁੱਟੋ | ਪੌਦਾ ਰੱਖ ਕੇ ਮਿੱਟੀ ਪਾਓ | ਪਾਣੀ ਦਿਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਮਿੱਟੀ ਵਿੱਚ ਟੋਆ ਪੁੱਟੋ, ਪੌਦਾ ਰੱਖ ਕੇ ਮਿੱਟੀ ਪਾਓ, ਪਾਣੀ ਦਿਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 27):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਭਾਂਡੇ ਧੋਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਜੂਠੇ ਭਾਂਡੇ ਸਿੰਕ ਵਿੱਚ ਰੱਖੋ", "ਸਾਬਣ ਨਾਲ ਮਲ ਕੇ ਧੋਵੋ", "ਪਾਣੀ ਨਾਲ ਹੰਗਾਲ ਕੇ ਸੁੱਕਣੇ ਰੱਖੋ"],
+                correctAnswer: "ਜੂਠੇ ਭਾਂਡੇ ਸਿੰਕ ਵਿੱਚ ਰੱਖੋ | ਸਾਬਣ ਨਾਲ ਮਲ ਕੇ ਧੋਵੋ | ਪਾਣੀ ਨਾਲ ਹੰਗਾਲ ਕੇ ਸੁੱਕਣੇ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਜੂਠੇ ਭਾਂਡੇ ਸਿੰਕ ਵਿੱਚ ਰੱਖੋ, ਸਾਬਣ ਨਾਲ ਮਲ ਕੇ ਧੋਵੋ, ਪਾਣੀ ਨਾਲ ਹੰਗਾਲ ਕੇ ਸੁੱਕਣੇ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 28):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਬਿਸਤਰਾ ਵਿਛਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਚਾਦਰ ਵਿਛਾਓ", "ਸਿਰਹਾਣੇ ਰੱਖੋ", "ਕੰਬਲ ਜਾਂ ਰਜਾਈ ਰੱਖੋ"],
+                correctAnswer: "ਚਾਦਰ ਵਿਛਾਓ | ਸਿਰਹਾਣੇ ਰੱਖੋ | ਕੰਬਲ ਜਾਂ ਰਜਾਈ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਚਾਦਰ ਵਿਛਾਓ, ਸਿਰਹਾਣੇ ਰੱਖੋ, ਕੰਬਲ ਜਾਂ ਰਜਾਈ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 29):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕਾਰ ਚਲਾਉਣੀ ਸ਼ੁਰੂ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸੀਟ ਬੈਲਟ ਲਗਾਓ", "ਕਾਰ ਸਟਾਰਟ ਕਰੋ", "ਸ਼ੀਸ਼ੇ ਵੇਖ ਕੇ ਹੌਲੀ-ਹੌਲੀ ਚਲਾਓ"],
+                correctAnswer: "ਸੀਟ ਬੈਲਟ ਲਗਾਓ | ਕਾਰ ਸਟਾਰਟ ਕਰੋ | ਸ਼ੀਸ਼ੇ ਵੇਖ ਕੇ ਹੌਲੀ-ਹੌਲੀ ਚਲਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸੀਟ ਬੈਲਟ ਲਗਾਓ, ਕਾਰ ਸਟਾਰਟ ਕਰੋ, ਸ਼ੀਸ਼ੇ ਵੇਖ ਕੇ ਹੌਲੀ-ਹੌਲੀ ਚਲਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 30):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਏਟੀਐਮ ਤੋਂ ਪੈਸੇ ਕਢਵਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਕਾਰਡ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ", "ਪਿੰਨ ਅਤੇ ਰਕਮ ਭਰੋ", "ਪੈਸੇ ਅਤੇ ਕਾਰਡ ਲੈ ਲਓ"],
+                correctAnswer: "ਕਾਰਡ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ | ਪਿੰਨ ਅਤੇ ਰਕਮ ਭਰੋ | ਪੈਸੇ ਅਤੇ ਕਾਰਡ ਲੈ ਲਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਕਾਰਡ ਮਸ਼ੀਨ ਵਿੱਚ ਪਾਓ, ਪਿੰਨ ਅਤੇ ਰਕਮ ਭਰੋ, ਪੈਸੇ ਅਤੇ ਕਾਰਡ ਲੈ ਲਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 31):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਆਂਡਾ ਉਬਾਲਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਤੀਲੇ ਵਿੱਚ ਪਾਣੀ ਅਤੇ ਆਂਡਾ ਪਾਓ", "ਦਸ ਮਿੰਟ ਉਬਾਲੋ", "ਠੰਢਾ ਕਰਕੇ ਛਿਲਕਾ ਉਤਾਰੋ"],
+                correctAnswer: "ਪਤੀਲੇ ਵਿੱਚ ਪਾਣੀ ਅਤੇ ਆਂਡਾ ਪਾਓ | ਦਸ ਮਿੰਟ ਉਬਾਲੋ | ਠੰਢਾ ਕਰਕੇ ਛਿਲਕਾ ਉਤਾਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਤੀਲੇ ਵਿੱਚ ਪਾਣੀ ਅਤੇ ਆਂਡਾ ਪਾਓ, ਦਸ ਮਿੰਟ ਉਬਾਲੋ, ਠੰਢਾ ਕਰਕੇ ਛਿਲਕਾ ਉਤਾਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 32):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਟੋਸਟ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬ੍ਰੈੱਡ ਟੋਸਟਰ ਵਿੱਚ ਪਾਓ", "ਸੇਕ ਕੇ ਬਾਹਰ ਕੱਢੋ", "ਮੱਖਣ ਲਗਾ ਕੇ ਖਾਓ"],
+                correctAnswer: "ਬ੍ਰੈੱਡ ਟੋਸਟਰ ਵਿੱਚ ਪਾਓ | ਸੇਕ ਕੇ ਬਾਹਰ ਕੱਢੋ | ਮੱਖਣ ਲਗਾ ਕੇ ਖਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬ੍ਰੈੱਡ ਟੋਸਟਰ ਵਿੱਚ ਪਾਓ, ਸੇਕ ਕੇ ਬਾਹਰ ਕੱਢੋ, ਮੱਖਣ ਲਗਾ ਕੇ ਖਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 33):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸੇਬ ਖਾਣ ਦੀ ਤਿਆਰੀ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸੇਬ ਧੋਵੋ", "ਚਾਕੂ ਨਾਲ ਟੁਕੜੇ ਕੱਟੋ", "ਪਲੇਟ ਵਿੱਚ ਰੱਖ ਕੇ ਖਾਓ"],
+                correctAnswer: "ਸੇਬ ਧੋਵੋ | ਚਾਕੂ ਨਾਲ ਟੁਕੜੇ ਕੱਟੋ | ਪਲੇਟ ਵਿੱਚ ਰੱਖ ਕੇ ਖਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸੇਬ ਧੋਵੋ, ਚਾਕੂ ਨਾਲ ਟੁਕੜੇ ਕੱਟੋ, ਪਲੇਟ ਵਿੱਚ ਰੱਖ ਕੇ ਖਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 34):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕਮਰਾ ਸਾਫ਼ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਖਿਲਰੀਆਂ ਚੀਜ਼ਾਂ ਥਾਂ ਸਿਰ ਰੱਖੋ", "ਝਾੜੂ ਲਗਾਓ", "ਪੋਚਾ ਲਗਾਓ"],
+                correctAnswer: "ਖਿਲਰੀਆਂ ਚੀਜ਼ਾਂ ਥਾਂ ਸਿਰ ਰੱਖੋ | ਝਾੜੂ ਲਗਾਓ | ਪੋਚਾ ਲਗਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਖਿਲਰੀਆਂ ਚੀਜ਼ਾਂ ਥਾਂ ਸਿਰ ਰੱਖੋ, ਝਾੜੂ ਲਗਾਓ, ਪੋਚਾ ਲਗਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 35):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕੱਪੜੇ ਪ੍ਰੈੱਸ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪ੍ਰੈੱਸ ਗਰਮ ਕਰੋ", "ਕੱਪੜਾ ਵਿਛਾ ਕੇ ਪ੍ਰੈੱਸ ਕਰੋ", "ਕੱਪੜਾ ਤਹਿ ਕਰਕੇ ਰੱਖੋ"],
+                correctAnswer: "ਪ੍ਰੈੱਸ ਗਰਮ ਕਰੋ | ਕੱਪੜਾ ਵਿਛਾ ਕੇ ਪ੍ਰੈੱਸ ਕਰੋ | ਕੱਪੜਾ ਤਹਿ ਕਰਕੇ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪ੍ਰੈੱਸ ਗਰਮ ਕਰੋ, ਕੱਪੜਾ ਵਿਛਾ ਕੇ ਪ੍ਰੈੱਸ ਕਰੋ, ਕੱਪੜਾ ਤਹਿ ਕਰਕੇ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 36):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਮਹਿਮਾਨ ਦੀ ਸੇਵਾ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਮਹਿਮਾਨ ਦਾ ਸਵਾਗਤ ਕਰੋ", "ਬੈਠਣ ਲਈ ਥਾਂ ਦਿਓ", "ਪਾਣੀ ਅਤੇ ਚਾਹ ਪੇਸ਼ ਕਰੋ"],
+                correctAnswer: "ਮਹਿਮਾਨ ਦਾ ਸਵਾਗਤ ਕਰੋ | ਬੈਠਣ ਲਈ ਥਾਂ ਦਿਓ | ਪਾਣੀ ਅਤੇ ਚਾਹ ਪੇਸ਼ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਮਹਿਮਾਨ ਦਾ ਸਵਾਗਤ ਕਰੋ, ਬੈਠਣ ਲਈ ਥਾਂ ਦਿਓ, ਪਾਣੀ ਅਤੇ ਚਾਹ ਪੇਸ਼ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 37):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਪਕੌੜੇ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਵੇਸਣ ਦਾ ਘੋਲ ਤਿਆਰ ਕਰੋ", "ਸਬਜ਼ੀਆਂ ਘੋਲ ਵਿੱਚ ਡੁਬੋਵੋ", "ਗਰਮ ਤੇਲ ਵਿੱਚ ਤਲੋ"],
+                correctAnswer: "ਵੇਸਣ ਦਾ ਘੋਲ ਤਿਆਰ ਕਰੋ | ਸਬਜ਼ੀਆਂ ਘੋਲ ਵਿੱਚ ਡੁਬੋਵੋ | ਗਰਮ ਤੇਲ ਵਿੱਚ ਤਲੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਵੇਸਣ ਦਾ ਘੋਲ ਤਿਆਰ ਕਰੋ, ਸਬਜ਼ੀਆਂ ਘੋਲ ਵਿੱਚ ਡੁਬੋਵੋ, ਗਰਮ ਤੇਲ ਵਿੱਚ ਤਲੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 38):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਮੋਸੇ ਗਰਮ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਓਵਨ ਗਰਮ ਕਰੋ", "ਸਮੋਸੇ ਟਰੇਅ ਵਿੱਚ ਰੱਖ ਕੇ ਗਰਮ ਕਰੋ", "ਚਟਣੀ ਨਾਲ ਪਰੋਸੋ"],
+                correctAnswer: "ਓਵਨ ਗਰਮ ਕਰੋ | ਸਮੋਸੇ ਟਰੇਅ ਵਿੱਚ ਰੱਖ ਕੇ ਗਰਮ ਕਰੋ | ਚਟਣੀ ਨਾਲ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਓਵਨ ਗਰਮ ਕਰੋ, ਸਮੋਸੇ ਟਰੇਅ ਵਿੱਚ ਰੱਖ ਕੇ ਗਰਮ ਕਰੋ, ਚਟਣੀ ਨਾਲ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 39):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਜੁੱਤੀ ਪਾਲਿਸ਼ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਜੁੱਤੀ ਤੋਂ ਮਿੱਟੀ ਝਾੜੋ", "ਪਾਲਿਸ਼ ਲਗਾਓ", "ਬੁਰਸ਼ ਨਾਲ ਚਮਕਾਓ"],
+                correctAnswer: "ਜੁੱਤੀ ਤੋਂ ਮਿੱਟੀ ਝਾੜੋ | ਪਾਲਿਸ਼ ਲਗਾਓ | ਬੁਰਸ਼ ਨਾਲ ਚਮਕਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਜੁੱਤੀ ਤੋਂ ਮਿੱਟੀ ਝਾੜੋ, ਪਾਲਿਸ਼ ਲਗਾਓ, ਬੁਰਸ਼ ਨਾਲ ਚਮਕਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 40):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਬੈਂਕ ਵਿੱਚ ਪੈਸੇ ਜਮ੍ਹਾਂ ਕਰਵਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੈਂਕ ਜਾ ਕੇ ਪਰਚੀ ਭਰੋ", "ਪੈਸੇ ਅਤੇ ਪਰਚੀ ਕਾਊਂਟਰ 'ਤੇ ਦਿਓ", "ਰਸੀਦ ਲੈ ਕੇ ਸੰਭਾਲੋ"],
+                correctAnswer: "ਬੈਂਕ ਜਾ ਕੇ ਪਰਚੀ ਭਰੋ | ਪੈਸੇ ਅਤੇ ਪਰਚੀ ਕਾਊਂਟਰ 'ਤੇ ਦਿਓ | ਰਸੀਦ ਲੈ ਕੇ ਸੰਭਾਲੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੈਂਕ ਜਾ ਕੇ ਪਰਚੀ ਭਰੋ, ਪੈਸੇ ਅਤੇ ਪਰਚੀ ਕਾਊਂਟਰ 'ਤੇ ਦਿਓ, ਰਸੀਦ ਲੈ ਕੇ ਸੰਭਾਲੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 41):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਲਾਇਬ੍ਰੇਰੀ ਤੋਂ ਕਿਤਾਬ ਲੈਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਲਾਇਬ੍ਰੇਰੀ ਜਾ ਕੇ ਕਿਤਾਬ ਲੱਭੋ", "ਕਾਰਡ ਵਿਖਾ ਕੇ ਕਿਤਾਬ ਜਾਰੀ ਕਰਵਾਓ", "ਸਮੇਂ ਸਿਰ ਕਿਤਾਬ ਵਾਪਸ ਕਰੋ"],
+                correctAnswer: "ਲਾਇਬ੍ਰੇਰੀ ਜਾ ਕੇ ਕਿਤਾਬ ਲੱਭੋ | ਕਾਰਡ ਵਿਖਾ ਕੇ ਕਿਤਾਬ ਜਾਰੀ ਕਰਵਾਓ | ਸਮੇਂ ਸਿਰ ਕਿਤਾਬ ਵਾਪਸ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਲਾਇਬ੍ਰੇਰੀ ਜਾ ਕੇ ਕਿਤਾਬ ਲੱਭੋ, ਕਾਰਡ ਵਿਖਾ ਕੇ ਕਿਤਾਬ ਜਾਰੀ ਕਰਵਾਓ, ਸਮੇਂ ਸਿਰ ਕਿਤਾਬ ਵਾਪਸ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 42):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਬਗੀਚੇ ਨੂੰ ਪਾਣੀ ਦੇਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਾਈਪ ਟੂਟੀ ਨਾਲ ਜੋੜੋ", "ਟੂਟੀ ਖੋਲ੍ਹ ਕੇ ਪੌਦਿਆਂ ਨੂੰ ਪਾਣੀ ਦਿਓ", "ਟੂਟੀ ਬੰਦ ਕਰਕੇ ਪਾਈਪ ਸਮੇਟੋ"],
+                correctAnswer: "ਪਾਈਪ ਟੂਟੀ ਨਾਲ ਜੋੜੋ | ਟੂਟੀ ਖੋਲ੍ਹ ਕੇ ਪੌਦਿਆਂ ਨੂੰ ਪਾਣੀ ਦਿਓ | ਟੂਟੀ ਬੰਦ ਕਰਕੇ ਪਾਈਪ ਸਮੇਟੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਾਈਪ ਟੂਟੀ ਨਾਲ ਜੋੜੋ, ਟੂਟੀ ਖੋਲ੍ਹ ਕੇ ਪੌਦਿਆਂ ਨੂੰ ਪਾਣੀ ਦਿਓ, ਟੂਟੀ ਬੰਦ ਕਰਕੇ ਪਾਈਪ ਸਮੇਟੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 43):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਕੂੜਾ ਸੁੱਟਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਕੂੜੇ ਦਾ ਥੈਲਾ ਬੰਨ੍ਹੋ", "ਬਾਹਰ ਵੱਡੇ ਡੱਬੇ ਵਿੱਚ ਪਾਓ", "ਹੱਥ ਧੋਵੋ"],
+                correctAnswer: "ਕੂੜੇ ਦਾ ਥੈਲਾ ਬੰਨ੍ਹੋ | ਬਾਹਰ ਵੱਡੇ ਡੱਬੇ ਵਿੱਚ ਪਾਓ | ਹੱਥ ਧੋਵੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਕੂੜੇ ਦਾ ਥੈਲਾ ਬੰਨ੍ਹੋ, ਬਾਹਰ ਵੱਡੇ ਡੱਬੇ ਵਿੱਚ ਪਾਓ, ਹੱਥ ਧੋਵੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 44):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਫਰਿੱਜ ਸਾਫ਼ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਮਾਨ ਬਾਹਰ ਕੱਢੋ", "ਗਿੱਲੇ ਕੱਪੜੇ ਨਾਲ ਅੰਦਰੋਂ ਪੂੰਝੋ", "ਸਮਾਨ ਵਾਪਸ ਰੱਖੋ"],
+                correctAnswer: "ਸਮਾਨ ਬਾਹਰ ਕੱਢੋ | ਗਿੱਲੇ ਕੱਪੜੇ ਨਾਲ ਅੰਦਰੋਂ ਪੂੰਝੋ | ਸਮਾਨ ਵਾਪਸ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਮਾਨ ਬਾਹਰ ਕੱਢੋ, ਗਿੱਲੇ ਕੱਪੜੇ ਨਾਲ ਅੰਦਰੋਂ ਪੂੰਝੋ, ਸਮਾਨ ਵਾਪਸ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 45):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਮੱਕੀ ਦੀ ਰੋਟੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਮੱਕੀ ਦਾ ਆਟਾ ਕੋਸੇ ਪਾਣੀ ਨਾਲ ਗੁੰਨ੍ਹੋ", "ਹੱਥਾਂ ਨਾਲ ਥਾਪ ਕੇ ਰੋਟੀ ਬਣਾਓ", "ਤਵੇ 'ਤੇ ਸੇਕ ਕੇ ਮੱਖਣ ਲਾਓ"],
+                correctAnswer: "ਮੱਕੀ ਦਾ ਆਟਾ ਕੋਸੇ ਪਾਣੀ ਨਾਲ ਗੁੰਨ੍ਹੋ | ਹੱਥਾਂ ਨਾਲ ਥਾਪ ਕੇ ਰੋਟੀ ਬਣਾਓ | ਤਵੇ 'ਤੇ ਸੇਕ ਕੇ ਮੱਖਣ ਲਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਮੱਕੀ ਦਾ ਆਟਾ ਕੋਸੇ ਪਾਣੀ ਨਾਲ ਗੁੰਨ੍ਹੋ, ਹੱਥਾਂ ਨਾਲ ਥਾਪ ਕੇ ਰੋਟੀ ਬਣਾਓ, ਤਵੇ 'ਤੇ ਸੇਕ ਕੇ ਮੱਖਣ ਲਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 46):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਪਨੀਰ ਦੀ ਸਬਜ਼ੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਨੀਰ ਦੇ ਟੁਕੜੇ ਕੱਟੋ", "ਟਮਾਟਰ-ਪਿਆਜ਼ ਦੀ ਗਰੇਵੀ ਬਣਾਓ", "ਪਨੀਰ ਪਾ ਕੇ ਪਕਾਓ"],
+                correctAnswer: "ਪਨੀਰ ਦੇ ਟੁਕੜੇ ਕੱਟੋ | ਟਮਾਟਰ-ਪਿਆਜ਼ ਦੀ ਗਰੇਵੀ ਬਣਾਓ | ਪਨੀਰ ਪਾ ਕੇ ਪਕਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਨੀਰ ਦੇ ਟੁਕੜੇ ਕੱਟੋ, ਟਮਾਟਰ-ਪਿਆਜ਼ ਦੀ ਗਰੇਵੀ ਬਣਾਓ, ਪਨੀਰ ਪਾ ਕੇ ਪਕਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 47):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦੁੱਧ ਗਰਮ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦੁੱਧ ਪਤੀਲੇ ਵਿੱਚ ਪਾਓ", "ਹੌਲੀ ਅੱਗ 'ਤੇ ਗਰਮ ਕਰੋ", "ਉਬਾਲਾ ਆਉਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ"],
+                correctAnswer: "ਦੁੱਧ ਪਤੀਲੇ ਵਿੱਚ ਪਾਓ | ਹੌਲੀ ਅੱਗ 'ਤੇ ਗਰਮ ਕਰੋ | ਉਬਾਲਾ ਆਉਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦੁੱਧ ਪਤੀਲੇ ਵਿੱਚ ਪਾਓ, ਹੌਲੀ ਅੱਗ 'ਤੇ ਗਰਮ ਕਰੋ, ਉਬਾਲਾ ਆਉਣ 'ਤੇ ਅੱਗ ਬੰਦ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 48):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਕੂਲ ਲਈ ਬੱਚੇ ਨੂੰ ਤਿਆਰ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੱਚੇ ਨੂੰ ਜਗਾ ਕੇ ਤਿਆਰ ਕਰੋ", "ਨਾਸ਼ਤਾ ਕਰਵਾਓ", "ਬਸਤਾ ਦੇ ਕੇ ਸਕੂਲ ਭੇਜੋ"],
+                correctAnswer: "ਬੱਚੇ ਨੂੰ ਜਗਾ ਕੇ ਤਿਆਰ ਕਰੋ | ਨਾਸ਼ਤਾ ਕਰਵਾਓ | ਬਸਤਾ ਦੇ ਕੇ ਸਕੂਲ ਭੇਜੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੱਚੇ ਨੂੰ ਜਗਾ ਕੇ ਤਿਆਰ ਕਰੋ, ਨਾਸ਼ਤਾ ਕਰਵਾਓ, ਬਸਤਾ ਦੇ ਕੇ ਸਕੂਲ ਭੇਜੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 49):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਵਿਸਾਖੀ ਦੇ ਮੇਲੇ ਜਾਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਤਿਆਰ ਹੋ ਕੇ ਘਰੋਂ ਨਿਕਲੋ", "ਮੇਲੇ ਵਿੱਚ ਪਹੁੰਚ ਕੇ ਰੌਣਕ ਵੇਖੋ", "ਸ਼ਾਮ ਨੂੰ ਘਰ ਵਾਪਸ ਆਓ"],
+                correctAnswer: "ਤਿਆਰ ਹੋ ਕੇ ਘਰੋਂ ਨਿਕਲੋ | ਮੇਲੇ ਵਿੱਚ ਪਹੁੰਚ ਕੇ ਰੌਣਕ ਵੇਖੋ | ਸ਼ਾਮ ਨੂੰ ਘਰ ਵਾਪਸ ਆਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਤਿਆਰ ਹੋ ਕੇ ਘਰੋਂ ਨਿਕਲੋ, ਮੇਲੇ ਵਿੱਚ ਪਹੁੰਚ ਕੇ ਰੌਣਕ ਵੇਖੋ, ਸ਼ਾਮ ਨੂੰ ਘਰ ਵਾਪਸ ਆਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 50):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਟੈਕਸੀ ਬੁੱਕ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਫ਼ੋਨ 'ਤੇ ਐਪ ਖੋਲ੍ਹੋ", "ਆਪਣੀ ਮੰਜ਼ਿਲ ਭਰੋ", "ਗੱਡੀ ਆਉਣ 'ਤੇ ਬੈਠ ਜਾਓ"],
+                correctAnswer: "ਫ਼ੋਨ 'ਤੇ ਐਪ ਖੋਲ੍ਹੋ | ਆਪਣੀ ਮੰਜ਼ਿਲ ਭਰੋ | ਗੱਡੀ ਆਉਣ 'ਤੇ ਬੈਠ ਜਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਫ਼ੋਨ 'ਤੇ ਐਪ ਖੋਲ੍ਹੋ, ਆਪਣੀ ਮੰਜ਼ਿਲ ਭਰੋ, ਗੱਡੀ ਆਉਣ 'ਤੇ ਬੈਠ ਜਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 51):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਈਮੇਲ ਭੇਜਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਨਵੀਂ ਈਮੇਲ ਖੋਲ੍ਹੋ", "ਪਤਾ ਅਤੇ ਸੁਨੇਹਾ ਲਿਖੋ", "ਭੇਜਣ ਦਾ ਬਟਨ ਦਬਾਓ"],
+                correctAnswer: "ਨਵੀਂ ਈਮੇਲ ਖੋਲ੍ਹੋ | ਪਤਾ ਅਤੇ ਸੁਨੇਹਾ ਲਿਖੋ | ਭੇਜਣ ਦਾ ਬਟਨ ਦਬਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਨਵੀਂ ਈਮੇਲ ਖੋਲ੍ਹੋ, ਪਤਾ ਅਤੇ ਸੁਨੇਹਾ ਲਿਖੋ, ਭੇਜਣ ਦਾ ਬਟਨ ਦਬਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 52):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਟੀਵੀ ਵੇਖਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਰਿਮੋਟ ਨਾਲ ਟੀਵੀ ਚਾਲੂ ਕਰੋ", "ਮਨਪਸੰਦ ਚੈਨਲ ਲਗਾਓ", "ਵੇਖਣ ਤੋਂ ਬਾਅਦ ਟੀਵੀ ਬੰਦ ਕਰੋ"],
+                correctAnswer: "ਰਿਮੋਟ ਨਾਲ ਟੀਵੀ ਚਾਲੂ ਕਰੋ | ਮਨਪਸੰਦ ਚੈਨਲ ਲਗਾਓ | ਵੇਖਣ ਤੋਂ ਬਾਅਦ ਟੀਵੀ ਬੰਦ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਰਿਮੋਟ ਨਾਲ ਟੀਵੀ ਚਾਲੂ ਕਰੋ, ਮਨਪਸੰਦ ਚੈਨਲ ਲਗਾਓ, ਵੇਖਣ ਤੋਂ ਬਾਅਦ ਟੀਵੀ ਬੰਦ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 53):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਵਾਈ ਦੀ ਪਰਚੀ ਭਰਵਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਪਰਚੀ ਲੈ ਕੇ ਫਾਰਮੇਸੀ ਜਾਓ", "ਪਰਚੀ ਫਾਰਮਾਸਿਸਟ ਨੂੰ ਦਿਓ", "ਦਵਾਈ ਲੈ ਕੇ ਲੈਣ ਦਾ ਤਰੀਕਾ ਪੁੱਛੋ"],
+                correctAnswer: "ਪਰਚੀ ਲੈ ਕੇ ਫਾਰਮੇਸੀ ਜਾਓ | ਪਰਚੀ ਫਾਰਮਾਸਿਸਟ ਨੂੰ ਦਿਓ | ਦਵਾਈ ਲੈ ਕੇ ਲੈਣ ਦਾ ਤਰੀਕਾ ਪੁੱਛੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਪਰਚੀ ਲੈ ਕੇ ਫਾਰਮੇਸੀ ਜਾਓ, ਪਰਚੀ ਫਾਰਮਾਸਿਸਟ ਨੂੰ ਦਿਓ, ਦਵਾਈ ਲੈ ਕੇ ਲੈਣ ਦਾ ਤਰੀਕਾ ਪੁੱਛੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 54):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਹਸਪਤਾਲ ਦੀ ਮੁਲਾਕਾਤ ਬੁੱਕ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਕਲੀਨਿਕ ਨੂੰ ਫ਼ੋਨ ਕਰੋ", "ਆਪਣਾ ਨਾਮ ਅਤੇ ਤਕਲੀਫ਼ ਦੱਸੋ", "ਮਿਲੇ ਸਮੇਂ ਨੂੰ ਕੈਲੰਡਰ 'ਤੇ ਲਿਖੋ"],
+                correctAnswer: "ਕਲੀਨਿਕ ਨੂੰ ਫ਼ੋਨ ਕਰੋ | ਆਪਣਾ ਨਾਮ ਅਤੇ ਤਕਲੀਫ਼ ਦੱਸੋ | ਮਿਲੇ ਸਮੇਂ ਨੂੰ ਕੈਲੰਡਰ 'ਤੇ ਲਿਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਕਲੀਨਿਕ ਨੂੰ ਫ਼ੋਨ ਕਰੋ, ਆਪਣਾ ਨਾਮ ਅਤੇ ਤਕਲੀਫ਼ ਦੱਸੋ, ਮਿਲੇ ਸਮੇਂ ਨੂੰ ਕੈਲੰਡਰ 'ਤੇ ਲਿਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 55):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸੈਰ ਲਈ ਜਾਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਆਰਾਮਦਾਇਕ ਜੁੱਤੇ ਪਾਓ", "ਪਾਰਕ ਵਿੱਚ ਜਾ ਕੇ ਸੈਰ ਕਰੋ", "ਘਰ ਆ ਕੇ ਪਾਣੀ ਪੀਓ"],
+                correctAnswer: "ਆਰਾਮਦਾਇਕ ਜੁੱਤੇ ਪਾਓ | ਪਾਰਕ ਵਿੱਚ ਜਾ ਕੇ ਸੈਰ ਕਰੋ | ਘਰ ਆ ਕੇ ਪਾਣੀ ਪੀਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਆਰਾਮਦਾਇਕ ਜੁੱਤੇ ਪਾਓ, ਪਾਰਕ ਵਿੱਚ ਜਾ ਕੇ ਸੈਰ ਕਰੋ, ਘਰ ਆ ਕੇ ਪਾਣੀ ਪੀਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 56):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਗਮਲੇ ਵਿੱਚ ਬੀਜ ਬੀਜਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਗਮਲੇ ਵਿੱਚ ਮਿੱਟੀ ਭਰੋ", "ਬੀਜ ਪਾ ਕੇ ਮਿੱਟੀ ਨਾਲ ਢੱਕੋ", "ਹਲਕਾ ਪਾਣੀ ਛਿੜਕੋ"],
+                correctAnswer: "ਗਮਲੇ ਵਿੱਚ ਮਿੱਟੀ ਭਰੋ | ਬੀਜ ਪਾ ਕੇ ਮਿੱਟੀ ਨਾਲ ਢੱਕੋ | ਹਲਕਾ ਪਾਣੀ ਛਿੜਕੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਗਮਲੇ ਵਿੱਚ ਮਿੱਟੀ ਭਰੋ, ਬੀਜ ਪਾ ਕੇ ਮਿੱਟੀ ਨਾਲ ਢੱਕੋ, ਹਲਕਾ ਪਾਣੀ ਛਿੜਕੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 57):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਅਲਮਾਰੀ ਲਗਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸਾਰੇ ਕੱਪੜੇ ਬਾਹਰ ਕੱਢੋ", "ਕੱਪੜੇ ਤਹਿ ਕਰੋ", "ਤਹਿ ਕੀਤੇ ਕੱਪੜੇ ਥਾਂ ਸਿਰ ਰੱਖੋ"],
+                correctAnswer: "ਸਾਰੇ ਕੱਪੜੇ ਬਾਹਰ ਕੱਢੋ | ਕੱਪੜੇ ਤਹਿ ਕਰੋ | ਤਹਿ ਕੀਤੇ ਕੱਪੜੇ ਥਾਂ ਸਿਰ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸਾਰੇ ਕੱਪੜੇ ਬਾਹਰ ਕੱਢੋ, ਕੱਪੜੇ ਤਹਿ ਕਰੋ, ਤਹਿ ਕੀਤੇ ਕੱਪੜੇ ਥਾਂ ਸਿਰ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 58):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਚਸ਼ਮਾ ਸਾਫ਼ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਸ਼ੀਸ਼ਿਆਂ 'ਤੇ ਪਾਣੀ ਦੀ ਫੁਹਾਰ ਮਾਰੋ", "ਨਰਮ ਕੱਪੜੇ ਨਾਲ ਪੂੰਝੋ", "ਚਸ਼ਮਾ ਡੱਬੀ ਵਿੱਚ ਰੱਖੋ"],
+                correctAnswer: "ਸ਼ੀਸ਼ਿਆਂ 'ਤੇ ਪਾਣੀ ਦੀ ਫੁਹਾਰ ਮਾਰੋ | ਨਰਮ ਕੱਪੜੇ ਨਾਲ ਪੂੰਝੋ | ਚਸ਼ਮਾ ਡੱਬੀ ਵਿੱਚ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਸ਼ੀਸ਼ਿਆਂ 'ਤੇ ਪਾਣੀ ਦੀ ਫੁਹਾਰ ਮਾਰੋ, ਨਰਮ ਕੱਪੜੇ ਨਾਲ ਪੂੰਝੋ, ਚਸ਼ਮਾ ਡੱਬੀ ਵਿੱਚ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 59):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਪਾਣੀ ਦੀ ਬੋਤਲ ਭਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੋਤਲ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹੋ", "ਸਾਫ਼ ਪਾਣੀ ਭਰੋ", "ਢੱਕਣ ਬੰਦ ਕਰਕੇ ਫਰਿੱਜ ਵਿੱਚ ਰੱਖੋ"],
+                correctAnswer: "ਬੋਤਲ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹੋ | ਸਾਫ਼ ਪਾਣੀ ਭਰੋ | ਢੱਕਣ ਬੰਦ ਕਰਕੇ ਫਰਿੱਜ ਵਿੱਚ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੋਤਲ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹੋ, ਸਾਫ਼ ਪਾਣੀ ਭਰੋ, ਢੱਕਣ ਬੰਦ ਕਰਕੇ ਫਰਿੱਜ ਵਿੱਚ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 60):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਖਾਣੇ ਲਈ ਮੇਜ਼ ਲਗਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਮੇਜ਼ ਸਾਫ਼ ਕਰੋ", "ਥਾਲੀਆਂ ਅਤੇ ਗਲਾਸ ਰੱਖੋ", "ਖਾਣਾ ਪਰੋਸੋ"],
+                correctAnswer: "ਮੇਜ਼ ਸਾਫ਼ ਕਰੋ | ਥਾਲੀਆਂ ਅਤੇ ਗਲਾਸ ਰੱਖੋ | ਖਾਣਾ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਮੇਜ਼ ਸਾਫ਼ ਕਰੋ, ਥਾਲੀਆਂ ਅਤੇ ਗਲਾਸ ਰੱਖੋ, ਖਾਣਾ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 61):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਫੋਟੋ ਖਿੱਚਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਫ਼ੋਨ ਦਾ ਕੈਮਰਾ ਖੋਲ੍ਹੋ", "ਸਾਹਮਣੇ ਵਾਲੇ ਨੂੰ ਫਰੇਮ ਵਿੱਚ ਲਿਆਓ", "ਬਟਨ ਦਬਾ ਕੇ ਫੋਟੋ ਖਿੱਚੋ"],
+                correctAnswer: "ਫ਼ੋਨ ਦਾ ਕੈਮਰਾ ਖੋਲ੍ਹੋ | ਸਾਹਮਣੇ ਵਾਲੇ ਨੂੰ ਫਰੇਮ ਵਿੱਚ ਲਿਆਓ | ਬਟਨ ਦਬਾ ਕੇ ਫੋਟੋ ਖਿੱਚੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਫ਼ੋਨ ਦਾ ਕੈਮਰਾ ਖੋਲ੍ਹੋ, ਸਾਹਮਣੇ ਵਾਲੇ ਨੂੰ ਫਰੇਮ ਵਿੱਚ ਲਿਆਓ, ਬਟਨ ਦਬਾ ਕੇ ਫੋਟੋ ਖਿੱਚੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 62):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਘਰੋਂ ਨਿਕਲਣ ਵੇਲੇ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਬੱਤੀਆਂ ਬੰਦ ਕਰੋ", "ਦਰਵਾਜ਼ਾ ਖਿੱਚ ਕੇ ਤਾਲਾ ਲਗਾਓ", "ਚਾਬੀ ਸੰਭਾਲ ਕੇ ਰੱਖੋ"],
+                correctAnswer: "ਬੱਤੀਆਂ ਬੰਦ ਕਰੋ | ਦਰਵਾਜ਼ਾ ਖਿੱਚ ਕੇ ਤਾਲਾ ਲਗਾਓ | ਚਾਬੀ ਸੰਭਾਲ ਕੇ ਰੱਖੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਬੱਤੀਆਂ ਬੰਦ ਕਰੋ, ਦਰਵਾਜ਼ਾ ਖਿੱਚ ਕੇ ਤਾਲਾ ਲਗਾਓ, ਚਾਬੀ ਸੰਭਾਲ ਕੇ ਰੱਖੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 63):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਸਵੇਰੇ ਪਾਠ ਕਰਨ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਇਸ਼ਨਾਨ ਕਰਕੇ ਸਾਫ਼ ਕੱਪੜੇ ਪਾਓ", "ਸ਼ਾਂਤ ਥਾਂ 'ਤੇ ਬੈਠੋ", "ਧਿਆਨ ਨਾਲ ਪਾਠ ਕਰੋ"],
+                correctAnswer: "ਇਸ਼ਨਾਨ ਕਰਕੇ ਸਾਫ਼ ਕੱਪੜੇ ਪਾਓ | ਸ਼ਾਂਤ ਥਾਂ 'ਤੇ ਬੈਠੋ | ਧਿਆਨ ਨਾਲ ਪਾਠ ਕਰੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਇਸ਼ਨਾਨ ਕਰਕੇ ਸਾਫ਼ ਕੱਪੜੇ ਪਾਓ, ਸ਼ਾਂਤ ਥਾਂ 'ਤੇ ਬੈਠੋ, ਧਿਆਨ ਨਾਲ ਪਾਠ ਕਰੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 64):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਗੱਡੀ ਵਿੱਚ ਪੈਟਰੋਲ ਭਰਵਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਗੱਡੀ ਪੰਪ ਕੋਲ ਰੋਕੋ", "ਟੈਂਕੀ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹ ਕੇ ਪੈਟਰੋਲ ਭਰਵਾਓ", "ਪੈਸੇ ਦੇ ਕੇ ਅੱਗੇ ਵਧੋ"],
+                correctAnswer: "ਗੱਡੀ ਪੰਪ ਕੋਲ ਰੋਕੋ | ਟੈਂਕੀ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹ ਕੇ ਪੈਟਰੋਲ ਭਰਵਾਓ | ਪੈਸੇ ਦੇ ਕੇ ਅੱਗੇ ਵਧੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਗੱਡੀ ਪੰਪ ਕੋਲ ਰੋਕੋ, ਟੈਂਕੀ ਦਾ ਢੱਕਣ ਖੋਲ੍ਹ ਕੇ ਪੈਟਰੋਲ ਭਰਵਾਓ, ਪੈਸੇ ਦੇ ਕੇ ਅੱਗੇ ਵਧੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 65):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਹਲਵਾ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਘਿਓ ਵਿੱਚ ਸੂਜੀ ਭੁੰਨੋ", "ਖੰਡ ਵਾਲਾ ਪਾਣੀ ਪਾਓ", "ਗਾੜ੍ਹਾ ਹੋਣ 'ਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਘਿਓ ਵਿੱਚ ਸੂਜੀ ਭੁੰਨੋ | ਖੰਡ ਵਾਲਾ ਪਾਣੀ ਪਾਓ | ਗਾੜ੍ਹਾ ਹੋਣ 'ਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਘਿਓ ਵਿੱਚ ਸੂਜੀ ਭੁੰਨੋ, ਖੰਡ ਵਾਲਾ ਪਾਣੀ ਪਾਓ, ਗਾੜ੍ਹਾ ਹੋਣ 'ਤੇ ਮੇਵੇ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 66):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਨਿੰਬੂ ਪਾਣੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਗਲਾਸ ਵਿੱਚ ਠੰਢਾ ਪਾਣੀ ਪਾਓ", "ਨਿੰਬੂ ਨਿਚੋੜੋ", "ਖੰਡ ਅਤੇ ਲੂਣ ਮਿਲਾ ਕੇ ਹਿਲਾਓ"],
+                correctAnswer: "ਗਲਾਸ ਵਿੱਚ ਠੰਢਾ ਪਾਣੀ ਪਾਓ | ਨਿੰਬੂ ਨਿਚੋੜੋ | ਖੰਡ ਅਤੇ ਲੂਣ ਮਿਲਾ ਕੇ ਹਿਲਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਗਲਾਸ ਵਿੱਚ ਠੰਢਾ ਪਾਣੀ ਪਾਓ, ਨਿੰਬੂ ਨਿਚੋੜੋ, ਖੰਡ ਅਤੇ ਲੂਣ ਮਿਲਾ ਕੇ ਹਿਲਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 67):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਛੋਲੇ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਛੋਲੇ ਰਾਤ ਭਰ ਭਿਉਂ ਕੇ ਰੱਖੋ", "ਉਬਾਲ ਕੇ ਨਰਮ ਕਰੋ", "ਮਸਾਲੇ ਵਾਲੀ ਗਰੇਵੀ ਵਿੱਚ ਪਕਾਓ"],
+                correctAnswer: "ਛੋਲੇ ਰਾਤ ਭਰ ਭਿਉਂ ਕੇ ਰੱਖੋ | ਉਬਾਲ ਕੇ ਨਰਮ ਕਰੋ | ਮਸਾਲੇ ਵਾਲੀ ਗਰੇਵੀ ਵਿੱਚ ਪਕਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਛੋਲੇ ਰਾਤ ਭਰ ਭਿਉਂ ਕੇ ਰੱਖੋ, ਉਬਾਲ ਕੇ ਨਰਮ ਕਰੋ, ਮਸਾਲੇ ਵਾਲੀ ਗਰੇਵੀ ਵਿੱਚ ਪਕਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 68):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਰਾਇਤਾ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦਹੀਂ ਫੈਂਟੋ", "ਕੱਟਿਆ ਖੀਰਾ ਅਤੇ ਲੂਣ ਮਿਲਾਓ", "ਭੁੰਨਿਆ ਜੀਰਾ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਦਹੀਂ ਫੈਂਟੋ | ਕੱਟਿਆ ਖੀਰਾ ਅਤੇ ਲੂਣ ਮਿਲਾਓ | ਭੁੰਨਿਆ ਜੀਰਾ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦਹੀਂ ਫੈਂਟੋ, ਕੱਟਿਆ ਖੀਰਾ ਅਤੇ ਲੂਣ ਮਿਲਾਓ, ਭੁੰਨਿਆ ਜੀਰਾ ਪਾ ਕੇ ਪਰੋਸੋ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 69):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਰਜ਼ੀ ਤੋਂ ਸੂਟ ਸਿਲਵਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਕੱਪੜਾ ਖਰੀਦੋ", "ਦਰਜ਼ੀ ਕੋਲੋਂ ਮਾਪ ਦਿਵਾਓ", "ਮਿੱਥੇ ਦਿਨ ਸੂਟ ਲੈਣ ਜਾਓ"],
+                correctAnswer: "ਕੱਪੜਾ ਖਰੀਦੋ | ਦਰਜ਼ੀ ਕੋਲੋਂ ਮਾਪ ਦਿਵਾਓ | ਮਿੱਥੇ ਦਿਨ ਸੂਟ ਲੈਣ ਜਾਓ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਕੱਪੜਾ ਖਰੀਦੋ, ਦਰਜ਼ੀ ਕੋਲੋਂ ਮਾਪ ਦਿਵਾਓ, ਮਿੱਥੇ ਦਿਨ ਸੂਟ ਲੈਣ ਜਾਓ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Steps to prepare a traditional Punjabi-American meal (Step 70):",
-                options: ["Prepare ingredients", "Cook on medium heat", "Serve warm"],
-                correctAnswer: "Prepare ingredients | Cook on medium heat | Serve warm",
-                explanation: "Recipe steps."
+                prompt: "ਦਹੀਂ ਵਾਲੀ ਕੜ੍ਹੀ ਬਣਾਉਣ ਦੇ ਕਦਮ ਕ੍ਰਮ ਵਿੱਚ ਲਗਾਓ:",
+                options: ["ਦਹੀਂ ਅਤੇ ਵੇਸਣ ਦਾ ਘੋਲ ਬਣਾਓ", "ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲੋ", "ਪਕੌੜੇ ਪਾ ਕੇ ਪਰੋਸੋ"],
+                correctAnswer: "ਦਹੀਂ ਅਤੇ ਵੇਸਣ ਦਾ ਘੋਲ ਬਣਾਓ | ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲੋ | ਪਕੌੜੇ ਪਾ ਕੇ ਪਰੋਸੋ",
+                explanation: "ਸਹੀ ਕ੍ਰਮ: ਦਹੀਂ ਅਤੇ ਵੇਸਣ ਦਾ ਘੋਲ ਬਣਾਓ, ਹੌਲੀ ਅੱਗ 'ਤੇ ਉਬਾਲੋ, ਪਕੌੜੇ ਪਾ ਕੇ ਪਰੋਸੋ।"
             )
         ]
     )
@@ -998,529 +998,531 @@ struct PunjabiFunctionalSkillsExerciseData {
         items: [
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 1):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਟਾ: 2 ਕਿਲੋ $6 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $10 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $6 ਵਿੱਚ", "5 ਕਿਲੋ $10 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $10 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $3 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 2):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਟਾ: 1 ਕਿਲੋ $5 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $9 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $5 ਵਿੱਚ", "3 ਕਿਲੋ $9 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $9 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $3 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 3):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਟਾ: 4 ਕਿਲੋ $8 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $25 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $8 ਵਿੱਚ", "10 ਕਿਲੋ $25 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $8 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $2.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 4):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਾਸਮਤੀ ਚੌਲ: 2 ਕਿਲੋ $12 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $20 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $12 ਵਿੱਚ", "5 ਕਿਲੋ $20 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $20 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $6 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 5):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਾਸਮਤੀ ਚੌਲ: 1 ਕਿਲੋ $10 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $18 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $10 ਵਿੱਚ", "3 ਕਿਲੋ $18 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $18 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 6):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਾਸਮਤੀ ਚੌਲ: 4 ਕਿਲੋ $16 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $16 ਵਿੱਚ", "10 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $16 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 7):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਾਲ: 2 ਕਿਲੋ $18 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $30 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $18 ਵਿੱਚ", "5 ਕਿਲੋ $30 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $30 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $9 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 8):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਾਲ: 1 ਕਿਲੋ $15 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $27 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $15 ਵਿੱਚ", "3 ਕਿਲੋ $27 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $27 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $9 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 9):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਾਲ: 4 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $75 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $24 ਵਿੱਚ", "10 ਕਿਲੋ $75 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $24 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $7.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 10):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਖੰਡ: 2 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $40 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $24 ਵਿੱਚ", "5 ਕਿਲੋ $40 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 11):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਖੰਡ: 1 ਕਿਲੋ $20 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $36 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $20 ਵਿੱਚ", "3 ਕਿਲੋ $36 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $36 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $12 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $20 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 12):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਖੰਡ: 4 ਕਿਲੋ $32 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $100 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $32 ਵਿੱਚ", "10 ਕਿਲੋ $100 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $32 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 13):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਿਆਜ਼: 2 ਕਿਲੋ $30 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $30 ਵਿੱਚ", "5 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $50 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 14):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਿਆਜ਼: 1 ਕਿਲੋ $25 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $45 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $25 ਵਿੱਚ", "3 ਕਿਲੋ $45 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $45 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $15 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $25 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 15):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਿਆਜ਼: 4 ਕਿਲੋ $40 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $125 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $40 ਵਿੱਚ", "10 ਕਿਲੋ $125 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 16):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਲੂ: 2 ਕਿਲੋ $6 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $10 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $6 ਵਿੱਚ", "5 ਕਿਲੋ $10 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $10 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $3 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 17):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਲੂ: 1 ਕਿਲੋ $5 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $9 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $5 ਵਿੱਚ", "3 ਕਿਲੋ $9 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $9 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $3 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 18):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਲੂ: 4 ਕਿਲੋ $8 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $25 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $8 ਵਿੱਚ", "10 ਕਿਲੋ $25 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $8 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $2.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 19):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਟਮਾਟਰ: 2 ਕਿਲੋ $12 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $20 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $12 ਵਿੱਚ", "5 ਕਿਲੋ $20 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $20 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $6 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 20):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਟਮਾਟਰ: 1 ਕਿਲੋ $10 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $18 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $10 ਵਿੱਚ", "3 ਕਿਲੋ $18 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $18 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 21):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਟਮਾਟਰ: 4 ਕਿਲੋ $16 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $16 ਵਿੱਚ", "10 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $16 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 22):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੇਬ: 2 ਕਿਲੋ $18 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $30 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $18 ਵਿੱਚ", "5 ਕਿਲੋ $30 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $30 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $9 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 23):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੇਬ: 1 ਕਿਲੋ $15 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $27 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $15 ਵਿੱਚ", "3 ਕਿਲੋ $27 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $27 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $9 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 24):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੇਬ: 4 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $75 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $24 ਵਿੱਚ", "10 ਕਿਲੋ $75 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $24 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $7.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 25):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਨੀਰ: 2 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $40 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $24 ਵਿੱਚ", "5 ਕਿਲੋ $40 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 26):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਨੀਰ: 1 ਕਿਲੋ $20 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $36 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $20 ਵਿੱਚ", "3 ਕਿਲੋ $36 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $36 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $12 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $20 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 27):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਪਨੀਰ: 4 ਕਿਲੋ $32 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $100 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $32 ਵਿੱਚ", "10 ਕਿਲੋ $100 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $32 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 28):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਦਾਮ: 2 ਕਿਲੋ $30 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $30 ਵਿੱਚ", "5 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $50 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 29):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਦਾਮ: 1 ਕਿਲੋ $25 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $45 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $25 ਵਿੱਚ", "3 ਕਿਲੋ $45 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $45 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $15 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $25 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 30):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਬਦਾਮ: 4 ਕਿਲੋ $40 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $125 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $40 ਵਿੱਚ", "10 ਕਿਲੋ $125 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 31):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕਾਜੂ: 2 ਕਿਲੋ $6 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $10 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $6 ਵਿੱਚ", "5 ਕਿਲੋ $10 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $10 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $3 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 32):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕਾਜੂ: 1 ਕਿਲੋ $5 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $9 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $5 ਵਿੱਚ", "3 ਕਿਲੋ $9 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $9 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $3 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 33):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕਾਜੂ: 4 ਕਿਲੋ $8 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $25 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $8 ਵਿੱਚ", "10 ਕਿਲੋ $25 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $8 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $2.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 34):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੌਗੀ: 2 ਕਿਲੋ $12 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $20 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $12 ਵਿੱਚ", "5 ਕਿਲੋ $20 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $20 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $6 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 35):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੌਗੀ: 1 ਕਿਲੋ $10 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $18 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $10 ਵਿੱਚ", "3 ਕਿਲੋ $18 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $18 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 36):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੌਗੀ: 4 ਕਿਲੋ $16 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $16 ਵਿੱਚ", "10 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $16 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 37):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਅਦਰਕ: 2 ਕਿਲੋ $18 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $30 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $18 ਵਿੱਚ", "5 ਕਿਲੋ $30 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $30 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $9 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 38):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਅਦਰਕ: 1 ਕਿਲੋ $15 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $27 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $15 ਵਿੱਚ", "3 ਕਿਲੋ $27 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $27 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $9 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 39):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਅਦਰਕ: 4 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $75 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $24 ਵਿੱਚ", "10 ਕਿਲੋ $75 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $24 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $7.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 40):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਲਸਣ: 2 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $40 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $24 ਵਿੱਚ", "5 ਕਿਲੋ $40 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 41):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਲਸਣ: 1 ਕਿਲੋ $20 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $36 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $20 ਵਿੱਚ", "3 ਕਿਲੋ $36 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $36 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $12 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $20 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 42):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਲਸਣ: 4 ਕਿਲੋ $32 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $100 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $32 ਵਿੱਚ", "10 ਕਿਲੋ $100 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $32 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 43):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਗੁੜ: 2 ਕਿਲੋ $30 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $30 ਵਿੱਚ", "5 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $50 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 44):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਗੁੜ: 1 ਕਿਲੋ $25 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $45 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $25 ਵਿੱਚ", "3 ਕਿਲੋ $45 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $45 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $15 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $25 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 45):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਗੁੜ: 4 ਕਿਲੋ $40 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $125 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $40 ਵਿੱਚ", "10 ਕਿਲੋ $125 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 46):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਵੇਸਣ: 2 ਕਿਲੋ $6 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $10 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $6 ਵਿੱਚ", "5 ਕਿਲੋ $10 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $10 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $3 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 47):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਵੇਸਣ: 1 ਕਿਲੋ $5 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $9 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $5 ਵਿੱਚ", "3 ਕਿਲੋ $9 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $9 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $3 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 48):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਵੇਸਣ: 4 ਕਿਲੋ $8 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $25 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $8 ਵਿੱਚ", "10 ਕਿਲੋ $25 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $8 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $2.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 49):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੂਜੀ: 2 ਕਿਲੋ $12 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $20 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $12 ਵਿੱਚ", "5 ਕਿਲੋ $20 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $20 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $6 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 50):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੂਜੀ: 1 ਕਿਲੋ $10 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $18 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $10 ਵਿੱਚ", "3 ਕਿਲੋ $18 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $18 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 51):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸੂਜੀ: 4 ਕਿਲੋ $16 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $16 ਵਿੱਚ", "10 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $16 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 52):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਮੈਦਾ: 2 ਕਿਲੋ $18 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $30 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $18 ਵਿੱਚ", "5 ਕਿਲੋ $30 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $30 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $9 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 53):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਮੈਦਾ: 1 ਕਿਲੋ $15 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $27 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $15 ਵਿੱਚ", "3 ਕਿਲੋ $27 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $27 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $9 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 54):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਮੈਦਾ: 4 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $75 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $24 ਵਿੱਚ", "10 ਕਿਲੋ $75 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $24 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $7.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 55):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਛੋਲੇ: 2 ਕਿਲੋ $24 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $40 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $24 ਵਿੱਚ", "5 ਕਿਲੋ $40 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 56):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਛੋਲੇ: 1 ਕਿਲੋ $20 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $36 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $20 ਵਿੱਚ", "3 ਕਿਲੋ $36 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $36 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $12 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $20 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 57):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਛੋਲੇ: 4 ਕਿਲੋ $32 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $100 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $32 ਵਿੱਚ", "10 ਕਿਲੋ $100 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $32 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 58):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਰਾਜਮਾਂਹ: 2 ਕਿਲੋ $30 ਵਿੱਚ ਜਾਂ 5 ਕਿਲੋ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਕਿਲੋ $30 ਵਿੱਚ", "5 ਕਿਲੋ $50 ਵਿੱਚ"],
+                correctAnswer: "5 ਕਿਲੋ $50 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 59):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਰਾਜਮਾਂਹ: 1 ਕਿਲੋ $25 ਵਿੱਚ ਜਾਂ 3 ਕਿਲੋ $45 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਕਿਲੋ $25 ਵਿੱਚ", "3 ਕਿਲੋ $45 ਵਿੱਚ"],
+                correctAnswer: "3 ਕਿਲੋ $45 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $15 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $25 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 60):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਰਾਜਮਾਂਹ: 4 ਕਿਲੋ $40 ਵਿੱਚ ਜਾਂ 10 ਕਿਲੋ $125 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਕਿਲੋ $40 ਵਿੱਚ", "10 ਕਿਲੋ $125 ਵਿੱਚ"],
+                correctAnswer: "4 ਕਿਲੋ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਕਿਲੋ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 61):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦੁੱਧ: 2 ਲਿਟਰ $6 ਵਿੱਚ ਜਾਂ 5 ਲਿਟਰ $10 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਲਿਟਰ $6 ਵਿੱਚ", "5 ਲਿਟਰ $10 ਵਿੱਚ"],
+                correctAnswer: "5 ਲਿਟਰ $10 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $3 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 62):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦੁੱਧ: 1 ਲਿਟਰ $5 ਵਿੱਚ ਜਾਂ 3 ਲਿਟਰ $9 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਲਿਟਰ $5 ਵਿੱਚ", "3 ਲਿਟਰ $9 ਵਿੱਚ"],
+                correctAnswer: "3 ਲਿਟਰ $9 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $3 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 63):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦੁੱਧ: 4 ਲਿਟਰ $8 ਵਿੱਚ ਜਾਂ 10 ਲਿਟਰ $25 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਲਿਟਰ $8 ਵਿੱਚ", "10 ਲਿਟਰ $25 ਵਿੱਚ"],
+                correctAnswer: "4 ਲਿਟਰ $8 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $2 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $2.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 64):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸਰ੍ਹੋਂ ਦਾ ਤੇਲ: 2 ਲਿਟਰ $12 ਵਿੱਚ ਜਾਂ 5 ਲਿਟਰ $20 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਲਿਟਰ $12 ਵਿੱਚ", "5 ਲਿਟਰ $20 ਵਿੱਚ"],
+                correctAnswer: "5 ਲਿਟਰ $20 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $6 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 65):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸਰ੍ਹੋਂ ਦਾ ਤੇਲ: 1 ਲਿਟਰ $10 ਵਿੱਚ ਜਾਂ 3 ਲਿਟਰ $18 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਲਿਟਰ $10 ਵਿੱਚ", "3 ਲਿਟਰ $18 ਵਿੱਚ"],
+                correctAnswer: "3 ਲਿਟਰ $18 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 66):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਸਰ੍ਹੋਂ ਦਾ ਤੇਲ: 4 ਲਿਟਰ $16 ਵਿੱਚ ਜਾਂ 10 ਲਿਟਰ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਲਿਟਰ $16 ਵਿੱਚ", "10 ਲਿਟਰ $50 ਵਿੱਚ"],
+                correctAnswer: "4 ਲਿਟਰ $16 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $4 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $5 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 67):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਹੀਂ: 2 ਲਿਟਰ $18 ਵਿੱਚ ਜਾਂ 5 ਲਿਟਰ $30 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਲਿਟਰ $18 ਵਿੱਚ", "5 ਲਿਟਰ $30 ਵਿੱਚ"],
+                correctAnswer: "5 ਲਿਟਰ $30 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $9 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 68):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਹੀਂ: 1 ਲਿਟਰ $15 ਵਿੱਚ ਜਾਂ 3 ਲਿਟਰ $27 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਲਿਟਰ $15 ਵਿੱਚ", "3 ਲਿਟਰ $27 ਵਿੱਚ"],
+                correctAnswer: "3 ਲਿਟਰ $27 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $9 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 69):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਦਹੀਂ: 4 ਲਿਟਰ $24 ਵਿੱਚ ਜਾਂ 10 ਲਿਟਰ $75 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਲਿਟਰ $24 ਵਿੱਚ", "10 ਲਿਟਰ $75 ਵਿੱਚ"],
+                correctAnswer: "4 ਲਿਟਰ $24 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਲਿਟਰ ਕੀਮਤ $6 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $7.50 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 70):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਂਡੇ: 2 ਦਰਜਨ $24 ਵਿੱਚ ਜਾਂ 5 ਦਰਜਨ $40 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਦਰਜਨ $24 ਵਿੱਚ", "5 ਦਰਜਨ $40 ਵਿੱਚ"],
+                correctAnswer: "5 ਦਰਜਨ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 71):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਂਡੇ: 1 ਦਰਜਨ $20 ਵਿੱਚ ਜਾਂ 3 ਦਰਜਨ $36 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਦਰਜਨ $20 ਵਿੱਚ", "3 ਦਰਜਨ $36 ਵਿੱਚ"],
+                correctAnswer: "3 ਦਰਜਨ $36 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $12 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $20 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 72):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਆਂਡੇ: 4 ਦਰਜਨ $32 ਵਿੱਚ ਜਾਂ 10 ਦਰਜਨ $100 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਦਰਜਨ $32 ਵਿੱਚ", "10 ਦਰਜਨ $100 ਵਿੱਚ"],
+                correctAnswer: "4 ਦਰਜਨ $32 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $8 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $10 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 73):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕੇਲੇ: 2 ਦਰਜਨ $30 ਵਿੱਚ ਜਾਂ 5 ਦਰਜਨ $50 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["2 ਦਰਜਨ $30 ਵਿੱਚ", "5 ਦਰਜਨ $50 ਵਿੱਚ"],
+                correctAnswer: "5 ਦਰਜਨ $50 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $15 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 74):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕੇਲੇ: 1 ਦਰਜਨ $25 ਵਿੱਚ ਜਾਂ 3 ਦਰਜਨ $45 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["1 ਦਰਜਨ $25 ਵਿੱਚ", "3 ਦਰਜਨ $45 ਵਿੱਚ"],
+                correctAnswer: "3 ਦਰਜਨ $45 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $15 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $25 ਤੋਂ ਘੱਟ ਹੈ।"
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "Best price comparison for roti ingredients at local CA market (Option 75):",
-                options: ["Small pack for $5", "Large pack for $8"],
-                correctAnswer: "Large pack for $8",
-                explanation: "Larger option is cheaper per unit."
+                prompt: "ਕੇਲੇ: 4 ਦਰਜਨ $40 ਵਿੱਚ ਜਾਂ 10 ਦਰਜਨ $125 ਵਿੱਚ — ਕਿਹੜਾ ਸੌਦਾ ਵਧੀਆ ਹੈ?",
+                options: ["4 ਦਰਜਨ $40 ਵਿੱਚ", "10 ਦਰਜਨ $125 ਵਿੱਚ"],
+                correctAnswer: "4 ਦਰਜਨ $40 ਵਿੱਚ",
+                explanation: "ਇਸ ਵਿਕਲਪ ਵਿੱਚ ਪ੍ਰਤੀ ਦਰਜਨ ਕੀਮਤ $10 ਹੈ, ਜੋ ਦੂਜੇ ਵਿਕਲਪ ਦੀ $12.50 ਤੋਂ ਘੱਟ ਹੈ।"
             )
         ]
     )
 }
+
+

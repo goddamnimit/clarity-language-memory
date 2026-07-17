@@ -41,6 +41,10 @@ Status: fixes staged as uncommitted working-tree changes per language (not yet c
   - Line 1326 — `correctAnswer`: "Ոtք" (Latin `t` should be Armenian `տ`)
   - Line 1479 — `options`: "Մանրադիտak" (Latin `ak` should be Armenian `ակ`)
 
+**Punjabi**
+- `PunjabiHardExercisesData.swift:234` — proverb "ਕੋਹ ਨਾ ਚੱਲੀ, ਬਾਬਾ ਤਿਹਾਈ" (script corruption fix confirmed correct: Bengali "কো" → Gurmukhi "ਕੋ"). Wording matches the standard form of this idiom as best determined without a live source-verification tool, and the explanation ("doing barely any work and complaining/tiring out anyway") is semantically consistent with it. Flagged, not confirmed — recommend a native-speaker check before treating the wording itself as verified.
+- **DEFECT, not yet fixed:** `PunjabiLanguageExerciseData.swift:493` — stray Latin `s` prepended to a Gurmukhi word in a compound-word exercise prompt: `"...sਸੂਰਜ + ਮੁਖੀ = ___"` should read `"...ਸੂਰਜ + ਮੁਖੀ = ___"` (ਸੂਰਜ "sun" + ਮੁਖੀ "facing" → ਸੂਰਜਮੁਖੀ "sunflower", which is already the correct `correctAnswer`). Pre-existing, confirmed identical in HEAD and working tree — outside the current diff's scope, queued for a future fix pass.
+
 **Tagalog**
 - `TagalogFunctionalSkillsExerciseData.swift` comparison items — use US units (libra/onsa) and USD pricing; intentional for Filipino-American diaspora framing (matches file's existing convention) but worth confirming.
 - `TagalogCognitionExerciseData.swift` analogies — a few pairings are culturally convention-dependent (e.g. "Kaarawan : Keyk :: Pasko : Regalo", "Lechon : Pista :: Pansit : Kaarawan"); defensible but should be sanity-checked.
