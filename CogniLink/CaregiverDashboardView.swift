@@ -13,12 +13,14 @@ struct CaregiverDashboardView: View {
     @State private var showChangePIN = false
     @State private var showResetAdaptiveAlert = false
     @State private var showBaselineAssessment = false
-    @State private var showTrajectorySettingsPrompt = false
-    @State private var showMaintenanceModeDisclaimer = false
+    @State private var showGuidanceInfoPrompt = false
+    @State private var navigateToGuidanceInfo = false
     @ObservedObject private var notificationManager = NotificationManager.shared
 
-    private static let trajectorySettingsPromptShownKey = "clarity_trajectory_settings_prompt_shown"
-    private static let maintenanceModeDisclaimerShownKey = "clarity_maintenance_mode_disclaimer_shown"
+    // Supersedes the two old one-time prompts ("clarity_trajectory_settings_prompt_shown"
+    // and "clarity_maintenance_mode_disclaimer_shown"), merged into a single
+    // app-wide popup pointing at AppGuidanceInfoView.
+    private static let guidanceInfoPromptShownKey = "clarity_guidance_info_prompt_shown"
 
     private var reminderTimeBinding: Binding<Date> {
         Binding(
@@ -116,6 +118,11 @@ struct CaregiverDashboardView: View {
                         dashboardRow(icon: "key", label: languageManager.currentLanguage.cgChangePIN)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    Divider().padding(.leading, 52)
+                    NavigationLink(destination: AppGuidanceInfoView()) {
+                        dashboardRow(icon: "info.circle", label: "About this app's guidance")
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
                 .background(Color.secondaryGroupedBackground)
                 .cornerRadius(12)
@@ -127,6 +134,13 @@ struct CaregiverDashboardView: View {
 
                 // Therapy Settings (moved from Profile tab)
                 therapySettingsSection
+
+                // Hidden trigger for the guidance-info prompt's "About this
+                // app's guidance" button — programmatic push, not shown directly.
+                NavigationLink(destination: AppGuidanceInfoView(), isActive: $navigateToGuidanceInfo) {
+                    EmptyView()
+                }
+                .hidden()
             }
             .padding(.vertical)
         }
@@ -139,22 +153,18 @@ struct CaregiverDashboardView: View {
         }
         .onAppear {
             notificationManager.requestPermissionIfNeeded()
-            if !UserDefaults.standard.bool(forKey: Self.trajectorySettingsPromptShownKey) {
+            if !UserDefaults.standard.bool(forKey: Self.guidanceInfoPromptShownKey) {
                 // Set the flag immediately, before display, so a kill mid-display
                 // can never cause the prompt to reappear.
-                UserDefaults.standard.set(true, forKey: Self.trajectorySettingsPromptShownKey)
-                showTrajectorySettingsPrompt = true
+                UserDefaults.standard.set(true, forKey: Self.guidanceInfoPromptShownKey)
+                showGuidanceInfoPrompt = true
             }
         }
-        .alert("Therapy Settings", isPresented: $showTrajectorySettingsPrompt) {
-            Button("OK") {}
+        .alert("Guidance Features", isPresented: $showGuidanceInfoPrompt) {
+            Button("About this app's guidance") { navigateToGuidanceInfo = true }
+            Button("OK", role: .cancel) {}
         } message: {
-            Text("You can adjust how progress is interpreted in Therapy Settings.")
-        }
-        .alert("Maintenance Mode", isPresented: $showMaintenanceModeDisclaimer) {
-            Button("OK") {}
-        } message: {
-            Text("Maintenance mode changes how progress is described, to reflect that steady performance can be a good outcome. This wording is still pending review by a licensed clinician — treat it as informational only.")
+            Text("This app includes some experimental guidance features — see [About this app's guidance] anytime for details in your Caregiver menu.")
         }
     }
 
@@ -323,19 +333,7 @@ struct CaregiverDashboardView: View {
 
                 Picker("Goal Orientation", selection: Binding<GoalOrientation>(
                     get: { trajectoryStore.goalOrientation },
-                    set: { newValue in
-                        let oldValue = trajectoryStore.goalOrientation
-                        trajectoryStore.goalOrientation = newValue
-                        if oldValue == .recovery, newValue == .maintenance,
-                           !UserDefaults.standard.bool(forKey: Self.maintenanceModeDisclaimerShownKey) {
-                            // Set the flag immediately, before display, so a kill
-                            // mid-display can never cause the prompt to reappear.
-                            // True one-time-ever: switching back to Recovery and
-                            // to Maintenance again will not show it a second time.
-                            UserDefaults.standard.set(true, forKey: Self.maintenanceModeDisclaimerShownKey)
-                            showMaintenanceModeDisclaimer = true
-                        }
-                    }
+                    set: { trajectoryStore.goalOrientation = $0 }
                 )) {
                     ForEach(GoalOrientation.allCases, id: \.self) { orientation in
                         Text(orientation.displayName).tag(orientation)
@@ -372,11 +370,12 @@ struct CaregiverDashboardView: View {
 
             // Persistent feature-maturity notice — always visible while this
             // section is shown, regardless of toggle values. Not dismissible;
-            // this is a standing status note, not a one-time prompt.
-            Text("The wording used in Recovery and Maintenance mode is still being reviewed by a licensed clinician. If anything here reads as confusing or concerning, please treat it as informational only and raise it directly with \(store.profile.displayName)'s care team.")
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .fixedSize(horizontal: false, vertical: true)
+            // this is a standing status note, not a one-time prompt. Wording
+            // owned by AppGuidanceInfoView so this and the central "About
+            // this app's guidance" screen can never drift apart.
+            DisclaimerText(
+                text: AppGuidanceInfoView.featureMaturityNoticeText(patientName: store.profile.displayName),
+                style: .inline)
         }
         .padding()
         .background(Color.secondaryGroupedBackground)

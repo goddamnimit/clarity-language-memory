@@ -53,6 +53,9 @@ struct CaregiverInsightsView: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
+                if let disclaimer = insight.disclaimer {
+                    DisclaimerText(text: disclaimer, style: .inline)
+                }
             }
             Spacer()
         }

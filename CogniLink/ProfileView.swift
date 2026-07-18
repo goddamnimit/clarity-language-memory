@@ -403,6 +403,27 @@ struct ProfileView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .padding(.horizontal)
+
+                    NavigationLink(destination: AppGuidanceInfoView()) {
+                        HStack {
+                            Image(systemName: "info.circle")
+                                .foregroundColor(.accentColor)
+                            Text("About this app's guidance")
+                                .font(.body)
+                                .foregroundColor(.primary)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.caption.bold())
+                                .foregroundColor(.secondary)
+                        }
+                        .padding()
+                        .frame(minHeight: 50)
+                        .background(Color.secondaryGroupedBackground)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .padding(.horizontal)
                 }
                 #endif
 

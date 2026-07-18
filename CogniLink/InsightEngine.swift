@@ -9,6 +9,9 @@ struct Insight: Identifiable, Equatable {
     let sfSymbolName: String
     /// Relative significance used for ranking (bigger swings / longer gaps first).
     let score: Double
+    /// Optional clinical disclaimer (Maintenance-mode cards only), rendered
+    /// separately from `explanation` via the shared `DisclaimerText` view.
+    var disclaimer: String? = nil
 }
 
 /// Analyzes the local session log and the adaptive-difficulty rolling windows
@@ -141,16 +144,18 @@ struct InsightEngine {
                     insights.append(Insight(
                         id: "maintDecline_\(tracked.rawValue)",
                         headline: maintenanceDeclineHeadline(exerciseType: tracked.displayName, sessionCount: windowSize),
-                        explanation: maintenanceDeclineDetail(patientName: patientName) + "\n\n" + maintenanceDisclaimer(patientName: patientName),
+                        explanation: maintenanceDeclineDetail(patientName: patientName),
                         sfSymbolName: "chart.line.downtrend.xyaxis",
-                        score: current.magnitude * 100))
+                        score: current.magnitude * 100,
+                        disclaimer: maintenanceDisclaimer(patientName: patientName)))
                 case .stable:
                     insights.append(Insight(
                         id: "maintStable_\(tracked.rawValue)",
                         headline: maintenanceStabilityHeadline(patientName: patientName, exerciseType: tracked.displayName, sessionCount: windowSize),
-                        explanation: maintenanceStabilityDetail(pronounSubject: pronounSubject) + "\n\n" + maintenanceDisclaimer(patientName: patientName),
+                        explanation: maintenanceStabilityDetail(pronounSubject: pronounSubject),
                         sfSymbolName: "checkmark.seal",
-                        score: 8))
+                        score: 8,
+                        disclaimer: maintenanceDisclaimer(patientName: patientName)))
                 case .improvement, .none:
                     break
                 }
@@ -268,7 +273,9 @@ struct InsightEngine {
         "For \(pronounSubject), steady is a good outcome — it means this ability is being maintained."
     }
 
-    private static func maintenanceDisclaimer(patientName: String) -> String {
+    /// Not private: reused verbatim by AppGuidanceInfoView so the clinical
+    /// disclaimer has a single source of truth instead of a duplicated literal.
+    static func maintenanceDisclaimer(patientName: String) -> String {
         "This is not a diagnosis or medical advice. Share this with \(patientName)'s care team if you have questions about what it means."
     }
 
