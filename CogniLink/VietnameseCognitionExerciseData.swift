@@ -131,11 +131,11 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Từ trái nghĩa (Dễ dàng)
+    // MARK: - Nhớ lại câu chuyện
     private static let storyRecall = Exercise(
         id: UUID(),
-        title: "Từ trái nghĩa (Dễ dàng)",
-        instructions: "Chọn từ có nghĩa ĐỐI LẠI với từ đã cho.",
+        title: "Nhớ lại câu chuyện",
+        instructions: "Đọc kỹ câu chuyện ngắn sau đây rồi trả lời câu hỏi.",
         section: .cognition,
         type: .multipleChoice,
         trackedType: nil,
@@ -228,11 +228,11 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Ngữ pháp và lượng từ
+    // MARK: - Nguyên nhân và Kết quả
     private static let causeAndEffect = Exercise(
         id: UUID(),
-        title: "Ngữ pháp và lượng từ",
-        instructions: "Chọn từ loại hoặc lượng từ thích hợp để hoàn thành câu.",
+        title: "Nguyên nhân và Kết quả",
+        instructions: "Chọn kết quả hợp lý nhất cho tình huống được mô tả.",
         section: .cognition,
         type: .multipleChoice,
         trackedType: nil,
@@ -261,11 +261,11 @@ struct VietnameseCognitionExerciseData {
         ]
     )
 
-    // MARK: - Tương tự
+    // MARK: - Có gì sai ở đây?
     private static let whatsWrongHere = Exercise(
         id: UUID(),
-        title: "Tương tự",
-        instructions: "Chọn từ phù hợp nhất với sự tương tự.",
+        title: "Có gì sai ở đây?",
+        instructions: "Tìm điểm bất hợp lý hoặc không thể xảy ra trong câu văn.",
         section: .cognition,
         type: .multipleChoice,
         trackedType: nil,

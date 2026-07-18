@@ -24,8 +24,8 @@ struct VietnameseLanguageExerciseData {
     // MARK: - Exercise 1: Category Cross-Out (Easy)
     private static let categoryCrossoutEasy = Exercise(
         id: UUID(),
-        title: "Cặp từ hiệp vần",
-        instructions: "Chọn từ hiệp vần với từ đã cho.",
+        title: "Gạch bỏ danh mục (Dễ dàng)",
+        instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
@@ -1511,8 +1511,8 @@ struct VietnameseLanguageExerciseData {
     // MARK: - Exercise 33: Rhyming Pairs
     private static let rhymingPairs = Exercise(
         id: UUID(),
-        title: "Gạch bỏ danh mục (Dễ dàng)",
-        instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
+        title: "Cặp từ hiệp vần",
+        instructions: "Chọn từ hiệp vần với từ đã cho.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
@@ -1554,8 +1554,8 @@ struct VietnameseLanguageExerciseData {
     // MARK: - Exercise 34: Word Association
     private static let wordAssociation = Exercise(
         id: UUID(),
-        title: "Hạng mục Gạch bỏ (Cứng)",
-        instructions: "Nhấn vào từ KHÔNG thuộc nhóm.",
+        title: "Liên kết từ",
+        instructions: "Chọn từ có mối liên hệ mật thiết nhất với từ đã cho.",
         section: .language,
         type: .multipleChoice,
         trackedType: .wordAssociation,
@@ -1624,8 +1624,8 @@ struct VietnameseLanguageExerciseData {
     // MARK: - Exercise 36: Compound Words
     private static let compoundWords = Exercise(
         id: UUID(),
-        title: "Từ đồng nghĩa (Dễ dàng)",
-        instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
+        title: "Ghép từ thành nghĩa",
+        instructions: "Chọn từ thích hợp để hoàn thành một từ ghép có nghĩa trong tiếng Việt.",
         section: .language,
         type: .multipleChoice,
         trackedType: nil,
@@ -1647,8 +1647,8 @@ struct VietnameseLanguageExerciseData {
     // MARK: - Exercise 37: Prefix and Suffix
     private static let prefixAndSuffix = Exercise(
         id: UUID(),
-        title: "Từ đồng nghĩa (Cứng)",
-        instructions: "Chọn từ có nghĩa CÙNG với từ đã cho.",
+        title: "Tiền tố và Hậu tố",
+        instructions: "Chọn thành tố từ vựng (tiền tố/hậu tố) đúng dựa theo nghĩa được mô tả.",
         section: .language,
         type: .sentenceCompletion,
         trackedType: nil,
