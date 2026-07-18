@@ -14,9 +14,11 @@ struct CaregiverDashboardView: View {
     @State private var showResetAdaptiveAlert = false
     @State private var showBaselineAssessment = false
     @State private var showTrajectorySettingsPrompt = false
+    @State private var showMaintenanceModeDisclaimer = false
     @ObservedObject private var notificationManager = NotificationManager.shared
 
     private static let trajectorySettingsPromptShownKey = "clarity_trajectory_settings_prompt_shown"
+    private static let maintenanceModeDisclaimerShownKey = "clarity_maintenance_mode_disclaimer_shown"
 
     private var reminderTimeBinding: Binding<Date> {
         Binding(
@@ -148,6 +150,11 @@ struct CaregiverDashboardView: View {
             Button("OK") {}
         } message: {
             Text("You can adjust how progress is interpreted in Therapy Settings.")
+        }
+        .alert("Maintenance Mode", isPresented: $showMaintenanceModeDisclaimer) {
+            Button("OK") {}
+        } message: {
+            Text("Maintenance mode changes how progress is described, to reflect that steady performance can be a good outcome. This wording is still pending review by a licensed clinician — treat it as informational only.")
         }
     }
 
@@ -316,7 +323,19 @@ struct CaregiverDashboardView: View {
 
                 Picker("Goal Orientation", selection: Binding<GoalOrientation>(
                     get: { trajectoryStore.goalOrientation },
-                    set: { trajectoryStore.goalOrientation = $0 }
+                    set: { newValue in
+                        let oldValue = trajectoryStore.goalOrientation
+                        trajectoryStore.goalOrientation = newValue
+                        if oldValue == .recovery, newValue == .maintenance,
+                           !UserDefaults.standard.bool(forKey: Self.maintenanceModeDisclaimerShownKey) {
+                            // Set the flag immediately, before display, so a kill
+                            // mid-display can never cause the prompt to reappear.
+                            // True one-time-ever: switching back to Recovery and
+                            // to Maintenance again will not show it a second time.
+                            UserDefaults.standard.set(true, forKey: Self.maintenanceModeDisclaimerShownKey)
+                            showMaintenanceModeDisclaimer = true
+                        }
+                    }
                 )) {
                     ForEach(GoalOrientation.allCases, id: \.self) { orientation in
                         Text(orientation.displayName).tag(orientation)
@@ -348,6 +367,16 @@ struct CaregiverDashboardView: View {
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
+
+            Divider()
+
+            // Persistent feature-maturity notice — always visible while this
+            // section is shown, regardless of toggle values. Not dismissible;
+            // this is a standing status note, not a one-time prompt.
+            Text("The wording used in Recovery and Maintenance mode is still being reviewed by a licensed clinician. If anything here reads as confusing or concerning, please treat it as informational only and raise it directly with \(store.profile.displayName)'s care team.")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .padding()
         .background(Color.secondaryGroupedBackground)
