@@ -105,6 +105,22 @@ struct BaselineAssessmentView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
+                        // Exercise title and instructions header
+                        VStack(spacing: 4) {
+                            Text(question.exerciseTitle)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                                .textCase(.uppercase)
+                                .tracking(0.5)
+                                .multilineTextAlignment(.center)
+                            Text(question.instructions)
+                                .font(.subheadline)
+                                .fontWeight(.medium)
+                                .foregroundColor(.primary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .padding(.vertical, 8)
+
                         Text(question.item.prompt)
                             .font(.title3)
                             .fontWeight(.bold)

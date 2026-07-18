@@ -5,6 +5,8 @@ struct BaselineQuestion: Identifiable {
     let id = UUID()
     let item: ExerciseItem
     let difficulty: Difficulty
+    let exerciseTitle: String
+    let instructions: String
 }
 
 /// Pure Swift engine for the baseline assessment: samples questions across
@@ -38,21 +40,23 @@ struct BaselineAssessmentEngine {
             AdaptiveDifficultyStore.shared.adaptiveIdentifier(for: $0) != nil
         }
 
-        func eligibleItems(difficulty: Difficulty) -> [ExerciseItem] {
+        func eligibleItems(difficulty: Difficulty) -> [(ExerciseItem, Exercise)] {
             adaptiveExercises
                 .filter { $0.difficulty == difficulty }
-                .flatMap { $0.items }
-                .filter { (2...4).contains($0.options.count) && $0.options.contains($0.correctAnswer) }
+                .flatMap { exercise in exercise.items.map { ($0, exercise) } }
+                .filter { (2...4).contains($0.0.options.count) && $0.0.options.contains($0.0.correctAnswer) }
         }
 
         var questions: [BaselineQuestion] = []
-        var spareItems: [(ExerciseItem, Difficulty)] = []
+        var spareItems: [(ExerciseItem, Exercise, Difficulty)] = []
 
         for difficulty in [Difficulty.easy, .medium, .hard] {
             let pool = eligibleItems(difficulty: difficulty).shuffled()
             let take = Array(pool.prefix(questionsPerRound))
-            questions.append(contentsOf: take.map { BaselineQuestion(item: $0, difficulty: difficulty) })
-            spareItems.append(contentsOf: pool.dropFirst(questionsPerRound).map { ($0, difficulty) })
+            questions.append(contentsOf: take.map {
+                BaselineQuestion(item: $0.0, difficulty: difficulty, exerciseTitle: $0.1.title, instructions: $0.1.instructions)
+            })
+            spareItems.append(contentsOf: pool.dropFirst(questionsPerRound).map { ($0.0, $0.1, difficulty) })
         }
 
         // Top up from spares if any tier came short.
@@ -63,7 +67,7 @@ struct BaselineAssessmentEngine {
                 .filter { !usedIDs.contains($0.0.id) }
                 .shuffled()
                 .prefix(needed)
-                .map { BaselineQuestion(item: $0.0, difficulty: $0.1) }
+                .map { BaselineQuestion(item: $0.0, difficulty: $0.2, exerciseTitle: $0.1.title, instructions: $0.1.instructions) }
             questions.append(contentsOf: fillers)
             // Keep round ordering: easy → medium → hard
             questions.sort { order(of: $0.difficulty) < order(of: $1.difficulty) }
