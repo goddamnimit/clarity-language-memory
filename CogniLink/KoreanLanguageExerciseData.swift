@@ -607,7 +607,7 @@ struct KoreanLanguageExerciseData {
                 prompt: "단어: 빅",
                 options: ["작은", "큰", "짧은", "얇은"],
                 correctAnswer: "큰",
-                explanation: "'빅(Big)'은 크기가 큰 것을, '작은'은 크기가 작음을 의미하여 서로 반대되는 크기를 나타내기 때문입니다."
+                explanation: "'빅(Big)'은 크기가 큰 것을 의미하며, '큰' 역시 같은 뜻을 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -647,9 +647,9 @@ struct KoreanLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 더러운",
-                options: ["깨끗한", "더러운", "깔끔한", "깔끔한"],
-                correctAnswer: "더러운",
-                explanation: "두 단어는 완전히 동일한 형태와 의미를 가진 동의어로서 깨끗하지 않은 상태를 나타내기 때문입니다."
+                options: ["깨끗한", "지저분한", "깔끔한", "신선한"],
+                correctAnswer: "지저분한",
+                explanation: "'더러운'과 '지저분한'은 모두 깨끗하지 않은 상태를 나타내는 유의어이기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
@@ -778,14 +778,14 @@ struct KoreanLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 빠르다",
-                options: ["빨리", "천천히", "빠른", "빠른"],
+                options: ["빨리", "천천히", "빠른", "재빠른"],
                 correctAnswer: "천천히",
                 explanation: "'빠르다'는 속도가 높은 것을, '천천히'는 속도가 느린 것을 의미하여 서로 반대되는 속도를 나타내기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "단어: 깨끗하다",
-                options: ["깔끔한", "깔끔한", "더러운", "신선한"],
+                options: ["깔끔한", "말끔한", "더러운", "신선한"],
                 correctAnswer: "더러운",
                 explanation: "'깨끗하다'는 오염이 없는 상태를, '더러운'은 오염된 상태를 의미하여 서로 반대되는 상태를 나타내기 때문입니다."
             ),
@@ -965,10 +965,10 @@ struct KoreanLanguageExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "그는 ___을(를) 지불했습니다.",
-                options: ["계산서", "채우다", "밀"],
-                correctAnswer: "계산서",
-                explanation: "비용을 치르는 행위인 '지불하다'의 목적어로 '계산서'가 가장 적절하기 때문입니다."
+                prompt: "그는 ___을(를) 청소했습니다.",
+                options: ["방", "채우다", "밀"],
+                correctAnswer: "방",
+                explanation: "청소하는 행위인 '청소하다'의 목적어로 공간을 나타내는 '방'이 가장 적절하기 때문입니다."
             ),
             ExerciseItem(
                 id: UUID(),

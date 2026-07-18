@@ -64,7 +64,7 @@ struct KoreanHardExercisesData {
             ExerciseItem(prompt: "깃털이 조류에게 해당된다면, 비늘은 무엇에 해당됩니까?", options: ["물고기", "개구리", "머리카락", "물줄기"], correctAnswer: "물고기", explanation: "조류의 표면은 깃털로 덮여 있고, 물고기의 표면은 비늘로 덮여 있습니다."),
             ExerciseItem(prompt: "심장이 박동에 해당된다면, 폐는 무엇에 해당됩니까?", options: ["호흡", "혈액", "산소", "혈관"], correctAnswer: "호흡", explanation: "심장의 주요 기능은 박동이고, 폐의 주요 기능은 호흡(숨쉬기)입니다."),
             ExerciseItem(prompt: "핸들이 자동차에 해당된다면, 키는 무엇에 해당됩니까?", options: ["선박", "도로", "바람", "바퀴"], correctAnswer: "선박", explanation: "핸들은 자동차의 방향을 제어하고, 키(rudder)는 선박의 방향을 제어합니다."),
-            ExerciseItem(prompt: "금이 보석에 해당된다면, 나무는 무엇에 해당됩니까?", options: ["가구", "숲", "나무", "석탄"], correctAnswer: "가구", explanation: "금은 보석이나 아भूषण의 원자재이고, 나무는 가구의 원자재입니다."),
+            ExerciseItem(prompt: "금이 보석에 해당된다면, 나무는 무엇에 해당됩니까?", options: ["가구", "숲", "나무", "석탄"], correctAnswer: "가구", explanation: "금은 보석이나 장신구의 원자재이고, 나무는 가구의 원자재입니다."),
             ExerciseItem(prompt: "의사가 청진기에 해당된다면, 천문학자는 무엇에 해당됩니까?", options: ["망원경", "책", "컴퓨터", "지도"], correctAnswer: "망원경", explanation: "청진기는 의사의 대표적인 관찰 도구이며, 망원경은 천문학자의 대표적인 관찰 도구입니다."),
             ExerciseItem(prompt: "밤이 달에 해당된다면, 낮은 무엇에 해당됩니까?", options: ["태양", "별", "구름", "산들바람"], correctAnswer: "태양", explanation: "밤을 대표하는 천체는 달이고, 낮을 대표하는 천체는 태양입니다."),
             ExerciseItem(prompt: "꿀벌이 벌집에 해당된다면, 거미는 무엇에 해당됩니까?", options: ["거미줄", "동굴", "연못", "나무"], correctAnswer: "거미줄", explanation: "꿀벌은 벌집을 짓고, 거미는 거미줄을 칩니다."),
@@ -100,7 +100,7 @@ struct KoreanHardExercisesData {
             ExerciseItem(prompt: "가야금", options: ["명주실", "쇠줄", "나일론", "플라스틱"], correctAnswer: "명주실", explanation: "가야금의 열두 줄은 명주실을 꼬아서 만듭니다."),
             ExerciseItem(prompt: "태극기", options: ["괘", "무늬", "점", "도형"], correctAnswer: "괘", explanation: "태극기의 네 모퉁이에 있는 기호는 건곤감리의 4괘입니다."),
             ExerciseItem(prompt: "아리랑", options: ["민요", "판소리", "가요", "팝송"], correctAnswer: "민요", explanation: "아리랑은 한국인들에게 가장 널리 알려진 전통 민요입니다."),
-            ExerciseItem(prompt: "비빔밥", options: ["고추장", "된장", "간장", "춘장"], correctAnswer: "고추장", explanation: "비빔밥을 맛있게 비비기 위해 넣는 대표적인 붉은 양념 소스는 고추장입니다调整。")
+            ExerciseItem(prompt: "비빔밥", options: ["고추장", "된장", "간장", "춘장"], correctAnswer: "고추장", explanation: "비빔밥을 맛있게 비비기 위해 넣는 대표적인 붉은 양념 소스는 고추장입니다.")
         ]
     )
 
@@ -169,7 +169,7 @@ struct KoreanHardExercisesData {
         items: [
             ExerciseItem(prompt: "원인: 여름철 서울 지역의 기온이 섭씨 39도까지 치솟았다.", options: ["냉방 시설 사용이 급증하면서 전력 사용량이 최고치를 경신했다", "도심 거리에 지나다니는 행인의 수가 크게 증가했다", "시장에서 방한용 겨울 코트의 판매량이 급증했다", "발전소들이 예비 전력량이 너무 여유롭다고 발표했다"], correctAnswer: "냉방 시설 사용이 급증하면서 전력 사용량이 최고치를 경신했다", explanation: "폭염이 발생하면 에어컨 등 가전 기기 구동이 급증하여 예비 전력이 바닥나며 최대 전력 부하를 기록합니다."),
             ExerciseItem(prompt: "원인: 운전자가 신호등의 정지 신호를 무시하고 교차로를 과속 통과했다.", options: ["교통경찰에게 적발되어 면허 정지와 벌금 처분을 받았다", "그는 모범 운전자 표창장과 상금을 받게 되었다", "주변 차들이 자동으로 신속히 차선을 비켜주었다", "신호등이 그의 차를 감지하여 바로 녹색등으로 바뀌었다"], correctAnswer: "교통경찰에게 적발되어 면허 정지와 벌금 처분을 받았다", explanation: "적색 정지 신호를 위반하는 신호위반 과속 행위는 행정 처분과 과태료 벌금 부과 대상입니다."),
-            ExerciseItem(prompt: "원인: 도시의 배수관로 시설이 낙엽과 쓰레기로 꽉 막혔다.", options: ["갑작스러운 집중호우 시 도시 도로 곳곳이 침수되었다", "빗물이 하천으로 빠르고 안전하게 배수되었다", "골목길들이 아주 건조하고 청결한 상태를 유지했다", "편의점의 생수 판매 단가가 갑자기 폭등했다"], correctAnswer: "갑작스러운 집중호우 시 도시 도로 곳곳이 침수되었다", explanation: "하수 배수 시설이 협잡물로 막히면 폭우 시 물이 빠져나가지 못해 급격한 침수 내涝가 일어납니다."),
+            ExerciseItem(prompt: "원인: 도시의 배수관로 시설이 낙엽과 쓰레기로 꽉 막혔다.", options: ["갑작스러운 집중호우 시 도시 도로 곳곳이 침수되었다", "빗물이 하천으로 빠르고 안전하게 배수되었다", "골목길들이 아주 건조하고 청결한 상태를 유지했다", "편의점의 생수 판매 단가가 갑자기 폭등했다"], correctAnswer: "갑작스러운 집중호우 시 도시 도로 곳곳이 침수되었다", explanation: "하수 배수 시설이 협잡물로 막히면 폭우 시 물이 빠져나가지 못해 급격한 침수 사태가 일어납니다."),
             ExerciseItem(prompt: "결과: 시험 결과 발표를 본 영수는 크게 기뻐하며 소리를 질렀다.", options: ["원인: 오랫동안 고대하던 국가 자격시험에 수석으로 합격했다", "원인: 그는 당일 지독한 몸살 감기로 시험에 응시하지 못했다", "원인: 답안 마킹을 밀려 써서 과락 점수를 맞았다", "원인: 교육 당국이 시험 출제 오류로 무기한 연기를 발표했다"], correctAnswer: "원인: 오랫동안 고대하던 국가 자격시험에 수석으로 합격했다", explanation: "힘들게 준비한 큰 시험에서 수석 등 매우 좋은 결과를 내는 것이 기뻐하는 정상 원인입니다."),
             ExerciseItem(prompt: "결과: 올해 고추 농사가 대풍년을 이루어 농가의 수익이 크게 늘었다.", options: ["원인: 올여름 적절한 강수량과 맑은 일조량이 오랫동안 이어졌다", "원인: 장마철에 논밭 전체가 물에 잠기는 큰 수해가 발생했다", "원인: 농민들이 농약 상회에서 유통기한이 지난 가짜 비료를 주었다", "원인: 멧돼지 떼가 고추밭에 내려와 농작물을 전부 헤집어 놓았다"], correctAnswer: "원인: 올여름 적절한 강수량과 맑은 일조량이 오랫동안 이어졌다", explanation: "풍부한 햇빛과 가뭄 없는 주기적인 적당한 물 공급은 농작물 대풍의 원동력입니다."),
             ExerciseItem(prompt: "원인: 수험생들이 시험 전날 밤을 새워 무리하게 공부했다.", options: ["시험장 아침에 심한 졸음과 집중력 저하로 고생했다", "아침 일찍 눈이 떠져서 최고의 컨디션을 유지했다", "시험 감독관이 출제를 잘못하여 시험 시간이 연장되었다", "그들의 뇌 기능이 일시적으로 매우 명석해졌다"], correctAnswer: "시험장 아침에 심한 졸음과 집중력 저하로 고생했다", explanation: "과도한 벼락치기 불면증은 호르몬 불균형과 극심한 피로를 몰고 와 시험 당일 능률을 해칩니다."),
@@ -252,12 +252,12 @@ struct KoreanHardExercisesData {
             ExerciseItem(prompt: "[밤 / 밤] 어두운 ___ 하늘에 별이 반짝인다. 다람쥐가 맛있는 ___을 주웠다.", options: ["밤...밤", "낮...밤", "밤...낮", "낮...낮"], correctAnswer: "밤...밤", explanation: "첫 번째 '밤'은 해가 진 뒤의 어두운 시간(night)이고, 두 번째 '밤'은 나무 열매(chestnut)입니다."),
             ExerciseItem(prompt: "[사과 / 사과] 그는 친구에게 진심으로 ___를 했다. 나는 빨갛게 익은 ___를 한 입 베어 물었다.", options: ["사과...사과", "용서...사과", "사과...배", "인사...사과"], correctAnswer: "사과...사과", explanation: "첫 번째 '사과'는 잘못을 비는 행동(apology)이고, 두 번째 '사과'는 둥근 과일(apple)입니다."),
             ExerciseItem(prompt: "[눈 / 눈] 하늘에서 하얀 ___이 내린다. 안경을 쓰니 ___이 잘 보인다.", options: ["눈...눈", "비...눈", "눈...비", "비...비"], correctAnswer: "눈...눈", explanation: "첫 번째 '눈'은 하늘에서 내리는 하얀 결정(snow)이고, 두 번째 '눈'은 보는 신체 기관(eye)입니다."),
-            ExerciseItem(prompt: "[말 / 말] 농부가 밭에서 갈색 ___을 타고 있다. 예의 바르게 ___을 해야 한다.", options: ["말...말", "말...소", "소...말", "말...말"], correctAnswer: "말...말", explanation: "첫 번째 '말'은 달리는 동물(horse)이고, 두 번째 '말'은 사람이 하는 언어(speech)입니다."),
+            ExerciseItem(prompt: "[말 / 말] 농부가 밭에서 갈색 ___을 타고 있다. 예의 바르게 ___을 해야 한다.", options: ["말...말", "말...소", "소...말", "말...글"], correctAnswer: "말...말", explanation: "첫 번째 '말'은 달리는 동물(horse)이고, 두 번째 '말'은 사람이 하는 언어(speech)입니다."),
             ExerciseItem(prompt: "[다리 / 다리] 강 위를 건너는 큰 ___가 있다. 달리기를 하니 ___가 아프다.", options: ["다리...다리", "다리...팔", "팔...다리", "길...다리"], correctAnswer: "다리...다리", explanation: "첫 번째 '다리'는 건너갈 수 있게 만든 길(bridge)이고, 두 번째 '다리'는 사람의 하체 부위(leg)입니다."),
             ExerciseItem(prompt: "[풀 / 풀] 마당에 푸른 ___이 자랐다. 찢어진 종이를 ___로 붙였다.", options: ["풀...풀", "풀...가위", "가위...풀", "풀...꽃"], correctAnswer: "풀...풀", explanation: "첫 번째 '풀'은 초목(grass)이고, 두 번째 '풀'은 접착제(glue)입니다."),
             ExerciseItem(prompt: "[차 / 차] 따뜻한 녹___ 한 잔을 마셨다. 아버지가 새 ___를 운전하신다.", options: ["차...차", "물...차", "차...트럭", "커피...차"], correctAnswer: "차...차", explanation: "첫 번째 '차'는 마시는 음료(tea)이고, 두 번째 '차'는 도로를 달리는 자동차(car)입니다."),
             ExerciseItem(prompt: "[김 / 김] 밥에 고소한 ___을 싸서 먹었다. 뜨거운 물에서 하얀 ___이 솟는다.", options: ["김...김", "김...물", "물...김", "국...김"], correctAnswer: "김...김", explanation: "첫 번째 '김'은 반찬으로 먹는 해조류(seaweed)이고, 두 번째 '김'은 끓는 물에서 나오는 수증기(steam)입니다."),
-            ExerciseItem(prompt: "[벌 / 벌] 들판에 윙윙 날아다니는 ___이 있다. 약속을 어겨 선생님께 ___을 받았다.", options: ["벌...벌", "나비...벌", "벌...칭찬", "벌...벌"], correctAnswer: "벌...벌", explanation: "첫 번째 '벌'은 꿀을 모으는 곤충(bee)이고, 두 번째 '벌'은 잘못에 대한 대가(punishment)입니다."),
+            ExerciseItem(prompt: "[벌 / 벌] 들판에 윙윙 날아다니는 ___이 있다. 약속을 어겨 선생님께 ___을 받았다.", options: ["벌...벌", "나비...벌", "벌...칭찬", "나비...칭찬"], correctAnswer: "벌...벌", explanation: "첫 번째 '벌'은 꿀을 모으는 곤충(bee)이고, 두 번째 '벌'은 잘못에 대한 대가(punishment)입니다."),
             ExerciseItem(prompt: "[해 / 해] 하늘에 밝은 ___가 떠 있다. 올해는 작년보다 좋은 ___가 되길 바란다.", options: ["해...해", "달...해", "해...달", "해...날"], correctAnswer: "해...해", explanation: "첫 번째 '해'는 지구를 비추는 태양(sun)이고, 두 번째 '해'는 년도를 세는 단위(year)입니다."),
             ExerciseItem(prompt: "[굴 / 굴] 바다에서 캔 싱싱한 ___을 먹었다. 기차가 캄캄한 ___을 통과한다.", options: ["굴...굴", "조개...굴", "굴...터널", "굴...산"], correctAnswer: "굴...굴", explanation: "첫 번째 '굴'은 먹는 조개류(oyster)이고, 두 번째 '굴'은 산을 뚫어 만든 통로(cave/tunnel)입니다."),
             ExerciseItem(prompt: "[발 / 발] 걸어가니 ___이 아프다. 더운 여름 햇빛을 막기 위해 창문에 ___을 쳤다.", options: ["발...발", "발...손", "손...발", "발...커튼"], correctAnswer: "발...발", explanation: "첫 번째 '발'은 걷는 신체 부위(foot)이고, 두 번째 '발'은 대나무 등으로 만든 가리개(screen)입니다."),
@@ -376,7 +376,7 @@ struct KoreanHardExercisesData {
             ExerciseItem(prompt: "도서관", options: ["침묵", "소음", "군중", "게임"], correctAnswer: "침묵", explanation: "도서관은 학습과 독서를 하는 조용한 공간입니다."),
             ExerciseItem(prompt: "병원", options: ["치료", "휴가", "쇼핑", "요리"], correctAnswer: "치료", explanation: "병원은 아픈 환자들을 치료하고 회복시키는 곳입니다."),
             ExerciseItem(prompt: "공항", options: ["출발", "수면", "원예", "미술"], correctAnswer: "출발", explanation: "공항은 항공기 탑승 and 출발..."),
-            ExerciseItem(prompt: "공항", options: ["출발", "수면", "원예", "미술"], correctAnswer: "출발", explanation: "비행기가 출발하는 공항."),
+            ExerciseItem(prompt: "우체국", options: ["편지", "수면", "원예", "미술"], correctAnswer: "편지", explanation: "우체국은 편지와 소포를 보내고 받는 곳입니다."),
             ExerciseItem(prompt: "사막", options: ["가뭄", "폭우", "숲", "바다"], correctAnswer: "가뭄", explanation: "사막은 강수량이 매우 적어 메마른 가뭄 상태가 특징입니다."),
             ExerciseItem(prompt: "결혼식", options: ["반지", "시험", "사무실", "열쇠"], correctAnswer: "반지", explanation: "결혼식에서는 결합의 서약으로 서로 반지를 교환합니다."),
             ExerciseItem(prompt: "농장", options: ["수확", "도시", "사무실", "공장"], correctAnswer: "수확", explanation: "농장에서는 작물을 경작하고 농작물을 수확합니다."),
@@ -401,11 +401,11 @@ struct KoreanHardExercisesData {
         trackedType: .homonym,
         difficulty: .medium,
         items: [
-            ExerciseItem(prompt: "[배 / 배] 가을이 되면 달콤한 ___가 맛있습니다. 항구에 커다란 ___가 정박했습니다.", options: ["배...배", "배...배", "배...배", "배...배"], correctAnswer: "배...배", explanation: "첫 번째 '배'는 과일이고, 두 번째 '배'는 탈것(선박)입니다."),
-            ExerciseItem(prompt: "[밤 / 밤] 둥글고 맛있는 군___을 먹었습니다. 깜깜한 ___에는 별이 보입니다.", options: ["밤...밤", "밤...밤", "밤...밤", "밤...밤"], correctAnswer: "밤...밤", explanation: "첫 번째 '밤'은 견과류이고, 두 번째 '밤'은 야간 시간대입니다."),
-            ExerciseItem(prompt: "[눈 / 눈] 겨울이 되면 하얀 ___이 내립니다. 얼굴에 있는 두 ___으로 사물을 봅니다.", options: ["눈...눈", "눈...눈", "눈...눈", "눈...눈"], correctAnswer: "눈...눈", explanation: "첫 번째 '눈'은 강설이고, 두 번째 '눈'은 신체 부위(안구)입니다."),
-            ExerciseItem(prompt: "[다리 / 다리] 튼튼한 두 ___로 걷습니다. 강 위에 걸쳐진 긴 ___를 건넙니다.", options: ["다리...다리", "다리...다리", "다리...다리", "다리...다리"], correctAnswer: "다리...다리", explanation: "첫 번째 '다리'는 신체 하체이고, 두 번째 '다리'는 교량 구조물입니다."),
-            ExerciseItem(prompt: "[말 / 말] 우리는 한국 ___로 이야기합니다. 목장에 멋진 ___이 달리고 있습니다.", options: ["말...말", "말...말", "말...말", "말...말"], correctAnswer: "말...말", explanation: "첫 번째 '말'은 언어이고, 두 번째 '말'은 달리는 동물(마)입니다.")
+            ExerciseItem(prompt: "[배 / 배] 가을이 되면 달콤한 ___가 맛있습니다. 항구에 커다란 ___가 정박했습니다.", options: ["배...배", "배...사과", "사과...배", "배...귤"], correctAnswer: "배...배", explanation: "첫 번째 '배'는 과일이고, 두 번째 '배'는 탈것(선박)입니다."),
+            ExerciseItem(prompt: "[밤 / 밤] 둥글고 맛있는 군___을 먹었습니다. 깜깜한 ___에는 별이 보입니다.", options: ["밤...밤", "밤...낮", "낮...밤", "밤...호두"], correctAnswer: "밤...밤", explanation: "첫 번째 '밤'은 견과류이고, 두 번째 '밤'은 야간 시간대입니다."),
+            ExerciseItem(prompt: "[눈 / 눈] 겨울이 되면 하얀 ___이 내립니다. 얼굴에 있는 두 ___으로 사물을 봅니다.", options: ["눈...눈", "눈...비", "비...눈", "눈...코"], correctAnswer: "눈...눈", explanation: "첫 번째 '눈'은 강설이고, 두 번째 '눈'은 신체 부위(안구)입니다."),
+            ExerciseItem(prompt: "[다리 / 다리] 튼튼한 두 ___로 걷습니다. 강 위에 걸쳐진 긴 ___를 건넙니다.", options: ["다리...다리", "다리...팔", "팔...다리", "다리...도로"], correctAnswer: "다리...다리", explanation: "첫 번째 '다리'는 신체 하체이고, 두 번째 '다리'는 교량 구조물입니다."),
+            ExerciseItem(prompt: "[말 / 말] 우리는 한국 ___로 이야기합니다. 목장에 멋진 ___이 달리고 있습니다.", options: ["말...말", "말...소", "소...말", "말...글"], correctAnswer: "말...말", explanation: "첫 번째 '말'은 언어이고, 두 번째 '말'은 달리는 동물(마)입니다.")
         ]
     )
 
