@@ -263,8 +263,8 @@ struct VietnameseLanguageExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "FEMUR, TIBIA, BÁN KÍNH, GIÁC GIÁC",
-                options: ["FEMUR", "TIBIA", "BÁNH GIÁ", "giác mạc"],
+                prompt: "FEMUR, TIBIA, XƯƠNG QUAY, GIÁC MẠC",
+                options: ["FEMUR", "TIBIA", "XƯƠNG QUAY", "giác mạc"],
                 correctAnswer: "giác mạc",
                 explanation: "Một phần của mắt, không phải xương"
             ),
@@ -292,7 +292,7 @@ struct VietnameseLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "Hồi ký, tiểu sử, tự truyện, SONNET",
-                options: ["BỘ NHỚ", "TIỂU SỬ", "TỰ TIN", "SONNET"],
+                options: ["HỒI KÝ", "TIỂU SỬ", "TỰ TRUYỆN", "SONNET"],
                 correctAnswer: "SONNET",
                 explanation: "Một bài thơ, không phải một câu chuyện cuộc đời"
             ),
@@ -312,8 +312,8 @@ struct VietnameseLanguageExerciseData {
             ),
             ExerciseItem(
                 id: UUID(),
-                prompt: "BỒI THẨM ĐOẠN, THẨM PHÁN, THÁNH PHÁP, NGUYÊN ĐƠN",
-                options: ["BỒI THẦU", "THẨM PHÁN", "Thừa phát lại", "NGUYÊN ĐƠN"],
+                prompt: "BỒI THẨM ĐOÀN, THẨM PHÁN, THỪA PHÁT LẠI, NGUYÊN ĐƠN",
+                options: ["BỒI THẨM ĐOÀN", "THẨM PHÁN", "Thừa phát lại", "NGUYÊN ĐƠN"],
                 correctAnswer: "NGUYÊN ĐƠN",
                 explanation: "Một bên trong vụ án, không phải là viên chức tòa án"
             ),
@@ -390,7 +390,7 @@ struct VietnameseLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "FLAMENCO, TANGO, WALTZ, OPERA",
-                options: ["FLAMENCO", "TANGO", "ĐẸP", "OPERA"],
+                options: ["FLAMENCO", "TANGO", "WALTZ", "OPERA"],
                 correctAnswer: "OPERA",
                 explanation: "Nghệ thuật biểu diễn thanh nhạc, không phải khiêu vũ"
             ),
@@ -411,14 +411,14 @@ struct VietnameseLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "BÃO, Lốc xoáy, gió mùa, chấn động",
-                options: ["BÃO", "Lốc xoáy", "gió mùa", "RỦI RO"],
-                correctAnswer: "RỦI RO",
+                options: ["BÃO", "Lốc xoáy", "gió mùa", "CHẤN ĐỘNG"],
+                correctAnswer: "CHẤN ĐỘNG",
                 explanation: "Chuyển động địa chấn, không phải hiện tượng thời tiết"
             ),
             ExerciseItem(
                 id: UUID(),
                 prompt: "Sụn, dây chằng, gân, thần kinh",
-                options: ["Sụn", "DÍNH DÍNH", "GÂN", "NEURON"],
+                options: ["Sụn", "DÂY CHẰNG", "GÂN", "NEURON"],
                 correctAnswer: "NEURON",
                 explanation: "Tế bào thần kinh, không phải mô liên kết"
             )
@@ -605,9 +605,9 @@ struct VietnameseLanguageExerciseData {
             ExerciseItem(
                 id: UUID(),
                 prompt: "Từ: LỚN",
-                options: ["nhỏ bé", "ớn", "ngắn", "ầy"],
-                correctAnswer: "ớn",
-                explanation: "'Lớn' và 'nhỏ bé' là cặp từ trái nghĩa miêu tả kích thước. Lớn có nghĩa là có kích thước to, còn nhỏ bé thì ngược lại."
+                options: ["nhỏ bé", "to lớn", "ngắn", "ầy"],
+                correctAnswer: "to lớn",
+                explanation: "'Lớn' và 'to lớn' là từ đồng nghĩa, cả hai đều miêu tả kích thước to lớn, đồ sộ."
             ),
             ExerciseItem(
                 id: UUID(),
