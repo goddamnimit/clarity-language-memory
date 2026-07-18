@@ -1,3 +1,4 @@
+#if os(iOS)
 import Foundation
 
 /// A single plain-language observation surfaced in Caregiver Mode.
@@ -154,3 +155,4 @@ struct InsightEngine {
         return matching.first(where: { $0.difficulty == .easy }) ?? matching.first
     }
 }
+#endif
