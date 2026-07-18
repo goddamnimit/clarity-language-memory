@@ -404,7 +404,7 @@ struct JapaneseLanguageExerciseData {
             ExerciseItem(id: UUID(), prompt: "そら と同じ音で終わる言葉は？", options: ["むら", "つき", "かわ", "やま"], correctAnswer: "むら", explanation: "「ら」で韻を踏む"),
             ExerciseItem(id: UUID(), prompt: "ふゆ と同じ音で終わる言葉は？", options: ["はな", "かゆ", "そら", "つき"], correctAnswer: "かゆ", explanation: "「ゆ」で韻を踏む"),
             ExerciseItem(id: UUID(), prompt: "しろ と同じ音で終わる言葉は？", options: ["くろ", "あか", "きみ", "あを"], correctAnswer: "くろ", explanation: "「ろ」で韻を踏む"),
-            ExerciseItem(id: UUID(), prompt: "こころ と同じ音で終わる言葉は？", options: ["ちから", "たから", "みころ", "ひかり"], correctAnswer: "みころ", explanation: "「ころ」で韻を踏む"),
+            ExerciseItem(id: UUID(), prompt: "こころ と同じ音で終わる言葉は？", options: ["ちから", "たから", "あのころ", "ひかり"], correctAnswer: "あのころ", explanation: "「こころ」と「あのころ（その時代・昔）」はどちらも「ころ」の音で終わり、韻を踏んでいます。"),
             ExerciseItem(id: UUID(), prompt: "いえ と同じ音で終わる言葉は？", options: ["やま", "うえ", "きわ", "そら"], correctAnswer: "うえ", explanation: "「え」で韻を踏む"),
             ExerciseItem(id: UUID(), prompt: "あき と同じ音で終わる言葉は？", options: ["なつ", "ふゆ", "すき", "はな"], correctAnswer: "すき", explanation: "「き」で韻を踏む"),
             ExerciseItem(id: UUID(), prompt: "かわ と同じ音で終わる言葉は？", options: ["やま", "うわ", "つき", "そら"], correctAnswer: "うわ", explanation: "「わ」で韻を踏む"),
