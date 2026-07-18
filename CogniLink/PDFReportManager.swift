@@ -132,8 +132,8 @@ struct PDFReportManager {
 
             let patientName = profile.name.trimmingCharacters(in: .whitespacesAndNewlines)
             drawKeyValue("Patient", patientName.isEmpty ? "Patient" : patientName)
-            if let diagnosis = profile.diagnosisType {
-                drawKeyValue("Diagnosis", diagnosis.rawValue)
+            if let diagnosis = profile.diagnosisDisplayText {
+                drawKeyValue("Diagnosis", diagnosis)
             }
             drawKeyValue("Report generated", dateFormatter.string(from: today))
 

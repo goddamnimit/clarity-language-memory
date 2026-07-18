@@ -7,6 +7,7 @@ struct UserProfile: Codable, Identifiable, Equatable {
     var avatarImageData: Data?      // Stored as raw Data for easy JSON serialization
     var startDate: Date             // Tracks when the user first opened the app
     var diagnosisType: DiagnosisType?
+    var customDiagnosisText: String? // Free-text detail entered when diagnosisType is .other
     var therapistName: String?
     var notes: String?              // Personal notes field
     var lastModified: Date          // Automatically updated to synchronize changes
@@ -21,12 +22,13 @@ struct UserProfile: Codable, Identifiable, Equatable {
         case id, avatarImageData, startDate, diagnosisType, lastModified, currentStreak, longestStreak, lastActiveDate, completionHistory
     }
 
-    init(id: UUID, name: String, avatarImageData: Data?, startDate: Date, diagnosisType: DiagnosisType?, therapistName: String?, notes: String?, lastModified: Date, currentStreak: Int, longestStreak: Int, lastActiveDate: Date?, completionHistory: [Date]) {
+    init(id: UUID, name: String, avatarImageData: Data?, startDate: Date, diagnosisType: DiagnosisType?, customDiagnosisText: String?, therapistName: String?, notes: String?, lastModified: Date, currentStreak: Int, longestStreak: Int, lastActiveDate: Date?, completionHistory: [Date]) {
         self.id = id
         self.name = name
         self.avatarImageData = avatarImageData
         self.startDate = startDate
         self.diagnosisType = diagnosisType
+        self.customDiagnosisText = customDiagnosisText
         self.therapistName = therapistName
         self.notes = notes
         self.lastModified = lastModified
@@ -49,6 +51,7 @@ struct UserProfile: Codable, Identifiable, Equatable {
         self.completionHistory = try container.decode([Date].self, forKey: .completionHistory)
         
         self.name = ""
+        self.customDiagnosisText = ""
         self.therapistName = ""
         self.notes = ""
     }
@@ -72,6 +75,17 @@ struct UserProfile: Codable, Identifiable, Equatable {
         return trimmedName.isEmpty ? "My Profile" : name
     }
 
+    /// The diagnosis text to show in the UI and reports: the custom text when
+    /// diagnosisType is .other and text was entered, otherwise the case's rawValue.
+    var diagnosisDisplayText: String? {
+        guard let diagnosisType else { return nil }
+        if diagnosisType == .other {
+            let trimmed = customDiagnosisText?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            if !trimmed.isEmpty { return trimmed }
+        }
+        return diagnosisType.rawValue
+    }
+
     /// Generates a fresh user profile configured with safe default values and empty streak milestones.
     static func makeNew() -> UserProfile {
         UserProfile(
@@ -80,6 +94,7 @@ struct UserProfile: Codable, Identifiable, Equatable {
             avatarImageData: nil,
             startDate: Date(),
             diagnosisType: nil,
+            customDiagnosisText: "",
             therapistName: "",
             notes: "",
             lastModified: Date(),
@@ -97,10 +112,19 @@ enum DiagnosisType: String, Codable, CaseIterable, Identifiable {
     case ftd = "Frontotemporal Dementia"
     case ftdVariant = "FTD - Semantic/Fluent"
     case ftdBehavioral = "FTD - Behavioral"
+    case ppa = "Primary Progressive Aphasia (PPA)"
+    case alzheimers = "Alzheimer's Disease"
+    case vascularDementia = "Vascular Dementia"
+    case lewyBodyDementia = "Dementia with Lewy Bodies"
+    case mixedDementia = "Mixed Dementia"
+    case parkinsonsDementia = "Parkinson's Disease Dementia"
+    case mci = "Mild Cognitive Impairment (MCI)"
     case tbi = "Traumatic Brain Injury"
     case stroke = "Stroke"
+    case multipleSclerosis = "Multiple Sclerosis"
+    case brainTumor = "Brain Tumor"
     case other = "Other"
     case preferNotToSay = "Prefer not to say"
-    
+
     var id: String { self.rawValue }
 }

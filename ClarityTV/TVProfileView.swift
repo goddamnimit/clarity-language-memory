@@ -82,8 +82,8 @@ struct TVProfileView: View {
                                 .font(.system(size: 52, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)
 
-                            if let diagnosis = UserProfileStore.shared.profile.diagnosisType {
-                                Text(diagnosis.rawValue)
+                            if let diagnosis = UserProfileStore.shared.profile.diagnosisDisplayText {
+                                Text(diagnosis)
                                     .font(.system(size: 28, weight: .light))
                                     .foregroundColor(Color.white.opacity(0.6))
                             }

@@ -14,6 +14,7 @@ struct ProfileView: View {
 
     @State private var nameInput: String = ""
     @State private var therapistInput: String = ""
+    @State private var customDiagnosisInput: String = ""
     @State private var notesInput: String = ""
     #if os(iOS)
     @State private var selectedPhotoItem: PhotosPickerItem? = nil
@@ -132,11 +133,14 @@ struct ProfileView: View {
 
                 // MARK: 3. Info Card
                 VStack(spacing: 0) {
-                    Button(action: { showDiagnosisPicker = true }) {
+                    Button(action: {
+                        customDiagnosisInput = store.profile.customDiagnosisText ?? ""
+                        showDiagnosisPicker = true
+                    }) {
                         infoRow(
                             icon: "stethoscope",
                             label: "Diagnosis",
-                            value: store.profile.diagnosisType?.rawValue ?? "Not set",
+                            value: store.profile.diagnosisDisplayText ?? "Not set",
                             showChevron: true
                         )
                     }
@@ -519,19 +523,34 @@ struct ProfileView: View {
 
     private var diagnosisPickerSheet: some View {
         NavigationStack {
-            List(DiagnosisType.allCases) { diagnosis in
-                Button(action: {
-                    store.updateDiagnosis(diagnosis)
-                    showDiagnosisPicker = false
-                }) {
-                    HStack {
-                        Text(diagnosis.rawValue)
-                            .foregroundColor(.primary)
-                        Spacer()
-                        if store.profile.diagnosisType == diagnosis {
-                            Image(systemName: "checkmark")
-                                .foregroundColor(.accentColor)
+            List {
+                ForEach(DiagnosisType.allCases) { diagnosis in
+                    Button(action: {
+                        store.updateDiagnosis(diagnosis)
+                        if diagnosis == .other {
+                            customDiagnosisInput = store.profile.customDiagnosisText ?? ""
+                        } else {
+                            showDiagnosisPicker = false
                         }
+                    }) {
+                        HStack {
+                            Text(diagnosis.rawValue)
+                                .foregroundColor(.primary)
+                            Spacer()
+                            if store.profile.diagnosisType == diagnosis {
+                                Image(systemName: "checkmark")
+                                    .foregroundColor(.accentColor)
+                            }
+                        }
+                    }
+                }
+
+                if store.profile.diagnosisType == .other {
+                    Section {
+                        TextField("Please specify", text: $customDiagnosisInput)
+                            .onSubmit {
+                                store.updateCustomDiagnosisText(customDiagnosisInput)
+                            }
                     }
                 }
             }
@@ -542,6 +561,14 @@ struct ProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { showDiagnosisPicker = false }
+                }
+                if store.profile.diagnosisType == .other {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Save") {
+                            store.updateCustomDiagnosisText(customDiagnosisInput)
+                            showDiagnosisPicker = false
+                        }
+                    }
                 }
             }
         }

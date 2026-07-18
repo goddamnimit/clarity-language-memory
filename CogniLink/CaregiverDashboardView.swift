@@ -57,8 +57,8 @@ struct CaregiverDashboardView: View {
                     Text(store.profile.displayName)
                         .font(.title2)
                         .fontWeight(.semibold)
-                    if let diagnosis = store.profile.diagnosisType {
-                        Text(diagnosis.rawValue)
+                    if let diagnosis = store.profile.diagnosisDisplayText {
+                        Text(diagnosis)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }

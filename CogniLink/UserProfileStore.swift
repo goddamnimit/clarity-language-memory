@@ -23,6 +23,7 @@ class UserProfileStore: ObservableObject {
             decoded.name = KeychainHelper.load(key: "clarity_user_name") ?? ""
             decoded.therapistName = KeychainHelper.load(key: "clarity_therapist_name")
             decoded.notes = KeychainHelper.load(key: "clarity_notes")
+            decoded.customDiagnosisText = KeychainHelper.load(key: "clarity_custom_diagnosis")
             self.profile = decoded
             checkStreakValidity() // Check if the streak was broken since last launch
         } else {
@@ -46,6 +47,11 @@ class UserProfileStore: ObservableObject {
             KeychainHelper.save(notes, key: "clarity_notes")
         } else {
             KeychainHelper.delete(key: "clarity_notes")
+        }
+        if let customDiagnosisText = profile.customDiagnosisText {
+            KeychainHelper.save(customDiagnosisText, key: "clarity_custom_diagnosis")
+        } else {
+            KeychainHelper.delete(key: "clarity_custom_diagnosis")
         }
 
         if let encoded = try? JSONEncoder().encode(profile) {
@@ -111,6 +117,14 @@ class UserProfileStore: ObservableObject {
 
     func updateDiagnosis(_ type: DiagnosisType?) {
         profile.diagnosisType = type
+        if type != .other {
+            profile.customDiagnosisText = nil
+        }
+        saveProfile()
+    }
+
+    func updateCustomDiagnosisText(_ text: String) {
+        profile.customDiagnosisText = text
         saveProfile()
     }
 
@@ -133,6 +147,7 @@ class UserProfileStore: ObservableObject {
         profile.name = ""
         profile.avatarImageData = nil
         profile.diagnosisType = nil
+        profile.customDiagnosisText = ""
         profile.therapistName = ""
         profile.notes = ""
         saveProfile()
@@ -146,6 +161,7 @@ class UserProfileStore: ObservableObject {
         KeychainHelper.delete(key: "clarity_user_name")
         KeychainHelper.delete(key: "clarity_therapist_name")
         KeychainHelper.delete(key: "clarity_notes")
+        KeychainHelper.delete(key: "clarity_custom_diagnosis")
 
         // Reset progress stores
         ProgressTracker.resetAllProgress()
