@@ -273,10 +273,41 @@ struct CaregiverDashboardView: View {
                     .padding(.horizontal)
                 }
 
+                // Cross-Referenced Difficulty (system-level kill switch).
+                // Deliberately its own card, separate from the per-type
+                // manual override list above.
+                if AdaptiveDifficultyStore.shared.isMasterToggleOn {
+                    crossReferenceCard
+                }
+
                 // Reset Adaptive Progress Button
                 resetAdaptiveButton
             }
         }
+    }
+
+    private var crossReferenceCard: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Toggle(isOn: Binding<Bool>(
+                get: { AdaptiveDifficultyStore.shared.isCrossReferenceEnabled },
+                set: { val in AdaptiveDifficultyStore.shared.isCrossReferenceEnabled = val }
+            )) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(languageManager.currentLanguage.crossReferenceLabel)
+                        .font(.body)
+                        .foregroundColor(.primary)
+                    Text(languageManager.currentLanguage.crossReferenceSubtitle)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+        }
+        .padding()
+        .background(Color.secondaryGroupedBackground)
+        .cornerRadius(12)
+        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+        .padding(.horizontal)
     }
 
     @ViewBuilder

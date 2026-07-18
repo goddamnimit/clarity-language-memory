@@ -1627,6 +1627,48 @@ extension AppLanguage {
         }
     }
 
+    var crossReferenceLabel: String {
+        switch self {
+        case .english:    return "Cross-Referenced Difficulty"
+        case .spanish:    return "Dificultad con Referencias Cruzadas"
+        case .hindi:      return "क्रॉस-रेफ़रेंस कठिनाई"
+        case .gujarati:   return "ક્રોસ-રેફરન્સ મુશ્કેલી"
+        case .chinese:    return "交叉参照难度"
+        case .farsi:      return "دشواری با ارجاع متقابل"
+        case .korean:     return "교차 참조 난이도"
+        case .vietnamese: return "Độ khó tham chiếu chéo"
+        case .arabic:     return "الصعوبة بالإحالة المرجعية"
+        case .portuguese: return "Dificuldade com Referência Cruzada"
+        case .tagalog:    return "Cross-Referenced na Kahirapan"
+        case .punjabi:    return "ਕਰਾਸ-ਰੈਫਰੈਂਸ ਮੁਸ਼ਕਲ"
+        case .armenian:   return "Խաչաձև Հղումով Դժվարություն"
+        case .japanese:   return "クロスリファレンス難易度"
+        case .french:     return "Difficulté par références croisées"
+        case .amharic:    return "የተጣመረ ማጣቀሻ ችግር ደረጃ"
+        }
+    }
+
+    var crossReferenceSubtitle: String {
+        switch self {
+        case .english:    return "System-level setting: strong results in a related, well-practiced exercise type may slightly ease promotion for an under-practiced related type. Separate from the per-exercise overrides above."
+        case .spanish:    return "Ajuste a nivel de sistema: buenos resultados en un tipo de ejercicio relacionado y bien practicado pueden facilitar ligeramente la promoción de un tipo relacionado poco practicado. Independiente de los ajustes por ejercicio de arriba."
+        case .hindi:      return "सिस्टम-स्तरीय सेटिंग: किसी संबंधित, अच्छी तरह अभ्यास किए गए अभ्यास प्रकार में मज़बूत परिणाम, कम अभ्यास वाले संबंधित प्रकार की पदोन्नति को थोड़ा आसान बना सकते हैं। ऊपर दिए गए प्रति-अभ्यास सेटिंग से अलग।"
+        case .gujarati:   return "સિસ્ટમ-સ્તરની સેટિંગ: સંબંધિત, સારી રીતે અભ્યાસ કરેલા પ્રકારમાં મજબૂત પરિણામો ઓછા અભ્યાસવાળા સંબંધિત પ્રકારની બઢતી થોડી સરળ બનાવી શકે છે. ઉપરની પ્રતિ-કસરત સેટિંગ્સથી અલગ."
+        case .chinese:    return "系统级设置：在相关且练习充分的题型中表现优异，可略微降低练习不足的相关题型的晋级门槛。与上方的按题型手动设置相互独立。"
+        case .farsi:      return "تنظیم در سطح سیستم: نتایج قوی در یک نوع تمرین مرتبط و خوب تمرین‌شده می‌تواند ارتقای نوع مرتبط کم‌تمرین را کمی آسان‌تر کند. جدا از تنظیمات هر تمرین در بالا."
+        case .korean:     return "시스템 수준 설정: 충분히 연습한 관련 유형에서의 우수한 성과가 연습이 부족한 관련 유형의 승급 기준을 약간 완화할 수 있습니다. 위의 유형별 수동 설정과는 별개입니다."
+        case .vietnamese: return "Cài đặt cấp hệ thống: kết quả tốt ở một dạng bài liên quan đã luyện tập nhiều có thể nới nhẹ điều kiện thăng hạng cho dạng liên quan ít luyện tập. Tách biệt với các cài đặt theo từng dạng bài ở trên."
+        case .arabic:     return "إعداد على مستوى النظام: النتائج القوية في نوع تمرين ذي صلة وممارَس جيدًا قد تخفف قليلًا شرط الترقية لنوع ذي صلة قليل الممارسة. منفصل عن إعدادات كل تمرين أعلاه."
+        case .portuguese: return "Configuração no nível do sistema: bons resultados em um tipo de exercício relacionado e bem praticado podem facilitar ligeiramente a promoção de um tipo relacionado pouco praticado. Independente das configurações por exercício acima."
+        case .tagalog:    return "Setting sa antas ng system: ang malakas na resulta sa kaugnay at madalas na na-praktis na uri ng ehersisyo ay maaaring bahagyang magpaluwag sa promosyon ng kaugnay na uri na bihirang na-praktis. Hiwalay sa mga per-exercise na setting sa itaas."
+        case .punjabi:    return "ਸਿਸਟਮ-ਪੱਧਰ ਦੀ ਸੈਟਿੰਗ: ਕਿਸੇ ਸੰਬੰਧਿਤ, ਚੰਗੀ ਤਰ੍ਹਾਂ ਅਭਿਆਸ ਕੀਤੇ ਪ੍ਰਕਾਰ ਵਿੱਚ ਮਜ਼ਬੂਤ ਨਤੀਜੇ, ਘੱਟ ਅਭਿਆਸ ਵਾਲੇ ਸੰਬੰਧਿਤ ਪ੍ਰਕਾਰ ਦੀ ਤਰੱਕੀ ਨੂੰ ਥੋੜ੍ਹਾ ਸੌਖਾ ਬਣਾ ਸਕਦੇ ਹਨ। ਉੱਪਰ ਦਿੱਤੀਆਂ ਪ੍ਰਤੀ-ਅਭਿਆਸ ਸੈਟਿੰਗਾਂ ਤੋਂ ਵੱਖਰੀ।"
+        case .armenian:   return "Համակարգային մակարդակի կարգավորում. լավ վարժված հարակից տեսակի ուժեղ արդյունքները կարող են մի փոքր հեշտացնել քիչ վարժված հարակից տեսակի առաջխաղացումը: Անջատ է վերևի յուրաքանչյուր վարժության կարգավորումներից:"
+        case .japanese:   return "システムレベルの設定：十分に練習した関連タイプでの好成績が、練習不足の関連タイプの昇格条件をわずかに緩和することがあります。上の種目別設定とは別の設定です。"
+        case .french:     return "Réglage au niveau du système : de bons résultats dans un type d'exercice apparenté et bien pratiqué peuvent légèrement assouplir la promotion d'un type apparenté peu pratiqué. Indépendant des réglages par exercice ci-dessus."
+        case .amharic:    return "የስርዓት ደረጃ ቅንብር፦ በተዛማጅና በደንብ በተለማመደ የልምምድ አይነት ጠንካራ ውጤት፣ ብዙ ላልተለማመደ ተዛማጅ አይነት እድገትን በትንሹ ሊያቀል ይችላል። ከላይ ካሉት የየልምምድ ቅንብሮች የተለየ ነው።"
+        }
+    }
+
     var resetDifficultyProgressLabel: String {
         switch self {
         case .english:    return "Reset Difficulty Progress"

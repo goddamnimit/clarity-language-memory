@@ -11,6 +11,9 @@ struct ResearchExportManager {
     static let flaggedContentKey  = "clarity_flagged_content"
     static let maxFlaggedContentSize = 500
 
+    static let crossReferenceLogKey  = "clarity_cross_reference_log"
+    static let maxCrossReferenceLogSize = 500
+
     // MARK: - Public API
 
     /// Builds the full anonymous JSON export and returns it as UTF-8 encoded Data.
@@ -94,6 +97,8 @@ struct ResearchExportManager {
             "sessionDates": sessionDates,
             "sessionLog":   sessionLog,
 
+            "crossReferenceLog": crossReferenceLogList(),
+
             "accuracyStats": [
                 "averageFirstTryAccuracy": avgFirstTryAccuracy,
                 "totalWrongAttempts":      logWrongAttempts,
@@ -140,6 +145,29 @@ struct ResearchExportManager {
             flagged = Array(flagged.suffix(maxFlaggedContentSize))
         }
         UserDefaults.standard.set(flagged, forKey: flaggedContentKey)
+    }
+
+    /// Appends a Cross-Referenced Adaptive Difficulty audit record
+    /// ("concession_applied", "concession_available_promotion_failed", or
+    /// "kill_switch_toggled"), capping at maxCrossReferenceLogSize (drops oldest when over limit).
+    static func appendCrossReferenceRecord(_ record: [String: Any]) {
+        var log = UserDefaults.standard.array(forKey: crossReferenceLogKey)
+                  as? [[String: Any]] ?? []
+        log.append(record)
+        if log.count > maxCrossReferenceLogSize {
+            log = Array(log.suffix(maxCrossReferenceLogSize))
+        }
+        UserDefaults.standard.set(log, forKey: crossReferenceLogKey)
+    }
+
+    /// Returns the cross-reference audit log, re-encoded through JSON to guarantee clean plist→JSON types.
+    static func crossReferenceLogList() -> [[String: Any]] {
+        let raw = UserDefaults.standard.array(forKey: crossReferenceLogKey) ?? []
+        if let jsonData = try? JSONSerialization.data(withJSONObject: raw),
+           let cleaned  = try? JSONSerialization.jsonObject(with: jsonData) as? [[String: Any]] {
+            return cleaned
+        }
+        return []
     }
 
     /// Returns the flagged-content log, re-encoded through JSON to guarantee clean plist→JSON types.
