@@ -81,6 +81,11 @@ struct CaregiverDashboardView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     Divider().padding(.leading, 52)
+                    NavigationLink(destination: CaregiverInsightsView()) {
+                        dashboardRow(icon: "lightbulb", label: languageManager.currentLanguage.cgInsights)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Divider().padding(.leading, 52)
                     NavigationLink(destination: GoalSettingView()) {
                         dashboardRow(icon: "trophy", label: languageManager.currentLanguage.cgWeeklyGoal)
                     }
