@@ -8,11 +8,15 @@ struct CaregiverDashboardView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
     @ObservedObject private var store = UserProfileStore.shared
     @ObservedObject private var adaptiveStore = AdaptiveDifficultyStore.shared
+    @ObservedObject private var trajectoryStore = TrajectorySettingsStore.shared
 
     @State private var showChangePIN = false
     @State private var showResetAdaptiveAlert = false
     @State private var showBaselineAssessment = false
+    @State private var showTrajectorySettingsPrompt = false
     @ObservedObject private var notificationManager = NotificationManager.shared
+
+    private static let trajectorySettingsPromptShownKey = "clarity_trajectory_settings_prompt_shown"
 
     private var reminderTimeBinding: Binding<Date> {
         Binding(
@@ -133,6 +137,17 @@ struct CaregiverDashboardView: View {
         }
         .onAppear {
             notificationManager.requestPermissionIfNeeded()
+            if !UserDefaults.standard.bool(forKey: Self.trajectorySettingsPromptShownKey) {
+                // Set the flag immediately, before display, so a kill mid-display
+                // can never cause the prompt to reappear.
+                UserDefaults.standard.set(true, forKey: Self.trajectorySettingsPromptShownKey)
+                showTrajectorySettingsPrompt = true
+            }
+        }
+        .alert("Therapy Settings", isPresented: $showTrajectorySettingsPrompt) {
+            Button("OK") {}
+        } message: {
+            Text("You can adjust how progress is interpreted in Therapy Settings.")
         }
     }
 
@@ -280,10 +295,65 @@ struct CaregiverDashboardView: View {
                     crossReferenceCard
                 }
 
+                // Trajectory-Aware Insights (Goal Orientation + Fluctuation)
+                trajectorySettingsCard
+
                 // Reset Adaptive Progress Button
                 resetAdaptiveButton
             }
         }
+    }
+
+    // MARK: - Trajectory-Aware Insights Settings
+
+    private var trajectorySettingsCard: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            // Goal Orientation
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Goal Orientation")
+                    .font(.body)
+                    .foregroundColor(.primary)
+
+                Picker("Goal Orientation", selection: Binding<GoalOrientation>(
+                    get: { trajectoryStore.goalOrientation },
+                    set: { trajectoryStore.goalOrientation = $0 }
+                )) {
+                    ForEach(GoalOrientation.allCases, id: \.self) { orientation in
+                        Text(orientation.displayName).tag(orientation)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+
+                Text("Recovery: framing assumes improvement is the goal. Maintenance: framing treats steady performance as a positive outcome.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Divider()
+
+            // Expect Day-to-Day Fluctuation
+            VStack(alignment: .leading, spacing: 8) {
+                Toggle(isOn: Binding<Bool>(
+                    get: { trajectoryStore.expectFluctuation },
+                    set: { trajectoryStore.expectFluctuation = $0 }
+                )) {
+                    Text("Expect Day-to-Day Fluctuation")
+                        .font(.body)
+                        .foregroundColor(.primary)
+                }
+
+                Text("Turn this on if day-to-day ups and downs are expected for reasons unrelated to how your loved one is doing in therapy.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding()
+        .background(Color.secondaryGroupedBackground)
+        .cornerRadius(12)
+        .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+        .padding(.horizontal)
     }
 
     private var crossReferenceCard: some View {

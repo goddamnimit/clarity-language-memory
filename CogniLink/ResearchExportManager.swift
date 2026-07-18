@@ -14,6 +14,12 @@ struct ResearchExportManager {
     static let crossReferenceLogKey  = "clarity_cross_reference_log"
     static let maxCrossReferenceLogSize = 500
 
+    /// Internal debugging-only switch log for trajectory-aware insight
+    /// settings (goal orientation, expect-fluctuation). Deliberately never
+    /// wired into generateExport() — not caregiver-facing, not research data.
+    static let trajectorySettingsLogKey = "clarity_trajectory_settings_log"
+    static let maxTrajectorySettingsLogSize = 500
+
     // MARK: - Public API
 
     /// Builds the full anonymous JSON export and returns it as UTF-8 encoded Data.
@@ -158,6 +164,19 @@ struct ResearchExportManager {
             log = Array(log.suffix(maxCrossReferenceLogSize))
         }
         UserDefaults.standard.set(log, forKey: crossReferenceLogKey)
+    }
+
+    /// Appends a trajectory-settings switch-log record ("goalOrientation" or
+    /// "expectFluctuation"), capping at maxTrajectorySettingsLogSize (drops oldest when over limit).
+    /// Local debugging aid only — never included in generateExport().
+    static func appendTrajectorySettingsRecord(_ record: [String: Any]) {
+        var log = UserDefaults.standard.array(forKey: trajectorySettingsLogKey)
+                  as? [[String: Any]] ?? []
+        log.append(record)
+        if log.count > maxTrajectorySettingsLogSize {
+            log = Array(log.suffix(maxTrajectorySettingsLogSize))
+        }
+        UserDefaults.standard.set(log, forKey: trajectorySettingsLogKey)
     }
 
     /// Returns the cross-reference audit log, re-encoded through JSON to guarantee clean plist→JSON types.

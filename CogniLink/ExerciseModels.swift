@@ -40,6 +40,21 @@ enum TrackedExerciseType: String, CaseIterable, Hashable {
     }
 }
 
+/// Caregiver-facing framing for how progress is interpreted. Set only via
+/// explicit caregiver choice in Therapy Settings — never inferred from
+/// diagnosis, free text, or any other signal.
+enum GoalOrientation: String, CaseIterable, Hashable {
+    case recovery
+    case maintenance
+
+    var displayName: String {
+        switch self {
+        case .recovery: return "Recovery"
+        case .maintenance: return "Maintenance"
+        }
+    }
+}
+
 enum ExerciseType: CaseIterable, Hashable {
     case categoryCrossOut      // Tap the word that does not belong
     case multipleChoice        // Standard question with 4 options
