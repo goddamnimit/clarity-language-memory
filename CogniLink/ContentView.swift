@@ -1116,15 +1116,15 @@ extension AppLanguage {
         case .japanese:
             return hasName
                 ? "\(name)さん、継続記録はあと \(days)日です。"
-                : "継続記録はあと \(days)日です。" // TODO: translate
+                : "継続記録はあと \(days)日です。"
         case .french:
             return hasName
                 ? "\(name), votre série de \(days) jours se termine à minuit. Entraînez-vous maintenant."
-                : "Votre série de \(days) jours se termine à minuit. Entraînez-vous maintenant." // TODO: translate
+                : "Votre série de \(days) jours se termine à minuit. Entraînez-vous maintenant."
         case .amharic:
             return hasName
                 ? "\(name)፣ የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።"
-                : "የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።" // TODO: translate
+                : "የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።"
         }
     }
 
@@ -1143,9 +1143,9 @@ extension AppLanguage {
         case .tagalog:    return "Ilang araw na ang lumipas. Nandito ang Clarity kapag handa ka na."
         case .punjabi:    return "ਕੁਝ ਦਿਨ ਹੋ ਗਏ ਹਨ। ਜਦੋਂ ਤੁਸੀਂ ਤਿਆਰ ਹੋਵੋ, Clarity ਇੱਥੇ ਹੈ।"
         case .armenian:   return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:"
-        case .japanese:   return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:" // TODO: translate
-        case .french:     return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:" // TODO: translate
-        case .amharic:    return "Մի քանի օր է անցել: Clarity-ն այստեղ է, երբ պատրաստ լինեք:" // TODO: translate
+        case .japanese:   return "それは数日ぶりですね。準備ができたらいつでもClarityがここにあります。"
+        case .french:     return "Cela fait quelques jours. Clarity est là dès que vous êtes prêt."
+        case .amharic:    return "ጥቂት ቀናት አልፈዋል። ዝግጁ ሲሆኑ Clarity እዚህ ነው።"
         }
     }
 }
