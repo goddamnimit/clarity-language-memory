@@ -119,7 +119,7 @@ struct ProfileView: View {
                 #endif
 
                 // MARK: 2. Name Section
-                TextField("Enter your name", text: $nameInput)
+                TextField(languageManager.currentLanguage.pvNamePlaceholder, text: $nameInput)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
@@ -139,8 +139,8 @@ struct ProfileView: View {
                     }) {
                         infoRow(
                             icon: "stethoscope",
-                            label: "Diagnosis",
-                            value: store.profile.diagnosisDisplayText ?? "Not set",
+                            label: languageManager.currentLanguage.pvDiagnosis,
+                            value: store.profile.diagnosisDisplayText ?? languageManager.currentLanguage.pvNotSet,
                             showChevron: true
                         )
                     }
@@ -154,9 +154,9 @@ struct ProfileView: View {
                     }) {
                         infoRow(
                             icon: "person.badge.plus",
-                            label: "Therapist",
+                            label: languageManager.currentLanguage.pvTherapist,
                             value: (store.profile.therapistName?.isEmpty == false)
-                                ? store.profile.therapistName! : "Not set",
+                                ? store.profile.therapistName! : languageManager.currentLanguage.pvNotSet,
                             showChevron: true
                         )
                     }
@@ -166,7 +166,7 @@ struct ProfileView: View {
 
                     infoRow(
                         icon: "calendar",
-                        label: "Using since",
+                        label: languageManager.currentLanguage.pvUsingSince,
                         value: startDateFormatter.string(from: store.profile.startDate),
                         showChevron: false
                     )
@@ -179,7 +179,7 @@ struct ProfileView: View {
                     }) {
                         infoRow(
                             icon: "note.text",
-                            label: "Notes",
+                            label: languageManager.currentLanguage.pvNotes,
                             value: notesPreview,
                             showChevron: true
                         )
@@ -197,15 +197,15 @@ struct ProfileView: View {
                 // MARK: 4. Stats Card (2×2 grid)
                 VStack(spacing: 0) {
                     HStack(spacing: 0) {
-                        statCell(value: "\(totalSessions)", label: "Sessions")
+                        statCell(value: "\(totalSessions)", label: languageManager.currentLanguage.pvSessions)
                         Divider().frame(height: 40)
-                        statCell(value: "\(exercisesCompleted)", label: "Completed")
+                        statCell(value: "\(exercisesCompleted)", label: languageManager.currentLanguage.pvCompleted)
                     }
                     Divider()
                     HStack(spacing: 0) {
-                        statCell(value: "\(daysActive)", label: "Days Active")
+                        statCell(value: "\(daysActive)", label: languageManager.currentLanguage.pvDaysActive)
                         Divider().frame(height: 40)
-                        statCell(value: firstTryAccuracyText, label: "Accuracy")
+                        statCell(value: firstTryAccuracyText, label: languageManager.currentLanguage.pvAccuracy)
                     }
                 }
                 .background(Color.secondaryGroupedBackground)
@@ -267,7 +267,7 @@ struct ProfileView: View {
                             Image(systemName: "globe")
                                 .font(.body)
                                 .foregroundColor(.accentColor)
-                            Text("Language / Idioma / भाषा")
+                            Text(languageManager.currentLanguage.pvLanguageHeader)
                                 .font(.body)
                                 .foregroundColor(.primary)
                             Spacer()
@@ -285,10 +285,7 @@ struct ProfileView: View {
                     .padding(.horizontal)
 
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("The app will display all exercises in the selected language.")
-                            .font(.footnote)
-                            .foregroundColor(.secondary)
-                        Text("La app mostrará todos los ejercicios en el idioma seleccionado.")
+                        Text(languageManager.currentLanguage.pvLanguageFootnote)
                             .font(.footnote)
                             .foregroundColor(.secondary)
                     }
@@ -298,7 +295,7 @@ struct ProfileView: View {
 
                 // MARK: 6. Achievements (unchanged)
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Achievements")
+                    Text(languageManager.currentLanguage.pvAchievements)
                         .font(.headline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
@@ -307,7 +304,7 @@ struct ProfileView: View {
                         HStack {
                             Image(systemName: "rosette")
                                 .foregroundColor(.yellow)
-                            Text("My Badges")
+                            Text(languageManager.currentLanguage.pvMyBadges)
                                 .font(.body)
                                 .foregroundColor(.primary)
                             Spacer()
@@ -327,13 +324,13 @@ struct ProfileView: View {
 
                 // MARK: 7. Research Export
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Research")
+                    Text(languageManager.currentLanguage.pvResearch)
                         .font(.headline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("This exports anonymous performance data only. No personal information (name, photo, or contact details) is included. Share with researchers or therapists.")
+                        Text(languageManager.currentLanguage.pvResearchDisclaimer)
                             .font(.footnote)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
@@ -344,7 +341,7 @@ struct ProfileView: View {
                             HStack {
                                 Image(systemName: "square.and.arrow.up")
                                     .foregroundColor(.blue)
-                                Text("Export Research Data")
+                                Text(languageManager.currentLanguage.pvExportResearchData)
                                     .foregroundColor(.blue)
                                 Spacer()
                             }
@@ -408,7 +405,7 @@ struct ProfileView: View {
                         HStack {
                             Image(systemName: "info.circle")
                                 .foregroundColor(.accentColor)
-                            Text("About this app's guidance")
+                            Text(languageManager.currentLanguage.pvAboutGuidance)
                                 .font(.body)
                                 .foregroundColor(.primary)
                             Spacer()
@@ -429,7 +426,7 @@ struct ProfileView: View {
 
                 // MARK: 8. Reset Profile
                 Button(action: { showResetAlert = true }) {
-                    Text("Reset Profile")
+                    Text(languageManager.currentLanguage.pvResetProfile)
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(.red)
@@ -440,22 +437,22 @@ struct ProfileView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .padding(.horizontal)
-                .alert("Reset Profile?", isPresented: $showResetAlert) {
-                    Button("Cancel", role: .cancel) {}
-                    Button("Reset", role: .destructive) {
+                .alert(languageManager.currentLanguage.pvResetProfileAlertTitle, isPresented: $showResetAlert) {
+                    Button(languageManager.currentLanguage.pvCancel, role: .cancel) {}
+                    Button(languageManager.currentLanguage.pvReset, role: .destructive) {
                         store.resetProfile()
                         nameInput = ""
                         therapistInput = ""
                         notesInput = ""
                     }
                 } message: {
-                    Text("This will clear your name, photo, diagnosis, and notes. Your exercise history and session counts will not be affected, but your streak will reset to zero.")
+                    Text(languageManager.currentLanguage.pvResetProfileMessage)
                 }
 
             }
             .padding(.vertical)
         }
-        .navigationTitle("My Profile")
+        .navigationTitle(languageManager.currentLanguage.pvMyProfileTitle)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
@@ -466,9 +463,9 @@ struct ProfileView: View {
             notesInput = store.profile.notes ?? ""
         }
         // Keyboard tip alert — shown once per non-Latin language selection
-        .alert("Keyboard Tip", isPresented: $showKeyboardTip) {
-            Button("Got it") { }
-            Button("Open Settings") {
+        .alert(languageManager.currentLanguage.pvKeyboardTipTitle, isPresented: $showKeyboardTip) {
+            Button(languageManager.currentLanguage.pvGotIt) { }
+            Button(languageManager.currentLanguage.pvOpenSettings) {
                 #if os(iOS)
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url)
@@ -476,7 +473,7 @@ struct ProfileView: View {
                 #endif
             }
         } message: {
-            Text("For the best experience with \(keyboardTipLanguage?.displayName ?? "this language"), add the keyboard in iPhone Settings → General → Keyboard → Keyboards → Add New Keyboard.")
+            Text(languageManager.currentLanguage.pvKeyboardTipMessage(keyboardTipLanguage?.displayName ?? "this language"))
         }
         // Sheet must live at the ScrollView level — attaching to inner views causes blank presentation
         #if os(iOS)
@@ -568,24 +565,24 @@ struct ProfileView: View {
 
                 if store.profile.diagnosisType == .other {
                     Section {
-                        TextField("Please specify", text: $customDiagnosisInput)
+                        TextField(languageManager.currentLanguage.pvPleaseSpecify, text: $customDiagnosisInput)
                             .onSubmit {
                                 store.updateCustomDiagnosisText(customDiagnosisInput)
                             }
                     }
                 }
             }
-            .navigationTitle("Diagnosis")
+            .navigationTitle(languageManager.currentLanguage.pvDiagnosis)
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { showDiagnosisPicker = false }
+                    Button(languageManager.currentLanguage.pvCancel) { showDiagnosisPicker = false }
                 }
                 if store.profile.diagnosisType == .other {
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Save") {
+                        Button(languageManager.currentLanguage.pvSave) {
                             store.updateCustomDiagnosisText(customDiagnosisInput)
                             showDiagnosisPicker = false
                         }
@@ -598,7 +595,7 @@ struct ProfileView: View {
     private var therapistSheet: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                TextField("Therapist name", text: $therapistInput)
+                TextField(languageManager.currentLanguage.pvTherapistNamePlaceholder, text: $therapistInput)
                     .font(.body)
                     .padding()
                     .background(Color.secondaryGroupedBackground)
@@ -607,16 +604,16 @@ struct ProfileView: View {
                 Spacer()
             }
             .padding(.top, 24)
-            .navigationTitle("Therapist")
+            .navigationTitle(languageManager.currentLanguage.pvTherapist)
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { showTherapistSheet = false }
+                    Button(languageManager.currentLanguage.pvCancel) { showTherapistSheet = false }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
+                    Button(languageManager.currentLanguage.pvSave) {
                         store.updateTherapistName(therapistInput)
                         showTherapistSheet = false
                     }
@@ -632,22 +629,22 @@ struct ProfileView: View {
                 .font(.body)
                 .padding()
             #else
-            Text(notesInput.isEmpty ? "No notes." : notesInput)
+            Text(notesInput.isEmpty ? languageManager.currentLanguage.pvNoNotes : notesInput)
                 .font(.body)
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             #endif
         }
-        .navigationTitle("Notes")
+        .navigationTitle(languageManager.currentLanguage.pvNotes)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
-                Button("Cancel") { showNotesSheet = false }
+                Button(languageManager.currentLanguage.pvCancel) { showNotesSheet = false }
             }
             ToolbarItem(placement: .confirmationAction) {
-                Button("Save") {
+                Button(languageManager.currentLanguage.pvSave) {
                     store.updateNotes(notesInput)
                     showNotesSheet = false
                 }
