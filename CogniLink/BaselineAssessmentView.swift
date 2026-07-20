@@ -19,6 +19,9 @@ struct BaselineAssessmentView: View {
     @State private var correctByDifficulty: [Difficulty: Int] = [:]
     @State private var totalByDifficulty: [Difficulty: Int] = [:]
 
+    @ScaledMetric private var introIconSize: CGFloat = 48
+    @ScaledMetric private var completeIconSize: CGFloat = 56
+
     var body: some View {
         NavigationStack {
             Group {
@@ -44,7 +47,7 @@ struct BaselineAssessmentView: View {
             Spacer()
 
             Image(systemName: "list.clipboard")
-                .font(.system(size: 48))
+                .font(.system(size: introIconSize))
                 .foregroundColor(.accentColor)
                 .accessibilityHidden(true)
 
@@ -67,7 +70,7 @@ struct BaselineAssessmentView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56)
+                        .frame(minHeight: 56)
                         .background(Color.accentColor)
                         .cornerRadius(16)
                 }
@@ -172,7 +175,7 @@ struct BaselineAssessmentView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56)
+                        .frame(minHeight: 56)
                         .background(selectedOption == nil
                                     ? Color.accentColor.opacity(0.4)
                                     : Color.accentColor)
@@ -200,7 +203,7 @@ struct BaselineAssessmentView: View {
             Spacer()
 
             Image(systemName: "checkmark.seal")
-                .font(.system(size: 56))
+                .font(.system(size: completeIconSize))
                 .foregroundColor(.accentColor)
                 .accessibilityHidden(true)
 
@@ -222,7 +225,7 @@ struct BaselineAssessmentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 56)
+                    .frame(minHeight: 56)
                     .background(Color.accentColor)
                     .cornerRadius(16)
             }

@@ -17,6 +17,9 @@ struct MultipleChoiceView: View {
     @State private var shakeOption: String? = nil
     @State private var memoryPhase: MemoryPhase = .words
 
+    @ScaledMetric private var memoryWordFontSize: CGFloat = 34
+    @ScaledMetric private var memoryReadyFontSize: CGFloat = 42
+
     private enum MemoryPhase { case words, ready, choices }
 
     private var isMemoryExercise: Bool {
@@ -53,13 +56,13 @@ struct MultipleChoiceView: View {
                 VStack(spacing: 12) {
                     ForEach(extractMemoryWords(from: item.prompt), id: \.self) { word in
                         Text(word)
-                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .font(.system(size: memoryWordFontSize, weight: .bold, design: .rounded))
                             .foregroundColor(.primary)
                     }
                 }
             } else {
                 Text("Ready?")
-                    .font(.system(size: 42, weight: .bold, design: .rounded))
+                    .font(.system(size: memoryReadyFontSize, weight: .bold, design: .rounded))
                     .foregroundColor(.accentColor)
             }
         }
@@ -143,7 +146,7 @@ struct MultipleChoiceView: View {
                         }
                         .padding(.horizontal, 20)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56)
+                        .frame(minHeight: 56)
                         .background(backgroundColor(for: option))
                         .cornerRadius(16)
                         .overlay(
@@ -174,7 +177,7 @@ struct MultipleChoiceView: View {
                     .font(.headline)
                     .foregroundColor(.blue)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(minHeight: 50)
                     .background(Color.systemBackground)
                     .cornerRadius(16)
                     .overlay(

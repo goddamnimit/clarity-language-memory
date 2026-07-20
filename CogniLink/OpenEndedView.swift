@@ -73,7 +73,7 @@ struct OpenEndedView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(minHeight: 50)
                     .background(speechInput.isRecording ? Color.red : Color.blue)
                     .cornerRadius(16)
                 }
@@ -109,7 +109,7 @@ struct OpenEndedView: View {
                     .font(.headline)
                     .foregroundColor(.red)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50) // High visibility target
+                    .frame(minHeight: 50) // High visibility target
                     .background(Color.red.opacity(0.1))
                     .cornerRadius(16)
                 }
@@ -128,7 +128,7 @@ struct OpenEndedView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 50)
+                        .frame(minHeight: 50)
                         .background(Color.blue)
                         .cornerRadius(16)
                     }

@@ -23,7 +23,10 @@ struct ExerciseContainerView: View {
     @State private var displayedScore: Int = 0
     @State private var showFlagConfirmation = false
     @State private var showFlagToast = false
-    
+
+    @ScaledMetric private var completionIconSize: CGFloat = 80
+    @ScaledMetric private var flagIconSize: CGFloat = 15
+
     var body: some View {
         VStack {
             if sessionItems.isEmpty {
@@ -50,7 +53,7 @@ struct ExerciseContainerView: View {
                             Spacer()
 
                             Image(systemName: "checkmark.circle.fill")
-                                .font(.system(size: 80))
+                                .font(.system(size: completionIconSize))
                                 .foregroundColor(.green)
 
                             Text(sessionCompleteText)
@@ -91,7 +94,7 @@ struct ExerciseContainerView: View {
                                         .font(.headline)
                                         .foregroundColor(.white)
                                         .frame(maxWidth: .infinity)
-                                        .frame(height: 50)
+                                        .frame(minHeight: 50)
                                         .background(Color.accentColor)
                                         .cornerRadius(12)
                                 }
@@ -103,7 +106,7 @@ struct ExerciseContainerView: View {
                                         .font(.headline)
                                         .foregroundColor(.primary)
                                         .frame(maxWidth: .infinity)
-                                        .frame(height: 50)
+                                        .frame(minHeight: 50)
                                         .background(Color.secondaryGroupedBackground)
                                         .cornerRadius(12)
                                         .overlay(
@@ -183,7 +186,7 @@ struct ExerciseContainerView: View {
 
                                 Button(action: { showFlagConfirmation = true }) {
                                     Image(systemName: "flag")
-                                        .font(.system(size: 15))
+                                        .font(.system(size: flagIconSize))
                                         .foregroundColor(.secondary)
                                         .frame(width: 32, height: 32)
                                         .contentShape(Rectangle())
@@ -294,7 +297,7 @@ struct ExerciseContainerView: View {
                                         .font(.headline)
                                         .foregroundColor(.white)
                                         .frame(maxWidth: .infinity)
-                                        .frame(height: 50)
+                                        .frame(minHeight: 50)
                                         .background(Color.blue)
                                         .cornerRadius(12)
                                 }
