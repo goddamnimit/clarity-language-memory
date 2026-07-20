@@ -1,4 +1,7 @@
 import SwiftUI
+#if os(iOS)
+import UIKit
+#endif
 
 /// An interactive input screen designed for cognitive reflection, typing, and self-assessment.
 struct OpenEndedView: View {
@@ -11,6 +14,12 @@ struct OpenEndedView: View {
 
     @FocusState private var isInputActive: Bool
     @ObservedObject private var languageManager = LanguageManager.shared
+
+    #if os(iOS)
+    @StateObject private var speechInput = SpeechInputManager()
+    @State private var showMicPermissionAlert = false
+    @State private var textBeforeDictation = ""
+    #endif
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -54,6 +63,26 @@ struct OpenEndedView: View {
                 RoundedRectangle(cornerRadius: 12)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
             )
+
+            if isSpeechAvailableForCurrentLanguage {
+                Button(action: toggleDictation) {
+                    HStack {
+                        Image(systemName: speechInput.isRecording ? "mic.fill" : "mic")
+                        Text(speechInput.isRecording ? "Listening… Tap to Stop" : "Speak Your Answer")
+                    }
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(speechInput.isRecording ? Color.red : Color.blue)
+                    .cornerRadius(16)
+                }
+                .buttonStyle(PlainButtonStyle())
+            } else {
+                Text("Voice input isn't available for this language yet.")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            }
             #else
             Text("Text input not available on this platform.")
                 .font(.body)
@@ -149,6 +178,25 @@ struct OpenEndedView: View {
                 }
             }
         }
+        .onChange(of: speechInput.transcribedText) { _, newValue in
+            guard speechInput.isRecording else { return }
+            let separator = textBeforeDictation.isEmpty ? "" : " "
+            userInput = textBeforeDictation + separator + newValue
+            handleTyping()
+        }
+        .onDisappear {
+            speechInput.stop()
+        }
+        .alert("Microphone Access Needed", isPresented: $showMicPermissionAlert) {
+            Button("Open Settings") {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            Button("Not Now", role: .cancel) {}
+        } message: {
+            Text("To speak your answers, please turn on Microphone and Speech Recognition for this app in Settings.")
+        }
         #endif
     }
 
@@ -166,5 +214,28 @@ struct OpenEndedView: View {
         hasCalledOnAnswered = true
         onAnswered(true) // Register completion hook
     }
+
+    #if os(iOS)
+    private var isSpeechAvailableForCurrentLanguage: Bool {
+        SpeechInputManager.isRecognitionAvailable(
+            forLocaleIdentifier: languageManager.currentLanguage.localeIdentifier)
+    }
+
+    private func toggleDictation() {
+        if speechInput.isRecording {
+            speechInput.stop()
+            return
+        }
+
+        textBeforeDictation = userInput
+        speechInput.requestAuthorization { granted in
+            if granted {
+                speechInput.start(locale: languageManager.currentLanguage.localeIdentifier)
+            } else {
+                showMicPermissionAlert = true
+            }
+        }
+    }
+    #endif
 }
 
