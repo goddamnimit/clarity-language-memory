@@ -4,13 +4,16 @@ import SwiftUI
 struct StreakWidgetView: View {
     @ObservedObject private var store = UserProfileStore.shared
 
+    @ScaledMetric private var flameIconSize: CGFloat = 44
+    @ScaledMetric private var streakCountFontSize: CGFloat = 34
+
     var body: some View {
         VStack(spacing: 16) {
             // MARK: - Streak Summary Banner
             HStack(spacing: 16) {
                 // Fire/Streak Icon
                 Image(systemName: "flame.fill")
-                    .font(.system(size: 44))
+                    .font(.system(size: flameIconSize))
                     .foregroundStyle(
                         LinearGradient(
                             colors: [.orange, .yellow],
@@ -22,8 +25,10 @@ struct StreakWidgetView: View {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(alignment: .lastTextBaseline, spacing: 4) {
                         Text("\(store.profile.currentStreak)")
-                            .font(.system(size: 34, weight: .bold))
+                            .font(.system(size: streakCountFontSize, weight: .bold))
                             .foregroundColor(.primary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                         
                         Text(store.profile.currentStreak == 1 ? "day streak" : "day streak")
                             .font(.body) // 17pt minimum size

@@ -14,6 +14,9 @@ struct BadgesGridView: View {
         badges.filter { $0.isUnlocked }.count
     }
 
+    @ScaledMetric private var gridBadgeIconSize: CGFloat = 34
+    @ScaledMetric private var detailBadgeIconSize: CGFloat = 60
+
     var body: some View {
         VStack(spacing: 0) {
             // MARK: - Achievements Summary Header
@@ -53,16 +56,17 @@ struct BadgesGridView: View {
                                         .frame(width: 80, height: 80)
                                     
                                     Image(systemName: badge.isUnlocked ? badge.iconName : "lock.fill")
-                                        .font(.system(size: 34, weight: .bold))
+                                        .font(.system(size: gridBadgeIconSize, weight: .bold))
                                         .foregroundColor(badge.isUnlocked ? badge.color : .gray)
                                 }
-                                
+
                                 Text(badge.title)
                                     .font(.body)
                                     .fontWeight(.bold)
                                     .foregroundColor(badge.isUnlocked ? .primary : .secondary)
                                     .multilineTextAlignment(.center)
                                     .lineLimit(1)
+                                    .minimumScaleFactor(0.7)
                             }
                             .padding(.vertical, 16)
                             .frame(maxWidth: .infinity)
@@ -112,7 +116,7 @@ struct BadgesGridView: View {
                         .frame(width: 140, height: 140)
                     
                     Image(systemName: badge.isUnlocked ? badge.iconName : "lock.fill")
-                        .font(.system(size: 60, weight: .bold))
+                        .font(.system(size: detailBadgeIconSize, weight: .bold))
                         .foregroundColor(badge.isUnlocked ? badge.color : .gray)
                 }
                 
@@ -163,7 +167,7 @@ struct BadgesGridView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56) // > 44pt tap target
+                        .frame(minHeight: 56) // > 44pt tap target
                         .background(AppTheme.languageColor)
                         .cornerRadius(16)
                 }

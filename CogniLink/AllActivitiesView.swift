@@ -74,7 +74,7 @@ struct AllActivitiesView: View {
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(minHeight: 50)
                     .background(Color.accentColor)
                     .foregroundColor(.white)
                     .cornerRadius(12)
@@ -105,6 +105,7 @@ struct AllActivitiesView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .lineLimit(1)
+                .minimumScaleFactor(0.7)
         }
         .padding(.vertical, 2)
     }

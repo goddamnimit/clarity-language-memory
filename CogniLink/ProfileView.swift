@@ -28,6 +28,13 @@ struct ProfileView: View {
     @State private var showKeyboardTip = false
     @State private var keyboardTipLanguage: AppLanguage? = nil
 
+    @ScaledMetric private var avatarPlaceholderSize: CGFloat = 120
+    @ScaledMetric private var cameraIconSize: CGFloat = 32
+    @ScaledMetric private var languageFlagSize: CGFloat = 32
+    @ScaledMetric private var languageNameFontSize: CGFloat = 18
+    @ScaledMetric private var languageCheckmarkSize: CGFloat = 18
+    @ScaledMetric private var statValueFontSize: CGFloat = 28
+
     // MARK: - Computed Stats
 
     private var totalSessions: Int {
@@ -85,7 +92,7 @@ struct ProfileView: View {
                                     .clipShape(Circle())
                             } else {
                                 Image(systemName: "person.circle.fill")
-                                    .font(.system(size: 120))
+                                    .font(.system(size: avatarPlaceholderSize))
                                     .foregroundColor(.accentColor)
                             }
                         }
@@ -93,7 +100,7 @@ struct ProfileView: View {
                         #if os(iOS)
                         PhotosPicker(selection: $selectedPhotoItem, matching: .images) {
                             Image(systemName: "camera.circle.fill")
-                                .font(.system(size: 32))
+                                .font(.system(size: cameraIconSize))
                                 .foregroundColor(.accentColor)
                                 .background(
                                     Circle()
@@ -233,22 +240,22 @@ struct ProfileView: View {
                                 }) {
                                     HStack(spacing: 16) {
                                         Text(language.flagEmoji)
-                                            .font(.system(size: 32))
+                                            .font(.system(size: languageFlagSize))
 
                                         Text(language.displayName)
-                                            .font(.system(size: 18, weight: .medium))
+                                            .font(.system(size: languageNameFontSize, weight: .medium))
                                             .foregroundColor(languageManager.currentLanguage == language ? .white : .primary)
 
                                         Spacer()
 
                                         if languageManager.currentLanguage == language {
                                             Image(systemName: "checkmark")
-                                                .font(.system(size: 18, weight: .bold))
+                                                .font(.system(size: languageCheckmarkSize, weight: .bold))
                                                 .foregroundColor(.white)
                                         }
                                     }
                                     .padding(.horizontal, 16)
-                                    .frame(height: 60)
+                                    .frame(minHeight: 60)
                                     .frame(maxWidth: .infinity)
                                     .background(
                                         languageManager.currentLanguage == language
@@ -431,7 +438,7 @@ struct ProfileView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.red)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 50)
+                        .frame(minHeight: 50)
                         .background(Color.red.opacity(0.08))
                         .cornerRadius(12)
                 }
@@ -508,6 +515,7 @@ struct ProfileView: View {
                 .font(.body)
                 .foregroundColor(.secondary)
                 .lineLimit(1)
+                .minimumScaleFactor(0.7)
 
             if showChevron {
                 Image(systemName: "chevron.right")
@@ -525,8 +533,10 @@ struct ProfileView: View {
     private func statCell(value: String, label: String) -> some View {
         VStack(spacing: 4) {
             Text(value)
-                .font(.system(size: 28, weight: .bold))
+                .font(.system(size: statValueFontSize, weight: .bold))
                 .foregroundColor(.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             Text(label)
                 .font(.caption)
                 .fontWeight(.medium)

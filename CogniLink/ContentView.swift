@@ -162,6 +162,11 @@ struct HomeView: View {
     @State private var recommendedExercise: Exercise? = nil
     @State private var weeklyGoalText: String? = nil
 
+    @ScaledMetric private var flagIconSize: CGFloat = 24
+    @ScaledMetric private var recommendationIconSize: CGFloat = 20
+    @ScaledMetric private var sectionCardIconSize: CGFloat = 24
+    @ScaledMetric private var sectionCardChevronSize: CGFloat = 14
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -231,7 +236,7 @@ struct HomeView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .frame(height: 56)
+                        .frame(minHeight: 56)
                         .background(
                             LinearGradient(
                                 colors: [.orange, .pink],
@@ -342,7 +347,7 @@ struct HomeView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: ProfileView()) {
                         Text(languageManager.currentLanguage.flagEmoji)
-                            .font(.system(size: 24))
+                            .font(.system(size: flagIconSize))
                             .frame(width: 44, height: 44)
                     }
                 }
@@ -879,17 +884,19 @@ struct HomeView: View {
     private func recommendationCard(_ rec: Recommendation) -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Image(systemName: rec.sfSymbolName)
-                .font(.system(size: 20))
+                .font(.system(size: recommendationIconSize))
                 .foregroundColor(.accentColor)
             Text(rec.headline)
                 .font(.system(.subheadline, design: .rounded))
                 .fontWeight(.semibold)
                 .foregroundColor(.primary)
                 .lineLimit(1)
+                .minimumScaleFactor(0.7)
             Text(rec.explanation)
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .lineLimit(2)
+                .minimumScaleFactor(0.7)
                 .multilineTextAlignment(.leading)
         }
         .padding(14)
@@ -903,7 +910,7 @@ struct HomeView: View {
     private func sectionCard(title: String, subtitle: String, systemImage: String, color: Color) -> some View {
         HStack(spacing: 16) {
             Image(systemName: systemImage)
-                .font(.system(size: 24))
+                .font(.system(size: sectionCardIconSize))
                 .foregroundColor(color)
                 .frame(width: 48, height: 48)
                 .background(color.opacity(0.12))
@@ -926,7 +933,7 @@ struct HomeView: View {
             Spacer()
             
             Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .bold))
+                .font(.system(size: sectionCardChevronSize, weight: .bold))
                 .foregroundColor(.secondary)
         }
         .padding()

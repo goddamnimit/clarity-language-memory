@@ -56,6 +56,7 @@ struct ExerciseListView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                                 .lineLimit(2)
+                                .minimumScaleFactor(0.7)
                         }
                         .padding(.vertical, 4)
                     }
