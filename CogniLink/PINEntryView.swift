@@ -43,8 +43,10 @@ struct PINEntryView: View {
     @State private var enteredDigits: [Int] = []
     @State private var shakeOffset: CGFloat = 0
     @State private var showResetConfirm = false
+    @ScaledMetric private var digitFontSize: CGFloat = 30
 
     var body: some View {
+        ScrollView {
         VStack(spacing: 28) {
             Spacer()
 
@@ -86,7 +88,7 @@ struct PINEntryView: View {
                         Image(systemName: "delete.left")
                             .font(.title2)
                             .foregroundColor(.primary)
-                            .frame(width: 76, height: 76)
+                            .frame(minWidth: 76, minHeight: 76)
                             .background(Color.secondaryGroupedBackground)
                             .clipShape(Circle())
                     }
@@ -112,6 +114,7 @@ struct PINEntryView: View {
             .padding(.bottom, 16)
         }
         .padding()
+        }
         .background(Color.groupedBackground.ignoresSafeArea())
         .alert(languageManager.currentLanguage.cgResetPINTitle, isPresented: $showResetConfirm) {
             Button(languageManager.currentLanguage.cgCancel, role: .cancel) {}
@@ -128,9 +131,9 @@ struct PINEntryView: View {
     private func keypadButton(digit: Int) -> some View {
         Button(action: { appendDigit(digit) }) {
             Text("\(digit)")
-                .font(.system(size: 30, weight: .medium, design: .rounded))
+                .font(.system(size: digitFontSize, weight: .medium, design: .rounded))
                 .foregroundColor(.primary)
-                .frame(width: 76, height: 76)
+                .frame(minWidth: 76, minHeight: 76)
                 .background(Color.secondaryGroupedBackground)
                 .clipShape(Circle())
         }
@@ -179,8 +182,10 @@ struct ChangePINView: View {
     @State private var enteredDigits: [Int] = []
     @State private var shakeOffset: CGFloat = 0
     @State private var showSaved = false
+    @ScaledMetric private var digitFontSize: CGFloat = 30
 
     var body: some View {
+        ScrollView {
         VStack(spacing: 28) {
             Spacer()
 
@@ -217,7 +222,7 @@ struct ChangePINView: View {
                         Image(systemName: "delete.left")
                             .font(.title2)
                             .foregroundColor(.primary)
-                            .frame(width: 76, height: 76)
+                            .frame(minWidth: 76, minHeight: 76)
                             .background(Color.secondaryGroupedBackground)
                             .clipShape(Circle())
                     }
@@ -234,6 +239,7 @@ struct ChangePINView: View {
                 .padding(.bottom, 16)
         }
         .padding()
+        }
         .background(Color.groupedBackground.ignoresSafeArea())
         .alert(languageManager.currentLanguage.cgPINChanged, isPresented: $showSaved) {
             Button("OK") { dismiss() }
@@ -244,9 +250,9 @@ struct ChangePINView: View {
     private func keypadButton(digit: Int) -> some View {
         Button(action: { appendDigit(digit) }) {
             Text("\(digit)")
-                .font(.system(size: 30, weight: .medium, design: .rounded))
+                .font(.system(size: digitFontSize, weight: .medium, design: .rounded))
                 .foregroundColor(.primary)
-                .frame(width: 76, height: 76)
+                .frame(minWidth: 76, minHeight: 76)
                 .background(Color.secondaryGroupedBackground)
                 .clipShape(Circle())
         }

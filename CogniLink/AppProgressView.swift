@@ -352,6 +352,7 @@ struct AppProgressView: View {
                                 .font(.body)
                                 .foregroundColor(.primary)
                                 .lineLimit(1)
+                                .minimumScaleFactor(0.7)
                             Spacer()
                             let count = playedDict[exercise.title] ?? 0
                             Text("\(count) runs")
