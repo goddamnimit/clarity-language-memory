@@ -137,10 +137,12 @@ struct MultipleChoiceView: View {
                                     Image(systemName: "checkmark.circle.fill")
                                         .foregroundColor(.white)
                                         .font(.title3)
+                                        .accessibilityHidden(true)
                                 } else if selectedOption == option {
                                     Image(systemName: "xmark.circle.fill")
                                         .foregroundColor(.white)
                                         .font(.title3)
+                                        .accessibilityHidden(true)
                                 }
                             }
                         }
@@ -157,6 +159,8 @@ struct MultipleChoiceView: View {
                     }
                     .disabled(hasAnswered)
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(accessibilityLabel(for: option))
+                    .accessibilityAddTraits(selectedOption == option ? .isSelected : [])
                     .tvFocusEffect()
                     .opacity(buttonOpacity(for: option))
                     .scaleEffect(tappedOption == option ? 1.05 : 1.0)
@@ -206,11 +210,23 @@ struct MultipleChoiceView: View {
             withAnimation(.easeInOut(duration: 0.25)) {
                 memoryPhase = .ready
             }
+            // The words disappear and are replaced by "Ready?" out from under
+            // the user; without this, a VoiceOver user stays pointed at
+            // content that no longer exists.
+            #if os(iOS)
+            UIAccessibility.post(notification: .screenChanged, argument: "Words hidden. Get ready.")
+            #endif
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 guard item.id == capturedID else { return }
                 withAnimation(.easeInOut(duration: 0.25)) {
                     memoryPhase = .choices
                 }
+                // Same reasoning for the ready -> choices transition; also
+                // restate the prompt so VoiceOver users land with context
+                // instead of just landing mid-list of options.
+                #if os(iOS)
+                UIAccessibility.post(notification: .screenChanged, argument: item.prompt)
+                #endif
             }
         }
     }
@@ -311,6 +327,20 @@ struct MultipleChoiceView: View {
         return .primary
     }
 
+    // Conveys selection + correctness to VoiceOver, since that state is
+    // otherwise shown only via color and an icon whose raw SF Symbol name
+    // (e.g. "checkmark circle fill") would be announced instead.
+    private func accessibilityLabel(for option: String) -> String {
+        guard hasAnswered else { return option }
+        let isSelected = selectedOption == option
+        if isCorrectOption(option) {
+            return isSelected ? "\(option), selected, correct" : "\(option), correct answer"
+        } else if isSelected {
+            return "\(option), incorrect"
+        }
+        return option
+    }
+
     private func buttonOpacity(for option: String) -> Double {
         guard hasAnswered else { return 1.0 }
         if isCorrectOption(option) || selectedOption == option {
@@ -344,10 +374,12 @@ private struct AnswerOptionCard: View {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.white)
                         .font(.title3)
+                        .accessibilityHidden(true)
                 } else if isSelected {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.white)
                         .font(.title3)
+                        .accessibilityHidden(true)
                 }
             }
         }
