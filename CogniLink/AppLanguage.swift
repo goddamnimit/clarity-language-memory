@@ -8,7 +8,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case hindi = "हिन्दी"
     case gujarati = "ગુજરાતી"
     case chinese = "中文"
-    case farsi = "فารسی"
+    case farsi = "فارسی"
     case korean = "한국어"
     case vietnamese = "Tiếng Việt"
     case arabic = "العربية"

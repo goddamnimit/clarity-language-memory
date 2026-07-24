@@ -142,6 +142,7 @@ struct SequencingView: View {
                                     .clipShape(Circle())
                             }
                             .disabled(selectedStep == nil)
+                            .accessibilityLabel("Position \(num)")
                         }
                     }
                 }
@@ -189,6 +190,7 @@ struct SequencingView: View {
                         )
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(isCorrectOrderVisible ? "Hide Correct Order" : "Show Correct Order")
                     .tvFocusEffect()
 
                     // Try Again Button (Resets Everything)
@@ -207,6 +209,7 @@ struct SequencingView: View {
                         .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel("Try Again")
                     .tvFocusEffect()
                 }
             }
@@ -236,6 +239,7 @@ struct SequencingView: View {
                                 .font(.body)
                                 .foregroundColor(.primary)
                         }
+                        .accessibilityElement(children: .combine)
                     }
                 }
                 .padding(16)

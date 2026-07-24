@@ -77,6 +77,7 @@ struct YesNoView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Try Again")
                 .tvFocusEffect()
             }
         }
@@ -106,6 +107,7 @@ struct YesNoView: View {
                     Image(systemName: buttonIconName(for: title))
                         .font(.title2)
                         .foregroundColor(buttonTextColor(for: title, themeColor: themeColor))
+                        .accessibilityHidden(true)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -123,8 +125,26 @@ struct YesNoView: View {
         }
         .disabled(hasAnswered)
         .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel(accessibilityLabel(for: title))
+        .accessibilityAddTraits(selectedAnswer == title ? .isSelected : [])
         .tvFocusEffect()
         .opacity(buttonOpacity(for: title))
+    }
+
+    // Conveys selection + correctness to VoiceOver, mirroring
+    // MultipleChoiceView's accessibilityLabel(for:) fix — otherwise this
+    // state is shown only via color and an icon whose raw SF Symbol name
+    // would be announced instead.
+    private func accessibilityLabel(for title: String) -> String {
+        guard hasAnswered else { return title }
+        let isSelected = selectedAnswer == title
+        let isCorrectOption = title == item.correctAnswer
+        if isCorrectOption {
+            return isSelected ? "\(title), selected, correct" : "\(title), correct answer"
+        } else if isSelected {
+            return "\(title), incorrect"
+        }
+        return title
     }
 
     // MARK: - Logic and Helper Functions

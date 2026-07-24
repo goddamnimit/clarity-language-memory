@@ -66,6 +66,7 @@ struct FactOrOpinionView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Try Again")
                 .tvFocusEffect()
             }
         }
@@ -95,6 +96,7 @@ struct FactOrOpinionView: View {
                     Image(systemName: buttonIconName(for: title))
                         .font(.title3)
                         .foregroundColor(buttonTextColor(for: title, themeColor: themeColor))
+                        .accessibilityHidden(true)
                 }
             }
             .frame(maxWidth: .infinity)
@@ -112,8 +114,24 @@ struct FactOrOpinionView: View {
         }
         .disabled(hasAnswered)
         .buttonStyle(PlainButtonStyle())
+        .accessibilityLabel(accessibilityLabel(for: title))
+        .accessibilityAddTraits(selectedAnswer == title ? .isSelected : [])
         .tvFocusEffect()
         .opacity(buttonOpacity(for: title))
+    }
+
+    // Mirrors MultipleChoiceView's accessibilityLabel(for:) fix — conveys
+    // selection + correctness to VoiceOver instead of color + a bare icon.
+    private func accessibilityLabel(for title: String) -> String {
+        guard hasAnswered else { return title }
+        let isSelected = selectedAnswer == title
+        let isCorrectOption = title == item.correctAnswer
+        if isCorrectOption {
+            return isSelected ? "\(title), selected, correct" : "\(title), correct answer"
+        } else if isSelected {
+            return "\(title), incorrect"
+        }
+        return title
     }
 
     // MARK: - Logic and Helper Functions

@@ -74,10 +74,12 @@ struct MinimalPairsView: View {
                                     Image(systemName: "checkmark.circle.fill")
                                         .foregroundColor(.white)
                                         .font(.title3)
+                                        .accessibilityHidden(true)
                                 } else if selectedOption == option {
                                     Image(systemName: "xmark.circle.fill")
                                         .foregroundColor(.white)
                                         .font(.title3)
+                                        .accessibilityHidden(true)
                                 }
                             }
                         }
@@ -94,7 +96,8 @@ struct MinimalPairsView: View {
                     .disabled(hasAnswered)
                     .buttonStyle(PlainButtonStyle())
                     .tvFocusEffect()
-                    .accessibilityLabel(option)
+                    .accessibilityLabel(accessibilityLabel(for: option))
+                    .accessibilityAddTraits(selectedOption == option ? .isSelected : [])
                     .opacity(buttonOpacity(for: option))
                     .scaleEffect(tappedOption == option ? 1.05 : 1.0)
                     .modifier(ShakeEffect(animatableData: shakeOption == option ? 1 : 0))
@@ -124,6 +127,7 @@ struct MinimalPairsView: View {
                     .padding(.top, 10)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Try Again")
                 .tvFocusEffect()
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
@@ -192,6 +196,19 @@ struct MinimalPairsView: View {
     private func isCorrectOption(_ option: String) -> Bool {
         option.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() ==
         item.correctAnswer.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+
+    // Mirrors MultipleChoiceView's accessibilityLabel(for:) fix — conveys
+    // selection + correctness to VoiceOver instead of color + a bare icon.
+    private func accessibilityLabel(for option: String) -> String {
+        guard hasAnswered else { return option }
+        let isSelected = selectedOption == option
+        if isCorrectOption(option) {
+            return isSelected ? "\(option), selected, correct" : "\(option), correct answer"
+        } else if isSelected {
+            return "\(option), incorrect"
+        }
+        return option
     }
 
     private func backgroundColor(for option: String) -> Color {

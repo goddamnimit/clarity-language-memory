@@ -114,6 +114,7 @@ struct OpenEndedView: View {
                     .cornerRadius(16)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Clear")
 
                 // Show Answer button is hidden if there is no hardcoded model answer
                 if !item.correctAnswer.isEmpty {
@@ -133,6 +134,7 @@ struct OpenEndedView: View {
                         .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(isAnswerVisible ? "Hide Answer" : "Show Answer")
                 }
             }
 
@@ -142,11 +144,12 @@ struct OpenEndedView: View {
                     HStack {
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundColor(.green)
+                            .accessibilityHidden(true)
                         Text("Model Answer")
                             .font(.headline)
                             .foregroundColor(.green)
                     }
-                    
+
                     Text(item.correctAnswer)
                         .font(.body)
                         .foregroundColor(.primary)
@@ -161,6 +164,7 @@ struct OpenEndedView: View {
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(Color.green, lineWidth: 1.5)
                 )
+                .accessibilityElement(children: .combine)
                 .transition(.opacity) // Smooth fade entry
             }
         }

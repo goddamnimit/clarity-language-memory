@@ -55,6 +55,7 @@ struct ExerciseContainerView: View {
                             Image(systemName: "checkmark.circle.fill")
                                 .font(.system(size: completionIconSize))
                                 .foregroundColor(.green)
+                                .accessibilityHidden(true)
 
                             Text(sessionCompleteText)
                                 .font(.system(.title, design: .rounded))
@@ -190,13 +191,18 @@ struct ExerciseContainerView: View {
                                         .foregroundColor(.secondary)
                                         .frame(width: 32, height: 32)
                                         .contentShape(Rectangle())
+                                        .accessibilityHidden(true)
                                 }
                                 .accessibilityLabel(languageManager.currentLanguage.flagButtonAccessibilityLabel)
                             }
 
                             // Progress Bar
-                            ProgressBarView(progress: CGFloat(currentIndex + 1) / CGFloat(sessionItems.count))
-                                .frame(height: 8)
+                            ProgressBarView(
+                                progress: CGFloat(currentIndex + 1) / CGFloat(sessionItems.count),
+                                currentStep: currentIndex + 1,
+                                totalSteps: sessionItems.count
+                            )
+                            .frame(height: 8)
 
                             // Exercise title and instructions header
                             VStack(spacing: 4) {
@@ -286,6 +292,7 @@ struct ExerciseContainerView: View {
                                 .frame(minWidth: 44, minHeight: 44)
                             }
                             .disabled(currentIndex == 0)
+                            .accessibilityLabel("Previous question")
 
                             Spacer()
 
@@ -313,6 +320,7 @@ struct ExerciseContainerView: View {
                                     .foregroundColor(Color.accentColor)
                                     .frame(minWidth: 44, minHeight: 44)
                                 }
+                                .accessibilityLabel("Skip question")
                             }
                         }
                         .padding(.horizontal)
@@ -324,6 +332,7 @@ struct ExerciseContainerView: View {
                 }
             }
         }
+        .navigationTitle(exercise.title)
         #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
@@ -357,6 +366,7 @@ struct ExerciseContainerView: View {
         HStack(spacing: 8) {
             Image(systemName: "checkmark.circle.fill")
                 .foregroundColor(.green)
+                .accessibilityHidden(true)
             Text(languageManager.currentLanguage.flagContentConfirmedToast)
                 .font(.subheadline)
                 .fontWeight(.medium)
@@ -367,6 +377,7 @@ struct ExerciseContainerView: View {
         .background(Color.systemBackground)
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.15), radius: 8, x: 0, y: 2)
+        .accessibilityElement(children: .combine)
     }
 
     private func flagCurrentQuestion() {
@@ -387,6 +398,11 @@ struct ExerciseContainerView: View {
         #endif
 
         withAnimation { showFlagToast = true }
+        // The toast is purely visual otherwise — a VoiceOver user would
+        // never know it appeared or that the flag succeeded.
+        #if os(iOS)
+        UIAccessibility.post(notification: .announcement, argument: languageManager.currentLanguage.flagContentConfirmedToast)
+        #endif
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
             withAnimation { showFlagToast = false }
         }
@@ -828,18 +844,33 @@ struct ConfettiParticle: Identifiable {
 // MARK: - Inline ProgressBarView Helper
 struct ProgressBarView: View {
     var progress: CGFloat
-    
+    // Optional: lets callers surface "Question X of Y" to VoiceOver instead
+    // of a bare percentage. Falls back to a percentage when not provided,
+    // so existing call sites keep working without changes.
+    var currentStep: Int? = nil
+    var totalSteps: Int? = nil
+
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.secondary.opacity(0.15))
-                
+
                 RoundedRectangle(cornerRadius: 4)
                     .fill(Color.accentColor)
                     .frame(width: geometry.size.width * min(max(progress, 0.0), 1.0))
                     .animation(.linear, value: progress)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Progress")
+        .accessibilityValue(progressAccessibilityValue)
+    }
+
+    private var progressAccessibilityValue: String {
+        if let currentStep, let totalSteps {
+            return "Question \(currentStep) of \(totalSteps)"
+        }
+        return "\(Int((min(max(progress, 0.0), 1.0) * 100).rounded()))%"
     }
 }

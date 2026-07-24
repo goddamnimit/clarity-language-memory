@@ -52,6 +52,7 @@ struct CategoryCrossOutView: View {
                                 Image(systemName: iconName(for: word))
                                     .font(.headline)
                                     .foregroundColor(.white)
+                                    .accessibilityHidden(true)
                             }
                         }
                         .padding(.horizontal, 12)
@@ -66,6 +67,8 @@ struct CategoryCrossOutView: View {
                     }
                     .disabled(hasAnswered) // Lock options once selected
                     .buttonStyle(PlainButtonStyle())
+                    .accessibilityLabel(accessibilityLabel(for: word))
+                    .accessibilityAddTraits(selectedWord == word ? .isSelected : [])
                     .tvFocusEffect()
                     .opacity(buttonOpacity(for: word))
                 }
@@ -104,6 +107,7 @@ struct CategoryCrossOutView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel("Try Again")
                 .tvFocusEffect()
             }
         }
@@ -131,6 +135,19 @@ struct CategoryCrossOutView: View {
         selectedWord = nil
         hasAnswered = false
         answeredCorrectly = false
+    }
+
+    // Mirrors MultipleChoiceView's accessibilityLabel(for:) fix — conveys
+    // selection + correctness to VoiceOver instead of color + a bare icon.
+    private func accessibilityLabel(for word: String) -> String {
+        guard hasAnswered else { return word }
+        let isSelected = selectedWord == word
+        if isCorrectOption(word) {
+            return isSelected ? "\(word), selected, correct" : "\(word), correct answer"
+        } else if isSelected {
+            return "\(word), incorrect"
+        }
+        return word
     }
 
     // Value-based correct answer verification (independent of array indices)
