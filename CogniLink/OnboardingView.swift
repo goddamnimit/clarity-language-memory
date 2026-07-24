@@ -1,4 +1,7 @@
 import SwiftUI
+#if os(iOS)
+import UIKit
+#endif
 
 struct OnboardingView: View {
     @Binding var isPresented: Bool
@@ -51,6 +54,13 @@ struct OnboardingView: View {
             .animation(.easeInOut, value: currentPage)
             .onChange(of: currentPage) {
                 if currentPage != 2 { nameFieldFocused = false }
+                // The gradient buttons advance the page programmatically, so
+                // unlike a user-initiated swipe nothing tells VoiceOver the
+                // screen changed and focus lands unpredictably. Mirrors the
+                // .screenChanged fix already verified for MultipleChoiceView's
+                // auto-advancing memory phases.
+                UIAccessibility.post(notification: .screenChanged,
+                                     argument: "Step \(currentPage + 1) of 4")
             }
         }
         .background(Color.systemBackground.ignoresSafeArea())
@@ -97,6 +107,7 @@ struct OnboardingView: View {
                     .foregroundColor(.blue)
             }
             .padding(.bottom, 40)
+            .accessibilityHidden(true)
 
             Text("Welcome to Clarity")
                 #if os(tvOS)
@@ -212,6 +223,7 @@ struct OnboardingView: View {
             HStack(spacing: 16) {
                 Text(language.flagEmoji)
                     .font(.system(size: languageCardFlagSize))
+                    .accessibilityHidden(true)
                 Text(language.displayName)
                     .font(.system(size: languageCardNameSize, weight: .medium, design: .rounded))
                     .foregroundColor(isSelected ? .white : .primary)
@@ -220,6 +232,7 @@ struct OnboardingView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: languageCardCheckmarkSize))
                         .foregroundColor(.white)
+                        .accessibilityHidden(true)
                 }
             }
             .padding(.horizontal, 20)
@@ -237,6 +250,10 @@ struct OnboardingView: View {
                     radius: isSelected ? 6 : 2, x: 0, y: 2)
         }
         .buttonStyle(PlainButtonStyle())
+        // Selection was conveyed only by the orange/pink gradient plus a
+        // checkmark glyph — no trait, so VoiceOver never said "selected".
+        .accessibilityLabel(language.displayName)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
         .tvFocusEffect()
     }
 
@@ -288,6 +305,7 @@ struct OnboardingView: View {
                     .foregroundColor(.orange)
             }
             .padding(.bottom, 32)
+            .accessibilityHidden(true)
 
             Text("What should we call you?")
                 #if os(tvOS)
@@ -336,6 +354,8 @@ struct OnboardingView: View {
                 }
                 .font(.system(size: skipButtonFontSize, design: .rounded))
                 .foregroundColor(.secondary)
+                // Standalone "Skip" is ambiguous out of visual context.
+                .accessibilityHint("Skips entering your name")
                 .tvFocusEffect()
             }
             .padding(.horizontal, 32)
@@ -377,6 +397,7 @@ struct OnboardingView: View {
                     .foregroundColor(.green)
             }
             .padding(.bottom, 32)
+            .accessibilityHidden(true)
 
             let displayName = name.trimmingCharacters(in: .whitespaces)
             Text(displayName.isEmpty ? "You're all set!" : "You're all set, \(displayName)!")
@@ -456,6 +477,10 @@ struct OnboardingView: View {
         .padding(16)
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(14)
+        // Icon + title + subtitle otherwise read as three stops per row
+        // (nine on the ready page). The icon carries no text so .combine
+        // drops it automatically.
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Shared Gradient Button

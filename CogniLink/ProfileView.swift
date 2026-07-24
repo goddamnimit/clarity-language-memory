@@ -109,6 +109,9 @@ struct ProfileView: View {
                                 )
                         }
                         .offset(x: 4, y: 4)
+                        // Icon-only control — otherwise announced as
+                        // "camera circle fill".
+                        .accessibilityLabel("Change profile photo")
                         #endif
                     }
                     .frame(width: 120, height: 120)
@@ -131,6 +134,9 @@ struct ProfileView: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
+                    // Placeholder doubles as the label, so once a name is
+                    // typed VoiceOver loses the "Name" context entirely.
+                    .accessibilityLabel(languageManager.currentLanguage.pvNamePlaceholder)
                     .onSubmit {
                         store.updateName(nameInput)
                     }
@@ -239,8 +245,11 @@ struct ProfileView: View {
                                     }
                                 }) {
                                     HStack(spacing: 16) {
+                                        // Read aloud as e.g. "flag of Spain" —
+                                        // pure noise ahead of the language name.
                                         Text(language.flagEmoji)
                                             .font(.system(size: languageFlagSize))
+                                            .accessibilityHidden(true)
 
                                         Text(language.displayName)
                                             .font(.system(size: languageNameFontSize, weight: .medium))
@@ -252,6 +261,7 @@ struct ProfileView: View {
                                             Image(systemName: "checkmark")
                                                 .font(.system(size: languageCheckmarkSize, weight: .bold))
                                                 .foregroundColor(.white)
+                                                .accessibilityHidden(true)
                                         }
                                     }
                                     .padding(.horizontal, 16)
@@ -266,6 +276,14 @@ struct ProfileView: View {
                                     .shadow(color: Color.black.opacity(0.05), radius: 2, x: 0, y: 1)
                                 }
                                 .buttonStyle(PlainButtonStyle())
+                                // Selection was conveyed only by accent-color
+                                // background + a checkmark glyph (announced as
+                                // the literal word "checkmark"). Expose it as
+                                // the .isSelected trait instead.
+                                .accessibilityLabel(language.displayName)
+                                .accessibilityAddTraits(
+                                    languageManager.currentLanguage == language ? .isSelected : []
+                                )
                             }
                         }
                         .padding(.top, 8)
@@ -274,6 +292,7 @@ struct ProfileView: View {
                             Image(systemName: "globe")
                                 .font(.body)
                                 .foregroundColor(.accentColor)
+                                .accessibilityHidden(true)
                             Text(languageManager.currentLanguage.pvLanguageHeader)
                                 .font(.body)
                                 .foregroundColor(.primary)
@@ -311,6 +330,7 @@ struct ProfileView: View {
                         HStack {
                             Image(systemName: "rosette")
                                 .foregroundColor(.yellow)
+                                .accessibilityHidden(true)
                             Text(languageManager.currentLanguage.pvMyBadges)
                                 .font(.body)
                                 .foregroundColor(.primary)
@@ -318,6 +338,7 @@ struct ProfileView: View {
                             Image(systemName: "chevron.right")
                                 .font(.caption.bold())
                                 .foregroundColor(.secondary)
+                                .accessibilityHidden(true)
                         }
                         .padding()
                         .frame(minHeight: 50)
@@ -348,6 +369,7 @@ struct ProfileView: View {
                             HStack {
                                 Image(systemName: "square.and.arrow.up")
                                     .foregroundColor(.blue)
+                                    .accessibilityHidden(true)
                                 Text(languageManager.currentLanguage.pvExportResearchData)
                                     .foregroundColor(.blue)
                                 Spacer()
@@ -368,6 +390,7 @@ struct ProfileView: View {
                             HStack {
                                 Image(systemName: "doc.richtext")
                                     .foregroundColor(.blue)
+                                    .accessibilityHidden(true)
                                 Text(languageManager.currentLanguage.cgExportPDF)
                                     .foregroundColor(.blue)
                                 Spacer()
@@ -391,6 +414,7 @@ struct ProfileView: View {
                         HStack {
                             Image(systemName: "lock.shield")
                                 .foregroundColor(.accentColor)
+                                .accessibilityHidden(true)
                             Text(languageManager.currentLanguage.cgCaregiverMode)
                                 .font(.body)
                                 .foregroundColor(.primary)
@@ -398,6 +422,7 @@ struct ProfileView: View {
                             Image(systemName: "chevron.right")
                                 .font(.caption.bold())
                                 .foregroundColor(.secondary)
+                                .accessibilityHidden(true)
                         }
                         .padding()
                         .frame(minHeight: 50)
@@ -412,6 +437,7 @@ struct ProfileView: View {
                         HStack {
                             Image(systemName: "info.circle")
                                 .foregroundColor(.accentColor)
+                                .accessibilityHidden(true)
                             Text(languageManager.currentLanguage.pvAboutGuidance)
                                 .font(.body)
                                 .foregroundColor(.primary)
@@ -419,6 +445,7 @@ struct ProfileView: View {
                             Image(systemName: "chevron.right")
                                 .font(.caption.bold())
                                 .foregroundColor(.secondary)
+                                .accessibilityHidden(true)
                         }
                         .padding()
                         .frame(minHeight: 50)
@@ -504,6 +531,7 @@ struct ProfileView: View {
                 .font(.body)
                 .foregroundColor(.accentColor)
                 .frame(width: 28, height: 28)
+                .accessibilityHidden(true)
 
             Text(label)
                 .font(.body)
@@ -521,10 +549,16 @@ struct ProfileView: View {
                 Image(systemName: "chevron.right")
                     .font(.caption.bold())
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
             }
         }
         .padding(.horizontal, 16)
         .frame(minHeight: 50)
+        // Label and value are one logical pair ("Diagnosis: Not set"),
+        // not two separate swipe stops.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
     }
 
     // MARK: - Stat Cell
@@ -545,6 +579,12 @@ struct ProfileView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
+        // Otherwise reads as two stops with the bare number first ("12",
+        // then "Sessions"). `firstTryAccuracyText` can also be an em dash
+        // placeholder, which VoiceOver announces as "em dash".
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value == "—" ? "No data yet" : value)
     }
 
     // MARK: - Sheets
@@ -568,9 +608,16 @@ struct ProfileView: View {
                             if store.profile.diagnosisType == diagnosis {
                                 Image(systemName: "checkmark")
                                     .foregroundColor(.accentColor)
+                                    .accessibilityHidden(true)
                             }
                         }
                     }
+                    // Same checkmark-only selection pattern as the language
+                    // rows — expose it as a trait instead.
+                    .accessibilityLabel(diagnosis.rawValue)
+                    .accessibilityAddTraits(
+                        store.profile.diagnosisType == diagnosis ? .isSelected : []
+                    )
                 }
 
                 if store.profile.diagnosisType == .other {

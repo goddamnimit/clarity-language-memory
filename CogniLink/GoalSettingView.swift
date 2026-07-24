@@ -71,6 +71,11 @@ struct GoalSettingView: View {
                             }
                         }
                         .frame(height: 8)
+                        // The bar is pure geometry — its fill fraction is
+                        // invisible to VoiceOver. The Text above already
+                        // states "N of M", so hide the bar rather than
+                        // leaving a silent stop in the swipe order.
+                        .accessibilityHidden(true)
                     }
                     .padding()
                     .background(Color.secondaryGroupedBackground)
@@ -100,12 +105,18 @@ struct GoalSettingView: View {
                 if selectedGoal == value {
                     Image(systemName: "checkmark")
                         .foregroundColor(.accentColor)
+                        .accessibilityHidden(true)
                 }
             }
             .padding(.horizontal, 16)
             .frame(minHeight: 50)
         }
         .buttonStyle(PlainButtonStyle())
+        // Selection is otherwise conveyed only by the checkmark glyph (which
+        // VoiceOver would read as the literal word "checkmark") — expose it
+        // as the .isSelected trait instead, matching BaselineAssessmentView.
+        .accessibilityLabel(label)
+        .accessibilityAddTraits(selectedGoal == value ? .isSelected : [])
     }
 }
 #endif

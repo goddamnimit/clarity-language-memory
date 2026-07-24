@@ -50,8 +50,11 @@ struct ExerciseListView: View {
                                     .background(Color.accentColor.opacity(0.1))
                                     .foregroundColor(.accentColor)
                                     .cornerRadius(6)
+                                    // Otherwise reads as a bare "Easy" with no
+                                    // indication of what it qualifies.
+                                    .accessibilityLabel("Difficulty: \(difficultyLabel(for: exercise.difficulty))")
                             }
-                            
+
                             Text(exercise.instructions)
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
@@ -59,6 +62,7 @@ struct ExerciseListView: View {
                                 .minimumScaleFactor(0.7)
                         }
                         .padding(.vertical, 4)
+                        .accessibilityElement(children: .combine)
                     }
                 }
             }

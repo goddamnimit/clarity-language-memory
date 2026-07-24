@@ -176,6 +176,12 @@ struct AppProgressView: View {
             RoundedRectangle(cornerRadius: 16)
                 .stroke(color.opacity(0.15), lineWidth: 1.5)
         )
+        // Read the bare number then its meaning as two disjoint stops, with
+        // the decorative icon announcing its raw symbol name first. Collapse
+        // to one stop: "Day Streak, 34".
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
     }
 
     // MARK: - Section 2: Weekly Activity Chart
@@ -206,6 +212,7 @@ struct AppProgressView: View {
                 }
             }
             .frame(height: 140)
+            .accessibilityLabel("Weekly activity chart")
 
             HStack(spacing: 16) {
                 legendDot(color: .orange, label: "Today")
@@ -223,7 +230,9 @@ struct AppProgressView: View {
     @ViewBuilder
     private func legendDot(color: Color, label: String) -> some View {
         HStack(spacing: 4) {
+            // The dot only restates the color the adjacent text already names.
             Circle().fill(color).frame(width: 8, height: 8)
+                .accessibilityHidden(true)
             Text(label)
         }
     }
@@ -266,6 +275,7 @@ struct AppProgressView: View {
                 .font(.system(size: 18))
                 .foregroundColor(color)
                 .frame(width: 28)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
@@ -300,6 +310,12 @@ struct AppProgressView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 14)
+        // Title / percentage / silent progress bar otherwise read as
+        // separate stops. The bar duplicates the percentage, so collapse
+        // the whole row into one announcement.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(title)
+        .accessibilityValue(pct.map { "\(Int($0 * 100)) percent" } ?? "No data yet")
     }
 
     // MARK: - Section 4: Exercise Accordion
@@ -335,11 +351,20 @@ struct AppProgressView: View {
                     Image(systemName: isExpanded.wrappedValue ? "chevron.up" : "chevron.down")
                         .font(.caption.bold())
                         .foregroundColor(.secondary)
+                        .accessibilityHidden(true)
                 }
                 .padding(18)
                 .background(Color.secondaryGroupedBackground)
             }
             .buttonStyle(PlainButtonStyle())
+            // Hand-rolled accordion, so unlike DisclosureGroup nothing
+            // exposes expand/collapse state — the chevron was the only cue
+            // and VoiceOver read it as "chevron up"/"chevron down" rather
+            // than as state. Expose it via .isExpanded plus a hint.
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("\(title), \(attemptedCount) of \(exercises.count) started")
+            .accessibilityAddTraits(isExpanded.wrappedValue ? [.isButton, .isSelected] : .isButton)
+            .accessibilityHint(isExpanded.wrappedValue ? "Collapses this section" : "Expands this section")
 
             if isExpanded.wrappedValue {
                 Divider()
@@ -361,6 +386,10 @@ struct AppProgressView: View {
                         }
                         .padding(.horizontal, 18)
                         .frame(height: 52)
+                        // status / title / run-count otherwise read as three
+                        // separate stops; combined this reads e.g.
+                        // "Completed, Synonyms, 3 runs".
+                        .accessibilityElement(children: .combine)
 
                         if exercise.id != exercises.last?.id {
                             Divider().padding(.leading, 52)
@@ -378,14 +407,22 @@ struct AppProgressView: View {
         )
     }
 
+    // Three-state completion status. Previously conveyed ONLY by symbol
+    // shape + color: VoiceOver read the raw symbol names ("checkmark circle
+    // fill" / "circle lefthalf filled" / "circle"), of which the latter two
+    // are meaningless, and colorblind users can't separate the blue and grey
+    // circles either. Each branch now carries an explicit text equivalent.
     @ViewBuilder
     private func statusIcon(for title: String) -> some View {
         if completedExercises.contains(title) {
             Image(systemName: "checkmark.circle.fill").foregroundColor(.green)
+                .accessibilityLabel("Completed")
         } else if attemptedExercises.contains(title) {
             Image(systemName: "circle.lefthalf.filled").foregroundColor(.blue)
+                .accessibilityLabel("In progress")
         } else {
             Image(systemName: "circle").foregroundColor(.gray.opacity(0.6))
+                .accessibilityLabel("Not started")
         }
     }
 
@@ -397,6 +434,7 @@ struct AppProgressView: View {
         } label: {
             HStack {
                 Image(systemName: "arrow.clockwise")
+                    .accessibilityHidden(true)
                 Text("Reset All Progress")
             }
             .font(.headline)
@@ -407,6 +445,7 @@ struct AppProgressView: View {
             .cornerRadius(16)
         }
         .buttonStyle(PlainButtonStyle())
+        .accessibilityHint("Clears all progress and session history")
     }
 
     // MARK: - Shared Section Header

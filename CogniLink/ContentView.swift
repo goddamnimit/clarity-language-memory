@@ -129,25 +129,31 @@ struct ContentView: View {
         }
     }
 
-    private var profileTabTitle: String {
-        switch languageManager.currentLanguage {
-        case .english:    return "Profile"
-        case .spanish:    return "Perfil"
-        case .hindi:      return "प्रोफ़ाइल"
-        case .gujarati:   return "પ્રોફાઇલ"
-        case .chinese:    return "我的"
-        case .farsi:      return "پروفایل"
-        case .korean:     return "프로필"
-        case .vietnamese: return "Hồ sơ"
-        case .arabic:     return "الملف"
-        case .portuguese: return "Perfil"
-        case .tagalog:    return "Profile"
-        case .punjabi:    return "ਪ੍ਰੋਫਾਈਲ"
-        case .armenian:   return "Պրոֆիլ"
-        case .japanese:   return "プロフィール"
-        case .french:     return "Profil"
-        case .amharic:    return "መገለጫ"
-        }
+    private var profileTabTitle: String { profileTitle(for: languageManager.currentLanguage) }
+}
+
+/// Localized "Profile". Lifted to file scope (from a private computed property
+/// on ContentView) so HomeView can reuse the existing 16-language translations
+/// for its toolbar button's accessibility label, rather than duplicating the
+/// switch or hardcoding English.
+fileprivate func profileTitle(for language: AppLanguage) -> String {
+    switch language {
+    case .english:    return "Profile"
+    case .spanish:    return "Perfil"
+    case .hindi:      return "प्रोफ़ाइल"
+    case .gujarati:   return "પ્રોફાઇલ"
+    case .chinese:    return "我的"
+    case .farsi:      return "پروفایل"
+    case .korean:     return "프로필"
+    case .vietnamese: return "Hồ sơ"
+    case .arabic:     return "الملف"
+    case .portuguese: return "Perfil"
+    case .tagalog:    return "Profile"
+    case .punjabi:    return "ਪ੍ਰੋਫਾਈਲ"
+    case .armenian:   return "Պրոֆիլ"
+    case .japanese:   return "プロフィール"
+    case .french:     return "Profil"
+    case .amharic:    return "መገለጫ"
     }
 }
 
@@ -193,11 +199,13 @@ struct HomeView: View {
                         HStack(spacing: 6) {
                             Image(systemName: "trophy")
                                 .font(.caption)
+                                .accessibilityHidden(true)
                             Text(goalText)
                         }
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
+                        .accessibilityElement(children: .combine)
                     }
 
                     // Streak Widget
@@ -231,6 +239,7 @@ struct HomeView: View {
                     }) {
                         HStack {
                             Image(systemName: "shuffle")
+                                .accessibilityHidden(true)
                             Text(surpriseMeText)
                         }
                         .font(.headline)
@@ -350,6 +359,10 @@ struct HomeView: View {
                             .font(.system(size: flagIconSize))
                             .frame(width: 44, height: 44)
                     }
+                    // The control's entire meaning is carried by a flag glyph,
+                    // which VoiceOver reads as e.g. "flag of United States" —
+                    // nothing conveyed that this opens Profile/language settings.
+                    .accessibilityLabel(profileTitle(for: languageManager.currentLanguage))
                 }
                 #endif
             }
@@ -883,9 +896,12 @@ struct HomeView: View {
     @ViewBuilder
     private func recommendationCard(_ rec: Recommendation) -> some View {
         VStack(alignment: .leading, spacing: 8) {
+            // Data-driven symbol name — VoiceOver would otherwise speak
+            // whatever raw string the recommendation engine emits.
             Image(systemName: rec.sfSymbolName)
                 .font(.system(size: recommendationIconSize))
                 .foregroundColor(.accentColor)
+                .accessibilityHidden(true)
             Text(rec.headline)
                 .font(.system(.subheadline, design: .rounded))
                 .fontWeight(.semibold)
@@ -904,6 +920,7 @@ struct HomeView: View {
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(14)
         .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+        .accessibilityElement(children: .combine)
     }
 
     @ViewBuilder
@@ -915,7 +932,8 @@ struct HomeView: View {
                 .frame(width: 48, height: 48)
                 .background(color.opacity(0.12))
                 .cornerRadius(12)
-            
+                .accessibilityHidden(true)
+
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.system(.headline, design: .rounded))
@@ -935,11 +953,13 @@ struct HomeView: View {
             Image(systemName: "chevron.right")
                 .font(.system(size: sectionCardChevronSize, weight: .bold))
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
         }
         .padding()
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.02), radius: 2, x: 0, y: 1)
+        .accessibilityElement(children: .combine)
     }
 }
 

@@ -70,6 +70,7 @@ struct AllActivitiesView: View {
                 }) {
                     HStack(spacing: 10) {
                         Image(systemName: "sparkles")
+                            .accessibilityHidden(true)
                         Text(surpriseMeButtonText)
                             .fontWeight(.semibold)
                     }
@@ -81,6 +82,7 @@ struct AllActivitiesView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 10)
                 }
+                .accessibilityHint("Opens a randomly chosen exercise")
             }
             .background(Color.groupedBackground)
             // This is now fully valid as Exercise conforms to Hashable
@@ -108,6 +110,13 @@ struct AllActivitiesView: View {
                 .minimumScaleFactor(0.7)
         }
         .padding(.vertical, 2)
+        // Title carries the identity, so put it in the label for fast
+        // list scanning and demote the (visually truncated but fully
+        // spoken) instructions to a hint, which VoiceOver reads after a
+        // pause and lets users skip.
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(exercise.title)
+        .accessibilityHint(exercise.instructions)
     }
     
     // MARK: - Logic Helpers
