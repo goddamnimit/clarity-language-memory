@@ -78,6 +78,7 @@ struct TherapyNotesView: View {
 
                     TextEditor(text: $draft)
                         .font(.body)
+                        .accessibilityLabel(languageManager.currentLanguage.cgAddNote)
                         .frame(minHeight: 100)
                         .padding(8)
                         .background(Color.secondaryGroupedBackground)
@@ -97,6 +98,10 @@ struct TherapyNotesView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .disabled(draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                    // Disabled state is otherwise conveyed only by a dimmed
+                    // tint; give VoiceOver the reason.
+                    .accessibilityHint(draft.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                                       ? "Enter note text first" : "")
                 }
                 .padding(.horizontal)
 
@@ -129,9 +134,12 @@ struct TherapyNotesView: View {
                                                 .font(.caption)
                                                 .foregroundColor(.red)
                                                 .frame(width: 32, height: 32)
+                                                .accessibilityHidden(true)
                                         }
                                         .buttonStyle(PlainButtonStyle())
-                                        .accessibilityLabel(languageManager.currentLanguage.cgDelete)
+                                        // With N notes every delete button read
+                                        // identically — disambiguate by timestamp.
+                                        .accessibilityLabel("\(languageManager.currentLanguage.cgDelete), \(timestampFormatter.string(from: note.date))")
                                     }
                                     Text(note.text)
                                         .font(.body)

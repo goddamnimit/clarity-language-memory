@@ -161,6 +161,9 @@ struct PINEntryView: View {
 
     private func rejectEntry() {
         UINotificationFeedbackGenerator().notificationOccurred(.error)
+        // Failure was otherwise conveyed only by a shake animation and a
+        // haptic — nothing spoken, and the entry silently clears.
+        UIAccessibility.post(notification: .announcement, argument: "Incorrect PIN. Try again.")
         withAnimation(.linear(duration: 0.06).repeatCount(5, autoreverses: true)) {
             shakeOffset = 12
         }
@@ -273,6 +276,8 @@ struct ChangePINView: View {
                 showSaved = true
             } else {
                 UINotificationFeedbackGenerator().notificationOccurred(.error)
+                // Mirrors rejectEntry() above — mismatch was silent.
+                UIAccessibility.post(notification: .announcement, argument: "PINs did not match. Start again.")
                 withAnimation(.linear(duration: 0.06).repeatCount(5, autoreverses: true)) {
                     shakeOffset = 12
                 }
@@ -284,6 +289,9 @@ struct ChangePINView: View {
             }
         } else {
             firstEntry = pin
+            // The prompt silently flips from "New PIN" to "Confirm PIN".
+            UIAccessibility.post(notification: .screenChanged,
+                                 argument: languageManager.currentLanguage.cgConfirmPIN)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                 enteredDigits = []
             }

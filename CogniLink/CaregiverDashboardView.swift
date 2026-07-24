@@ -176,6 +176,7 @@ struct CaregiverDashboardView: View {
                 Image(systemName: "bell.fill")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
                 Text(languageManager.currentLanguage.cgNotifications)
                     .font(.headline)
                     .foregroundColor(.secondary)
@@ -233,6 +234,7 @@ struct CaregiverDashboardView: View {
                     HStack {
                         Image(systemName: "exclamationmark.triangle")
                             .foregroundColor(.orange)
+                            .accessibilityHidden(true)
                         Text(languageManager.currentLanguage.cgEnableNotificationsInSettings)
                             .font(.footnote)
                             .foregroundColor(.blue)
@@ -256,6 +258,7 @@ struct CaregiverDashboardView: View {
                 Image(systemName: "lock.fill")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .accessibilityHidden(true)
                 Text(languageManager.currentLanguage.therapySettingsTitle)
                     .font(.headline)
                     .foregroundColor(.secondary)
@@ -425,6 +428,7 @@ struct CaregiverDashboardView: View {
                 Spacer()
             }
             .padding()
+            .accessibilityElement(children: .combine)
             .background(Color.red.opacity(0.08))
             .cornerRadius(12)
             .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
@@ -463,6 +467,11 @@ struct CaregiverDashboardView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 14)
         .padding(.horizontal, 8)
+        // Icon name + bare number + caption otherwise read as three
+        // fragments ("flame", "7", "Current Streak").
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(label)
+        .accessibilityValue(value)
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
@@ -475,6 +484,7 @@ struct CaregiverDashboardView: View {
                 .font(.body)
                 .foregroundColor(.accentColor)
                 .frame(width: 28, height: 28)
+                .accessibilityHidden(true)
             Text(label)
                 .font(.body)
                 .foregroundColor(.primary)
@@ -482,9 +492,22 @@ struct CaregiverDashboardView: View {
             Image(systemName: "chevron.right")
                 .font(.caption.bold())
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
         }
         .padding(.horizontal, 16)
         .frame(minHeight: 50)
+        // NOTE: deliberately NOT using .accessibilityElement(children: .ignore)
+        // here. This row is the *label* of an enclosing NavigationLink built
+        // by hand (VStack + PlainButtonStyle, not a List). Collapsing it into
+        // its own accessibility element makes that element the tap target
+        // instead of the link, so the row still reads correctly but
+        // activating it no longer navigates — confirmed via XCUITest, where
+        // the tap succeeded and the screen never changed.
+        // (The same modifier IS safe on AllActivitiesView's rows, because
+        // those live in a List and UIKit keeps the cell as the tap target —
+        // verified separately. The hazard is specific to hand-built rows.)
+        // Hiding the two decorative images is sufficient anyway: SwiftUI then
+        // combines the link's remaining content down to just `label`.
     }
 }
 
@@ -749,6 +772,9 @@ struct AdaptiveOverrideRow: View {
         }
         .pickerStyle(MenuPickerStyle())
         .labelsHidden()
+        // Without this VoiceOver announces only the current value with no
+        // indication of which exercise it belongs to.
+        .accessibilityLabel("\(item.name), \(languageManager.currentLanguage.adaptiveDifficultyLabel)")
     }
 }
 #endif

@@ -50,6 +50,21 @@ struct CaregiverProgressView: View {
         }
     }
 
+    /// Spoken equivalent of the trend line's shape, for VoiceOver users who
+    /// get nothing at all from the drawn Path.
+    private var trendAccessibilityValue: String {
+        guard let first = accuracyPoints.first, let last = accuracyPoints.last else {
+            return languageManager.currentLanguage.cgNoData
+        }
+        let firstPct = Int((first * 100).rounded())
+        let lastPct  = Int((last * 100).rounded())
+        let direction: String
+        if lastPct > firstPct { direction = "rising" }
+        else if lastPct < firstPct { direction = "falling" }
+        else { direction = "flat" }
+        return "Started at \(firstPct) percent, now \(lastPct) percent, \(direction), across \(accuracyPoints.count) sessions"
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -63,6 +78,7 @@ struct CaregiverProgressView: View {
                         Text(PDFReportManager.sectionDisplayName("functionalSkills")).tag("functionalSkills")
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    .accessibilityLabel("Section filter")
 
                     HStack {
                         Picker("", selection: $typeFilter) {
@@ -73,6 +89,7 @@ struct CaregiverProgressView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                         .labelsHidden()
+                        .accessibilityLabel("Exercise type filter")
 
                         Spacer()
 
@@ -83,6 +100,7 @@ struct CaregiverProgressView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                         .labelsHidden()
+                        .accessibilityLabel("Date range filter")
                     }
                 }
                 .padding(.horizontal)
@@ -95,6 +113,14 @@ struct CaregiverProgressView: View {
                     if accuracyPoints.count >= 2 {
                         trendLine
                             .frame(height: 120)
+                            // Hand-rolled Path/Circle chart — entirely silent
+                            // to VoiceOver, so the whole trend card conveyed
+                            // nothing. Collapse it to one element carrying a
+                            // spoken summary (direction stated as words, not
+                            // implied by slope).
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel(languageManager.currentLanguage.cgAccuracyTrend)
+                            .accessibilityValue(trendAccessibilityValue)
                     } else {
                         Text(languageManager.currentLanguage.cgNoData)
                             .font(.subheadline)
@@ -113,6 +139,7 @@ struct CaregiverProgressView: View {
                     HStack {
                         Image(systemName: "doc.richtext")
                             .foregroundColor(.blue)
+                            .accessibilityHidden(true)
                         Text(languageManager.currentLanguage.cgExportPDF)
                             .foregroundColor(.blue)
                         Spacer()
@@ -124,6 +151,8 @@ struct CaregiverProgressView: View {
                     .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
                 }
                 .buttonStyle(PlainButtonStyle())
+                .accessibilityLabel(languageManager.currentLanguage.cgExportPDF)
+                .accessibilityHint("Creates a PDF progress report to share")
                 .padding(.horizontal)
 
                 // Session history list
@@ -250,6 +279,15 @@ struct CaregiverProgressView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
+        // Otherwise ~6 fragments per row, including the "·" separators read
+        // aloud as "middle dot" and "8/10" read as "8 slash 10".
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(
+            "\(PDFReportManager.exerciseTypeDisplayName((entry["exerciseType"] as? String) ?? "")), "
+            + "\(PDFReportManager.sectionDisplayName((entry["section"] as? String) ?? "")), "
+            + "\(((entry["difficulty"] as? String) ?? "").capitalized)"
+        )
+        .accessibilityValue("Score \(score) of \(total), \(accuracy) percent")
     }
 
     // MARK: - Data

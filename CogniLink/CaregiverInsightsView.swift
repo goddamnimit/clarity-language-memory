@@ -44,6 +44,7 @@ struct CaregiverInsightsView: View {
                 .font(.system(size: 22, weight: .semibold))
                 .foregroundColor(.accentColor)
                 .frame(width: 32, height: 32)
+                .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 4) {
                 Text(insight.headline)
                     .font(.body)
@@ -64,6 +65,7 @@ struct CaregiverInsightsView: View {
         .background(Color.secondaryGroupedBackground)
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.04), radius: 3, x: 0, y: 1)
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Empty State
@@ -73,6 +75,7 @@ struct CaregiverInsightsView: View {
             Image(systemName: hasEnoughData ? "checkmark.seal" : "hourglass")
                 .font(.system(size: 44))
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
             Text(hasEnoughData
                  ? languageManager.currentLanguage.insightsSteadyTitle
                  : languageManager.currentLanguage.insightsEmptyTitle)
@@ -88,6 +91,7 @@ struct CaregiverInsightsView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 60)
         .padding(.horizontal, 24)
+        .accessibilityElement(children: .combine)
     }
 }
 

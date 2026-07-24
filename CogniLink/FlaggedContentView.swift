@@ -68,10 +68,12 @@ struct FlaggedContentView: View {
             Image(systemName: "flag.slash")
                 .font(.system(size: 40))
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
             Text(languageManager.currentLanguage.flaggedContentEmptyState)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
+        .accessibilityElement(children: .combine)
     }
 
     // MARK: - Actions
@@ -81,6 +83,7 @@ struct FlaggedContentView: View {
             Button(action: copyAllAsText) {
                 HStack {
                     Image(systemName: "doc.on.doc")
+                        .accessibilityHidden(true)
                     Text(languageManager.currentLanguage.flaggedContentCopyAllButton)
                 }
                 .font(.subheadline)
@@ -95,6 +98,7 @@ struct FlaggedContentView: View {
             Button(action: exportAsJSON) {
                 HStack {
                     Image(systemName: "square.and.arrow.up")
+                        .accessibilityHidden(true)
                     Text(languageManager.currentLanguage.flaggedContentExportJSONButton)
                 }
                 .font(.subheadline)
@@ -149,6 +153,11 @@ struct FlaggedContentView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
+        // Otherwise ~6 fragments per row; the "·" separators are read
+        // aloud as "middle dot".
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(item.exerciseTitle)
+        .accessibilityValue("\(item.questionPreview). \(item.exerciseType), \(item.language), \(item.displayDate)")
     }
 
     // MARK: - Toast
@@ -157,6 +166,7 @@ struct FlaggedContentView: View {
         HStack(spacing: 8) {
             Image(systemName: "checkmark.circle.fill")
                 .foregroundColor(.green)
+                .accessibilityHidden(true)
             Text(languageManager.currentLanguage.flaggedContentCopiedConfirmation)
                 .font(.subheadline)
                 .fontWeight(.medium)
@@ -194,6 +204,8 @@ struct FlaggedContentView: View {
         UIPasteboard.general.string = lines.joined(separator: "\n\n")
 
         withAnimation { showCopiedToast = true }
+        UIAccessibility.post(notification: .announcement,
+                             argument: languageManager.currentLanguage.flaggedContentCopiedConfirmation)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
             withAnimation { showCopiedToast = false }
         }
