@@ -3,18 +3,27 @@
 //  CogniLinkUITests
 //
 //  Phase 2 of the VoiceOver sweep: navigation + profile/progress views
-//  (ContentView, ProfileView, AllActivitiesView, ExerciseListView,
-//  GoalSettingView, OnboardingView, AppProgressView).
+//  (ContentView, ProfileView, AllActivitiesView, GoalSettingView,
+//  OnboardingView, AppProgressView).
 //
-//  Coverage note — three of the seven views in this phase are not covered by
+//  This phase originally covered a seventh view, ExerciseListView, which has
+//  since been DELETED: git history showed it was reachable only between
+//  cc26d76 and ddaaa6a (2026-06-01 to 06-03), when the home section cards
+//  were changed to launch a random activity directly instead of opening a
+//  per-section list, and AllActivitiesView already covers browsing.
+//
+//  Coverage note — two of the six remaining views are not covered by
 //  assertions here, deliberately:
-//    * AppProgressView and ExerciseListView are both currently UNREACHABLE
-//      from the running app: neither is referenced anywhere in the codebase
-//      outside its own definition file (and this test file). Their fixes —
-//      including AppProgressView's three-state statusIcon labels, the most
-//      severe color-only finding in this phase — are therefore verified by
-//      source inspection only, and cannot be driven by a UI test until the
-//      views are wired up or removed.
+//    * AppProgressView is UNREACHABLE from the running app: it is not
+//      referenced anywhere in the codebase outside its own definition file
+//      (and this test file), and no iOS Progress tab has ever existed. Its
+//      fixes — including the three-state statusIcon labels, the most severe
+//      color-only finding in this phase — are therefore verified by source
+//      inspection only, and cannot be driven by a UI test until the view is
+//      wired up or removed. It was left in place when ExerciseListView was
+//      deleted because `struct DayActivity` is declared in its file and
+//      ClarityTV/TVProgressView.swift depends on that type; extracting it
+//      is separate work.
 //    * OnboardingView only appears on a genuinely fresh install (it is gated
 //      on the "clarity_onboarding_complete" default, which every other test
 //      sets to skip it), and re-triggering it would fight the shared
@@ -155,13 +164,13 @@ final class NavigationProfileAccessibilityTests: XCTestCase {
                        "Surprise Me button still announces its decorative icon: '\(surprise.label)'")
     }
 
-    // NOTE: ExerciseListView's difficulty-badge fix is intentionally NOT
-    // covered here. Like AppProgressView, that view turns out to be
-    // unreachable from the running app — its only references in the entire
-    // codebase are in this test file. An earlier version of this test tried
-    // Home -> section card, but those cards are "Tap for a random activity"
-    // shortcuts that launch an exercise directly, never the list. Verified
-    // by source inspection only; see the coverage note at the top.
+    // NOTE: there is deliberately no test for a per-section exercise list.
+    // An earlier version of this test tried Home -> section card expecting
+    // ExerciseListView, but those cards are "Tap for a random activity"
+    // shortcuts that launch an exercise directly, never a list — which is
+    // why that view has since been deleted (see the note at the top). The
+    // difficulty badge it carried has no equivalent in AllActivitiesView,
+    // which puts difficulty in the exercise title instead.
 
     // MARK: - ContentView: home section cards combine into one announcement
 
