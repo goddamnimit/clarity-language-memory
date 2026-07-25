@@ -20,9 +20,26 @@ final class ExerciseFlowAccessibilityTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    private func launchApp() -> XCUIApplication {
+    /// Pins the app's language for the launch via the UserDefaults argument
+    /// domain, which takes precedence over the persisted "selected_language"
+    /// value and is transient — so each test starts from a known language
+    /// regardless of what a prior run left behind, and no test needs to
+    /// change the language through the UI or undo it in teardown.
+    ///
+    /// `language` must be an `AppLanguage` **rawValue** (AppLanguage.swift:5),
+    /// because `LanguageManager.init` resolves it with
+    /// `AppLanguage(rawValue:)` — i.e. "فارسی", not "Farsi". Passing an
+    /// English-language name for a non-Latin case silently falls back to the
+    /// system-locale default instead of failing.
+    ///
+    /// (This approach was unusable when this file was first written:
+    /// AppLanguage's Farsi rawValue was corrupted then — 2 of its 5
+    /// characters were Thai-script lookalikes — so no correctly-spelled
+    /// Farsi string could ever match it. Fixed in 6ad2563.)
+    private func launchApp(language: String = "English") -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments += ["-clarity_onboarding_complete", "YES"]
+        app.launchArguments += ["-selected_language", language]
         app.launch()
         return app
     }
@@ -64,57 +81,6 @@ final class ExerciseFlowAccessibilityTests: XCTestCase {
     // exactly the first element is a structurally-grounded, verified fix.
     private func firstAnswerOption(_ app: XCUIApplication) -> XCUIElement {
         app.scrollViews.buttons.allElementsBoundByIndex.dropFirst().first ?? app.scrollViews.buttons.firstMatch
-    }
-
-    // Switches the app's language via the actual in-app picker (Profile tab
-    // -> Language DisclosureGroup -> tap the "فارسی" row) rather than a
-    // "-selected_language" launch argument. AppLanguage's Farsi rawValue
-    // (AppLanguage.swift:11) is a corrupted string — 2 of its 5 characters
-    // are Thai-script lookalikes instead of proper Arabic-script Persian —
-    // so passing a correctly-spelled Farsi string via launch argument can
-    // never match it and silently leaves the app in English. The in-app
-    // picker binds directly to the AppLanguage enum case (ProfileView.swift
-    // ~line 230: `languageManager.currentLanguage = language`), sidestepping
-    // that corrupted rawValue entirely, matching the working pattern
-    // already used by CaregiverDynamicTypeTests.switchToFarsi.
-    private func switchToFarsi(_ app: XCUIApplication) {
-        app.tabBars.buttons.element(boundBy: 2).tap() // Profile
-        let languageDisclosure = row(app, containing: "English")
-        scrollUntilVisible(app, languageDisclosure)
-        if languageDisclosure.exists {
-            languageDisclosure.tap()
-        }
-        let farsiOption = row(app, containing: "فارسی")
-        scrollUntilVisible(app, farsiOption)
-        XCTAssertTrue(farsiOption.waitForExistence(timeout: 5), "Farsi language option not found")
-        farsiOption.tap()
-        // A freshly-installed app's first language switch can take longer
-        // to fully propagate/re-render than later switches (confirmed: this
-        // test flaked once on a fresh install while the very next Farsi
-        // test, run moments later, passed reliably) — settle generously.
-        Thread.sleep(forTimeInterval: 1.5)
-    }
-
-    // Reverts the language switch made by switchToFarsi. The app persists
-    // the language choice to real UserDefaults (not an ephemeral launch
-    // argument), and that persists across separate app installs/launches
-    // within the same simulator — without this, a Farsi test leaves every
-    // later test (in this run or a future one) unable to find its
-    // English-titled exercise rows. Called via addTeardownBlock so it still
-    // runs even if the test fails before reaching its own end.
-    private func switchToEnglish(_ app: XCUIApplication) {
-        app.tabBars.buttons.element(boundBy: 2).tap() // Profile
-        let languageDisclosure = row(app, containing: "فارسی")
-        scrollUntilVisible(app, languageDisclosure)
-        if languageDisclosure.exists {
-            languageDisclosure.tap()
-        }
-        let englishOption = row(app, containing: "English")
-        scrollUntilVisible(app, englishOption)
-        if englishOption.waitForExistence(timeout: 5) {
-            englishOption.tap()
-            Thread.sleep(forTimeInterval: 0.5)
-        }
     }
 
     // MARK: - ExerciseContainerView: navigationTitle + Previous/Skip labels + ProgressBarView
@@ -203,6 +169,17 @@ final class ExerciseFlowAccessibilityTests: XCTestCase {
 
     // MARK: - OpenEndedView: Clear/Show Answer icon+text buttons now labeled cleanly
 
+    // POSSIBLY FLAKY — observed failing exactly once, on 2026-07-24, in run 3
+    // of a 4-run full-suite session (runs 1, 2 and 4 were all green). It then
+    // passed both in isolation and in the very next full-suite run, so it is
+    // not reliably reproducible and was not investigated.
+    //
+    // The actual failure reason was NOT captured: the run's output was piped
+    // through grep and the assertion message was lost with it. If this recurs,
+    // capture the FULL output to a log file first
+    // (`xcodebuild test-without-building ... > /tmp/run.log 2>&1`, then read
+    // the log) — do not diagnose from a grepped stream, and do not assume it
+    // is the same cause as the (now-fixed) Farsi language-switch flake.
     @MainActor
     func testOpenEndedViewButtonsAreLabeled() throws {
         let app = launchApp()
@@ -216,9 +193,7 @@ final class ExerciseFlowAccessibilityTests: XCTestCase {
 
     @MainActor
     func testFarsiFactOrOpinionExposesCorrectnessAndRendersRTL() throws {
-        let app = launchApp()
-        addTeardownBlock { self.switchToEnglish(app) }
-        switchToFarsi(app)
+        let app = launchApp(language: "فارسی")
         openExercise(app, titled: "واقعیت یا نظر")
 
         // RTL sanity: the exercise screen loaded with Farsi content and the
@@ -243,24 +218,9 @@ final class ExerciseFlowAccessibilityTests: XCTestCase {
         XCTAssertTrue(outcomeElement.waitForExistence(timeout: 3), "Farsi FactOrOpinionView option missing outcome wording after answering")
     }
 
-    // KNOWN FLAKY (full-suite runs only — passes reliably in isolation).
-    // Fails intermittently at `openExercise` above ("exercise row not
-    // found"), i.e. before reaching any accessibility assertion, so the
-    // flake reflects test-navigation timing rather than a defect in the
-    // accessibility behavior under test. This is the first Farsi test
-    // alphabetically, and the leading (not conclusively proven) theory is
-    // that the very first in-run language switch needs longer to settle
-    // than later ones — `switchToFarsi`'s 1.5s settle and the
-    // `switchToEnglish` teardown both reduced but did not eliminate it.
-    // Left enabled deliberately: it passes in isolation and its assertions
-    // are still valuable. If it becomes disruptive in CI, investigate the
-    // settle/scroll behavior in `switchToFarsi`/`openExercise` — do not
-    // simply disable it.
     @MainActor
     func testFarsiCategoryCrossOutExposesCorrectnessAndRendersRTL() throws {
-        let app = launchApp()
-        addTeardownBlock { self.switchToEnglish(app) }
-        switchToFarsi(app)
+        let app = launchApp(language: "فارسی")
         openExercise(app, titled: "دسته‌بندی — ساده")
 
         // See matching comment in testFarsiFactOrOpinionExposesCorrectnessAndRendersRTL:
