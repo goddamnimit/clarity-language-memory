@@ -339,6 +339,20 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+
+                        // English-only content: hidden in every other language
+                        // until it is translated.
+                        if ReadingPassage.isAvailable(for: languageManager.currentLanguage) {
+                            NavigationLink(destination: ReadingSupportView()) {
+                                sectionCard(
+                                    title: "Reading Passages",
+                                    subtitle: "Short passages with read-aloud, look-back and hints.",
+                                    systemImage: "text.book.closed",
+                                    color: .indigo
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        }
                         #endif
                     }
                     .padding(.horizontal)

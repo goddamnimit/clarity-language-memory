@@ -405,3 +405,45 @@ extension PracticeSupportsTests {
     #expect(partial.perQuadrant[.topRight]?.found == partial.perQuadrant[.topRight]?.total)
   }
 }
+
+// MARK: - F8 reading passages
+
+extension PracticeSupportsTests {
+
+  @Test func readingPassagesAreWellFormed() {
+    var ids = Set<String>()
+    for p in ReadingPassageData.all {
+      #expect(ids.insert(p.id).inserted, "duplicate id \(p.id)")
+      #expect((1...3).contains(p.level))
+      #expect(p.sentences.count >= 4 && p.sentences.allSatisfy { !$0.trimmingCharacters(in: .whitespaces).isEmpty })
+      #expect(p.questions.count >= 3)
+      for q in p.questions {
+        #expect(q.options.count == 3)
+        #expect(Set(q.options).count == 3, "\(p.id): duplicate options")
+        #expect(q.options.indices.contains(q.correctIndex))
+        #expect(!q.evidence.isEmpty && q.evidence.allSatisfy { p.sentences.indices.contains($0) })
+        #expect(!q.prompt.isEmpty)
+      }
+    }
+    for level in 1...3 {
+      #expect(ReadingPassageData.all.filter { $0.level == level }.count >= 3)
+    }
+  }
+
+  @Test func readingFeatureHidesInEveryLanguageButEnglish() {
+    for language in AppLanguage.allCases {
+      #expect(ReadingPassage.isAvailable(for: language) == (language == .english))
+    }
+  }
+
+  @Test func shuffledOptionsKeepExactlyOneCorrect() {
+    for p in ReadingPassageData.all {
+      for q in p.questions {
+        let shuffled = ReadingPassageData.shuffledOptions(for: q)
+        #expect(shuffled.count == 3)
+        #expect(shuffled.filter(\.isCorrect).count == 1)
+        #expect(shuffled.first(where: \.isCorrect)?.text == q.options[q.correctIndex])
+      }
+    }
+  }
+}
