@@ -9,7 +9,7 @@ enum FS {
     private static func L(
         en: String, es: String, hi: String, gu: String, zh: String, fa: String,
         ko: String, vi: String, ar: String, pt: String, tl: String, pa: String,
-        hy: String, ja: String, fr: String, am: String, ru: String
+        hy: String, ja: String, fr: String, am: String, ru: String, uk: String
     ) -> String {
         switch LanguageManager.shared.currentLanguage {
         case .english: return en
@@ -29,6 +29,7 @@ enum FS {
         case .french: return fr
         case .amharic: return am
         case .russian: return ru
+        case .ukrainian: return uk
         }
     }
 
@@ -41,7 +42,8 @@ enum FS {
           tl: "Mga Suporta sa Pagsasanay", pa: "ਅਭਿਆਸ ਸਹਾਇਤਾ",
           hy: "Վարժությունների աջակցություն", ja: "練習サポート", fr: "Aides à l’exercice",
           am: "የልምምድ ድጋፎች",
-          ru: "Помощь в занятиях")
+          ru: "Помощь в занятиях",
+          uk: "Підтримка під час практики")
     }
 
     // MARK: - F1 Today card
@@ -50,35 +52,40 @@ enum FS {
         L(en: "Today", es: "Hoy", hi: "आज", gu: "આજે", zh: "今天", fa: "امروز", ko: "오늘",
           vi: "Hôm nay", ar: "اليوم", pt: "Hoje", tl: "Ngayon", pa: "ਅੱਜ", hy: "Այսօր",
           ja: "今日", fr: "Aujourd’hui", am: "ዛሬ",
-          ru: "Сегодня")
+          ru: "Сегодня",
+          uk: "Сьогодні")
     }
 
     static var morning: String {
         L(en: "Morning", es: "Mañana", hi: "सुबह", gu: "સવાર", zh: "上午", fa: "صبح", ko: "아침",
           vi: "Buổi sáng", ar: "الصباح", pt: "Manhã", tl: "Umaga", pa: "ਸਵੇਰ", hy: "Առավոտ",
           ja: "朝", fr: "Matin", am: "ጠዋት",
-          ru: "Утро")
+          ru: "Утро",
+          uk: "Ранок")
     }
 
     static var afternoon: String {
         L(en: "Afternoon", es: "Tarde", hi: "दोपहर", gu: "બપોર", zh: "下午", fa: "بعدازظهر", ko: "오후",
           vi: "Buổi chiều", ar: "بعد الظهر", pt: "Tarde", tl: "Hapon", pa: "ਦੁਪਹਿਰ", hy: "Կեսօր",
           ja: "午後", fr: "Après-midi", am: "ከሰዓት",
-          ru: "День")
+          ru: "День",
+          uk: "День")
     }
 
     static var evening: String {
         L(en: "Evening", es: "Atardecer", hi: "शाम", gu: "સાંજ", zh: "傍晚", fa: "عصر", ko: "저녁",
           vi: "Buổi tối", ar: "المساء", pt: "Entardecer", tl: "Gabi", pa: "ਸ਼ਾਮ", hy: "Երեկո",
           ja: "夕方", fr: "Soir", am: "ምሽት",
-          ru: "Вечер")
+          ru: "Вечер",
+          uk: "Вечір")
     }
 
     static var night: String {
         L(en: "Night", es: "Noche", hi: "रात", gu: "રાત", zh: "夜晚", fa: "شب", ko: "밤",
           vi: "Ban đêm", ar: "الليل", pt: "Noite", tl: "Hatinggabi", pa: "ਰਾਤ", hy: "Գիշեր",
           ja: "夜", fr: "Nuit", am: "ሌሊት",
-          ru: "Ночь")
+          ru: "Ночь",
+          uk: "Ніч")
     }
 
     static var orientationToggle: String {
@@ -89,7 +96,8 @@ enum FS {
           tl: "Card ng ngayon sa Home", pa: "ਹੋਮ 'ਤੇ ਅੱਜ ਦਾ ਕਾਰਡ",
           hy: "Այսօրվա քարտը Գլխավոր էջում", ja: "ホームに今日のカードを表示",
           fr: "Carte du jour sur l’accueil", am: "በመነሻ ገጽ የዛሬ ካርድ",
-          ru: "Карточка «Сегодня» на главной")
+          ru: "Карточка «Сегодня» на главной",
+          uk: "Картка «Сьогодні» на головній")
     }
 
     static var orientationSubtitle: String {
@@ -109,7 +117,8 @@ enum FS {
           ja: "ホーム画面に曜日・日付・時間帯を表示し、見当識を助けます。",
           fr: "Affiche le jour, la date et le moment de la journée sur l’accueil pour aider à s’orienter.",
           am: "አቅጣጫን ለመርዳት በመነሻ ገጽ ላይ ቀን፣ ቀነ-ወር እና የቀኑን ክፍል ያሳያል።",
-          ru: "Показывает на главном экране день недели, дату и время суток, чтобы легче ориентироваться.")
+          ru: "Показывает на главном экране день недели, дату и время суток, чтобы легче ориентироваться.",
+          uk: "Показує на головному екрані день тижня, дату та частину доби, щоб допомогти з орієнтуванням.")
     }
 
     // MARK: - F2 Answer choices
@@ -120,7 +129,8 @@ enum FS {
           vi: "Số lựa chọn trả lời", ar: "عدد خيارات الإجابة", pt: "Opções de resposta",
           tl: "Bilang ng mga pagpipilian", pa: "ਜਵਾਬ ਦੇ ਵਿਕਲਪ", hy: "Պատասխանի տարբերակներ",
           ja: "選択肢の数", fr: "Choix de réponse", am: "የመልስ አማራጮች",
-          ru: "Варианты ответа")
+          ru: "Варианты ответа",
+          uk: "Варіанти відповіді")
     }
 
     static var choicesSubtitle: String {
@@ -140,7 +150,8 @@ enum FS {
           ja: "選択式の問題で選択肢を減らし、答えやすくします。正解は必ず含まれます。",
           fr: "Affiche moins de choix dans les questions à choix multiples pour les faciliter. La bonne réponse est toujours incluse.",
           am: "ጥያቄዎችን ለማቅለል በበርካታ ምርጫ ጥያቄዎች ውስጥ አማራጮችን ይቀንሳል። ትክክለኛው መልስ ሁልጊዜ ይካተታል።",
-          ru: "Показывать меньше вариантов в вопросах с выбором ответа, чтобы было проще. Правильный ответ всегда остаётся.")
+          ru: "Показывать меньше вариантов в вопросах с выбором ответа, чтобы было проще. Правильный ответ всегда остаётся.",
+          uk: "Показує менше варіантів у запитаннях з вибором відповіді, щоб полегшити їх. Правильна відповідь завжди залишається.")
     }
 
     // MARK: - F3 Cueing ladder
@@ -151,7 +162,8 @@ enum FS {
           vi: "Gợi ý tìm từ", ar: "تلميحات إيجاد الكلمات", pt: "Dicas para achar palavras",
           tl: "Mga pahiwatig sa paghanap ng salita", pa: "ਸ਼ਬਦ ਲੱਭਣ ਦੇ ਸੰਕੇਤ", hy: "Բառ գտնելու ակնարկներ",
           ja: "ことば探しのヒント", fr: "Indices pour trouver les mots", am: "ቃል ለማግኘት ፍንጮች",
-          ru: "Подсказки для поиска слов")
+          ru: "Подсказки для поиска слов",
+          uk: "Підказки для пошуку слів")
     }
 
     static var hintsSubtitle: String {
@@ -171,7 +183,8 @@ enum FS {
           ja: "ことば探しの問題で、カテゴリーのヒント、最初の文字、答えの順に段階的なヒントを出します。ヒントを使った正解は初回正解として数えません。",
           fr: "Propose des indices progressifs aux questions de recherche de mots : un indice de catégorie, puis la première lettre, puis la réponse. Les réponses données avec indice ne comptent pas comme justes du premier coup.",
           am: "ቃል ፍለጋ ጥያቄዎች ላይ ደረጃ በደረጃ ፍንጭ ይሰጣል፦ የምድብ ፍንጭ፣ ከዚያ የመጀመሪያ ፊደል፣ ከዚያ መልሱ። በፍንጭ የተሰጡ መልሶች እንደ መጀመሪያ ሙከራ ትክክል አይቆጠሩም።",
-          ru: "Предлагать пошаговые подсказки в вопросах на поиск слов: сначала намёк на категорию, затем первая буква, затем ответ. Ответы с подсказкой не считаются верными с первой попытки.")
+          ru: "Предлагать пошаговые подсказки в вопросах на поиск слов: сначала намёк на категорию, затем первая буква, затем ответ. Ответы с подсказкой не считаются верными с первой попытки.",
+          uk: "Пропонує покрокові підказки до запитань на пошук слів: спочатку натяк на категорію, потім перша літера, потім відповідь. Відповіді з підказками не зараховуються як правильні з першої спроби.")
     }
 
     static var needHint: String {
@@ -180,7 +193,8 @@ enum FS {
           ar: "هل تحتاج إلى تلميح؟", pt: "Precisa de uma dica?", tl: "Kailangan ng pahiwatig?",
           pa: "ਸੰਕੇਤ ਚਾਹੀਦਾ ਹੈ?", hy: "Ակնարկ պե՞տք է", ja: "ヒントが必要ですか？",
           fr: "Besoin d’un indice ?", am: "ፍንጭ ይፈልጋሉ?",
-          ru: "Нужна подсказка?")
+          ru: "Нужна подсказка?",
+          uk: "Потрібна підказка?")
     }
 
     static var anotherHint: String {
@@ -188,7 +202,8 @@ enum FS {
           fa: "راهنمای بیشتر", ko: "힌트 더 보기", vi: "Thêm gợi ý", ar: "تلميح آخر", pt: "Outra dica",
           tl: "Isa pang pahiwatig", pa: "ਇੱਕ ਹੋਰ ਸੰਕੇਤ", hy: "Եվս մեկ ակնարկ", ja: "もう一つヒント",
           fr: "Un autre indice", am: "ሌላ ፍንጭ",
-          ru: "Ещё подсказка")
+          ru: "Ещё подсказка",
+          uk: "Ще одна підказка")
     }
 
     static var showAnswer: String {
@@ -196,7 +211,8 @@ enum FS {
           zh: "显示答案", fa: "نمایش پاسخ", ko: "정답 보기", vi: "Hiện đáp án", ar: "إظهار الإجابة",
           pt: "Mostrar a resposta", tl: "Ipakita ang sagot", pa: "ਜਵਾਬ ਦਿਖਾਓ", hy: "Ցույց տալ պատասխանը",
           ja: "答えを見る", fr: "Voir la réponse", am: "መልሱን አሳይ",
-          ru: "Показать ответ")
+          ru: "Показать ответ",
+          uk: "Показати відповідь")
     }
 
     static func thinkAbout(_ category: String) -> String {
@@ -204,7 +220,8 @@ enum FS {
                   zh: "想一想：%@", fa: "به این فکر کنید: %@", ko: "생각해 보세요: %@", vi: "Hãy nghĩ về: %@",
                   ar: "فكّر في: %@", pt: "Pense em: %@", tl: "Isipin ang: %@", pa: "ਸੋਚੋ: %@",
                   hy: "Մտածեք՝ %@", ja: "考えてみましょう：%@", fr: "Pensez à : %@", am: "ያስቡ፦ %@",
-          ru: "Подумайте о: %@")
+          ru: "Подумайте о: %@",
+          uk: "Подумайте про: %@")
         return f.replacingOccurrences(of: "%@", with: category)
     }
 
@@ -213,7 +230,8 @@ enum FS {
                   zh: "首字：%@", fa: "با این حرف شروع می‌شود: %@", ko: "첫 글자: %@", vi: "Bắt đầu bằng: %@",
                   ar: "تبدأ بـ: %@", pt: "Começa com: %@", tl: "Nagsisimula sa: %@", pa: "ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ: %@",
                   hy: "Սկսվում է՝ %@", ja: "最初の文字：%@", fr: "Commence par : %@", am: "የሚጀምረው በ፦ %@",
-          ru: "Начинается с: %@")
+          ru: "Начинается с: %@",
+          uk: "Починається на: %@")
         return f.replacingOccurrences(of: "%@", with: letter)
     }
 
@@ -224,7 +242,8 @@ enum FS {
           pt: "A resposta está marcada abaixo.", tl: "Naka-marka sa ibaba ang sagot.", pa: "ਜਵਾਬ ਹੇਠਾਂ ਨਿਸ਼ਾਨਬੱਧ ਹੈ।",
           hy: "Պատասխանը նշված է ներքևում։", ja: "答えは下に印が付いています。", fr: "La réponse est indiquée ci-dessous.",
           am: "መልሱ ከታች ምልክት ተደርጎበታል።",
-          ru: "Ответ отмечен ниже.")
+          ru: "Ответ отмечен ниже.",
+          uk: "Відповідь позначено нижче.")
     }
 
     // MARK: - F9 Second reminder
@@ -236,7 +255,8 @@ enum FS {
           pt: "Segundo lembrete diário", tl: "Pangalawang pang-araw-araw na paalala",
           pa: "ਦੂਜੀ ਰੋਜ਼ਾਨਾ ਯਾਦ-ਦਹਾਨੀ", hy: "Երկրորդ օրական հիշեցում", ja: "2回目の毎日のリマインダー",
           fr: "Deuxième rappel quotidien", am: "ሁለተኛ ዕለታዊ ማስታወሻ",
-          ru: "Второе ежедневное напоминание")
+          ru: "Второе ежедневное напоминание",
+          uk: "Друге щоденне нагадування")
     }
 
     static var secondReminderTime: String {
@@ -245,7 +265,8 @@ enum FS {
           vi: "Giờ nhắc lần hai", ar: "وقت التذكير الثاني", pt: "Horário do segundo lembrete",
           tl: "Oras ng pangalawang paalala", pa: "ਦੂਜੀ ਯਾਦ-ਦਹਾਨੀ ਦਾ ਸਮਾਂ", hy: "Երկրորդ հիշեցման ժամը",
           ja: "2回目の時刻", fr: "Heure du deuxième rappel", am: "የሁለተኛ ማስታወሻ ሰዓት",
-          ru: "Время второго напоминания")
+          ru: "Время второго напоминания",
+          uk: "Час другого нагадування")
     }
 
     // MARK: - F4 Number skills
@@ -266,7 +287,8 @@ enum FS {
           ja: "数字の練習",
           fr: "Les nombres au quotidien",
           am: "የቁጥር ክህሎት",
-          ru: "Работа с числами")
+          ru: "Работа с числами",
+          uk: "Навички роботи з числами")
     }
     static var numberSkillsSubtitle: String {
         L(en: "Hear it, then pick it or type it.",
@@ -285,7 +307,8 @@ enum FS {
           ja: "聞いて、選ぶか入力します。",
           fr: "Écoutez, puis choisissez ou tapez.",
           am: "ያዳምጡ፣ ከዚያ ይምረጡ ወይም ይጻፉ።",
-          ru: "Прослушайте, затем выберите или введите.")
+          ru: "Прослушайте, затем выберите или введите.",
+          uk: "Прослухайте, а потім виберіть або введіть.")
     }
     static var catTime: String {
         L(en: "Times",
@@ -304,7 +327,8 @@ enum FS {
           ja: "時刻",
           fr: "Heures",
           am: "ሰዓት",
-          ru: "Время")
+          ru: "Время",
+          uk: "Час")
     }
     static var catPrice: String {
         L(en: "Prices",
@@ -323,7 +347,8 @@ enum FS {
           ja: "値段",
           fr: "Prix",
           am: "ዋጋዎች",
-          ru: "Цены")
+          ru: "Цены",
+          uk: "Ціни")
     }
     static var catPhone: String {
         L(en: "Phone numbers",
@@ -342,7 +367,8 @@ enum FS {
           ja: "電話番号",
           fr: "Numéros de téléphone",
           am: "ስልክ ቁጥሮች",
-          ru: "Номера телефонов")
+          ru: "Номера телефонов",
+          uk: "Номери телефонів")
     }
     static var catDate: String {
         L(en: "Dates",
@@ -361,7 +387,8 @@ enum FS {
           ja: "日付",
           fr: "Dates",
           am: "ቀኖች",
-          ru: "Даты")
+          ru: "Даты",
+          uk: "Дати")
     }
     static var catCount: String {
         L(en: "Counts",
@@ -380,7 +407,8 @@ enum FS {
           ja: "数",
           fr: "Quantités",
           am: "ብዛት",
-          ru: "Количество")
+          ru: "Количество",
+          uk: "Кількості")
     }
     static var catMixed: String {
         L(en: "Mixed",
@@ -399,7 +427,8 @@ enum FS {
           ja: "ミックス",
           fr: "Mélange",
           am: "ድብልቅ",
-          ru: "Смешанные")
+          ru: "Смешанные",
+          uk: "Змішані")
     }
     static var modePick: String {
         L(en: "Hear and pick",
@@ -418,7 +447,8 @@ enum FS {
           ja: "聞いて選ぶ",
           fr: "Écouter et choisir",
           am: "አዳምጥ እና ምረጥ",
-          ru: "Слушать и выбирать")
+          ru: "Слушать и выбирать",
+          uk: "Почути й вибрати")
     }
     static var modeType: String {
         L(en: "Hear and type",
@@ -437,7 +467,8 @@ enum FS {
           ja: "聞いて入力",
           fr: "Écouter et taper",
           am: "አዳምጥ እና ጻፍ",
-          ru: "Слушать и вводить")
+          ru: "Слушать и вводить",
+          uk: "Почути й ввести")
     }
     static var startPractice: String {
         L(en: "Start",
@@ -456,7 +487,8 @@ enum FS {
           ja: "開始",
           fr: "Commencer",
           am: "ጀምር",
-          ru: "Начать")
+          ru: "Начать",
+          uk: "Почати")
     }
     static var listen: String {
         L(en: "Listen",
@@ -475,7 +507,8 @@ enum FS {
           ja: "聞く",
           fr: "Écouter",
           am: "አዳምጥ",
-          ru: "Слушать")
+          ru: "Слушать",
+          uk: "Слухати")
     }
     static var playAgain: String {
         L(en: "Play again",
@@ -494,7 +527,8 @@ enum FS {
           ja: "もう一度聞く",
           fr: "Réécouter",
           am: "እንደገና አጫውት",
-          ru: "Повторить")
+          ru: "Повторить",
+          uk: "Відтворити ще раз")
     }
     static var pickHeard: String {
         L(en: "Which one did you hear?",
@@ -513,7 +547,8 @@ enum FS {
           ja: "どれが聞こえましたか？",
           fr: "Lequel avez-vous entendu ?",
           am: "የትኛውን ሰሙ?",
-          ru: "Что вы услышали?")
+          ru: "Что вы услышали?",
+          uk: "Що ви почули?")
     }
     static var pickMatch: String {
         L(en: "Find the matching one.",
@@ -532,7 +567,8 @@ enum FS {
           ja: "同じものを選んでください。",
           fr: "Trouvez celui qui correspond.",
           am: "ተመሳሳዩን ፈልግ።",
-          ru: "Найдите такой же вариант.")
+          ru: "Найдите такой же вариант.",
+          uk: "Знайдіть такий самий.")
     }
     static var typeHeard: String {
         L(en: "Type what you hear.",
@@ -551,7 +587,8 @@ enum FS {
           ja: "聞こえたとおりに入力してください。",
           fr: "Tapez ce que vous entendez.",
           am: "የሰሙትን ጻፉ።",
-          ru: "Введите то, что слышите.")
+          ru: "Введите то, что слышите.",
+          uk: "Введіть те, що чуєте.")
     }
     static var typeMatch: String {
         L(en: "Type the number shown.",
@@ -570,7 +607,8 @@ enum FS {
           ja: "表示された数字を入力してください。",
           fr: "Tapez le nombre affiché.",
           am: "የሚታየውን ቁጥር ጻፉ።",
-          ru: "Введите показанное число.")
+          ru: "Введите показанное число.",
+          uk: "Введіть показане число.")
     }
     static var check: String {
         L(en: "Check",
@@ -589,7 +627,8 @@ enum FS {
           ja: "確認",
           fr: "Vérifier",
           am: "ፈትሽ",
-          ru: "Проверить")
+          ru: "Проверить",
+          uk: "Перевірити")
     }
     static var correctMsg: String {
         L(en: "Correct!",
@@ -608,7 +647,8 @@ enum FS {
           ja: "正解です！",
           fr: "Correct !",
           am: "ትክክል!",
-          ru: "Верно!")
+          ru: "Верно!",
+          uk: "Правильно!")
     }
     static var next: String {
         L(en: "Next",
@@ -627,7 +667,8 @@ enum FS {
           ja: "次へ",
           fr: "Suivant",
           am: "ቀጣይ",
-          ru: "Далее")
+          ru: "Далее",
+          uk: "Далі")
     }
     static var done: String {
         L(en: "Done",
@@ -646,7 +687,8 @@ enum FS {
           ja: "完了",
           fr: "Terminé",
           am: "ተጠናቀቀ",
-          ru: "Готово")
+          ru: "Готово",
+          uk: "Готово")
     }
     static var phoneSettingLabel: String {
         L(en: "Phone number to practice",
@@ -665,7 +707,8 @@ enum FS {
           ja: "練習用の電話番号",
           fr: "Numéro à s’exercer",
           am: "ለልምምድ የስልክ ቁጥር",
-          ru: "Номер телефона для тренировки")
+          ru: "Номер телефона для тренировки",
+          uk: "Номер телефону для практики")
     }
     static var phoneSettingSubtitle: String {
         L(en: "Optional. Stored only on this device and never included in the research export.",
@@ -684,7 +727,8 @@ enum FS {
           ja: "任意。この端末にのみ保存され、研究用エクスポートには含まれません。",
           fr: "Facultatif. Enregistré uniquement sur cet appareil et jamais inclus dans l’export de recherche.",
           am: "አማራጭ። በዚህ መሣሪያ ላይ ብቻ ይቀመጣል፣ በምርምር ወደ ውጭ መላክ ውስጥ በፍጹም አይካተትም።",
-          ru: "Необязательно. Хранится только на этом устройстве и не попадает в экспорт для исследования.")
+          ru: "Необязательно. Хранится только на этом устройстве и не попадает в экспорт для исследования.",
+          uk: "Необов'язково. Зберігається лише на цьому пристрої й ніколи не потрапляє в експорт для досліджень.")
     }
     static var phonePlaceholder: String {
         L(en: "Phone number",
@@ -703,7 +747,8 @@ enum FS {
           ja: "電話番号",
           fr: "Numéro de téléphone",
           am: "ስልክ ቁጥር",
-          ru: "Номер телефона")
+          ru: "Номер телефона",
+          uk: "Номер телефону")
     }
     static func notQuite(_ answer: String) -> String {
         L(en: "Not quite. The answer is %@",
@@ -722,7 +767,8 @@ enum FS {
                   ja: "おしい。答えは %@",
                   fr: "Pas tout à fait. La réponse est %@",
                   am: "ትክክል አይደለም። መልሱ %@ ነው",
-          ru: "Не совсем. Правильный ответ: %@").replacingOccurrences(of: "%@", with: answer)
+          ru: "Не совсем. Правильный ответ: %@",
+          uk: "Не зовсім. Правильна відповідь: %@").replacingOccurrences(of: "%@", with: answer)
     }
     static func scoreSummary(_ a: Int, _ b: Int) -> String {
         L(en: "{a} of {b} correct",
@@ -741,7 +787,8 @@ enum FS {
                   ja: "{b}問中{a}問正解",
                   fr: "{a} sur {b} correctes",
                   am: "ከ{b} {a} ትክክል",
-          ru: "Верно: {a} из {b}").replacingOccurrences(of: "{a}", with: String(a)).replacingOccurrences(of: "{b}", with: String(b))
+          ru: "Верно: {a} из {b}",
+          uk: "Правильно: {a} із {b}").replacingOccurrences(of: "{a}", with: String(a)).replacingOccurrences(of: "{b}", with: String(b))
     }
 
     // MARK: - F5 Spaced retrieval
@@ -762,7 +809,8 @@ enum FS {
           ja: "覚えておこう",
           fr: "Se souvenir",
           am: "ያስታውሱ",
-          ru: "Запомните это")
+          ru: "Запомните это",
+          uk: "Запам'ятайте це")
     }
     static var srtSubtitle: String {
         L(en: "Practice remembering something important, with longer and longer pauses.",
@@ -781,7 +829,8 @@ enum FS {
           ja: "大切なことを思い出す練習です。間隔は少しずつ長くなります。",
           fr: "Entraînez-vous à retenir une chose importante, avec des pauses de plus en plus longues.",
           am: "አንድ አስፈላጊ ነገር ለማስታወስ ይለማመዱ፣ በየጊዜው እየረዘሙ በሚሄዱ እረፍቶች።",
-          ru: "Тренируйтесь запоминать что-то важное, делая всё более долгие паузы.")
+          ru: "Тренируйтесь запоминать что-то важное, делая всё более долгие паузы.",
+          uk: "Тренуйтеся пам'ятати щось важливе з дедалі довшими паузами.")
     }
     static var srtNoTargets: String {
         L(en: "A caregiver can add up to three things to remember in Caregiver Mode.",
@@ -800,7 +849,8 @@ enum FS {
           ja: "介護者モードで、覚えたいことを3つまで追加できます。",
           fr: "Un aidant peut ajouter jusqu’à trois choses à retenir dans le mode Aidant.",
           am: "ተንከባካቢ በተንከባካቢ ሞድ እስከ ሦስት የሚታወሱ ነገሮችን ማከል ይችላል።",
-          ru: "В режиме ухаживающего можно добавить до трёх вещей, которые нужно запомнить.")
+          ru: "В режиме ухаживающего можно добавить до трёх вещей, которые нужно запомнить.",
+          uk: "Доглядальник може додати в режимі доглядальника до трьох речей, які потрібно запам'ятати.")
     }
     static var srtTargetsTitle: String {
         L(en: "Things to remember",
@@ -819,7 +869,8 @@ enum FS {
           ja: "覚えておくこと",
           fr: "Choses à retenir",
           am: "የሚታወሱ ነገሮች",
-          ru: "Что нужно запомнить")
+          ru: "Что нужно запомнить",
+          uk: "Що запам'ятати")
     }
     static var srtTargetsSubtitle: String {
         L(en: "Up to three. Write a question and its answer, for example: Where are your keys kept?",
@@ -838,7 +889,8 @@ enum FS {
           ja: "最大3つまで。質問とその答えを書いてください。例：鍵はどこに置きますか？",
           fr: "Jusqu’à trois. Écrivez une question et sa réponse, par exemple : Où rangez-vous vos clés ?",
           am: "እስከ ሦስት። ጥያቄና መልሱን ጻፉ፣ ለምሳሌ፦ ቁልፎችዎ የት ይቀመጣሉ?",
-          ru: "Не более трёх. Напишите вопрос и ответ, например: «Где лежат ваши ключи?»")
+          ru: "Не более трёх. Напишите вопрос и ответ, например: «Где лежат ваши ключи?»",
+          uk: "До трьох. Напишіть запитання та відповідь на нього, наприклад: Де лежать ваші ключі?")
     }
     static var srtQuestionField: String {
         L(en: "Question",
@@ -857,7 +909,8 @@ enum FS {
           ja: "質問",
           fr: "Question",
           am: "ጥያቄ",
-          ru: "Вопрос")
+          ru: "Вопрос",
+          uk: "Запитання")
     }
     static var srtAnswerField: String {
         L(en: "Answer",
@@ -876,7 +929,8 @@ enum FS {
           ja: "答え",
           fr: "Réponse",
           am: "መልስ",
-          ru: "Ответ")
+          ru: "Ответ",
+          uk: "Відповідь")
     }
     static var srtAdd: String {
         L(en: "Add a target",
@@ -895,7 +949,8 @@ enum FS {
           ja: "追加",
           fr: "Ajouter",
           am: "ጨምር",
-          ru: "Добавить пункт")
+          ru: "Добавить пункт",
+          uk: "Додати пункт")
     }
     static var srtRemove: String {
         L(en: "Remove",
@@ -914,7 +969,8 @@ enum FS {
           ja: "削除",
           fr: "Supprimer",
           am: "አስወግድ",
-          ru: "Удалить")
+          ru: "Удалить",
+          uk: "Вилучити")
     }
     static var srtStoredNote: String {
         L(en: "Stored only on this device. Never exported.",
@@ -933,7 +989,8 @@ enum FS {
           ja: "この端末にのみ保存され、書き出されることはありません。",
           fr: "Enregistré uniquement sur cet appareil. Jamais exporté.",
           am: "በዚህ መሣሪያ ላይ ብቻ ይቀመጣል። በፍጹም ወደ ውጭ አይላክም።",
-          ru: "Хранится только на этом устройстве. Никогда не экспортируется.")
+          ru: "Хранится только на этом устройстве. Никогда не экспортируется.",
+          uk: "Зберігається лише на цьому пристрої. Ніколи не експортується.")
     }
     static var srtSayIt: String {
         L(en: "Say the answer out loud:",
@@ -952,7 +1009,8 @@ enum FS {
           ja: "答えを声に出して言いましょう：",
           fr: "Dites la réponse à voix haute :",
           am: "መልሱን ጮክ ብለው ይናገሩ፦",
-          ru: "Произнесите ответ вслух:")
+          ru: "Произнесите ответ вслух:",
+          uk: "Скажіть відповідь уголос:")
     }
     static var srtISaidIt: String {
         L(en: "I said it",
@@ -971,7 +1029,8 @@ enum FS {
           ja: "言いました",
           fr: "Je l’ai dit",
           am: "ተናገርኩ",
-          ru: "Я сказал(а)")
+          ru: "Я сказал(а)",
+          uk: "Сказано")
     }
     static var srtCanYou: String {
         L(en: "Can you remember the answer?",
@@ -990,7 +1049,8 @@ enum FS {
           ja: "答えを覚えていますか？",
           fr: "Vous souvenez-vous de la réponse ?",
           am: "መልሱን ያስታውሳሉ?",
-          ru: "Можете вспомнить ответ?")
+          ru: "Можете вспомнить ответ?",
+          uk: "Чи можете ви згадати відповідь?")
     }
     static var srtRemembered: String {
         L(en: "I remembered",
@@ -1009,7 +1069,8 @@ enum FS {
           ja: "思い出せた",
           fr: "Je m’en souvenais",
           am: "አስታወስኩ",
-          ru: "Я вспомнил(а)")
+          ru: "Я вспомнил(а)",
+          uk: "Згадалося")
     }
     static var srtNeededHelp: String {
         L(en: "I needed help",
@@ -1028,7 +1089,8 @@ enum FS {
           ja: "助けが必要だった",
           fr: "J’ai eu besoin d’aide",
           am: "እርዳታ ፈለግሁ",
-          ru: "Мне понадобилась помощь")
+          ru: "Мне понадобилась помощь",
+          uk: "Потрібна була допомога")
     }
     static var srtAskNow: String {
         L(en: "Ask now",
@@ -1047,7 +1109,8 @@ enum FS {
           ja: "今すぐ聞く",
           fr: "Demander maintenant",
           am: "አሁን ጠይቅ",
-          ru: "Спросить сейчас")
+          ru: "Спросить сейчас",
+          uk: "Запитати зараз")
     }
     static var srtWhileWait: String {
         L(en: "Do a quick activity while you wait",
@@ -1066,7 +1129,8 @@ enum FS {
           ja: "待ち時間に短いアクティビティをしましょう",
           fr: "Faites une activité rapide en attendant",
           am: "በሚጠብቁበት ጊዜ አጭር እንቅስቃሴ ያድርጉ",
-          ru: "Займитесь чем-нибудь недолго, пока ждёте")
+          ru: "Займитесь чем-нибудь недолго, пока ждёте",
+          uk: "Виконайте швидку вправу, поки чекаєте")
     }
     static var srtImmediate: String {
         L(en: "Right away",
@@ -1085,7 +1149,8 @@ enum FS {
           ja: "すぐに",
           fr: "Tout de suite",
           am: "ወዲያውኑ",
-          ru: "Сразу")
+          ru: "Сразу",
+          uk: "Одразу")
     }
     static var srtMissed: String {
         L(en: "That's okay. Here is the answer. Say it again:",
@@ -1104,7 +1169,8 @@ enum FS {
           ja: "大丈夫です。答えはこちら。もう一度言いましょう：",
           fr: "Ce n’est pas grave. Voici la réponse. Dites-la encore :",
           am: "ችግር የለም። መልሱ ይህ ነው። እንደገና ይናገሩ፦",
-          ru: "Ничего страшного. Вот ответ. Произнесите его ещё раз:")
+          ru: "Ничего страшного. Вот ответ. Произнесите его ещё раз:",
+          uk: "Нічого страшного. Ось відповідь. Скажіть її ще раз:")
     }
     static func srtNextIn(_ x: String) -> String {
         L(en: "Next question in %@",
@@ -1123,7 +1189,8 @@ enum FS {
                   ja: "次の質問まで %@",
                   fr: "Prochaine question dans %@",
                   am: "ቀጣዩ ጥያቄ በ%@ ውስጥ",
-          ru: "Следующий вопрос через %@").replacingOccurrences(of: "%@", with: x)
+          ru: "Следующий вопрос через %@",
+          uk: "Наступне запитання через %@").replacingOccurrences(of: "%@", with: x)
     }
     static func srtCompleted(_ x: String) -> String {
         L(en: "Well done! You remembered it after %@.",
@@ -1142,7 +1209,8 @@ enum FS {
                   ja: "よくできました！%@後も思い出せました。",
                   fr: "Bravo ! Vous vous en souveniez encore après %@.",
                   am: "ጎበዝ! ከ%@ በኋላም አስታውሰዋል።",
-          ru: "Отлично! Вы вспомнили ответ через %@.").replacingOccurrences(of: "%@", with: x)
+          ru: "Отлично! Вы вспомнили ответ через %@.",
+          uk: "Чудово! Ви згадали це через %@.").replacingOccurrences(of: "%@", with: x)
     }
     static func srtBest(_ x: String) -> String {
         L(en: "Best: %@",
@@ -1161,7 +1229,8 @@ enum FS {
                   ja: "最高：%@",
                   fr: "Meilleur : %@",
                   am: "ምርጡ፦ %@",
-          ru: "Лучший результат: %@").replacingOccurrences(of: "%@", with: x)
+          ru: "Лучший результат: %@",
+          uk: "Найкраще: %@").replacingOccurrences(of: "%@", with: x)
     }
 
     // MARK: - F6 Visual scanning
@@ -1182,7 +1251,8 @@ enum FS {
           ja: "視覚探索",
           fr: "Recherche visuelle",
           am: "የእይታ ፍለጋ",
-          ru: "Зрительный поиск")
+          ru: "Зрительный поиск",
+          uk: "Візуальний пошук")
     }
     static var scanSubtitle: String {
         L(en: "Tap every target. Start at the left edge and work across, row by row.",
@@ -1201,7 +1271,8 @@ enum FS {
           ja: "すべてのターゲットをタップします。左端から始めて、1行ずつ進みましょう。",
           fr: "Touchez chaque cible. Commencez par le bord gauche et avancez ligne par ligne.",
           am: "እያንዳንዱን ዒላማ ይንኩ። ከግራ ጠርዝ ጀምረው ረድፍ በረድፍ ይሂዱ።",
-          ru: "Нажимайте на все нужные объекты. Начните с левого края и идите по строкам.")
+          ru: "Нажимайте на все нужные объекты. Начните с левого края и идите по строкам.",
+          uk: "Торкніться кожної цілі. Починайте з лівого краю й рухайтеся рядок за рядком.")
     }
     static var scanModeTest: String {
         L(en: "Test",
@@ -1220,7 +1291,8 @@ enum FS {
           ja: "テスト",
           fr: "Test",
           am: "ፈተና",
-          ru: "Проверка")
+          ru: "Проверка",
+          uk: "Тест")
     }
     static var scanModePractice: String {
         L(en: "Practice in order",
@@ -1239,7 +1311,8 @@ enum FS {
           ja: "順番に練習",
           fr: "Entraînement dans l’ordre",
           am: "በቅደም ተከተል ልምምድ",
-          ru: "Тренировка по порядку")
+          ru: "Тренировка по порядку",
+          uk: "Практика за порядком")
     }
     static var scanAnchor: String {
         L(en: "Flashing marker on the left edge",
@@ -1258,7 +1331,8 @@ enum FS {
           ja: "左端の点滅マーカー",
           fr: "Repère clignotant sur le bord gauche",
           am: "በግራ ጠርዝ የሚብለጨለጭ ምልክት",
-          ru: "Мигающая метка у левого края")
+          ru: "Мигающая метка у левого края",
+          uk: "Мигаючий маркер на лівому краї")
     }
     static var scanFindThis: String {
         L(en: "Find every:",
@@ -1277,7 +1351,8 @@ enum FS {
           ja: "すべて見つけてください：",
           fr: "Trouvez tous :",
           am: "ሁሉንም ፈልግ፦",
-          ru: "Найдите все:")
+          ru: "Найдите все:",
+          uk: "Знайдіть усі:")
     }
     static var scanTime: String {
         L(en: "Time",
@@ -1296,7 +1371,8 @@ enum FS {
           ja: "時間",
           fr: "Temps",
           am: "ጊዜ",
-          ru: "Время")
+          ru: "Время",
+          uk: "Час")
     }
     static var scanTopLeft: String {
         L(en: "Top left",
@@ -1315,7 +1391,8 @@ enum FS {
           ja: "左上",
           fr: "Haut gauche",
           am: "ላይ ግራ",
-          ru: "Вверху слева")
+          ru: "Вверху слева",
+          uk: "Угорі ліворуч")
     }
     static var scanTopRight: String {
         L(en: "Top right",
@@ -1334,7 +1411,8 @@ enum FS {
           ja: "右上",
           fr: "Haut droit",
           am: "ላይ ቀኝ",
-          ru: "Вверху справа")
+          ru: "Вверху справа",
+          uk: "Угорі праворуч")
     }
     static var scanBottomLeft: String {
         L(en: "Bottom left",
@@ -1353,7 +1431,8 @@ enum FS {
           ja: "左下",
           fr: "Bas gauche",
           am: "ታች ግራ",
-          ru: "Внизу слева")
+          ru: "Внизу слева",
+          uk: "Унизу ліворуч")
     }
     static var scanBottomRight: String {
         L(en: "Bottom right",
@@ -1372,7 +1451,8 @@ enum FS {
           ja: "右下",
           fr: "Bas droit",
           am: "ታች ቀኝ",
-          ru: "Внизу справа")
+          ru: "Внизу справа",
+          uk: "Унизу праворуч")
     }
     static func scanLevel(_ x: String) -> String {
         L(en: "Level %@",
@@ -1391,7 +1471,8 @@ enum FS {
                   ja: "レベル %@",
                   fr: "Niveau %@",
                   am: "ደረጃ %@",
-          ru: "Уровень %@").replacingOccurrences(of: "%@", with: x)
+          ru: "Уровень %@",
+          uk: "Рівень %@").replacingOccurrences(of: "%@", with: x)
     }
     static func scanExtraTaps(_ x: String) -> String {
         L(en: "Extra taps: %@",
@@ -1410,7 +1491,8 @@ enum FS {
                   ja: "余分なタップ：%@",
                   fr: "Appuis en trop : %@",
                   am: "ተጨማሪ ንክኪዎች፦ %@",
-          ru: "Лишние нажатия: %@").replacingOccurrences(of: "%@", with: x)
+          ru: "Лишние нажатия: %@",
+          uk: "Зайві торкання: %@").replacingOccurrences(of: "%@", with: x)
     }
 
     static func scanFound(_ a: Int, _ b: Int) -> String {
@@ -1430,6 +1512,7 @@ enum FS {
                   ja: "{b}個中{a}個を発見",
                   fr: "{a} sur {b} trouvées",
                   am: "ከ{b} {a} ተገኝተዋል",
-          ru: "Найдено: {a} из {b}").replacingOccurrences(of: "{a}", with: String(a)).replacingOccurrences(of: "{b}", with: String(b))
+          ru: "Найдено: {a} из {b}",
+          uk: "Знайдено {a} із {b}").replacingOccurrences(of: "{a}", with: String(a)).replacingOccurrences(of: "{b}", with: String(b))
     }
 }

@@ -116,6 +116,7 @@ extension AppLanguage {
         case .french:     return "Progrès"
         case .amharic:    return "እድገት"
         case .russian:    return "Прогресс"
+        case .ukrainian:    return "Прогрес"
         }
     }
 
@@ -138,6 +139,7 @@ extension AppLanguage {
         case .french:     return "Accueil"
         case .amharic:    return "መነሻ"
         case .russian:    return "Главная"
+        case .ukrainian:    return "Головна"
         }
     }
 
@@ -160,6 +162,7 @@ extension AppLanguage {
         case .french:     return "Activités"
         case .amharic:    return "ተግባራት"
         case .russian:    return "Занятия"
+        case .ukrainian:    return "Вправи"
         }
     }
 
@@ -182,6 +185,7 @@ extension AppLanguage {
         case .french:     return "Profil"
         case .amharic:    return "መገለጫ"
         case .russian:    return "Профиль"
+        case .ukrainian:    return "Профіль"
         }
     }
 }

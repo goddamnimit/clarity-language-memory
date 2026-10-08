@@ -581,6 +581,7 @@ extension AppLanguage {
         case .french:     return "Orientation vers les objectifs"
         case .amharic:    return "የግብ አቅጣጫ"
         case .russian:    return "Цель занятий"
+        case .ukrainian:    return "Мета терапії"
         }
     }
 
@@ -605,6 +606,7 @@ extension AppLanguage {
             case .french:     return "Rétablissement"
             case .amharic:    return "ማገገም"
             case .russian:    return "Восстановление"
+            case .ukrainian:    return "Відновлення"
             }
         case .maintenance:
             switch self {
@@ -625,6 +627,7 @@ extension AppLanguage {
             case .french:     return "Entretien"
             case .amharic:    return "ሁኔታን ጠብቆ ማቆየት"
             case .russian:    return "Поддержание"
+            case .ukrainian:    return "Підтримання"
             }
         }
     }
@@ -648,6 +651,7 @@ extension AppLanguage {
         case .french:     return "Rétablissement : cette approche part du principe que l'objectif est l'amélioration. Entretien : cette approche considère qu'un rendement stable constitue un résultat positif."
         case .amharic:    return "ማገገም፡ ዋናው ግብ መሻሻል መሆኑን ያሳያል። ሁኔታን ጠብቆ ማቆየት፡ አፈጻጸም ሳይቀያየር በተመሳሳይ ሁኔታ መቀጠሉን እንደ ጥሩ ውጤት ይቆጥረዋል።"
         case .russian:    return "Восстановление: подразумевается, что цель — улучшение. Поддержание: стабильный результат считается хорошим исходом."
+        case .ukrainian:    return "Відновлення: формулювання виходять із того, що мета — покращення. Підтримання: формулювання вважають стабільні результати позитивним підсумком."
         }
     }
 
@@ -670,6 +674,7 @@ extension AppLanguage {
         case .french:     return "Prévoyez des fluctuations quotidiennes"
         case .amharic:    return "የዕለት ተዕለት መለዋወጥን ጠብቅ"
         case .russian:    return "Ожидаются колебания по дням"
+        case .ukrainian:    return "Очікувати щоденних коливань"
         }
     }
 
@@ -692,6 +697,7 @@ extension AppLanguage {
         case .french:     return "Cochez cette case si vous vous attendez à des hauts et des bas au quotidien pour des raisons qui n'ont rien à voir avec les progrès de votre proche en thérapie."
         case .amharic:    return "የምትወዱት ሰው በሕክምናው ላይ ካለው ሁኔታ ውጭ፣ በሌሎች ምክንያቶች የዕለት ተዕለት መለዋወጥ (መውረድ እና መውጣት) የሚጠበቅ ከሆነ ይህንን ያብሩት።"
         case .russian:    return "Включите, если ежедневные подъёмы и спады ожидаемы по причинам, не связанным с тем, как у вашего близкого идут дела в терапии."
+        case .ukrainian:    return "Увімкніть, якщо щоденні підйоми й спади очікувані з причин, не пов'язаних із тим, як ваша близька людина справляється з терапією."
         }
     }
 
@@ -714,6 +720,7 @@ extension AppLanguage {
         case .french:     return "À propos des conseils de cette application"
         case .amharic:    return "ስለዚሁ መተግበሪያ መመሪያ"
         case .russian:    return "О рекомендациях приложения"
+        case .ukrainian:    return "Про поради застосунку"
         }
     }
 
@@ -736,6 +743,7 @@ extension AppLanguage {
         case .french:     return "Fonctionnalités d'orientation"
         case .amharic:    return "የመመሪያ ባህሪያት"
         case .russian:    return "Подсказки и рекомендации"
+        case .ukrainian:    return "Функції порад"
         }
     }
 
@@ -758,6 +766,7 @@ extension AppLanguage {
         case .french:     return "Cette application comprend certaines fonctionnalités d'accompagnement à caractère expérimental — pour plus de détails, consultez à tout moment la section [À propos des fonctionnalités d'accompagnement de cette application] dans votre menu « Aidant »."
         case .amharic:    return "ይህ መተግበሪያ አንዳንድ በሙከራ ላይ ያሉ የመመሪያ ባህሪያትን ያካትታል — ዝርዝሩን በማንኛውም ጊዜ ተንከባካቢ ማውጫ ውስጥ «ስለዚሁ መተግበሪያ መመሪያ» በሚለው ስር ይመልከቱ።"
         case .russian:    return "В приложении есть экспериментальные подсказки. Подробности всегда можно найти в меню ухаживающего: [О рекомендациях приложения]."
+        case .ukrainian:    return "У цьому застосунку є кілька експериментальних функцій порад. Подробиці завжди можна знайти в меню доглядальника в розділі [Про поради застосунку]."
         }
     }
 
@@ -780,6 +789,7 @@ extension AppLanguage {
         case .french:     return "D'accord"
         case .amharic:    return "እሺ"
         case .russian:    return "ОК"
+        case .ukrainian:    return "Гаразд"
         }
     }
 }

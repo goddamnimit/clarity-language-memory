@@ -60,6 +60,7 @@ extension AppLanguage {
         case .french:     return "Mode proche aidant"
         case .amharic:    return "የተንከባካቢ ሁነታ"
         case .russian:    return "Режим ухаживающего"
+        case .ukrainian:    return "Режим доглядальника"
         }
     }
 
@@ -82,6 +83,7 @@ extension AppLanguage {
         case .french:     return "Entrer le PIN"
         case .amharic:    return "ፒን ያስገቡ"
         case .russian:    return "Введите PIN-код"
+        case .ukrainian:    return "Введіть пін-код"
         }
     }
 
@@ -104,6 +106,7 @@ extension AppLanguage {
         case .french:     return "PIN oublié? Réinitialiser à 0000"
         case .amharic:    return "ፒን ረስተዋል? ወደ 0000 ይመልሱ"
         case .russian:    return "Забыли PIN-код? Сбросить на 0000"
+        case .ukrainian:    return "Забули пін-код? Скинути на 0000"
         }
     }
 
@@ -126,6 +129,7 @@ extension AppLanguage {
         case .french:     return "Annuler"
         case .amharic:    return "ሰርዝ"
         case .russian:    return "Отмена"
+        case .ukrainian:    return "Скасувати"
         }
     }
 
@@ -148,6 +152,7 @@ extension AppLanguage {
         case .french:     return "Supprimer"
         case .amharic:    return "አጥፋ"
         case .russian:    return "Удалить"
+        case .ukrainian:    return "Видалити"
         }
     }
 
@@ -170,6 +175,7 @@ extension AppLanguage {
         case .french:     return "Réinitialiser le PIN?"
         case .amharic:    return "ፒን እንደገና ይለወጥ?"
         case .russian:    return "Сбросить PIN-код?"
+        case .ukrainian:    return "Скинути пін-код?"
         }
     }
 
@@ -192,6 +198,7 @@ extension AppLanguage {
         case .french:     return "Le PIN sera réinitialisé à 0000."
         case .amharic:    return "ፒን ወደ 0000 ይመለሳል።"
         case .russian:    return "PIN-код будет сброшен на 0000."
+        case .ukrainian:    return "Пін-код буде скинуто на 0000."
         }
     }
 
@@ -214,6 +221,7 @@ extension AppLanguage {
         case .french:     return "Réinitialiser"
         case .amharic:    return "እንደገና ጀምር"
         case .russian:    return "Сбросить"
+        case .ukrainian:    return "Скинути"
         }
     }
 
@@ -236,6 +244,7 @@ extension AppLanguage {
         case .french:     return "Changer le PIN"
         case .amharic:    return "ፒን ይለውጡ"
         case .russian:    return "Изменить PIN-код"
+        case .ukrainian:    return "Змінити пін-код"
         }
     }
 
@@ -258,6 +267,7 @@ extension AppLanguage {
         case .french:     return "Entrer le nouveau PIN"
         case .amharic:    return "አዲስ ፒን ያስገቡ"
         case .russian:    return "Введите новый PIN-код"
+        case .ukrainian:    return "Введіть новий пін-код"
         }
     }
 
@@ -280,6 +290,7 @@ extension AppLanguage {
         case .french:     return "Confirmer le nouveau PIN"
         case .amharic:    return "አዲሱን ፒን ያረጋግጡ"
         case .russian:    return "Подтвердите новый PIN-код"
+        case .ukrainian:    return "Підтвердьте новий пін-код"
         }
     }
 
@@ -302,6 +313,7 @@ extension AppLanguage {
         case .french:     return "PIN modifié"
         case .amharic:    return "ፒን ተለውጧል"
         case .russian:    return "PIN-код изменён"
+        case .ukrainian:    return "Пін-код змінено"
         }
     }
 
@@ -324,6 +336,7 @@ extension AppLanguage {
         case .french:     return "PIN par défaut"
         case .amharic:    return "መደበኛ ፒን"
         case .russian:    return "PIN-код по умолчанию"
+        case .ukrainian:    return "Типовий пін-код"
         }
     }
 
@@ -346,6 +359,7 @@ extension AppLanguage {
         case .french:     return "Le PIN par défaut est 0000. Veuillez le modifier après avoir activé le mode proche aidant."
         case .amharic:    return "መደበኛ ፒን 0000 ነው። እባክዎ ወደ ተንከባካቢ ሁነታ ከገቡ በኋላ ይለውጡት።"
         case .russian:    return "PIN-код по умолчанию: 0000. Измените его после входа в режим ухаживающего."
+        case .ukrainian:    return "Типовий пін-код — 0000. Змініть його після входу в режим доглядальника."
         }
     }
 
@@ -368,6 +382,7 @@ extension AppLanguage {
         case .french:     return "Série actuelle"
         case .amharic:    return "የአሁኑ ተከታታይ ቀናት"
         case .russian:    return "Текущая серия"
+        case .ukrainian:    return "Поточна серія"
         }
     }
 
@@ -390,6 +405,7 @@ extension AppLanguage {
         case .french:     return "Précision globale"
         case .amharic:    return "አጠቃላይ ትክክለኛነት"
         case .russian:    return "Общая точность"
+        case .ukrainian:    return "Загальна точність"
         }
     }
 
@@ -412,6 +428,7 @@ extension AppLanguage {
         case .french:     return "Séances cette semaine"
         case .amharic:    return "የዚህ ሳምንት ልምምዶች"
         case .russian:    return "Занятий на этой неделе"
+        case .ukrainian:    return "Заняття цього тижня"
         }
     }
 
@@ -434,6 +451,7 @@ extension AppLanguage {
         case .french:     return "Détails du progrès"
         case .amharic:    return "የእድገት ዝርዝር"
         case .russian:    return "Подробности прогресса"
+        case .ukrainian:    return "Докладно про прогрес"
         }
     }
 
@@ -456,6 +474,7 @@ extension AppLanguage {
         case .french:     return "Objectif hebdomadaire"
         case .amharic:    return "የሳምንቱ ግብ"
         case .russian:    return "Цель на неделю"
+        case .ukrainian:    return "Тижнева мета"
         }
     }
 
@@ -478,6 +497,7 @@ extension AppLanguage {
         case .french:     return "Notes de thérapie"
         case .amharic:    return "የሕክምና ማስታወሻዎች"
         case .russian:    return "Заметки терапевта"
+        case .ukrainian:    return "Нотатки до терапії"
         }
     }
 
@@ -500,6 +520,7 @@ extension AppLanguage {
         case .french:     return "Exporter le rapport PDF"
         case .amharic:    return "የPDF ሪፖርት አውጣ"
         case .russian:    return "Экспорт отчёта в PDF"
+        case .ukrainian:    return "Експортувати звіт у PDF"
         }
     }
 
@@ -522,6 +543,7 @@ extension AppLanguage {
         case .french:     return "Historique des séances"
         case .amharic:    return "የልምምድ ታሪክ"
         case .russian:    return "История занятий"
+        case .ukrainian:    return "Історія занять"
         }
     }
 
@@ -544,6 +566,7 @@ extension AppLanguage {
         case .french:     return "Évolution de la précision"
         case .amharic:    return "የትክክለኛነት ሂደት"
         case .russian:    return "Динамика точности"
+        case .ukrainian:    return "Динаміка точності"
         }
     }
 
@@ -566,6 +589,7 @@ extension AppLanguage {
         case .french:     return "Tout"
         case .amharic:    return "ሁሉንም"
         case .russian:    return "Все"
+        case .ukrainian:    return "Усі"
         }
     }
 
@@ -588,6 +612,7 @@ extension AppLanguage {
         case .french:     return "7 derniers jours"
         case .amharic:    return "ባለፉት 7 ቀናት"
         case .russian:    return "Последние 7 дней"
+        case .ukrainian:    return "Останні 7 днів"
         }
     }
 
@@ -610,6 +635,7 @@ extension AppLanguage {
         case .french:     return "30 derniers jours"
         case .amharic:    return "ባለፉት 30 ቀናት"
         case .russian:    return "Последние 30 дней"
+        case .ukrainian:    return "Останні 30 днів"
         }
     }
 
@@ -632,6 +658,7 @@ extension AppLanguage {
         case .french:     return "Ajouter une note"
         case .amharic:    return "ማስታወሻ አክል"
         case .russian:    return "Добавить заметку"
+        case .ukrainian:    return "Додати нотатку"
         }
     }
 
@@ -654,6 +681,7 @@ extension AppLanguage {
         case .french:     return "Enregistrer"
         case .amharic:    return "አስቀምጥ"
         case .russian:    return "Сохранить"
+        case .ukrainian:    return "Зберегти"
         }
     }
 
@@ -676,6 +704,7 @@ extension AppLanguage {
         case .french:     return "Aucune note pour l'instant"
         case .amharic:    return "እስካሁን ምንም ማስታወሻ የለም"
         case .russian:    return "Заметок пока нет"
+        case .ukrainian:    return "Нотаток поки немає"
         }
     }
 
@@ -698,6 +727,7 @@ extension AppLanguage {
         case .french:     return "Aucune donnée pour l'instant"
         case .amharic:    return "እስካሁን ምንም መረጃ የለም"
         case .russian:    return "Данных пока нет"
+        case .ukrainian:    return "Даних поки немає"
         }
     }
 
@@ -720,6 +750,7 @@ extension AppLanguage {
         case .french:     return "séances par semaine"
         case .amharic:    return "ልምምዶች በሳምንት"
         case .russian:    return "занятий в неделю"
+        case .ukrainian:    return "занять на тиждень"
         }
     }
 
@@ -742,6 +773,7 @@ extension AppLanguage {
         case .french:     return "Effectuer l'évaluation initiale"
         case .amharic:    return "የመነሻ ምዘና ያካሂዱ"
         case .russian:    return "Пройти начальную оценку"
+        case .ukrainian:    return "Пройти початкове оцінювання"
         }
     }
 
@@ -764,6 +796,7 @@ extension AppLanguage {
         case .french:     return "Notifications"
         case .amharic:    return "ማስታወቂያዎች"
         case .russian:    return "Уведомления"
+        case .ukrainian:    return "Сповіщення"
         }
     }
 
@@ -786,6 +819,7 @@ extension AppLanguage {
         case .french:     return "Rappels d'exercice"
         case .amharic:    return "የልምምድ ማስታወሻዎች"
         case .russian:    return "Напоминания о занятиях"
+        case .ukrainian:    return "Нагадування про практику"
         }
     }
 
@@ -808,6 +842,7 @@ extension AppLanguage {
         case .french:     return "Heure du rappel"
         case .amharic:    return "የማስታወሻ ሰዓት"
         case .russian:    return "Время напоминания"
+        case .ukrainian:    return "Час нагадування"
         }
     }
 
@@ -830,6 +865,7 @@ extension AppLanguage {
         case .french:     return "Rappels de la série"
         case .amharic:    return "የተከታታይ ቀናት ማስታወሻዎች"
         case .russian:    return "Напоминания о серии"
+        case .ukrainian:    return "Нагадування про серію"
         }
     }
 
@@ -852,6 +888,7 @@ extension AppLanguage {
         case .french:     return "Activez les notifications dans les Réglages d'iOS"
         case .amharic:    return "በiOS ቅንብሮች ውስጥ ማስታወቂያዎችን ያንቁ"
         case .russian:    return "Включите уведомления в настройках iOS"
+        case .ukrainian:    return "Увімкніть сповіщення в налаштуваннях iOS"
         }
     }
 
@@ -874,6 +911,7 @@ extension AppLanguage {
         case .french:     return "\(done) sur \(goal) séances cette semaine"
         case .amharic:    return "በዚህ ሳምንት ከ\(goal) ልምምዶች \(done) ተጠናቅቀዋል"
         case .russian:    return "\(done) из \(goal) занятий на этой неделе"
+        case .ukrainian:    return "\(done) із \(goal) занять цього тижня"
         }
     }
 }

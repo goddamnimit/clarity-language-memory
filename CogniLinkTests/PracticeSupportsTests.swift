@@ -481,9 +481,11 @@ extension PracticeSupportsTests {
 extension PracticeSupportsTests {
   @Test func previewLanguagesAreHiddenFromThePicker() {
     #expect(AppLanguage.russian.isPreview)
+    #expect(AppLanguage.ukrainian.isPreview)
     #expect(!AppLanguage.visibleCases.contains(.russian))
+    #expect(!AppLanguage.visibleCases.contains(.ukrainian))
     #expect(AppLanguage.visibleCases.count == 16)
-    #expect(AppLanguage.allCases.count == 17)
+    #expect(AppLanguage.allCases.count == 18)
     for language in AppLanguage.visibleCases { #expect(!language.isPreview) }
   }
 
@@ -496,5 +498,23 @@ extension PracticeSupportsTests {
     let text = all.flatMap { $0.items }.map { $0.prompt + $0.explanation }.joined()
     #expect(text.unicodeScalars.contains { (0x400...0x4FF).contains($0.value) })
     #expect(!text.contains(where: { "іїєґ".contains($0) }), "Ukrainian-only letters in Russian content")
+  }
+}
+
+extension PracticeSupportsTests {
+  @Test func ukrainianHasContentAndNoRussianOnlyLetters() {
+    let all = LanguageManager.shared.allExercises[.ukrainian] ?? []
+    #expect(all.reduce(0) { $0 + $1.items.count } >= 961)
+    for section in [AppSection.language, .cognition, .functionalSkills] {
+      #expect(all.contains { $0.section == section })
+    }
+    let text = all.flatMap { $0.items }.map { $0.prompt + $0.explanation + $0.correctAnswer + $0.options.joined() }.joined()
+    #expect(text.contains(where: { "іїєґ".contains($0) }), "expected Ukrainian letters")
+    #expect(!text.contains(where: { "ыэъёЫЭЪЁ".contains($0) }), "Russian-only letters in Ukrainian content")
+  }
+
+  @Test func russianAndUkrainianDoNotBleedIntoEachOther() {
+    let ru = (LanguageManager.shared.allExercises[.russian] ?? []).flatMap { $0.items }.map { $0.prompt + $0.explanation }.joined()
+    #expect(!ru.contains(where: { "іїєґ".contains($0) }))
   }
 }

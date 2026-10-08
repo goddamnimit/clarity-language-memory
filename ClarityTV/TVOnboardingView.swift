@@ -276,6 +276,7 @@ extension AppLanguage {
         case .french:     return "Bienvenue sur Clarity"
         case .amharic:    return "ወደ Clarity እንኳን በደህና መጡ"
         case .russian:    return "Добро пожаловать в Clarity"
+        case .ukrainian:    return "Ласкаво просимо до Clarity"
         }
     }
     
@@ -298,6 +299,7 @@ extension AppLanguage {
         case .french:     return "Pratiquez des exercices de langue et de mémoire à la maison."
         case .amharic:    return "የቋንቋ እና የማስታወስ ልምምዶችን በቤት ውስጥ ያድርጉ።"
         case .russian:    return "Выполняйте упражнения для речи и памяти дома."
+        case .ukrainian:    return "Виконуйте вправи для мовлення та пам'яті вдома."
         }
     }
     
@@ -320,6 +322,7 @@ extension AppLanguage {
         case .french:     return "Commencer"
         case .amharic:    return "ይጀምሩ"
         case .russian:    return "Начать"
+        case .ukrainian:    return "Почати"
         }
     }
     
@@ -342,6 +345,7 @@ extension AppLanguage {
         case .french:     return "Comment ça marche"
         case .amharic:    return "እንዴት እንደሚሰራ"
         case .russian:    return "Как это работает"
+        case .ukrainian:    return "Як це працює"
         }
     }
     
@@ -364,6 +368,7 @@ extension AppLanguage {
         case .french:     return "Choisissez un exercice dans l'onglet Activités"
         case .amharic:    return "ከቫርዥነቶች ትር ውስጥ አንድ ልምምድ ይምረጡ"
         case .russian:    return "Выберите упражнение на вкладке «Занятия»"
+        case .ukrainian:    return "Оберіть вправу на вкладці «Вправи»"
         }
     }
     
@@ -386,6 +391,7 @@ extension AppLanguage {
         case .french:     return "Répondez à 5 questions par session"
         case .amharic:    return "በእያንዳንዱ ክፍለ ጊዜ 5 ጥያቄዎችን ይመልሱ"
         case .russian:    return "Отвечайте на 5 вопросов за занятие"
+        case .ukrainian:    return "Відповідайте на 5 запитань за одне заняття"
         }
     }
     
@@ -408,6 +414,7 @@ extension AppLanguage {
         case .french:     return "Suivez vos progrès au fil du temps"
         case .amharic:    return "በጊዜ ሂደት የእርስዎን እድገት ይከታተሉ"
         case .russian:    return "Следите за своим прогрессом"
+        case .ukrainian:    return "Стежте за своїм прогресом із часом"
         }
     }
     
@@ -430,6 +437,7 @@ extension AppLanguage {
         case .french:     return "Suivant"
         case .amharic:    return "ቀጣይ"
         case .russian:    return "Далее"
+        case .ukrainian:    return "Далі"
         }
     }
     
@@ -452,6 +460,7 @@ extension AppLanguage {
         case .french:     return "Choisissez votre langue"
         case .amharic:    return "ቋንቋዎን ይምረጡ"
         case .russian:    return "Выберите язык"
+        case .ukrainian:    return "Оберіть свою мову"
         }
     }
     
@@ -474,6 +483,7 @@ extension AppLanguage {
         case .french:     return "Commencer à pratiquer"
         case .amharic:    return "ልምምድ ይጀምሩ"
         case .russian:    return "Начать занятия"
+        case .ukrainian:    return "Почати практику"
         }
     }
 }
