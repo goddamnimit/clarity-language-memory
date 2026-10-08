@@ -329,6 +329,16 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+
+                        NavigationLink(destination: VisualScanningView()) {
+                            sectionCard(
+                                title: FS.scanTitle,
+                                subtitle: FS.scanSubtitle,
+                                systemImage: "square.grid.3x3",
+                                color: .pink
+                            )
+                        }
+                        .buttonStyle(.plain)
                         #endif
                     }
                     .padding(.horizontal)

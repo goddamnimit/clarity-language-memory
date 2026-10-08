@@ -351,3 +351,57 @@ extension PracticeSupportsTests {
     #expect(!text.contains("Where are keys kept?"))
   }
 }
+
+// MARK: - F6 visual scanning
+
+extension PracticeSupportsTests {
+
+  @Test func scanGridsHaveTwelveTargetsSpreadAcrossQuadrants() {
+    var rng = SplitMix64(seed: 2026)
+    for level in 1...3 {
+      for _ in 0..<30 {
+        let grid = ScanGridGenerator.make(level: level, using: &rng)
+        #expect(grid.cells.count == ScanGridGenerator.columns * ScanGridGenerator.rows)
+        #expect(grid.targetsInReadingOrder.count == 12)
+        for q in ScanQuadrant.allCases {
+          let n = grid.targetsInReadingOrder.filter { grid.quadrant(of: $0) == q }.count
+          #expect(n >= 3, "quadrant \(q) has \(n)")
+        }
+        // Targets are exactly the target glyph; distractors never are.
+        for cell in grid.cells {
+          #expect((cell.glyph == grid.target) == cell.isTarget)
+        }
+      }
+    }
+  }
+
+  @Test func readingOrderIsRowMajor() {
+    var rng = SplitMix64(seed: 1)
+    let grid = ScanGridGenerator.make(level: 1, using: &rng)
+    #expect(grid.targetsInReadingOrder == grid.targetsInReadingOrder.sorted())
+  }
+
+  @Test func quadrantsCoverTheGridEvenly() {
+    let g = ScanGrid(columns: 6, rows: 8, cells: [], target: .text("6"))
+    #expect(g.quadrant(of: 0) == .topLeft)
+    #expect(g.quadrant(of: 5) == .topRight)
+    #expect(g.quadrant(of: 6 * 4) == .bottomLeft)
+    #expect(g.quadrant(of: 6 * 8 - 1) == .bottomRight)
+    let counts = Dictionary(grouping: 0..<48, by: { g.quadrant(of: $0) }).mapValues(\.count)
+    #expect(counts.values.allSatisfy { $0 == 12 })
+  }
+
+  @Test func resultCountsFoundPerQuadrant() {
+    var rng = SplitMix64(seed: 3)
+    let grid = ScanGridGenerator.make(level: 1, using: &rng)
+    let all = Set(grid.targetsInReadingOrder)
+    let full = ScanResult.compute(grid: grid, foundIndexes: all, extraTaps: 2, seconds: 40)
+    #expect(full.found == 12 && full.total == 12 && full.extraTaps == 2 && full.seconds == 40)
+    // Miss everything on the left side: left quadrants show 0 found.
+    let rightOnly = all.filter { [.topRight, .bottomRight].contains(grid.quadrant(of: $0)) }
+    let partial = ScanResult.compute(grid: grid, foundIndexes: Set(rightOnly), extraTaps: 0, seconds: 10)
+    #expect(partial.perQuadrant[.topLeft]?.found == 0)
+    #expect(partial.perQuadrant[.bottomLeft]?.found == 0)
+    #expect(partial.perQuadrant[.topRight]?.found == partial.perQuadrant[.topRight]?.total)
+  }
+}
