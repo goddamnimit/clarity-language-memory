@@ -15,9 +15,13 @@ final class NotificationManager: ObservableObject {
     static let hourKey = "clarity_notification_time_hour"
     static let minuteKey = "clarity_notification_time_minute"
     static let streakEnabledKey = "clarity_streak_notifications_enabled"
+    static let secondEnabledKey = "clarity_second_reminder_enabled"
+    static let secondHourKey = "clarity_second_reminder_hour"
+    static let secondMinuteKey = "clarity_second_reminder_minute"
 
     // Request identifiers
     private static let dailyReminderID = "clarity_daily_reminder"
+    private static let secondReminderID = "clarity_second_reminder"
     private static let streakWarningID = "clarity_streak_warning"
     private static let welcomeBackID = "clarity_welcome_back"
 
@@ -51,6 +55,34 @@ final class NotificationManager: ObservableObject {
         get { defaults.object(forKey: Self.minuteKey) as? Int ?? 0 }
         set {
             defaults.set(newValue, forKey: Self.minuteKey)
+            objectWillChange.send()
+            rescheduleAll()
+        }
+    }
+
+    /// Optional second daily reminder (e.g. after lunch). Off by default.
+    var secondReminderEnabled: Bool {
+        get { defaults.object(forKey: Self.secondEnabledKey) as? Bool ?? false }
+        set {
+            defaults.set(newValue, forKey: Self.secondEnabledKey)
+            objectWillChange.send()
+            rescheduleAll()
+        }
+    }
+
+    var secondReminderHour: Int {
+        get { defaults.object(forKey: Self.secondHourKey) as? Int ?? 14 }
+        set {
+            defaults.set(newValue, forKey: Self.secondHourKey)
+            objectWillChange.send()
+            rescheduleAll()
+        }
+    }
+
+    var secondReminderMinute: Int {
+        get { defaults.object(forKey: Self.secondMinuteKey) as? Int ?? 0 }
+        set {
+            defaults.set(newValue, forKey: Self.secondMinuteKey)
             objectWillChange.send()
             rescheduleAll()
         }
@@ -105,7 +137,7 @@ final class NotificationManager: ObservableObject {
     func rescheduleAll() {
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: [
-            Self.dailyReminderID, Self.streakWarningID, Self.welcomeBackID
+            Self.dailyReminderID, Self.secondReminderID, Self.streakWarningID, Self.welcomeBackID
         ])
 
         let language = LanguageManager.shared.currentLanguage
@@ -131,6 +163,27 @@ final class NotificationManager: ObservableObject {
             let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: fireDate)
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
             center.add(UNNotificationRequest(identifier: Self.dailyReminderID,
+                                             content: content, trigger: trigger))
+        }
+
+        // 1b. Optional second daily reminder — next occurrence of its own time.
+        //     Unlike the first reminder it is NOT skipped after practicing, since
+        //     its purpose is a second session later in the day.
+        if remindersEnabled && secondReminderEnabled {
+            let calendar = Calendar.current
+            var fireDate = calendar.date(bySettingHour: secondReminderHour, minute: secondReminderMinute,
+                                         second: 0, of: Date()) ?? Date()
+            if fireDate <= Date() {
+                fireDate = calendar.date(byAdding: .day, value: 1, to: fireDate) ?? fireDate
+            }
+            let content = UNMutableNotificationContent()
+            content.title = "Clarity: Language & Memory"
+            content.body = language.notifDailyMessages(name: name).randomElement()
+                ?? language.notifDailyMessages(name: name)[0]
+            content.sound = .default
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: fireDate)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+            center.add(UNNotificationRequest(identifier: Self.secondReminderID,
                                              content: content, trigger: trigger))
         }
 

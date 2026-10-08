@@ -37,6 +37,21 @@ struct CaregiverDashboardView: View {
         )
     }
 
+    private var secondReminderTimeBinding: Binding<Date> {
+        Binding(
+            get: {
+                Calendar.current.date(bySettingHour: notificationManager.secondReminderHour,
+                                      minute: notificationManager.secondReminderMinute,
+                                      second: 0, of: Date()) ?? Date()
+            },
+            set: { newValue in
+                let components = Calendar.current.dateComponents([.hour, .minute], from: newValue)
+                notificationManager.secondReminderHour = components.hour ?? 14
+                notificationManager.secondReminderMinute = components.minute ?? 0
+            }
+        )
+    }
+
     // MARK: - Stats
 
     private var sessionLog: [[String: Any]] {
@@ -205,6 +220,31 @@ struct CaregiverDashboardView: View {
                     .font(.body)
                     .padding(.horizontal, 16)
                     .frame(minHeight: 50)
+
+                    Divider().padding(.leading, 16)
+
+                    Toggle(isOn: Binding(
+                        get: { notificationManager.secondReminderEnabled },
+                        set: { notificationManager.secondReminderEnabled = $0 }
+                    )) {
+                        Text(FS.secondReminderLabel)
+                            .font(.body)
+                            .foregroundColor(.primary)
+                    }
+                    .padding(.horizontal, 16)
+                    .frame(minHeight: 50)
+
+                    if notificationManager.secondReminderEnabled {
+                        Divider().padding(.leading, 16)
+                        DatePicker(
+                            FS.secondReminderTime,
+                            selection: secondReminderTimeBinding,
+                            displayedComponents: .hourAndMinute
+                        )
+                        .font(.body)
+                        .padding(.horizontal, 16)
+                        .frame(minHeight: 50)
+                    }
                 }
 
                 Divider().padding(.leading, 16)

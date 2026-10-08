@@ -177,3 +177,19 @@ extension PracticeSupportsTests {
     }
   }
 }
+
+// MARK: - F9 second reminder
+
+extension PracticeSupportsTests {
+  @MainActor
+  @Test func secondReminderDefaultsOffAtTwoPM() {
+    let d = UserDefaults.standard
+    for key in [NotificationManager.secondEnabledKey, NotificationManager.secondHourKey, NotificationManager.secondMinuteKey] {
+      d.removeObject(forKey: key)
+    }
+    let nm = NotificationManager.shared
+    #expect(nm.secondReminderEnabled == false)
+    #expect(nm.secondReminderHour == 14)
+    #expect(nm.secondReminderMinute == 0)
+  }
+}

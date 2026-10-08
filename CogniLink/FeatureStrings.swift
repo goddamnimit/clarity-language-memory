@@ -207,4 +207,23 @@ enum FS {
           hy: "Պատասխանը նշված է ներքևում։", ja: "答えは下に印が付いています。", fr: "La réponse est indiquée ci-dessous.",
           am: "መልሱ ከታች ምልክት ተደርጎበታል።")
     }
+
+    // MARK: - F9 Second reminder
+
+    static var secondReminderLabel: String {
+        L(en: "Second daily reminder", es: "Segundo recordatorio diario", hi: "दूसरा दैनिक रिमाइंडर",
+          gu: "બીજું દૈનિક રિમાઇન્ડર", zh: "第二个每日提醒", fa: "یادآور دوم روزانه",
+          ko: "두 번째 일일 알림", vi: "Lời nhắc hằng ngày thứ hai", ar: "تذكير يومي ثانٍ",
+          pt: "Segundo lembrete diário", tl: "Pangalawang pang-araw-araw na paalala",
+          pa: "ਦੂਜੀ ਰੋਜ਼ਾਨਾ ਯਾਦ-ਦਹਾਨੀ", hy: "Երկրորդ օրական հիշեցում", ja: "2回目の毎日のリマインダー",
+          fr: "Deuxième rappel quotidien", am: "ሁለተኛ ዕለታዊ ማስታወሻ")
+    }
+
+    static var secondReminderTime: String {
+        L(en: "Second reminder time", es: "Hora del segundo recordatorio", hi: "दूसरे रिमाइंडर का समय",
+          gu: "બીજા રિમાઇન્ડરનો સમય", zh: "第二个提醒时间", fa: "زمان یادآور دوم", ko: "두 번째 알림 시간",
+          vi: "Giờ nhắc lần hai", ar: "وقت التذكير الثاني", pt: "Horário do segundo lembrete",
+          tl: "Oras ng pangalawang paalala", pa: "ਦੂਜੀ ਯਾਦ-ਦਹਾਨੀ ਦਾ ਸਮਾਂ", hy: "Երկրորդ հիշեցման ժամը",
+          ja: "2回目の時刻", fr: "Heure du deuxième rappel", am: "የሁለተኛ ማስታወሻ ሰዓት")
+    }
 }
