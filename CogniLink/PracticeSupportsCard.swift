@@ -28,6 +28,27 @@ struct PracticeSupportsCard: View {
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 8) {
+                Text(FS.choicesLabel)
+                    .font(.body)
+                    .foregroundColor(.primary)
+                Picker(FS.choicesLabel, selection: Binding(
+                    get: { settings.answerChoiceCount },
+                    set: { settings.answerChoiceCount = $0 }
+                )) {
+                    ForEach(ChoiceCountFilter.allowedCounts, id: \.self) { n in
+                        Text("\(n)").tag(n)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                Text(FS.choicesSubtitle)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)

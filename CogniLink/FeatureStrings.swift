@@ -102,4 +102,33 @@ enum FS {
           fr: "Affiche le jour, la date et le moment de la journée sur l’accueil pour aider à s’orienter.",
           am: "አቅጣጫን ለመርዳት በመነሻ ገጽ ላይ ቀን፣ ቀነ-ወር እና የቀኑን ክፍል ያሳያል።")
     }
+
+    // MARK: - F2 Answer choices
+
+    static var choicesLabel: String {
+        L(en: "Answer choices", es: "Opciones de respuesta", hi: "उत्तर के विकल्प",
+          gu: "જવાબના વિકલ્પો", zh: "答案选项数", fa: "تعداد گزینه‌های پاسخ", ko: "답안 선택지 수",
+          vi: "Số lựa chọn trả lời", ar: "عدد خيارات الإجابة", pt: "Opções de resposta",
+          tl: "Bilang ng mga pagpipilian", pa: "ਜਵਾਬ ਦੇ ਵਿਕਲਪ", hy: "Պատասխանի տարբերակներ",
+          ja: "選択肢の数", fr: "Choix de réponse", am: "የመልስ አማራጮች")
+    }
+
+    static var choicesSubtitle: String {
+        L(en: "Show fewer options on multiple-choice questions to make them easier. The correct answer is always included.",
+          es: "Muestra menos opciones en las preguntas de opción múltiple para facilitarlas. La respuesta correcta siempre se incluye.",
+          hi: "बहुविकल्पीय प्रश्नों में कम विकल्प दिखाएँ ताकि वे आसान हों। सही उत्तर हमेशा शामिल रहता है।",
+          gu: "બહુવિકલ્પ પ્રશ્નોમાં ઓછા વિકલ્પો બતાવો જેથી તે સરળ બને. સાચો જવાબ હંમેશાં હાજર રહે છે.",
+          zh: "在选择题中显示较少的选项以降低难度。正确答案始终会保留。",
+          fa: "برای ساده‌تر شدن پرسش‌های چندگزینه‌ای، گزینه‌های کمتری نشان داده می‌شود. پاسخ درست همیشه وجود دارد.",
+          ko: "객관식 문제의 선택지를 줄여 더 쉽게 만듭니다. 정답은 항상 포함됩니다.",
+          vi: "Hiển thị ít lựa chọn hơn ở câu hỏi trắc nghiệm để dễ hơn. Đáp án đúng luôn được giữ lại.",
+          ar: "عرض خيارات أقل في أسئلة الاختيار من متعدد لتسهيلها. تبقى الإجابة الصحيحة موجودة دائمًا.",
+          pt: "Mostra menos opções nas perguntas de múltipla escolha para facilitá-las. A resposta correta sempre é incluída.",
+          tl: "Magpakita ng mas kaunting pagpipilian sa multiple-choice para mas madali. Laging kasama ang tamang sagot.",
+          pa: "ਬਹੁ-ਚੋਣ ਸਵਾਲਾਂ ਵਿੱਚ ਘੱਟ ਵਿਕਲਪ ਦਿਖਾਓ ਤਾਂ ਜੋ ਉਹ ਆਸਾਨ ਹੋਣ। ਸਹੀ ਜਵਾਬ ਹਮੇਸ਼ਾ ਸ਼ਾਮਲ ਰਹਿੰਦਾ ਹੈ।",
+          hy: "Ցույց տալ ավելի քիչ տարբերակ բազմակի ընտրության հարցերում՝ դրանք հեշտացնելու համար։ Ճիշտ պատասխանը միշտ ներառված է։",
+          ja: "選択式の問題で選択肢を減らし、答えやすくします。正解は必ず含まれます。",
+          fr: "Affiche moins de choix dans les questions à choix multiples pour les faciliter. La bonne réponse est toujours incluse.",
+          am: "ጥያቄዎችን ለማቅለል በበርካታ ምርጫ ጥያቄዎች ውስጥ አማራጮችን ይቀንሳል። ትክክለኛው መልስ ሁልጊዜ ይካተታል።")
+    }
 }

@@ -11,7 +11,23 @@ final class PracticeSupportSettings: ObservableObject {
     private let defaults = UserDefaults.standard
     private let orientationKey = "clarity_support_orientation_card"
 
+    private let choiceCountKey = "clarity_support_answer_choice_count"
+
     private init() {}
+
+    /// F2 — number of answer options shown on 4-option question types
+    /// (2, 3 or 4; default 4 = unchanged).
+    var answerChoiceCount: Int {
+        get {
+            let v = defaults.object(forKey: choiceCountKey) as? Int ?? 4
+            return ChoiceCountFilter.allowedCounts.contains(v) ? v : 4
+        }
+        set {
+            guard ChoiceCountFilter.allowedCounts.contains(newValue) else { return }
+            defaults.set(newValue, forKey: choiceCountKey)
+            objectWillChange.send()
+        }
+    }
 
     /// F1 — Today card on Home (default on).
     var showOrientationCard: Bool {

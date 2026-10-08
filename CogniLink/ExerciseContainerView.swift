@@ -463,8 +463,16 @@ struct ExerciseContainerView: View {
         let recentIDs = loadRecentIDs()
         let activeEx = getActiveExercise()
         let selected = activeEx.randomSession(excluding: recentIDs)
-        sessionItems = selected.map { item in
-            ExerciseItem(
+        #if os(iOS)
+        let choiceCount = PracticeSupportSettings.shared.answerChoiceCount
+        #endif
+        sessionItems = selected.map { original in
+            #if os(iOS)
+            let item = ChoiceCountFilter.reduce(original, type: activeEx.type, to: choiceCount)
+            #else
+            let item = original
+            #endif
+            return ExerciseItem(
                 id: item.id,
                 prompt: item.prompt,
                 options: item.options.shuffled(),
