@@ -97,7 +97,7 @@ struct AmharicNewExercisesData {
         items: [
             ExerciseItem(prompt: "ድር ቢያብር አንበሳ ___።", options: ["ያሥራል", "ይገድላል", "ያሳድዳል", "ይበላል"], correctAnswer: "ያሥራል", explanation: "ኅብረት ካለ የማይቻል ነገር የለም ማለት ነው።"),
             ExerciseItem(prompt: "ካለፈው ቆምጨጫ የቆመ ___።", options: ["ይበልጣል", "ይሻላል", "ይወድቃል", "ይቆማል"], correctAnswer: "ይሻላል", explanation: "የወደፊቱን ማስተካከልና ማዘጋጀት እንደሚበጅ የሚገልጽ አባባል ነው።"),
-            ExerciseItem(prompt: "የማይመስል ነገር ለልጅህ ___።", options: ["አትንገር", "አትስጥ", "አታሳይ", "አtaድርግ"], correctAnswer: "አትንገር", explanation: "ልጆች እውነትን ብቻ እንዲያውቁ መምከርን ያሳያል።"),
+            ExerciseItem(prompt: "የማይመስል ነገር ለልጅህ ___።", options: ["አትንገር", "አትስጥ", "አታሳይ", "አታድርግ"], correctAnswer: "አትንገር", explanation: "ልጆች እውነትን ብቻ እንዲያውቁ መምከርን ያሳያል።"),
             ExerciseItem(prompt: "ውኃ ሲወስድ ሳቅ ___።", options: ["ያመጣል", "ሳይጠሩት", "በደስታ", "እያለ ነው"], correctAnswer: "እያለ ነው", explanation: "አደጋ በድንገትና ባልታሰበ ሁኔታ ሊመጣ እንደሚችል ያሳያል።"),
             ExerciseItem(prompt: "ከእባብ ዕንቁላል እርግብ ___?", options: ["ይወለዳል", "አይገኝም", "አይጠበቅም", "አያምርም"], correctAnswer: "አይጠበቅም", explanation: "ከክፉ ነገር በጎ ነገር አይጠበቅም ማለት ነው።"),
             ExerciseItem(prompt: "የሞኝ ዘፈን ሁልጊዜ ___።", options: ["አንድ ነው", "ያምራል", "ይደገማል", "አጭር ነው"], correctAnswer: "አንድ ነው", explanation: "አስተዋይ ያልሆነ ሰው አንድ ነገር ላይ ብቻ እንደሚደጋገም ያሳያል።"),
