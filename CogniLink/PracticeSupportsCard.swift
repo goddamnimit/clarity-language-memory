@@ -49,6 +49,23 @@ struct PracticeSupportsCard: View {
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 4) {
+                Toggle(isOn: Binding(
+                    get: { settings.cuesEnabled },
+                    set: { settings.cuesEnabled = $0 }
+                )) {
+                    Text(FS.hintsLabel)
+                        .font(.body)
+                        .foregroundColor(.primary)
+                }
+                Text(FS.hintsSubtitle)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)

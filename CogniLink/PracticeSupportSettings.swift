@@ -13,7 +13,18 @@ final class PracticeSupportSettings: ObservableObject {
 
     private let choiceCountKey = "clarity_support_answer_choice_count"
 
+    private let cuesKey = "clarity_support_word_finding_hints"
+
     private init() {}
+
+    /// F3 — word-finding hint ladder on eligible questions (default on).
+    var cuesEnabled: Bool {
+        get { defaults.object(forKey: cuesKey) as? Bool ?? true }
+        set {
+            defaults.set(newValue, forKey: cuesKey)
+            objectWillChange.send()
+        }
+    }
 
     /// F2 — number of answer options shown on 4-option question types
     /// (2, 3 or 4; default 4 = unchanged).

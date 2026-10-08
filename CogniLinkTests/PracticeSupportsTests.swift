@@ -97,3 +97,83 @@ extension PracticeSupportsTests {
     }
   }
 }
+
+// MARK: - F3 cueing ladder
+
+extension PracticeSupportsTests {
+
+  @Test func firstLetterCueHandlesScripts() {
+    #expect(CueLadder.firstLetterCue(for: "umbrella") == "U")
+    #expect(CueLadder.firstLetterCue(for: "  éclair") == "É")
+    #expect(CueLadder.firstLetterCue(for: "ماء") == "م")
+    #expect(CueLadder.firstLetterCue(for: "पानी") == "पा")  // grapheme cluster (aksara)
+    #expect(CueLadder.firstLetterCue(for: "水") == "水")
+    #expect(CueLadder.firstLetterCue(for: "42") == nil)
+    #expect(CueLadder.firstLetterCue(for: "$6.50") == nil)
+    #expect(CueLadder.firstLetterCue(for: "") == nil)
+  }
+
+  @Test func ladderSkipsLetterHintWhenNoLetter() {
+    #expect(CueLadder.nextLevel(after: 0, answer: "cat") == 1)
+    #expect(CueLadder.nextLevel(after: 1, answer: "cat") == 2)
+    #expect(CueLadder.nextLevel(after: 1, answer: "42") == 3)
+    #expect(CueLadder.nextLevel(after: 2, answer: "cat") == 3)
+    #expect(CueLadder.nextLevel(after: 3, answer: "cat") == nil)
+  }
+
+  @Test func eligibilityIsWordFindingOnly() {
+    func ex(_ type: ExerciseType, _ tracked: TrackedExerciseType?) -> Exercise {
+      Exercise(title: "t", instructions: "i", section: .language, type: type, trackedType: tracked, difficulty: .easy, items: [])
+    }
+    #expect(CueLadder.isEligible(ex(.sentenceCompletion, nil)))
+    #expect(CueLadder.isEligible(ex(.multipleChoice, .completeTheSaying)))
+    #expect(CueLadder.isEligible(ex(.multipleChoice, .wordAssociation)))
+    #expect(!CueLadder.isEligible(ex(.multipleChoice, nil)))
+    #expect(!CueLadder.isEligible(ex(.yesNo, nil)))
+    #expect(!CueLadder.isEligible(ex(.sequencing, .sequencing)))
+    #expect(!CueLadder.isEligible(ex(.multipleChoice, .causeAndEffect)))
+  }
+
+  @Test func catalogsContainEligibleExercises() {
+    let count = ExerciseDataValidator.catalogs.reduce(0) { acc, c in
+      acc + c.exercises().filter { CueLadder.isEligible($0) }.count
+    }
+    #expect(count > 0)
+  }
+}
+
+extension PracticeSupportsTests {
+  @Test func meaningCueMasksAnswerOrFallsBackToCategory() {
+    let masked = ExerciseItem(prompt: "She locked the ___.", options: ["door", "more", "core"],
+                              correctAnswer: "door", explanation: "A door can be locked for safety.")
+    let cue = CueLadder.meaningCue(for: masked, fallbackCategory: "Sentence Completion (Easy)")
+    #expect(cue == "A … can be locked for safety.")
+    #expect(!cue.lowercased().contains("door"))
+
+    let noExplanation = ExerciseItem(prompt: "p", options: ["a", "b"], correctAnswer: "door", explanation: "")
+    #expect(CueLadder.meaningCue(for: noExplanation, fallbackCategory: "Sentence Completion (Easy)") == "Sentence Completion")
+
+    let shortAnswer = ExerciseItem(prompt: "p", options: ["a", "b"], correctAnswer: "on", explanation: "Use on for surfaces.")
+    #expect(CueLadder.meaningCue(for: shortAnswer, fallbackCategory: "Prepositions") == "Prepositions")
+  }
+
+  @Test func stripQualifierHandlesBothParenStyles() {
+    #expect(CueLadder.stripQualifier("Synonyms (Hard)") == "Synonyms")
+    #expect(CueLadder.stripQualifier("文の完成（やさしい）") == "文の完成")
+    #expect(CueLadder.stripQualifier("(Only)") == "(Only)")
+  }
+
+  @Test func meaningCueNeverLeaksAnswerAcrossCatalogs() {
+    for catalog in ExerciseDataValidator.catalogs {
+      for exercise in catalog.exercises() where CueLadder.isEligible(exercise) {
+        for item in exercise.items {
+          let cue = CueLadder.meaningCue(for: item, fallbackCategory: exercise.title)
+          let answer = item.correctAnswer.trimmingCharacters(in: .whitespacesAndNewlines)
+          if answer.count >= 3 && cue != CueLadder.stripQualifier(exercise.title) {
+            #expect(cue.range(of: answer, options: [.caseInsensitive, .diacriticInsensitive]) == nil)
+          }
+        }
+      }
+    }
+  }
+}

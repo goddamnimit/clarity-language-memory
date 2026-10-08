@@ -131,4 +131,80 @@ enum FS {
           fr: "Affiche moins de choix dans les questions à choix multiples pour les faciliter. La bonne réponse est toujours incluse.",
           am: "ጥያቄዎችን ለማቅለል በበርካታ ምርጫ ጥያቄዎች ውስጥ አማራጮችን ይቀንሳል። ትክክለኛው መልስ ሁልጊዜ ይካተታል።")
     }
+
+    // MARK: - F3 Cueing ladder
+
+    static var hintsLabel: String {
+        L(en: "Word-finding hints", es: "Pistas para encontrar palabras", hi: "शब्द खोजने के संकेत",
+          gu: "શબ્દ શોધવાના સંકેતો", zh: "找词提示", fa: "راهنمای یافتن واژه", ko: "단어 찾기 힌트",
+          vi: "Gợi ý tìm từ", ar: "تلميحات إيجاد الكلمات", pt: "Dicas para achar palavras",
+          tl: "Mga pahiwatig sa paghanap ng salita", pa: "ਸ਼ਬਦ ਲੱਭਣ ਦੇ ਸੰਕੇਤ", hy: "Բառ գտնելու ակնարկներ",
+          ja: "ことば探しのヒント", fr: "Indices pour trouver les mots", am: "ቃል ለማግኘት ፍንጮች")
+    }
+
+    static var hintsSubtitle: String {
+        L(en: "Offer step-by-step hints on word-finding questions: a category clue, then the first letter, then the answer. Hinted answers don't count as first-try correct.",
+          es: "Ofrece pistas paso a paso en las preguntas de buscar palabras: una pista de categoría, luego la primera letra y después la respuesta. Las respuestas con pista no cuentan como correctas al primer intento.",
+          hi: "शब्द खोजने वाले प्रश्नों में चरण-दर-चरण संकेत दें: पहले श्रेणी का संकेत, फिर पहला अक्षर, फिर उत्तर। संकेत के साथ दिए गए उत्तर पहली कोशिश में सही नहीं गिने जाते।",
+          gu: "શબ્દ શોધવાના પ્રશ્નોમાં તબક્કાવાર સંકેતો આપો: પહેલાં શ્રેણીનો સંકેત, પછી પહેલો અક્ષર, પછી જવાબ. સંકેત સાથે આપેલા જવાબ પહેલા પ્રયાસના સાચા ગણાતા નથી.",
+          zh: "在找词类题目中提供分步提示：先给类别线索，再给首字，最后显示答案。使用提示后答对不计为首次答对。",
+          fa: "در پرسش‌های یافتن واژه، راهنمای گام‌به‌گام ارائه می‌شود: ابتدا سرنخ دسته، سپس حرف اول و در پایان پاسخ. پاسخ‌های همراه با راهنما در شمار پاسخ درست در تلاش اول نمی‌آیند.",
+          ko: "단어 찾기 문제에서 단계별 힌트를 제공합니다: 먼저 범주 단서, 다음 첫 글자, 마지막으로 정답. 힌트를 쓴 정답은 첫 시도 정답으로 계산되지 않습니다.",
+          vi: "Đưa ra gợi ý từng bước ở câu hỏi tìm từ: trước là gợi ý về nhóm, rồi chữ cái đầu, sau đó là đáp án. Câu trả lời có dùng gợi ý không được tính là đúng ngay lần đầu.",
+          ar: "تقديم تلميحات تدريجية في أسئلة إيجاد الكلمات: تلميح عن الفئة، ثم الحرف الأول، ثم الإجابة. الإجابات التي استُخدم فيها تلميح لا تُحتسب صحيحة من المحاولة الأولى.",
+          pt: "Oferece dicas passo a passo nas perguntas de achar palavras: uma pista de categoria, depois a primeira letra e por fim a resposta. Respostas com dica não contam como certas na primeira tentativa.",
+          tl: "Magbigay ng hakbang-hakbang na pahiwatig sa mga tanong sa paghanap ng salita: pahiwatig ng kategorya, saka unang titik, saka ang sagot. Ang mga sagot na may pahiwatig ay hindi bibilangin bilang tama sa unang subok.",
+          pa: "ਸ਼ਬਦ ਲੱਭਣ ਵਾਲੇ ਸਵਾਲਾਂ ਵਿੱਚ ਕਦਮ-ਦਰ-ਕਦਮ ਸੰਕੇਤ ਦਿਓ: ਪਹਿਲਾਂ ਸ਼੍ਰੇਣੀ ਦਾ ਸੰਕੇਤ, ਫਿਰ ਪਹਿਲਾ ਅੱਖਰ, ਫਿਰ ਜਵਾਬ। ਸੰਕੇਤ ਨਾਲ ਦਿੱਤੇ ਜਵਾਬ ਪਹਿਲੀ ਕੋਸ਼ਿਸ਼ ਦੇ ਸਹੀ ਨਹੀਂ ਗਿਣੇ ਜਾਂਦੇ।",
+          hy: "Բառ գտնելու հարցերում տալ քայլ առ քայլ ակնարկներ՝ նախ կատեգորիայի ակնարկ, հետո առաջին տառը, ապա պատասխանը։ Ակնարկով տրված պատասխանները չեն համարվում առաջին փորձով ճիշտ։",
+          ja: "ことば探しの問題で、カテゴリーのヒント、最初の文字、答えの順に段階的なヒントを出します。ヒントを使った正解は初回正解として数えません。",
+          fr: "Propose des indices progressifs aux questions de recherche de mots : un indice de catégorie, puis la première lettre, puis la réponse. Les réponses données avec indice ne comptent pas comme justes du premier coup.",
+          am: "ቃል ፍለጋ ጥያቄዎች ላይ ደረጃ በደረጃ ፍንጭ ይሰጣል፦ የምድብ ፍንጭ፣ ከዚያ የመጀመሪያ ፊደል፣ ከዚያ መልሱ። በፍንጭ የተሰጡ መልሶች እንደ መጀመሪያ ሙከራ ትክክል አይቆጠሩም።")
+    }
+
+    static var needHint: String {
+        L(en: "Need a hint?", es: "¿Necesita una pista?", hi: "संकेत चाहिए?", gu: "સંકેત જોઈએ?",
+          zh: "需要提示吗？", fa: "راهنمایی می‌خواهید؟", ko: "힌트가 필요하세요?", vi: "Cần gợi ý không?",
+          ar: "هل تحتاج إلى تلميح؟", pt: "Precisa de uma dica?", tl: "Kailangan ng pahiwatig?",
+          pa: "ਸੰਕੇਤ ਚਾਹੀਦਾ ਹੈ?", hy: "Ակնարկ պե՞տք է", ja: "ヒントが必要ですか？",
+          fr: "Besoin d’un indice ?", am: "ፍንጭ ይፈልጋሉ?")
+    }
+
+    static var anotherHint: String {
+        L(en: "Another hint", es: "Otra pista", hi: "एक और संकेत", gu: "બીજો સંકેત", zh: "再给一个提示",
+          fa: "راهنمای بیشتر", ko: "힌트 더 보기", vi: "Thêm gợi ý", ar: "تلميح آخر", pt: "Outra dica",
+          tl: "Isa pang pahiwatig", pa: "ਇੱਕ ਹੋਰ ਸੰਕੇਤ", hy: "Եվս մեկ ակնարկ", ja: "もう一つヒント",
+          fr: "Un autre indice", am: "ሌላ ፍንጭ")
+    }
+
+    static var showAnswer: String {
+        L(en: "Show the answer", es: "Mostrar la respuesta", hi: "उत्तर दिखाएँ", gu: "જવાબ બતાવો",
+          zh: "显示答案", fa: "نمایش پاسخ", ko: "정답 보기", vi: "Hiện đáp án", ar: "إظهار الإجابة",
+          pt: "Mostrar a resposta", tl: "Ipakita ang sagot", pa: "ਜਵਾਬ ਦਿਖਾਓ", hy: "Ցույց տալ պատասխանը",
+          ja: "答えを見る", fr: "Voir la réponse", am: "መልሱን አሳይ")
+    }
+
+    static func thinkAbout(_ category: String) -> String {
+        let f = L(en: "Think about: %@", es: "Piense en: %@", hi: "सोचिए: %@", gu: "વિચારો: %@",
+                  zh: "想一想：%@", fa: "به این فکر کنید: %@", ko: "생각해 보세요: %@", vi: "Hãy nghĩ về: %@",
+                  ar: "فكّر في: %@", pt: "Pense em: %@", tl: "Isipin ang: %@", pa: "ਸੋਚੋ: %@",
+                  hy: "Մտածեք՝ %@", ja: "考えてみましょう：%@", fr: "Pensez à : %@", am: "ያስቡ፦ %@")
+        return f.replacingOccurrences(of: "%@", with: category)
+    }
+
+    static func startsWith(_ letter: String) -> String {
+        let f = L(en: "Starts with: %@", es: "Empieza con: %@", hi: "शुरुआत: %@", gu: "શરૂઆત: %@",
+                  zh: "首字：%@", fa: "با این حرف شروع می‌شود: %@", ko: "첫 글자: %@", vi: "Bắt đầu bằng: %@",
+                  ar: "تبدأ بـ: %@", pt: "Começa com: %@", tl: "Nagsisimula sa: %@", pa: "ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ: %@",
+                  hy: "Սկսվում է՝ %@", ja: "最初の文字：%@", fr: "Commence par : %@", am: "የሚጀምረው በ፦ %@")
+        return f.replacingOccurrences(of: "%@", with: letter)
+    }
+
+    static var answerShown: String {
+        L(en: "The answer is marked below.", es: "La respuesta está marcada abajo.", hi: "उत्तर नीचे चिह्नित है।",
+          gu: "જવાબ નીચે ચિહ્નિત છે.", zh: "答案已在下方标出。", fa: "پاسخ در پایین مشخص شده است.",
+          ko: "정답이 아래에 표시되었습니다.", vi: "Đáp án được đánh dấu bên dưới.", ar: "الإجابة معلَّمة أدناه.",
+          pt: "A resposta está marcada abaixo.", tl: "Naka-marka sa ibaba ang sagot.", pa: "ਜਵਾਬ ਹੇਠਾਂ ਨਿਸ਼ਾਨਬੱਧ ਹੈ।",
+          hy: "Պատասխանը նշված է ներքևում։", ja: "答えは下に印が付いています。", fr: "La réponse est indiquée ci-dessous.",
+          am: "መልሱ ከታች ምልክት ተደርጎበታል።")
+    }
 }

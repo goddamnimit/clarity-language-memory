@@ -23,6 +23,8 @@ struct ExerciseContainerView: View {
     @State private var displayedScore: Int = 0
     @State private var showFlagConfirmation = false
     @State private var showFlagToast = false
+    /// F3: highest cue level used per item index this session (0/absent = none).
+    @State private var cueLevels: [Int: Int] = [:]
 
     @ScaledMetric private var completionIconSize: CGFloat = 80
     @ScaledMetric private var flagIconSize: CGFloat = 15
@@ -232,7 +234,15 @@ struct ExerciseContainerView: View {
                             Group {
                                 switch exercise.type {
                                 case .multipleChoice, .sentenceCompletion, .homonym, .analogyChoice, .comparison:
-                                    MultipleChoiceView(item: currentItem, onAnswered: { correct in handleAnswer(correct) }, exerciseTitle: exercise.title)
+                                    MultipleChoiceView(
+                                        item: currentItem,
+                                        onAnswered: { correct in handleAnswer(correct) },
+                                        exerciseTitle: exercise.title,
+                                        cueCategory: cuesActive ? exercise.title : nil,
+                                        onCueLevel: { level in
+                                            cueLevels[currentIndex] = max(cueLevels[currentIndex] ?? 0, level)
+                                        }
+                                    )
                                 case .categoryCrossOut:
                                     CategoryCrossOutView(item: currentItem, onAnswered: { correct in handleAnswer(correct) })
                                 case .yesNo:
@@ -408,6 +418,16 @@ struct ExerciseContainerView: View {
         }
     }
     
+    /// F3: ladder offered only on iOS, for eligible exercises, when the caregiver
+    /// has not turned it off.
+    private var cuesActive: Bool {
+        #if os(iOS)
+        return PracticeSupportSettings.shared.cuesEnabled && CueLadder.isEligible(exercise)
+        #else
+        return false
+        #endif
+    }
+
     // MARK: - Core Logic Helpers
     
     private var recentSessionKey: String {
@@ -490,6 +510,7 @@ struct ExerciseContainerView: View {
         showConfetti = false
         confettiParticles = []
         sessionAttempts = []
+        cueLevels = [:]
         completionScale = 0.8
         completionOpacity = 0
         displayedScore = 0
@@ -511,13 +532,15 @@ struct ExerciseContainerView: View {
         let wrongAttempts = sessionAttempts.filter { ($0["correct"] as? Bool) == false }.count
         let firstTryCorrect = sessionItems.indices.filter { idx in
             let attemptsForItem = sessionAttempts.filter { ($0["itemIndex"] as? Int) == idx }
-            return attemptsForItem.first.flatMap { $0["correct"] as? Bool } == true
+            // Independent first try: correct on the first attempt with no cue.
+            guard let first = attemptsForItem.first else { return false }
+            return (first["correct"] as? Bool) == true && ((first["cueLevel"] as? Int) ?? 0) == 0
         }.count
 
         // Log this session for anonymous research export
         let startDate = UserProfileStore.shared.profile.startDate
         let dayOffset = Calendar.current.dateComponents([.day], from: startDate, to: Date()).day ?? 0
-        let record: [String: Any] = [
+        var record: [String: Any] = [
             "dayOffset": dayOffset,
             "score": score,
             "total": sessionItems.count,
@@ -529,6 +552,15 @@ struct ExerciseContainerView: View {
             "difficulty": ResearchExportManager.string(for: exercise.difficulty),
             "language": ResearchExportManager.string(for: languageManager.currentLanguage)
         ]
+        // F3 (additive, anonymous): how many items needed a cue, and the highest
+        // level reached per item as counts [hint1, hint2, reveal].
+        if !cueLevels.isEmpty {
+            let used = cueLevels.values.filter { $0 > 0 }
+            if !used.isEmpty {
+                record["cuedItems"] = used.count
+                record["cueLevelCounts"] = [1, 2, 3].map { level in used.filter { $0 == level }.count }
+            }
+        }
         ResearchExportManager.appendSessionRecord(record)
 
         // Practicing today changes what should fire — recompute reminders
@@ -591,9 +623,11 @@ struct ExerciseContainerView: View {
     }
 
     private func handleAnswer(_ correct: Bool) {
+        let cueLevel = cueLevels[currentIndex] ?? 0
         let attempt: [String: Any] = [
             "itemIndex": currentIndex,
             "correct": correct,
+            "cueLevel": cueLevel,
             "attemptNumber": attemptsForCurrentItem()
         ]
         sessionAttempts.append(attempt)
@@ -603,7 +637,9 @@ struct ExerciseContainerView: View {
         }
         
         if let adaptiveId = AdaptiveDifficultyStore.shared.adaptiveIdentifier(for: exercise) {
-            AdaptiveDifficultyStore.shared.recordAttempt(for: adaptiveId, correct: correct)
+            // A cued answer is not independent success: report it as not-correct
+            // to the adaptive store so hints can't inflate difficulty bumps.
+            AdaptiveDifficultyStore.shared.recordAttempt(for: adaptiveId, correct: correct && cueLevel == 0)
         }
     }
 

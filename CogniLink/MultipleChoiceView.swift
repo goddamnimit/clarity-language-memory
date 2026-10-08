@@ -8,6 +8,12 @@ struct MultipleChoiceView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
     var exerciseTitle: String = ""
+    /// F3: when non-nil the word-finding hint ladder is offered, with this
+    /// string as the category cue. `onCueLevel` reports the highest level used.
+    var cueCategory: String? = nil
+    var onCueLevel: ((Int) -> Void)? = nil
+
+    @State private var cueLevel = 0
 
     @State private var selectedOption: String? = nil
     @State private var hasAnswered = false
@@ -108,6 +114,12 @@ struct MultipleChoiceView: View {
                 .padding(.vertical, 8)
                 .fixedSize(horizontal: false, vertical: true)
 
+            #if os(iOS)
+            if let category = cueCategory {
+                cueLadderView(category: category)
+            }
+            #endif
+
             // Stacking option buttons vertically
             VStack(spacing: 14) {
                 ForEach(shuffledOptions, id: \.self) { option in
@@ -131,6 +143,14 @@ struct MultipleChoiceView: View {
 
                             Spacer()
 
+                            // F3 reveal: marker is a shape + icon, never colour alone
+                            if cueLevel >= 3 && !hasAnswered && isCorrectOption(option) {
+                                Image(systemName: "arrow.left.circle.fill")
+                                    .foregroundColor(.accentColor)
+                                    .font(.title3)
+                                    .accessibilityHidden(true)
+                            }
+
                             // Visual feedback icons revealed post-answer
                             if hasAnswered {
                                 if isCorrectOption(option) {
@@ -153,7 +173,9 @@ struct MultipleChoiceView: View {
                         .cornerRadius(16)
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(borderColor(for: option), lineWidth: 2)
+                                .stroke(cueLevel >= 3 && !hasAnswered && isCorrectOption(option)
+                                        ? Color.accentColor : borderColor(for: option),
+                                        lineWidth: cueLevel >= 3 && !hasAnswered && isCorrectOption(option) ? 4 : 2)
                         )
                         #endif
                     }
@@ -200,6 +222,56 @@ struct MultipleChoiceView: View {
         .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
     }
+
+    // MARK: - F3 Cue ladder
+
+    #if os(iOS)
+    @ViewBuilder
+    private func cueLadderView(category: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            if cueLevel >= 1 {
+                Label(FS.thinkAbout(CueLadder.meaningCue(for: item, fallbackCategory: category)), systemImage: "lightbulb")
+                    .font(.subheadline)
+                    .foregroundColor(.primary)
+            }
+            if cueLevel >= 2, let letter = CueLadder.firstLetterCue(for: item.correctAnswer) {
+                Label(FS.startsWith(letter), systemImage: "textformat.abc")
+                    .font(.subheadline)
+                    .foregroundColor(.primary)
+            }
+            if cueLevel >= 3 {
+                Label(FS.answerShown, systemImage: "checkmark.circle")
+                    .font(.subheadline)
+                    .foregroundColor(.primary)
+            }
+            if !(hasAnswered && answeredCorrectly), let next = CueLadder.nextLevel(after: cueLevel, answer: item.correctAnswer) {
+                Button {
+                    advanceCue(to: next, category: category)
+                } label: {
+                    Label(next == 1 ? FS.needHint : (next == 3 ? FS.showAnswer : FS.anotherHint),
+                          systemImage: next == 3 ? "eye" : "lightbulb")
+                        .font(.subheadline.weight(.semibold))
+                        .frame(minHeight: 44)
+                }
+                .buttonStyle(.bordered)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityElement(children: .contain)
+    }
+
+    private func advanceCue(to level: Int, category: String) {
+        cueLevel = level
+        onCueLevel?(level)
+        let text: String
+        switch level {
+        case 1: text = FS.thinkAbout(CueLadder.meaningCue(for: item, fallbackCategory: category))
+        case 2: text = CueLadder.firstLetterCue(for: item.correctAnswer).map { FS.startsWith($0) } ?? ""
+        default: text = FS.answerShown + " " + item.correctAnswer
+        }
+        UIAccessibility.post(notification: .announcement, argument: text)
+    }
+    #endif
 
     // MARK: - Memory Timer
 
