@@ -308,6 +308,18 @@ struct HomeView: View {
                         }
                         .buttonStyle(.plain)
                         .tvFocusEffect()
+
+                        #if os(iOS)
+                        NavigationLink(destination: NumberSkillsView()) {
+                            sectionCard(
+                                title: FS.numberSkillsTitle,
+                                subtitle: FS.numberSkillsSubtitle,
+                                systemImage: "number.circle",
+                                color: .orange
+                            )
+                        }
+                        .buttonStyle(.plain)
+                        #endif
                     }
                     .padding(.horizontal)
                 }

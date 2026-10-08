@@ -193,3 +193,94 @@ extension PracticeSupportsTests {
     #expect(nm.secondReminderMinute == 0)
   }
 }
+
+// MARK: - F4 number skills
+
+extension PracticeSupportsTests {
+
+  @Test func numberQuestionsAreWellFormedInEveryLanguage() {
+    var rng = SplitMix64(seed: 42)
+    for language in AppLanguage.allCases {
+      let locale = Locale(identifier: language.localeIdentifier.replacingOccurrences(of: "_", with: "-"))
+      for category in NumberCategory.allCases {
+        for _ in 0..<25 {
+          let q = NumberDrillGenerator.make(category, locale: locale, using: &rng)
+          #expect(!q.text.isEmpty && !q.spoken.isEmpty, "\(language) \(category)")
+          #expect(!q.digits.isEmpty, "\(language) \(category) \(q.text)")
+          #expect(q.distractors.count == 3, "\(language) \(category) \(q.text)")
+          #expect(!q.distractors.contains(q.text))
+          #expect(Set(q.distractors).count == q.distractors.count)
+          // The digits of the displayed answer (any numeral system) are what typing is checked against.
+          if category != .phone { #expect(NumberDrillGenerator.asciiDigits(q.text) == q.digits) }
+        }
+      }
+    }
+  }
+
+  @Test func asciiDigitsHandlesNonLatinNumerals() {
+    #expect(NumberDrillGenerator.asciiDigits("٣:٤٥") == "345")
+    #expect(NumberDrillGenerator.asciiDigits("१२:३०") == "1230")
+    #expect(NumberDrillGenerator.asciiDigits("૧૨") == "12")
+    #expect(NumberDrillGenerator.asciiDigits("$12.50") == "1250")
+    #expect(NumberDrillGenerator.asciiDigits("３:４５") == "345")
+    #expect(NumberDrillGenerator.asciiDigits("3:45 PM") == "345")
+  }
+
+  @Test func personalPhoneIsUsedAndFictionalOtherwise() {
+    var rng = SplitMix64(seed: 7)
+    let en = Locale(identifier: "en-US")
+    let mine = NumberDrillGenerator.make(.phone, locale: en, personalPhone: "(415) 555-0123", using: &rng)
+    #expect(mine.digits == "4155550123")
+    #expect(mine.text == "(415) 555-0123")
+    for _ in 0..<50 {
+      let q = NumberDrillGenerator.make(.phone, locale: en, using: &rng)
+      #expect(q.digits.count == 10)
+      #expect(q.digits.dropFirst(3).hasPrefix("55501"), "fictional range: \(q.digits)")
+    }
+    // Invalid personal numbers fall back to the fictional generator.
+    let bad = NumberDrillGenerator.make(.phone, locale: en, personalPhone: "12345", using: &rng)
+    #expect(bad.digits.count == 10)
+  }
+
+  @Test func optionsAlwaysIncludeAnswerAndRespectCount() {
+    var rng = SplitMix64(seed: 99)
+    let q = NumberDrillGenerator.make(.price, locale: Locale(identifier: "en-US"), using: &rng)
+    for n in [2, 3, 4] {
+      let opts = NumberDrillGenerator.options(for: q, count: n, using: &rng)
+      #expect(opts.count == n)
+      #expect(opts.contains(q.text))
+      #expect(Set(opts).count == n)
+    }
+  }
+
+  @Test func timeUsesLocaleClock() {
+    var rng = SplitMix64(seed: 5)
+    let us = NumberDrillGenerator.make(.time, locale: Locale(identifier: "en-US"), using: &rng)
+    let fr = NumberDrillGenerator.make(.time, locale: Locale(identifier: "fr-FR"), using: &rng)
+    #expect(us.text.contains("AM") || us.text.contains("PM"))
+    #expect(!fr.text.contains("AM") && !fr.text.contains("PM"))
+  }
+}
+
+extension PracticeSupportsTests {
+  @MainActor
+  @Test func personalPhoneNeverReachesResearchExport() throws {
+    NumberSkillsStore.personalPhone = "415 555 0123"
+    defer { NumberSkillsStore.personalPhone = nil }
+    let data = try #require(ResearchExportManager.generateExport())
+    let text = String(decoding: data, as: UTF8.self)
+    #expect(!text.contains("4155550123"))
+    #expect(!text.contains("415 555 0123"))
+    #expect(!text.contains("555"))
+  }
+
+  @Test func typedAnswersIgnoreLeadingZerosAndNumerals() {
+    var rng = SplitMix64(seed: 11)
+    let q = NumberDrillGenerator.make(.time, locale: Locale(identifier: "fr-FR"), using: &rng)
+    let digits = q.digits
+    #expect(NumberDrillGenerator.matches(typed: digits, answer: q))
+    #expect(NumberDrillGenerator.matches(typed: String(digits.drop(while: { $0 == "0" })), answer: q))
+    #expect(!NumberDrillGenerator.matches(typed: "", answer: q))
+    #expect(!NumberDrillGenerator.matches(typed: "99999", answer: q))
+  }
+}

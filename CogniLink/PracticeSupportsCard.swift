@@ -6,6 +6,7 @@ import SwiftUI
 struct PracticeSupportsCard: View {
     @ObservedObject private var languageManager = LanguageManager.shared
     @ObservedObject private var settings = PracticeSupportSettings.shared
+    @State private var phoneText = NumberSkillsStore.personalPhone ?? ""
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -62,6 +63,28 @@ struct PracticeSupportsCard: View {
                         .foregroundColor(.primary)
                 }
                 Text(FS.hintsSubtitle)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text(FS.phoneSettingLabel)
+                    .font(.body)
+                    .foregroundColor(.primary)
+                TextField(FS.phonePlaceholder, text: $phoneText)
+                    .keyboardType(.phonePad)
+                    .textContentType(.telephoneNumber)
+                    .padding(10)
+                    .background(Color.systemBackground)
+                    .cornerRadius(8)
+                    .environment(\.layoutDirection, .leftToRight)
+                    .onChange(of: phoneText) { _, newValue in
+                        NumberSkillsStore.personalPhone = newValue
+                    }
+                Text(FS.phoneSettingSubtitle)
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
