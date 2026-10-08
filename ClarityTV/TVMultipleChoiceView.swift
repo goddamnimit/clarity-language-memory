@@ -52,28 +52,23 @@ struct TVMultipleChoiceView: View {
         GeometryReader { geo in
             VStack(spacing: 0) {
                 // Top 35% — exercise type label + question prompt
-                VStack(spacing: 20) {
-                    Spacer()
-
+                VStack(spacing: 12) {
                     Text(typeLabel)
                         .font(.system(size: 28, weight: .light))
                         .foregroundColor(Color.white.opacity(0.45))
                         .tracking(3)
                         .textCase(.uppercase)
-
-                    ScrollView(.vertical) {
-                        Text(item.prompt)
-                            .font(.system(size: 42, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .minimumScaleFactor(0.7)
-                            .padding(.horizontal, 120)
-                    }
-                    .frame(maxHeight: 280)
-
-                    Spacer()
+                    // Scales down to fit the band instead of scrolling/clipping.
+                    Text(item.prompt)
+                        .font(.system(size: 42, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(6)
+                        .minimumScaleFactor(0.4)
+                        .padding(.horizontal, 120)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                .padding(.vertical, 8)
                 .frame(height: geo.size.height * 0.35)
 
                 // Bottom — 2×2 answer tile grid. Rows are flexible-height so the
