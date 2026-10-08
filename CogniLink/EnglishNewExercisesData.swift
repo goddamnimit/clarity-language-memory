@@ -129,24 +129,24 @@ struct EnglishNewExercisesData {
         items: [
             ExerciseItem(prompt: "SUN + ___", options: ["Flower", "Cloud", "Rain", "Wind"], correctAnswer: "Flower", explanation: "Sun + Flower = Sunflower."),
             ExerciseItem(prompt: "RAIN + ___", options: ["Bow", "Bicycle", "Chair", "Lamp"], correctAnswer: "Bow", explanation: "Rain + Bow = Rainbow."),
-            ExerciseItem(prompt: "BUTTER + ___", options: ["Fly", "Milk", "Cup", "Knife"], correctAnswer: "Fly", explanation: "Butter + Fly = Butterfly."),
+            ExerciseItem(prompt: "BUTTER + ___", options: ["Fly", "Shoe", "Lamp", "Ring"], correctAnswer: "Fly", explanation: "Butter + Fly = Butterfly."),
             ExerciseItem(prompt: "SNOW + ___", options: ["Man", "River", "Guitar", "Pencil"], correctAnswer: "Man", explanation: "Snow + Man = Snowman."),
             ExerciseItem(prompt: "KEY + ___", options: ["Board", "Cloud", "Guitar", "River"], correctAnswer: "Board", explanation: "Key + Board = Keyboard."),
             ExerciseItem(prompt: "PAN + ___", options: ["Cake", "Cook", "Plate", "Bowl"], correctAnswer: "Cake", explanation: "Pan + Cake = Pancake."),
             ExerciseItem(prompt: "JELLY + ___", options: ["Fish", "Bean", "Roll", "Stone"], correctAnswer: "Fish", explanation: "Jelly + Fish = Jellyfish."),
-            ExerciseItem(prompt: "CAMP + ___", options: ["Fire", "Ground", "Site", "Bag"], correctAnswer: "Fire", explanation: "Camp + Fire = Campfire."),
+            ExerciseItem(prompt: "CAMP + ___", options: ["Fire", "Pencil", "Window", "Spoon"], correctAnswer: "Fire", explanation: "Camp + Fire = Campfire."),
             ExerciseItem(prompt: "FOOT + ___", options: ["Ball", "Cloud", "Guitar", "Lamp"], correctAnswer: "Ball", explanation: "Foot + Ball = Football."),
             ExerciseItem(prompt: "FIRE + ___", options: ["Fly", "Chair", "Cloud", "Pencil"], correctAnswer: "Fly", explanation: "Fire + Fly = Firefly."),
             ExerciseItem(prompt: "TOOTH + ___", options: ["Brush", "Cloud", "River", "Guitar"], correctAnswer: "Brush", explanation: "Tooth + Brush = Toothbrush."),
             ExerciseItem(prompt: "LIGHT + ___", options: ["House", "Cloud", "Pencil", "River"], correctAnswer: "House", explanation: "Light + House = Lighthouse."),
-            ExerciseItem(prompt: "STAR + ___", options: ["Fish", "Light", "Dust", "Gaze"], correctAnswer: "Fish", explanation: "Star + Fish = Starfish."),
+            ExerciseItem(prompt: "STAR + ___", options: ["Fish", "Table", "Spoon", "Carpet"], correctAnswer: "Fish", explanation: "Star + Fish = Starfish."),
             ExerciseItem(prompt: "EAR + ___", options: ["Ring", "Cloud", "Pencil", "Guitar"], correctAnswer: "Ring", explanation: "Ear + Ring = Earring."),
             ExerciseItem(prompt: "PLAY + ___", options: ["Ground", "Cloud", "River", "Lamp"], correctAnswer: "Ground", explanation: "Play + Ground = Playground."),
-            ExerciseItem(prompt: "WATER + ___", options: ["Melon", "Fall", "Color", "Bottle"], correctAnswer: "Melon", explanation: "Water + Melon = Watermelon."),
-            ExerciseItem(prompt: "PINE + ___", options: ["Apple", "Cone", "Tree", "Needle"], correctAnswer: "Apple", explanation: "Pine + Apple = Pineapple."),
+            ExerciseItem(prompt: "WATER + ___", options: ["Melon", "Chair", "Pencil", "Carpet"], correctAnswer: "Melon", explanation: "Water + Melon = Watermelon."),
+            ExerciseItem(prompt: "PINE + ___", options: ["Apple", "Table", "Spoon", "Window"], correctAnswer: "Apple", explanation: "Pine + Apple = Pineapple."),
             ExerciseItem(prompt: "DRAGON + ___", options: ["Fly", "Boat", "Tail", "Egg"], correctAnswer: "Fly", explanation: "Dragon + Fly = Dragonfly."),
             ExerciseItem(prompt: "SUN + ___", options: ["Glasses", "Chair", "Pencil", "Guitar"], correctAnswer: "Glasses", explanation: "Sun + Glasses = Sunglasses."),
-            ExerciseItem(prompt: "WHEEL + ___", options: ["Chair", "Barrow", "Base", "Alignment"], correctAnswer: "Chair", explanation: "Wheel + Chair = Wheelchair.")
+            ExerciseItem(prompt: "WHEEL + ___", options: ["Chair", "Pencil", "Spoon", "Window"], correctAnswer: "Chair", explanation: "Wheel + Chair = Wheelchair.")
         ]
     )
 
