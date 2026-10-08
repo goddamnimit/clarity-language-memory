@@ -151,6 +151,7 @@ struct AllActivitiesView: View {
         case .japanese:   return "すべての活動"
         case .french:     return "Toutes les Activités"
         case .amharic:    return "ሁሉም ተግባራት"
+        case .russian:    return "Все занятия"
         }
     }
 
@@ -172,6 +173,7 @@ struct AllActivitiesView: View {
         case .japanese:   return "このセクションで利用可能な演習はありません。"
         case .french:     return "Aucun exercice disponible dans cette section."
         case .amharic:    return "በዚህ ክፍል ውስጥ ምንም መልመጃዎች የሉም።"
+        case .russian:    return "В этом разделе пока нет упражнений."
         }
     }
 
@@ -193,6 +195,7 @@ struct AllActivitiesView: View {
         case .japanese:   return "おまかせ！🎲"
         case .french:     return "Me Surprendre !"
         case .amharic:    return "አስገርመኝ!"
+        case .russian:    return "Удивите меня!"
         }
     }
 
@@ -293,6 +296,12 @@ struct AllActivitiesView: View {
             case .language: return "ቋንቋ"
             case .cognition: return "አስተሳሰብ"
             case .functionalSkills: return "ተግባራዊ ክህሎቶች"
+            }
+        case .russian:
+            switch section {
+            case .language: return "Язык"
+            case .cognition: return "Мышление и память"
+            case .functionalSkills: return "Повседневные навыки"
             }
         }
     }

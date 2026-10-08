@@ -475,3 +475,26 @@ extension PracticeSupportsTests {
     #expect(Set(deck.map(\.topic.id)).count == 8)
   }
 }
+
+// MARK: - Preview languages
+
+extension PracticeSupportsTests {
+  @Test func previewLanguagesAreHiddenFromThePicker() {
+    #expect(AppLanguage.russian.isPreview)
+    #expect(!AppLanguage.visibleCases.contains(.russian))
+    #expect(AppLanguage.visibleCases.count == 16)
+    #expect(AppLanguage.allCases.count == 17)
+    for language in AppLanguage.visibleCases { #expect(!language.isPreview) }
+  }
+
+  @Test func russianHasContentInEverySectionAndIsCyrillic() {
+    let all = LanguageManager.shared.allExercises[.russian] ?? []
+    #expect(all.reduce(0) { $0 + $1.items.count } >= 961)
+    for section in [AppSection.language, .cognition, .functionalSkills] {
+      #expect(all.contains { $0.section == section })
+    }
+    let text = all.flatMap { $0.items }.map { $0.prompt + $0.explanation }.joined()
+    #expect(text.unicodeScalars.contains { (0x400...0x4FF).contains($0.value) })
+    #expect(!text.contains(where: { "іїєґ".contains($0) }), "Ukrainian-only letters in Russian content")
+  }
+}

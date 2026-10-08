@@ -702,6 +702,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "満点！🎉"
         case .french:     return "Score parfait ! 🎉"
         case .amharic:    return "ፍጹም ውጤት! 🎉"
+        case .russian:    return "Отличный результат! 🎉"
         }
     }
 
@@ -723,6 +724,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "セッション完了！"
         case .french:     return "Session terminée !"
         case .amharic:    return "ክፍለ-ጊዜው ተጠናቋል!"
+        case .russian:    return "Занятие завершено!"
         }
     }
 
@@ -744,6 +746,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "スコア"
         case .french:     return "Score"
         case .amharic:    return "ውጤት"
+        case .russian:    return "Результат"
         }
     }
 
@@ -765,6 +768,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "新しいセッション"
         case .french:     return "Nouvelle session"
         case .amharic:    return "አዲስ ክፍለ-ጊዜ"
+        case .russian:    return "Новое занятие"
         }
     }
 
@@ -786,6 +790,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "演習に戻る"
         case .french:     return "Retour aux exercices"
         case .amharic:    return "ወደ መልመጃዎች ተመለስ"
+        case .russian:    return "К упражнениям"
         }
     }
 
@@ -807,6 +812,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "問題"
         case .french:     return "Question"
         case .amharic:    return "ጥያቄ"
+        case .russian:    return "Вопрос"
         }
     }
 
@@ -828,6 +834,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "/"
         case .french:     return "sur"
         case .amharic:    return "ከ"
+        case .russian:    return "из"
         }
     }
 
@@ -849,6 +856,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "前へ"
         case .french:     return "Précédent"
         case .amharic:    return "ቀዳሚ"
+        case .russian:    return "Назад"
         }
     }
 
@@ -870,6 +878,7 @@ struct ExerciseContainerView: View {
         case .japanese:   return "スキップ"
         case .french:     return "Passer"
         case .amharic:    return "ዝለል"
+        case .russian:    return "Пропустить"
         }
     }
 }

@@ -18,7 +18,7 @@ enum ExerciseDataValidator {
   private static let yesNoOptions = ["Yes", "No"]
   private static let factOrOpinionOptions = ["Fact", "Opinion"]
 
-  /// All bundled exercise catalogs (54 data files).
+  /// All bundled exercise catalogs (59 data files).
   static let catalogs: [(name: String, exercises: () -> [Exercise])] = [
     // English (original)
     ("LanguageExerciseData", { LanguageExerciseData.allExercises }),
@@ -117,7 +117,13 @@ enum ExerciseDataValidator {
     ("AmharicCognitionExerciseData", { AmharicCognitionExerciseData.allExercises }),
     ("AmharicFunctionalSkillsExerciseData", { AmharicFunctionalSkillsExerciseData.allExercises }),
     ("AmharicNewExercisesData", { AmharicNewExercisesData.allExercises }),
-    ("AmharicHardExercisesData", { AmharicHardExercisesData.allExercises })
+    ("AmharicHardExercisesData", { AmharicHardExercisesData.allExercises }),
+    // Russian (preview, hidden until native-speaker review)
+    ("RussianLanguageExerciseData", { RussianLanguageExerciseData.allExercises }),
+    ("RussianCognitionExerciseData", { RussianCognitionExerciseData.allExercises }),
+    ("RussianFunctionalSkillsExerciseData", { RussianFunctionalSkillsExerciseData.allExercises }),
+    ("RussianNewExercisesData", { RussianNewExercisesData.allExercises }),
+    ("RussianHardExercisesData", { RussianHardExercisesData.allExercises })
   ]
 
   /// Validates every exercise in every catalog.

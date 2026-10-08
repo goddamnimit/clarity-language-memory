@@ -183,7 +183,7 @@ struct OnboardingView: View {
             // Outer ScrollView (added for this page) already handles scrolling —
             // nesting a second vertical ScrollView here would create gesture conflicts.
             VStack(spacing: 12) {
-                ForEach(AppLanguage.allCases) { language in
+                ForEach(AppLanguage.visibleCases) { language in
                     languageCard(language)
                 }
             }
@@ -193,7 +193,7 @@ struct OnboardingView: View {
             #else
             ScrollView {
                 VStack(spacing: 12) {
-                    ForEach(AppLanguage.allCases) { language in
+                    ForEach(AppLanguage.visibleCases) { language in
                         languageCard(language)
                     }
                 }

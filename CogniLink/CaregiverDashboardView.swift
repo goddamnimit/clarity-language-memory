@@ -580,6 +580,7 @@ extension AppLanguage {
         case .japanese:   return "目標志向"
         case .french:     return "Orientation vers les objectifs"
         case .amharic:    return "የግብ አቅጣጫ"
+        case .russian:    return "Цель занятий"
         }
     }
 
@@ -603,6 +604,7 @@ extension AppLanguage {
             case .japanese:   return "回復"
             case .french:     return "Rétablissement"
             case .amharic:    return "ማገገም"
+            case .russian:    return "Восстановление"
             }
         case .maintenance:
             switch self {
@@ -622,6 +624,7 @@ extension AppLanguage {
             case .japanese:   return "メンテナンス"
             case .french:     return "Entretien"
             case .amharic:    return "ሁኔታን ጠብቆ ማቆየት"
+            case .russian:    return "Поддержание"
             }
         }
     }
@@ -644,6 +647,7 @@ extension AppLanguage {
         case .japanese:   return "回復：この枠組みでは、改善が目標であると想定される。メンテナンス：この枠組みでは、安定したパフォーマンスを肯定的な成果として捉える。"
         case .french:     return "Rétablissement : cette approche part du principe que l'objectif est l'amélioration. Entretien : cette approche considère qu'un rendement stable constitue un résultat positif."
         case .amharic:    return "ማገገም፡ ዋናው ግብ መሻሻል መሆኑን ያሳያል። ሁኔታን ጠብቆ ማቆየት፡ አፈጻጸም ሳይቀያየር በተመሳሳይ ሁኔታ መቀጠሉን እንደ ጥሩ ውጤት ይቆጥረዋል።"
+        case .russian:    return "Восстановление: подразумевается, что цель — улучшение. Поддержание: стабильный результат считается хорошим исходом."
         }
     }
 
@@ -665,6 +669,7 @@ extension AppLanguage {
         case .japanese:   return "日々の変動が見込まれます"
         case .french:     return "Prévoyez des fluctuations quotidiennes"
         case .amharic:    return "የዕለት ተዕለት መለዋወጥን ጠብቅ"
+        case .russian:    return "Ожидаются колебания по дням"
         }
     }
 
@@ -686,6 +691,7 @@ extension AppLanguage {
         case .japanese:   return "治療における大切な方の経過とは関係のない理由で、日々の浮き沈みが予想される場合は、この設定をオンにしてください。"
         case .french:     return "Cochez cette case si vous vous attendez à des hauts et des bas au quotidien pour des raisons qui n'ont rien à voir avec les progrès de votre proche en thérapie."
         case .amharic:    return "የምትወዱት ሰው በሕክምናው ላይ ካለው ሁኔታ ውጭ፣ በሌሎች ምክንያቶች የዕለት ተዕለት መለዋወጥ (መውረድ እና መውጣት) የሚጠበቅ ከሆነ ይህንን ያብሩት።"
+        case .russian:    return "Включите, если ежедневные подъёмы и спады ожидаемы по причинам, не связанным с тем, как у вашего близкого идут дела в терапии."
         }
     }
 
@@ -707,6 +713,7 @@ extension AppLanguage {
         case .japanese:   return "このアプリのガイドについて"
         case .french:     return "À propos des conseils de cette application"
         case .amharic:    return "ስለዚሁ መተግበሪያ መመሪያ"
+        case .russian:    return "О рекомендациях приложения"
         }
     }
 
@@ -728,6 +735,7 @@ extension AppLanguage {
         case .japanese:   return "ガイダンス機能"
         case .french:     return "Fonctionnalités d'orientation"
         case .amharic:    return "የመመሪያ ባህሪያት"
+        case .russian:    return "Подсказки и рекомендации"
         }
     }
 
@@ -749,6 +757,7 @@ extension AppLanguage {
         case .japanese:   return "このアプリには、いくつかの試験的なガイダンス機能が搭載されています。詳細については、いつでも「介護者」メニュー内の[このアプリのガイダンスについて]をご覧ください。"
         case .french:     return "Cette application comprend certaines fonctionnalités d'accompagnement à caractère expérimental — pour plus de détails, consultez à tout moment la section [À propos des fonctionnalités d'accompagnement de cette application] dans votre menu « Aidant »."
         case .amharic:    return "ይህ መተግበሪያ አንዳንድ በሙከራ ላይ ያሉ የመመሪያ ባህሪያትን ያካትታል — ዝርዝሩን በማንኛውም ጊዜ ተንከባካቢ ማውጫ ውስጥ «ስለዚሁ መተግበሪያ መመሪያ» በሚለው ስር ይመልከቱ።"
+        case .russian:    return "В приложении есть экспериментальные подсказки. Подробности всегда можно найти в меню ухаживающего: [О рекомендациях приложения]."
         }
     }
 
@@ -770,6 +779,7 @@ extension AppLanguage {
         case .japanese:   return "わかった"
         case .french:     return "D'accord"
         case .amharic:    return "እሺ"
+        case .russian:    return "ОК"
         }
     }
 }

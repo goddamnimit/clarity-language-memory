@@ -166,6 +166,7 @@ struct TVTwoPlayerResultsView: View {
         case .japanese:   return "素晴らしい練習でした、お二人とも！"
         case .french:     return "Excellent entraînement pour vous deux !"
         case .amharic:    return "ጥሩ ልምምድ፣ ለሁለታችሁም!"
+        case .russian:    return "Отличная тренировка, вы оба молодцы!"
         }
     }
 
@@ -187,6 +188,7 @@ struct TVTwoPlayerResultsView: View {
         case .japanese:   return "これからも一緒に記憶力と言語能力を鍛えましょう。"
         case .french:     return "Continuez à entraîner votre mémoire et vos compétences linguistiques ensemble."
         case .amharic:    return "አብረው የማስታወስ እና የቋንቋ ችሎታዎን ማሰልጠንዎን ይቀጥሉ።"
+        case .russian:    return "Продолжайте вместе тренировать память и речь."
         }
     }
 
@@ -208,6 +210,7 @@ struct TVTwoPlayerResultsView: View {
         case .japanese:   return "もう一度プレイ 🔄"
         case .french:     return "Rejouer 🔄"
         case .amharic:    return "እንደገና ይጫወቱ 🔄"
+        case .russian:    return "Играть снова 🔄"
         }
     }
 
@@ -229,6 +232,7 @@ struct TVTwoPlayerResultsView: View {
         case .japanese:   return "ホームに戻る"
         case .french:     return "Retour à l'accueil"
         case .amharic:    return "ወደ መነሻ ገጽ ተመለስ"
+        case .russian:    return "На главную"
         }
     }
 }

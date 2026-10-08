@@ -178,6 +178,7 @@ struct TVOpenEndedView: View {
         case .japanese:   return "議論のヒント"
         case .french:     return "Sujet de discussion"
         case .amharic:    return "የውይይት ርዕስ"
+        case .russian:    return "Тема для обсуждения"
         }
     }
 
@@ -199,6 +200,7 @@ struct TVOpenEndedView: View {
         case .japanese:   return "モデル解答"
         case .french:     return "Réponse modèle"
         case .amharic:    return "የሞዴል መልስ"
+        case .russian:    return "Образец ответа"
         }
     }
 
@@ -220,6 +222,7 @@ struct TVOpenEndedView: View {
         case .japanese:   return "正解しました"
         case .french:     return "J'ai trouvé la bonne réponse"
         case .amharic:    return "ትክክል ነኝ"
+        case .russian:    return "Я ответил(а) верно"
         }
     }
 
@@ -241,6 +244,7 @@ struct TVOpenEndedView: View {
         case .japanese:   return "もっと練習が必要です"
         case .french:     return "J'ai besoin de plus d'entraînement"
         case .amharic:    return "ተጨማሪ ልምምድ እፈልጋለሁ"
+        case .russian:    return "Мне нужно ещё потренироваться"
         }
     }
 
@@ -262,6 +266,7 @@ struct TVOpenEndedView: View {
         case .japanese:   return "解答を表示"
         case .french:     return "Afficher la réponse"
         case .amharic:    return "መልሱን አሳይ"
+        case .russian:    return "Показать ответ"
         }
     }
 }

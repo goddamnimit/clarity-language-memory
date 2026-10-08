@@ -41,6 +41,7 @@ struct TVProfileView: View {
         case .japanese:   return "プロフィール"
         case .french:     return "Profil"
         case .amharic:    return "መገለጫ"
+        case .russian:    return "Профиль"
         }
     }
 
@@ -62,6 +63,7 @@ struct TVProfileView: View {
         case .japanese:   return "言語を選択"
         case .french:     return "Choisir la langue"
         case .amharic:    return "ቋንቋ ይምረጡ"
+        case .russian:    return "Выберите язык"
         }
     }
 
@@ -113,7 +115,7 @@ struct TVProfileView: View {
                             ],
                             spacing: 24
                         ) {
-                            ForEach(AppLanguage.allCases) { language in
+                            ForEach(AppLanguage.visibleCases) { language in
                                 Button {
                                     languageManager.currentLanguage = language
                                 } label: {
@@ -283,6 +285,7 @@ struct TVProfileView: View {
         case .japanese:   return "質問を読み上げる"
         case .french:     return "Lire les questions à voix haute"
         case .amharic:    return "ጥያቄዎችን በታላቅ ድምፅ አንብብ"
+        case .russian:    return "Читать вопросы вслух"
         }
     }
 
@@ -304,6 +307,7 @@ struct TVProfileView: View {
         case .japanese:   return "オン"
         case .french:     return "Activé"
         case .amharic:    return "በርቷል"
+        case .russian:    return "Вкл."
         }
     }
 
@@ -325,6 +329,7 @@ struct TVProfileView: View {
         case .japanese:   return "オフ"
         case .french:     return "Désactivé"
         case .amharic:    return "ጠፍቷል"
+        case .russian:    return "Выкл."
         }
     }
 }

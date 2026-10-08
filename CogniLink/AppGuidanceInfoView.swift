@@ -78,6 +78,7 @@ extension AppLanguage {
         case .japanese:   return "回復モードとメンテナンスモード"
         case .french:     return "Mode de rétablissement et mode d'entretien"
         case .amharic:    return "የማገገም እና ሁኔታን ጠብቆ ማቆየት ሁነታዎች"
+        case .russian:    return "Режим восстановления и режим поддержания"
         }
     }
 
@@ -99,6 +100,7 @@ extension AppLanguage {
         case .japanese:   return "「回復モード」では、改善の進捗状況に焦点を当てます。時間の経過とともに精度が上昇傾向にあるか下降傾向にあるかを、インサイトが指摘します。一方、「メンテナンスモード」では、一貫性の維持に焦点を当てます。安定したパフォーマンスは、単に「改善が見られない」という状態ではなく、それ自体が肯定的な成果として扱われます。"
         case .french:     return "Le mode « Rétablissement » évalue les progrès en fonction de l'amélioration : des indicateurs signalent si la précision suit une tendance à la hausse ou à la baisse au fil du temps. Le mode « Entretien », quant à lui, évalue les progrès en fonction de la constance : une performance stable est considérée comme un résultat positif en soi, et non simplement comme l'absence d'amélioration."
         case .amharic:    return "የማገገም ሁነታ እድገትን ከመሻሻል ጋር ያያይዘዋል — ይህም ትክክለኛነት በጊዜ ሂደት ሲጨምር ወይም ሲቀንስ ግንዛቤዎች ያሳያሉ። በአንጻሩ ሁኔታን ጠብቆ ማቆየት ሁነታ እድገትን ከጥንካሬ ጋር ያያይዘዋል፡ አፈጻጸም ሳይቀያየር በቋሚነት መቀጠሉ መሻሻል አለመኖሩን ብቻ ሳይሆን በራሱ እንደ ጥሩ ውጤት ይቆጠራል።"
+        case .russian:    return "Режим «Восстановление» оценивает прогресс как улучшение: подсказки показывают, растёт или снижается точность со временем. Режим «Поддержание» делает акцент на постоянстве: стабильный результат считается хорошим исходом сам по себе, а не просто отсутствием улучшений."
         }
     }
 
@@ -120,6 +122,7 @@ extension AppLanguage {
         case .japanese:   return "この機能が有効になっている場合、パフォーマンスの変化が2つの別々の練習期間にわたって一貫して確認されて初めて、フラグが立てられます。1日だけ異常な結果が出ただけでは、それだけではインサイトは生成されません。"
         case .french:     return "Lorsque cette fonctionnalité est activée, une variation des performances doit se manifester de manière constante au cours de deux périodes d'entraînement distinctes avant d'être signalée. Une seule journée atypique ne suffira pas à elle seule à déclencher une alerte."
         case .amharic:    return "ይህ ሲበራ፣ በአፈጻጸም ላይ የሚታይ ለውጥ ምልክት ከመደረጉ በፊት በሁለት የተነጠሉ የልምምድ ጊዜያት ላይ በተከታታይ መታየት አለበት። አንድ ያልተለመደ ቀን ብቻውን አዲስ ግንዛቤ አይሰጥም።"
+        case .russian:    return "Если это включено, изменение результатов отмечается только тогда, когда оно устойчиво проявляется в двух отдельных периодах занятий. Один необычный день не вызовет подсказки."
         }
     }
 
@@ -141,6 +144,7 @@ extension AppLanguage {
         case .japanese:   return "表現に関する注記"
         case .french:     return "Remarque sur la formulation"
         case .amharic:    return "ስለ ቃላት አጠቃቀም ማስታወሻ"
+        case .russian:    return "О формулировках"
         }
     }
 
@@ -162,6 +166,7 @@ extension AppLanguage {
         case .japanese:   return "回復モードおよびメンテナンスモードで使用されている文言については、現在も有資格の臨床医による検討が行われています。ここに記載されている内容で、分かりにくい点や懸念される点がある場合は、あくまで参考情報としてお取り扱いいただき、\(patientName)のケアチームに直接ご相談ください。"
         case .french:     return "Le libellé utilisé dans les modes « Rétablissement » et « Entretien » est toujours en cours de révision par un clinicien agréé. Si certains éléments vous semblent confus ou préoccupants, veuillez les considérer comme purement informatifs et en faire part directement à l'équipe de soins d'\(patientName)."
         case .amharic:    return "በማገገም እና ሁኔታን ጠብቆ ማቆየት ሁነታዎች ውስጥ ጥቅም ላይ የዋሉት ቃላት አሁንም በባለሙያ ሐኪም እየተገመገሙ ነው። እዚህ ላይ ግራ የሚያጋባ ወይም የሚያስጨንቅ ነገር ካለ፣ እባክዎ እንደ መረጃ ብቻ ይውሰዱት እና በቀጥታ ለ\(patientName) የእንክብካቤ ቡድን ያሳውቁ።"
+        case .russian:    return "Формулировки в режимах «Восстановление» и «Поддержание» всё ещё проверяются лицензированным специалистом. Если что-то здесь покажется непонятным или тревожным, воспринимайте это только как справочную информацию и обсудите с лечащей командой: \(patientName)."
         }
     }
 
@@ -183,6 +188,7 @@ extension AppLanguage {
         case .japanese:   return "臨床に関する免責事項"
         case .french:     return "Avertissement clinique"
         case .amharic:    return "የሕክምና ማስተባበያ ማስታወሻ"
+        case .russian:    return "Медицинское предупреждение"
         }
     }
 }

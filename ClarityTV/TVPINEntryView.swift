@@ -157,6 +157,7 @@ struct TVPINEntryView: View {
         case .japanese:   return "介護者モード"
         case .french:     return "Mode aidant"
         case .amharic:    return "የእንክብካቤ ሰጪ ሁነታ"
+        case .russian:    return "Режим ухаживающего"
         }
     }
 
@@ -178,6 +179,7 @@ struct TVPINEntryView: View {
         case .japanese:   return "設定にアクセスするには4桁のPINを入力してください"
         case .french:     return "Entrez le code PIN à 4 chiffres pour accéder aux paramètres"
         case .amharic:    return "ቅንብሮችን ለመድረስ የ4-አሃዝ ፒን ያስገቡ"
+        case .russian:    return "Введите 4-значный PIN-код для доступа к настройкам"
         }
     }
 
@@ -199,6 +201,7 @@ struct TVPINEntryView: View {
         case .japanese:   return "PINが正しくありません。もう一度お試しください。"
         case .french:     return "Code PIN incorrect. Veuillez réessayer."
         case .amharic:    return "የተሳሳተ ፒን። እባክዎ እንደገና ይሞክሩ።"
+        case .russian:    return "Неверный PIN-код. Попробуйте ещё раз."
         }
     }
 }

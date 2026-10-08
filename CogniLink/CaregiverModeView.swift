@@ -59,6 +59,7 @@ extension AppLanguage {
         case .japanese:   return "介護者モード"
         case .french:     return "Mode proche aidant"
         case .amharic:    return "የተንከባካቢ ሁነታ"
+        case .russian:    return "Режим ухаживающего"
         }
     }
 
@@ -80,6 +81,7 @@ extension AppLanguage {
         case .japanese:   return "PINを入力"
         case .french:     return "Entrer le PIN"
         case .amharic:    return "ፒን ያስገቡ"
+        case .russian:    return "Введите PIN-код"
         }
     }
 
@@ -101,6 +103,7 @@ extension AppLanguage {
         case .japanese:   return "PINをお忘れですか？ 0000にリセット"
         case .french:     return "PIN oublié? Réinitialiser à 0000"
         case .amharic:    return "ፒን ረስተዋል? ወደ 0000 ይመልሱ"
+        case .russian:    return "Забыли PIN-код? Сбросить на 0000"
         }
     }
 
@@ -122,6 +125,7 @@ extension AppLanguage {
         case .japanese:   return "キャンセル"
         case .french:     return "Annuler"
         case .amharic:    return "ሰርዝ"
+        case .russian:    return "Отмена"
         }
     }
 
@@ -143,6 +147,7 @@ extension AppLanguage {
         case .japanese:   return "削除"
         case .french:     return "Supprimer"
         case .amharic:    return "አጥፋ"
+        case .russian:    return "Удалить"
         }
     }
 
@@ -164,6 +169,7 @@ extension AppLanguage {
         case .japanese:   return "PINをリセットしますか？"
         case .french:     return "Réinitialiser le PIN?"
         case .amharic:    return "ፒን እንደገና ይለወጥ?"
+        case .russian:    return "Сбросить PIN-код?"
         }
     }
 
@@ -185,6 +191,7 @@ extension AppLanguage {
         case .japanese:   return "PINが0000にリセットされます。"
         case .french:     return "Le PIN sera réinitialisé à 0000."
         case .amharic:    return "ፒን ወደ 0000 ይመለሳል።"
+        case .russian:    return "PIN-код будет сброшен на 0000."
         }
     }
 
@@ -206,6 +213,7 @@ extension AppLanguage {
         case .japanese:   return "リセット"
         case .french:     return "Réinitialiser"
         case .amharic:    return "እንደገና ጀምር"
+        case .russian:    return "Сбросить"
         }
     }
 
@@ -227,6 +235,7 @@ extension AppLanguage {
         case .japanese:   return "PINを変更"
         case .french:     return "Changer le PIN"
         case .amharic:    return "ፒን ይለውጡ"
+        case .russian:    return "Изменить PIN-код"
         }
     }
 
@@ -248,6 +257,7 @@ extension AppLanguage {
         case .japanese:   return "新しいPINを入力"
         case .french:     return "Entrer le nouveau PIN"
         case .amharic:    return "አዲስ ፒን ያስገቡ"
+        case .russian:    return "Введите новый PIN-код"
         }
     }
 
@@ -269,6 +279,7 @@ extension AppLanguage {
         case .japanese:   return "新しいPINの確認"
         case .french:     return "Confirmer le nouveau PIN"
         case .amharic:    return "አዲሱን ፒን ያረጋግጡ"
+        case .russian:    return "Подтвердите новый PIN-код"
         }
     }
 
@@ -290,6 +301,7 @@ extension AppLanguage {
         case .japanese:   return "PINを変更しました"
         case .french:     return "PIN modifié"
         case .amharic:    return "ፒን ተለውጧል"
+        case .russian:    return "PIN-код изменён"
         }
     }
 
@@ -311,6 +323,7 @@ extension AppLanguage {
         case .japanese:   return "初期PIN"
         case .french:     return "PIN par défaut"
         case .amharic:    return "መደበኛ ፒን"
+        case .russian:    return "PIN-код по умолчанию"
         }
     }
 
@@ -332,6 +345,7 @@ extension AppLanguage {
         case .japanese:   return "初期PINは0000です。介護者モードに入った後、変更してください。"
         case .french:     return "Le PIN par défaut est 0000. Veuillez le modifier après avoir activé le mode proche aidant."
         case .amharic:    return "መደበኛ ፒን 0000 ነው። እባክዎ ወደ ተንከባካቢ ሁነታ ከገቡ በኋላ ይለውጡት።"
+        case .russian:    return "PIN-код по умолчанию: 0000. Измените его после входа в режим ухаживающего."
         }
     }
 
@@ -353,6 +367,7 @@ extension AppLanguage {
         case .japanese:   return "現在の連続記録"
         case .french:     return "Série actuelle"
         case .amharic:    return "የአሁኑ ተከታታይ ቀናት"
+        case .russian:    return "Текущая серия"
         }
     }
 
@@ -374,6 +389,7 @@ extension AppLanguage {
         case .japanese:   return "全体の正解率"
         case .french:     return "Précision globale"
         case .amharic:    return "አጠቃላይ ትክክለኛነት"
+        case .russian:    return "Общая точность"
         }
     }
 
@@ -395,6 +411,7 @@ extension AppLanguage {
         case .japanese:   return "今週のセッション数"
         case .french:     return "Séances cette semaine"
         case .amharic:    return "የዚህ ሳምንት ልምምዶች"
+        case .russian:    return "Занятий на этой неделе"
         }
     }
 
@@ -416,6 +433,7 @@ extension AppLanguage {
         case .japanese:   return "進捗の詳細"
         case .french:     return "Détails du progrès"
         case .amharic:    return "የእድገት ዝርዝር"
+        case .russian:    return "Подробности прогресса"
         }
     }
 
@@ -437,6 +455,7 @@ extension AppLanguage {
         case .japanese:   return "週間目標"
         case .french:     return "Objectif hebdomadaire"
         case .amharic:    return "የሳምንቱ ግብ"
+        case .russian:    return "Цель на неделю"
         }
     }
 
@@ -458,6 +477,7 @@ extension AppLanguage {
         case .japanese:   return "セラピーメモ"
         case .french:     return "Notes de thérapie"
         case .amharic:    return "የሕክምና ማስታወሻዎች"
+        case .russian:    return "Заметки терапевта"
         }
     }
 
@@ -479,6 +499,7 @@ extension AppLanguage {
         case .japanese:   return "PDFレポートを出力"
         case .french:     return "Exporter le rapport PDF"
         case .amharic:    return "የPDF ሪፖርት አውጣ"
+        case .russian:    return "Экспорт отчёта в PDF"
         }
     }
 
@@ -500,6 +521,7 @@ extension AppLanguage {
         case .japanese:   return "セッション履歴"
         case .french:     return "Historique des séances"
         case .amharic:    return "የልምምድ ታሪክ"
+        case .russian:    return "История занятий"
         }
     }
 
@@ -521,6 +543,7 @@ extension AppLanguage {
         case .japanese:   return "正解率の推移"
         case .french:     return "Évolution de la précision"
         case .amharic:    return "የትክክለኛነት ሂደት"
+        case .russian:    return "Динамика точности"
         }
     }
 
@@ -542,6 +565,7 @@ extension AppLanguage {
         case .japanese:   return "すべて"
         case .french:     return "Tout"
         case .amharic:    return "ሁሉንም"
+        case .russian:    return "Все"
         }
     }
 
@@ -563,6 +587,7 @@ extension AppLanguage {
         case .japanese:   return "過去7日間"
         case .french:     return "7 derniers jours"
         case .amharic:    return "ባለፉት 7 ቀናት"
+        case .russian:    return "Последние 7 дней"
         }
     }
 
@@ -584,6 +609,7 @@ extension AppLanguage {
         case .japanese:   return "過去30日間"
         case .french:     return "30 derniers jours"
         case .amharic:    return "ባለፉት 30 ቀናት"
+        case .russian:    return "Последние 30 дней"
         }
     }
 
@@ -605,6 +631,7 @@ extension AppLanguage {
         case .japanese:   return "メモを追加"
         case .french:     return "Ajouter une note"
         case .amharic:    return "ማስታወሻ አክል"
+        case .russian:    return "Добавить заметку"
         }
     }
 
@@ -626,6 +653,7 @@ extension AppLanguage {
         case .japanese:   return "保存"
         case .french:     return "Enregistrer"
         case .amharic:    return "አስቀምጥ"
+        case .russian:    return "Сохранить"
         }
     }
 
@@ -647,6 +675,7 @@ extension AppLanguage {
         case .japanese:   return "メモはまだありません"
         case .french:     return "Aucune note pour l'instant"
         case .amharic:    return "እስካሁን ምንም ማስታወሻ የለም"
+        case .russian:    return "Заметок пока нет"
         }
     }
 
@@ -668,6 +697,7 @@ extension AppLanguage {
         case .japanese:   return "データはまだありません"
         case .french:     return "Aucune donnée pour l'instant"
         case .amharic:    return "እስካሁን ምንም መረጃ የለም"
+        case .russian:    return "Данных пока нет"
         }
     }
 
@@ -689,6 +719,7 @@ extension AppLanguage {
         case .japanese:   return "週あたりのセッション"
         case .french:     return "séances par semaine"
         case .amharic:    return "ልምምዶች በሳምንት"
+        case .russian:    return "занятий в неделю"
         }
     }
 
@@ -710,6 +741,7 @@ extension AppLanguage {
         case .japanese:   return "ベースライン評価を実施"
         case .french:     return "Effectuer l'évaluation initiale"
         case .amharic:    return "የመነሻ ምዘና ያካሂዱ"
+        case .russian:    return "Пройти начальную оценку"
         }
     }
 
@@ -731,6 +763,7 @@ extension AppLanguage {
         case .japanese:   return "通知"
         case .french:     return "Notifications"
         case .amharic:    return "ማስታወቂያዎች"
+        case .russian:    return "Уведомления"
         }
     }
 
@@ -752,6 +785,7 @@ extension AppLanguage {
         case .japanese:   return "練習のリマインダー"
         case .french:     return "Rappels d'exercice"
         case .amharic:    return "የልምምድ ማስታወሻዎች"
+        case .russian:    return "Напоминания о занятиях"
         }
     }
 
@@ -773,6 +807,7 @@ extension AppLanguage {
         case .japanese:   return "リマインダー時刻"
         case .french:     return "Heure du rappel"
         case .amharic:    return "የማስታወሻ ሰዓት"
+        case .russian:    return "Время напоминания"
         }
     }
 
@@ -794,6 +829,7 @@ extension AppLanguage {
         case .japanese:   return "連続記録のリマインダー"
         case .french:     return "Rappels de la série"
         case .amharic:    return "የተከታታይ ቀናት ማስታወሻዎች"
+        case .russian:    return "Напоминания о серии"
         }
     }
 
@@ -815,6 +851,7 @@ extension AppLanguage {
         case .japanese:   return "iOSの「設定」で通知を有効にしてください"
         case .french:     return "Activez les notifications dans les Réglages d'iOS"
         case .amharic:    return "በiOS ቅንብሮች ውስጥ ማስታወቂያዎችን ያንቁ"
+        case .russian:    return "Включите уведомления в настройках iOS"
         }
     }
 
@@ -836,6 +873,7 @@ extension AppLanguage {
         case .japanese:   return "今週は\(goal)回中\(done)回のセッションを完了"
         case .french:     return "\(done) sur \(goal) séances cette semaine"
         case .amharic:    return "በዚህ ሳምንት ከ\(goal) ልምምዶች \(done) ተጠናቅቀዋል"
+        case .russian:    return "\(done) из \(goal) занятий на этой неделе"
         }
     }
 }

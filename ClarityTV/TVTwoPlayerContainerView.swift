@@ -331,6 +331,7 @@ struct TVTwoPlayerContainerView: View {
         case .japanese:   return "ja-JP"
         case .french:     return "fr-FR"
         case .amharic:    return "am-ET"
+        case .russian:    return "ru-RU"
         }
     }
 
@@ -354,6 +355,7 @@ struct TVTwoPlayerContainerView: View {
         case .japanese:   return "リモコンを\(name)に渡してください！"
         case .french:     return "Passez la télécommande à \(name) !"
         case .amharic:    return "ሪሞቱን ለ\(name) ይስጡ!"
+        case .russian:    return "Передайте пульт: \(name)!"
         }
     }
 
@@ -375,6 +377,7 @@ struct TVTwoPlayerContainerView: View {
         case .japanese:   return "\(name)さん、準備ができたら決定ボタンを押してください。"
         case .french:     return "\(name), appuyez sur prêt lorsque vous tenez la télécommande."
         case .amharic:    return "\(name) ሪሞቱን ሲይዙ ዝግጁ የሚለውን ይጫኑ።"
+        case .russian:    return "\(name), нажмите «Готов(а)», когда пульт будет у вас в руках."
         }
     }
 
@@ -396,6 +399,7 @@ struct TVTwoPlayerContainerView: View {
         case .japanese:   return "準備OK 🎮"
         case .french:     return "Je suis prêt 🎮"
         case .amharic:    return "እኔ ዝግጁ ነኝ 🎮"
+        case .russian:    return "Я готов(а) 🎮"
         }
     }
 }

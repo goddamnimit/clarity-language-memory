@@ -246,6 +246,7 @@ struct TVSequencingView: View {
         case .japanese:   return "ステップを選択し、次に移動先を選択してください"
         case .french:     return "Sélectionnez une étape, puis sélectionnez où elle va"
         case .amharic:    return "አንድ እርምጃ ይምረጡ፣ ከዚያ የት እንደሚሄድ ይምረጡ"
+        case .russian:    return "Выберите шаг, а затем место, куда он должен встать"
         }
     }
 
@@ -267,6 +268,7 @@ struct TVSequencingView: View {
         case .japanese:   return "送信"
         case .french:     return "Soumettre"
         case .amharic:    return "አስገባ"
+        case .russian:    return "Отправить"
         }
     }
 }

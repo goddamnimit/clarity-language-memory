@@ -181,6 +181,7 @@ struct TVCaregiverDashboardView: View {
         case .japanese:   return "介護者ハブ"
         case .french:     return "Espace aidant"
         case .amharic:    return "የእንክብካቤ ሰጪ ማዕከል"
+        case .russian:    return "Центр для ухаживающих"
         }
     }
 
@@ -202,6 +203,7 @@ struct TVCaregiverDashboardView: View {
         case .japanese:   return "臨床トラッキングと評価を管理"
         case .french:     return "Gérez le suivi clinique et les évaluations"
         case .amharic:    return "ክሊኒካዊ ክትትልን እና ግምገማዎችን ያስተዳድሩ"
+        case .russian:    return "Отслеживание состояния и оценки"
         }
     }
 }

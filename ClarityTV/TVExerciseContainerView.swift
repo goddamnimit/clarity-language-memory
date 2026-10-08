@@ -481,6 +481,7 @@ struct TVExerciseContainerView: View {
         case .japanese:   return "ja-JP"
         case .french:     return "fr-FR"
         case .amharic:    return "am-ET"
+        case .russian:    return "ru-RU"
         }
     }
 }
