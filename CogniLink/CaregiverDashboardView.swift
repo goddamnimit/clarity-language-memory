@@ -318,6 +318,9 @@ struct CaregiverDashboardView: View {
                 // Trajectory-Aware Insights (Goal Orientation + Fluctuation)
                 trajectorySettingsCard
 
+                // Practice Supports (Today card, answer choices, hints)
+                PracticeSupportsCard()
+
                 // Reset Adaptive Progress Button
                 resetAdaptiveButton
             }

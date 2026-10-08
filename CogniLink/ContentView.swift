@@ -161,6 +161,7 @@ fileprivate func profileTitle(for language: AppLanguage) -> String {
 struct HomeView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @ObservedObject private var profileStore = UserProfileStore.shared
+    @ObservedObject private var practiceSupports = PracticeSupportSettings.shared
     @State private var sessionsCount: Int = 0
     @State private var surpriseExercise: Exercise? = nil
     @State private var sectionExercise: Exercise? = nil
@@ -211,6 +212,13 @@ struct HomeView: View {
                     // Streak Widget
                     StreakWidgetView()
                         .padding(.horizontal)
+
+                    #if os(iOS)
+                    if practiceSupports.showOrientationCard {
+                        OrientationCardView()
+                            .padding(.horizontal)
+                    }
+                    #endif
 
                     // MARK: - Personalized Recommendations
                     if !recommendations.isEmpty {
