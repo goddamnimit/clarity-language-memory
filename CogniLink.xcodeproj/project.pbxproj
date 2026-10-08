@@ -190,6 +190,8 @@
 				09987ECB2FE46B5600EDF7C1 /* ClarityTVTests */,
 				09987ED52FE46B5600EDF7C1 /* ClarityTVUITests */,
 				C1A211D000000000000000C1 /* ClarityWidget */,
+				C1A211D000000000000000A2 /* AppTheme.swift */,
+				C1A211D000000000000000A3 /* WidgetSnapshot.swift */,
 				096B03FB2FCD05D9004A96A3 /* Products */,
 			);
 			sourceTree = "<group>";
