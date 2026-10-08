@@ -353,6 +353,18 @@ struct HomeView: View {
                             }
                             .buttonStyle(.plain)
                         }
+
+                        if ConversationTopic.isAvailable(for: languageManager.currentLanguage) {
+                            NavigationLink(destination: ConversationStartersView()) {
+                                sectionCard(
+                                    title: "Conversation Starters",
+                                    subtitle: "Picture-free cards for two people to talk together.",
+                                    systemImage: "bubble.left.and.bubble.right",
+                                    color: .mint
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        }
                         #endif
                     }
                     .padding(.horizontal)

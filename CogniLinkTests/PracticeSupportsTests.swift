@@ -447,3 +447,31 @@ extension PracticeSupportsTests {
     }
   }
 }
+
+// MARK: - F7 conversation starters
+
+extension PracticeSupportsTests {
+
+  @Test func conversationTopicsAreComplete() {
+    var ids = Set<String>()
+    for t in ConversationTopicData.all {
+      #expect(ids.insert(t.id).inserted)
+      #expect(t.questions.count == ConversationKind.allCases.count)
+      #expect(t.questions.allSatisfy { !$0.trimmingCharacters(in: .whitespaces).isEmpty })
+      #expect(Set(t.questions).count == t.questions.count)
+    }
+    #expect(ConversationTopicData.all.count >= 10)
+    #expect(ConversationKind.allCases.filter(\.isHarder).count == 4)
+    #expect(ConversationKind.allCases.allSatisfy { !$0.targetBehavior.isEmpty })
+    #expect(ConversationTopic.isAvailable(for: .english))
+    #expect(!ConversationTopic.isAvailable(for: .spanish))
+  }
+
+  @Test func deckUsesRequestedKindsAndSpreadsTopics() {
+    let easy = ConversationKind.allCases.filter { !$0.isHarder }
+    let deck = ConversationStartersView.makeDeck(kinds: easy, count: 8)
+    #expect(deck.count == 8)
+    #expect(deck.allSatisfy { easy.contains($0.kind) })
+    #expect(Set(deck.map(\.topic.id)).count == 8)
+  }
+}
