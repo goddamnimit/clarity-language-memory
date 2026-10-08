@@ -319,6 +319,16 @@ struct HomeView: View {
                             )
                         }
                         .buttonStyle(.plain)
+
+                        NavigationLink(destination: SpacedRetrievalView()) {
+                            sectionCard(
+                                title: FS.srtTitle,
+                                subtitle: FS.srtSubtitle,
+                                systemImage: "clock.arrow.circlepath",
+                                color: .teal
+                            )
+                        }
+                        .buttonStyle(.plain)
                         #endif
                     }
                     .padding(.horizontal)

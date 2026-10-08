@@ -7,6 +7,7 @@ import Foundation
 import Testing
 @testable import CogniLink
 
+@Suite(.serialized)
 struct PracticeSupportsTests {
 
   // MARK: - F1 Today card
@@ -282,5 +283,71 @@ extension PracticeSupportsTests {
     #expect(NumberDrillGenerator.matches(typed: String(digits.drop(while: { $0 == "0" })), answer: q))
     #expect(!NumberDrillGenerator.matches(typed: "", answer: q))
     #expect(!NumberDrillGenerator.matches(typed: "99999", answer: q))
+  }
+}
+
+// MARK: - F5 spaced retrieval
+
+extension PracticeSupportsTests {
+
+  @Test func schedulerExpandsThroughAllIntervals() {
+    var s = SpacedRetrievalScheduler()
+    #expect(s.nextWaitSeconds == 0)
+    var waits: [Int] = []
+    var outcome = s.recordPass()
+    while case .waitThenAsk(let seconds) = outcome {
+      waits.append(seconds)
+      outcome = s.recordPass()
+    }
+    #expect(waits == [30, 60, 120, 240, 480])
+    #expect(outcome == .finished)
+    #expect(s.bestPassedSeconds == 480)
+    #expect(s.misses == 0)
+  }
+
+  @Test func missDropsBackToLastSuccessfulInterval() {
+    var s = SpacedRetrievalScheduler()
+    _ = s.recordPass()          // passed immediate -> next 30 s
+    _ = s.recordPass()          // passed 30 s -> next 60 s
+    #expect(s.nextWaitSeconds == 60)
+    let afterMiss = s.recordMiss()
+    #expect(afterMiss == .waitThenAsk(seconds: 30))  // last success = 30 s
+    #expect(s.misses == 1)
+    #expect(s.bestPassedSeconds == 30)
+    // Recovering from the drop-back expands again.
+    #expect(s.recordPass() == .waitThenAsk(seconds: 60))
+  }
+
+  @Test func missBeforeAnySuccessRetriesImmediately() {
+    var s = SpacedRetrievalScheduler()
+    #expect(s.recordMiss() == .waitThenAsk(seconds: 0))
+    #expect(s.bestPassedSeconds == 0)
+    #expect(s.misses == 1)
+  }
+
+  @Test func targetsAreCappedAndLogHoldsNoText() throws {
+    let saved = SpacedRetrievalStore.targets
+    defer { SpacedRetrievalStore.targets = saved }
+    SpacedRetrievalStore.targets = (0..<5).map { MemoryTarget(question: "Q\($0)", answer: "SECRETANSWER\($0)") }
+    #expect(SpacedRetrievalStore.targets.count == 3)
+    #expect(SpacedRetrievalStore.usableTargets.count == 3)
+
+    let id = try #require(SpacedRetrievalStore.targets.first?.id, "Keychain round-trip failed in the test host")
+    SpacedRetrievalStore.append(SRTLogEntry(targetID: id, date: Date(), bestIntervalSeconds: 120, misses: 1, completed: false))
+    let raw = UserDefaults.standard.data(forKey: "clarity_srt_log") ?? Data()
+    let text = String(decoding: raw, as: UTF8.self)
+    #expect(!text.contains("SECRETANSWER"))
+    #expect(SpacedRetrievalStore.summary(for: id).bestSeconds >= 120)
+  }
+
+  @MainActor
+  @Test func spacedRetrievalTargetsNeverReachResearchExport() throws {
+    let saved = SpacedRetrievalStore.targets
+    defer { SpacedRetrievalStore.targets = saved }
+    SpacedRetrievalStore.targets = [MemoryTarget(question: "Where are keys kept?", answer: "ZEBRAHOOK")]
+    let data = try #require(ResearchExportManager.generateExport())
+    let text = String(decoding: data, as: UTF8.self)
+    #expect(!text.contains("ZEBRAHOOK"))
+    #expect(!text.contains("Where are keys kept?"))
   }
 }

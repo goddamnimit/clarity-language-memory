@@ -361,6 +361,9 @@ struct CaregiverDashboardView: View {
                 // Practice Supports (Today card, answer choices, hints)
                 PracticeSupportsCard()
 
+                // Personal memory targets for Remember It (spaced retrieval)
+                MemoryTargetsCard()
+
                 // Reset Adaptive Progress Button
                 resetAdaptiveButton
             }
