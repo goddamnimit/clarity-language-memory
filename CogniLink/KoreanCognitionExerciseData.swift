@@ -4,6 +4,7 @@ struct KoreanCognitionExerciseData {
 
     static let allExercises: [Exercise] = [
         figurativeLanguageIdioms,
+        figurativeLanguageIdiomsOpenEnded,
         storyRecall,
         numberSequences,
         causeAndEffect,
@@ -20,256 +21,57 @@ struct KoreanCognitionExerciseData {
         title: "관용구와 비유적 표현",
         instructions: "제시된 관용적 표현의 올바른 뜻을 고르세요.",
         section: .cognition,
+        type: .multipleChoice,
+        trackedType: nil,
+        difficulty: .medium,
+        items: [
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “식은 죽 먹기”", options: ["매우 쉬운 일", "차가운 음식을 먹는 것", "귀찮은 일", "어려운 문제"], correctAnswer: "매우 쉬운 일", explanation: "‘식은 죽 먹기’는 아주 하기 쉬운 일을 비유적으로 나타냅니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “발이 넓다”", options: ["아는 사람이 많다", "신발 사이즈가 크다", "많이 걷다", "사교성이 부족하다"], correctAnswer: "아는 사람이 많다", explanation: "사교 범위가 넓어 아는 사람이 많음을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “귀가 얇다”", options: ["남의 말을 잘 믿는다", "귀가 작다", "남의 말을 잘 안 듣는다", "소리를 잘 듣는다"], correctAnswer: "남의 말을 잘 믿는다", explanation: "주관이 약해 다른 사람의 말에 쉽게 흔들림을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “피땀 흘리다”", options: ["몹시 노력하다", "몸이 아프다", "상처를 입다", "운동을 열심히 하다"], correctAnswer: "몹시 노력하다", explanation: "온 힘과 노력을 다해 애쓰는 것을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “눈을 감아주다”", options: ["허물을 덮어주다", "잠을 자다", "상대를 모른 척하다", "눈이 피로하다"], correctAnswer: "허물을 덮어주다", explanation: "상대의 과실이나 잘못을 보고도 모르는 체해 줌을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “간이 부었다”", options: ["매우 대담하다", "몸에 병이 생겼다", "소심하다", "성격이 급하다"], correctAnswer: "매우 대담하다", explanation: "겁이 없고 매우 대담해지거나 무모하게 행동함을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “가슴이 아프다”", options: ["슬프거나 안타깝다", "심장 질환이 있다", "화를 낸다", "걱정이 없다"], correctAnswer: "슬프거나 안타깝다", explanation: "마음이 슬프거나 안타까울 때 쓰는 비유적 표현입니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “배가 아프다”", options: ["남이 잘되어 시기하다", "복통이 있다", "배가 고프다", "화를 내다"], correctAnswer: "남이 잘되어 시기하다", explanation: "사촌이 땅을 사면 배가 아프듯 남이 잘되는 것에 질투함을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “콧대가 높다”", options: ["거만하다", "코가 크다", "얼굴이 잘생겼다", "자존심이 없다"], correctAnswer: "거만하다", explanation: "뽐내고 거만한 태도를 취함을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “머리를 맞대다”", options: ["의논하다", "서로 싸우다", "잠을 자다", "생각을 안 하다"], correctAnswer: "의논하다", explanation: "어떤 일을 해결하기 위해 함께 머리를 맞대고 의논함을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “손을 씻다”", options: ["나쁜 일을 그만두다", "손의 위생을 챙기다", "일을 시작하다", "친구와 화해하다"], correctAnswer: "나쁜 일을 그만두다", explanation: "이전에 하던 부정적이거나 부정한 일을 그만두고 청산함을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “낯을 가리다”", options: ["낯선 사람을 부끄러워하다", "얼굴을 감추다", "친구를 피하다", "성격이 밝다"], correctAnswer: "낯선 사람을 부끄러워하다", explanation: "낯선 사람 대하기를 꺼리고 부끄러워함을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “발등에 불이 떨어지다”", options: ["일이 매우 급해지다", "화상을 입다", "장난을 치다", "준비를 미리 하다"], correctAnswer: "일이 매우 급해지다", explanation: "일이 눈앞에 닥쳐서 매우 다급하게 됨을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “입이 무겁다”", options: ["비밀을 잘 지킨다", "말이 느리다", "말수가 적다", "입이 무겁게 느껴진다"], correctAnswer: "비밀을 잘 지킨다", explanation: "비밀을 잘 지키고 다른 사람에게 전하지 않음을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “가시방석에 앉다”", options: ["마음이 매우 불안하다", "뾰족한 곳에 앉다", "벌을 받다", "편안하게 있다"], correctAnswer: "마음이 매우 불안하다", explanation: "불안하고 마음이 매우 거북한 자리에 처해 있음을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “등 밑이 어둡다”", options: ["가까운 곳의 일을 오히려 잘 모른다", "방 안에 불이 꺼져 어둡다", "멀리 있는 사람이 잘 안 보인다", "공부를 열심히 하지 않는다"], correctAnswer: "가까운 곳의 일을 오히려 잘 모른다", explanation: "'등 밑이 어둡다'는 등잔 밑이 어두운 것처럼 가까이 있는 것을 도리어 찾지 못하거나 잘 모름을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “우물 안 개구리”", options: ["넓은 세상의 형편을 모르는 사람", "우물 속을 청소하는 개구리", "수영을 아주 잘하는 사람", "욕심이 많고 심술궂은 사람"], correctAnswer: "넓은 세상의 형편을 모르는 사람", explanation: "'우물 안 개구리'는 소견이나 보고 들은 것이 좁아 넓은 세상의 형편을 잘 모르는 사람을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “누워서 떡 먹기”", options: ["매우 하기 쉬운 일", "식사 후 바로 눕는 습관", "불편한 자세로 떡을 먹는 일", "맛있는 음식을 아껴 먹는 것"], correctAnswer: "매우 하기 쉬운 일", explanation: "'누워서 떡 먹기'는 일이 매우 쉽고 수월함을 비유적으로 나타냅니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “쇠뿔도 단김에 빼라”", options: ["일은 기회가 왔을 때 바로 처리해야 한다", "소를 정성껏 돌봐야 한다", "동물 학대를 멈추어야 한다", "급할수록 천천히 해야 한다"], correctAnswer: "일은 기회가 왔을 때 바로 처리해야 한다", explanation: "'쇠뿔도 단김에 빼라'는 어떤 일을 하려고 마음먹었으면 미루지 말고 곧바로 해치워야 함을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “벼는 익을수록 고개를 숙인다”", options: ["교양과 덕이 쌓일수록 겸손해진다", "가을이 되면 허리가 아프다", "벼농사를 지을 때 수확을 늦게 한다", "나이가 들수록 피곤해진다"], correctAnswer: "교양과 덕이 쌓일수록 겸손해진다", explanation: "학식이나 덕망이 높은 사람일수록 자만하지 않고 겸손하게 행동함을 비유적으로 이르는 말입니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “금강산도 식후경”", options: ["아무리 좋은 일이라도 배가 불러야 즐길 수 있다", "금강산에 가기 전에 맛집을 찾아본다", "여행을 가기 위해 돈을 아낀다", "식사를 하기 전에 경치를 구경한다"], correctAnswer: "아무리 좋은 일이라도 배가 불러야 즐길 수 있다", explanation: "아무리 재미있고 좋은 일이라도 배가 고프면 즐겁지 않으므로 먹는 것이 가장 중요함을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “원숭이도 나무에서 떨어진다”", options: ["아무리 잘하는 사람도 실수를 할 때가 있다", "동물원에서 원숭이를 잘 보호해야 한다", "나무가 썩어 부러지기 쉽다", "아무 준비 없이 일을 시작하면 안 된다"], correctAnswer: "아무리 잘하는 사람도 실수를 할 때가 있다", explanation: "아무리 재주가 있고 익숙한 사람이라도 실수할 때가 있음을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “가는 말이 고와야 오는 말이 곱다”", options: ["남에게 말을 다정하게 해야 상대방도 나에게 친절하다", "말을 할 때는 속도를 천천히 해야 한다", "외국어를 배울 때 예의를 갖춰야 한다", "친한 사이일수록 조심해서 말해야 한다"], correctAnswer: "남에게 말을 다정하게 해야 상대방도 나에게 친절하다", explanation: "자신이 남에게 친절하고 다정하게 대해야 남도 자신에게 그렇게 대한다는 말입니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “티끌 모아 태산”", options: ["작은 것도 모이면 나중에 큰 것이 된다", "먼지가 쌓여 집이 더러워진다", "돈을 함부로 쓰면 가난해진다", "산에 올라갈 때는 조심해야 한다"], correctAnswer: "작은 것도 모이면 나중에 큰 것이 된다", explanation: "아무리 작은 것이라도 조금씩 계속 모으면 나중에 큰 덩어리가 됨을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “밑 빠진 독에 물 붓기”", options: ["아무리 노력해도 보람이 없고 헛수고가 되는 일", "밑이 터진 그릇을 깨끗이 씻는 일", "가뭄에 논에 물을 대는 일", "쓸데없는 일에 시간을 낭비하다"], correctAnswer: "아무리 노력해도 보람이 없고 헛수고가 되는 일", explanation: "아무리 쏟아부어도 채워지지 않는 깨진 항아리처럼, 밑천이나 노력을 들여도 보람이 없는 일을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “소 잃고 외양간 고친다”", options: ["이미 일을 그르친 뒤에 뉘우치고 대책을 세운다", "소를 팔고 남은 돈으로 집을 수리한다", "외양간을 미리 튼튼하게 보수한다", "소를 잘 키우기 위해 환경을 정비한다"], correctAnswer: "이미 일을 그르친 뒤에 뉘우치고 대책을 세운다", explanation: "소를 도둑맞은 후에야 헛간을 고친다는 뜻으로, 이미 실패한 뒤에 대책을 세우는 헛수고를 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “서당 개 삼 년이면 풍월을 읊는다”", options: ["어떤 분야에 오래 있으면 자연스럽게 지식을 얻는다", "서당에서 키우는 개가 노래를 부른다", "오랜 시간 공부하면 누구나 현명해진다", "시를 짓는 공부는 삼 년 동안 해야 한다"], correctAnswer: "어떤 분야에 오래 있으면 자연스럽게 지식을 얻는다", explanation: "어떤 분야에 아는 지식이 없더라도 그 환경에 오래 머물면 어깨너머로 자연스럽게 지식이나 능력을 습득하게 됨을 뜻합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “돌다리도 두들겨 보고 건너라”", options: ["아무리 잘 아는 일이라도 꼼꼼히 확인하고 조심해라", "다리가 튼튼한지 돌로 쳐서 확인해라", "길을 갈 때는 주변 경치를 잘 살펴라", "어려운 길을 갈 때는 도움을 청해라"], correctAnswer: "아무리 잘 아는 일이라도 꼼꼼히 확인하고 조심해라", explanation: "아주 튼튼해 보이는 돌다리조차 안전한지 두드려 보듯이, 잘 아는 일이라도 실수 없이 신중을 기하라는 뜻입니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “발을 벗고 나서다”", options: ["적극적으로 성심성의껏 돕다", "신발을 벗고 맨발로 걸어가다", "하던 일을 중단하고 도망치다", "남의 일에 쓸데없이 참견하다"], correctAnswer: "적극적으로 성심성의껏 돕다", explanation: "신발과 양말을 벗고 나설 만큼 어떤 일을 해결하기 위해 적극적이고 열정적으로 나섬을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “귀가 가렵다”", options: ["남이 내 말을 하고 있는 것 같다", "귀에 물이 들어가서 가렵다", "칭찬을 들어 부끄럽다", "귀에 병이 생겨 가렵다"], correctAnswer: "남이 내 말을 하고 있는 것 같다", explanation: "다른 사람이 어딘가에서 내 이야기를 하고 있을 때 흔히 하는 비유적 표현입니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “손이 크다”", options: ["씀씀이가 넉넉하고 인심이 좋다", "신체 부위 중 손의 크기가 아주 크다", "일처리가 서투르고 실수가 많다", "물건을 훔치는 버릇이 있다"], correctAnswer: "씀씀이가 넉넉하고 인심이 좋다", explanation: "음식을 장만하거나 물건을 살 때 규모가 크고 아끼지 않는 씀씀이를 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “눈독을 들이다”", options: ["욕심을 내어 유심히 보다", "눈에 해로운 물질이 들어가다", "질투심에 화를 내다", "어떤 물건을 유심히 관찰하다"], correctAnswer: "욕심을 내어 유심히 보다", explanation: "마음에 드는 물건이나 대상을 차지하고 싶어서 욕심을 내어 쏘아보는 것을 뜻합니다."),
+        ]
+    )
+
+    private static let figurativeLanguageIdiomsOpenEnded = Exercise(
+        id: UUID(),
+        title: "관용구 직접 설명하기",
+        instructions: "관용구의 뜻을 직접 말하거나 써 보세요.",
+        section: .cognition,
         type: .openEnded,
         trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “식은 죽 먹기”",
-                options: ["매우 쉬운 일", "차가운 음식을 먹는 것", "귀찮은 일", "어려운 문제"],
-                correctAnswer: "매우 쉬운 일",
-                explanation: "‘식은 죽 먹기’는 아주 하기 쉬운 일을 비유적으로 나타냅니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “발이 넓다”",
-                options: ["아는 사람이 많다", "신발 사이즈가 크다", "많이 걷다", "사교성이 부족하다"],
-                correctAnswer: "아는 사람이 많다",
-                explanation: "사교 범위가 넓어 아는 사람이 많음을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “귀가 얇다”",
-                options: ["남의 말을 잘 믿는다", "귀가 작다", "남의 말을 잘 안 듣는다", "소리를 잘 듣는다"],
-                correctAnswer: "남의 말을 잘 믿는다",
-                explanation: "주관이 약해 다른 사람의 말에 쉽게 흔들림을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “피땀 흘리다”",
-                options: ["몹시 노력하다", "몸이 아프다", "상처를 입다", "운동을 열심히 하다"],
-                correctAnswer: "몹시 노력하다",
-                explanation: "온 힘과 노력을 다해 애쓰는 것을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “눈을 감아주다”",
-                options: ["허물을 덮어주다", "잠을 자다", "상대를 모른 척하다", "눈이 피로하다"],
-                correctAnswer: "허물을 덮어주다",
-                explanation: "상대의 과실이나 잘못을 보고도 모르는 체해 줌을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “간이 부었다”",
-                options: ["매우 대담하다", "몸에 병이 생겼다", "소심하다", "성격이 급하다"],
-                correctAnswer: "매우 대담하다",
-                explanation: "겁이 없고 매우 대담해지거나 무모하게 행동함을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “가슴이 아프다”",
-                options: ["슬프거나 안타깝다", "심장 질환이 있다", "화를 낸다", "걱정이 없다"],
-                correctAnswer: "슬프거나 안타깝다",
-                explanation: "마음이 슬프거나 안타까울 때 쓰는 비유적 표현입니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “배가 아프다”",
-                options: ["남이 잘되어 시기하다", "복통이 있다", "배가 고프다", "화를 내다"],
-                correctAnswer: "남이 잘되어 시기하다",
-                explanation: "사촌이 땅을 사면 배가 아프듯 남이 잘되는 것에 질투함을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “콧대가 높다”",
-                options: ["거만하다", "코가 크다", "얼굴이 잘생겼다", "자존심이 없다"],
-                correctAnswer: "거만하다",
-                explanation: "뽐내고 거만한 태도를 취함을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “머리를 맞대다”",
-                options: ["의논하다", "서로 싸우다", "잠을 자다", "생각을 안 하다"],
-                correctAnswer: "의논하다",
-                explanation: "어떤 일을 해결하기 위해 함께 머리를 맞대고 의논함을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “손을 씻다”",
-                options: ["나쁜 일을 그만두다", "손의 위생을 챙기다", "일을 시작하다", "친구와 화해하다"],
-                correctAnswer: "나쁜 일을 그만두다",
-                explanation: "이전에 하던 부정적이거나 부정한 일을 그만두고 청산함을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “낯을 가리다”",
-                options: ["낯선 사람을 부끄러워하다", "얼굴을 감추다", "친구를 피하다", "성격이 밝다"],
-                correctAnswer: "낯선 사람을 부끄러워하다",
-                explanation: "낯선 사람 대하기를 꺼리고 부끄러워함을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “발등에 불이 떨어지다”",
-                options: ["일이 매우 급해지다", "화상을 입다", "장난을 치다", "준비를 미리 하다"],
-                correctAnswer: "일이 매우 급해지다",
-                explanation: "일이 눈앞에 닥쳐서 매우 다급하게 됨을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “입이 무겁다”",
-                options: ["비밀을 잘 지킨다", "말이 느리다", "말수가 적다", "입이 무겁게 느껴진다"],
-                correctAnswer: "비밀을 잘 지킨다",
-                explanation: "비밀을 잘 지키고 다른 사람에게 전하지 않음을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “가시방석에 앉다”",
-                options: ["마음이 매우 불안하다", "뾰족한 곳에 앉다", "벌을 받다", "편안하게 있다"],
-                correctAnswer: "마음이 매우 불안하다",
-                explanation: "불안하고 마음이 매우 거북한 자리에 처해 있음을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “등 밑이 어둡다”",
-                options: ["가까운 곳의 일을 오히려 잘 모른다", "방 안에 불이 꺼져 어둡다", "멀리 있는 사람이 잘 안 보인다", "공부를 열심히 하지 않는다"],
-                correctAnswer: "가까운 곳의 일을 오히려 잘 모른다",
-                explanation: "'등 밑이 어둡다'는 등잔 밑이 어두운 것처럼 가까이 있는 것을 도리어 찾지 못하거나 잘 모름을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “우물 안 개구리”",
-                options: ["넓은 세상의 형편을 모르는 사람", "우물 속을 청소하는 개구리", "수영을 아주 잘하는 사람", "욕심이 많고 심술궂은 사람"],
-                correctAnswer: "넓은 세상의 형편을 모르는 사람",
-                explanation: "'우물 안 개구리'는 소견이나 보고 들은 것이 좁아 넓은 세상의 형편을 잘 모르는 사람을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “누워서 떡 먹기”",
-                options: ["매우 하기 쉬운 일", "식사 후 바로 눕는 습관", "불편한 자세로 떡을 먹는 일", "맛있는 음식을 아껴 먹는 것"],
-                correctAnswer: "매우 하기 쉬운 일",
-                explanation: "'누워서 떡 먹기'는 일이 매우 쉽고 수월함을 비유적으로 나타냅니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “쇠뿔도 단김에 빼라”",
-                options: ["일은 기회가 왔을 때 바로 처리해야 한다", "소를 정성껏 돌봐야 한다", "동물 학대를 멈추어야 한다", "급할수록 천천히 해야 한다"],
-                correctAnswer: "일은 기회가 왔을 때 바로 처리해야 한다",
-                explanation: "'쇠뿔도 단김에 빼라'는 어떤 일을 하려고 마음먹었으면 미루지 말고 곧바로 해치워야 함을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “벼는 익을수록 고개를 숙인다”",
-                options: ["교양과 덕이 쌓일수록 겸손해진다", "가을이 되면 허리가 아프다", "벼농사를 지을 때 수확을 늦게 한다", "나이가 들수록 피곤해진다"],
-                correctAnswer: "교양과 덕이 쌓일수록 겸손해진다",
-                explanation: "학식이나 덕망이 높은 사람일수록 자만하지 않고 겸손하게 행동함을 비유적으로 이르는 말입니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “금강산도 식후경”",
-                options: ["아무리 좋은 일이라도 배가 불러야 즐길 수 있다", "금강산에 가기 전에 맛집을 찾아본다", "여행을 가기 위해 돈을 아낀다", "식사를 하기 전에 경치를 구경한다"],
-                correctAnswer: "아무리 좋은 일이라도 배가 불러야 즐길 수 있다",
-                explanation: "아무리 재미있고 좋은 일이라도 배가 고프면 즐겁지 않으므로 먹는 것이 가장 중요함을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “원숭이도 나무에서 떨어진다”",
-                options: ["아무리 잘하는 사람도 실수를 할 때가 있다", "동물원에서 원숭이를 잘 보호해야 한다", "나무가 썩어 부러지기 쉽다", "아무 준비 없이 일을 시작하면 안 된다"],
-                correctAnswer: "아무리 잘하는 사람도 실수를 할 때가 있다",
-                explanation: "아무리 재주가 있고 익숙한 사람이라도 실수할 때가 있음을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “가는 말이 고와야 오는 말이 곱다”",
-                options: ["남에게 말을 다정하게 해야 상대방도 나에게 친절하다", "말을 할 때는 속도를 천천히 해야 한다", "외국어를 배울 때 예의를 갖춰야 한다", "친한 사이일수록 조심해서 말해야 한다"],
-                correctAnswer: "남에게 말을 다정하게 해야 상대방도 나에게 친절하다",
-                explanation: "자신이 남에게 친절하고 다정하게 대해야 남도 자신에게 그렇게 대한다는 말입니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “티끌 모아 태산”",
-                options: ["작은 것도 모이면 나중에 큰 것이 된다", "먼지가 쌓여 집이 더러워진다", "돈을 함부로 쓰면 가난해진다", "산에 올라갈 때는 조심해야 한다"],
-                correctAnswer: "작은 것도 모이면 나중에 큰 것이 된다",
-                explanation: "아무리 작은 것이라도 조금씩 계속 모으면 나중에 큰 덩어리가 됨을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “밑 빠진 독에 물 붓기”",
-                options: ["아무리 노력해도 보람이 없고 헛수고가 되는 일", "밑이 터진 그릇을 깨끗이 씻는 일", "가뭄에 논에 물을 대는 일", "쓸데없는 일에 시간을 낭비하다"],
-                correctAnswer: "아무리 노력해도 보람이 없고 헛수고가 되는 일",
-                explanation: "아무리 쏟아부어도 채워지지 않는 깨진 항아리처럼, 밑천이나 노력을 들여도 보람이 없는 일을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “소 잃고 외양간 고친다”",
-                options: ["이미 일을 그르친 뒤에 뉘우치고 대책을 세운다", "소를 팔고 남은 돈으로 집을 수리한다", "외양간을 미리 튼튼하게 보수한다", "소를 잘 키우기 위해 환경을 정비한다"],
-                correctAnswer: "이미 일을 그르친 뒤에 뉘우치고 대책을 세운다",
-                explanation: "소를 도둑맞은 후에야 헛간을 고친다는 뜻으로, 이미 실패한 뒤에 대책을 세우는 헛수고를 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “서당 개 삼 년이면 풍월을 읊는다”",
-                options: ["어떤 분야에 오래 있으면 자연스럽게 지식을 얻는다", "서당에서 키우는 개가 노래를 부른다", "오랜 시간 공부하면 누구나 현명해진다", "시를 짓는 공부는 삼 년 동안 해야 한다"],
-                correctAnswer: "어떤 분야에 오래 있으면 자연스럽게 지식을 얻는다",
-                explanation: "어떤 분야에 아는 지식이 없더라도 그 환경에 오래 머물면 어깨너머로 자연스럽게 지식이나 능력을 습득하게 됨을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “돌다리도 두들겨 보고 건너라”",
-                options: ["아무리 잘 아는 일이라도 꼼꼼히 확인하고 조심해라", "다리가 튼튼한지 돌로 쳐서 확인해라", "길을 갈 때는 주변 경치를 잘 살펴라", "어려운 길을 갈 때는 도움을 청해라"],
-                correctAnswer: "아무리 잘 아는 일이라도 꼼꼼히 확인하고 조심해라",
-                explanation: "아주 튼튼해 보이는 돌다리조차 안전한지 두드려 보듯이, 잘 아는 일이라도 실수 없이 신중을 기하라는 뜻입니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “발을 벗고 나서다”",
-                options: ["적극적으로 성심성의껏 돕다", "신발을 벗고 맨발로 걸어가다", "하던 일을 중단하고 도망치다", "남의 일에 쓸데없이 참견하다"],
-                correctAnswer: "적극적으로 성심성의껏 돕다",
-                explanation: "신발과 양말을 벗고 나설 만큼 어떤 일을 해결하기 위해 적극적이고 열정적으로 나섬을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “귀가 가렵다”",
-                options: ["남이 내 말을 하고 있는 것 같다", "귀에 물이 들어가서 가렵다", "칭찬을 들어 부끄럽다", "귀에 병이 생겨 가렵다"],
-                correctAnswer: "남이 내 말을 하고 있는 것 같다",
-                explanation: "다른 사람이 어딘가에서 내 이야기를 하고 있을 때 흔히 하는 비유적 표현입니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “손이 크다”",
-                options: ["씀씀이가 넉넉하고 인심이 좋다", "신체 부위 중 손의 크기가 아주 크다", "일처리가 서투르고 실수가 많다", "물건을 훔치는 버릇이 있다"],
-                correctAnswer: "씀씀이가 넉넉하고 인심이 좋다",
-                explanation: "음식을 장만하거나 물건을 살 때 규모가 크고 아끼지 않는 씀씀이를 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “눈독을 들이다”",
-                options: ["욕심을 내어 유심히 보다", "눈에 해로운 물질이 들어가다", "질투심에 화를 내다", "어떤 물건을 유심히 관찰하다"],
-                correctAnswer: "욕심을 내어 유심히 보다",
-                explanation: "마음에 드는 물건이나 대상을 차지하고 싶어서 욕심을 내어 쏘아보는 것을 뜻합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “콧노래를 부르다”",
-                options: [],
-                correctAnswer: "기분이 아주 좋고 만족스럽다",
-                explanation: "일이 잘 풀리거나 마음에 여유가 있어 콧노래를 부를 정도로 기쁜 상태를 나타냅니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “머리를 굴리다”",
-                options: [],
-                correctAnswer: "해결책을 얻기 위해 머리를 써서 꾀를 내다",
-                explanation: "어떤 문제를 해결하기 위해 머리를 써서 꼼수를 부리거나 아이디어를 짜내는 행동을 비유합니다."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "관용구의 뜻을 설명하세요: “발목을 잡다”",
-                options: [],
-                correctAnswer: "어떤 일이 진행되지 못하도록 방해하다",
-                explanation: "남의 약점이나 어떤 요인이 걸림돌이 되어 일의 진행을 방해하고 속박함을 비유적으로 이르는 말입니다."
-            )
-        
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “콧노래를 부르다”", options: [], correctAnswer: "기분이 아주 좋고 만족스럽다", explanation: "일이 잘 풀리거나 마음에 여유가 있어 콧노래를 부를 정도로 기쁜 상태를 나타냅니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “머리를 굴리다”", options: [], correctAnswer: "해결책을 얻기 위해 머리를 써서 꾀를 내다", explanation: "어떤 문제를 해결하기 위해 머리를 써서 꼼수를 부리거나 아이디어를 짜내는 행동을 비유합니다."),
+            ExerciseItem(id: UUID(), prompt: "관용구의 뜻을 설명하세요: “발목을 잡다”", options: [], correctAnswer: "어떤 일이 진행되지 못하도록 방해하다", explanation: "남의 약점이나 어떤 요인이 걸림돌이 되어 일의 진행을 방해하고 속박함을 비유적으로 이르는 말입니다."),
         ]
     )
 

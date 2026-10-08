@@ -843,7 +843,7 @@ struct ArmenianCognitionExerciseData {
                 prompt: "Հեռախոսով կարելի է խոսե՞լ։",
                 options: ["Yes", "No"],
                 correctAnswer: "Yes",
-                explanation: "Հեռախոսները օգտագործվում են հեռավորության վրա խոսելu համար:"
+                explanation: "Հեռախոսները օգտագործվում են հեռավորության վրա խոսելու համար:"
             ),
             ExerciseItem(
                 id: UUID(),
@@ -1121,568 +1121,89 @@ struct ArmenianCognitionExerciseData {
         instructions: "Ընտրեք ճիշտ բառը համանմանությունը լրացնելու համար:",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Լավաշ : Հաց :: Գաթա : Թխվածք",
-                options: ["Թխվածք", "Ջուր", "Աղ", "Պղպեղ"],
-                correctAnswer: "Թխվածք",
-                explanation: "Գաթան ավանդական հայկական թխվածք է, ինչպես լավաշը հաց է:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Արև : Ցերեկ :: Լուսին : Գիշեր",
-                options: ["Գիշեր", "Ամպ", "Անձրև", "Աստղ"],
-                correctAnswer: "Գիշեր",
-                explanation: "Արևը երևում է ցերեկը, իսկ լուսինը՝ գիշերը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ձուկ : Ջուր :: Թռչուն : Օդ",
-                options: ["Օդ", "Անտառ", "Բույն", "Գետ"],
-                correctAnswer: "Օդ",
-                explanation: "Ձկները լողում են ջրում, թռչունները թռչում են օդում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գրիչ : Գրել :: Մատիտ : Նկարել",
-                options: ["Նկարել", "Ջնջել", "Կարդալ", "Խոսել"],
-                correctAnswer: "Նկարել",
-                explanation: "Գրիչով գրում են, մատիտով նկարում կամ գրում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կով : Կաթ :: Ոչխար : Բուրդ",
-                options: ["Բուրդ", "Միս", "Խոտ", "Կաթ"],
-                correctAnswer: "Բուրդ",
-                explanation: "Կովից ստանում են կաթ, ոչխարից՝ բուրդ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Աչք : Տեսնել :: Ականջ : Լսել",
-                options: ["Լսել", "Հպվել", "Հոտոտել", "Համտեսել"],
-                correctAnswer: "Լսել",
-                explanation: "Աչքերով տեսնում են, ականջներով՝ լսում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ձմեռ : Ցուրտ :: Ամառ : Շոգ",
-                options: ["Շոգ", "Անձրև", "Գարուն", "Ամպամած"],
-                correctAnswer: "Շոգ",
-                explanation: "Ձմռանը ցուրտ է լինում, ամռանը՝ շոգ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Մեքենա : Ճանապարհ :: Նավ : Ջուր",
-                options: ["Ջուր", "Օդ", "Ռելս", "Անտառ"],
-                correctAnswer: "Ջուր",
-                explanation: "Մեքենան ընթանում է ճանապարհով, նավը՝ ջրով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գիրք : Կարդալ :: Երաժշտություն : Լսել",
-                options: ["Լսել", "Դիտել", "Գրել", "Երգել"],
-                correctAnswer: "Լսել",
-                explanation: "Գիրքը կարդում են, երաժշտությունը՝ լսում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կիտրոն : Թթու :: Շաքար : Քաղցր",
-                options: ["Քաղցր", "Դառը", "Աղի", "Անհամ"],
-                correctAnswer: "Քաղցր",
-                explanation: "Կիտրոնը թթու է, իսկ շաքարը՝ քաղցր:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ծառ : Տերև :: Ծաղիկ : Թերթիկ",
-                options: ["Թերթիկ", "Արմատ", "Ցողուն", "Փուշ"],
-                correctAnswer: "Թերթիկ",
-                explanation: "Ծառն ունի տերևներ, ծաղիկն ունի թերթիկներ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Անձրև : Թրջել :: Կրակ : Այրել",
-                options: ["Այրել", "Սառեցնել", "Չորացնել", "Լուսավորել"],
-                correctAnswer: "Այրել",
-                explanation: "Անձրևը թրջում է, կրակը՝ այրում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կոշիկ : Ոտք :: Ձեռնոց : Ձեռք",
-                options: ["Ձեռք", "Ականջ", "Գլուխ", "Պարանոց"],
-                correctAnswer: "Ձեռք",
-                explanation: "Կոշիկը հագնում են ոտքին, ձեռնոցը՝ ձեռքին:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Առավոտ : Նախաճաշ :: Երեկո : Ընթրիք",
-                options: ["Ընթրիք", "Ճաշ", "Թեյ", "Հոբբի"],
-                correctAnswer: "Ընթրիք",
-                explanation: "Առավոտյան ուտում են նախաճաշ, երեկoյան՝ ընթրիք:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Սառույց : Կարծր :: Ջուր : Հեղուկ",
-                options: ["Հեղուկ", "Գազային", "Սառը", "Տաք"],
-                correctAnswer: "Հեղուկ",
-                explanation: "Սառույցը պինդ է, ջուրը՝ հեղուկ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Մուրճ : Մեխ :: Պտուտակահան : Պտուտակ",
-                options: ["Պտուտակ", "Փայտ", "Մետաղ", "Պատ"],
-                correctAnswer: "Պտուտակ",
-                explanation: "Մուրճով խփում են մեխը, պտուտակահանով պտտում պտուտակը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Դանակ : Կտրել :: Ասեղ : Կարել",
-                options: ["Կարել", "Գործել", "Հագնել", "Կոտրել"],
-                correctAnswer: "Կարել",
-                explanation: "Դանակով կտրում են, ասեղով՝ կարում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Շուն : Հաչել :: Կատու : Մլավել",
-                options: ["Մլավել", "Մռնչալ", "Կռնչալ", "Ծլվլալ"],
-                correctAnswer: "Մլավել",
-                explanation: "Շունը հաչում է, կատուն՝ մլավում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գդալ : Ապուր :: Պատառաքաղ : Միս",
-                options: ["Միս", "Ջուր", "Թեյ", "Հյութ"],
-                correctAnswer: "Միս",
-                explanation: "Ապուրը ուտում են գդալով, միսը՝ պատառաքաղով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Բժիշk : Հիվանդանոց :: Ուսուցիչ : Դպրոց",
-                options: ["Դպրոց", "Գրասենյակ", "Խանութ", "Շուկա"],
-                correctAnswer: "Դպրոց",
-                explanation: "Բժիշկն աշխատում է հիվանդանոցում, ուսուցիչը՝ դպրոցում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Երկինք : Ամպ :: Գետին : Խոտ",
-                options: ["Խոտ", "Քար", "Ջուր", "Ծառ"],
-                correctAnswer: "Խոտ",
-                explanation: "Երկնքում ամպերն են, գետնին՝ խոտը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Հյուսիս : Հարավ :: Արևելք : Արևմուտք",
-                options: ["Արևմուտք", "Հյուսիս", "Արևելք", "Երկինք"],
-                correctAnswer: "Արևմուտք",
-                explanation: "Հյուսիսը հարավի հակառակն է, արևելքը՝ արևմուտքի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կրիա : Դանդաղ :: Ճագար : Արագ",
-                options: ["Արագ", "Դանդաղ", "Զգույշ", "Լուռ"],
-                correctAnswer: "Արագ",
-                explanation: "Կրիան դանդաղաշարժ է, ճագարը՝ արագաշարժ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ձյուն : Սպիտակ :: Խոտ : Կանաչ",
-                options: ["Կանաչ", "Կարմիր", "Դեղին", "Կապույտ"],
-                correctAnswer: "Կանաչ",
-                explanation: "Ձյունը սպիտակ է, խոտը՝ կանաչ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Լուսամուտ : Ապակի :: Դուռ : Փայտ",
-                options: ["Փայտ", "Երկաթ", "Պլաստիկ", "Ապակի"],
-                correctAnswer: "Փայտ",
-                explanation: "Լուսամուտը սովորաբար ապակուց է, դուռը՝ փայտից:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ժամացույց : Ժամանակ :: Կշեռք : Քաշ",
-                options: ["Քաշ", "Բարձրություն", "Երկարություն", "Ծավալ"],
-                correctAnswer: "Քաշ",
-                explanation: "Ժամացույցը չափում է ժամանակը, կշեռքը՝ քաշը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Լամպ : Լույս :: Վառարան : Տաքություն",
-                options: ["Տաքություն", "Սառնություն", "Ծուխ", "Կրակ"],
-                correctAnswer: "Տաքություն",
-                explanation: "Լամպը տալիս է լույս, վառարանը՝ տաքություն:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Հայր : Որդի :: Մայր : Դուստր",
-                options: ["Դուստր", "Քույր", "Աղջիկ", "Տատիկ"],
-                correctAnswer: "Դուստր",
-                explanation: "Հայրն ունենում է որդի, մայրը՝ դուստր:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գլխարկ : Գլուխ :: Գուլպա : Ոտք",
-                options: ["Ոտք", "Ձեռք", "Մատ", "Ծունկ"],
-                correctAnswer: "Ոtք",
-                explanation: "Գլխարկը դնում են գլխին, գուլպան հագնում ոտքին:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Անտառ : Ծառ :: Գրադարան : Գիրք",
-                options: ["Գիրք", "Սեղան", "Դարակ", "Աշխատակից"],
-                correctAnswer: "Գիրք",
-                explanation: "Անտառը կազմված է ծառերից, գրադարանը՝ գրքերից:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Օդանավ : Երկինք :: Նավակ : Լիճ",
-                options: ["Լիճ", "Անտառ", "Ճանապարհ", "Լեռ"],
-                correctAnswer: "Լիճ",
-                explanation: "Օդանավը թռչում է երկնքում, նավակը լողում է լճում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Մեղու : Փեթակ :: Թռչուն : Բույն",
-                options: ["Բույն", "Ծառ", "Վանդակ", "Երկինք"],
-                correctAnswer: "Բույն",
-                explanation: "Մեղուն ապրում է փեթակում, թռչունը՝ բնում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ձեռք : Մատ :: Ոտք : Մատներ",
-                options: ["Մատներ", "Կրունկ", "Ծունկ", "Թաթ"],
-                correctAnswer: "Մատներ",
-                explanation: "Ձեռքն ունի մատներ, ոտքը նույնպես ունի մատներ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ատամնաբույժ : Ատամ :: Ակնաբույժ : աչք",
-                options: ["Աչք", "Ականջ", "Քիթ", "Կոկորդ"],
-                correctAnswer: "Աչք",
-                explanation: "Ատամնաբույժը բուժում է ատամները, ակնաբույժը՝ աչքերը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Հեռուստացույց : Դիտել :: Ռադիո : Լսել",
-                options: ["Լսել", "Գրել", "Խոսել", "Երգել"],
-                correctAnswer: "Լսել",
-                explanation: "Հեռուստացույցը դիտում են, ռադիոն՝ լսում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կոպեկ : Մետաղ :: Թղթադրամ : Թուղթ",
-                options: ["Թուղթ", "Պլաստիկ", "Կաշի", "Կտոր"],
-                correctAnswer: "Թուղթ",
-                explanation: "Կոպեկը մետաղից է, թղթադրամը՝ թղթից:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Անձրևանոց : Անձրև :: Արևային ակնոց : Արև",
-                options: ["Արև", "Քամի", "Ամպ", "Ձյուն"],
-                correctAnswer: "Արև",
-                explanation: "Անձրևանոցը պաշտպանում է անձրևից, արևային ակնոցը՝ արևից:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գազար : Արմատապտուղ :: Խնձոր : Միրգ",
-                options: ["Միրգ", "Բանջարեղեն", "Ծաղիկ", "Տերև"],
-                correctAnswer: "Միրգ",
-                explanation: "Գազարը արմատապտուղ է, խնձորը՝ միրգ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թեյնիկ : Եռացնել :: Սառնարան : Սառեցնել",
-                options: ["Սառեցնել", "Տաքացնել", "Եփել", "Լվանալ"],
-                correctAnswer: "Սառեցնել",
-                explanation: "Թեյնիկով ջուրն եռացնում են, սառնարանով՝ սառեցնում սնունդը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Անիվ : Հեծանիվ :: Առագաստ : Նավ",
-                options: ["Նավ", "Մեքենա", "Ինքնաթիռ", "Գնացք"],
-                correctAnswer: "Նավ",
-                explanation: "Անիվը հեծանիվի մաս է, առագաստը՝ նավի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ձմեռ : Դեկտեմբեր :: Ամառ : Հունիս",
-                options: ["Հունիս", "Մարտ", "Սեպտեմբեր", "Հոկտեմբեր"],
-                correctAnswer: "Հունիս",
-                explanation: "Դեկտեմբերը ձմռան ամիս է, հունիսը՝ ամռան:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Հաց : Փուռ :: Գիրք : Տպարան",
-                options: ["Տպարան", "Գրախանութ", "Դպրոց", "Գրադարան"],
-                correctAnswer: "Տպարան",
-                explanation: "Հացը թխում են փռում, գիրքը տպագրում տպարանում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ջուր : Ծարավ :: Սնունդ : Սով",
-                options: ["Սով", "Կուշտ", "Հոգնած", "Քուն"],
-                correctAnswer: "Սով",
-                explanation: "Ջուրը հագեցնում է ծարավը, սնունդը՝ սովը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կավ : Կավագործ :: Փայտ : Ատաղձագործ",
-                options: ["Ատաղձագործ", "Բժիշկ", "Ուսուցիչ", "Նկարիչ"],
-                correctAnswer: "Ատաղձագործ",
-                explanation: "Կավով աշխատում է կավագործը, փայտով՝ ատաղձագործը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թանաք : Գրիչ :: Կապար : Մատիտ",
-                options: ["Մատիտ", "Ռետին", "Քանոն", "Սրիչ"],
-                correctAnswer: "Մատիտ",
-                explanation: "Գրիչի մեջ թանաքն է, մատիտի մեջ՝ կապարը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Արևմուտք : Մայրամուտ :: Արևելք : Արևածագ",
-                options: ["Արևածագ", "Կեսօր", "Երեկո", "Կեսգիշեր"],
-                correctAnswer: "Արևածագ",
-                explanation: "Արևմուտքում լինում է մայրամուտը, արևելքում՝ արևածագը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Դերասան : Թատրոն :: Լրագրող : Թերթ",
-                options: ["Թերթ", "Դպրոց", "Հիվանդանոց", "Դատարան"],
-                correctAnswer: "Թերթ",
-                explanation: "Դերասանն աշխատում է թատրոնում, լրագրողը՝ թերթում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Սար : Բարձր :: Ձոր : Խորը",
-                options: ["Խորը", "Տափակ", "Լայն", "Նեղ"],
-                correctAnswer: "Խորը",
-                explanation: "Սարը բարձր է լինում, ձորը՝ խորը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Շապիկ : Հագուստ :: Սանդալ : Կոշիկ",
-                options: ["Կոշիկ", "Գլխարկ", "Տաբատ", "Գուլպա"],
-                correctAnswer: "Կոշիկ",
-                explanation: "Շապիկը հագուստի տեսակ է, սանդալը՝ կոշիկի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ոսկի : Մետաղ :: Ադամանդ : Թանկարժեք քար",
-                options: ["Թանկարժեք քար", "Ժայռ", "Ապակի", "Ավազ"],
-                correctAnswer: "Թանկարժեք քար",
-                explanation: "Ոսկին մետաղ է, ադամանդը՝ թանկարժեք քար:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Աստղ : Աստղադիտակ :: Մանրէ : Մանրադիտակ",
-                options: ["Մանրադիտak", "Ակնոց", "Հայելի", "Լուսանկարչական ապարատ"],
-                correctAnswer: "Մանրադիտակ",
-                explanation: "Աստղը դիտում են աստղադիտակով, մանրէն՝ մանրադիտակով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կայծակ : Որոտ :: Հրաբուխ : Լավա",
-                options: ["Լավա", "Մոխիր", "Երկրաշարժ", "Ծուխ"],
-                correctAnswer: "Լավա",
-                explanation: "Կայծակին հետևում է որոտը, հրաբխից ժայթքում է լավան:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Մեղու : Ծաղիկ :: Կով : Խոտ",
-                options: ["Խոտ", "Ջուր", "Ծառ", "Պանիր"],
-                correctAnswer: "Խոտ",
-                explanation: "Մեղուն նեկտար է հավաքում ծաղկից, կովն արածում է խոտ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Անգլերեն : Լեզու :: Կիթառ : Գործիք",
-                options: ["Գործիք", "Երաժշտություն", "Երգ", "Ձայն"],
-                correctAnswer: "Գործիք",
-                explanation: "Անգլերենը լեզու է, կիթառը՝ երաժշտական գործիք:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Շուն : Շնիկ :: Կատու : Կատվիկ",
-                options: ["Կատվիկ", "Մուկ", "Ձագուկ", "Կենդանի"],
-                correctAnswer: "Կատվիկ",
-                explanation: "Շան ձագը շնիկն է, կատվինը՝ կատվիկը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Խաղող : Գինի :: Կաթ : Պանիր",
-                options: ["Պանիր", "Հյութ", "Ջուր", "Մեղր"],
-                correctAnswer: "Պանիր",
-                explanation: "Խաղողից պատրաստում են գինի, կաթից՝ պանիր:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Սարդ : Սարդոստայն :: Մեղու : Փեթակ",
-                options: ["Փեթակ", "Մեղր", "Ծաղիկ", "Բույն"],
-                correctAnswer: "Փեթակ",
-                explanation: "Սարդը հյուսում է սարդոստայն, մեղուն կառուցում է փեթակ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Պատուհան : Շրջանակ :: Պատ : Աղյուս",
-                options: ["Աղյուս", "Ցեմենտ", "Ներկ", "Ապակի"],
-                correctAnswer: "Աղյուս",
-                explanation: "Պատուհանն ունի շրջանակ, պատը կառուցվում է աղյուսներով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Նկարիչ : Վրձին :: Գրող : Գրիչ",
-                options: ["Գրիչ", "Գիրք", "Թուղթ", "Գրասեղան"],
-                correctAnswer: "Գրիչ",
-                explanation: "Նկարիչը նկարում է վրձնով, գրողը գրում է գրիչով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Սառնարան : Սառը :: Վառարան : Տաք",
-                options: ["Տաք", "Ծուխ", "Կրակ", "Մաքուր"],
-                correctAnswer: "Տաք",
-                explanation: "Սառնարանը սառն է պահում, վառարանը՝ տաք:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Երկրաշարժ : Ցնցում :: Փոթորիկ : Քամի",
-                options: ["Քամի", "Անձրև", "Ալիք", "Ամպ"],
-                correctAnswer: "Քամի",
-                explanation: "Երկրաշարժը առաջացնում է ցնցում, փոթորիկը՝ ուժեղ քամի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ծով : Աղի :: Աղբյուր : Քաղցրահամ",
-                options: ["Քաղցրահամ", "Տաք", "Կեղտոտ", "Խորը"],
-                correctAnswer: "Քաղցրահամ",
-                explanation: "Ծովի ջուրն աղի է, աղբյուրինը՝ քաղցրահամ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Բարի : Չար :: Լույս : Խավար",
-                options: ["Խավար", "Ճրագ", "Արև", "Աստղ"],
-                correctAnswer: "Խավար",
-                explanation: "Բարին չարի հակառակն է, լույսը՝ խավարի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Գլուխ : Մազ :: Մարմին : Մաշկ",
-                options: ["Մաշկ", "Ձեռք", "Ոտք", "Սիրտ"],
-                correctAnswer: "Մաշկ",
-                explanation: "Գլուխը պատված է մազերով, մարմինը՝ մաշկով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թագավոր : Թագ :: Զինվոր : Սաղավարտ",
-                options: ["Սաղավարտ", "Զենք", "Վահան", "Ձի"],
-                correctAnswer: "Սաղավարտ",
-                explanation: "Թագավորը կրում է թագ, զինվորը՝ սաղավարտ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թեյ : Բաժակ :: Ապուր : Ափսե",
-                options: ["Ափսե", "Գդալ", "Կաթսա", "Վառարան"],
-                correctAnswer: "Ափսե",
-                explanation: "Թեյը լցնում են բաժակի մեջ, ապուրը՝ ափսեի:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Փիղ : Մեծ :: Մուկ : Փոքր",
-                options: ["Փոքր", "Արագ", "Գորշ", "Թույլ"],
-                correctAnswer: "Փոքր",
-                explanation: "Փիղը հսկայական է, մուկը՝ փոքրիկ:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կամուրջ : Գետ :: Թունել : Սար",
-                options: ["Սար", "Ճանապարհ", "Գնացք", "Գետին"],
-                correctAnswer: "Սար",
-                explanation: "Կամուրջը կառուցում են գետի վրայով, թունելը՝ սարի միջով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Օճառ : Մաքրություն :: Կեղտ : Փոշի",
-                options: ["Փոշի", "Ջուր", "Լվացք", "Հիվանդություն"],
-                correctAnswer: "Փոշի",
-                explanation: "Օճառը բերում է մաքրություն, կեղտը կազմված է փոշուց:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Հեծանիվ : Շղթա :: Ժամացույց : Զսպանակ",
-                options: ["Զսպանակ", "Սլաք", "Թվեր", "Ապակի"],
-                correctAnswer: "Զսպանակ",
-                explanation: "Հեծանիվը շարժվում է շղթայի օգնությամբ, ժամացույցը՝ զսպանակով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կայծ : Կրակ :: Կաթիլ : Ջուր",
-                options: ["Ջուր", "Անձրև", "Գետ", "Օվկիանոս"],
-                correctAnswer: "Ջուր",
-                explanation: "Կայծից առաջանում է կրակը, կաթիլներից՝ ջուրը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Խոտ : Դաշտ :: Ավազ : Անապատ",
-                options: ["Անապատ", "Լողափ", "Գետ", "Ծով"],
-                correctAnswer: "Անապատ",
-                explanation: "Դաշտը ծածկված է խոտով, անապատը՝ ավազով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Շոգենավ : ածուխ :: Ավտոմեքենա : Բենզին",
-                options: ["Բենզին", "Անիվ", "Շարժիչ", "Ճանապարհ"],
-                correctAnswer: "Բենզին",
-                explanation: "Շոգենավն աշխատում էր ածխով, մեքենան՝ բենզինով:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թատրոն : Բեմ :: Դատարան : Ատյան",
-                options: ["Ատյան", "Դատավոր", "Օրենք", "Գրասենյակ"],
-                correctAnswer: "Ատյան",
-                explanation: "Թատրոնում ներկայացումը բեմի վրա է, դատարանում՝ ատյանում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կրակ : Մոխիր :: Սառույց : Ջուր",
-                options: ["Ջուր", "Գոլորշի", "Գետին", "Սառնարան"],
-                correctAnswer: "Ջուր",
-                explanation: "Կրակի այրումից մնում է մոխիրը, սառույցի հալվելուց՝ ջուրը:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Կոշիկ : Կաշի :: Շշեր : Ապակի",
-                options: ["Ապակի", "Պլաստիկ", "Թուղթ", "Մետաղ"],
-                correctAnswer: "Ապակի",
-                explanation: "Կոշիկը սովորաբար կաշվից է, շիշը՝ ապակուց:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Արծիվ : Ճանկ :: Վագր : Ճանկեր",
-                options: ["Ճանկեր", "Պոչ", "Մորթի", "Ատամ"],
-                correctAnswer: "Ճանկեր",
-                explanation: "Արծիվն ունի ճանկեր, վագրը նույնպես ունի ճանկեր:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Թիակ : Թիավարել :: Առագաստ : Լողալ",
-                options: ["Լողալ", "Քամի", "Կառավարել", "Կանգնեցնել"],
-                correctAnswer: "Լողալ",
-                explanation: "Թիակով թիավարում են, առագաստով՝ լողում:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Սոխ : Կծու :: Մեղր : Քաղցր",
-                options: ["Քաղցր", "Թթու", "Աղի", "Դառը"],
-                correctAnswer: "Քաղցր",
-                explanation: "Սոխը կծու է, մեղրը՝ քաղցր:"
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Դպրոց : Աշակերտ :: Բանակ : Զինվոր",
-                options: ["Զինվոր", "Հրամանատար", "Զենք", "Պատերազմ"],
-                correctAnswer: "Զինվոր",
-                explanation: "Դպրոցում սովորում է աշակերտը, բանակում ծառայում է զինվորը:"
-            )
+            ExerciseItem(id: UUID(), prompt: "Լավաշ : Հաց :: Գաթա : ___", options: ["Թխվածք", "Ջուր", "Աղ", "Պղպեղ"], correctAnswer: "Թխվածք", explanation: "Գաթան ավանդական հայկական թխվածք է, ինչպես լավաշը հաց է:"),
+            ExerciseItem(id: UUID(), prompt: "Արև : Ցերեկ :: Լուսին : ___", options: ["Գիշեր", "Ամպ", "Անձրև", "Աստղ"], correctAnswer: "Գիշեր", explanation: "Արևը երևում է ցերեկը, իսկ լուսինը՝ գիշերը:"),
+            ExerciseItem(id: UUID(), prompt: "Ձուկ : Ջուր :: Թռչուն : ___", options: ["Օդ", "Անտառ", "Բույն", "Գետ"], correctAnswer: "Օդ", explanation: "Ձկները լողում են ջրում, թռչունները թռչում են օդում:"),
+            ExerciseItem(id: UUID(), prompt: "Գրիչ : Գրել :: Մատիտ : ___", options: ["Նկարել", "Ջնջել", "Կարդալ", "Խոսել"], correctAnswer: "Նկարել", explanation: "Գրիչով գրում են, մատիտով նկարում կամ գրում:"),
+            ExerciseItem(id: UUID(), prompt: "Կով : Կաթ :: Ոչխար : ___", options: ["Բուրդ", "Միս", "Խոտ", "Կաթ"], correctAnswer: "Բուրդ", explanation: "Կովից ստանում են կաթ, ոչխարից՝ բուրդ:"),
+            ExerciseItem(id: UUID(), prompt: "Աչք : Տեսնել :: Ականջ : ___", options: ["Լսել", "Հպվել", "Հոտոտել", "Համտեսել"], correctAnswer: "Լսել", explanation: "Աչքերով տեսնում են, ականջներով՝ լսում:"),
+            ExerciseItem(id: UUID(), prompt: "Ձմեռ : Ցուրտ :: Ամառ : ___", options: ["Շոգ", "Անձրև", "Գարուն", "Ամպամած"], correctAnswer: "Շոգ", explanation: "Ձմռանը ցուրտ է լինում, ամռանը՝ շոգ:"),
+            ExerciseItem(id: UUID(), prompt: "Մեքենա : Ճանապարհ :: Նավ : ___", options: ["Ջուր", "Օդ", "Ռելս", "Անտառ"], correctAnswer: "Ջուր", explanation: "Մեքենան ընթանում է ճանապարհով, նավը՝ ջրով:"),
+            ExerciseItem(id: UUID(), prompt: "Գիրք : Կարդալ :: Երաժշտություն : ___", options: ["Լսել", "Դիտել", "Գրել", "Երգել"], correctAnswer: "Լսել", explanation: "Գիրքը կարդում են, երաժշտությունը՝ լսում:"),
+            ExerciseItem(id: UUID(), prompt: "Կիտրոն : Թթու :: Շաքար : ___", options: ["Քաղցր", "Դառը", "Աղի", "Անհամ"], correctAnswer: "Քաղցր", explanation: "Կիտրոնը թթու է, իսկ շաքարը՝ քաղցր:"),
+            ExerciseItem(id: UUID(), prompt: "Ծառ : Տերև :: Ծաղիկ : ___", options: ["Թերթիկ", "Արմատ", "Ցողուն", "Փուշ"], correctAnswer: "Թերթիկ", explanation: "Ծառն ունի տերևներ, ծաղիկն ունի թերթիկներ:"),
+            ExerciseItem(id: UUID(), prompt: "Անձրև : Թրջել :: Կրակ : ___", options: ["Այրել", "Սառեցնել", "Չորացնել", "Լուսավորել"], correctAnswer: "Այրել", explanation: "Անձրևը թրջում է, կրակը՝ այրում:"),
+            ExerciseItem(id: UUID(), prompt: "Կոշիկ : Ոտք :: Ձեռնոց : ___", options: ["Ձեռք", "Ականջ", "Գլուխ", "Պարանոց"], correctAnswer: "Ձեռք", explanation: "Կոշիկը հագնում են ոտքին, ձեռնոցը՝ ձեռքին:"),
+            ExerciseItem(id: UUID(), prompt: "Առավոտ : Նախաճաշ :: Երեկո : ___", options: ["Ընթրիք", "Ճաշ", "Թեյ", "Հոբբի"], correctAnswer: "Ընթրիք", explanation: "Առավոտյան ուտում են նախաճաշ, երեկոյան՝ ընթրիք:"),
+            ExerciseItem(id: UUID(), prompt: "Սառույց : Կարծր :: Ջուր : ___", options: ["Հեղուկ", "Գազային", "Սառը", "Տաք"], correctAnswer: "Հեղուկ", explanation: "Սառույցը պինդ է, ջուրը՝ հեղուկ:"),
+            ExerciseItem(id: UUID(), prompt: "Մուրճ : Մեխ :: Պտուտակահան : ___", options: ["Պտուտակ", "Փայտ", "Մետաղ", "Պատ"], correctAnswer: "Պտուտակ", explanation: "Մուրճով խփում են մեխը, պտուտակահանով պտտում պտուտակը:"),
+            ExerciseItem(id: UUID(), prompt: "Դանակ : Կտրել :: Ասեղ : ___", options: ["Կարել", "Գործել", "Հագնել", "Կոտրել"], correctAnswer: "Կարել", explanation: "Դանակով կտրում են, ասեղով՝ կարում:"),
+            ExerciseItem(id: UUID(), prompt: "Շուն : Հաչել :: Կատու : ___", options: ["Մլավել", "Մռնչալ", "Կռնչալ", "Ծլվլալ"], correctAnswer: "Մլավել", explanation: "Շունը հաչում է, կատուն՝ մլավում:"),
+            ExerciseItem(id: UUID(), prompt: "Գդալ : Ապուր :: Պատառաքաղ : ___", options: ["Միս", "Ջուր", "Թեյ", "Հյութ"], correctAnswer: "Միս", explanation: "Ապուրը ուտում են գդալով, միսը՝ պատառաքաղով:"),
+            ExerciseItem(id: UUID(), prompt: "Բժիշկ : Հիվանդանոց :: Ուսուցիչ : ___", options: ["Դպրոց", "Գրասենյակ", "Խանութ", "Շուկա"], correctAnswer: "Դպրոց", explanation: "Բժիշկն աշխատում է հիվանդանոցում, ուսուցիչը՝ դպրոցում:"),
+            ExerciseItem(id: UUID(), prompt: "Երկինք : Ամպ :: Գետին : ___", options: ["Խոտ", "Քար", "Ջուր", "Ծառ"], correctAnswer: "Խոտ", explanation: "Երկնքում ամպերն են, գետնին՝ խոտը:"),
+            ExerciseItem(id: UUID(), prompt: "Հյուսիս : Հարավ :: Արևելք : ___", options: ["Արևմուտք", "Հյուսիս", "Արևելք", "Երկինք"], correctAnswer: "Արևմուտք", explanation: "Հյուսիսը հարավի հակառակն է, արևելքը՝ արևմուտքի:"),
+            ExerciseItem(id: UUID(), prompt: "Կրիա : Դանդաղ :: Ճագար : ___", options: ["Արագ", "Դանդաղ", "Զգույշ", "Լուռ"], correctAnswer: "Արագ", explanation: "Կրիան դանդաղաշարժ է, ճագարը՝ արագաշարժ:"),
+            ExerciseItem(id: UUID(), prompt: "Ձյուն : Սպիտակ :: Խոտ : ___", options: ["Կանաչ", "Կարմիր", "Դեղին", "Կապույտ"], correctAnswer: "Կանաչ", explanation: "Ձյունը սպիտակ է, խոտը՝ կանաչ:"),
+            ExerciseItem(id: UUID(), prompt: "Լուսամուտ : Ապակի :: Դուռ : ___", options: ["Փայտ", "Երկաթ", "Պլաստիկ", "Ապակի"], correctAnswer: "Փայտ", explanation: "Լուսամուտը սովորաբար ապակուց է, դուռը՝ փայտից:"),
+            ExerciseItem(id: UUID(), prompt: "Ժամացույց : Ժամանակ :: Կշեռք : ___", options: ["Քաշ", "Բարձրություն", "Երկարություն", "Ծավալ"], correctAnswer: "Քաշ", explanation: "Ժամացույցը չափում է ժամանակը, կշեռքը՝ քաշը:"),
+            ExerciseItem(id: UUID(), prompt: "Լամպ : Լույս :: Վառարան : ___", options: ["Տաքություն", "Սառնություն", "Ծուխ", "Կրակ"], correctAnswer: "Տաքություն", explanation: "Լամպը տալիս է լույս, վառարանը՝ տաքություն:"),
+            ExerciseItem(id: UUID(), prompt: "Հայր : Որդի :: Մայր : ___", options: ["Դուստր", "Քույր", "Աղջիկ", "Տատիկ"], correctAnswer: "Դուստր", explanation: "Հայրն ունենում է որդի, մայրը՝ դուստր:"),
+            ExerciseItem(id: UUID(), prompt: "Գլխարկ : Գլուխ :: Գուլպա : ___", options: ["Ոտք", "Ձեռք", "Մատ", "Ծունկ"], correctAnswer: "Ոտք", explanation: "Գլխարկը դնում են գլխին, գուլպան հագնում ոտքին:"),
+            ExerciseItem(id: UUID(), prompt: "Անտառ : Ծառ :: Գրադարան : ___", options: ["Գիրք", "Սեղան", "Դարակ", "Աշխատակից"], correctAnswer: "Գիրք", explanation: "Անտառը կազմված է ծառերից, գրադարանը՝ գրքերից:"),
+            ExerciseItem(id: UUID(), prompt: "Օդանավ : Երկինք :: Նավակ : ___", options: ["Լիճ", "Անտառ", "Ճանապարհ", "Լեռ"], correctAnswer: "Լիճ", explanation: "Օդանավը թռչում է երկնքում, նավակը լողում է լճում:"),
+            ExerciseItem(id: UUID(), prompt: "Մեղու : Փեթակ :: Թռչուն : ___", options: ["Բույն", "Ծառ", "Վանդակ", "Երկինք"], correctAnswer: "Բույն", explanation: "Մեղուն ապրում է փեթակում, թռչունը՝ բնում:"),
+            ExerciseItem(id: UUID(), prompt: "Ձեռք : Մատ :: Ոտք : ___", options: ["Մատներ", "Կրունկ", "Ծունկ", "Թաթ"], correctAnswer: "Մատներ", explanation: "Ձեռքն ունի մատներ, ոտքը նույնպես ունի մատներ:"),
+            ExerciseItem(id: UUID(), prompt: "Ատամնաբույժ : Ատամ :: Ակնաբույժ : ___", options: ["Աչք", "Ականջ", "Քիթ", "Կոկորդ"], correctAnswer: "Աչք", explanation: "Ատամնաբույժը բուժում է ատամները, ակնաբույժը՝ աչքերը:"),
+            ExerciseItem(id: UUID(), prompt: "Հեռուստացույց : Դիտել :: Ռադիո : ___", options: ["Լսել", "Գրել", "Խոսել", "Երգել"], correctAnswer: "Լսել", explanation: "Հեռուստացույցը դիտում են, ռադիոն՝ լսում:"),
+            ExerciseItem(id: UUID(), prompt: "Կոպեկ : Մետաղ :: Թղթադրամ : ___", options: ["Թուղթ", "Պլաստիկ", "Կաշի", "Կտոր"], correctAnswer: "Թուղթ", explanation: "Կոպեկը մետաղից է, թղթադրամը՝ թղթից:"),
+            ExerciseItem(id: UUID(), prompt: "Անձրևանոց : Անձրև :: Արևային ակնոց : ___", options: ["Արև", "Քամի", "Ամպ", "Ձյուն"], correctAnswer: "Արև", explanation: "Անձրևանոցը պաշտպանում է անձրևից, արևային ակնոցը՝ արևից:"),
+            ExerciseItem(id: UUID(), prompt: "Գազար : Արմատապտուղ :: Խնձոր : ___", options: ["Միրգ", "Բանջարեղեն", "Ծաղիկ", "Տերև"], correctAnswer: "Միրգ", explanation: "Գազարը արմատապտուղ է, խնձորը՝ միրգ:"),
+            ExerciseItem(id: UUID(), prompt: "Թեյնիկ : Եռացնել :: Սառնարան : ___", options: ["Սառեցնել", "Տաքացնել", "Եփել", "Լվանալ"], correctAnswer: "Սառեցնել", explanation: "Թեյնիկով ջուրն եռացնում են, սառնարանով՝ սառեցնում սնունդը:"),
+            ExerciseItem(id: UUID(), prompt: "Անիվ : Հեծանիվ :: Առագաստ : ___", options: ["Նավ", "Մեքենա", "Ինքնաթիռ", "Գնացք"], correctAnswer: "Նավ", explanation: "Անիվը հեծանիվի մաս է, առագաստը՝ նավի:"),
+            ExerciseItem(id: UUID(), prompt: "Ձմեռ : Դեկտեմբեր :: Ամառ : ___", options: ["Հունիս", "Մարտ", "Սեպտեմբեր", "Հոկտեմբեր"], correctAnswer: "Հունիս", explanation: "Դեկտեմբերը ձմռան ամիս է, հունիսը՝ ամռան:"),
+            ExerciseItem(id: UUID(), prompt: "Հաց : Փուռ :: Գիրք : ___", options: ["Տպարան", "Գրախանութ", "Դպրոց", "Գրադարան"], correctAnswer: "Տպարան", explanation: "Հացը թխում են փռում, գիրքը տպագրում տպարանում:"),
+            ExerciseItem(id: UUID(), prompt: "Ջուր : Ծարավ :: Սնունդ : ___", options: ["Սով", "Կուշտ", "Հոգնած", "Քուն"], correctAnswer: "Սով", explanation: "Ջուրը հագեցնում է ծարավը, սնունդը՝ սովը:"),
+            ExerciseItem(id: UUID(), prompt: "Կավ : Կավագործ :: Փայտ : ___", options: ["Ատաղձագործ", "Բժիշկ", "Ուսուցիչ", "Նկարիչ"], correctAnswer: "Ատաղձագործ", explanation: "Կավով աշխատում է կավագործը, փայտով՝ ատաղձագործը:"),
+            ExerciseItem(id: UUID(), prompt: "Թանաք : Գրիչ :: Կապար : ___", options: ["Մատիտ", "Ռետին", "Քանոն", "Սրիչ"], correctAnswer: "Մատիտ", explanation: "Գրիչի մեջ թանաքն է, մատիտի մեջ՝ կապարը:"),
+            ExerciseItem(id: UUID(), prompt: "Արևմուտք : Մայրամուտ :: Արևելք : ___", options: ["Արևածագ", "Կեսօր", "Երեկո", "Կեսգիշեր"], correctAnswer: "Արևածագ", explanation: "Արևմուտքում լինում է մայրամուտը, արևելքում՝ արևածագը:"),
+            ExerciseItem(id: UUID(), prompt: "Դերասան : Թատրոն :: Լրագրող : ___", options: ["Թերթ", "Դպրոց", "Հիվանդանոց", "Դատարան"], correctAnswer: "Թերթ", explanation: "Դերասանն աշխատում է թատրոնում, լրագրողը՝ թերթում:"),
+            ExerciseItem(id: UUID(), prompt: "Սար : Բարձր :: Ձոր : ___", options: ["Խորը", "Տափակ", "Լայն", "Նեղ"], correctAnswer: "Խորը", explanation: "Սարը բարձր է լինում, ձորը՝ խորը:"),
+            ExerciseItem(id: UUID(), prompt: "Շապիկ : Հագուստ :: Սանդալ : ___", options: ["Կոշիկ", "Գլխարկ", "Տաբատ", "Գուլպա"], correctAnswer: "Կոշիկ", explanation: "Շապիկը հագուստի տեսակ է, սանդալը՝ կոշիկի:"),
+            ExerciseItem(id: UUID(), prompt: "Ոսկի : Մետաղ :: Ադամանդ : ___", options: ["Թանկարժեք քար", "Ժայռ", "Ապակի", "Ավազ"], correctAnswer: "Թանկարժեք քար", explanation: "Ոսկին մետաղ է, ադամանդը՝ թանկարժեք քար:"),
+            ExerciseItem(id: UUID(), prompt: "Աստղ : Աստղադիտակ :: Մանրէ : ___", options: ["Մանրադիտակ", "Ակնոց", "Հայելի", "Լուսանկարչական ապարատ"], correctAnswer: "Մանրադիտակ", explanation: "Աստղը դիտում են աստղադիտակով, մանրէն՝ մանրադիտակով:"),
+            ExerciseItem(id: UUID(), prompt: "Կայծակ : Որոտ :: Հրաբուխ : ___", options: ["Լավա", "Մոխիր", "Երկրաշարժ", "Ծուխ"], correctAnswer: "Լավա", explanation: "Կայծակին հետևում է որոտը, հրաբխից ժայթքում է լավան:"),
+            ExerciseItem(id: UUID(), prompt: "Մեղու : Ծաղիկ :: Կով : ___", options: ["Խոտ", "Ջուր", "Ծառ", "Պանիր"], correctAnswer: "Խոտ", explanation: "Մեղուն նեկտար է հավաքում ծաղկից, կովն արածում է խոտ:"),
+            ExerciseItem(id: UUID(), prompt: "Անգլերեն : Լեզու :: Կիթառ : ___", options: ["Գործիք", "Երաժշտություն", "Երգ", "Ձայն"], correctAnswer: "Գործիք", explanation: "Անգլերենը լեզու է, կիթառը՝ երաժշտական գործիք:"),
+            ExerciseItem(id: UUID(), prompt: "Շուն : Շնիկ :: Կատու : ___", options: ["Կատվիկ", "Մուկ", "Ձագուկ", "Կենդանի"], correctAnswer: "Կատվիկ", explanation: "Շան ձագը շնիկն է, կատվինը՝ կատվիկը:"),
+            ExerciseItem(id: UUID(), prompt: "Խաղող : Գինի :: Կաթ : ___", options: ["Պանիր", "Հյութ", "Ջուր", "Մեղր"], correctAnswer: "Պանիր", explanation: "Խաղողից պատրաստում են գինի, կաթից՝ պանիր:"),
+            ExerciseItem(id: UUID(), prompt: "Սարդ : Սարդոստայն :: Մեղու : ___", options: ["Փեթակ", "Մեղր", "Ծաղիկ", "Բույն"], correctAnswer: "Փեթակ", explanation: "Սարդը հյուսում է սարդոստայն, մեղուն կառուցում է փեթակ:"),
+            ExerciseItem(id: UUID(), prompt: "Պատուհան : Շրջանակ :: Պատ : ___", options: ["Աղյուս", "Ցեմենտ", "Ներկ", "Ապակի"], correctAnswer: "Աղյուս", explanation: "Պատուհանն ունի շրջանակ, պատը կառուցվում է աղյուսներով:"),
+            ExerciseItem(id: UUID(), prompt: "Նկարիչ : Վրձին :: Գրող : ___", options: ["Գրիչ", "Գիրք", "Թուղթ", "Գրասեղան"], correctAnswer: "Գրիչ", explanation: "Նկարիչը նկարում է վրձնով, գրողը գրում է գրիչով:"),
+            ExerciseItem(id: UUID(), prompt: "Սառնարան : Սառը :: Վառարան : ___", options: ["Տաք", "Ծուխ", "Կրակ", "Մաքուր"], correctAnswer: "Տաք", explanation: "Սառնարանը սառն է պահում, վառարանը՝ տաք:"),
+            ExerciseItem(id: UUID(), prompt: "Երկրաշարժ : Ցնցում :: Փոթորիկ : ___", options: ["Քամի", "Անձրև", "Ալիք", "Ամպ"], correctAnswer: "Քամի", explanation: "Երկրաշարժը առաջացնում է ցնցում, փոթորիկը՝ ուժեղ քամի:"),
+            ExerciseItem(id: UUID(), prompt: "Ծով : Աղի :: Աղբյուր : ___", options: ["Քաղցրահամ", "Տաք", "Կեղտոտ", "Խորը"], correctAnswer: "Քաղցրահամ", explanation: "Ծովի ջուրն աղի է, աղբյուրինը՝ քաղցրահամ:"),
+            ExerciseItem(id: UUID(), prompt: "Բարի : Չար :: Լույս : ___", options: ["Խավար", "Ճրագ", "Արև", "Աստղ"], correctAnswer: "Խավար", explanation: "Բարին չարի հակառակն է, լույսը՝ խավարի:"),
+            ExerciseItem(id: UUID(), prompt: "Գլուխ : Մազ :: Մարմին : ___", options: ["Մաշկ", "Ձեռք", "Ոտք", "Սիրտ"], correctAnswer: "Մաշկ", explanation: "Գլուխը պատված է մազերով, մարմինը՝ մաշկով:"),
+            ExerciseItem(id: UUID(), prompt: "Թագավոր : Թագ :: Զինվոր : ___", options: ["Սաղավարտ", "Զենք", "Վահան", "Ձի"], correctAnswer: "Սաղավարտ", explanation: "Թագավորը կրում է թագ, զինվորը՝ սաղավարտ:"),
+            ExerciseItem(id: UUID(), prompt: "Թեյ : Բաժակ :: Ապուր : ___", options: ["Ափսե", "Գդալ", "Կաթսա", "Վառարան"], correctAnswer: "Ափսե", explanation: "Թեյը լցնում են բաժակի մեջ, ապուրը՝ ափսեի:"),
+            ExerciseItem(id: UUID(), prompt: "Փիղ : Մեծ :: Մուկ : ___", options: ["Փոքր", "Արագ", "Գորշ", "Թույլ"], correctAnswer: "Փոքր", explanation: "Փիղը հսկայական է, մուկը՝ փոքրիկ:"),
+            ExerciseItem(id: UUID(), prompt: "Կամուրջ : Գետ :: Թունել : ___", options: ["Սար", "Ճանապարհ", "Գնացք", "Գետին"], correctAnswer: "Սար", explanation: "Կամուրջը կառուցում են գետի վրայով, թունելը՝ սարի միջով:"),
+            ExerciseItem(id: UUID(), prompt: "Օճառ : Մաքրություն :: Կեղտ : ___", options: ["Փոշի", "Ջուր", "Լվացք", "Հիվանդություն"], correctAnswer: "Փոշի", explanation: "Օճառը բերում է մաքրություն, կեղտը կազմված է փոշուց:"),
+            ExerciseItem(id: UUID(), prompt: "Հեծանիվ : Շղթա :: Ժամացույց : ___", options: ["Զսպանակ", "Սլաք", "Թվեր", "Ապակի"], correctAnswer: "Զսպանակ", explanation: "Հեծանիվը շարժվում է շղթայի օգնությամբ, ժամացույցը՝ զսպանակով:"),
+            ExerciseItem(id: UUID(), prompt: "Կայծ : Կրակ :: Կաթիլ : ___", options: ["Ջուր", "Անձրև", "Գետ", "Օվկիանոս"], correctAnswer: "Ջուր", explanation: "Կայծից առաջանում է կրակը, կաթիլներից՝ ջուրը:"),
+            ExerciseItem(id: UUID(), prompt: "Խոտ : Դաշտ :: Ավազ : ___", options: ["Անապատ", "Լողափ", "Գետ", "Ծով"], correctAnswer: "Անապատ", explanation: "Դաշտը ծածկված է խոտով, անապատը՝ ավազով:"),
+            ExerciseItem(id: UUID(), prompt: "Շոգենավ : ածուխ :: Ավտոմեքենա : ___", options: ["Բենզին", "Անիվ", "Շարժիչ", "Ճանապարհ"], correctAnswer: "Բենզին", explanation: "Շոգենավն աշխատում էր ածխով, մեքենան՝ բենզինով:"),
+            ExerciseItem(id: UUID(), prompt: "Թատրոն : Բեմ :: Դատարան : ___", options: ["Ատյան", "Դատավոր", "Օրենք", "Գրասենյակ"], correctAnswer: "Ատյան", explanation: "Թատրոնում ներկայացումը բեմի վրա է, դատարանում՝ ատյանում:"),
+            ExerciseItem(id: UUID(), prompt: "Կրակ : Մոխիր :: Սառույց : ___", options: ["Ջուր", "Գոլորշի", "Գետին", "Սառնարան"], correctAnswer: "Ջուր", explanation: "Կրակի այրումից մնում է մոխիրը, սառույցի հալվելուց՝ ջուրը:"),
+            ExerciseItem(id: UUID(), prompt: "Կոշիկ : Կաշի :: Շշեր : ___", options: ["Ապակի", "Պլաստիկ", "Թուղթ", "Մետաղ"], correctAnswer: "Ապակի", explanation: "Կոշիկը սովորաբար կաշվից է, շիշը՝ ապակուց:"),
+            ExerciseItem(id: UUID(), prompt: "Արծիվ : Ճանկ :: Վագր : ___", options: ["Ճանկեր", "Պոչ", "Մորթի", "Ատամ"], correctAnswer: "Ճանկեր", explanation: "Արծիվն ունի ճանկեր, վագրը նույնպես ունի ճանկեր:"),
+            ExerciseItem(id: UUID(), prompt: "Թիակ : Թիավարել :: Առագաստ : ___", options: ["Լողալ", "Քամի", "Կառավարել", "Կանգնեցնել"], correctAnswer: "Լողալ", explanation: "Թիակով թիավարում են, առագաստով՝ լողում:"),
+            ExerciseItem(id: UUID(), prompt: "Սոխ : Կծու :: Մեղր : ___", options: ["Քաղցր", "Թթու", "Աղի", "Դառը"], correctAnswer: "Քաղցր", explanation: "Սոխը կծու է, մեղրը՝ քաղցր:"),
+            ExerciseItem(id: UUID(), prompt: "Դպրոց : Աշակերտ :: Բանակ : ___", options: ["Զինվոր", "Հրամանատար", "Զենք", "Պատերազմ"], correctAnswer: "Զինվոր", explanation: "Դպրոցում սովորում է աշակերտը, բանակում ծառայում է զինվորը:"),
         ]
     )
 }
