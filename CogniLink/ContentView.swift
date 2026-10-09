@@ -319,7 +319,7 @@ struct HomeView: View {
                         NavigationLink(destination: NumberSkillsView()) {
                             sectionCard(
                                 title: FS.numberSkillsTitle,
-                                subtitle: FS.numberSkillsSubtitle,
+                                subtitle: SpeechOutput.voiceAvailable(for: languageManager.currentLanguage) ? FS.numberSkillsSubtitle : FS.numberSkillsSubtitleRead,
                                 systemImage: "number.circle",
                                 color: .orange
                             )

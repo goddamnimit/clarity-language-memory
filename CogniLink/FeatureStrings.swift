@@ -1515,4 +1515,66 @@ enum FS {
           ru: "Найдено: {a} из {b}",
           uk: "Знайдено {a} із {b}").replacingOccurrences(of: "{a}", with: String(a)).replacingOccurrences(of: "{b}", with: String(b))
     }
+
+    // MARK: - F4 no-voice variants (shown when the language has no installed TTS voice)
+    static var numberSkillsSubtitleRead: String {
+        L(en: "Read the number, then pick it or type it.",
+          es: "Lea el número y luego elíjalo o escríbalo.",
+          hi: "नंबर पढ़िए, फिर चुनिए या लिखिए।",
+          gu: "નંબર વાંચો, પછી પસંદ કરો અથવા લખો.",
+          zh: "看一看数字，然后选择或输入。",
+          fa: "عدد را بخوانید، سپس انتخاب کنید یا تایپ کنید.",
+          ko: "숫자를 보고, 고르거나 입력하세요.",
+          vi: "Đọc số, rồi chọn hoặc gõ lại.",
+          ar: "اقرأ الرقم ثم اختر أو اكتب.",
+          pt: "Leia o número e depois escolha ou digite.",
+          tl: "Basahin ang numero, saka pumili o i-type.",
+          pa: "ਨੰਬਰ ਪੜ੍ਹੋ, ਫਿਰ ਚੁਣੋ ਜਾਂ ਟਾਈਪ ਕਰੋ।",
+          hy: "Կարդացեք թիվը, ապա ընտրեք կամ մուտքագրեք։",
+          ja: "数字を読んで、選ぶか入力します。",
+          fr: "Lisez le nombre, puis choisissez ou tapez.",
+          am: "ቁጥሩን አንብቡ፣ ከዚያ ይምረጡ ወይም ይጻፉ።",
+          ru: "Прочитайте число, затем выберите его или введите.",
+          uk: "Прочитайте число, потім виберіть або введіть.")
+    }
+    static var modePickRead: String {
+        L(en: "Read and pick",
+          es: "Leer y elegir",
+          hi: "पढ़ें और चुनें",
+          gu: "વાંચો અને પસંદ કરો",
+          zh: "看后选择",
+          fa: "بخوانید و انتخاب کنید",
+          ko: "보고 고르기",
+          vi: "Đọc và chọn",
+          ar: "اقرأ واختر",
+          pt: "Ler e escolher",
+          tl: "Magbasa at pumili",
+          pa: "ਪੜ੍ਹੋ ਅਤੇ ਚੁਣੋ",
+          hy: "Կարդալ և ընտրել",
+          ja: "読んで選ぶ",
+          fr: "Lire et choisir",
+          am: "አንብብ እና ምረጥ",
+          ru: "Читать и выбрать",
+          uk: "Прочитати й обрати")
+    }
+    static var modeTypeRead: String {
+        L(en: "Read and type",
+          es: "Leer y escribir",
+          hi: "पढ़ें और लिखें",
+          gu: "વાંચો અને લખો",
+          zh: "看后输入",
+          fa: "بخوانید و تایپ کنید",
+          ko: "보고 입력하기",
+          vi: "Đọc và gõ",
+          ar: "اقرأ واكتب",
+          pt: "Ler e digitar",
+          tl: "Magbasa at mag-type",
+          pa: "ਪੜ੍ਹੋ ਅਤੇ ਟਾਈਪ ਕਰੋ",
+          hy: "Կարդալ և մուտքագրել",
+          ja: "読んで入力",
+          fr: "Lire et taper",
+          am: "አንብብ እና ጻፍ",
+          ru: "Читать и вводить",
+          uk: "Прочитати й ввести")
+    }
 }

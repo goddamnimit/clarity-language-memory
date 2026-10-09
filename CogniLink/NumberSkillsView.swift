@@ -58,7 +58,7 @@ struct NumberSkillsView: View {
 
     private var setupView: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text(FS.numberSkillsSubtitle)
+            Text(canSpeak ? FS.numberSkillsSubtitle : FS.numberSkillsSubtitleRead)
                 .font(.headline)
                 .foregroundColor(.secondary)
 
@@ -72,8 +72,8 @@ struct NumberSkillsView: View {
             }
 
             Picker(FS.numberSkillsTitle, selection: $mode) {
-                Text(FS.modePick).tag(Mode.pick)
-                Text(FS.modeType).tag(Mode.type)
+                Text(canSpeak ? FS.modePick : FS.modePickRead).tag(Mode.pick)
+                Text(canSpeak ? FS.modeType : FS.modeTypeRead).tag(Mode.type)
             }
             .pickerStyle(SegmentedPickerStyle())
 
