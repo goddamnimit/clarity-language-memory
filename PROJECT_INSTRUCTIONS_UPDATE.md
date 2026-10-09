@@ -1,7 +1,8 @@
 # PROJECT_INSTRUCTIONS_UPDATE — paste-ready replacement sections
 
 ## Platform facts (correction)
-- The iOS app's deployment target is **iOS 17.6** (the old "iOS 16+" line is stale); tvOS 17.6+; widget iOS 17.6. Xcode 26.x. Current project versions: iOS 4.1 (1), tvOS 4.0 (1), widget 4.1 (1). There are **no git tags**, so nothing in the repository proves what has been released to the App Store — check App Store Connect.
+- The iOS app's deployment target is **iOS 17.6** (the old "iOS 16+" line is stale); tvOS 17.6+; widget iOS 17.6. Xcode 26.x.
+- **Current App Store version: 4.3. Next release: 4.4.** (Per the owner. Git does not record it: no commit on any branch sets `MARKETING_VERSION = 4.3`, main's last committed values are iOS/widget 4.1 and tvOS 4.0, and there are no tags. The uncommitted Xcode working tree has 4.4.) Do not bump versions in feature commits.
 
 ## Git (correction)
 - `main` was fast-forwarded to `add-english-new-exercises` (f0b67f8) and is the working branch. The exact fast-forward date cannot be recovered: `main`'s reflog is empty. f0b67f8 is dated 2026-07-17, and later commits on `main` run through 2026-07-24 (fbd39b2). Local `main` equals `origin/main` (fbd39b2) as of 2026-10-08.
@@ -13,6 +14,12 @@
 - **DiagnosisType:** committed ac34596 (9 cases + `customDiagnosisText`); translated labels are gated on SLP review.
 - **Accessibility batch** (voice input iOS, Dynamic Type, VoiceOver): 9109692, 7d9e15c, fbd39b2 (and earlier a3ebf99, c88ef96). No tags/build-number evidence of an App Store release — confirm in App Store Connect before saying it shipped.
 - **Cross-reference feature** 0ad5e9f; **widget** e80e223 / 2ce109c (App Group `group.com.nimitdesai.clarity.shared`, same in code and both entitlements; real-device check still pending).
+
+## Content (correction)
+Remove any claim of "961+ items in every language". Real counts range from about 1,019 (Arabic) to 1,239 (Punjabi); Japanese 1,054, Vietnamese 1,024, Arabic 1,019 are the smallest (table in OVERNIGHT_REPORT.md). Exercise groups with fewer than 5 items are hidden from users by one central rule.
+
+## Research export
+`firstTryCorrect` keeps its original meaning (first attempt correct). New additive fields for cue-eligible exercises: `firstTryCorrectNoCue`, `cuedItems`, `cueLevelCounts`.
 
 ## New backlog item
 - **Caregiver email signup** (purpose TBD). Needs a backend and a privacy-policy / App Store privacy-label change; out of scope until decided.

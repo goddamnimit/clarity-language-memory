@@ -1,5 +1,37 @@
 # OVERNIGHT_REPORT — branch `overnight/2026-10-08` (unpushed, not merged)
 
+## Follow-up round (after review)
+Commits: 911d6c1 `firstTryCorrect` restored to its exact main meaning (first attempt correct); the cue-aware number is the new additive field `firstTryCorrectNoCue` (documented in `ResearchExportManager`) · 3a5371b Number Skills shows the number as text and uses "Read and pick/type" wording when the language has no TTS voice (verified in Gujarati and Amharic) · ac898d8 groups with fewer than 5 items are hidden for every language, iOS and tvOS, by one rule (hidden today: Arabic ×2, Armenian ×1, Japanese ×1, Korean ×2, Spanish ×1, Vietnamese ×3) · fadfb6d Home streak card + loading text localized in all languages (weekday names via DateFormatter in the app language) · 26caf58 `xcschememanagement.plist` untracked (`xcuserdata/` was already in `.gitignore`; one more tracked file remains: `xcdebugger/Breakpoints_v2.xcbkptlist`).
+
+**Version:** the App Store version is 4.3 and the next release is 4.4 (as you stated). Git cannot confirm it: `MARKETING_VERSION` never became 4.3 in any commit on any branch (`git log --all -S'MARKETING_VERSION = 4.3'` is empty); main's last committed values are iOS/widget 4.1 and tvOS 4.0 (e80e223 / 2ce109c, 2026-07-11). Your **uncommitted** working tree has 4.4 and `CURRENT_PROJECT_VERSION = 0`. No tag created.
+**Working-tree changes that are not mine and are not committed:** `CogniLink.xcodeproj/project.pbxproj` (4.4, build 0, reordering) and `CogniLink-Info.plist` — the diff **removes `NSMicrophoneUsageDescription` and `NSSpeechRecognitionUsageDescription`**; voice input will crash/refuse on a build without them. Check that before shipping 4.4.
+
+### Real per-language item counts (replaces the old "961+ in every language" claim)
+| Language | Items on main | Items now (branch) | Visible to users* | Visible groups |
+|---|---|---|---|---|
+| Punjabi | 1,239 | 1,239 | 1,239 | 61 |
+| Tagalog | 1,235 | 1,235 | 1,235 | 61 |
+| Portuguese | 1,217 | 1,217 | 1,217 | 61 |
+| English | 1,216 | 1,216 | 1,216 | 73 |
+| French | 1,212 | 1,212 | 1,212 | 67 |
+| Chinese | 1,209 | 1,209 | 1,209 | 69 |
+| Farsi | 1,206 | 1,206 | 1,206 | 69 |
+| Hindi | 1,206 | 1,206 | 1,206 | 69 |
+| Gujarati | 1,205 | 1,205 | 1,205 | 69 |
+| Russian (preview) | — | 1,196 | 1,196 | 72 |
+| Ukrainian (preview) | — | 1,196 | 1,196 | 72 |
+| Korean | 1,167 | 1,167 | 1,160 | 64 |
+| Spanish | 1,159 | 1,159 | 1,156 | 53 |
+| Armenian | 1,236 | 1,114 | 1,111 | 60 |
+| Amharic | 1,103 | 1,103 | 1,103 | 36 |
+| Japanese | 1,058 | 1,058 | 1,054 | 63 |
+| Vietnamese | 1,195 | 1,027 | 1,024 | 57 |
+| Arabic | 1,199 | 1,023 | 1,019 | 59 |
+
+\*Groups with fewer than 5 items are hidden by one central rule (`Exercise.minimumVisibleItems` in `LanguageManager`). Counts include the English-only Minimal Pairs group for English. There is **no** "961+ items in every language" parity: Arabic, Vietnamese, Armenian lost 122–168 items that were numbered duplicates, and Japanese (1,054), Vietnamese (1,024) and Arabic (1,019) are the smallest.
+
+---
+
 ## Read this first
 All phases are done. Phase 5 raw output (clean builds of all three schemes, generic-device compiles with `CODE_SIGNING_ALLOWED=NO`, unit tests + validator) is in `scratch/phase5_raw.txt`: **everything BUILD SUCCEEDED / TEST SUCCEEDED**. Screenshots are in gitignored `smoke/`. Website: `website-update/index.html` + `CHANGES.md` (**not deployed**: no Netlify CLI). Docs: CLAUDE.md (new), KNOWN_ISSUES.md, PROJECT_INSTRUCTIONS_UPDATE.md, WHATS_NEW_DRAFT.md.
 
@@ -10,7 +42,7 @@ ce5dcff gitignore · 5c46b9a Amharic restructure · 49f45a0 validator-red fixes 
 Final run (CogniLinkTests incl. validator for all 64 catalogs): **green**; CogniLink, ClarityTV, ClarityWidget builds: **green**. **Baseline on main was red**: 12 validator failures in 11 catalogs (591 bad items) — fixed in 5c46b9a/49f45a0.
 
 ### Decisions I need from you
-1. **Padding duplicates collapsed** (Vietnamese Functional 61/50/60→1 item each, Arabic, Armenian…). Those exercises are now tiny and need real content (see REVIEW_QUEUE.md A4). Earlier "961+ items" parity claims included padding.
+1. **Padding duplicates collapsed** (Vietnamese Functional 61/50/60→1 item each, Arabic, Armenian…). Those groups are now hidden until they have 5 items; they need real content (REVIEW_QUEUE.md A4). Item counts are not at parity (table above).
 2. **Amharic** three catch-all files were split into typed exercises with Amharic titles I wrote (review needed, A1).
 3. **AppProgressView** kept (has a unique weekly Charts bar chart + accordion). `DayActivity` extracted; delete or port?
 4. **pbxproj**: added the two orphan refs (AppTheme/WidgetSnapshot) to the main group; open Xcode once to confirm "Recovered References" is gone.
