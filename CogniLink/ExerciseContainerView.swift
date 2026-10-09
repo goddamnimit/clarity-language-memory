@@ -530,9 +530,15 @@ struct ExerciseContainerView: View {
         // Compute attempt summary for this session
         let totalAttempts = sessionAttempts.count
         let wrongAttempts = sessionAttempts.filter { ($0["correct"] as? Bool) == false }.count
+        // Exact pre-cue meaning (unchanged since main): the first attempt at the
+        // item was correct. Insight/recommendation/PDF code reads this field.
         let firstTryCorrect = sessionItems.indices.filter { idx in
             let attemptsForItem = sessionAttempts.filter { ($0["itemIndex"] as? Int) == idx }
-            // Independent first try: correct on the first attempt with no cue.
+            return attemptsForItem.first.flatMap { $0["correct"] as? Bool } == true
+        }.count
+        // Additive, cue-aware variant: first attempt correct AND no hint used.
+        let firstTryCorrectNoCue = sessionItems.indices.filter { idx in
+            let attemptsForItem = sessionAttempts.filter { ($0["itemIndex"] as? Int) == idx }
             guard let first = attemptsForItem.first else { return false }
             return (first["correct"] as? Bool) == true && ((first["cueLevel"] as? Int) ?? 0) == 0
         }.count
@@ -552,9 +558,11 @@ struct ExerciseContainerView: View {
             "difficulty": ResearchExportManager.string(for: exercise.difficulty),
             "language": ResearchExportManager.string(for: languageManager.currentLanguage)
         ]
-        // F3 (additive, anonymous): how many items needed a cue, and the highest
+        // F3 (additive, anonymous; present only when a cue-eligible exercise was
+        // played): firstTryCorrectNoCue, how many items needed a cue, and the highest
         // level reached per item as counts [hint1, hint2, reveal].
         if !cueLevels.isEmpty {
+            record["firstTryCorrectNoCue"] = firstTryCorrectNoCue
             let used = cueLevels.values.filter { $0 > 0 }
             if !used.isEmpty {
                 record["cuedItems"] = used.count

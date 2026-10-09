@@ -3,6 +3,14 @@ import os
 
 /// Builds and manages the anonymous research data export.
 /// All methods are static; no instance is ever created.
+///
+/// Session-log record fields (all anonymous; no text, names or dates):
+/// dayOffset, score, total, totalAttempts, wrongAttempts,
+/// firstTryCorrect (the first attempt at an item was correct; unchanged meaning),
+/// section, exerciseType, difficulty, language, and — only for cue-eligible
+/// exercises that were played — firstTryCorrectNoCue (first attempt correct and
+/// no hint used), cuedItems (items where a hint was used) and cueLevelCounts
+/// ([hint1, hint2, reveal] = items by highest hint level used).
 struct ResearchExportManager {
 
     static let sessionLogKey  = "clarity_session_log"
