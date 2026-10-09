@@ -10,3 +10,7 @@ clarity_full_audit.txt
 scratch/
 smoke/
 OVERNIGHT_LOG.md
+
+# Xcode per-user debugger/state (also covered by xcuserdata/)
+**/xcdebugger/
+*.xcbkptlist
