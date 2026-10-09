@@ -5,6 +5,8 @@ SwiftUI, no third-party libraries, no network, no accounts. Targets: `CogniLink`
 ## Versions
 Last shipped to the App Store: **4.3.x** (owner recalls 4.3.2); the version in this tree is **4.4** (build 100, iOS app and widget extension together). Do not bump `MARKETING_VERSION`/`CURRENT_PROJECT_VERSION` in a feature commit. History before 4.4 has no commit that sets 4.3 and there are no tags until the checklist below is followed.
 
+**App Store records:** the iOS app (with the widget) and ClarityTV are separate App Store records with their own version and build numbers. The iOS minimum is 17.6 (not 16), and the website must say "iOS 17.6+".
+
 ## Rules that must not be broken
 - **Adaptive difficulty:** never change `AdaptiveDifficultyStore` thresholds/windows/cross-reference logic. Features may feed it inputs (cued answers are reported as not-correct).
 - **Insight copy:** do not edit InsightEngine's clinical decline/stability wording (English-only pending licensed-SLP review). Do not ship translated `DiagnosisType` labels.
