@@ -8,6 +8,9 @@ Recovery or Maintenance framing, Caregiver insights, Speak your answers (voice i
 ## New "On the way" block at the end of the features section (each card has a *Coming soon* badge)
 Today card, Number skills, Remember It, Visual scanning, Hints and fewer choices, Reading passages and conversation cards (English first), Second daily reminder. None of these is in a released build.
 
+## Removed
+The "A new artwork every day" card, its translations in all page languages, and the artwork mention in the meta description (the app no longer ships the artwork backgrounds).
+
 ## Unchanged
 16 languages (Russian and Ukrainian are preview and are NOT listed), design, the world map (the SVG block is byte-identical to the base), App Store link, Android "In Testing" button, footer, widget showcase.
 
