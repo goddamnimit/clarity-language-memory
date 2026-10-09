@@ -1,6 +1,7 @@
 # PROJECT_INSTRUCTIONS_UPDATE — paste-ready replacement sections
 
 ## Platform facts (correction)
+- **ClarityTV versioning:** last shipped tvOS 1.1 (live); 1.2 is prepared in App Store Connect and committed here as 1.2 (build 5). ClarityTV store versions are 1.x, independent of iOS 4.x; build numbers must stay above 4. (The old repo value 4.0 was wrong.)
 - The iOS app's deployment target is **iOS 17.6** (the old "iOS 16+" line is stale; the website now says "iOS 17.6+"). **ClarityTV is a separate App Store record with its own versioning**; tvOS 17.6+; widget iOS 17.6. Xcode 26.x.
 - **Last shipped iOS version: 4.3.2. Next release: 4.4.** (Per the owner. Git does not record it: no commit sets `MARKETING_VERSION = 4.3`, at e80e223 the iOS app was 4.2, the widget 4.1 and tvOS 4.0, and there are no tags. 4.4 / build 100 is committed in 84d2e20.) Do not bump versions in feature commits.
 
