@@ -3,7 +3,7 @@
 SwiftUI, no third-party libraries, no network, no accounts. Targets: `CogniLink` (iOS, universal, min iOS 17.6), `ClarityTV` (tvOS 17.6+, compiles the `CogniLink/` folder too), `ClarityWidget`. Xcode 26.x. Folders are file-system-synchronized: new Swift files are picked up automatically (no pbxproj edit), except the widget which lists `AppTheme.swift` and `WidgetSnapshot.swift` explicitly.
 
 ## Versions
-App Store version is **4.3**; the next release is **4.4**. Do not bump `MARKETING_VERSION`/`CURRENT_PROJECT_VERSION` in a feature commit. (No git commit sets 4.3; there are no tags.)
+Last shipped to the App Store: **4.3.x** (owner recalls 4.3.2); the version in this tree is **4.4** (build 100, iOS app and widget extension together). Do not bump `MARKETING_VERSION`/`CURRENT_PROJECT_VERSION` in a feature commit. History before 4.4 has no commit that sets 4.3 and there are no tags until the checklist below is followed.
 
 ## Rules that must not be broken
 - **Adaptive difficulty:** never change `AdaptiveDifficultyStore` thresholds/windows/cross-reference logic. Features may feed it inputs (cued answers are reported as not-correct).
@@ -34,3 +34,10 @@ tvOS: `xcodebuild -scheme ClarityTV -destination 'generic/platform=tvOS Simulato
 
 ## tvOS layout
 `TVOptionGridView` must keep guaranteed space above Replay/Skip (App Review Guideline 4). Prompts scale to the 35 % band (`minimumScaleFactor`), they do not scroll.
+
+## Submission checklist
+1. All tests green (`CogniLinkTests`, including the validator over every catalog) and all three schemes (CogniLink, ClarityTV, ClarityWidget) build.
+2. Bump `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in their own commit ("Bump to X.Y (build N)"); the build number must be higher than the last upload, and the widget extension must carry the same values as the iOS app.
+3. Archive **from that commit** (clean working tree, nothing uncommitted).
+4. After the upload succeeds, tag that commit `vX.Y` (e.g. `v4.4`).
+5. Do not unhide preview languages (`AppLanguage.isPreview`) or publish website pages for unreleased features before the release is approved.
