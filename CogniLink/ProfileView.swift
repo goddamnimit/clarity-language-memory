@@ -230,7 +230,7 @@ struct ProfileView: View {
                 VStack(alignment: .leading, spacing: 12) {
                     DisclosureGroup {
                         VStack(spacing: 12) {
-                            ForEach(AppLanguage.allCases) { language in
+                            ForEach(AppLanguage.visibleCases) { language in
                                 Button(action: {
                                     withAnimation {
                                         languageManager.currentLanguage = language

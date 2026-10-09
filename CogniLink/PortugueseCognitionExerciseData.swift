@@ -1211,428 +1211,69 @@ struct PortugueseCognitionExerciseData {
         instructions: "Escolha a palavra correta para completar a analogia.",
         section: .cognition,
         type: .analogyChoice,
+        trackedType: nil,
         difficulty: .medium,
         items: [
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão de queijo : Queijo :: Brigadeiro : Chocolate",
-                options: ["Chocolate", "Água", "Sal", "Pimenta"],
-                correctAnswer: "Chocolate",
-                explanation: "O pão de queijo leva queijo em sua receita, enquanto o brigadeiro leva chocolate."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Sol : Dia :: Lua : Noite",
-                options: ["Noite", "Nuvem", "Estrela", "Céu"],
-                correctAnswer: "Noite",
-                explanation: "O sol brilha durante o dia, e a lua aparece principalmente à noite."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Carro : Estrada :: Barco : Rio",
-                options: ["Rio", "Céu", "Trilho", "Floresta"],
-                correctAnswer: "Rio",
-                explanation: "O carro anda na estrada, e o barco navega no rio ou no mar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Peixe : Água :: Pássaro : Ar",
-                options: ["Ar", "Terra", "Ninho", "Gaiola"],
-                correctAnswer: "Ar",
-                explanation: "O peixe vive e nada na água, o pássaro voa no ar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Livro : Ler :: Música : Ouvir",
-                options: ["Ouvir", "Escrever", "Cantar", "Tocar"],
-                correctAnswer: "Ouvir",
-                explanation: "Um livro serve para ler, e a música serve para ouvir."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Limão : Azedo :: Açúcar : Doce",
-                options: ["Doce", "Salgado", "Amargo", "Picante"],
-                correctAnswer: "Doce",
-                explanation: "O limão tem sabor azedo, o açúcar tem sabor doce."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Garfo : Comer :: Caneta : Escrever",
-                options: ["Escrever", "Desenhar", "Ler", "Pintar"],
-                correctAnswer: "Escrever",
-                explanation: "Usa-se o garfo para comer e a caneta para escrever."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Médico : Hospital :: Professor : Escola",
-                options: ["Escola", "Escritório", "Teatro", "Tribunal"],
-                correctAnswer: "Escola",
-                explanation: "O médico trabalha no hospital, e o professor trabalha na escola."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Geladeira : Frio :: Fogão : Quente",
-                options: ["Quente", "Sujo", "Limpo", "Escuro"],
-                correctAnswer: "Quente",
-                explanation: "A geladeira resfria os alimentos, e o fogão os esquenta."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Sapato : Pé :: Chapéu : Cabeça",
-                options: ["Cabeça", "Mão", "Braço", "Pescoço"],
-                correctAnswer: "Cabeça",
-                explanation: "Usa-se o sapato no pé e o chapéu na cabeça."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Brasil : Brasília :: EUA : Washington",
-                options: ["Washington", "Nova York", "Miami", "Boston"],
-                correctAnswer: "Washington",
-                explanation: "Brasília é a capital do Brasil, e Washington D.C. é a capital dos EUA."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Borracha : Apagar :: Lápis : Escrever",
-                options: ["Escrever", "Apontar", "Desenhar", "Pintar"],
-                correctAnswer: "Escrever",
-                explanation: "A borracha serve para apagar e o lápis serve para escrever."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pão : Padaria :: Livro : Livraria",
-                options: ["Livraria", "Biblioteca", "Editora", "Escola"],
-                correctAnswer: "Livraria",
-                explanation: "O pão é comprado na padaria, e o livro é comprado na livraria."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chuva : Molhar :: Fogo : Queimar",
-                options: ["Queimar", "Esfriar", "Iluminar", "Apagar"],
-                correctAnswer: "Queimar",
-                explanation: "A chuva serve para molhar e o fogo serve para queimar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cachorro : Latir :: Gato : Miar",
-                options: ["Miar", "Rugir", "Cantar", "Zumbir"],
-                correctAnswer: "Miar",
-                explanation: "O cachorro late e o gato mia."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Árvore : Folha :: Flor : Pétala",
-                options: ["Pétala", "Raiz", "Caule", "Fruto"],
-                correctAnswer: "Pétala",
-                explanation: "A folha faz parte da árvore, e a pétala faz parte da flor."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Inverno : Frio :: Verão : Calor",
-                options: ["Calor", "Chuva", "Nuvem", "Vento"],
-                correctAnswer: "Calor",
-                explanation: "O inverno é associado ao frio, e o verão é associado ao calor."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Feijão : Preto :: Arroz : Branco",
-                options: ["Branco", "Amarelo", "Vermelho", "Verde"],
-                correctAnswer: "Branco",
-                explanation: "O feijão tradicional da feijoada é preto, e o arroz comum é branco."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Cachaça : Caipirinha :: Tequila : Margarita",
-                options: ["Margarita", "Mojito", "Martini", "Whisky"],
-                correctAnswer: "Margarita",
-                explanation: "A cachaça é a base da caipirinha, e a tequila é a base da margarita."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "São Francisco : Bay Bridge :: Nova York : Brooklyn Bridge",
-                options: ["Brooklyn Bridge", "Golden Gate", "Manhattan Bridge", "Queensboro"],
-                correctAnswer: "Brooklyn Bridge",
-                explanation: "A Bay Bridge liga San Francisco a Oakland, e a Brooklyn Bridge liga o Brooklyn a Manhattan."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Martelo : Prego :: Chave de fenda : Parafuso",
-                options: ["Parafuso", "Madeira", "Ferro", "Parede"],
-                correctAnswer: "Parafuso",
-                explanation: "O martelo fixa o prego, e a chave de fenda aperta o parafuso."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Orelha : Ouvir :: Olho : Ver",
-                options: ["Ver", "Tocar", "Cheirar", "Sentir"],
-                correctAnswer: "Ver",
-                explanation: "A orelha é o órgão do ouvido, e o olho é o órgão da visão."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Vinho : Uva :: Suco : Laranja",
-                options: ["Laranja", "Água", "Açúcar", "Gelo"],
-                correctAnswer: "Laranja",
-                explanation: "O vinho é produzido a partir da uva, e o suco é feito de laranja."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Avião : Piloto :: Trem : Maquinista",
-                options: ["Maquinista", "Motorista", "Marinheiro", "Condutor"],
-                correctAnswer: "Maquinista",
-                explanation: "O avião é guiado pelo piloto, e o trem pelo maquinista."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Mel : Abelha :: Leite : Vaca",
-                options: ["Vaca", "Cabra", "Ovelha", "Galinha"],
-                correctAnswer: "Vaca",
-                explanation: "O mel é produzido pela abelha, e o leite é produzido pela vaca."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Dia : Acordar :: Noite : Dormir",
-                options: ["Dormir", "Trabalhar", "Estudar", "Brincar"],
-                correctAnswer: "Dormir",
-                explanation: "O dia é o período para acordar, e a noite para dormir."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Norte : Sul :: Leste : Oeste",
-                options: ["Oeste", "Centro", "Nordeste", "Sudeste"],
-                correctAnswer: "Oeste",
-                explanation: "Norte é o oposto de Sul, e Leste é o oposto de Oeste."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Futebol : Chutar :: Basquete : Arremessar",
-                options: ["Arremessar", "Correr", "Pular", "Bloquear"],
-                correctAnswer: "Arremessar",
-                explanation: "No futebol chuta-se a bola, no basquete arremessa-se na cesta."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Mão : Luva :: Pé : Meia",
-                options: ["Meia", "Sapato", "Sandália", "Bota"],
-                correctAnswer: "Meia",
-                explanation: "A luva protege a mão, e a meia protege o pé."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Pintor : Quadro :: Escritor : Livro",
-                options: ["Livro", "Poema", "Artigo", "Rascunho"],
-                correctAnswer: "Livro",
-                explanation: "O pintor pinta um quadro, e o escritor escreve um livro."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Janela : Vidro :: Parede : Tijolo",
-                options: ["Tijolo", "Tinta", "Cimento", "Porta"],
-                correctAnswer: "Tijolo",
-                explanation: "A janela tem placas de vidro, e a parede é construída com tijolos."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Bebida : Copo :: Sopa : Prato fundo",
-                options: ["Prato fundo", "Xícara", "Colher", "Garrafa"],
-                correctAnswer: "Prato fundo",
-                explanation: "A bebida é servida no copo, e a sopa no prato fundo."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Elefante : Pesado :: Formiga : Leve",
-                options: ["Leve", "Pequena", "Rápida", "Trabalhadora"],
-                correctAnswer: "Leve",
-                explanation: "O elefante é pesado, e a formiga é leve."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ponte : Rio :: Túnel : Montanha",
-                options: ["Montanha", "Estrada", "Trilho", "Cidade"],
-                correctAnswer: "Montanha",
-                explanation: "A ponte cruza o rio, e o túnel atravessa a montanha."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Sabão : Limpeza :: Sujeira : Poeira",
-                options: ["Poeira", "Água", "Mancha", "Lixo"],
-                correctAnswer: "Poeira",
-                explanation: "O sabão limpa a sujeira, que muitas vezes é composta de poeira."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Roda : Carro :: Asas : Avião",
-                options: ["Avião", "Barco", "Trem", "Bicicleta"],
-                correctAnswer: "Avião",
-                explanation: "A roda é parte do carro, e as asas do avião."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Goiabada : Goiaba :: Doce de leite : Leite",
-                options: ["Leite", "Açúcar", "Coco", "Queijo"],
-                correctAnswer: "Leite",
-                explanation: "A goiabada é feita de goiaba, e o doce de leite é feito de leite."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Natação : Piscina :: Corrida : Pista",
-                options: ["Pista", "Rua", "Parque", "Esteira"],
-                correctAnswer: "Pista",
-                explanation: "A natação é praticada na piscina, e a corrida na pista."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Queijo : Minas :: Goiabada : Cascão",
-                options: ["Cascão", "Lata", "Pote", "Fatia"],
-                correctAnswer: "Cascão",
-                explanation: "Queijo minas é um tipo clássico de queijo, e goiabada cascão é um tipo clássico de goiabada."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Teatro : Ator :: Cinema : Diretor",
-                options: ["Diretor", "Espectador", "Câmera", "Roteirista"],
-                correctAnswer: "Diretor",
-                explanation: "No teatro a peça tem ator, e o filme no cinema tem diretor."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Tinta : Parede :: Verniz : Madeira",
-                options: ["Madeira", "Chão", "Móvel", "Metal"],
-                correctAnswer: "Madeira",
-                explanation: "A tinta colore a parede, e o verniz protege a madeira."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Violão : Cordas :: Piano : Teclas",
-                options: ["Teclas", "Martelos", "Pedais", "Cordas"],
-                correctAnswer: "Teclas",
-                explanation: "O violão tem cordas, e o piano tem teclas."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Manteiga : Pão :: Molho : Macarrão",
-                options: ["Macarrão", "Arroz", "Salada", "Carne"],
-                correctAnswer: "Macarrão",
-                explanation: "Passa-se manteiga no pão, e coloca-se molho no macarrão."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Bolo : Assar :: Coxinha : Fritar",
-                options: ["Fritar", "Cozinhar", "Grelhar", "Assar"],
-                correctAnswer: "Fritar",
-                explanation: "O bolo vai ao forno para assar, e a coxinha vai para fritar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Sal : Comida :: Açúcar : Café",
-                options: ["Café", "Leite", "Suco", "Chá"],
-                correctAnswer: "Café",
-                explanation: "Usa-se sal para a comida, e açúcar para o café."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Dentista : Dentes :: Pediatra : Crianças",
-                options: ["Crianças", "Bebês", "Idosos", "Olhos"],
-                correctAnswer: "Crianças",
-                explanation: "O dentista cuida dos dentes, e o pediatra das crianças."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Canteiro : Flores :: Horta : Verduras",
-                options: ["Verduras", "Frutas", "Legumes", "Árvores"],
-                correctAnswer: "Verduras",
-                explanation: "No canteiro plantam-se flores, e na horta verdurinhas."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Passaporte : Viagem :: Ingresso : Show",
-                options: ["Show", "Teatro", "Cinema", "Estádio"],
-                correctAnswer: "Show",
-                explanation: "O passaporte serve para a viagem, e o ingresso para o show."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Garrafa : Tampa :: Caixa : Tampa",
-                options: ["Tampa", "Papel", "Fita", "Plástico"],
-                correctAnswer: "Tampa",
-                explanation: "A garrafa fecha-se com a tampa, e a caixa também."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Vela : Cera :: Copo : Vidro",
-                options: ["Vidro", "Plástico", "Metal", "Papel"],
-                correctAnswer: "Vidro",
-                explanation: "A vela é feita de cera, e o copo de vidro."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Farol : Carro :: Poste : Rua",
-                options: ["Rua", "Calçada", "Casa", "Praça"],
-                correctAnswer: "Rua",
-                explanation: "O farol ilumina o caminho do carro, e o poste a rua."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Sino : Tocar :: Tambor : Bater",
-                options: ["Bater", "Soprar", "Dedilhar", "Sacudir"],
-                correctAnswer: "Bater",
-                explanation: "O sino emite som ao tocar, e o tambor ao bater."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Chave : Fechadura :: Cartão : Leitor",
-                options: ["Leitor", "Banco", "Carteira", "Bolsa"],
-                correctAnswer: "Leitor",
-                explanation: "A chave entra na fechadura, e o cartão passa no leitor."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Perna : Joelho :: Braço : Cotovelo",
-                options: ["Cotovelo", "Punho", "Ombro", "Mão"],
-                correctAnswer: "Cotovelo",
-                explanation: "O joelho é da perna, e o cotovelo é do braço."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Lã : Ovelha :: Seda : Bicho-da-seda",
-                options: ["Bicho-da-seda", "Lagarta", "Aranha", "Casulo"],
-                correctAnswer: "Bicho-da-seda",
-                explanation: "A lã é da ovelha, e a seda é do bicho-da-seda."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Nuvem : Céu :: Alga : Mar",
-                options: ["Mar", "Rio", "Lago", "Piscina"],
-                correctAnswer: "Mar",
-                explanation: "As nuvens ficam no céu, e as algas no mar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Ventilador : Vento :: Aquecedor : Calor",
-                options: ["Calor", "Frio", "Ar", "Fumaça"],
-                correctAnswer: "Calor",
-                explanation: "O ventilador gera vento, e o aquecedor calor."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Vassoura : Varrer :: Pano : Limpar",
-                options: ["Limpar", "Lavar", "Enxugar", "Esfregar"],
-                correctAnswer: "Limpar",
-                explanation: "A vassoura serve para varrer, e o pano para limpar."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Piloto : Avião :: Motorista : Ônibus",
-                options: ["Ônibus", "Carro", "Caminhão", "Moto"],
-                correctAnswer: "Ônibus",
-                explanation: "O piloto guia o avião, e o motorista o ônibus."
-            ),
-            ExerciseItem(
-                id: UUID(),
-                prompt: "Gelo : Derreter :: Água : Evaporar",
-                options: ["Evaporar", "Congelar", "Ferver", "Esfriar"],
-                correctAnswer: "Evaporar",
-                explanation: "O gelo derrete, e a água evapora."
-            )
+            ExerciseItem(id: UUID(), prompt: "Pão de queijo : Queijo :: Brigadeiro : ___", options: ["Chocolate", "Água", "Sal", "Pimenta"], correctAnswer: "Chocolate", explanation: "O pão de queijo leva queijo em sua receita, enquanto o brigadeiro leva chocolate."),
+            ExerciseItem(id: UUID(), prompt: "Sol : Dia :: Lua : ___", options: ["Noite", "Nuvem", "Estrela", "Céu"], correctAnswer: "Noite", explanation: "O sol brilha durante o dia, e a lua aparece principalmente à noite."),
+            ExerciseItem(id: UUID(), prompt: "Carro : Estrada :: Barco : ___", options: ["Rio", "Céu", "Trilho", "Floresta"], correctAnswer: "Rio", explanation: "O carro anda na estrada, e o barco navega no rio ou no mar."),
+            ExerciseItem(id: UUID(), prompt: "Peixe : Água :: Pássaro : ___", options: ["Ar", "Terra", "Ninho", "Gaiola"], correctAnswer: "Ar", explanation: "O peixe vive e nada na água, o pássaro voa no ar."),
+            ExerciseItem(id: UUID(), prompt: "Livro : Ler :: Música : ___", options: ["Ouvir", "Escrever", "Cantar", "Tocar"], correctAnswer: "Ouvir", explanation: "Um livro serve para ler, e a música serve para ouvir."),
+            ExerciseItem(id: UUID(), prompt: "Limão : Azedo :: Açúcar : ___", options: ["Doce", "Salgado", "Amargo", "Picante"], correctAnswer: "Doce", explanation: "O limão tem sabor azedo, o açúcar tem sabor doce."),
+            ExerciseItem(id: UUID(), prompt: "Garfo : Comer :: Caneta : ___", options: ["Escrever", "Desenhar", "Ler", "Pintar"], correctAnswer: "Escrever", explanation: "Usa-se o garfo para comer e a caneta para escrever."),
+            ExerciseItem(id: UUID(), prompt: "Médico : Hospital :: Professor : ___", options: ["Escola", "Escritório", "Teatro", "Tribunal"], correctAnswer: "Escola", explanation: "O médico trabalha no hospital, e o professor trabalha na escola."),
+            ExerciseItem(id: UUID(), prompt: "Geladeira : Frio :: Fogão : ___", options: ["Quente", "Sujo", "Limpo", "Escuro"], correctAnswer: "Quente", explanation: "A geladeira resfria os alimentos, e o fogão os esquenta."),
+            ExerciseItem(id: UUID(), prompt: "Sapato : Pé :: Chapéu : ___", options: ["Cabeça", "Mão", "Braço", "Pescoço"], correctAnswer: "Cabeça", explanation: "Usa-se o sapato no pé e o chapéu na cabeça."),
+            ExerciseItem(id: UUID(), prompt: "Brasil : Brasília :: EUA : ___", options: ["Washington", "Nova York", "Miami", "Boston"], correctAnswer: "Washington", explanation: "Brasília é a capital do Brasil, e Washington D.C. é a capital dos EUA."),
+            ExerciseItem(id: UUID(), prompt: "Borracha : Apagar :: Lápis : ___", options: ["Escrever", "Apontar", "Desenhar", "Pintar"], correctAnswer: "Escrever", explanation: "A borracha serve para apagar e o lápis serve para escrever."),
+            ExerciseItem(id: UUID(), prompt: "Pão : Padaria :: Livro : ___", options: ["Livraria", "Biblioteca", "Editora", "Escola"], correctAnswer: "Livraria", explanation: "O pão é comprado na padaria, e o livro é comprado na livraria."),
+            ExerciseItem(id: UUID(), prompt: "Chuva : Molhar :: Fogo : ___", options: ["Queimar", "Esfriar", "Iluminar", "Apagar"], correctAnswer: "Queimar", explanation: "A chuva serve para molhar e o fogo serve para queimar."),
+            ExerciseItem(id: UUID(), prompt: "Cachorro : Latir :: Gato : ___", options: ["Miar", "Rugir", "Cantar", "Zumbir"], correctAnswer: "Miar", explanation: "O cachorro late e o gato mia."),
+            ExerciseItem(id: UUID(), prompt: "Árvore : Folha :: Flor : ___", options: ["Pétala", "Raiz", "Caule", "Fruto"], correctAnswer: "Pétala", explanation: "A folha faz parte da árvore, e a pétala faz parte da flor."),
+            ExerciseItem(id: UUID(), prompt: "Inverno : Frio :: Verão : ___", options: ["Calor", "Chuva", "Nuvem", "Vento"], correctAnswer: "Calor", explanation: "O inverno é associado ao frio, e o verão é associado ao calor."),
+            ExerciseItem(id: UUID(), prompt: "Feijão : Preto :: Arroz : ___", options: ["Branco", "Amarelo", "Vermelho", "Verde"], correctAnswer: "Branco", explanation: "O feijão tradicional da feijoada é preto, e o arroz comum é branco."),
+            ExerciseItem(id: UUID(), prompt: "Cachaça : Caipirinha :: Tequila : ___", options: ["Margarita", "Mojito", "Martini", "Whisky"], correctAnswer: "Margarita", explanation: "A cachaça é a base da caipirinha, e a tequila é a base da margarita."),
+            ExerciseItem(id: UUID(), prompt: "São Francisco : Bay Bridge :: Nova York : ___", options: ["Brooklyn Bridge", "Golden Gate", "Manhattan Bridge", "Queensboro"], correctAnswer: "Brooklyn Bridge", explanation: "A Bay Bridge liga San Francisco a Oakland, e a Brooklyn Bridge liga o Brooklyn a Manhattan."),
+            ExerciseItem(id: UUID(), prompt: "Martelo : Prego :: Chave de fenda : ___", options: ["Parafuso", "Madeira", "Ferro", "Parede"], correctAnswer: "Parafuso", explanation: "O martelo fixa o prego, e a chave de fenda aperta o parafuso."),
+            ExerciseItem(id: UUID(), prompt: "Orelha : Ouvir :: Olho : ___", options: ["Ver", "Tocar", "Cheirar", "Sentir"], correctAnswer: "Ver", explanation: "A orelha é o órgão do ouvido, e o olho é o órgão da visão."),
+            ExerciseItem(id: UUID(), prompt: "Vinho : Uva :: Suco : ___", options: ["Laranja", "Água", "Açúcar", "Gelo"], correctAnswer: "Laranja", explanation: "O vinho é produzido a partir da uva, e o suco é feito de laranja."),
+            ExerciseItem(id: UUID(), prompt: "Avião : Piloto :: Trem : ___", options: ["Maquinista", "Motorista", "Marinheiro", "Condutor"], correctAnswer: "Maquinista", explanation: "O avião é guiado pelo piloto, e o trem pelo maquinista."),
+            ExerciseItem(id: UUID(), prompt: "Mel : Abelha :: Leite : ___", options: ["Vaca", "Cabra", "Ovelha", "Galinha"], correctAnswer: "Vaca", explanation: "O mel é produzido pela abelha, e o leite é produzido pela vaca."),
+            ExerciseItem(id: UUID(), prompt: "Dia : Acordar :: Noite : ___", options: ["Dormir", "Trabalhar", "Estudar", "Brincar"], correctAnswer: "Dormir", explanation: "O dia é o período para acordar, e a noite para dormir."),
+            ExerciseItem(id: UUID(), prompt: "Norte : Sul :: Leste : ___", options: ["Oeste", "Centro", "Nordeste", "Sudeste"], correctAnswer: "Oeste", explanation: "Norte é o oposto de Sul, e Leste é o oposto de Oeste."),
+            ExerciseItem(id: UUID(), prompt: "Futebol : Chutar :: Basquete : ___", options: ["Arremessar", "Correr", "Pular", "Bloquear"], correctAnswer: "Arremessar", explanation: "No futebol chuta-se a bola, no basquete arremessa-se na cesta."),
+            ExerciseItem(id: UUID(), prompt: "Mão : Luva :: Pé : ___", options: ["Meia", "Sapato", "Sandália", "Bota"], correctAnswer: "Meia", explanation: "A luva protege a mão, e a meia protege o pé."),
+            ExerciseItem(id: UUID(), prompt: "Pintor : Quadro :: Escritor : ___", options: ["Livro", "Poema", "Artigo", "Rascunho"], correctAnswer: "Livro", explanation: "O pintor pinta um quadro, e o escritor escreve um livro."),
+            ExerciseItem(id: UUID(), prompt: "Janela : Vidro :: Parede : ___", options: ["Tijolo", "Tinta", "Cimento", "Porta"], correctAnswer: "Tijolo", explanation: "A janela tem placas de vidro, e a parede é construída com tijolos."),
+            ExerciseItem(id: UUID(), prompt: "Bebida : Copo :: Sopa : ___", options: ["Prato fundo", "Xícara", "Colher", "Garrafa"], correctAnswer: "Prato fundo", explanation: "A bebida é servida no copo, e a sopa no prato fundo."),
+            ExerciseItem(id: UUID(), prompt: "Elefante : Pesado :: Formiga : ___", options: ["Leve", "Pequena", "Rápida", "Trabalhadora"], correctAnswer: "Leve", explanation: "O elefante é pesado, e a formiga é leve."),
+            ExerciseItem(id: UUID(), prompt: "Ponte : Rio :: Túnel : ___", options: ["Montanha", "Estrada", "Trilho", "Cidade"], correctAnswer: "Montanha", explanation: "A ponte cruza o rio, e o túnel atravessa a montanha."),
+            ExerciseItem(id: UUID(), prompt: "Sabão : Limpeza :: Sujeira : ___", options: ["Poeira", "Água", "Mancha", "Lixo"], correctAnswer: "Poeira", explanation: "O sabão limpa a sujeira, que muitas vezes é composta de poeira."),
+            ExerciseItem(id: UUID(), prompt: "Roda : Carro :: Asas : ___", options: ["Avião", "Barco", "Trem", "Bicicleta"], correctAnswer: "Avião", explanation: "A roda é parte do carro, e as asas do avião."),
+            ExerciseItem(id: UUID(), prompt: "Goiabada : Goiaba :: Doce de leite : ___", options: ["Leite", "Açúcar", "Coco", "Queijo"], correctAnswer: "Leite", explanation: "A goiabada é feita de goiaba, e o doce de leite é feito de leite."),
+            ExerciseItem(id: UUID(), prompt: "Natação : Piscina :: Corrida : ___", options: ["Pista", "Rua", "Parque", "Esteira"], correctAnswer: "Pista", explanation: "A natação é praticada na piscina, e a corrida na pista."),
+            ExerciseItem(id: UUID(), prompt: "Queijo : Minas :: Goiabada : ___", options: ["Cascão", "Lata", "Pote", "Fatia"], correctAnswer: "Cascão", explanation: "Queijo minas é um tipo clássico de queijo, e goiabada cascão é um tipo clássico de goiabada."),
+            ExerciseItem(id: UUID(), prompt: "Teatro : Ator :: Cinema : ___", options: ["Diretor", "Espectador", "Câmera", "Roteirista"], correctAnswer: "Diretor", explanation: "No teatro a peça tem ator, e o filme no cinema tem diretor."),
+            ExerciseItem(id: UUID(), prompt: "Tinta : Parede :: Verniz : ___", options: ["Madeira", "Chão", "Móvel", "Metal"], correctAnswer: "Madeira", explanation: "A tinta colore a parede, e o verniz protege a madeira."),
+            ExerciseItem(id: UUID(), prompt: "Violão : Cordas :: Piano : ___", options: ["Teclas", "Martelos", "Pedais", "Cordas"], correctAnswer: "Teclas", explanation: "O violão tem cordas, e o piano tem teclas."),
+            ExerciseItem(id: UUID(), prompt: "Manteiga : Pão :: Molho : ___", options: ["Macarrão", "Arroz", "Salada", "Carne"], correctAnswer: "Macarrão", explanation: "Passa-se manteiga no pão, e coloca-se molho no macarrão."),
+            ExerciseItem(id: UUID(), prompt: "Bolo : Assar :: Coxinha : ___", options: ["Fritar", "Cozinhar", "Grelhar", "Assar"], correctAnswer: "Fritar", explanation: "O bolo vai ao forno para assar, e a coxinha vai para fritar."),
+            ExerciseItem(id: UUID(), prompt: "Sal : Comida :: Açúcar : ___", options: ["Café", "Leite", "Suco", "Chá"], correctAnswer: "Café", explanation: "Usa-se sal para a comida, e açúcar para o café."),
+            ExerciseItem(id: UUID(), prompt: "Dentista : Dentes :: Pediatra : ___", options: ["Crianças", "Bebês", "Idosos", "Olhos"], correctAnswer: "Crianças", explanation: "O dentista cuida dos dentes, e o pediatra das crianças."),
+            ExerciseItem(id: UUID(), prompt: "Canteiro : Flores :: Horta : ___", options: ["Verduras", "Frutas", "Legumes", "Árvores"], correctAnswer: "Verduras", explanation: "No canteiro plantam-se flores, e na horta verdurinhas."),
+            ExerciseItem(id: UUID(), prompt: "Passaporte : Viagem :: Ingresso : ___", options: ["Show", "Teatro", "Cinema", "Estádio"], correctAnswer: "Show", explanation: "O passaporte serve para a viagem, e o ingresso para o show."),
+            ExerciseItem(id: UUID(), prompt: "Garrafa : Tampa :: Caixa : ___", options: ["Tampa", "Papel", "Fita", "Plástico"], correctAnswer: "Tampa", explanation: "A garrafa fecha-se com a tampa, e a caixa também."),
+            ExerciseItem(id: UUID(), prompt: "Vela : Cera :: Copo : ___", options: ["Vidro", "Plástico", "Metal", "Papel"], correctAnswer: "Vidro", explanation: "A vela é feita de cera, e o copo de vidro."),
+            ExerciseItem(id: UUID(), prompt: "Farol : Carro :: Poste : ___", options: ["Rua", "Calçada", "Casa", "Praça"], correctAnswer: "Rua", explanation: "O farol ilumina o caminho do carro, e o poste a rua."),
+            ExerciseItem(id: UUID(), prompt: "Sino : Tocar :: Tambor : ___", options: ["Bater", "Soprar", "Dedilhar", "Sacudir"], correctAnswer: "Bater", explanation: "O sino emite som ao tocar, e o tambor ao bater."),
+            ExerciseItem(id: UUID(), prompt: "Chave : Fechadura :: Cartão : ___", options: ["Leitor", "Banco", "Carteira", "Bolsa"], correctAnswer: "Leitor", explanation: "A chave entra na fechadura, e o cartão passa no leitor."),
+            ExerciseItem(id: UUID(), prompt: "Perna : Joelho :: Braço : ___", options: ["Cotovelo", "Punho", "Ombro", "Mão"], correctAnswer: "Cotovelo", explanation: "O joelho é da perna, e o cotovelo é do braço."),
+            ExerciseItem(id: UUID(), prompt: "Lã : Ovelha :: Seda : ___", options: ["Bicho-da-seda", "Lagarta", "Aranha", "Casulo"], correctAnswer: "Bicho-da-seda", explanation: "A lã é da ovelha, e a seda é do bicho-da-seda."),
+            ExerciseItem(id: UUID(), prompt: "Nuvem : Céu :: Alga : ___", options: ["Mar", "Rio", "Lago", "Piscina"], correctAnswer: "Mar", explanation: "As nuvens ficam no céu, e as algas no mar."),
+            ExerciseItem(id: UUID(), prompt: "Ventilador : Vento :: Aquecedor : ___", options: ["Calor", "Frio", "Ar", "Fumaça"], correctAnswer: "Calor", explanation: "O ventilador gera vento, e o aquecedor calor."),
+            ExerciseItem(id: UUID(), prompt: "Vassoura : Varrer :: Pano : ___", options: ["Limpar", "Lavar", "Enxugar", "Esfregar"], correctAnswer: "Limpar", explanation: "A vassoura serve para varrer, e o pano para limpar."),
+            ExerciseItem(id: UUID(), prompt: "Piloto : Avião :: Motorista : ___", options: ["Ônibus", "Carro", "Caminhão", "Moto"], correctAnswer: "Ônibus", explanation: "O piloto guia o avião, e o motorista o ônibus."),
+            ExerciseItem(id: UUID(), prompt: "Gelo : Derreter :: Água : ___", options: ["Evaporar", "Congelar", "Ferver", "Esfriar"], correctAnswer: "Evaporar", explanation: "O gelo derrete, e a água evapora."),
         ]
     )
 }

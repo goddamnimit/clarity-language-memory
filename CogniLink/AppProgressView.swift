@@ -1,16 +1,6 @@
 import SwiftUI
 import Charts
 
-// MARK: - Supporting Types
-
-struct DayActivity: Identifiable {
-    var id = UUID()
-    var day: String      // e.g. "Mon"
-    var date: Date
-    var count: Int
-    var isToday: Bool
-}
-
 // MARK: - AppProgressView
 
 /// A redesigned progress hub with streak cards, weekly activity chart,

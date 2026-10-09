@@ -111,7 +111,7 @@ struct TVExerciseContainerView: View {
     private var loadingView: some View {
         VStack(spacing: 20) {
             ProgressView().scaleEffect(2)
-            Text("Preparing session…")
+            Text(FS.preparingSession)
                 .font(.system(size: 32))
                 .foregroundColor(Color.white.opacity(0.6))
         }
@@ -481,6 +481,8 @@ struct TVExerciseContainerView: View {
         case .japanese:   return "ja-JP"
         case .french:     return "fr-FR"
         case .amharic:    return "am-ET"
+        case .russian:    return "ru-RU"
+        case .ukrainian:    return "uk-UA"
         }
     }
 }

@@ -341,6 +341,18 @@ struct TVHomeView: View {
             } else {
                 return "ሰላም!"
             }
+        case .russian:
+            if hasName {
+                return "Здравствуйте, \(name)!"
+            } else {
+                return "Здравствуйте!"
+            }
+        case .ukrainian:
+            if hasName {
+                return "Вітаємо, \(name)!"
+            } else {
+                return "Вітаємо!"
+            }
         }
     }
 
@@ -362,6 +374,8 @@ struct TVHomeView: View {
         case .japanese:   return "ランダムスタート 🎲"
         case .french:     return "Surprenez-moi ! 🎲"
         case .amharic:    return "አስገረመኝ! 🎲"
+        case .russian:    return "Удивите меня! 🎲"
+        case .ukrainian:    return "Здивуйте мене! 🎲"
         }
     }
 
@@ -383,6 +397,8 @@ struct TVHomeView: View {
         case .japanese:   return "2人プレイ 👥"
         case .french:     return "Mode 2 joueurs 👥"
         case .amharic:    return "ባለ ሁለት ተጫዋች 👥"
+        case .russian:    return "Игра вдвоём 👥"
+        case .ukrainian:    return "Режим для двох гравців 👥"
         }
     }
 
@@ -404,6 +420,8 @@ struct TVHomeView: View {
         case .japanese:   return "おすすめ"
         case .french:     return "Recommandé pour vous"
         case .amharic:    return "ለእርስዎ የሚመከር"
+        case .russian:    return "Рекомендуем вам"
+        case .ukrainian:    return "Рекомендовано для вас"
         }
     }
 

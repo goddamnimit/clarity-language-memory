@@ -100,6 +100,9 @@ struct Exercise: Identifiable, Hashable {
 
     let sessionSize = 5
 
+    /// Groups with fewer items than this are hidden from users (see LanguageManager).
+    static let minimumVisibleItems = 5
+
     init(id: UUID = UUID(), title: String, instructions: String, section: AppSection, type: ExerciseType, trackedType: TrackedExerciseType? = nil, difficulty: Difficulty, items: [ExerciseItem]) {
         self.id = id
         self.title = title

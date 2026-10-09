@@ -116,6 +116,8 @@ extension AppLanguage {
         case .japanese:   return "インサイト"
         case .french:     return "Observations"
         case .amharic:    return "ግንዛቤዎች"
+        case .russian:    return "Наблюдения"
+        case .ukrainian:    return "Спостереження"
         }
     }
 
@@ -137,6 +139,8 @@ extension AppLanguage {
         case .japanese:   return "まだデータが足りません"
         case .french:     return "Pas encore assez de données"
         case .amharic:    return "እስካሁን በቂ መረጃ የለም"
+        case .russian:    return "Пока недостаточно данных"
+        case .ukrainian:    return "Даних поки замало"
         }
     }
 
@@ -158,6 +162,8 @@ extension AppLanguage {
         case .japanese:   return "約10回の練習セッション後にインサイトが表示されます。"
         case .french:     return "Les observations apparaîtront après environ 10 séances de pratique."
         case .amharic:    return "ግንዛቤዎች ከ10 ገደማ የልምምድ ክፍለ-ጊዜዎች በኋላ ይታያሉ።"
+        case .russian:    return "Наблюдения появятся примерно после 10 занятий."
+        case .ukrainian:    return "Спостереження з'являться приблизно після 10 занять."
         }
     }
 
@@ -179,6 +185,8 @@ extension AppLanguage {
         case .japanese:   return "すべて安定しています"
         case .french:     return "Tout est stable"
         case .amharic:    return "ሁሉም ነገር የተረጋጋ ነው"
+        case .russian:    return "Всё стабильно"
+        case .ukrainian:    return "Усе стабільно"
         }
     }
 
@@ -200,6 +208,8 @@ extension AppLanguage {
         case .japanese:   return "現在、目立った変化はありません。練習を重ねてからもう一度ご確認ください。"
         case .french:     return "Aucun changement notable pour le moment. Revenez après plus de pratique."
         case .amharic:    return "አሁን ጉልህ ለውጦች የሉም። ተጨማሪ ልምምድ በኋላ እንደገና ይመልከቱ።"
+        case .russian:    return "Сейчас заметных изменений нет. Загляните после новых занятий."
+        case .ukrainian:    return "Наразі помітних змін немає. Зазирніть знову після додаткової практики."
         }
     }
 
@@ -221,6 +231,8 @@ extension AppLanguage {
         case .japanese:   return "\(name)の正答率が低下しています"
         case .french:     return "La précision en \(name) diminue"
         case .amharic:    return "የ\(name) ትክክለኛነት እየቀነሰ ነው"
+        case .russian:    return "Точность в разделе «\(name)» снижается"
+        case .ukrainian:    return "Знижується точність: «\(name)»"
         }
     }
 
@@ -242,6 +254,8 @@ extension AppLanguage {
         case .japanese:   return "直近20問で正答率が\(from)%から\(to)%に低下しました。"
         case .french:     return "La précision est passée de \(from) % à \(to) % sur les 20 dernières questions."
         case .amharic:    return "ባለፉት 20 ጥያቄዎች ትክክለኛነት ከ\(from)% ወደ \(to)% ቀንሷል።"
+        case .russian:    return "Точность снизилась с \(from)% до \(to)% за последние 20 вопросов."
+        case .ukrainian:    return "Точність упала з \(from)% до \(to)% за останні 20 запитань."
         }
     }
 
@@ -263,6 +277,8 @@ extension AppLanguage {
         case .japanese:   return "\(name)が上達しています"
         case .french:     return "\(name) s'améliore"
         case .amharic:    return "\(name) እየተሻሻለ ነው"
+        case .russian:    return "Раздел «\(name)»: есть улучшения"
+        case .ukrainian:    return "Є покращення: «\(name)»"
         }
     }
 
@@ -284,6 +300,8 @@ extension AppLanguage {
         case .japanese:   return "直近20問で正答率が\(from)%から\(to)%に上昇しました。"
         case .french:     return "La précision est passée de \(from) % à \(to) % sur les 20 dernières questions."
         case .amharic:    return "ባለፉት 20 ጥያቄዎች ትክክለኛነት ከ\(from)% ወደ \(to)% ጨምሯል።"
+        case .russian:    return "Точность выросла с \(from)% до \(to)% за последние 20 вопросов."
+        case .ukrainian:    return "Точність зросла з \(from)% до \(to)% за останні 20 запитань."
         }
     }
 
@@ -305,6 +323,8 @@ extension AppLanguage {
         case .japanese:   return "最近\(name)の練習がありません"
         case .french:     return "Pas de pratique récente de \(name)"
         case .amharic:    return "የቅርብ ጊዜ የ\(name) ልምምድ የለም"
+        case .russian:    return "Давно не было занятий: «\(name)»"
+        case .ukrainian:    return "Давно не було практики: «\(name)»"
         }
     }
 
@@ -326,6 +346,8 @@ extension AppLanguage {
         case .japanese:   return "この演習は\(days)日間行われていません。"
         case .french:     return "Aucune pratique de cet exercice depuis \(days) jours."
         case .amharic:    return "ይህ መልመጃ ለ\(days) ቀናት አልተለማመደም።"
+        case .russian:    return "Вы не выполняли это упражнение \(days) дн."
+        case .ukrainian:    return "Цю вправу не виконували \(days) дн."
         }
     }
 
@@ -347,6 +369,8 @@ extension AppLanguage {
         case .japanese:   return "\(name)は簡単すぎるかもしれません"
         case .french:     return "\(name) est peut-être trop facile"
         case .amharic:    return "\(name) በጣም ቀላል ሊሆን ይችላል"
+        case .russian:    return "Раздел «\(name)» может быть слишком лёгким"
+        case .ukrainian:    return "Вправа «\(name)» може бути надто легкою"
         }
     }
 
@@ -368,6 +392,8 @@ extension AppLanguage {
         case .japanese:   return "正答率は\(accuracy)%ですが、難易度は「やさしい」のままです。セラピー設定でレベルを上げることをご検討ください。"
         case .french:     return "La précision est de \(accuracy) % mais la difficulté est restée sur Facile. Envisagez d'augmenter le niveau dans les Réglages de thérapie."
         case .amharic:    return "ትክክለኛነት \(accuracy)% ነው ነገር ግን አስቸጋሪነት በቀላል ላይ ቆይቷል። በሕክምና ቅንብሮች ውስጥ ደረጃውን ማሳደግ ያስቡበት።"
+        case .russian:    return "Точность составляет \(accuracy)%, но сложность остаётся на уровне «Лёгкий». Подумайте о повышении уровня в настройках терапии."
+        case .ukrainian:    return "Точність становить \(accuracy)%, але складність залишається на рівні «Легкий». Розгляньте підвищення рівня в налаштуваннях терапії."
         }
     }
 }

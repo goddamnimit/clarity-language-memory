@@ -3,6 +3,7 @@ import SwiftUI
 /// A reusable widget displaying active practice streaks and a rolling 7-day completion calendar.
 struct StreakWidgetView: View {
     @ObservedObject private var store = UserProfileStore.shared
+    @ObservedObject private var languageManager = LanguageManager.shared
 
     @ScaledMetric private var flameIconSize: CGFloat = 44
     @ScaledMetric private var streakCountFontSize: CGFloat = 34
@@ -30,13 +31,13 @@ struct StreakWidgetView: View {
                             .lineLimit(1)
                             .minimumScaleFactor(0.7)
                         
-                        Text(store.profile.currentStreak == 1 ? "day streak" : "day streak")
+                        Text(FS.streakDaysLabel)
                             .font(.body) // 17pt minimum size
                             .foregroundColor(.secondary)
                             .fontWeight(.semibold)
                     }
                     
-                    Text("Personal Best: \(store.profile.longestStreak) days")
+                    Text(FS.personalBestDays(store.profile.longestStreak))
                         .font(.body)
                         .foregroundColor(.secondary)
                 }
@@ -45,13 +46,13 @@ struct StreakWidgetView: View {
             }
             .padding(.horizontal, 4)
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("Current practice streak: \(store.profile.currentStreak) consecutive days. Personal best record is \(store.profile.longestStreak) days.")
+            .accessibilityLabel(FS.streakSummaryA11y(store.profile.currentStreak, store.profile.longestStreak))
 
             Divider()
 
             // MARK: - Rolling 7-Day Completion Grid
             VStack(alignment: .leading, spacing: 10) {
-                Text("Last 7 Days Progress")
+                Text(FS.lastSevenDays)
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 4)
@@ -65,6 +66,8 @@ struct StreakWidgetView: View {
                             // 3-Letter Weekday Label (e.g. "Sun", "Mon" is easier to read than single letters)
                             Text(weekdayLabel(for: date))
                                 .font(.body)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.5)
                                 .fontWeight(isToday ? .bold : .medium)
                                 .foregroundColor(isToday ? AppTheme.languageColor : .secondary)
                             
@@ -89,7 +92,7 @@ struct StreakWidgetView: View {
                         .frame(maxWidth: .infinity)
                         // Group each day for screen readers
                         .accessibilityElement(children: .combine)
-                        .accessibilityLabel("\(accessibilityWeekdayLabel(for: date)): \(completed ? "Completed" : "Not completed")\(isToday ? " today" : "")")
+                        .accessibilityLabel("\(accessibilityWeekdayLabel(for: date)): \(completed ? FS.dayCompleted : FS.dayNotCompleted)\(isToday ? ", \(FS.today)" : "")")
                     }
                 }
             }
@@ -129,15 +132,20 @@ struct StreakWidgetView: View {
 
     /// Formatting shortcut returning clean 3-letter labels.
     private func weekdayLabel(for date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE" // e.g., "Sun", "Mon"
-        return formatter.string(from: date)
+        weekdayFormatter(template: "EEE").string(from: date)
     }
 
     /// Spells out the full name of weekdays for clear VoiceOver speech synthesis.
     private func accessibilityWeekdayLabel(for date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE" // e.g., "Sunday", "Monday"
-        return formatter.string(from: date)
+        weekdayFormatter(template: "EEEE").string(from: date)
+    }
+
+    /// Weekday names follow the app language (not the phone's system language).
+    private func weekdayFormatter(template: String) -> DateFormatter {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: LanguageManager.shared.currentLanguage.localeIdentifier.replacingOccurrences(of: "_", with: "-"))
+        f.calendar = Calendar(identifier: .gregorian)
+        f.setLocalizedDateFormatFromTemplate(template)
+        return f
     }
 }

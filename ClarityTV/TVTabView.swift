@@ -11,8 +11,6 @@ private enum TVTab: Hashable {
 
 struct TVTabView: View {
     @ObservedObject private var languageManager = LanguageManager.shared
-    @State private var backgroundOpacity: Double = 0.0
-    @State private var backgroundImageName: String = BackgroundManager.shared.dailyImageName(for: .tvOS)
     @State private var selectedTab: TVTab = .home
     @State private var homeTabId = UUID()
     @State private var activitiesTabId = UUID()
@@ -24,21 +22,13 @@ struct TVTabView: View {
 
     var body: some View {
         ZStack {
-            Group {
-                if BackgroundManager.shared.imageExists(named: backgroundImageName) {
-                    Image(backgroundImageName)
-                        .resizable()
-                        .scaledToFill()
-                        .id(backgroundImageName)
-                        .transition(.opacity)
-                } else {
-                    Color.black
-                }
-            }
+            // Plain calm background (the rotating artwork was removed: too distracting).
+            LinearGradient(
+                colors: [Color(red: 0.09, green: 0.12, blue: 0.23), Color(red: 0.04, green: 0.05, blue: 0.10)],
+                startPoint: .top,
+                endPoint: .bottom
+            )
             .ignoresSafeArea()
-            .opacity(backgroundOpacity)
-
-            Color.black.opacity(0.45)
             
             TabView(selection: $selectedTab) {
                 TVHomeView()
@@ -80,19 +70,6 @@ struct TVTabView: View {
                 activitiesTabId = UUID()
             }
         }
-        .onAppear {
-            withAnimation(.easeIn(duration: 0.8)) {
-                backgroundOpacity = 1.0
-            }
-        }
-        .onReceive(
-            NotificationCenter.default.publisher(for: .clarityBackgroundChanged)
-                .receive(on: DispatchQueue.main)
-        ) { _ in
-            withAnimation(.easeInOut(duration: 0.6)) {
-                backgroundImageName = BackgroundManager.shared.dailyImageName(for: .tvOS)
-            }
-        }
     }
 }
 
@@ -115,6 +92,8 @@ extension AppLanguage {
         case .japanese:   return "進捗"
         case .french:     return "Progrès"
         case .amharic:    return "እድገት"
+        case .russian:    return "Прогресс"
+        case .ukrainian:    return "Прогрес"
         }
     }
 
@@ -136,6 +115,8 @@ extension AppLanguage {
         case .japanese:   return "ホーム"
         case .french:     return "Accueil"
         case .amharic:    return "መነሻ"
+        case .russian:    return "Главная"
+        case .ukrainian:    return "Головна"
         }
     }
 
@@ -157,6 +138,8 @@ extension AppLanguage {
         case .japanese:   return "アクティビティ"
         case .french:     return "Activités"
         case .amharic:    return "ተግባራት"
+        case .russian:    return "Занятия"
+        case .ukrainian:    return "Вправи"
         }
     }
 
@@ -178,6 +161,8 @@ extension AppLanguage {
         case .japanese:   return "プロフィール"
         case .french:     return "Profil"
         case .amharic:    return "መገለጫ"
+        case .russian:    return "Профиль"
+        case .ukrainian:    return "Профіль"
         }
     }
 }

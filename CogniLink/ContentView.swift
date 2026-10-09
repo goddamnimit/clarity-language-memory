@@ -105,6 +105,8 @@ struct ContentView: View {
         case .japanese:   return "ホーム"
         case .french:     return "Accueil"
         case .amharic:    return "መነሻ"
+        case .russian:    return "Главная"
+        case .ukrainian:    return "Головна"
         }
     }
 
@@ -126,6 +128,8 @@ struct ContentView: View {
         case .japanese:   return "アクティビティ"
         case .french:     return "Activités"
         case .amharic:    return "እንቅስቃሴዎች"
+        case .russian:    return "Занятия"
+        case .ukrainian:    return "Вправи"
         }
     }
 
@@ -154,6 +158,8 @@ fileprivate func profileTitle(for language: AppLanguage) -> String {
     case .japanese:   return "プロフィール"
     case .french:     return "Profil"
     case .amharic:    return "መገለጫ"
+    case .russian:    return "Профиль"
+    case .ukrainian:    return "Профіль"
     }
 }
 
@@ -161,6 +167,7 @@ fileprivate func profileTitle(for language: AppLanguage) -> String {
 struct HomeView: View {
     @ObservedObject var languageManager = LanguageManager.shared
     @ObservedObject private var profileStore = UserProfileStore.shared
+    @ObservedObject private var practiceSupports = PracticeSupportSettings.shared
     @State private var sessionsCount: Int = 0
     @State private var surpriseExercise: Exercise? = nil
     @State private var sectionExercise: Exercise? = nil
@@ -211,6 +218,13 @@ struct HomeView: View {
                     // Streak Widget
                     StreakWidgetView()
                         .padding(.horizontal)
+
+                    #if os(iOS)
+                    if practiceSupports.showOrientationCard {
+                        OrientationCardView()
+                            .padding(.horizontal)
+                    }
+                    #endif
 
                     // MARK: - Personalized Recommendations
                     if !recommendations.isEmpty {
@@ -300,6 +314,64 @@ struct HomeView: View {
                         }
                         .buttonStyle(.plain)
                         .tvFocusEffect()
+
+                        #if os(iOS)
+                        NavigationLink(destination: NumberSkillsView()) {
+                            sectionCard(
+                                title: FS.numberSkillsTitle,
+                                subtitle: SpeechOutput.voiceAvailable(for: languageManager.currentLanguage) ? FS.numberSkillsSubtitle : FS.numberSkillsSubtitleRead,
+                                systemImage: "number.circle",
+                                color: .orange
+                            )
+                        }
+                        .buttonStyle(.plain)
+
+                        NavigationLink(destination: SpacedRetrievalView()) {
+                            sectionCard(
+                                title: FS.srtTitle,
+                                subtitle: FS.srtSubtitle,
+                                systemImage: "clock.arrow.circlepath",
+                                color: .teal
+                            )
+                        }
+                        .buttonStyle(.plain)
+
+                        NavigationLink(destination: VisualScanningView()) {
+                            sectionCard(
+                                title: FS.scanTitle,
+                                subtitle: FS.scanSubtitle,
+                                systemImage: "square.grid.3x3",
+                                color: .pink
+                            )
+                        }
+                        .buttonStyle(.plain)
+
+                        // English-only content: hidden in every other language
+                        // until it is translated.
+                        if ReadingPassage.isAvailable(for: languageManager.currentLanguage) {
+                            NavigationLink(destination: ReadingSupportView()) {
+                                sectionCard(
+                                    title: "Reading Passages",
+                                    subtitle: "Short passages with read-aloud, look-back and hints.",
+                                    systemImage: "text.book.closed",
+                                    color: .indigo
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        }
+
+                        if ConversationTopic.isAvailable(for: languageManager.currentLanguage) {
+                            NavigationLink(destination: ConversationStartersView()) {
+                                sectionCard(
+                                    title: "Conversation Starters",
+                                    subtitle: "Picture-free cards for two people to talk together.",
+                                    systemImage: "bubble.left.and.bubble.right",
+                                    color: .mint
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        }
+                        #endif
                     }
                     .padding(.horizontal)
                 }
@@ -690,6 +762,48 @@ struct HomeView: View {
             } else {
                 return "ሰላም!"
             } // TODO: translate
+        case .russian:
+            if hasName {
+                let greetings = [
+                    "Рады вас видеть, \(name)!",
+                    "Готовы заниматься, \(name)?",
+                    "С возвращением, \(name)!",
+                    "Давайте начнём, \(name)!",
+                    "Как хорошо, что вы здесь, \(name)!",
+                    "Ваш час, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Добро пожаловать в Clarity!",
+                    "Рады вас видеть!",
+                    "Давайте начнём!",
+                    "Как хорошо, что вы здесь!",
+                    "Пора заниматься!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
+        case .ukrainian:
+            if hasName {
+                let greetings = [
+                    "Раді вас бачити, \(name)!",
+                    "Готові займатися, \(name)?",
+                    "З поверненням, \(name)!",
+                    "Розпочнімо, \(name)!",
+                    "Як добре, що ви тут, \(name)!",
+                    "Ваш час, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Ласкаво просимо до Clarity!",
+                    "Раді вас бачити!",
+                    "Розпочнімо!",
+                    "Як добре, що ви тут!",
+                    "Час займатися!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -711,6 +825,8 @@ struct HomeView: View {
         case .japanese:   return "サプライズ！🎲"
         case .french:     return "Surprends-moi ! 🎲"
         case .amharic:    return "አስገርመኝ! 🎲"
+        case .russian:    return "Удивите меня! 🎲"
+        case .ukrainian:    return "Здивуйте мене! 🎲"
         }
     }
 
@@ -756,6 +872,18 @@ struct HomeView: View {
             #else
             return "ለዘፈቀደ እንቅስቃሴ ይንኩ"
             #endif
+        case .russian:
+            #if os(tvOS)
+            return "Выберите случайное занятие"
+            #else
+            return "Нажмите, чтобы выбрать случайное занятие"
+            #endif
+        case .ukrainian:
+            #if os(tvOS)
+            return "Оберіть випадкове заняття"
+            #else
+            return "Натисніть, щоб обрати випадкове заняття"
+            #endif
         }
     }
 
@@ -777,6 +905,8 @@ struct HomeView: View {
         case .japanese:   return "言語"
         case .french:     return "Langue"
         case .amharic:    return "ቋንቋ"
+        case .russian:    return "Язык"
+        case .ukrainian:    return "Мова"
         }
     }
 
@@ -798,6 +928,8 @@ struct HomeView: View {
         case .japanese:   return "認知"
         case .french:     return "Cognition"
         case .amharic:    return "ኮግኒሽን"
+        case .russian:    return "Когнитивные навыки"
+        case .ukrainian:    return "Когнітивні вправи"
         }
     }
 
@@ -819,6 +951,8 @@ struct HomeView: View {
         case .japanese:   return "機能的スキル"
         case .french:     return "Compétences fonctionnelles"
         case .amharic:    return "ተግባራዊ ክህሎቶች"
+        case .russian:    return "Бытовые навыки"
+        case .ukrainian:    return "Функціональні навички"
         }
     }
 
@@ -852,6 +986,8 @@ struct HomeView: View {
         case .japanese:   return "\(sessionsCount)回のセッションを完了"
         case .french:     return "\(sessionsCount) séances jouées"
         case .amharic:    return "\(sessionsCount) ክፍለ ጊዜዎች ተጫውተዋል"
+        case .russian:    return "Занятий проведено: \(sessionsCount)"
+        case .ukrainian:  return "Проведено занять: \(sessionsCount)"
         }
     }
 
@@ -1082,6 +1218,20 @@ extension AppLanguage {
                 "ቀጣይነትዎ እየጠበቀዎት ነው — ይቀጥሉበት።",
                 "ዝግጁ ሲሆኑ Clarityን ይክፈቱ።"
             ] // TODO: translate
+        case .russian:
+            return [
+                hasName ? "\(name), пора заниматься в Clarity." : "Пора заниматься в Clarity.",
+                "Несколько минут занятий дают большой результат.",
+                "Ваша серия занятий ждёт вас — продолжайте.",
+                "Когда будете готовы, откройте Clarity."
+            ]
+        case .ukrainian:
+            return [
+                hasName ? "\(name), час займатися в Clarity." : "Час займатися в Clarity.",
+                "Кілька хвилин занять дають великий результат.",
+                "Ваша серія занять чекає на вас — продовжуйте.",
+                "Коли будете готові, відкрийте Clarity."
+            ]
         }
     }
 
@@ -1152,6 +1302,14 @@ extension AppLanguage {
             return hasName
                 ? "\(name)፣ የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።"
                 : "የ\(days) ቀናት ቀጣይነትዎ እኩለ ሌሊት ላይ ያበቃል። አሁኑኑ ይለማመዱ።"
+        case .russian:
+            return hasName
+                ? "\(name), ваша серия из \(days) дн. закончится в полночь. Позанимайтесь сейчас, чтобы продолжить её."
+                : "Ваша серия из \(days) дн. закончится в полночь. Позанимайтесь сейчас, чтобы продолжить её."
+        case .ukrainian:
+            return hasName
+                ? "\(name), ваша серія з \(days) дн. закінчиться опівночі. Позайміться зараз, щоб її продовжити."
+                : "Ваша серія з \(days) дн. закінчиться опівночі. Позайміться зараз, щоб її продовжити."
         }
     }
 
@@ -1173,6 +1331,8 @@ extension AppLanguage {
         case .japanese:   return "それは数日ぶりですね。準備ができたらいつでもClarityがここにあります。"
         case .french:     return "Cela fait quelques jours. Clarity est là dès que vous êtes prêt."
         case .amharic:    return "ጥቂት ቀናት አልፈዋል። ዝግጁ ሲሆኑ Clarity እዚህ ነው።"
+        case .russian:    return "Прошло несколько дней. Clarity ждёт вас, когда вы будете готовы."
+        case .ukrainian:    return "Минуло кілька днів. Clarity чекає на вас, коли ви будете готові."
         }
     }
 }
@@ -1198,6 +1358,8 @@ extension AppLanguage {
         case .japanese:   return "ベースライン評価"
         case .french:     return "Évaluation initiale"
         case .amharic:    return "መነሻ ግምገማ"
+        case .russian:    return "Начальная оценка"
+        case .ukrainian:    return "Початкове оцінювання"
         }
     }
 
@@ -1219,6 +1381,8 @@ extension AppLanguage {
         case .japanese:   return "15の短い質問に答えて、練習の適切な開始レベルを設定します。約10分かかります。"
         case .french:     return "Répondez à 15 questions courtes afin que nous puissions définir le bon niveau de départ pour votre pratique. Cela prend environ 10 minutes."
         case .amharic:    return "ለልምምድዎ ትክክለኛውን መነሻ ደረጃ ማዘጋጀት እንድንችል 15 አጫጭር ጥያቄዎችን ይመልሱ። ወደ 10 ደቂቃ ያህል ይወስዳል።"
+        case .russian:    return "Ответьте на 15 коротких вопросов, чтобы мы подобрали подходящий начальный уровень занятий. Это займёт около 10 минут."
+        case .ukrainian:    return "Дайте відповідь на 15 коротких запитань, щоб ми визначили для вас відповідний початковий рівень практики. Це займе близько 10 хвилин."
         }
     }
 
@@ -1240,6 +1404,8 @@ extension AppLanguage {
         case .japanese:   return "質問 \(current) / \(total)"
         case .french:     return "Question \(current) sur \(total)"
         case .amharic:    return "ጥያቄ \(current) ከ \(total)"
+        case .russian:    return "Вопрос \(current) из \(total)"
+        case .ukrainian:    return "Запитання \(current) із \(total)"
         }
     }
 
@@ -1261,6 +1427,8 @@ extension AppLanguage {
         case .japanese:   return "次へ"
         case .french:     return "Suivant"
         case .amharic:    return "ቀጣይ"
+        case .russian:    return "Далее"
+        case .ukrainian:    return "Далі"
         }
     }
 
@@ -1282,6 +1450,8 @@ extension AppLanguage {
         case .japanese:   return "評価を開始"
         case .french:     return "Commencer l'évaluation"
         case .amharic:    return "ግምገማ ጀምር"
+        case .russian:    return "Начать оценку"
+        case .ukrainian:    return "Почати оцінювання"
         }
     }
 
@@ -1303,6 +1473,8 @@ extension AppLanguage {
         case .japanese:   return "今はスキップ"
         case .french:     return "Ignorer pour l'instant"
         case .amharic:    return "አሁን ዝለል"
+        case .russian:    return "Пропустить"
+        case .ukrainian:    return "Пропустити зараз"
         }
     }
 
@@ -1324,6 +1496,8 @@ extension AppLanguage {
         case .japanese:   return "評価完了。"
         case .french:     return "Évaluation terminée."
         case .amharic:    return "ግምገማ ተጠናቅቋል።"
+        case .russian:    return "Оценка завершена."
+        case .ukrainian:    return "Оцінювання завершено."
         }
     }
 
@@ -1345,6 +1519,8 @@ extension AppLanguage {
         case .japanese:   return "あなたの回答に基づいて練習を設定しました。"
         case .french:     return "Nous avons configuré votre pratique en fonction de vos réponses."
         case .amharic:    return "በምላሾችዎ መሰረት ልምምድዎን አዘጋጅተናል።"
+        case .russian:    return "Мы настроили занятия с учётом ваших ответов."
+        case .ukrainian:    return "Ми налаштували вашу практику відповідно до ваших відповідей."
         }
     }
 
@@ -1366,6 +1542,8 @@ extension AppLanguage {
         case .japanese:   return "完了"
         case .french:     return "Terminé"
         case .amharic:    return "ተጠናቋል"
+        case .russian:    return "Готово"
+        case .ukrainian:    return "Готово"
         }
     }
 }
@@ -1393,6 +1571,8 @@ extension AppLanguage {
             case .japanese:   return "言語"
             case .french:     return "Langue"
             case .amharic:    return "ቋንቋ"
+            case .russian:    return "Язык"
+            case .ukrainian:    return "Мова"
             }
         case .cognition:
             switch self {
@@ -1412,6 +1592,8 @@ extension AppLanguage {
             case .japanese:   return "認知"
             case .french:     return "Cognition"
             case .amharic:    return "ኮግኒሽን"
+            case .russian:    return "Когнитивные навыки"
+            case .ukrainian:    return "Когнітивні вправи"
             }
         case .functionalSkills:
             switch self {
@@ -1431,6 +1613,8 @@ extension AppLanguage {
             case .japanese:   return "機能的スキル"
             case .french:     return "Compétences fonctionnelles"
             case .amharic:    return "ተግባራዊ ክህሎቶች"
+            case .russian:    return "Бытовые навыки"
+            case .ukrainian:    return "Функціональні навички"
             }
         }
     }
@@ -1453,6 +1637,8 @@ extension AppLanguage {
         case .japanese:   return "\(exerciseName)に戻る"
         case .french:     return "Retour à \(exerciseName)"
         case .amharic:    return "ወደ \(exerciseName) ተመለስ"
+        case .russian:    return "Назад: \(exerciseName)"
+        case .ukrainian:    return "Назад до «\(exerciseName)»"
         }
     }
 
@@ -1474,6 +1660,8 @@ extension AppLanguage {
         case .japanese:   return "\(days)日間練習していません"
         case .french:     return "Vous n'avez pas pratiqué depuis \(days) jours"
         case .amharic:    return "ለ\(days) ቀናት አልተለማመዱም"
+        case .russian:    return "Вы не занимались \(days) дн."
+        case .ukrainian:    return "Ви не займалися вже \(days) дн."
         }
     }
 
@@ -1495,6 +1683,8 @@ extension AppLanguage {
         case .japanese:   return "\(exerciseName)には注意が必要です"
         case .french:     return "\(exerciseName) nécessite votre attention"
         case .amharic:    return "\(exerciseName) ትኩረት ይፈልጋል"
+        case .russian:    return "Нужно уделить внимание: \(exerciseName)"
+        case .ukrainian:    return "Вправа «\(exerciseName)» потребує уваги"
         }
     }
 
@@ -1516,6 +1706,8 @@ extension AppLanguage {
         case .japanese:   return "最近正解率が下がりました"
         case .french:     return "La précision a récemment baissé"
         case .amharic:    return "ትክክለኛነት በቅርቡ ቀንሷል"
+        case .russian:    return "Точность недавно снизилась"
+        case .ukrainian:    return "Нещодавно точність знизилася"
         }
     }
 
@@ -1537,6 +1729,8 @@ extension AppLanguage {
         case .japanese:   return "新しいことに挑戦しましょう"
         case .french:     return "Essayez quelque chose de nouveau"
         case .amharic:    return "አዲስ ነገር ይሞክሩ"
+        case .russian:    return "Попробуйте что-нибудь новое"
+        case .ukrainian:    return "Спробуйте щось нове"
         }
     }
 
@@ -1558,6 +1752,8 @@ extension AppLanguage {
         case .japanese:   return "今週は\(sectionName)に取り組んでいません"
         case .french:     return "Vous n'avez pas touché à \(sectionName) cette semaine"
         case .amharic:    return "በዚህ ሳምንት \(sectionName)ን አልነኩም"
+        case .russian:    return "На этой неделе вы не занимались в разделе «\(sectionName)»"
+        case .ukrainian:    return "Цього тижня ви не торкалися розділу «\(sectionName)»"
         }
     }
 
@@ -1579,6 +1775,8 @@ extension AppLanguage {
         case .japanese:   return "チャレンジの準備はできましたか？"
         case .french:     return "Prêt pour un défi ?"
         case .amharic:    return "ለፈተና ዝግጁ ነዎት?"
+        case .russian:    return "Готовы к новой задаче?"
+        case .ukrainian:    return "Готові до виклику?"
         }
     }
 
@@ -1600,6 +1798,8 @@ extension AppLanguage {
         case .japanese:   return "\(exerciseName)で常に高得点を取っています"
         case .french:     return "Vous excellez constamment en \(exerciseName)"
         case .amharic:    return "በ\(exerciseName) ላይ በተከታታይ በጣም ጥሩ እየሰሩ ነው"
+        case .russian:    return "Вы стабильно отлично справляетесь: \(exerciseName)"
+        case .ukrainian:    return "Ви стабільно блискуче виконуєте вправу «\(exerciseName)»"
         }
     }
 }
@@ -1624,6 +1824,8 @@ extension AppLanguage {
         case .japanese:   return "セラピー設定"
         case .french:     return "Paramètres de thérapie"
         case .amharic:    return "የሕክምና ቅንብሮች"
+        case .russian:    return "Настройки терапии"
+        case .ukrainian:    return "Налаштування терапії"
         }
     }
     
@@ -1645,6 +1847,8 @@ extension AppLanguage {
         case .japanese:   return "適応難易度"
         case .french:     return "Difficulté adaptative"
         case .amharic:    return "ተለዋዋጭ ደረጃ"
+        case .russian:    return "Адаптивная сложность"
+        case .ukrainian:    return "Адаптивна складність"
         }
     }
 
@@ -1666,6 +1870,8 @@ extension AppLanguage {
         case .japanese:   return "パフォーマンスに基づいて質問の難易度を自動調整します"
         case .french:     return "Ajuste automatiquement la difficulté des questions en fonction des performances"
         case .amharic:    return "በአፈጻጸም መሰረት የጥያቄውን ደረጃ በራስ-ሰር ያስተካክላል"
+        case .russian:    return "Автоматически подбирает сложность вопросов по вашим результатам"
+        case .ukrainian:    return "Автоматично змінює складність запитань залежно від результатів"
         }
     }
 
@@ -1687,6 +1893,8 @@ extension AppLanguage {
         case .japanese:   return "クロスリファレンス難易度"
         case .french:     return "Difficulté par références croisées"
         case .amharic:    return "የተጣመረ ማጣቀሻ ችግር ደረጃ"
+        case .russian:    return "Сложность с учётом связанных упражнений"
+        case .ukrainian:    return "Складність із перехресним врахуванням"
         }
     }
 
@@ -1708,6 +1916,8 @@ extension AppLanguage {
         case .japanese:   return "システムレベルの設定：十分に練習した関連タイプでの好成績が、練習不足の関連タイプの昇格条件をわずかに緩和することがあります。上の種目別設定とは別の設定です。"
         case .french:     return "Réglage au niveau du système : de bons résultats dans un type d'exercice apparenté et bien pratiqué peuvent légèrement assouplir la promotion d'un type apparenté peu pratiqué. Indépendant des réglages par exercice ci-dessus."
         case .amharic:    return "የስርዓት ደረጃ ቅንብር፦ በተዛማጅና በደንብ በተለማመደ የልምምድ አይነት ጠንካራ ውጤት፣ ብዙ ላልተለማመደ ተዛማጅ አይነት እድገትን በትንሹ ሊያቀል ይችላል። ከላይ ካሉት የየልምምድ ቅንብሮች የተለየ ነው።"
+        case .russian:    return "Общая настройка: хорошие результаты в связанном, хорошо освоенном типе упражнений могут немного облегчить переход на следующий уровень в малотренированном родственном типе. Не зависит от настроек отдельных упражнений выше."
+        case .ukrainian:    return "Системне налаштування: добрі результати в схожому, добре відпрацьованому типі вправ можуть трохи полегшити перехід на вищий рівень у менш відпрацьованому схожому типі. Окремо від індивідуальних налаштувань вправ вище."
         }
     }
 
@@ -1729,6 +1939,8 @@ extension AppLanguage {
         case .japanese:   return "難易度の進捗をリセット"
         case .french:     return "Réinitialiser la progression de difficulté"
         case .amharic:    return "የደረጃ እድገትን ዳግም አስጀምር"
+        case .russian:    return "Сбросить прогресс сложности"
+        case .ukrainian:    return "Скинути прогрес складності"
         }
     }
 
@@ -1750,6 +1962,8 @@ extension AppLanguage {
         case .japanese:   return "すべての練習を「簡単」の難易度に戻し、パフォーマンス履歴を消去します"
         case .french:     return "Ramène tous les exercices à la difficulté Facile et efface l'historique des performances"
         case .amharic:    return "ሁሉንም ልምምዶች ወደ ቀላል ደረጃ ይመልሳል እና የአፈጻጸም ታሪክን ያጸዳል"
+        case .russian:    return "Возвращает все упражнения на лёгкий уровень и очищает историю результатов"
+        case .ukrainian:    return "Повертає всі вправи на легкий рівень і очищує історію результатів"
         }
     }
 
@@ -1771,6 +1985,8 @@ extension AppLanguage {
         case .japanese:   return "難易度の進捗をリセットしますか？"
         case .french:     return "Réinitialiser la progression de difficulté ?"
         case .amharic:    return "የደረጃ እድገትን ዳግም ማስጀመር ይፈልጋሉ?"
+        case .russian:    return "Сбросить прогресс сложности?"
+        case .ukrainian:    return "Скинути прогрес складності?"
         }
     }
 
@@ -1792,6 +2008,8 @@ extension AppLanguage {
         case .japanese:   return "これにより、累積正解率の履歴が消去され、すべての練習が自動/簡単にリセットされます。この操作は元に戻せません。"
         case .french:     return "Cela effacera votre historique de précision et réinitialisera tous les exercices sur Auto/Facile. Cette action est irréversible."
         case .amharic:    return "ይህ የተጠራቀመ ትክክለኛነት ታሪክዎን ያጸዳል እና ሁሉንም ልምምዶች ወደ አውቶ/ቀላል ያስጀምራል። ይህ ሊቀለበስ አይችልም።"
+        case .russian:    return "Будет очищена история точности и все упражнения вернутся на уровень «Авто/Лёгкий». Это действие нельзя отменить."
+        case .ukrainian:    return "Буде очищено історію поточної точності, а всі вправи повернуться на рівень «Авто»/«Легкий». Цю дію неможливо скасувати."
         }
     }
 
@@ -1813,6 +2031,8 @@ extension AppLanguage {
         case .japanese:   return "自動"
         case .french:     return "Auto"
         case .amharic:    return "አውቶ"
+        case .russian:    return "Авто"
+        case .ukrainian:    return "Авто"
         }
     }
 
@@ -1834,6 +2054,8 @@ extension AppLanguage {
         case .japanese:   return "簡単"
         case .french:     return "Facile"
         case .amharic:    return "ቀላል"
+        case .russian:    return "Лёгкий"
+        case .ukrainian:    return "Легкий"
         }
     }
 
@@ -1855,6 +2077,8 @@ extension AppLanguage {
         case .japanese:   return "普通"
         case .french:     return "Moyen"
         case .amharic:    return "መካከለኛ"
+        case .russian:    return "Средний"
+        case .ukrainian:    return "Середній"
         }
     }
 
@@ -1876,6 +2100,8 @@ extension AppLanguage {
         case .japanese:   return "難しい"
         case .french:     return "Difficile"
         case .amharic:    return "ከባድ"
+        case .russian:    return "Сложный"
+        case .ukrainian:    return "Складний"
         }
     }
 }

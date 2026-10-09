@@ -19,11 +19,27 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case japanese = "日本語"
     case french = "Français"
     case amharic = "አማርኛ"
+    case russian = "Русский"
+    case ukrainian = "Українська"
 
 
 
 
     var id: String { self.rawValue }
+
+    /// Languages that are built but hidden from the picker and from system
+    /// language auto-detection until a native speaker has reviewed the content.
+    /// A preview language can still be selected via the `selected_language`
+    /// launch argument / stored preference for testing.
+    var isPreview: Bool {
+        switch self {
+        case .russian, .ukrainian: return true
+        default: return false
+        }
+    }
+
+    /// What users can choose from.
+    static var visibleCases: [AppLanguage] { allCases.filter { !$0.isPreview } }
 
     var displayName: String {
         switch self {
@@ -43,6 +59,8 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .japanese: return "日本語"
         case .french: return "Français"
         case .amharic: return "አማርኛ"
+        case .russian: return "Русский"
+        case .ukrainian: return "Українська"
 
 
 
@@ -67,6 +85,8 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .japanese: return "🇯🇵"
         case .french: return "🇫🇷"
         case .amharic: return "🇪🇹"
+        case .russian: return "🇷🇺"
+        case .ukrainian: return "🇺🇦"
 
 
 
@@ -91,6 +111,8 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .japanese: return "ja_JP"
         case .french: return "fr_FR"
         case .amharic: return "am_ET"
+        case .russian: return "ru_RU"
+        case .ukrainian: return "uk_UA"
 
 
 
@@ -157,7 +179,16 @@ class LanguageManager: ObservableObject {
         self.currentLanguage = initialLang
     }
     
+    /// One central rule: an exercise group with fewer than `Exercise.minimumVisibleItems`
+    /// items is hidden from every list, random pick, recommendation and TV screen
+    /// (a 1-3 question "session" is a broken experience). The validator and the
+    /// raw catalogs are unaffected, so the groups stay checked and come back
+    /// automatically when they reach 5 items.
     var allExercises: [AppLanguage: [Exercise]] {
+        rawExercises.mapValues { $0.filter { $0.items.count >= Exercise.minimumVisibleItems } }
+    }
+
+    private var rawExercises: [AppLanguage: [Exercise]] {
         return [
             .english: LanguageExerciseData.allExercises +
                       CognitionExerciseData.allExercises +
@@ -255,11 +286,27 @@ class LanguageManager: ObservableObject {
                       AmharicCognitionExerciseData.allExercises +
                       AmharicFunctionalSkillsExerciseData.allExercises +
                       AmharicNewExercisesData.allExercises +
-                      AmharicHardExercisesData.allExercises
+                      AmharicHardExercisesData.allExercises,
+
+            .russian: RussianLanguageExerciseData.allExercises +
+                      RussianCognitionExerciseData.allExercises +
+                      RussianFunctionalSkillsExerciseData.allExercises +
+                      RussianNewExercisesData.allExercises +
+                      RussianHardExercisesData.allExercises,
+
+            .ukrainian: UkrainianLanguageExerciseData.allExercises +
+                        UkrainianCognitionExerciseData.allExercises +
+                        UkrainianFunctionalSkillsExerciseData.allExercises +
+                        UkrainianNewExercisesData.allExercises +
+                        UkrainianHardExercisesData.allExercises
         ]
     }
     
     func exercisesForSection(_ section: AppSection) -> [Exercise] {
+        rawExercisesForSection(section).filter { $0.items.count >= Exercise.minimumVisibleItems }
+    }
+
+    private func rawExercisesForSection(_ section: AppSection) -> [Exercise] {
         switch currentLanguage {
         case .english:
             // Combine the base English content with the new exercises, then route
@@ -377,6 +424,20 @@ class LanguageManager: ObservableObject {
                        AmharicNewExercisesData.allExercises +
                        AmharicHardExercisesData.allExercises
             return pool.filter { $0.section == section }
+        case .russian:
+            let pool = RussianLanguageExerciseData.allExercises +
+                       RussianCognitionExerciseData.allExercises +
+                       RussianFunctionalSkillsExerciseData.allExercises +
+                       RussianNewExercisesData.allExercises +
+                       RussianHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
+        case .ukrainian:
+            let pool = UkrainianLanguageExerciseData.allExercises +
+                       UkrainianCognitionExerciseData.allExercises +
+                       UkrainianFunctionalSkillsExerciseData.allExercises +
+                       UkrainianNewExercisesData.allExercises +
+                       UkrainianHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
         }
     }
 }
@@ -404,6 +465,8 @@ extension AppLanguage {
         case .japanese:   return "この質問を報告"
         case .french:     return "Signaler cette question"
         case .amharic:    return "ይህን ጥያቄ ምልክት አድርግ"
+        case .russian:    return "Отметить этот вопрос"
+        case .ukrainian:    return "Позначити це запитання"
         }
     }
 
@@ -425,6 +488,8 @@ extension AppLanguage {
         case .japanese:   return "この質問を確認用に報告しますか？"
         case .french:     return "Signaler cette question pour examen ?"
         case .amharic:    return "ይህ ጥያቄ ለክለሳ ምልክት ይደረግበት?"
+        case .russian:    return "Отметить этот вопрос для проверки?"
+        case .ukrainian:    return "Позначити це запитання для перегляду?"
         }
     }
 
@@ -446,6 +511,8 @@ extension AppLanguage {
         case .japanese:   return "この操作により、介護者が確認できるようローカルにメモが保存されます。個人情報は含まれません。"
         case .french:     return "Cela enregistre une note locale que votre aidant pourra consulter. Aucune information personnelle n'est incluse."
         case .amharic:    return "ይህ ለእንክብካቤ ሰጪዎ ግምገማ የአካባቢ ማስታወሻ ያስቀምጣል። ምንም የግል መረጃ አልተካተተም።"
+        case .russian:    return "Будет сохранена локальная заметка для проверки ухаживающим. Личные данные не включаются."
+        case .ukrainian:    return "Це збереже локальну нотатку, яку перегляне ваш доглядальник. Особисті дані не включаються."
         }
     }
 
@@ -467,6 +534,8 @@ extension AppLanguage {
         case .japanese:   return "報告"
         case .french:     return "Signaler"
         case .amharic:    return "ምልክት አድርግ"
+        case .russian:    return "Отметить"
+        case .ukrainian:    return "Позначити"
         }
     }
 
@@ -488,6 +557,8 @@ extension AppLanguage {
         case .japanese:   return "キャンセル"
         case .french:     return "Annuler"
         case .amharic:    return "ይቅር"
+        case .russian:    return "Отмена"
+        case .ukrainian:    return "Скасувати"
         }
     }
 
@@ -509,6 +580,8 @@ extension AppLanguage {
         case .japanese:   return "確認用に報告しました"
         case .french:     return "Signalé pour examen"
         case .amharic:    return "ለክለሳ ምልክት ተደርጓል"
+        case .russian:    return "Отмечено для проверки"
+        case .ukrainian:    return "Позначено для перегляду"
         }
     }
 
@@ -530,6 +603,8 @@ extension AppLanguage {
         case .japanese:   return "報告されたコンテンツ"
         case .french:     return "Contenu Signalé"
         case .amharic:    return "ምልክት የተደረገበት ይዘት"
+        case .russian:    return "Отмеченные вопросы"
+        case .ukrainian:    return "Позначений вміст"
         }
     }
 
@@ -551,6 +626,8 @@ extension AppLanguage {
         case .japanese:   return "報告された項目はまだありません"
         case .french:     return "Aucun élément signalé pour le moment"
         case .amharic:    return "እስካሁን ምልክት የተደረገበት ንጥል የለም"
+        case .russian:    return "Отмеченных вопросов пока нет"
+        case .ukrainian:    return "Позначених запитань поки немає"
         }
     }
 
@@ -572,6 +649,8 @@ extension AppLanguage {
         case .japanese:   return "すべてをテキストとしてコピー"
         case .french:     return "Copier Tout en Texte"
         case .amharic:    return "ሁሉንም እንደ ጽሑፍ ቅዳ"
+        case .russian:    return "Копировать всё как текст"
+        case .ukrainian:    return "Копіювати все як текст"
         }
     }
 
@@ -593,6 +672,8 @@ extension AppLanguage {
         case .japanese:   return "JSONとしてエクスポート"
         case .french:     return "Exporter en JSON"
         case .amharic:    return "እንደ JSON ላክ"
+        case .russian:    return "Экспорт в JSON"
+        case .ukrainian:    return "Експортувати як JSON"
         }
     }
 
@@ -614,6 +695,8 @@ extension AppLanguage {
         case .japanese:   return "クリップボードにコピーしました"
         case .french:     return "Copié dans le presse-papiers"
         case .amharic:    return "ወደ ቅንጥብ ሰሌዳ ተቀድቷል"
+        case .russian:    return "Скопировано в буфер обмена"
+        case .ukrainian:    return "Скопійовано в буфер обміну"
         }
     }
 }
@@ -639,6 +722,8 @@ extension AppLanguage {
         case .japanese: return "お名前を入力してください"
         case .french: return "Entrez votre nom"
         case .amharic: return "ስምዎን ያስገቡ"
+        case .russian: return "Введите своё имя"
+        case .ukrainian: return "Введіть своє ім'я"
         }
     }
 
@@ -660,6 +745,8 @@ extension AppLanguage {
         case .japanese: return "診断"
         case .french: return "Diagnostic"
         case .amharic: return "ምርመራ"
+        case .russian: return "Диагноз"
+        case .ukrainian: return "Діагноз"
         }
     }
 
@@ -681,6 +768,8 @@ extension AppLanguage {
         case .japanese: return "未設定"
         case .french: return "Non défini"
         case .amharic: return "አልተቀናበረም"
+        case .russian: return "Не указан"
+        case .ukrainian: return "Не вказано"
         }
     }
 
@@ -702,6 +791,8 @@ extension AppLanguage {
         case .japanese: return "セラピスト"
         case .french: return "Thérapeute"
         case .amharic: return "ቴራፒስት"
+        case .russian: return "Терапевт"
+        case .ukrainian: return "Фахівець із терапії"
         }
     }
 
@@ -723,6 +814,8 @@ extension AppLanguage {
         case .japanese: return "利用開始日"
         case .french: return "Utilisation depuis"
         case .amharic: return "ከጀመሩበት"
+        case .russian: return "Пользуетесь с"
+        case .ukrainian: return "Користуєтеся з"
         }
     }
 
@@ -744,6 +837,8 @@ extension AppLanguage {
         case .japanese: return "メモ"
         case .french: return "Notes"
         case .amharic: return "ማስታወሻዎች"
+        case .russian: return "Заметки"
+        case .ukrainian: return "Нотатки"
         }
     }
 
@@ -765,6 +860,8 @@ extension AppLanguage {
         case .japanese: return "セッション"
         case .french: return "Séances"
         case .amharic: return "ክፍለ ጊዜዎች"
+        case .russian: return "Занятия"
+        case .ukrainian: return "Заняття"
         }
     }
 
@@ -786,6 +883,8 @@ extension AppLanguage {
         case .japanese: return "完了"
         case .french: return "Terminé"
         case .amharic: return "ተጠናቋል"
+        case .russian: return "Завершено"
+        case .ukrainian: return "Завершено"
         }
     }
 
@@ -807,6 +906,8 @@ extension AppLanguage {
         case .japanese: return "活動日数"
         case .french: return "Jours actifs"
         case .amharic: return "ንቁ ቀናት"
+        case .russian: return "Активных дней"
+        case .ukrainian: return "Активних днів"
         }
     }
 
@@ -828,6 +929,8 @@ extension AppLanguage {
         case .japanese: return "正解率"
         case .french: return "Précision"
         case .amharic: return "ትክክለኛነት"
+        case .russian: return "Точность"
+        case .ukrainian: return "Точність"
         }
     }
 
@@ -849,6 +952,8 @@ extension AppLanguage {
         case .japanese: return "言語"
         case .french: return "Langue"
         case .amharic: return "ቋንቋ"
+        case .russian: return "Язык"
+        case .ukrainian: return "Мова"
         }
     }
 
@@ -870,6 +975,8 @@ extension AppLanguage {
         case .japanese: return "アプリはすべての練習問題を選択した言語で表示します。"
         case .french: return "L'application affichera tous les exercices dans la langue sélectionnée."
         case .amharic: return "መተግበሪያው ሁሉንም ልምምዶች በተመረጠው ቋንቋ ያሳያል።"
+        case .russian: return "Приложение будет показывать все упражнения на выбранном языке."
+        case .ukrainian: return "Застосунок показуватиме всі вправи обраною мовою."
         }
     }
 
@@ -891,6 +998,8 @@ extension AppLanguage {
         case .japanese: return "実績"
         case .french: return "Réussites"
         case .amharic: return "ስኬቶች"
+        case .russian: return "Достижения"
+        case .ukrainian: return "Досягнення"
         }
     }
 
@@ -912,6 +1021,8 @@ extension AppLanguage {
         case .japanese: return "マイバッジ"
         case .french: return "Mes badges"
         case .amharic: return "የእኔ ባጆች"
+        case .russian: return "Мои награды"
+        case .ukrainian: return "Мої значки"
         }
     }
 
@@ -933,6 +1044,8 @@ extension AppLanguage {
         case .japanese: return "研究"
         case .french: return "Recherche"
         case .amharic: return "ምርምር"
+        case .russian: return "Исследование"
+        case .ukrainian: return "Дослідження"
         }
     }
 
@@ -954,6 +1067,8 @@ extension AppLanguage {
         case .japanese: return "これは匿名のパフォーマンスデータのみをエクスポートします。個人情報（氏名、写真、連絡先など）は含まれません。研究者やセラピストと共有してください。"
         case .french: return "Cette action exporte uniquement des données de performance anonymes. Aucune information personnelle (nom, photo ou coordonnées) n'est incluse. Partagez avec des chercheurs ou des thérapeutes."
         case .amharic: return "ይህ የማይታወቅ የአፈጻጸም መረጃ ብቻ ይልካል። ምንም የግል መረጃ (ስም፣ ፎቶ ወይም የመገናኛ ዝርዝሮች) አልተካተተም። ከተመራማሪዎች ወይም ከቴራፒስቶች ጋር ያጋሩ።"
+        case .russian: return "Экспортируются только анонимные данные об успехах. Личные данные (имя, фото, контакты) не включаются. Можно передать исследователям или терапевтам."
+        case .ukrainian: return "Експортуються лише знеособлені дані про результати. Особисті дані (ім'я, фото чи контакти) не включаються. Можна передати дослідникам або фахівцям із терапії."
         }
     }
 
@@ -975,6 +1090,8 @@ extension AppLanguage {
         case .japanese: return "研究データをエクスポート"
         case .french: return "Exporter les données de recherche"
         case .amharic: return "የምርምር መረጃ ላክ"
+        case .russian: return "Экспорт данных для исследования"
+        case .ukrainian: return "Експортувати дані для досліджень"
         }
     }
 
@@ -996,6 +1113,8 @@ extension AppLanguage {
         case .japanese: return "本アプリのガイダンスについて"
         case .french: return "À propos des conseils de cette application"
         case .amharic: return "ስለዚህ መተግበሪያ መመሪያ"
+        case .russian: return "О рекомендациях приложения"
+        case .ukrainian: return "Про поради застосунку"
         }
     }
 
@@ -1017,6 +1136,8 @@ extension AppLanguage {
         case .japanese: return "プロフィールをリセット"
         case .french: return "Réinitialiser le profil"
         case .amharic: return "መገለጫ ዳግም አስጀምር"
+        case .russian: return "Сбросить профиль"
+        case .ukrainian: return "Скинути профіль"
         }
     }
 
@@ -1038,6 +1159,8 @@ extension AppLanguage {
         case .japanese: return "プロフィールをリセットしますか？"
         case .french: return "Réinitialiser le profil ?"
         case .amharic: return "መገለጫ ዳግም ማስጀመር ይፈልጋሉ?"
+        case .russian: return "Сбросить профиль?"
+        case .ukrainian: return "Скинути профіль?"
         }
     }
 
@@ -1059,6 +1182,8 @@ extension AppLanguage {
         case .japanese: return "キャンセル"
         case .french: return "Annuler"
         case .amharic: return "ይቅር"
+        case .russian: return "Отмена"
+        case .ukrainian: return "Скасувати"
         }
     }
 
@@ -1080,6 +1205,8 @@ extension AppLanguage {
         case .japanese: return "リセット"
         case .french: return "Réinitialiser"
         case .amharic: return "ዳግም አስጀምር"
+        case .russian: return "Сбросить"
+        case .ukrainian: return "Скинути"
         }
     }
 
@@ -1101,6 +1228,8 @@ extension AppLanguage {
         case .japanese: return "これにより、名前、写真、診断、メモが消去されます。練習履歴とセッション数には影響しませんが、連続記録はゼロにリセットされます。"
         case .french: return "Cela effacera votre nom, votre photo, votre diagnostic et vos notes. Votre historique d'exercices et le nombre de séances ne seront pas affectés, mais votre série sera réinitialisée à zéro."
         case .amharic: return "ይህ ስምዎን፣ ፎቶዎን፣ ምርመራዎን እና ማስታወሻዎችን ያጸዳል። የልምምድ ታሪክዎ እና የክፍለ ጊዜ ብዛትዎ አይነካም፣ ነገር ግን ተከታታይነትዎ ወደ ዜሮ ዳግም ይጀመራል።"
+        case .russian: return "Будут удалены ваше имя, фото, диагноз и заметки. История занятий и количество занятий сохранятся, но серия обнулится."
+        case .ukrainian: return "Буде видалено ваше ім'я, фото, діагноз і нотатки. Історія вправ і кількість занять не зміняться, але серія днів обнулиться."
         }
     }
 
@@ -1122,6 +1251,8 @@ extension AppLanguage {
         case .japanese: return "マイプロフィール"
         case .french: return "Mon profil"
         case .amharic: return "የእኔ መገለጫ"
+        case .russian: return "Мой профиль"
+        case .ukrainian: return "Мій профіль"
         }
     }
 
@@ -1143,6 +1274,8 @@ extension AppLanguage {
         case .japanese: return "キーボードのヒント"
         case .french: return "Astuce clavier"
         case .amharic: return "የቁልፍ ሰሌዳ ምክር"
+        case .russian: return "Совет по клавиатуре"
+        case .ukrainian: return "Порада щодо клавіатури"
         }
     }
 
@@ -1164,6 +1297,8 @@ extension AppLanguage {
         case .japanese: return "了解"
         case .french: return "Compris"
         case .amharic: return "ገባኝ"
+        case .russian: return "Понятно"
+        case .ukrainian: return "Зрозуміло"
         }
     }
 
@@ -1185,6 +1320,8 @@ extension AppLanguage {
         case .japanese: return "設定を開く"
         case .french: return "Ouvrir les réglages"
         case .amharic: return "ቅንብሮችን ክፈት"
+        case .russian: return "Открыть настройки"
+        case .ukrainian: return "Відкрити налаштування"
         }
     }
 
@@ -1206,6 +1343,8 @@ extension AppLanguage {
         case .japanese: return "\(languageName)を快適にご利用いただくには、iPhoneの「設定」→「一般」→「キーボード」→「キーボード」→「新しいキーボードを追加」からキーボードを追加してください。"
         case .french: return "Pour la meilleure expérience avec \(languageName), ajoutez le clavier dans Réglages iPhone → Général → Clavier → Claviers → Ajouter un clavier."
         case .amharic: return "ከ\(languageName) ጋር ምርጥ ተሞክሮ ለማግኘት፣ በ iPhone ቅንብሮች → አጠቃላይ → የቁልፍ ሰሌዳ → የቁልፍ ሰሌዳዎች → አዲስ የቁልፍ ሰሌዳ ጨምር ውስጥ የቁልፍ ሰሌዳውን ያክሉ።"
+        case .russian: return "Для удобной работы с языком «\(languageName)» добавьте клавиатуру в настройках iPhone: Основные → Клавиатура → Клавиатуры → Новые клавиатуры."
+        case .ukrainian: return "Щоб зручніше користуватися мовою «\(languageName)», додайте клавіатуру в налаштуваннях iPhone: Загальні → Клавіатура → Клавіатури → Нова клавіатура."
         }
     }
 
@@ -1227,6 +1366,8 @@ extension AppLanguage {
         case .japanese: return "詳細を入力してください"
         case .french: return "Veuillez préciser"
         case .amharic: return "እባክዎ ይግለጹ"
+        case .russian: return "Пожалуйста, уточните"
+        case .ukrainian: return "Уточніть, будь ласка"
         }
     }
 
@@ -1248,6 +1389,8 @@ extension AppLanguage {
         case .japanese: return "保存"
         case .french: return "Enregistrer"
         case .amharic: return "አስቀምጥ"
+        case .russian: return "Сохранить"
+        case .ukrainian: return "Зберегти"
         }
     }
 
@@ -1269,6 +1412,8 @@ extension AppLanguage {
         case .japanese: return "セラピスト名"
         case .french: return "Nom du thérapeute"
         case .amharic: return "የቴራፒስት ስም"
+        case .russian: return "Имя терапевта"
+        case .ukrainian: return "Ім'я фахівця із терапії"
         }
     }
 
@@ -1290,6 +1435,8 @@ extension AppLanguage {
         case .japanese: return "メモはありません。"
         case .french: return "Aucune note."
         case .amharic: return "ማስታወሻ የለም።"
+        case .russian: return "Заметок нет."
+        case .ukrainian: return "Немає нотаток."
         }
     }
 }

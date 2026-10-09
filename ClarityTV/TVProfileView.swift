@@ -4,7 +4,6 @@ import SwiftUI
 private enum TVProfileFocus: Hashable {
     case language(AppLanguage)
     case caregiverMode
-    case changeBackground
     case voiceOver
 }
 
@@ -41,6 +40,8 @@ struct TVProfileView: View {
         case .japanese:   return "プロフィール"
         case .french:     return "Profil"
         case .amharic:    return "መገለጫ"
+        case .russian:    return "Профиль"
+        case .ukrainian:    return "Профіль"
         }
     }
 
@@ -62,6 +63,8 @@ struct TVProfileView: View {
         case .japanese:   return "言語を選択"
         case .french:     return "Choisir la langue"
         case .amharic:    return "ቋንቋ ይምረጡ"
+        case .russian:    return "Выберите язык"
+        case .ukrainian:    return "Оберіть мову"
         }
     }
 
@@ -113,7 +116,7 @@ struct TVProfileView: View {
                             ],
                             spacing: 24
                         ) {
-                            ForEach(AppLanguage.allCases) { language in
+                            ForEach(AppLanguage.visibleCases) { language in
                                 Button {
                                     languageManager.currentLanguage = language
                                 } label: {
@@ -151,33 +154,6 @@ struct TVProfileView: View {
                     }
                     .buttonStyle(.plain)
                     .focused($focus, equals: .voiceOver)
-                    .padding(.horizontal, 100)
-
-                    // Change Background Tile
-                    Button {
-                        BackgroundManager.shared.randomizeBackground()
-                    } label: {
-                        HStack(spacing: 16) {
-                            Image(systemName: "photo.on.rectangle.angled")
-                                .font(.system(size: 32))
-                                .foregroundColor(Color(hex: "FF9500"))
-                            Text("Change Background")
-                                .font(.system(size: 28, weight: .bold, design: .rounded))
-                                .foregroundColor(.white)
-                        }
-                        .padding(.horizontal, 40)
-                        .padding(.vertical, 24)
-                        .background(
-                            RoundedRectangle(cornerRadius: 18)
-                                .fill(focus == .changeBackground ? Color(hex: "3D3D60") : Color(hex: "2D2D44").opacity(0.5))
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 18)
-                                .stroke(focus == .changeBackground ? Color.white : Color.clear, lineWidth: 3)
-                        )
-                    }
-                    .buttonStyle(.plain)
-                    .focused($focus, equals: .changeBackground)
                     .padding(.horizontal, 100)
 
                     // Caregiver Mode Launch Button
@@ -283,6 +259,8 @@ struct TVProfileView: View {
         case .japanese:   return "質問を読み上げる"
         case .french:     return "Lire les questions à voix haute"
         case .amharic:    return "ጥያቄዎችን በታላቅ ድምፅ አንብብ"
+        case .russian:    return "Читать вопросы вслух"
+        case .ukrainian:    return "Озвучувати запитання"
         }
     }
 
@@ -304,6 +282,8 @@ struct TVProfileView: View {
         case .japanese:   return "オン"
         case .french:     return "Activé"
         case .amharic:    return "በርቷል"
+        case .russian:    return "Вкл."
+        case .ukrainian:    return "Увімк."
         }
     }
 
@@ -325,6 +305,8 @@ struct TVProfileView: View {
         case .japanese:   return "オフ"
         case .french:     return "Désactivé"
         case .amharic:    return "ጠፍቷል"
+        case .russian:    return "Выкл."
+        case .ukrainian:    return "Вимк."
         }
     }
 }

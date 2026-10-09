@@ -182,7 +182,7 @@ struct TVOnboardingView: View {
                     ],
                     spacing: 20
                 ) {
-                    ForEach(AppLanguage.allCases) { language in
+                    ForEach(AppLanguage.visibleCases) { language in
                         Button {
                             languageManager.currentLanguage = language
                         } label: {
@@ -275,6 +275,8 @@ extension AppLanguage {
         case .japanese:   return "Clarityへようこそ"
         case .french:     return "Bienvenue sur Clarity"
         case .amharic:    return "ወደ Clarity እንኳን በደህና መጡ"
+        case .russian:    return "Добро пожаловать в Clarity"
+        case .ukrainian:    return "Ласкаво просимо до Clarity"
         }
     }
     
@@ -296,6 +298,8 @@ extension AppLanguage {
         case .japanese:   return "ご自宅で言語と記憶のトレーニングができます。"
         case .french:     return "Pratiquez des exercices de langue et de mémoire à la maison."
         case .amharic:    return "የቋንቋ እና የማስታወስ ልምምዶችን በቤት ውስጥ ያድርጉ።"
+        case .russian:    return "Выполняйте упражнения для речи и памяти дома."
+        case .ukrainian:    return "Виконуйте вправи для мовлення та пам'яті вдома."
         }
     }
     
@@ -317,6 +321,8 @@ extension AppLanguage {
         case .japanese:   return "始める"
         case .french:     return "Commencer"
         case .amharic:    return "ይጀምሩ"
+        case .russian:    return "Начать"
+        case .ukrainian:    return "Почати"
         }
     }
     
@@ -338,6 +344,8 @@ extension AppLanguage {
         case .japanese:   return "使い方"
         case .french:     return "Comment ça marche"
         case .amharic:    return "እንዴት እንደሚሰራ"
+        case .russian:    return "Как это работает"
+        case .ukrainian:    return "Як це працює"
         }
     }
     
@@ -359,6 +367,8 @@ extension AppLanguage {
         case .japanese:   return "アクティビティタブから演習を選択します"
         case .french:     return "Choisissez un exercice dans l'onglet Activités"
         case .amharic:    return "ከቫርዥነቶች ትር ውስጥ አንድ ልምምድ ይምረጡ"
+        case .russian:    return "Выберите упражнение на вкладке «Занятия»"
+        case .ukrainian:    return "Оберіть вправу на вкладці «Вправи»"
         }
     }
     
@@ -380,6 +390,8 @@ extension AppLanguage {
         case .japanese:   return "セッションごとに5つの質問に答えます"
         case .french:     return "Répondez à 5 questions par session"
         case .amharic:    return "በእያንዳንዱ ክፍለ ጊዜ 5 ጥያቄዎችን ይመልሱ"
+        case .russian:    return "Отвечайте на 5 вопросов за занятие"
+        case .ukrainian:    return "Відповідайте на 5 запитань за одне заняття"
         }
     }
     
@@ -401,6 +413,8 @@ extension AppLanguage {
         case .japanese:   return "日々の進捗状況を記録できます"
         case .french:     return "Suivez vos progrès au fil du temps"
         case .amharic:    return "በጊዜ ሂደት የእርስዎን እድገት ይከታተሉ"
+        case .russian:    return "Следите за своим прогрессом"
+        case .ukrainian:    return "Стежте за своїм прогресом із часом"
         }
     }
     
@@ -422,6 +436,8 @@ extension AppLanguage {
         case .japanese:   return "次へ"
         case .french:     return "Suivant"
         case .amharic:    return "ቀጣይ"
+        case .russian:    return "Далее"
+        case .ukrainian:    return "Далі"
         }
     }
     
@@ -443,6 +459,8 @@ extension AppLanguage {
         case .japanese:   return "言語を選択してください"
         case .french:     return "Choisissez votre langue"
         case .amharic:    return "ቋንቋዎን ይምረጡ"
+        case .russian:    return "Выберите язык"
+        case .ukrainian:    return "Оберіть свою мову"
         }
     }
     
@@ -464,6 +482,8 @@ extension AppLanguage {
         case .japanese:   return "練習を始める"
         case .french:     return "Commencer à pratiquer"
         case .amharic:    return "ልምምድ ይጀምሩ"
+        case .russian:    return "Начать занятия"
+        case .ukrainian:    return "Почати практику"
         }
     }
 }

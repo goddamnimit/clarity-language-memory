@@ -96,7 +96,7 @@ struct TVSettingsView: View {
 
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 20) {
-                                    ForEach(AppLanguage.allCases) { lang in
+                                    ForEach(AppLanguage.visibleCases) { lang in
                                         Button {
                                             selectedLanguage = lang
                                             languageManager.currentLanguage = lang
@@ -158,6 +158,8 @@ struct TVSettingsView: View {
         case .japanese:   return "設定"
         case .french:     return "Paramètres"
         case .amharic:    return "ቅንብሮች"
+        case .russian:    return "Настройки"
+        case .ukrainian:    return "Налаштування"
         }
     }
 
@@ -179,6 +181,8 @@ struct TVSettingsView: View {
         case .japanese:   return "質問を読み上げる"
         case .french:     return "Lire les questions à voix haute"
         case .amharic:    return "ጥያቄዎችን በታላቅ ድምፅ አንብብ"
+        case .russian:    return "Читать вопросы вслух"
+        case .ukrainian:    return "Озвучувати запитання"
         }
     }
 
@@ -200,6 +204,8 @@ struct TVSettingsView: View {
         case .japanese:   return "テキスト読み上げ機能を使用して各質問を読み上げます"
         case .french:     return "Lit chaque question à voix haute en utilisant la synthèse vocale"
         case .amharic:    return "ጽሑፍን ወደ ንግግር በመቀየር እያንዳንዱን ጥያቄ በታላቅ ድምፅ ያነብባል"
+        case .russian:    return "Читает каждый вопрос вслух с помощью синтеза речи"
+        case .ukrainian:    return "Озвучує кожне запитання за допомогою синтезу мовлення"
         }
     }
 
@@ -221,6 +227,8 @@ struct TVSettingsView: View {
         case .japanese:   return "効果音"
         case .french:     return "Effets sonores"
         case .amharic:    return "የድምፅ ውጤቶች"
+        case .russian:    return "Звуковые эффекты"
+        case .ukrainian:    return "Звукові ефекти"
         }
     }
 
@@ -242,6 +250,8 @@ struct TVSettingsView: View {
         case .japanese:   return "言語"
         case .french:     return "Langue"
         case .amharic:    return "ቋንቋ"
+        case .russian:    return "Язык"
+        case .ukrainian:    return "Мова"
         }
     }
 
@@ -263,6 +273,8 @@ struct TVSettingsView: View {
         case .japanese:   return "アプリについて"
         case .french:     return "À propos"
         case .amharic:    return "ስለ"
+        case .russian:    return "О приложении"
+        case .ukrainian:    return "Про застосунок"
         }
     }
 
@@ -284,6 +296,8 @@ struct TVSettingsView: View {
         case .japanese:   return "Clarity: 言語と記憶\n失語症およびFTD（前頭側頭型認知症）治療のために設計されています。\n© 2024 Clarity App"
         case .french:     return "Clarity : Langage et Mémoire\nConçu pour la thérapie de l'aphasie et de la DFT.\n© 2024 Clarity App"
         case .amharic:    return "Clarity: ቋንቋ እና ትውስታ (Language & Memory)\nለአፋዚያ (Aphasia) እና ለኤፍቲዲ (FTD) ሕክምና የተነደፈ።\n© 2024 Clarity App"
+        case .russian:    return "Clarity: речь и память\nСоздано для терапии при афазии и ЛТД.\n© 2024 Clarity App"
+        case .ukrainian:    return "Clarity: мова та пам'ять\nРозроблено для терапії при афазії та лобово-скроневій деменції.\n© 2024 застосунок Clarity"
         }
     }
 
@@ -305,6 +319,8 @@ struct TVSettingsView: View {
         case .japanese:   return "オン"
         case .french:     return "Activé"
         case .amharic:    return "በርቷል"
+        case .russian:    return "Вкл."
+        case .ukrainian:    return "Увімк."
         }
     }
 
@@ -326,6 +342,8 @@ struct TVSettingsView: View {
         case .japanese:   return "オフ"
         case .french:     return "Désactivé"
         case .amharic:    return "ጠፍቷል"
+        case .russian:    return "Выкл."
+        case .ukrainian:    return "Вимк."
         }
     }
 }

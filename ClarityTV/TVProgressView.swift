@@ -408,6 +408,8 @@ struct TVProgressView: View {
         case .japanese:   return "進捗ダッシュボード"
         case .french:     return "Tableau de bord"
         case .amharic:    return "የእድገት ዳሽቦርድ"
+        case .russian:    return "Ваш прогресс"
+        case .ukrainian:    return "Панель прогресу"
         }
     }
 
@@ -429,6 +431,8 @@ struct TVProgressView: View {
         case .japanese:   return "毎日の成果を記録し続けましょう！"
         case .french:     return "Suivez vos progrès quotidiens !"
         case .amharic:    return "የዕለት ተዕለት ውጤቶችዎን መከታተልዎን ይቀጥሉ!"
+        case .russian:    return "Следите за своими ежедневными успехами!"
+        case .ukrainian:    return "Продовжуйте відстежувати свої щоденні досягнення!"
         }
     }
 
@@ -450,6 +454,8 @@ struct TVProgressView: View {
         case .japanese:   return "現在の継続日数"
         case .french:     return "Série actuelle"
         case .amharic:    return "የአሁኑ ተከታታይ ቀናት"
+        case .russian:    return "Текущая серия"
+        case .ukrainian:    return "Поточна серія"
         }
     }
 
@@ -471,6 +477,8 @@ struct TVProgressView: View {
         case .japanese:   return "最長継続日数"
         case .french:     return "Série record"
         case .amharic:    return "ረጅሙ ተከታታይ ቀናት"
+        case .russian:    return "Самая длинная серия"
+        case .ukrainian:    return "Найдовша серія"
         }
     }
 
@@ -492,6 +500,8 @@ struct TVProgressView: View {
         case .japanese:   return "最初の正解率"
         case .french:     return "Précision 1er essai"
         case .amharic:    return "የመጀመሪያ ሙከራ ትክክለኛነት"
+        case .russian:    return "Точность с первой попытки"
+        case .ukrainian:    return "Точність з першої спроби"
         }
     }
 
@@ -513,6 +523,8 @@ struct TVProgressView: View {
         case .japanese:   return "日連続"
         case .french:     return "jours d'affilée"
         case .amharic:    return "ተከታታይ ቀናት"
+        case .russian:    return "дней подряд"
+        case .ukrainian:    return "днів поспіль"
         }
     }
 
@@ -534,6 +546,8 @@ struct TVProgressView: View {
         case .japanese:   return "初回セッションの回答に基づく"
         case .french:     return "basé sur les réponses de la première session"
         case .amharic:    return "በመጀመሪያው ክፍለ ጊዜ መልሶች ላይ የተመሠረተ"
+        case .russian:    return "по первым ответам в занятиях"
+        case .ukrainian:    return "за першими відповідями під час занять"
         }
     }
 
@@ -555,6 +569,8 @@ struct TVProgressView: View {
         case .japanese:   return "週間の活動"
         case .french:     return "Activité hebdomadaire"
         case .amharic:    return "የሳምንት እንቅስቃሴ"
+        case .russian:    return "Активность за неделю"
+        case .ukrainian:    return "Активність за тиждень"
         }
     }
 
@@ -576,6 +592,8 @@ struct TVProgressView: View {
         case .japanese:   return "カテゴリー別の正解率"
         case .french:     return "Précision par catégorie"
         case .amharic:    return "ትክክለኛነት በምድብ"
+        case .russian:    return "Точность по разделам"
+        case .ukrainian:    return "Точність за категоріями"
         }
     }
 
@@ -597,6 +615,8 @@ struct TVProgressView: View {
         case .japanese:   return "今日"
         case .french:     return "Aujourd'hui"
         case .amharic:    return "ዛሬ"
+        case .russian:    return "Сегодня"
+        case .ukrainian:    return "Сьогодні"
         }
     }
 
@@ -618,6 +638,8 @@ struct TVProgressView: View {
         case .japanese:   return "過去の日々"
         case .french:     return "Jours précédents"
         case .amharic:    return "ያለፉ ቀናት"
+        case .russian:    return "Предыдущие дни"
+        case .ukrainian:    return "Попередні дні"
         }
     }
 
@@ -639,6 +661,8 @@ struct TVProgressView: View {
         case .japanese:   return "注：PDFレポートのエクスポートはモバイルアプリでのみサポートされています。"
         case .french:     return "Remarque : L'exportation de rapports PDF n'est prise en charge que sur l'application mobile."
         case .amharic:    return "ማሳሰቢያ፡ የPDF ሪፖርት ወደ ውጪ መላክ የሚደገፈው በሞባይል መተግበሪያ ላይ ብቻ ነው።"
+        case .russian:    return "Примечание: экспорт отчёта в PDF доступен только в мобильном приложении."
+        case .ukrainian:    return "Примітка: експорт звіту у форматі PDF підтримується лише в мобільному застосунку."
         }
     }
 
@@ -701,6 +725,8 @@ struct TVProgressView: View {
         case .japanese:   return "継続とバッジ"
         case .french:     return "Séries & Badges"
         case .amharic:    return "ተከታታይ ቀናት እና ባጆች"
+        case .russian:    return "Серии и награды"
+        case .ukrainian:    return "Серії та значки"
         }
     }
 
@@ -722,6 +748,8 @@ struct TVProgressView: View {
         case .japanese:   return "日連続"
         case .french:     return "jours d'affilée"
         case .amharic:    return "ተከታታይ ቀናት"
+        case .russian:    return "дн. подряд"
+        case .ukrainian:    return "днів поспіль"
         }
     }
 
@@ -743,6 +771,8 @@ struct TVProgressView: View {
         case .japanese:   return "総セッション数"
         case .french:     return "Sessions totales"
         case .amharic:    return "ጠቅላላ ክፍለ ጊዜዎች"
+        case .russian:    return "Всего занятий"
+        case .ukrainian:    return "Усього занять"
         }
     }
 }

@@ -29,19 +29,17 @@ struct TVOptionGridView: View {
             VStack(spacing: 0) {
                 // Top prompt area
                 VStack(spacing: 16) {
-                    Spacer()
-                    ScrollView(.vertical) {
-                        Text(prompt)
-                            .font(.system(size: 42, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .minimumScaleFactor(0.7)
-                            .padding(.horizontal, 120)
-                    }
-                    .frame(maxHeight: 280)
-                    Spacer()
+                    // Scales down to fit the band instead of scrolling/clipping.
+                    Text(prompt)
+                        .font(.system(size: 42, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(6)
+                        .minimumScaleFactor(0.4)
+                        .padding(.horizontal, 120)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                .padding(.vertical, 8)
                 .frame(height: geo.size.height * 0.35)
 
                 // Options layout (2x1 for 2 options, 2x2 for 4 options).
