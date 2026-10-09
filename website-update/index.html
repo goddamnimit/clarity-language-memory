@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarity: Language & Memory — Therapy App for Aphasia & FTD</title>
+  <meta name="description" content="A free, fully offline therapy companion for iPhone and Apple TV. 16 languages, adaptive difficulty, and a new piece of public domain art every day. Built for aphasia and FTD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #2B3A4A;
+      --ink-light:  #566878;
+      --sage:       #7BA898;
+      --sage-light: #B4D4C8;
+      --sage-pale:  #EBF4F1;
+      --cream:      #F7F3EE;
+      --gold:       #C9A96E;
+      --rose:       #E8B4A0;
+      --white:      #FFFFFF;
+      --radius-sm:  8px;
+      --radius-md:  16px;
+      --radius-lg:  32px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(247, 243, 238, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(43, 58, 74, 0.06);
+    }
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--sage); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink-light);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      background: var(--ink);
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: 100px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--sage) !important; color: var(--white) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(123, 168, 152, 0.18);
+      pointer-events: none;
+    }
+    .hero-bg-ring:nth-child(1) { width: 600px; height: 600px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .hero-bg-ring:nth-child(2) { width: 900px; height: 900px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    .hero-bg-ring:nth-child(3) { width: 1200px; height: 1200px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--sage-pale);
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      background: var(--sage);
+      border-radius: 50%;
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 760px;
+      margin-bottom: 12px;
+    }
+    .hero h1 em { font-style: italic; color: var(--sage); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--ink-light);
+      max-width: 520px;
+      margin: 0 auto 48px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* LANGUAGE PILLS */
+    .language-constellation {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 52px;
+      max-width: 900px;
+    }
+    .lang-pill {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--white);
+      border: 1.5px solid rgba(43, 58, 74, 0.08);
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      animation: lang-breathe 3s ease-in-out infinite;
+      box-shadow: 0 2px 12px rgba(123, 168, 152, 0.08);
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      user-select: none;
+    }
+    .lang-pill:hover { border-color: var(--sage); }
+    .lang-pill.active {
+      border-color: var(--sage);
+      background: var(--sage-pale);
+      box-shadow: 0 4px 16px rgba(123, 168, 152, 0.2);
+      animation: none;
+    }
+    .lang-pill:nth-child(1)  { animation-delay: 0s; }
+    .lang-pill:nth-child(2)  { animation-delay: 0.3s; }
+    .lang-pill:nth-child(3)  { animation-delay: 0.6s; }
+    .lang-pill:nth-child(4)  { animation-delay: 0.9s; }
+    .lang-pill:nth-child(5)  { animation-delay: 1.2s; }
+    .lang-pill:nth-child(6)  { animation-delay: 1.5s; }
+    .lang-pill:nth-child(7)  { animation-delay: 1.8s; }
+    .lang-pill:nth-child(8)  { animation-delay: 2.1s; }
+    .lang-pill:nth-child(9)  { animation-delay: 2.4s; }
+    .lang-pill:nth-child(10) { animation-delay: 2.7s; }
+    .lang-pill:nth-child(11) { animation-delay: 3.0s; }
+    .lang-pill:nth-child(12) { animation-delay: 3.3s; }
+    .lang-pill:nth-child(13) { animation-delay: 3.6s; }
+    .lang-pill:nth-child(14) { animation-delay: 3.9s; }
+    .lang-pill:nth-child(15) { animation-delay: 4.2s; }
+    .lang-pill:nth-child(16) { animation-delay: 4.5s; }
+    @keyframes lang-breathe {
+      0%, 100% { transform: translateY(0); box-shadow: 0 2px 12px rgba(123, 168, 152, 0.08); }
+      50% { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(123, 168, 152, 0.18); }
+    }
+    .lang-pill .flag { font-size: 1.25rem; }
+    .lang-pill .native { color: var(--ink-light); font-size: 0.8rem; font-weight: 400; margin-left: 2px; }
+
+    /* RTL support for Farsi page translation */
+    body.rtl-mode { direction: rtl; }
+    body.rtl-mode .footer-top { flex-direction: row-reverse; }
+    body.rtl-mode .footer-links { flex-direction: row-reverse; }
+    body.rtl-mode .nav-links { flex-direction: row-reverse; }
+    body.rtl-mode .ex-pill { flex-direction: row-reverse; }
+    body.rtl-mode .offline-icon { flex-direction: row-reverse; }
+    body.rtl-mode .legend-item { flex-direction: row-reverse; }
+    body.rtl-mode .step { padding: 32px 0 32px 40px; }
+
+    /* Translation banner */
+    .translation-banner {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 200;
+      gap: 16px;
+      align-items: center;
+      box-shadow: 0 8px 32px rgba(43,58,74,0.3);
+      white-space: nowrap;
+    }
+    .translation-banner.visible { display: flex; }
+    .translation-banner button {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: var(--white);
+      padding: 4px 14px;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .translation-banner button:hover { background: rgba(255,255,255,0.25); }
+
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background 0.25s, transform 0.15s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--sage); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1.5px solid rgba(43, 58, 74, 0.2);
+      transition: border-color 0.2s, transform 0.15s;
+      display: inline-flex; align-items: center; gap: 8px;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--sage); transform: translateY(-1px); }
+
+    /* WAVE */
+    .wave { width: 100%; overflow: hidden; line-height: 0; }
+    .wave svg { display: block; width: 100%; }
+
+    /* ABOUT BAND */
+    .about-band {
+      background: var(--ink);
+      color: var(--white);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .about-band p {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.92);
+    }
+    .about-band strong { color: var(--sage-light); font-style: normal; font-weight: 500; }
+
+    /* SECTIONS */
+    .section { padding: 100px 40px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--ink);
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+    .section-title em { font-style: italic; color: var(--sage); }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .soon-badge { display:inline-block; margin-left:10px; padding:2px 10px; border-radius:999px; font-size:0.7rem; font-weight:600; letter-spacing:0.04em; background: var(--sage-pale); color: var(--ink); border:1px solid var(--sage-light); vertical-align:middle; }
+    .soon-note { color: var(--ink-light); margin: 8px 0 24px; }
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      border: 1px solid rgba(43, 58, 74, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(43, 58, 74, 0.08); }
+    .feature-icon {
+      width: 52px; height: 52px;
+      background: var(--sage-pale);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .feature-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .feature-card p { color: var(--ink-light); font-size: 0.925rem; line-height: 1.7; }
+
+    /* EXERCISES */
+    .exercises-section { background: var(--sage-pale); padding: 100px 40px; }
+    .exercises-inner { max-width: 1100px; margin: 0 auto; }
+    .exercises-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .ex-pill {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      border: 1px solid rgba(43, 58, 74, 0.06);
+    }
+    .ex-pill-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-language { background: var(--sage); }
+    .dot-cognition { background: var(--gold); }
+    .dot-functional { background: var(--rose); }
+
+    .ex-legend { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 500; color: var(--ink-light); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+    /* LANGUAGES */
+    .languages-section { padding: 100px 40px; }
+    .languages-inner { max-width: 1100px; margin: 0 auto; }
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .lang-card {
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+    }
+    .lang-card.english    { background: linear-gradient(135deg, #EBF4F1 0%, #D4EDE7 100%); }
+    .lang-card.spanish    { background: linear-gradient(135deg, #FEF3EC 0%, #FAE0D0 100%); }
+    .lang-card.hindi      { background: linear-gradient(135deg, #FDF8EC 0%, #F5EDCF 100%); }
+    .lang-card.gujarati   { background: linear-gradient(135deg, #EFF1FC 0%, #DCE1F8 100%); }
+    .lang-card.chinese    { background: linear-gradient(135deg, #FFF0F0 0%, #FFE0E0 100%); }
+    .lang-card.farsi      { background: linear-gradient(135deg, #F0F4FF 0%, #E0E8FF 100%); }
+    .lang-card.korean     { background: linear-gradient(135deg, #F0F8FF 0%, #D6EEFF 100%); }
+    .lang-card.vietnamese { background: linear-gradient(135deg, #F0FFF4 0%, #D4F5E0 100%); }
+    .lang-card.arabic     { background: linear-gradient(135deg, #FFFBF0 0%, #FAEFD0 100%); }
+    .lang-card.portuguese { background: linear-gradient(135deg, #F5F0FF 0%, #E8DCFF 100%); }
+    .lang-card.tagalog    { background: linear-gradient(135deg, #FFF0F8 0%, #FFD6ED 100%); }
+    .lang-card.punjabi    { background: linear-gradient(135deg, #FFFFF0 0%, #F5F5CC 100%); }
+    .lang-card.armenian   { background: linear-gradient(135deg, #FFF4F0 0%, #FFE0D6 100%); }
+    .lang-card.japanese   { background: linear-gradient(135deg, #FFF0F5 0%, #FFD6E8 100%); }
+    .lang-card.french     { background: linear-gradient(135deg, #F0F0FF 0%, #D6D6FF 100%); }
+    .lang-card.amharic    { background: linear-gradient(135deg, #F0FFF8 0%, #D0F5E8 100%); }
+
+    .lang-card-flag { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .lang-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .lang-card .lang-stats { font-size: 0.85rem; color: var(--ink-light); line-height: 1.8; }
+    .lang-card .lang-stats strong { color: var(--ink); }
+    .lang-badge {
+      display: inline-block;
+      background: rgba(123, 168, 152, 0.2);
+      color: #4A7A6B;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-top: 16px;
+    }
+    .lang-badge.coming-soon {
+      background: rgba(160, 140, 100, 0.15);
+      color: #8B7340;
+    }
+    .lang-pill.coming-soon-pill {
+      opacity: 0.65;
+      cursor: default;
+      pointer-events: none;
+      position: relative;
+    }
+    .lang-pill.coming-soon-pill::after {
+      content: 'Soon';
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8B7340;
+      background: rgba(160, 140, 100, 0.18);
+      padding: 1px 5px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    .btn-android {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: transparent;
+      color: var(--ink-light);
+      border: 1.5px solid var(--border);
+      text-decoration: none;
+      cursor: default;
+      pointer-events: none;
+      transition: none;
+    }
+    .btn-android svg { opacity: 0.5; }
+
+    /* WHO */
+    .who-section { background: var(--ink); padding: 100px 40px; color: var(--white); }
+    .who-inner { max-width: 1100px; margin: 0 auto; }
+    .who-section .section-label { color: var(--sage-light); }
+    .who-section .section-title { color: var(--white); max-width: 700px; }
+    .who-section .section-title em { color: var(--sage-light); }
+    .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .who-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+    }
+    .who-card-num {
+      font-family: 'Fraunces', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .who-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .who-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    /* HOW */
+    .how-section { padding: 100px 40px; }
+    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; margin-top: 48px; }
+    .step { padding: 32px 40px 32px 0; }
+    .step-num {
+      font-family: 'Fraunces', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--sage-pale);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .step h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+    .step p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.7; }
+
+    /* OFFLINE */
+    .offline-band { background: var(--sage); padding: 60px 40px; text-align: center; }
+    .offline-band h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--white);
+      max-width: 640px;
+      margin: 0 auto 12px;
+      line-height: 1.4;
+    }
+    .offline-band p { color: rgba(255,255,255,0.8); font-size: 1rem; max-width: 480px; margin: 0 auto; }
+    .offline-icons { display: flex; gap: 24px; justify-content: center; margin-top: 32px; }
+    .offline-icon {
+      background: rgba(255,255,255,0.15);
+      border-radius: var(--radius-md);
+      padding: 16px 24px;
+      display: flex; align-items: center; gap: 10px;
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* CTA */
+    .cta-section { padding: 120px 40px; text-align: center; }
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.2;
+    }
+    .cta-section h2 em { font-style: italic; color: var(--sage); }
+    .cta-section p { color: var(--ink-light); max-width: 440px; margin: 0 auto 40px; font-size: 1rem; line-height: 1.7; }
+    .testflight-note { margin-top: 20px; font-size: 0.8rem; color: var(--ink-light); }
+
+    /* FOOTER */
+    footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 48px 40px; text-align: center; font-size: 0.85rem; line-height: 1.8; }
+    footer strong { color: rgba(255,255,255,0.85); }
+    footer a { color: var(--sage-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; text-align: left; }
+    .footer-brand { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 500; color: var(--white); }
+    .footer-brand span { color: var(--sage); }
+    .footer-tagline { color: rgba(255,255,255,0.4); font-size: 0.8rem; margin-top: 4px; }
+    .footer-links { display: flex; gap: 32px; flex-wrap: wrap; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .section, .exercises-section, .languages-section, .how-section, .who-section, .cta-section { padding: 72px 20px; }
+      .about-band, .offline-band { padding: 60px 20px; }
+      .footer-top { flex-direction: column; }
+      .offline-icons { flex-direction: column; align-items: center; }
+      .steps { grid-template-columns: 1fr; }
+      .step { padding: 24px 0; border-bottom: 1px solid rgba(43,58,74,0.06); }
+      .translation-banner { width: 90%; white-space: normal; text-align: center; flex-direction: column; gap: 10px; bottom: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lang-pill { animation: none; }
+      .hero-eyebrow-dot { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TRANSLATION BANNER -->
+<div class="translation-banner" id="translationBanner">
+  <span id="bannerText">Viewing in English</span>
+  <button onclick="resetLanguage()" id="bannerBtn">Back to English</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Clarity<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#features" data-i18n="nav_features">Features</a></li>
+    <li><a href="#exercises" data-i18n="nav_exercises">Exercises</a></li>
+    <li><a href="#languages" data-i18n="nav_languages">Languages</a></li>
+    <li><a href="#who" data-i18n="nav_who">Who It's For</a></li>
+    <li><a href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" class="nav-cta" data-i18n="nav_cta">Download on App Store</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-ring"></div>
+  <div class="hero-bg-ring"></div>
+  <div class="hero-bg-ring"></div>
+
+  <div class="hero-eyebrow">
+    <span class="hero-eyebrow-dot"></span>
+    <span data-i18n="eyebrow">Available on the App Store — Free</span>
+  </div>
+
+  <h1 class="display" data-i18n="hero_h1">Language therapy,<br/><em>quietly powerful</em></h1>
+
+  <p class="hero-sub" data-i18n="hero_sub">A gentle iOS companion for people living with aphasia and frontotemporal dementia, and the families and clinicians who support them.</p>
+
+  <div class="language-constellation">
+    <div class="lang-pill" onclick="setLanguage('en')" id="pill-en"><span class="flag">🇺🇸</span> English</div>
+    <div class="lang-pill" onclick="setLanguage('es')" id="pill-es"><span class="flag">🇲🇽</span> Español <span class="native">· español</span></div>
+    <div class="lang-pill" onclick="setLanguage('hi')" id="pill-hi"><span class="flag">🇮🇳</span> Hindi <span class="native">· हिंदी</span></div>
+    <div class="lang-pill" onclick="setLanguage('gu')" id="pill-gu"><span class="flag">🇮🇳</span> Gujarati <span class="native">· ગુજરાતી</span></div>
+    <div class="lang-pill" onclick="setLanguage('zh')" id="pill-zh"><span class="flag">🇨🇳</span> Chinese <span class="native">· 普通话</span></div>
+    <div class="lang-pill" onclick="setLanguage('fa')" id="pill-fa"><span class="flag">🇮🇷</span> Farsi <span class="native">· فارسی</span></div>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇰🇷</span> Korean <span class="native">· 한국어</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇻🇳</span> Vietnamese <span class="native">· Tiếng Việt</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇸🇦</span> Arabic <span class="native">· العربية</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇧🇷</span> Portuguese <span class="native">· Português</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇵🇭</span> Tagalog <span class="native">· Tagalog</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇮🇳</span> Punjabi <span class="native">· ਪੰਜਾਬੀ</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇦🇲</span> Armenian <span class="native">· Հայերեն</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇯🇵</span> Japanese <span class="native">· 日本語</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇫🇷</span> French <span class="native">· français</span></a>
+    <a class="lang-pill" href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" style="text-decoration:none;"><span class="flag">🇪🇹</span> Amharic <span class="native">· አማርኛ</span></a>
+  </div>
+
+  <div class="hero-actions">
+    <a href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" class="btn-primary">
+      <svg width="14" height="17" viewBox="0 0 814 1000" fill="currentColor"><path d="M788 341c-6 5-108 62-108 190 0 149 130 201 134 203-1 3-21 72-69 142-43 62-87 123-155 123s-86-40-164-40c-76 0-104 41-166 41s-105-38-150-94C77 842 34 740 34 644c0-369 293-520 458-520 74 0 136 28 185 75l46 47 65-66c17-17 46-13 57 10 6 10 7 22 5 34-8 39-62 118-62 118zM492 0c-46 0-88 29-103 72-3 8-5 17-5 25 0 6 1 12 3 18 40-14 68-52 68-96C455 8 473 0 492 0z"/></svg>
+      <span data-i18n="btn_testflight">Download on the App Store</span>
+    </a>
+    <span class="btn-android">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-11.046 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM2.89 8.333l-1.717-3.24a.3.3 0 0 1 .534-.274l1.739 3.28A11.13 11.13 0 0 1 12 6.5c1.99 0 3.861.523 5.554 1.599l1.739-3.28a.3.3 0 0 1 .534.274L18.11 8.333A10.39 10.39 0 0 1 22.5 16.5h-21a10.39 10.39 0 0 1 4.39-8.167z"/></svg>
+      Android — In Testing
+    </span>
+    <a href="#exercises" class="btn-secondary">
+      <span data-i18n="btn_how">See how it works</span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT BAND -->
+<div class="wave" style="background: var(--cream);">
+  <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 48C240 16 480 0 720 0C960 0 1200 16 1440 48H0Z" fill="#2B3A4A"/>
+  </svg>
+</div>
+<section class="about-band">
+  <p data-i18n="about_quote">"Aphasia affects over <strong>one million Americans</strong>. Many are immigrants, far from their first language. Clarity meets each person <strong>where they are</strong>, in <strong>16 languages</strong>, in the words their mind still knows."</p>
+</section>
+<div class="wave" style="background: var(--cream);">
+  <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0C240 32 480 48 720 48C960 48 1200 32 1440 0H0Z" fill="#2B3A4A"/>
+  </svg>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="features_label">What makes Clarity different</div>
+    <h2 class="section-title display" data-i18n="features_title">Built around <em>real lives</em>, not textbooks</h2>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📵</div>
+        <h3 data-i18n="f1_title">Fully offline, truly private</h3>
+        <p data-i18n="f1_body">Every word, every exercise, every session runs entirely on-device. Zero network calls, zero third-party code — your data never leaves your phone. Reliable in hospitals, care homes, and anywhere connectivity is limited.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3 data-i18n="f2_title">16 languages, one app</h3>
+        <p data-i18n="f2_body">English, Spanish, Hindi, Gujarati, Chinese, Farsi, Korean, Vietnamese, Arabic, Portuguese, Tagalog, Punjabi, Armenian, Japanese, French, and Amharic — each adapted for its community, with native speaker review in progress. Switch languages in one tap from the Profile tab. Full right-to-left support for Farsi and Arabic.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 data-i18n="f3_title">30+ exercises per language</h3>
+        <p data-i18n="f3_body">Covering language skills, cognition, and functional daily living. Sessions are short, varied, and gently adaptive so fatigue never becomes a wall.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎚️</div>
+        <h3 data-i18n="f7_title">Adapts as you improve</h3>
+        <p data-i18n="f7_body">Clarity quietly adjusts difficulty across all 16 languages — no settings to fuss with, no numbers to track. A short Baseline Assessment on first run sets the right starting point automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3 data-i18n="f8_title">A new artwork every day</h3>
+        <p data-i18n="f8_body">Every day Clarity displays a different public domain masterpiece — 75 works from the Met Museum and NASA, rotating automatically on both iPhone and Apple TV. A small, beautiful detail that makes opening the app feel like a daily event.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3 data-i18n="f9_title">Built for caregivers too</h3>
+        <p data-i18n="f9_body">A PIN-protected Caregiver Mode gives family members and clinicians access to manual difficulty controls, therapy notes, goal setting, notification preferences, and a full exportable PDF progress report — without exposing any patient-facing settings.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 data-i18n="f4_title">5 questions per session</h3>
+        <p data-i18n="f4_body">Brief by design. Five thoughtfully chosen questions per session respect the energy levels of recovering patients, while building a consistent daily habit without overwhelm.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3 data-i18n="f5_title">Progress you can see</h3>
+        <p data-i18n="f5_body">Streaks, badges, and a calendar view make practice feel rewarding. Seven achievement milestones mark real progress, from first session to 30-day streak.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎲</div>
+        <h3 data-i18n="f6_title">Surprise Me</h3>
+        <p data-i18n="f6_body">One tap on the Surprise Me button launches a random activity. Perfect for caregivers looking for a quick, low-friction session with a loved one.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Today’s practice on your Home Screen</h3>
+        <p>A Home Screen widget shows your streak, today’s recommended exercise, and your weekly goal — one tap to begin.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📺</div>
+        <h3>Play together on Apple TV</h3>
+        <p>Two people can take turns on one Apple TV with a single remote, in all 16 languages.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧭</div>
+        <h3>Recovery or Maintenance framing</h3>
+        <p>Caregivers choose whether progress is read as recovery (stroke, TBI) or maintenance (progressive conditions), and can mark that day-to-day ups and downs are expected. Insights follow that choice.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Caregiver insights</h3>
+        <p>Plain-language trends by exercise type, with a clear note that Clarity is a practice tool, not a medical device.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎙️</div>
+        <h3>Speak your answers</h3>
+        <p>On iPhone, open-ended questions can be answered by voice using on-device speech recognition, in the languages your iPhone supports.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔠</div>
+        <h3>Large text and VoiceOver</h3>
+        <p>Text follows your Dynamic Type setting, and key screens are labelled for VoiceOver.</p>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:56px;">On the way</div>
+    <p class="soon-note">These features are built but are not in a released version yet.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h3>Today card<span class="soon-badge">Coming soon</span></h3>
+        <p>Day, date and time of day on the Home screen, in your language, to help with orientation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔢</div>
+        <h3>Number skills<span class="soon-badge">Coming soon</span></h3>
+        <p>Hear a time, price, phone number or date, then pick it or type it. Practice your own phone number, kept only on the device.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Remember It<span class="soon-badge">Coming soon</span></h3>
+        <p>Caregiver-set personal questions practised with gradually longer pauses, with a quick activity while you wait.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Visual scanning<span class="soon-badge">Coming soon</span></h3>
+        <p>Find-the-target grids with an in-order practice mode and a left-edge marker.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Hints and fewer choices<span class="soon-badge">Coming soon</span></h3>
+        <p>Step-by-step word-finding hints and a caregiver setting for 2, 3 or 4 answer choices.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📖</div>
+        <h3>Reading passages and conversation cards<span class="soon-badge">Coming soon</span></h3>
+        <p>Short passages with read-aloud, look-back and hints, plus topic cards for two people to talk together (English first).</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏰</div>
+        <h3>Second daily reminder<span class="soon-badge">Coming soon</span></h3>
+        <p>Add a second reminder time, for example after lunch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXERCISES -->
+<section class="exercises-section" id="exercises">
+  <div class="exercises-inner">
+    <div class="section-label" data-i18n="ex_label">Exercise library</div>
+    <h2 class="section-title display" data-i18n="ex_title">Three sections, <em>30+ exercises</em></h2>
+
+    <div class="ex-legend">
+      <div class="legend-item"><div class="legend-dot" style="background: var(--sage);"></div> <span data-i18n="legend_lang">Language</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background: var(--gold);"></div> <span data-i18n="legend_cog">Cognition</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background: var(--rose);"></div> <span data-i18n="legend_func">Functional Skills</span></div>
+    </div>
+
+    <div class="exercises-grid">
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_1">Category Crossout</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_2">Synonyms &amp; Antonyms</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_3">Homonyms</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_4">Compound Words</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_5">Rhyming Words</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_6">Convergent Naming</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_7">Divergent Naming</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_8">Multiple Meaning Words</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_9">Collective Nouns</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_10">Sentence Completion</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-language"></div><span data-i18n="ex_11">Morphology</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_12">Wh-Questions</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_13">Figurative Language</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_14">Analogies</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_15">Yes / No Questions</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_16">General Knowledge</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_17">History &amp; Geography</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_18">Popular Media</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_19">Memory Lists</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-cognition"></div><span data-i18n="ex_20">Fact or Opinion</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_21">Daily Living Skills</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_22">Safety Scenarios</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_23">Cooking Steps</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_24">Temporal Awareness</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_25">Spatial Awareness</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_26">Functional Math</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_27">Sequencing Tasks</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_28">Logic Puzzles</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_29">Calendar Planning</span></div>
+      <div class="ex-pill"><div class="ex-pill-dot dot-functional"></div><span data-i18n="ex_30">Open-Ended Recall</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section class="languages-section" id="languages">
+  <div class="languages-inner">
+    <div class="section-label" data-i18n="lang_label">Language support</div>
+    <h2 class="section-title display" data-i18n="lang_title">Therapy in the language that <em>feels like home</em></h2>
+
+    <div class="languages-grid">
+      <div class="lang-card english">
+        <span class="lang-card-flag">🇺🇸</span>
+        <h3>English</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · 3 difficulty levels<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card spanish">
+        <span class="lang-card-flag">🇲🇽</span>
+        <h3>Español</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · culturally adapted<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card hindi">
+        <span class="lang-card-flag">🇮🇳</span>
+        <h3>Hindi · हिंदी</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card gujarati">
+        <span class="lang-card-flag">🇮🇳</span>
+        <h3>Gujarati · ગુજરાતી</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card chinese">
+        <span class="lang-card-flag">🇨🇳</span>
+        <h3>Chinese · 普通话</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · Simplified Chinese<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card farsi">
+        <span class="lang-card-flag">🇮🇷</span>
+        <h3>Farsi · فارسی</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · full RTL support<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card korean">
+        <span class="lang-card-flag">🇰🇷</span>
+        <h3>Korean · 한국어</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card vietnamese">
+        <span class="lang-card-flag">🇻🇳</span>
+        <h3>Vietnamese · Tiếng Việt</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card arabic">
+        <span class="lang-card-flag">🇸🇦</span>
+        <h3>Arabic · العربية</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · full RTL support<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card portuguese">
+        <span class="lang-card-flag">🇧🇷</span>
+        <h3>Portuguese · Português</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises · Brazilian<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card tagalog">
+        <span class="lang-card-flag">🇵🇭</span>
+        <h3>Tagalog</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card punjabi">
+        <span class="lang-card-flag">🇮🇳</span>
+        <h3>Punjabi · ਪੰਜਾਬੀ</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card armenian">
+        <span class="lang-card-flag">🇦🇲</span>
+        <h3>Armenian · Հայերեն</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card japanese">
+        <span class="lang-card-flag">🇯🇵</span>
+        <h3>Japanese · 日本語</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card french">
+        <span class="lang-card-flag">🇫🇷</span>
+        <h3>French · français</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+      <div class="lang-card amharic">
+        <span class="lang-card-flag">🇪🇹</span>
+        <h3>Amharic · አማርኛ</h3>
+        <p class="lang-stats">
+          <strong>540+ items</strong><br/>
+          30+ exercises<br/>
+          Native speaker review in progress
+        </p>
+        <span class="lang-badge" data-i18n="lang_badge">On the App Store</span>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top: 40px; color: var(--ink-light); font-size: 0.9rem;" data-i18n="lang_footer">Available in 16 languages, each adapted for its community.</p>
+  </div>
+</section>
+
+<!-- OFFLINE CALLOUT -->
+<section class="offline-band">
+  <h2 data-i18n="offline_h2">"No Wi-Fi? No problem."</h2>
+  <p data-i18n="offline_p">Every session, every exercise, every answer runs entirely on-device. Clarity never sends your data anywhere.</p>
+  <div class="offline-icons">
+    <div class="offline-icon"><span>📵</span> <span data-i18n="offline_1">No internet required</span></div>
+    <div class="offline-icon"><span>🔒</span> <span data-i18n="offline_2">No data collected</span></div>
+    <div class="offline-icon"><span>🏥</span> <span data-i18n="offline_3">Works in hospitals</span></div>
+    <div class="offline-icon"><span>🌄</span> <span data-i18n="offline_4">Works anywhere</span></div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who-section" id="who">
+  <div class="who-inner">
+    <div class="section-label" data-i18n="who_label">Who uses Clarity</div>
+    <h2 class="section-title display" data-i18n="who_title">For patients, families, <em>and clinicians</em></h2>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-card-num">01</div>
+        <h3 data-i18n="who1_title">People living with aphasia</h3>
+        <p data-i18n="who1_body">Daily practice in short, manageable sessions, proven to help maintain and rebuild language and cognitive function after stroke or traumatic brain injury.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">02</div>
+        <h3 data-i18n="who2_title">People with early FTD</h3>
+        <p data-i18n="who2_body">Gentle cognitive exercises designed to support patients in the early stages of frontotemporal dementia, with content that is engaging without being frustrating.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">03</div>
+        <h3 data-i18n="who3_title">Family caregivers</h3>
+        <p data-i18n="who3_body">The Surprise Me button and quick 5-question sessions make it easy for a family member to sit down with a loved one and work through exercises together, without any preparation.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-card-num">04</div>
+        <h3 data-i18n="who4_title">Speech-language clinicians</h3>
+        <p data-i18n="who4_body">A free, offline supplemental tool for use between therapy sessions. Per-exercise difficulty controls and anonymous research data export make it easy to fit into a clinical workflow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label" data-i18n="how_label">How it works</div>
+    <h2 class="section-title display" data-i18n="how_title">Four steps to <em>start practicing</em></h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 data-i18n="step1_title">Set up your profile</h3>
+        <p data-i18n="step1_body">Enter your name, choose your diagnosis, pick your preferred language, and select an avatar. A short Baseline Assessment then sets your starting difficulty automatically — or skip it and dive straight in.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 data-i18n="step2_title">Pick an activity</h3>
+        <p data-i18n="step2_body">Browse by section — Language, Cognition, or Functional Skills — or hit Surprise Me to let the app choose for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 data-i18n="step3_title">Complete 5 questions</h3>
+        <p data-i18n="step3_body">Answer at your own pace. Immediate, gentle feedback after each answer. See your score at the end and celebrate with confetti on a perfect round.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3 data-i18n="step4_title">Build your streak</h3>
+        <p data-i18n="step4_body">Come back tomorrow to extend your streak. Earn badges for milestones and watch your progress calendar fill in over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="download">
+  <h2 class="display" data-i18n="cta_h2">Ready to <em>begin?</em></h2>
+  <p data-i18n="cta_p">Clarity is free and available now on the App Store.</p>
+  <div class="hero-actions" style="justify-content: center;">
+    <a href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" class="btn-primary">
+      <svg width="14" height="17" viewBox="0 0 814 1000" fill="currentColor"><path d="M788 341c-6 5-108 62-108 190 0 149 130 201 134 203-1 3-21 72-69 142-43 62-87 123-155 123s-86-40-164-40c-76 0-104 41-166 41s-105-38-150-94C77 842 34 740 34 644c0-369 293-520 458-520 74 0 136 28 185 75l46 47 65-66c17-17 46-13 57 10 6 10 7 22 5 34-8 39-62 118-62 118zM492 0c-46 0-88 29-103 72-3 8-5 17-5 25 0 6 1 12 3 18 40-14 68-52 68-96C455 8 473 0 492 0z"/></svg>
+      <span data-i18n="cta_btn">Download on the App Store</span>
+    </a>
+    <span class="btn-android">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-11.046 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM2.89 8.333l-1.717-3.24a.3.3 0 0 1 .534-.274l1.739 3.28A11.13 11.13 0 0 1 12 6.5c1.99 0 3.861.523 5.554 1.599l1.739-3.28a.3.3 0 0 1 .534.274L18.11 8.333A10.39 10.39 0 0 1 22.5 16.5h-21a10.39 10.39 0 0 1 4.39-8.167z"/></svg>
+      Android — In Testing
+    </span>
+  </div>
+  <p class="testflight-note" data-i18n="cta_note">iPhone (iOS 16+) · Apple TV (tvOS 17.6+) · Free · No account required</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Clarity<span>.</span></div>
+      <div class="footer-tagline" data-i18n="footer_tagline">Language &amp; Memory Therapy Companion</div>
+    </div>
+    <div class="footer-links">
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#exercises" data-i18n="nav_exercises">Exercises</a>
+      <a href="#languages" data-i18n="nav_languages">Languages</a>
+      <a href="#who" data-i18n="nav_who">Who It's For</a>
+      <a href="#download">App Store</a>
+    </div>
+  </div>
+  <hr class="footer-divider" />
+  <p data-i18n="footer_credit">
+    Built with care for the aphasia and FTD community.<br/>
+    Content adapted from <em>A Workbook for Aphasia</em> by Cat R. Kenney (Cleveland State University, 2014), used freely with credit.<br/><br/>
+    <strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; Available on the App Store
+  </p>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    lang: 'en', dir: 'ltr',
+    banner: 'Viewing in English',
+    banner_btn: 'Back to English',
+    nav_features: 'Features', nav_exercises: 'Exercises', nav_languages: 'Languages',
+    nav_who: "Who It's For", nav_cta: 'Download on App Store',
+    eyebrow: 'Available on iPhone &amp; Apple TV — Free',
+    hero_h1: 'Language therapy,<br/><em>quietly powerful</em>',
+    hero_sub: 'A gentle therapy companion for people living with aphasia and frontotemporal dementia, and the families and clinicians who support them. Available on iPhone and Apple TV.',
+    btn_testflight: 'Download on the App Store',
+    btn_how: 'See how it works',
+    about_quote: '"Aphasia affects over <strong>one million Americans</strong>. Many are immigrants, far from their first language. Clarity meets each person <strong>where they are</strong>, in <strong>16 languages</strong>, in the words their mind still knows."',
+    features_label: 'What makes Clarity different',
+    features_title: 'Built around <em>real lives</em>, not textbooks',
+    f1_title: 'Fully offline, truly private', f1_body: 'Every word, every exercise, every session runs entirely on-device. Zero network calls, zero third-party code — your data never leaves your phone. Reliable in hospitals, care homes, and anywhere connectivity is limited.',
+    f2_title: '16 languages, one app', f2_body: 'English, Spanish, Hindi, Gujarati, Chinese, Farsi, Korean, Vietnamese, Arabic, Portuguese, Tagalog, Punjabi, Armenian, Japanese, French, and Amharic — each adapted for its community, with native speaker review in progress. Switch in one tap. Full right-to-left support for Farsi and Arabic.',
+    f3_title: '30+ exercises per language', f3_body: 'Covering language skills, cognition, and functional daily living. Sessions are short, varied, and gently adaptive.',
+    f7_title: 'Adapts as you improve', f7_body: 'Clarity quietly adjusts difficulty across all 16 languages — no settings to fuss with, no numbers to track. A short Baseline Assessment on first run sets the right starting point automatically.',
+    f8_title: 'A new artwork every day', f8_body: 'Every day Clarity displays a different public domain masterpiece — 75 works from the Met Museum and NASA, rotating automatically on iPhone and Apple TV. A small, beautiful detail that makes opening the app feel like a daily event.',
+    f9_title: 'Built for caregivers too', f9_body: 'A PIN-protected Caregiver Mode gives family members and clinicians access to manual difficulty controls, therapy notes, goal setting, notification preferences, and a full exportable PDF progress report.',
+    f4_title: '5 questions per session', f4_body: 'Brief by design. Five thoughtfully chosen questions per session respect the energy levels of recovering patients while building a consistent daily habit.',
+    f5_title: 'Progress you can see', f5_body: 'Streaks, badges, and a calendar view make practice feel rewarding. Seven achievement milestones mark real progress, from first session to 30-day streak.',
+    f6_title: 'Surprise Me', f6_body: 'One tap on the Surprise Me button launches a random activity. Perfect for caregivers looking for a quick, low-friction session with a loved one.',
+    ex_label: 'Exercise library', ex_title: 'Three sections, <em>30+ exercises</em>',
+    legend_lang: 'Language', legend_cog: 'Cognition', legend_func: 'Functional Skills',
+    ex_1:'Category Crossout', ex_2:'Synonyms &amp; Antonyms', ex_3:'Homonyms', ex_4:'Compound Words', ex_5:'Rhyming Words', ex_6:'Convergent Naming', ex_7:'Divergent Naming', ex_8:'Multiple Meaning Words', ex_9:'Collective Nouns', ex_10:'Sentence Completion', ex_11:'Morphology',
+    ex_12:'Wh-Questions', ex_13:'Figurative Language', ex_14:'Analogies', ex_15:'Yes / No Questions', ex_16:'General Knowledge', ex_17:'History &amp; Geography', ex_18:'Popular Media', ex_19:'Memory Lists', ex_20:'Fact or Opinion',
+    ex_21:'Daily Living Skills', ex_22:'Safety Scenarios', ex_23:'Cooking Steps', ex_24:'Temporal Awareness', ex_25:'Spatial Awareness', ex_26:'Functional Math', ex_27:'Sequencing Tasks', ex_28:'Logic Puzzles', ex_29:'Calendar Planning', ex_30:'Open-Ended Recall',
+    lang_label: 'Language support', lang_title: 'Therapy in the language that <em>feels like home</em>',
+    lang_footer: 'Available in 16 languages, each adapted for its community.',
+    lang_badge: 'On the App Store',
+    offline_h2: '"No Wi-Fi? No problem."', offline_p: 'Every session, every exercise, every answer runs entirely on-device. Clarity never sends your data anywhere.',
+    offline_1: 'No internet required', offline_2: 'No data collected', offline_3: 'Works in hospitals', offline_4: 'Works anywhere',
+    who_label: 'Who uses Clarity', who_title: 'For patients, families, <em>and clinicians</em>',
+    who1_title: 'People living with aphasia', who1_body: 'Daily practice in short, manageable sessions, proven to help maintain and rebuild language and cognitive function after stroke or traumatic brain injury.',
+    who2_title: 'People with early FTD', who2_body: 'Gentle cognitive exercises designed to support patients in the early stages of frontotemporal dementia, with content that is engaging without being frustrating.',
+    who3_title: 'Family caregivers', who3_body: 'The Surprise Me button and quick 5-question sessions make it easy for a family member to sit down with a loved one and work through exercises together, without any preparation.',
+    who4_title: 'Speech-language clinicians', who4_body: 'A free, offline supplemental tool for use between therapy sessions. Per-exercise difficulty controls and anonymous research data export make it easy to fit into a clinical workflow.',
+    how_label: 'How it works', how_title: 'Four steps to <em>start practicing</em>',
+    step1_title: 'Set up your profile', step1_body: 'Enter your name, choose your diagnosis, pick your preferred language, and select an avatar. A short Baseline Assessment then sets your starting difficulty automatically — or skip it and dive straight in.',
+    step2_title: 'Pick an activity', step2_body: 'Browse by section — Language, Cognition, or Functional Skills — or hit Surprise Me to let the app choose for you.',
+    step3_title: 'Complete 5 questions', step3_body: 'Answer at your own pace. Immediate, gentle feedback after each answer. See your score at the end and celebrate with confetti on a perfect round.',
+    step4_title: 'Build your streak', step4_body: 'Come back tomorrow to extend your streak. Earn badges for milestones and watch your progress calendar fill in over time.',
+    cta_h2: 'Ready to <em>begin?</em>', cta_p: 'Clarity is free and available now on the App Store.',
+    cta_btn: 'Download on the App Store', cta_note: 'Requires an iPhone with iOS 16 or later · Free to download · No account required',
+    footer_tagline: 'Language &amp; Memory Therapy Companion',
+    footer_credit: 'Built with care for the aphasia and FTD community.<br/>Content adapted from <em>A Workbook for Aphasia</em> by Cat R. Kenney (Cleveland State University, 2014), used freely with credit.<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; Available on the App Store'
+  },
+
+  es: {
+    lang: 'es', dir: 'ltr',
+    banner: 'Viendo en Español',
+    banner_btn: 'Volver al inglés',
+    nav_features: 'Funciones', nav_exercises: 'Ejercicios', nav_languages: 'Idiomas',
+    nav_who: 'Para quién', nav_cta: 'Descargar en el App Store',
+    eyebrow: 'Disponible en iPhone y Apple TV — Gratis',
+    hero_h1: 'Terapia del lenguaje,<br/><em>suavemente poderosa</em>',
+    hero_sub: 'Una app de apoyo para personas con afasia y demencia frontotemporal, y las familias y clínicos que las acompañan. Disponible en iPhone y Apple TV.',
+    btn_testflight: 'Descargar en el App Store',
+    btn_how: 'Ver cómo funciona',
+    about_quote: '"La afasia afecta a más de <strong>un millón de estadounidenses</strong>. Muchos son inmigrantes, lejos de su primer idioma. Clarity acompaña a cada persona <strong>donde está</strong>, en <strong>16 idiomas</strong>, en las palabras que su mente todavía recuerda."',
+    features_label: 'Qué hace diferente a Clarity',
+    features_title: 'Construido para <em>vidas reales</em>, no para libros de texto',
+    f1_title: 'Completamente sin conexión, totalmente privada', f1_body: 'Cada palabra, cada ejercicio, cada sesión funciona completamente en el dispositivo. Sin llamadas de red, sin código de terceros — tus datos nunca salen de tu teléfono.',
+    f2_title: '16 idiomas, una sola app', f2_body: 'Inglés, español, hindi, gujarati, chino, farsi, coreano, vietnamita, árabe, portugués, tagalo, punyabí, armenio, japonés, francés y amhárico — cada uno adaptado para su comunidad, con revisión de hablantes nativos en progreso. Cambia de idioma con un solo toque.',
+    f3_title: 'Más de 30 ejercicios por idioma', f3_body: 'Que cubren habilidades del lenguaje, cognición y vida diaria funcional. Sesiones cortas, variadas y adaptadas.',
+    f7_title: 'Se adapta a tu progreso', f7_body: 'Clarity ajusta silenciosamente la dificultad en los 16 idiomas, sin ajustes que hacer ni números que seguir. Una breve Evaluación Inicial al primer uso establece el punto de partida correcto automáticamente.',
+    f8_title: 'Una obra de arte nueva cada día', f8_body: 'Cada día Clarity muestra una obra maestra de dominio público diferente — 75 obras del Met Museum y la NASA, rotando automáticamente en iPhone y Apple TV.',
+    f9_title: 'También para cuidadores', f9_body: 'El Modo Cuidador con PIN protegido da acceso a controles manuales de dificultad, notas de terapia, metas, preferencias de notificación y un informe de progreso en PDF exportable.',
+    f4_title: '5 preguntas por sesión', f4_body: 'Breve por diseño. Cinco preguntas cuidadosamente seleccionadas que respetan el nivel de energía de los pacientes en recuperación.',
+    f5_title: 'Progreso visible', f5_body: 'Rachas, insignias y una vista de calendario hacen que la práctica se sienta gratificante. Siete logros marcan el camino, desde la primera sesión hasta 30 días seguidos.',
+    f6_title: 'Sorpréndeme', f6_body: 'Un toque en el botón Sorpréndeme inicia una actividad aleatoria. Perfecto para cuidadores que buscan una sesión rápida con su ser querido.',
+    ex_label: 'Biblioteca de ejercicios', ex_title: 'Tres secciones, <em>30+ ejercicios</em>',
+    legend_lang: 'Lenguaje', legend_cog: 'Cognición', legend_func: 'Habilidades funcionales',
+    ex_1:'Categorías', ex_2:'Sinónimos y antónimos', ex_3:'Homónimos', ex_4:'Palabras compuestas', ex_5:'Palabras que riman', ex_6:'Denominación convergente', ex_7:'Denominación divergente', ex_8:'Palabras polisémicas', ex_9:'Sustantivos colectivos', ex_10:'Completar oraciones', ex_11:'Morfología',
+    ex_12:'Preguntas Qué/Quién/Cuándo', ex_13:'Lenguaje figurado', ex_14:'Analogías', ex_15:'Preguntas Sí / No', ex_16:'Conocimiento general', ex_17:'Historia y geografía', ex_18:'Medios populares', ex_19:'Listas de memoria', ex_20:'Hecho u opinión',
+    ex_21:'Habilidades diarias', ex_22:'Seguridad', ex_23:'Pasos para cocinar', ex_24:'Conciencia temporal', ex_25:'Conciencia espacial', ex_26:'Matemáticas funcionales', ex_27:'Secuenciación', ex_28:'Puzzles lógicos', ex_29:'Planificación del calendario', ex_30:'Recuerdo libre',
+    lang_label: 'Idiomas disponibles', lang_title: 'Terapia en el idioma que <em>se siente como hogar</em>',
+    lang_footer: 'Disponible en 16 idiomas, cada uno adaptado para su comunidad.',
+    lang_badge: 'En el App Store',
+    offline_h2: '"¿Sin Wi-Fi? No hay problema."', offline_p: 'Cada sesión, cada ejercicio, cada respuesta funciona completamente en el dispositivo. Clarity nunca comparte tus datos.',
+    offline_1: 'Sin internet', offline_2: 'Sin recopilación de datos', offline_3: 'Funciona en hospitales', offline_4: 'Funciona en cualquier lugar',
+    who_label: 'Quién usa Clarity', who_title: 'Para pacientes, familias <em>y clínicos</em>',
+    who1_title: 'Personas con afasia', who1_body: 'Práctica diaria en sesiones cortas y manejables, comprobada para mantener y reconstruir la función del lenguaje después de un accidente cerebrovascular o traumatismo craneal.',
+    who2_title: 'Personas con DFT temprana', who2_body: 'Ejercicios cognitivos suaves para apoyar a pacientes en etapas tempranas de demencia frontotemporal, con contenido atractivo pero no frustrante.',
+    who3_title: 'Cuidadores familiares', who3_body: 'El botón Sorpréndeme y las sesiones rápidas de 5 preguntas facilitan trabajar con un ser querido sin ninguna preparación previa.',
+    who4_title: 'Clínicos del habla y lenguaje', who4_body: 'Una herramienta gratuita y sin conexión para usar entre sesiones de terapia. Controles de dificultad por ejercicio y exportación anónima de datos de investigación, fácil de integrar en el flujo clínico.',
+    how_label: 'Cómo funciona', how_title: 'Cuatro pasos para <em>comenzar a practicar</em>',
+    step1_title: 'Crea tu perfil', step1_body: 'Escribe tu nombre, elige tu diagnóstico, selecciona tu idioma y elige un avatar. Toma menos de un minuto.',
+    step2_title: 'Elige una actividad', step2_body: 'Navega por sección — Lenguaje, Cognición o Habilidades funcionales — o toca Sorpréndeme para que la app elija por ti.',
+    step3_title: 'Completa 5 preguntas', step3_body: 'Responde a tu ritmo. Retroalimentación inmediata y suave después de cada respuesta. Confeti en una ronda perfecta.',
+    step4_title: 'Construye tu racha', step4_body: 'Vuelve mañana para extender tu racha. Gana insignias por cada logro y observa cómo se llena tu calendario de progreso.',
+    cta_h2: '¿Listo para <em>comenzar?</em>', cta_p: 'Clarity es gratuita y está disponible ahora en el App Store.',
+    cta_btn: 'Unirse a App Store', cta_note: 'Requiere iPhone con iOS 16 o superior · Gratis · Sin cuenta necesaria',
+    footer_tagline: 'Compañero de terapia de lenguaje y memoria',
+    footer_credit: 'Desarrollado con cuidado para la comunidad de afasia y DFT.<br/>Contenido adaptado de <em>A Workbook for Aphasia</em> de Cat R. Kenney (Cleveland State University, 2014).<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; Disponible en el App Store'
+  },
+
+  hi: {
+    lang: 'hi', dir: 'ltr',
+    banner: 'हिंदी में देख रहे हैं',
+    banner_btn: 'अंग्रेज़ी पर वापस जाएं',
+    nav_features: 'विशेषताएं', nav_exercises: 'अभ्यास', nav_languages: 'भाषाएं',
+    nav_who: 'किसके लिए', nav_cta: 'App Store से डाउनलोड करें',
+    eyebrow: 'iPhone और Apple TV पर उपलब्ध — मुफ़्त',
+    hero_h1: 'भाषा चिकित्सा,<br/><em>धीरे-धीरे शक्तिशाली</em>',
+    hero_sub: 'अफ़ेज़िया और फ्रंटोटेम्पोरल डिमेंशिया से पीड़ित लोगों के लिए एक सौम्य iOS साथी, और उनके परिवारों और चिकित्सकों के लिए।',
+    btn_testflight: 'App Store से डाउनलोड करें',
+    btn_how: 'देखें कैसे काम करता है',
+    about_quote: '"अफ़ेज़िया <strong>दस लाख से अधिक अमेरिकियों</strong> को प्रभावित करता है। कई प्रवासी हैं, अपनी पहली भाषा से दूर। Clarity हर व्यक्ति से <strong>वहीं मिलती है जहाँ वे हैं</strong>, <strong>16 भाषाओं</strong> में।"',
+    features_label: 'Clarity को क्या अलग बनाता है',
+    features_title: '<em>वास्तविक जीवन</em> के लिए बनाया गया',
+    f1_title: 'पूरी तरह ऑफलाइन, पूरी तरह निजी', f1_body: 'हर शब्द, हर अभ्यास, हर सत्र पूरी तरह डिवाइस पर चलता है। कोई नेटवर्क कॉल नहीं, कोई थर्ड-पार्टी कोड नहीं — आपका डेटा कभी आपके फोन से बाहर नहीं जाता।',
+    f2_title: '16 भाषाएं, एक ऐप', f2_body: 'अंग्रेज़ी, स्पेनिश, हिंदी, गुजराती, चीनी, फ़ारसी, कोरियाई, वियतनामी, अरबी, पुर्तगाली, तागालोग, पंजाबी, आर्मेनियाई, जापानी, फ्रेंच और अम्हारिक — प्रत्येक अपने समुदाय के लिए अनुकूलित, मूल वक्ता समीक्षा प्रगति में।',
+    f3_title: 'प्रति भाषा 30+ अभ्यास', f3_body: 'भाषा कौशल, संज्ञान और दैनिक जीवन को कवर करने वाले अभ्यासों में। छोटे, विविध और अनुकूलित सत्र।',
+    f7_title: 'आपकी प्रगति के साथ अनुकूलित होता है', f7_body: 'Clarity 16 भाषाओं में चुपचाप कठिनाई समायोजित करता है — कोई सेटिंग नहीं, कोई संख्या नहीं। पहले उपयोग पर एक छोटा बेसलाइन आकलन सही शुरुआती बिंदु स्वचालित रूप से तय करता है।',
+    f8_title: 'हर दिन एक नई कलाकृति', f8_body: 'हर दिन Clarity एक अलग सार्वजनिक डोमेन कृति दिखाता है — Met Museum और NASA की 75 कृतियां, iPhone और Apple TV पर स्वचालित रूप से बदलती हैं।',
+    f9_title: 'देखभाल करने वालों के लिए भी', f9_body: 'PIN-सुरक्षित केयरगिवर मोड परिवार और चिकित्सकों को कठिनाई नियंत्रण, थेरेपी नोट्स, लक्ष्य निर्धारण और PDF प्रगति रिपोर्ट तक पहुंच देता है।',
+    f4_title: 'प्रति सत्र 5 प्रश्न', f4_body: 'संक्षिप्त डिज़ाइन। पाँच ध्यानपूर्वक चुने गए प्रश्न जो ठीक हो रहे रोगियों की ऊर्जा का सम्मान करते हैं।',
+    f5_title: 'दिखाई देने वाली प्रगति', f5_body: 'स्ट्रीक, बैज और कैलेंडर दृश्य अभ्यास को पुरस्कृत महसूस कराते हैं।',
+    f6_title: 'मुझे आश्चर्यचकित करें', f6_body: 'एक टैप और एक यादृच्छिक गतिविधि शुरू हो जाती है। देखभाल करने वालों के लिए बिल्कुल सही।',
+    ex_label: 'अभ्यास पुस्तकालय', ex_title: 'तीन खंड, <em>30+ अभ्यास</em>',
+    legend_lang: 'भाषा', legend_cog: 'संज्ञान', legend_func: 'कार्यात्मक कौशल',
+    ex_1:'श्रेणी पहचान', ex_2:'समानार्थी और विलोम', ex_3:'समध्वनि शब्द', ex_4:'समास', ex_5:'तुकबंदी', ex_6:'अभिसरण नामकरण', ex_7:'अपसरण नामकरण', ex_8:'बहुअर्थी शब्द', ex_9:'सामूहिक संज्ञाएं', ex_10:'वाक्य पूर्ण करें', ex_11:'रूपविज्ञान',
+    ex_12:'प्रश्न-उत्तर', ex_13:'मुहावरेदार भाषा', ex_14:'सादृश्य', ex_15:'हाँ / नहीं प्रश्न', ex_16:'सामान्य ज्ञान', ex_17:'इतिहास और भूगोल', ex_18:'लोकप्रिय मीडिया', ex_19:'स्मृति सूचियां', ex_20:'तथ्य या राय',
+    ex_21:'दैनिक जीवन कौशल', ex_22:'सुरक्षा परिदृश्य', ex_23:'खाना पकाने के चरण', ex_24:'समय जागरूकता', ex_25:'स्थान जागरूकता', ex_26:'कार्यात्मक गणित', ex_27:'अनुक्रमण', ex_28:'तर्क पहेलियां', ex_29:'कैलेंडर योजना', ex_30:'मुक्त स्मरण',
+    lang_label: 'भाषा समर्थन', lang_title: 'उस भाषा में चिकित्सा जो <em>घर जैसी लगती है</em>',
+    lang_footer: '16 भाषाओं में उपलब्ध, प्रत्येक अपने समुदाय के लिए अनुकूलित।',
+    lang_badge: 'App Store पर उपलब्ध',
+    offline_h2: '"Wi-Fi नहीं? कोई बात नहीं।"', offline_p: 'हर सत्र, हर अभ्यास, हर उत्तर पूरी तरह डिवाइस पर चलता है।',
+    offline_1: 'इंटरनेट की जरूरत नहीं', offline_2: 'कोई डेटा संग्रह नहीं', offline_3: 'अस्पतालों में काम करता है', offline_4: 'कहीं भी काम करता है',
+    who_label: 'Clarity कौन उपयोग करता है', who_title: 'रोगियों, परिवारों <em>और चिकित्सकों</em> के लिए',
+    who1_title: 'अफ़ेज़िया से पीड़ित लोग', who1_body: 'छोटे, प्रबंधनीय सत्रों में दैनिक अभ्यास, स्ट्रोक के बाद भाषा और संज्ञानात्मक कार्य को बनाए रखने में मदद के लिए।',
+    who2_title: 'प्रारंभिक FTD वाले लोग', who2_body: 'फ्रंटोटेम्पोरल डिमेंशिया की प्रारंभिक अवस्था में रोगियों का समर्थन करने के लिए सौम्य संज्ञानात्मक अभ्यास।',
+    who3_title: 'पारिवारिक देखभालकर्ता', who3_body: 'मुझे आश्चर्यचकित करें बटन और त्वरित 5-प्रश्न सत्र बिना किसी तैयारी के प्रियजन के साथ काम करना आसान बनाते हैं।',
+    who4_title: 'वाक्-भाषा चिकित्सक', who4_body: 'थेरेपी सत्रों के बीच उपयोग के लिए एक मुफ्त, ऑफलाइन पूरक उपकरण। प्रति अभ्यास कठिनाई नियंत्रण और गुमनाम शोध डेटा निर्यात इसे नैदानिक कार्यप्रवाह में फिट करना आसान बनाते हैं।',
+    how_label: 'यह कैसे काम करता है', how_title: 'अभ्यास शुरू करने के <em>चार चरण</em>',
+    step1_title: 'अपनी प्रोफ़ाइल बनाएं', step1_body: 'अपना नाम दर्ज करें, अपना निदान चुनें, भाषा चुनें और अवतार चुनें। एक मिनट से कम।',
+    step2_title: 'एक गतिविधि चुनें', step2_body: 'खंड के अनुसार ब्राउज़ करें या मुझे आश्चर्यचकित करें पर टैप करें।',
+    step3_title: '5 प्रश्न पूरे करें', step3_body: 'अपनी गति से उत्तर दें। प्रत्येक उत्तर के बाद तुरंत सौम्य प्रतिक्रिया। परफेक्ट राउंड पर कंफेटी।',
+    step4_title: 'अपनी स्ट्रीक बनाएं', step4_body: 'कल वापस आएं। मील के पत्थरों के लिए बैज अर्जित करें।',
+    cta_h2: 'शुरू करने के लिए <em>तैयार हैं?</em>', cta_p: 'Clarity मुफ्त है और Apple App Store पर उपलब्ध है।',
+    cta_btn: 'App Store से जुड़ें', cta_note: 'iOS 16 या बाद के संस्करण वाला iPhone आवश्यक · मुफ्त · कोई खाता आवश्यक नहीं',
+    footer_tagline: 'भाषा और स्मृति चिकित्सा साथी',
+    footer_credit: 'अफ़ेज़िया और FTD समुदाय के लिए देखभाल के साथ बनाया गया।<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; App Store पर उपलब्ध'
+  },
+
+  gu: {
+    lang: 'gu', dir: 'ltr',
+    banner: 'ગુજરાતીમાં જોઈ રહ્યા છો',
+    banner_btn: 'અંગ્રેજી પર પાછા જાઓ',
+    nav_features: 'વિશેષતાઓ', nav_exercises: 'કસરતો', nav_languages: 'ભાષાઓ',
+    nav_who: 'કોના માટે', nav_cta: 'App Store પર જોડાઓ',
+    eyebrow: 'iPhone અને Apple TV પર ઉપલબ્ધ — મફત',
+    hero_h1: 'ભાષા ઉપચાર,<br/><em>ધીમે ધીમે શક્તિશાળી</em>',
+    hero_sub: 'અફેઝિયા અને ફ્રન્ટોટેમ્પોરલ ડિમેન્શિયા સાથે જીવતા લોકો માટે, અને તેમના પરિવારો અને ચિકિત્સકો માટે.',
+    btn_testflight: 'App Store પર ડાઉનલોડ કરો',
+    btn_how: 'કેવી રીતે કામ કરે છે',
+    about_quote: '"અફેઝિયા <strong>દસ લાખથી વધુ અમેરિકનોને</strong> અસર કરે છે. ઘણા ઇમિગ્રન્ટ્સ છે, તેમની પ્રથમ ભાષાથી દૂર. Clarity દરેક વ્યક્તિને <strong>ત્યાં મળે છે જ્યાં તેઓ છે</strong>, <strong>16 ભાષાઓ</strong> માં."',
+    features_label: 'Clarity ને શું અલગ બનાવે છે',
+    features_title: '<em>વાસ્તવિક જીવન</em> માટે બનાવ્યું',
+    f1_title: 'સંપૂર્ણ ઓફલાઇન, સંપૂર્ણ ખાનગી', f1_body: 'દરેક શબ્દ, દરેક કસરત, દરેક સત્ર સંપૂર્ણ રીતે ડિવાઇસ પર ચાલે છે. કોઈ નેટવર્ક કૉલ નહીં, કોઈ થર્ડ-પાર્ટી કોડ નહીં — તમારો ડેટા ક્યારેય તમારા ફોનની બહાર જતો નથી.',
+    f2_title: '16 ભાષાઓ, એક એપ', f2_body: 'અંગ્રેજી, સ્પેનિશ, હિન્દી, ગુજરાતી, ચીની, ફારસી, કોરિયન, વિયેતનામી, અરબી, પોર્ટુગીઝ, તાગાલોગ, પંજાબી, આર્મેનિયન, જાપાની, ફ્રેંચ અને અમ્હારિક — દરેક તેના સમુદાય માટે અનુકૂળ, મૂળ વક્તા સમીક્ષા પ્રગતિમાં.',
+    f3_title: 'પ્રતિ ભાષા 30+ કસરત', f3_body: 'ભાષા કૌશલ્ય, સ્મૃતિ અને રોજિંદા જીવનને આવરી લેતી કસરતોમાં. ટૂંકા, વૈવિધ્યપૂર્ણ સત્રો.',
+    f7_title: 'તમારી પ્રગતિ સાથે અનુકૂળ થાય છે', f7_body: 'Clarity 16 ભાષાઓમાં ચૂપચાપ મુશ્કેલી ગોઠવે છે — કોઈ સેટિંગ નહીં, કોઈ સંખ્યા નહીં. પ્રથમ ઉપયોગ પર એક ટૂંકું આકલન યોગ્ય શરૂઆત આપોઆપ નક્કી કરે છે.',
+    f8_title: 'દરરોજ નવી કળાકૃતિ', f8_body: 'દરરોજ Clarity એક અલગ જાહેર ડોમેન કૃતિ બતાવે છે — Met Museum અને NASA ની 75 કૃતિઓ, iPhone અને Apple TV પર આપોઆપ ફેરવાય છે.',
+    f9_title: 'સંભાળ રાખનારાઓ માટે પણ', f9_body: 'PIN-સુરક્ષિત Caregiver Mode પરિવાર અને ચિકિત્સકોને મુશ્કેલી નિયંત્રણ, ઉપચાર નોંધ, ધ્યેય નિર્ધારણ અને PDF પ્રગતિ અહેવાલ સુધી પ્રવેશ આપે છે.',
+    f4_title: 'પ્રતિ સત્ર 5 પ્રશ્નો', f4_body: 'ટૂંકા ડિઝાઇન. પાંચ કાળજીપૂર્વક પસંદ કરેલા પ્રશ્નો.',
+    f5_title: 'દૃશ્યમાન પ્રગતિ', f5_body: 'સ્ટ્રીક, બેજ અને કેલેન્ડર દૃશ્ય પ્રેક્ટિસ ને પ્રોત્સાહિત કરે છે.',
+    f6_title: 'મને આશ્ચર્યચકિત કરો', f6_body: 'એક ટેપ અને રેન્ડમ પ્રવૃત્તિ શરૂ. સંભાળ રાખનારાઓ માટે.',
+    ex_label: 'કસરત પુસ્તકાલય', ex_title: 'ત્રણ વિભાગ, <em>30+ કસરતો</em>',
+    legend_lang: 'ભાષા', legend_cog: 'સ્મૃતિ', legend_func: 'કાર્યાત્મક કૌશલ્ય',
+    ex_1:'શ્રેણી ઓળખ', ex_2:'સમાનાર્થી અને વિરુદ્ધ', ex_3:'સમઉચ્ચાર', ex_4:'સામાસિક શબ્દ', ex_5:'કવિતા', ex_6:'અભિસારી નામ', ex_7:'અપસારી નામ', ex_8:'બહુ-અર્થ શબ્દ', ex_9:'સામૂહિક સંજ્ઞા', ex_10:'વાક્ય પૂર્ણ', ex_11:'આકારશાસ્ત્ર',
+    ex_12:'Wh-પ્રશ્નો', ex_13:'રૂઢિપ્રયોગ', ex_14:'ઉપમા', ex_15:'હા / ના', ex_16:'સામાન્ય જ્ઞાન', ex_17:'ઇતિહાસ અને ભૂગોળ', ex_18:'મીડિયા', ex_19:'સ્મૃતિ સૂચિ', ex_20:'હકીકત કે અભિપ્રાય',
+    ex_21:'દૈનિક કૌશલ્ય', ex_22:'સુરક્ષા', ex_23:'રસોઈ', ex_24:'સમય જ્ઞાન', ex_25:'સ્થળ જ્ઞાન', ex_26:'ગણિત', ex_27:'ક્રમ', ex_28:'તર્ક', ex_29:'કેલેન્ડર', ex_30:'ખુલ્લી સ્મૃતિ',
+    lang_label: 'ભાષા સમર્થન', lang_title: 'ઉપચાર એ ભાષામાં જે <em>ઘર જેવી લાગે</em>',
+    lang_footer: '16 ભાષાઓમાં ઉપલબ્ધ, દરેક તેના સમુદાય માટે અનુકૂળ.',
+    lang_badge: 'App Store પર',
+    offline_h2: '"Wi-Fi નથી? કોઈ વાંધો નહીં."', offline_p: 'દરેક સત્ર સંપૂર્ણ ડિવાઇસ પર ચાલે છે.',
+    offline_1: 'ઇન્ટરનેટ જરૂરી નથી', offline_2: 'ડેટા સંગ્રહ નહીં', offline_3: 'હોસ્પિટલ્સ માં', offline_4: 'ગમે ત્યાં',
+    who_label: 'Clarity કોણ વાપરે છે', who_title: 'દર્દીઓ, પરિવારો <em>અને ચિકિત્સકો</em> માટે',
+    who1_title: 'અફેઝિયા ધરાવતા લોકો', who1_body: 'ટૂંકા સત્રોમાં દૈનિક અભ્યાસ, સ્ટ્રોક પછી ભાષા પુનઃ મેળવવા માટે.',
+    who2_title: 'પ્રારંભિક FTD ધરાવતા', who2_body: 'ફ્રન્ટોટેમ્પોરલ ડિમેન્શિયા ના પ્રારંભિક તબક્કામાં સૌમ્ય કસરતો.',
+    who3_title: 'પારિવારિક સંભાળ', who3_body: 'મને આશ્ચર્યચકિત કરો બટન અને ઝડપી 5-પ્રશ્ન સત્ર.',
+    who4_title: 'ભાષા ચિકિત્સક', who4_body: 'ઉપચાર સત્રો વચ્ચે ઉપયોગ માટે મફત, ઓફલાઇન સાધન. પ્રતિ-કસરત મુશ્કેલી નિયંત્રણો અને અનામી સંશોધન ડેટા નિકાસ તેને ક્લિનિકલ વર્કફ્લોમાં ફિટ કરવાનું સરળ બનાવે છે.',
+    how_label: 'કેવી રીતે કામ કરે છે', how_title: 'પ્રેક્ટિસ શરૂ કરવાના <em>ચાર પગલાં</em>',
+    step1_title: 'પ્રોફાઇલ બનાવો', step1_body: 'નામ, નિદાન, ભાષા અને અવતાર. એક મિનિટ.',
+    step2_title: 'પ્રવૃત્તિ પસંદ કરો', step2_body: 'વિભાગ પ્રમાણે અથવા મને આશ્ચર્ય ચકિત કરો.',
+    step3_title: '5 પ્રશ્નો પૂર્ણ', step3_body: 'તમારી ગતિએ. સ્કોર અને સંપૂર્ણ રાઉન્ડ પર ફૂલઝડી.',
+    step4_title: 'સ્ટ્રીક બનાવો', step4_body: 'કાલે પાછા આવો. બેજ કમાઓ.',
+    cta_h2: '<em>શરૂ</em> કરવા માટે તૈયાર?', cta_p: 'Clarity મફત છે અને Apple App Store પર ઉપલબ્ધ છે.',
+    cta_btn: 'App Store માં જોડાઓ', cta_note: 'iOS 16 અથવા નવું iPhone જરૂરી · મફત · કોઈ ખાતું જરૂરી નથી',
+    footer_tagline: 'ભાષા અને સ્મૃતિ ઉપચાર સાથી',
+    footer_credit: 'અફેઝિયા અને FTD સમુદાય માટે.<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; App Store પર'
+  },
+
+  zh: {
+    lang: 'zh', dir: 'ltr',
+    banner: '正在以中文查看',
+    banner_btn: '返回英文',
+    nav_features: '功能', nav_exercises: '练习', nav_languages: '语言',
+    nav_who: '适合人群', nav_cta: '在 App Store 下载',
+    eyebrow: '适用于 iPhone 和 Apple TV — 免费',
+    hero_h1: '语言治疗，<br/><em>温和而有力</em>',
+    hero_sub: '一款为失语症和额颞叶痴呆患者设计的 iOS 伴侣应用，也为支持他们的家人和医护人员而生。',
+    btn_testflight: '在 App Store 下载',
+    btn_how: '了解使用方式',
+    about_quote: '"失语症影响着<strong>超过一百万美国人</strong>。其中许多是移民，远离他们的母语。Clarity 以<strong>16种语言</strong>，在他们熟悉的文字中，<strong>陪伴每一个人</strong>。"',
+    features_label: 'Clarity 的独特之处',
+    features_title: '为<em>真实生活</em>而设计',
+    f1_title: '完全离线，真正私密', f1_body: '每个单词、每项练习、每次会话均在设备上运行。零网络请求，零第三方代码——您的数据永远不会离开您的手机。',
+    f2_title: '16种语言，一款应用', f2_body: '英语、西班牙语、印地语、古吉拉特语、中文、波斯语、韩语、越南语、阿拉伯语、葡萄牙语、他加禄语、旁遮普语、亚美尼亚语、日语、法语和阿姆哈拉语——每种均经过社区适配，母语人士审核进行中。',
+    f3_title: '每种语言 30+ 项练习', f3_body: '涵盖语言技能、认知和日常生活技能。会话简短、多样且适应性强。',
+    f7_title: '随你进步而调整', f7_body: 'Clarity 在16种语言中悄悄调整难度——无需任何设置。首次使用时的简短基线评估会自动设定合适的起点。',
+    f8_title: '每天一幅新艺术作品', f8_body: '每天Clarity展示一幅不同的公共领域杰作——来自大都会艺术博物馆和NASA的75幅作品，在iPhone和Apple TV上自动轮换。',
+    f9_title: '同样为看护者而设计', f9_body: '有PIN保护的看护者模式让家人和临床医生可以访问难度控制、治疗笔记、目标设定和可导出的PDF进度报告。',
+    f4_title: '每次会话 5 个问题', f4_body: '简短而有效。五个精心挑选的问题，尊重康复患者的体力，同时养成良好的每日习惯。',
+    f5_title: '看得见的进步', f5_body: '连续天数、徽章和日历视图让练习充满成就感。七个里程碑记录真实进步。',
+    f6_title: '随机惊喜', f6_body: '点击"惊喜"按钮，随机启动一项活动。非常适合家庭护理者。',
+    ex_label: '练习库', ex_title: '三个板块，<em>30+ 项练习</em>',
+    legend_lang: '语言', legend_cog: '认知', legend_func: '生活技能',
+    ex_1:'类别识别', ex_2:'同义词与反义词', ex_3:'同音词', ex_4:'复合词', ex_5:'押韵词', ex_6:'聚合命名', ex_7:'发散命名', ex_8:'多义词', ex_9:'集合名词', ex_10:'完成句子', ex_11:'词态学',
+    ex_12:'疑问词提问', ex_13:'惯用语', ex_14:'类比', ex_15:'是/否问题', ex_16:'常识', ex_17:'历史与地理', ex_18:'大众媒体', ex_19:'记忆列表', ex_20:'事实或观点',
+    ex_21:'日常生活技能', ex_22:'安全情景', ex_23:'烹饪步骤', ex_24:'时间感知', ex_25:'空间感知', ex_26:'实用数学', ex_27:'排序任务', ex_28:'逻辑谜题', ex_29:'日历规划', ex_30:'开放式回忆',
+    lang_label: '语言支持', lang_title: '用<em>像家一样</em>的语言进行治疗',
+    lang_footer: '已支持16种语言，每种语言均为其社区量身定制。',
+    lang_badge: '已在 App Store 上线',
+    offline_h2: '"没有 Wi-Fi？没关系。"', offline_p: '每次会话均在设备上完全运行。Clarity 从不发送您的数据。',
+    offline_1: '无需网络', offline_2: '不收集数据', offline_3: '医院内可用', offline_4: '随时随地可用',
+    who_label: '谁在使用 Clarity', who_title: '为患者、家属<em>和临床医生</em>',
+    who1_title: '失语症患者', who1_body: '简短可管理的日常练习，有助于在中风或脑外伤后维持和重建语言与认知功能。',
+    who2_title: '早期额颞叶痴呆患者', who2_body: '温和的认知练习，内容有趣而不令人沮丧。',
+    who3_title: '家庭照护者', who3_body: '"惊喜"按钮和快速 5 题会话让家人无需任何准备就能陪伴练习。',
+    who4_title: '言语语言治疗师', who4_body: '用于治疗会话之间的免费离线辅助工具。按练习设置难度和匿名研究数据导出功能，便于融入临床工作流程。',
+    how_label: '使用方式', how_title: '四步<em>开始练习</em>',
+    step1_title: '创建个人资料', step1_body: '输入姓名、选择诊断、选择语言和头像。不到一分钟。',
+    step2_title: '选择活动', step2_body: '按板块浏览，或点击"惊喜"让应用为您选择。',
+    step3_title: '完成 5 个问题', step3_body: '按自己的节奏作答。每题后即时温和反馈，满分圆满附送彩纸庆祝。',
+    step4_title: '保持连续记录', step4_body: '明天再来延续您的连续天数，赢得里程碑徽章。',
+    cta_h2: '准备好<em>开始了吗？</em>', cta_p: 'Clarity 完全免费，现已在 App Store 上线。',
+    cta_btn: '在 App Store 下载', cta_note: '需要 iOS 16 或更高版本的 iPhone · 免费 · 无需账户',
+    footer_tagline: '语言与记忆治疗伴侣',
+    footer_credit: '为失语症和额颞叶痴呆社区用心打造。<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; 已在 App Store 上线'
+  },
+
+  fa: {
+    lang: 'fa', dir: 'rtl',
+    banner: 'در حال مشاهده به فارسی',
+    banner_btn: 'بازگشت به انگلیسی',
+    nav_features: 'ویژگی‌ها', nav_exercises: 'تمرین‌ها', nav_languages: 'زبان‌ها',
+    nav_who: 'برای چه کسی', nav_cta: 'دانلود از App Store',
+    eyebrow: 'برای iPhone و Apple TV — رایگان',
+    hero_h1: 'درمان زبان،<br/><em>آرام و قدرتمند</em>',
+    hero_sub: 'یک همراه ملایم iOS برای افراد مبتلا به آفازی و زوال عقل فرونتوتمپورال، و خانواده‌ها و درمانگرانی که از آن‌ها حمایت می‌کنند.',
+    btn_testflight: 'دانلود از App Store',
+    btn_how: 'ببینید چگونه کار می‌کند',
+    about_quote: '"آفازی بیش از <strong>یک میلیون آمریکایی</strong> را تحت تأثیر قرار می‌دهد. بسیاری از آن‌ها مهاجر هستند، دور از زبان اولشان. Clarity هر فرد را <strong>همان‌جا که هست</strong> ملاقات می‌کند، در <strong>۱۶ زبان</strong>."',
+    features_label: 'چه چیزی Clarity را متفاوت می‌کند',
+    features_title: 'ساخته شده برای <em>زندگی واقعی</em>',
+    f1_title: 'کاملاً آفلاین، واقعاً خصوصی', f1_body: 'هر کلمه، هر تمرین، هر جلسه کاملاً روی دستگاه اجرا می‌شود. بدون هیچ فراخوانی شبکه یا کد شخص ثالث — داده‌های شما هرگز از دستگاهتان خارج نمی‌شوند.',
+    f2_title: '۱۶ زبان، یک اپ', f2_body: 'انگلیسی، اسپانیایی، هندی، گجراتی، چینی، فارسی، کره‌ای، ویتنامی، عربی، پرتغالی، تاگالوگ، پنجابی، ارمنی، ژاپنی، فرانسوی و امهری — هر کدام برای جامعه‌اش تطبیق داده شده، بازبینی بومیان در حال انجام.',
+    f3_title: 'بیش از ۳۰ تمرین در هر زبان', f3_body: 'در تمرین‌هایی که مهارت‌های زبانی، شناخت و مهارت‌های روزمره را پوشش می‌دهد.',
+    f7_title: 'با پیشرفت شما سازگار می‌شود', f7_body: 'Clarity در ۱۶ زبان به‌آرامی سختی را تنظیم می‌کند — بدون نیاز به هیچ تنظیماتی. یک ارزیابی کوتاه اولیه در اولین اجرا، نقطه شروع مناسب را به‌صورت خودکار تعیین می‌کند.',
+    f8_title: 'هر روز یک اثر هنری جدید', f8_body: 'هر روز Clarity یک اثر هنری متفاوت از دامنه عمومی نمایش می‌دهد — ۷۵ اثر از موزه متروپولیتن و ناسا، به‌صورت خودکار روی iPhone و Apple TV می‌چرخند.',
+    f9_title: 'برای مراقبین هم ساخته شده', f9_body: 'حالت مراقب با PIN محافظت‌شده به خانواده و درمانگران دسترسی به کنترل سختی، یادداشت‌های درمانی، تعیین هدف و گزارش پیشرفت PDF صادرشدنی می‌دهد.',
+    f4_title: '۵ سؤال در هر جلسه', f4_body: 'کوتاه و هدفمند. پنج سؤال با دقت انتخاب شده.',
+    f5_title: 'پیشرفت قابل مشاهده', f5_body: 'رشته‌های روزانه، نشان‌ها و نمای تقویم تمرین را لذت‌بخش می‌کند.',
+    f6_title: 'غافلگیرم کن', f6_body: 'یک ضربه و یک فعالیت تصادفی شروع می‌شود. عالی برای مراقبین.',
+    ex_label: 'کتابخانه تمرین', ex_title: 'سه بخش، <em>۳۰+ تمرین</em>',
+    legend_lang: 'زبان', legend_cog: 'شناخت', legend_func: 'مهارت‌های عملکردی',
+    ex_1:'شناسایی دسته‌بندی', ex_2:'مترادف و متضاد', ex_3:'هم‌آوا', ex_4:'کلمات مرکب', ex_5:'قافیه', ex_6:'نام‌گذاری همگرا', ex_7:'نام‌گذاری واگرا', ex_8:'کلمات چندمعنی', ex_9:'اسم جمع', ex_10:'تکمیل جمله', ex_11:'ریخت‌شناسی',
+    ex_12:'سؤالات Wh', ex_13:'زبان مجازی', ex_14:'قیاس', ex_15:'بله / خیر', ex_16:'دانش عمومی', ex_17:'تاریخ و جغرافیا', ex_18:'رسانه', ex_19:'فهرست‌های حافظه', ex_20:'واقعیت یا نظر',
+    ex_21:'مهارت‌های روزانه', ex_22:'ایمنی', ex_23:'مراحل پخت', ex_24:'آگاهی زمانی', ex_25:'آگاهی مکانی', ex_26:'ریاضی عملکردی', ex_27:'توالی', ex_28:'معما', ex_29:'برنامه‌ریزی تقویم', ex_30:'یادآوری آزاد',
+    lang_label: 'پشتیبانی زبانی', lang_title: 'درمان به زبانی که <em>مثل خانه</em> احساس می‌شود',
+    lang_footer: 'در ۱۶ زبان موجود است، هر کدام برای جامعه‌اش تطبیق داده شده.',
+    lang_badge: 'در App Store موجود است',
+    offline_h2: '"بدون Wi-Fi؟ مشکلی نیست."', offline_p: 'هر جلسه کاملاً روی دستگاه اجرا می‌شود. Clarity هیچ داده‌ای ارسال نمی‌کند.',
+    offline_1: 'بدون اینترنت', offline_2: 'بدون جمع‌آوری داده', offline_3: 'در بیمارستان‌ها', offline_4: 'همه‌جا',
+    who_label: 'چه کسی از Clarity استفاده می‌کند', who_title: 'برای بیماران، خانواده‌ها <em>و درمانگران</em>',
+    who1_title: 'افراد مبتلا به آفازی', who1_body: 'تمرین روزانه در جلسات کوتاه، اثبات شده برای حفظ و بازسازی عملکرد زبانی پس از سکته مغزی.',
+    who2_title: 'افراد مبتلا به FTD اولیه', who2_body: 'تمرینات شناختی ملایم برای حمایت از بیماران در مراحل اولیه زوال عقل.',
+    who3_title: 'مراقبین خانوادگی', who3_body: 'دکمه غافلگیرم کن و جلسات سریع ۵ سؤالی، نشستن با عزیزان را بدون هیچ آمادگی‌ای آسان می‌کند.',
+    who4_title: 'درمانگران گفتار و زبان', who4_body: 'ابزاری رایگان و آفلاین برای استفاده بین جلسات درمانی. کنترل سختی هر تمرین و خروجی داده‌های تحقیقاتی ناشناس، استفاده در گردش کار بالینی را آسان می‌کند.',
+    how_label: 'چگونه کار می‌کند', how_title: 'چهار قدم برای <em>شروع تمرین</em>',
+    step1_title: 'پروفایل خود را بسازید', step1_body: 'نام، تشخیص، زبان و آواتار خود را وارد کنید. کمتر از یک دقیقه.',
+    step2_title: 'یک فعالیت انتخاب کنید', step2_body: 'بر اساس بخش مرور کنید یا روی غافلگیرم کن بزنید.',
+    step3_title: '۵ سؤال را کامل کنید', step3_body: 'با سرعت خود پاسخ دهید. بازخورد فوری پس از هر پاسخ.',
+    step4_title: 'رشته خود را بسازید', step4_body: 'فردا برگردید. برای نقاط عطف نشان کسب کنید.',
+    cta_h2: 'آماده <em>شروع</em> هستید؟', cta_p: 'Clarity رایگان است و هم‌اکنون در App Store موجود است.',
+    cta_btn: 'دانلود از App Store', cta_note: 'نیاز به iPhone با iOS 16 یا بالاتر · رایگان · نیاز به حساب ندارد',
+    footer_tagline: 'همراه درمان زبان و حافظه',
+    footer_credit: 'با دقت برای جامعه آفازی و FTD ساخته شده.<br/><br/><strong>Clarity: Language &amp; Memory</strong> &nbsp;&middot;&nbsp; iOS 16+ · tvOS 17.6+ &nbsp;&middot;&nbsp; در App Store'
+  }
+};
+
+let currentLang = 'en';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  const t = translations[lang];
+
+  // RTL
+  document.body.classList.toggle('rtl-mode', t.dir === 'rtl');
+  document.documentElement.lang = t.lang;
+  document.documentElement.dir = t.dir;
+
+  // Update all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+
+  // Active pill
+  document.querySelectorAll('.lang-pill').forEach(p => p.classList.remove('active'));
+  const activePill = document.getElementById('pill-' + lang);
+  if (activePill) activePill.classList.add('active');
+
+  // Banner
+  const banner = document.getElementById('translationBanner');
+  const bannerText = document.getElementById('bannerText');
+  const bannerBtn = document.getElementById('bannerBtn');
+  if (lang === 'en') {
+    banner.classList.remove('visible');
+  } else {
+    bannerText.textContent = t.banner;
+    bannerBtn.textContent = t.banner_btn;
+    banner.classList.add('visible');
+  }
+}
+
+function resetLanguage() {
+  setLanguage('en');
+}
+
+// Init
+setLanguage('en');
+</script>
+
+</body>
+</html>

@@ -2,19 +2,7 @@
 
 ## ClarityTV: prompt text descenders clipped in question ScrollView
 
-**Status:** open — deferred from the 2026-07-09 overlap fix (App Store rejection, Guideline 4, build 1.1 (3)). Deliberately NOT fixed in that commit.
-
-**Symptom:** On TV exercise screens, the question prompt can render with its last visible line's descenders cut off (e.g. "What keeps you dry in the rain?" with the bottom of "y"/"p" clipped), and long prompts can be visually truncated mid-line. The text is inside a ScrollView so it is technically scrollable, but on tvOS there is no affordance and users won't scroll it.
-
-**Where:** the prompt area shared by the grid exercise views —
-- `ClarityTV/TVOptionGridView.swift` (~line 33): `ScrollView` with `.frame(maxHeight: 280)` inside the `geo.size.height * 0.35` prompt band.
-- `ClarityTV/TVMultipleChoiceView.swift` (~line 64): same pattern.
-
-**Why it happens:** the prompt band is a fixed 35% of the GeometryReader height and the ScrollView caps at 280pt; when the container header (exercise title + instructions) wraps tall, the band compresses and the ScrollView clips the text instead of the text scaling further down (`minimumScaleFactor(0.7)` doesn't engage because `fixedSize(horizontal: false, vertical: true)` lets the text keep its full height inside the scroll content).
-
-**Unrelated to the overlap fix:** the 2026-07-09 fix only changed the option-grid rows (fixed → flexible tile heights), the footer spacer, and the open-ended answer bounds. No lines in the prompt ScrollViews were touched; the clipping reproduces identically before and after that change.
-
-**Suggested direction for the follow-up:** drop `fixedSize` and let `minimumScaleFactor` engage against the band height, or size the prompt band to content with a sensible cap instead of a hard 35%.
+**Status:** FIXED on branch `overnight/2026-10-08` (commit af9850a). The ScrollView was replaced by a `minimumScaleFactor(0.4)` Text inside the existing 35 % band in `TVOptionGridView` and `TVMultipleChoiceView`; the option grid and footer spacing are unchanged. Verified on the tvOS simulator with a short and a ~280-character prompt (MC and Yes/No).
 
 ## Content rebuild (2026-07-15): items needing native-speaker review
 
@@ -140,3 +128,15 @@ Combined defective-item rate: Chinese ~75%, Gujarati ~72%, Farsi ~86%, Korean ~6
 **Queued fix plan, in order (per explicit 2026-07-17 decision to defer all fixing to a future session):**
 1. **The 2 structural bugs first, in isolation, before any broader content pass** — these are closer to "broken feature" than "content quality": Gujarati's missing `passage` data (~40 unanswerable items across menus/bills/medication-labels) and Chinese's options-array-as-single-pipe-string format bug (11 items, will break the sequencing UI).
 2. Then work through the 6 languages one at a time in severity order — Gujarati, Farsi, Chinese, Hindi/Korean, Japanese last — same review→verify→commit discipline as the rest of this session (verify current state directly, don't batch-assume, field-level diff isolation, swiftc typecheck, before/after samples, explicit go-ahead before each commit).
+
+
+## Open items found 2026-10-08 (overnight run)
+
+- **Validator warnings:** ~1,580 items still have empty explanations (Chinese 389, Gujarati 386, Hindi 384, Farsi 256, Portuguese 145, Armenian 23). Non-blocking.
+- **Collapsed padding:** several exercises were padded with numbered duplicates and are now tiny (Vietnamese Functional 1-item groups, Arabic, Armenian). See REVIEW_QUEUE.md A4.
+- **Untranslated chrome:** the Home streak widget (`StreakWidgetView`: "day streak", "Personal Best", "Last 7 Days Progress", weekday names) is English in every language; `ExerciseContainerView` loading text is Hindi for all languages; `AmharicNewExercisesData`/`AmharicHardExercisesData` instructions are the English string "Choose the correct answer.".
+- **No system TTS voice** for Gujarati, Farsi, Punjabi, Armenian, Amharic, Tagalog: Number Skills / read-aloud fall back to showing the text.
+- **Preview languages (Russian, Ukrainian)** are machine-adapted, hidden, unreviewed. Do not unhide before native review.
+- **Warning:** `NumberDrillGenerator.asciiDigits` is flagged as main-actor-isolated when called from a non-isolated context (Swift 6 mode will error).
+- **Repo hygiene:** `ArtworkSource/` 264 MB tracked; `xcuserdata/.../xcschememanagement.plist` tracked.
+- **AppProgressView** is unreachable but holds a unique weekly chart and accordion; decide delete vs port.

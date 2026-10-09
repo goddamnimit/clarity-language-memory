@@ -1,0 +1,29 @@
+# CLAUDE.md — Clarity (CogniLink)
+
+SwiftUI, no third-party libraries, no network, no accounts. Targets: `CogniLink` (iOS, universal, min iOS 17.6), `ClarityTV` (tvOS 17.6+, compiles the `CogniLink/` folder too), `ClarityWidget`. Xcode 26.x. Folders are file-system-synchronized: new Swift files are picked up automatically (no pbxproj edit), except the widget which lists `AppTheme.swift` and `WidgetSnapshot.swift` explicitly.
+
+## Rules that must not be broken
+- **Adaptive difficulty:** never change `AdaptiveDifficultyStore` thresholds/windows/cross-reference logic. Features may feed it inputs (cued answers are reported as not-correct).
+- **Insight copy:** do not edit InsightEngine's clinical decline/stability wording (English-only pending licensed-SLP review). Do not ship translated `DiagnosisType` labels.
+- **Research export is anonymous.** Personal data (names, notes, phone number, memory targets) lives in the Keychain (`KeychainHelper`) and must never appear in `ResearchExportManager`. Unit tests assert this for the phone number and Remember It targets.
+- **Never loosen `ExerciseDataValidator` or a test to pass.** Fix the data.
+
+## Exercise data file rules
+`static let`; `UUID()` ids; `correctAnswer` exactly equals one option (except `.openEnded`, `.sequencing`); `.yesNo` options exactly `["Yes","No"]`, `.factOrOpinion` exactly `["Fact","Opinion"]` (never translated); `.sequencing` correctAnswer joins steps with `" | "` and each step is an option; every exercise sets `trackedType:` explicitly (nil unless it is one of the 8 tracked types); full-width quotes in Farsi/Arabic/Chinese/Japanese/Amharic; script purity per language. Use a string-aware parser for any scan/rewrite (never count parentheses by line).
+
+## Where things are
+- Languages: `AppLanguage.swift` (enum, `isPreview`, `visibleCases`, `allExercises`, `exercisesForSection`) + a `case` in each UI string switch (ContentView, CaregiverModeView, TV*, …). Pickers must use `AppLanguage.visibleCases`. Preview languages (Russian, Ukrainian) are not offered in the picker or by system-language detection.
+- New UI strings for the Practice Supports features: `FeatureStrings.swift` (`FS`, one labelled parameter per language, so a missing language is a compile error).
+- Practice Supports settings: `PracticeSupportSettings` (+ `PracticeSupportsCard`, `MemoryTargetsCard` in Therapy Settings).
+- Features (iOS only): `OrientationCardView`, `ChoiceCountFilter`, `CueLadder`, `NumberSkillsView`/`NumberDrillGenerator`, `SpacedRetrievalView`/`SpacedRetrieval`, `VisualScanningView`/`ScanGrid`, `ReadingSupportView`/`ReadingPassageData`, `ConversationStartersView`/`ConversationTopicData`. English-only features are gated with `isAvailable(for:)`.
+- iOS text-to-speech: `SpeechOutput` (check `voiceAvailable(for:)`; Gujarati, Farsi, Punjabi, Armenian, Amharic, Tagalog have no system voice).
+
+## Testing
+```
+xcodebuild test -scheme CogniLink -destination 'platform=iOS Simulator,id=<UDID>' -only-testing:CogniLinkTests
+```
+Use the simulator UDID (names resolve against the newest OS). Tests that touch the Keychain are in a `.serialized` suite. After a test run the simulator is shut down; boot it again before `simctl`.
+tvOS: `xcodebuild -scheme ClarityTV -destination 'generic/platform=tvOS Simulator' build`.
+
+## tvOS layout
+`TVOptionGridView` must keep guaranteed space above Replay/Skip (App Review Guideline 4). Prompts scale to the 35 % band (`minimumScaleFactor`), they do not scroll.

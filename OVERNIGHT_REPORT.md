@@ -1,13 +1,13 @@
 # OVERNIGHT_REPORT — branch `overnight/2026-10-08` (unpushed, not merged)
 
 ## Read this first
-**Usage limit hit before the run finished.** Done: Phases 1–4 and the smoke screenshots (Phase 5, screenshots under gitignored `smoke/`). **NOT done:** Phase 6 (website), Phase 7 (CLAUDE.md / KNOWN_ISSUES / PROJECT_INSTRUCTIONS_UPDATE.md), the App Store "What's New" blurb. Phase 5 raw clean-build/device-compile/test output is in `scratch/phase5_raw.txt` (gitignored; was still running when I stopped — re-run if empty).
+All phases are done. Phase 5 raw output (clean builds of all three schemes, generic-device compiles with `CODE_SIGNING_ALLOWED=NO`, unit tests + validator) is in `scratch/phase5_raw.txt`: **everything BUILD SUCCEEDED / TEST SUCCEEDED**. Screenshots are in gitignored `smoke/`. Website: `website-update/index.html` + `CHANGES.md` (**not deployed**: no Netlify CLI). Docs: CLAUDE.md (new), KNOWN_ISSUES.md, PROJECT_INSTRUCTIONS_UPDATE.md, WHATS_NEW_DRAFT.md.
 
 ### Commits (oldest → newest; `git log --oneline main..HEAD`)
 ce5dcff gitignore · 5c46b9a Amharic restructure · 49f45a0 validator-red fixes · a12a9ad DayActivity extracted · 6d687aa pbxproj orphan refs · af9850a tvOS prompt clipping · 4c1a6d1 English content · (REVIEW_QUEUE.md commit) · 5ffba3c F1 · debe9f5 F2 · 9bc5369 F3 · 0659bcf F9 · 86b5b55 F4 · 7d5ef9f F5 · 784f408 F6 · b41e90b F8 · cc02e6a F7 · 9cd8c61 / 5f3318b Russian · a7b6365 / c72bbc1 Ukrainian. FEATURE_PLAN.md and this report are committed last.
 
 ### Green / red
-Last full run (CogniLinkTests incl. validator for all 64 catalogs): **green**; CogniLink, ClarityTV, ClarityWidget builds: **green**. **Baseline on main was red**: 12 validator failures in 11 catalogs (591 bad items) — fixed in 5c46b9a/49f45a0.
+Final run (CogniLinkTests incl. validator for all 64 catalogs): **green**; CogniLink, ClarityTV, ClarityWidget builds: **green**. **Baseline on main was red**: 12 validator failures in 11 catalogs (591 bad items) — fixed in 5c46b9a/49f45a0.
 
 ### Decisions I need from you
 1. **Padding duplicates collapsed** (Vietnamese Functional 61/50/60→1 item each, Arabic, Armenian…). Those exercises are now tiny and need real content (see REVIEW_QUEUE.md A4). Earlier "961+ items" parity claims included padding.
