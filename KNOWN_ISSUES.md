@@ -1,5 +1,7 @@
 # Known Issues
 
+**Versions:** last shipped iOS 4.3.2, next 4.4 (build 100 is an assumption; confirm it is higher than the last upload).
+
 ## ClarityTV: prompt text descenders clipped in question ScrollView
 
 **Status:** FIXED on branch `overnight/2026-10-08` (commit af9850a). The ScrollView was replaced by a `minimumScaleFactor(0.4)` Text inside the existing 35 % band in `TVOptionGridView` and `TVMultipleChoiceView`; the option grid and footer spacing are unchanged. Verified on the tvOS simulator with a short and a ~280-character prompt (MC and Yes/No).

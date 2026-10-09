@@ -2,7 +2,7 @@
 
 ## Platform facts (correction)
 - The iOS app's deployment target is **iOS 17.6** (the old "iOS 16+" line is stale); tvOS 17.6+; widget iOS 17.6. Xcode 26.x.
-- **Current App Store version: 4.3. Next release: 4.4.** (Per the owner. Git does not record it: no commit on any branch sets `MARKETING_VERSION = 4.3`, main's last committed values are iOS/widget 4.1 and tvOS 4.0, and there are no tags. The uncommitted Xcode working tree has 4.4.) Do not bump versions in feature commits.
+- **Last shipped iOS version: 4.3.2. Next release: 4.4.** (Per the owner. Git does not record it: no commit sets `MARKETING_VERSION = 4.3`, at e80e223 the iOS app was 4.2, the widget 4.1 and tvOS 4.0, and there are no tags. 4.4 / build 100 is committed in 84d2e20.) Do not bump versions in feature commits.
 
 ## Git (correction)
 - `main` was fast-forwarded to `add-english-new-exercises` (f0b67f8) and is the working branch. The exact fast-forward date cannot be recovered: `main`'s reflog is empty. f0b67f8 is dated 2026-07-17, and later commits on `main` run through 2026-07-24 (fbd39b2). Local `main` equals `origin/main` (fbd39b2) as of 2026-10-08.
