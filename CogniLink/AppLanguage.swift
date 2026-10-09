@@ -179,7 +179,16 @@ class LanguageManager: ObservableObject {
         self.currentLanguage = initialLang
     }
     
+    /// One central rule: an exercise group with fewer than `Exercise.minimumVisibleItems`
+    /// items is hidden from every list, random pick, recommendation and TV screen
+    /// (a 1-3 question "session" is a broken experience). The validator and the
+    /// raw catalogs are unaffected, so the groups stay checked and come back
+    /// automatically when they reach 5 items.
     var allExercises: [AppLanguage: [Exercise]] {
+        rawExercises.mapValues { $0.filter { $0.items.count >= Exercise.minimumVisibleItems } }
+    }
+
+    private var rawExercises: [AppLanguage: [Exercise]] {
         return [
             .english: LanguageExerciseData.allExercises +
                       CognitionExerciseData.allExercises +
@@ -294,6 +303,10 @@ class LanguageManager: ObservableObject {
     }
     
     func exercisesForSection(_ section: AppSection) -> [Exercise] {
+        rawExercisesForSection(section).filter { $0.items.count >= Exercise.minimumVisibleItems }
+    }
+
+    private func rawExercisesForSection(_ section: AppSection) -> [Exercise] {
         switch currentLanguage {
         case .english:
             // Combine the base English content with the new exercises, then route

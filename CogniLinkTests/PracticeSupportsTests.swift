@@ -518,3 +518,22 @@ extension PracticeSupportsTests {
     #expect(!ru.contains(where: { "іїєґ".contains($0) }))
   }
 }
+
+// MARK: - Hidden short groups
+
+extension PracticeSupportsTests {
+  @Test func noUserVisibleExerciseHasFewerThanFiveItems() {
+    for language in AppLanguage.allCases {
+      let manager = LanguageManager.shared
+      let saved = manager.currentLanguage
+      manager.currentLanguage = language
+      defer { manager.currentLanguage = saved }
+      let viaSection = [AppSection.language, .cognition, .functionalSkills].flatMap { manager.exercisesForSection($0) }
+      let viaAll = manager.allExercises[language] ?? []
+      for ex in viaSection + viaAll {
+        #expect(ex.items.count >= Exercise.minimumVisibleItems, "\(language): \(ex.title) has \(ex.items.count)")
+      }
+      #expect(!viaSection.isEmpty, "\(language) must still have exercises")
+    }
+  }
+}
