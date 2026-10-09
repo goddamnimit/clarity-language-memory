@@ -52,7 +52,7 @@ struct TVTwoPlayerContainerView: View {
             if activeExercise == nil || activeItems.isEmpty {
                 VStack(spacing: 20) {
                     ProgressView().scaleEffect(2)
-                    Text("Preparing session…")
+                    Text(FS.preparingSession)
                         .font(.system(size: 32))
                         .foregroundColor(Color.white.opacity(0.6))
                 }

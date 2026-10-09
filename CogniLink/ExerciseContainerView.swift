@@ -36,7 +36,7 @@ struct ExerciseContainerView: View {
                 VStack(spacing: 12) {
                     ProgressView()
                         .scaleEffect(1.2)
-                    Text("सत्र की तैयारी हो रही है...")
+                    Text(FS.preparingSession)
                         #if os(tvOS)
                         .font(.body)
                         #else
