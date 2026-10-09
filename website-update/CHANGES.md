@@ -2,23 +2,21 @@
 
 **Base file:** `~/Downloads/index (7).html` (the newer version you supplied). It already contains the Home Screen widget and "Play together on Apple TV" cards and the world map; the older `~/Downloads/index.html` I used first was discarded.
 
-## Added to "What makes Clarity different" (shipped since the last site update)
-Recovery or Maintenance framing, Caregiver insights, Speak your answers (voice input, iPhone), Large text and VoiceOver.
-
-## New "On the way" block at the end of the features section (each card has a *Coming soon* badge)
-Today card, Number skills, Remember It, Visual scanning, Hints and fewer choices, Reading passages and conversation cards (English first), Second daily reminder. None of these is in a released build.
+## Added to "What makes Clarity different" (one regular grid, no badges)
+- Shipped since the last site update: Recovery or Maintenance framing, Caregiver insights, Speak your answers (voice input), Large text and VoiceOver.
+- Tonight's features, moved out of "Coming soon" so the page is ready to publish **after 4.4 is approved** (do not deploy before): Today card, Number skills, Remember It, Visual scanning, Hints and fewer choices, Reading passages and conversation cards, Second daily reminder. The "On the way" block and the Coming soon badge/CSS are gone.
 
 ## Removed
-The "A new artwork every day" card, its translations in all page languages, and the artwork mention in the meta description (the app no longer ships the artwork backgrounds).
+- The "A new artwork every day" card, its translations and the meta-description mention (artwork backgrounds were removed from the apps).
+- The Workbook claim: the footer now reads "Some activity formats inspired by *A Workbook for Aphasia* (Cat R. Kenney)." in English and the Spanish equivalent. Only English and Spanish had the credit.
 
 ## Unchanged
-16 languages (Russian and Ukrainian are preview and are NOT listed), design, the world map (the SVG block is byte-identical to the base), App Store link, Android "In Testing" button, footer, widget showcase.
+16 languages (Russian and Ukrainian are preview and are NOT listed anywhere on the page), design, the world map (SVG block byte-identical to the base `index (7).html`), App Store link, Android "In Testing" button, widget showcase.
 
 ## Checks
-- HTML parser: no unclosed or mismatched tags (base and result).
-- 375 px width: `scrollWidth == clientWidth` (no horizontal scroll); map present with 16 markers; 22 feature cards, 7 "Coming soon" badges.
-- New cards have no `data-i18n` key, so they stay in English when a visitor switches the page language (the switcher only replaces keyed text). Translations for the 11 new cards are not written.
+HTML parser: no unclosed/mismatched tags. New cards have no `data-i18n` key, so they stay in English when a visitor switches the page language; page translations of the 11 new cards are not written.
 
-## Not done / yours
-- **No deploy:** the Netlify CLI is not installed here. Drag `website-update/` into Netlify.
-- The base has no privacy-policy or support link and the footer still says "Content adapted from *A Workbook for Aphasia*"; the Workbook forbids republishing its pages. Your call.
+## Still inaccurate / yours
+- Footer and hero say "iOS 16+"; the app's deployment target is iOS 17.6.
+- No privacy-policy or support link exists in the base file.
+- No Netlify CLI here: drag `website-update/` into Netlify after 4.4 is approved.
