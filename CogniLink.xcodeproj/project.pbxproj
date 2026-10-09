@@ -13,13 +13,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C1A211D000000000000000E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1A211D000000000000000D1;
-			remoteInfo = ClarityWidget;
-		};
 		096B04082FCD05DC004A96A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
@@ -48,7 +41,28 @@
 			remoteGlobalIDString = 09987EB62FE46B5300EDF7C1;
 			remoteInfo = ClarityTV;
 		};
+		C1A211D000000000000000E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 096B03F22FCD05D9004A96A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1A211D000000000000000D1;
+			remoteInfo = ClarityWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1A211D000000000000000E4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C1A211D000000000000000B1 /* ClarityWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		096B03FA2FCD05D9004A96A3 /* CogniLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CogniLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,20 +126,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C1A211D000000000000000E4 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				C1A211D000000000000000B1 /* ClarityWidget.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		096B03F72FCD05D9004A96A3 /* Frameworks */ = {
@@ -710,6 +710,8 @@
 				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text so you can answer exercises out loud instead of typing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -748,6 +750,8 @@
 				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text so you can answer exercises out loud instead of typing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
