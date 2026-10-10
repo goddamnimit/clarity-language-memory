@@ -189,3 +189,12 @@ was already installed.
 - `website-update/CHANGES.md` was moved to `website-CHANGES.md` in the repository root so it is not
   published. `website-update/` holds only `index.html`, `video/` and `images/`.
 - `scripts/test.mjs` now tests `index.html`.
+
+## Custom domain, 2026-10-10
+
+- The site's public address is now `https://claritylanguageandmemory.com`, still hosted on Netlify.
+  Netlify: domain added as primary, `www` redirects to it, Let's Encrypt certificate issued.
+- GoDaddy DNS: `A @` changed from "WebsiteBuilder Site" to `75.2.60.5`; `CNAME www` changed from
+  `claritylanguageandmemory.com` to `claritymemoryandcognition.netlify.app`. Nothing else touched.
+- `website-update/_redirects` sends the old `claritymemoryandcognition.netlify.app` address to the
+  new domain (301). The film's closing shot, transcript and captions show the new domain.

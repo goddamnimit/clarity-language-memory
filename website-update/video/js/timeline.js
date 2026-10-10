@@ -3,7 +3,7 @@
 
 export const DURATION = 60;
 
-export const SITE_URL = 'claritymemoryandcognition.netlify.app';
+export const SITE_URL = 'claritylanguageandmemory.com';
 
 /*
  * Copy markup: *asterisks* mark the italic sage emphasis, | is a line break.
