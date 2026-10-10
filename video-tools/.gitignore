@@ -1,0 +1,6 @@
+node_modules/
+out/
+film/
+.venv/
+font-src/
+.vite/

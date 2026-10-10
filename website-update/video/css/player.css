@@ -1,0 +1,316 @@
+/* Clarity film player. Palette and type match the main site's stylesheet. */
+:root {
+  --ink: #2B3A4A;
+  --ink-light: #566878;
+  --sage: #7BA898;
+  --sage-text: #5F9282;
+  --sage-light: #B4D4C8;
+  --sage-pale: #EBF4F1;
+  --cream: #F7F3EE;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.player {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--cream);
+}
+
+/* The stage is always 16:9; its pixel size is set from script. */
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+  max-height: 100vh;
+  overflow: hidden;
+  background: var(--cream);
+}
+.stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.player[data-started='true'] .poster { display: none; }
+
+/* ── Copy layer: authored at 1920 x 1080 and scaled to the stage ───────── */
+.type-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: 0 0;
+  pointer-events: none;
+  user-select: none;
+  color: var(--ink);
+}
+.copy { position: absolute; margin: 0; }
+.copy__line { display: block; }
+.copy__word { display: inline-block; will-change: transform, opacity, filter; }
+.copy__word.is-em { font-style: italic; color: var(--sage-text); }
+
+.copy--headline,
+.copy--caption {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+.copy--headline {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 990px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 138px;
+  line-height: 1.1;
+  text-align: center;
+}
+.copy--sub {
+  left: 0;
+  right: 0;
+  top: 706px;
+  font-size: 46px;
+  font-weight: 400;
+  color: var(--ink-light);
+  text-align: center;
+}
+
+.copy--caption.copy--left {
+  left: 130px;
+  top: 404px;
+  width: 850px;
+  font-size: 88px;
+  line-height: 1.1;
+}
+.copy--caption.copy--bottom {
+  left: 140px;
+  right: 140px;
+  top: 880px;
+  font-size: 68px;
+  line-height: 1.14;
+  text-align: center;
+}
+
+.player[data-controls='true'] .copy--caption.copy--bottom {
+  transform: translateY(calc(-1px * var(--controls-lift, 0)));
+  background: rgba(247, 243, 238, 0.9);
+  box-shadow: 0 0 36px 36px rgba(247, 243, 238, 0.9);
+}
+.player[data-controls='true'] .copy--eyebrow.copy--bottom { opacity: 0; }
+
+.copy--eyebrow.copy--left { left: 130px; top: 316px; }
+.copy--eyebrow.copy--bottom { left: 0; right: 0; top: 808px; text-align: center; }
+.eyebrow {
+  display: inline-block;
+  padding: 11px 28px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(123, 168, 152, 0.3);
+  background: var(--sage-pale);
+  color: var(--sage-text);
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  will-change: transform, opacity, filter;
+}
+
+.copy--brand {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.copy--brand > * { will-change: transform, opacity, filter; }
+.brand__mark {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 500;
+  font-size: 214px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.brand__mark span { color: var(--sage); }
+.brand__line { margin-top: 30px; font-size: 40px; font-weight: 500; }
+.brand__line span { display: inline-block; white-space: pre; }
+.brand__store {
+  margin-top: 46px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 62px;
+  border-radius: 100px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 34px;
+  font-weight: 600;
+  box-shadow: 0 8px 32px rgba(43, 58, 74, 0.22);
+}
+.brand__store svg { width: 30px; height: 37px; fill: currentColor; }
+.brand__url {
+  margin-top: 42px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--sage);
+  font-size: 38px;
+  font-weight: 500;
+}
+.brand__note { margin-top: 26px; font-size: 27px; font-weight: 500; color: var(--ink-light); }
+
+/* ── Controls ──────────────────────────────────────────────────────────── */
+.start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(56px, 9vw, 96px);
+  height: clamp(56px, 9vw, 96px);
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(43, 58, 74, 0.32);
+}
+.start svg { width: 42%; height: 42%; margin-left: 6%; }
+.start:hover { background: var(--sage); }
+.player[data-started='true'] .start,
+.player[data-loading='true'] .start { display: none; }
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: rgba(43, 58, 74, 0.88);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+.player[data-loading='true'] .status,
+.player[data-error='true'] .status { display: block; }
+.player[data-error='true'] .start { display: none; }
+
+.controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 18px 10px 8px;
+  background: linear-gradient(to top, rgba(43, 58, 74, 0.62), rgba(43, 58, 74, 0));
+  color: var(--white);
+  opacity: 0;
+  pointer-events: none;
+}
+.player[data-controls='true'] .controls { opacity: 1; pointer-events: auto; }
+.player:not([data-started='true']) .controls { display: none; }
+
+.controls button {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.controls button:hover { background: rgba(255, 255, 255, 0.18); }
+.controls svg { width: 20px; height: 20px; fill: currentColor; }
+.controls .icon-pause,
+.player[data-playing='true'] .controls .icon-play,
+.controls .icon-sound,
+.controls [aria-pressed='false'] .icon-muted { display: none; }
+.player[data-playing='true'] .controls .icon-pause,
+.controls [aria-pressed='false'] .icon-sound { display: block; }
+
+.seek {
+  flex: 1;
+  min-width: 40px;
+  height: 40px;
+  margin: 0 6px;
+  accent-color: var(--sage-light);
+  cursor: pointer;
+}
+.time {
+  flex: none;
+  min-width: 78px;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+:focus-visible { outline: 3px solid var(--sage-light); outline-offset: 2px; }
+.start:focus-visible { outline-color: var(--ink); outline-offset: 4px; }
+
+.transcript {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Small players (phones): larger copy so every caption stays readable. */
+.stage.is-compact .copy--eyebrow { display: none; }
+.stage.is-compact .copy--sub { top: 716px; font-size: 64px; }
+.stage.is-compact .copy--caption.copy--left { left: 100px; top: 330px; width: 930px; font-size: 104px; }
+.stage.is-compact .copy--caption.copy--bottom { left: 60px; right: 60px; top: 836px; font-size: 90px; line-height: 1.1; }
+.stage.is-compact .copy--brand { justify-content: flex-start; padding-top: 70px; }
+.stage.is-compact .brand__mark { font-size: 190px; }
+.stage.is-compact .brand__line { margin-top: 22px; font-size: 68px; line-height: 1.2; }
+.stage.is-compact .brand__line span { display: block; }
+.stage.is-compact .brand__line .brand__dot { display: none; }
+.stage.is-compact .brand__store { margin-top: 34px; padding: 40px 76px; gap: 26px; font-size: 52px; }
+.stage.is-compact .brand__store svg { width: 44px; height: 54px; }
+.stage.is-compact .brand__url { margin-top: 34px; font-size: 64px; }
+.stage.is-compact .brand__note { margin-top: 22px; font-size: 52px; }
+.stage.is-compact .controls { padding: 6px 2px 2px; gap: 0; }
+.stage.is-compact .controls button { width: 36px; height: 36px; }
+.stage.is-compact .seek { height: 36px; }
+.stage.is-compact .time { display: none; }
+
+/* Frame capture: the film only, at exactly the viewport size. */
+.player[data-capture='true'] .controls,
+.player[data-capture='true'] .start,
+.player[data-capture='true'] .status,
+.player[data-capture='true'] .poster { display: none; }
+

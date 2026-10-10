@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarity: Language &amp; Memory. A one-minute tour</title>
+  <meta name="description" content="A one-minute, captioned tour of Clarity: Language &amp; Memory." />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/player.css" />
+</head>
+<body>
+  <div class="player" id="player" data-audio="" role="region" aria-label="Clarity tour video">
+    <div class="stage" id="stage">
+      <canvas aria-hidden="true"></canvas>
+      <div class="type-layer" aria-hidden="true"></div>
+      <img class="poster" src="poster.jpg" width="1280" height="720" alt="" />
+
+      <button class="start" id="start" type="button" aria-label="Play the Clarity tour (one minute, silent, captioned)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z"/></svg>
+      </button>
+      <div class="status" id="status" role="status">Loading&hellip;</div>
+
+      <div class="controls" id="controls">
+        <button type="button" id="toggle" aria-label="Play">
+          <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z"/></svg>
+          <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z"/></svg>
+        </button>
+        <button type="button" id="restart" aria-label="Restart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7.5 6 12 10V7a5.5 5.5 0 1 1-5.5 5.5h-2A7.5 7.5 0 1 0 12 5z"/></svg>
+        </button>
+        <input class="seek" id="seek" type="range" min="0" max="60" step="0.05" value="0" aria-label="Seek" />
+        <span class="time" id="time" aria-hidden="true">0:00 / 1:00</span>
+        <button type="button" id="mute" aria-label="Mute" aria-pressed="true" title="This version is silent; every line is captioned on screen.">
+          <svg class="icon-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm11.5 3a4 4 0 0 0-2-3.46v6.92a4 4 0 0 0 2-3.46zm-2-8.7v2.1a7 7 0 0 1 0 13.2v2.1a9 9 0 0 0 0-17.4z"/></svg>
+          <svg class="icon-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm17.3.1-1.4-1.4-2.4 2.4-2.4-2.4-1.4 1.4 2.4 2.4-2.4 2.4 1.4 1.4 2.4-2.4 2.4 2.4 1.4-1.4-2.4-2.4 2.4-2.4z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="transcript">
+      <h1>Clarity: Language &amp; Memory. A one-minute tour</h1>
+      <p>This video is silent. Every line below appears on screen as a caption.</p>
+      <ol>
+        <li>Words, one gentle step at a time.</li>
+        <li>Language and memory practice, at your own pace.</li>
+        <li>Short sessions: five questions at a time.</li>
+        <li>Tap an answer, or say it aloud.</li>
+        <li>Calm, encouraging feedback.</li>
+        <li>A short Baseline Assessment sets a starting level.</li>
+        <li>Then difficulty adapts quietly in the background.</li>
+        <li>16 languages, one app.</li>
+        <li>More than 18,000 practice questions.</li>
+        <li>Farsi and Arabic read right to left. So does Clarity.</li>
+        <li>Caregiver Mode, protected by a PIN.</li>
+        <li>Plain-language insights and a PDF progress report.</li>
+        <li>Gentle reminders, and a widget on the Home Screen.</li>
+        <li>Together on Apple TV.</li>
+        <li>Two Player Mode: take turns with one remote.</li>
+        <li>Free. Offline. Private.</li>
+        <li>Clarity. Free on the App Store for iPhone, iPad and Apple TV. claritymemoryandcognition.netlify.app. Android coming soon.</li>
+      </ol>
+    </div>
+  </div>
+
+  <noscript><p style="padding:24px;font-family:sans-serif">This video needs JavaScript. A caption file is available at <a href="captions.vtt">captions.vtt</a>.</p></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

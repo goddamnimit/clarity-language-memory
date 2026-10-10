@@ -1,0 +1,21 @@
+{
+  "name": "clarity-video-tools",
+  "version": "1.0.0",
+  "description": "Local tooling for the Clarity tour video: preview, tests, fonts, captions and the MP4 render.",
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "sync": "rsync -a --delete --exclude README.md ../website-update/video/ film/",
+    "preview": "node scripts/serve.mjs",
+    "captions": "node scripts/build-captions.mjs",
+    "render": "node scripts/capture.mjs video 60",
+    "postinstall": "node scripts/patch-videowright.mjs",
+    "render:videowright": "npm run sync && videowright render clarity_tour --audio-track none --output out/clarity-1080p60-videowright.mp4 --verbose"
+  },
+  "type": "module",
+  "private": "true",
+  "devDependencies": {
+    "playwright": "^1.64.0",
+    "three": "^0.186.1",
+    "videowright": "^0.1.1"
+  }
+}

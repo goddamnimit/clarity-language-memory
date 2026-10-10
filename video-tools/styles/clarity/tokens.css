@@ -1,0 +1,9 @@
+/* Clarity palette, mirrored from the website's stylesheet. The film carries its
+   own copy in film/css/player.css; these tokens are here for videowright's HUD. */
+:root {
+	--color-bg: #F7F3EE;
+	--color-fg: #2B3A4A;
+	--color-accent: #7BA898;
+	--font-display: Fraunces, Georgia, serif;
+	--font-body: Inter, sans-serif;
+}

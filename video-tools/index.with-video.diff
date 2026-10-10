@@ -1,0 +1,163 @@
+diff --git a/website-update/index.html b/website-update/index.html
+index 23e4dfa..7ca8a11 100644
+--- a/website-update/index.html
++++ b/website-update/index.html
+@@ -879,6 +879,62 @@
+       .lang-pill { animation: none; }
+       .hero-eyebrow-dot { animation: none; }
+     }
++
++    /* ── VIDEO ───────────────────────────────────────────── */
++    .video-section { padding: 24px 40px 88px; text-align: center; }
++    .video-section .section-title { margin-left: auto; margin-right: auto; }
++    .video-frame {
++      position: relative;
++      max-width: 960px;
++      margin: 0 auto;
++      aspect-ratio: 16 / 9;
++      border-radius: var(--radius-lg);
++      overflow: hidden;
++      background: var(--cream) url('video/poster.jpg') center / cover no-repeat;
++      box-shadow: 0 0 0 1px rgba(43,58,74,0.08), var(--shadow-lg);
++    }
++    @supports not (aspect-ratio: 16 / 9) {
++      .video-frame { height: 0; padding-top: 56.25%; }
++    }
++    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
++    .video-note { margin-top: 14px; font-size: 0.74rem; color: rgba(86,104,120,0.6); }
++    .video-note a { color: inherit; }
++    /* ── PROMISE ─────────────────────────────────────────── */
++    .promise-section { background: var(--sage-pale); padding: 100px 40px; text-align: center; }
++    .promise-section .section-title { margin-left: auto; margin-right: auto; max-width: 720px; }
++    .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left; }
++    .promise-card {
++      background: var(--white);
++      border: 1px solid rgba(43,58,74,0.07);
++      border-radius: var(--radius-lg);
++      padding: 34px 32px;
++      box-shadow: var(--shadow-sm);
++    }
++    .promise-card h3 { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 10px; }
++    .promise-card p { color: var(--ink-light); font-size: 0.95rem; line-height: 1.75; }
++
++    /* ── FROM THE MAKER ──────────────────────────────────── */
++    .maker-section { padding: 108px 40px; }
++    .maker-inner { max-width: 860px; margin: 0 auto; }
++    .maker-section .section-title { margin-bottom: 40px; }
++    .maker-section img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
++    .maker-lead { aspect-ratio: 16 / 10; object-position: center 40%; margin-bottom: 44px; }
++    .maker-mom p { color: var(--ink); font-size: 1.14rem; line-height: 1.9; margin-bottom: 22px; }
++    .maker-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 44px 0 72px; }
++    .maker-gallery img { aspect-ratio: 3 / 4; object-position: center 30%; border-radius: var(--radius-md); }
++    .maker-me { border-top: 1px solid rgba(43,58,74,0.1); padding-top: 44px; max-width: 680px; }
++    .maker-me h3 { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 12px; }
++    .maker-me p { color: var(--ink-light); font-size: 0.96rem; line-height: 1.8; margin-bottom: 14px; }
++
++    .footer-disclaimer { max-width: 760px; margin: 0 auto 24px; font-size: 0.78rem; line-height: 1.7; color: rgba(255,255,255,0.62); }
++
++    @media (max-width: 768px) {
++      .promise-section, .maker-section { padding: 72px 20px; }
++      .maker-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 32px 0 52px; }
++      .maker-mom p { font-size: 1.05rem; }
++      .video-section { padding: 16px 20px 64px; }
++      .video-frame { border-radius: var(--radius-md); }
++    }
+   </style>
+ </head>
+ <body>
+@@ -922,7 +978,7 @@
+       <div class="stat-label">Languages &amp; Counting</div>
+     </div>
+     <div class="stat-item">
+-      <div class="stat-number">19K<em>+</em></div>
++      <div class="stat-number">18K<em>+</em></div>
+       <div class="stat-label">Therapy Items</div>
+     </div>
+     <div class="stat-item">
+@@ -959,12 +1015,24 @@
+       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-11.046 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM2.89 8.333l-1.717-3.24a.3.3 0 0 1 .534-.274l1.739 3.28A11.13 11.13 0 0 1 12 6.5c1.99 0 3.861.523 5.554 1.599l1.739-3.28a.3.3 0 0 1 .534.274L18.11 8.333A10.39 10.39 0 0 1 22.5 16.5h-21a10.39 10.39 0 0 1 4.39-8.167z"/></svg>
+       Android — In Testing
+     </span>
+-    <a href="#exercises" class="btn-secondary">
++    <a href="#video" class="btn-secondary">
+       <span data-i18n="btn_how">See how it works</span>
+     </a>
+   </div>
+ </section>
+ 
++<!-- VIDEO -->
++<section class="video-section" id="video">
++  <div class="section-inner">
++    <div class="section-label">See it in one minute</div>
++    <h2 class="section-title display">A <em>gentle</em> tour of Clarity</h2>
++    <div class="video-frame">
++      <iframe src="video/" title="Clarity: a one-minute captioned tour" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>
++    </div>
++    <p class="video-note">Silent, with captions on screen. Space plays or pauses, R restarts, M mutes, and the arrow keys skip five seconds. <a href="video/captions.vtt">Read the captions as text</a>.</p>
++  </div>
++</section>
++
+ <!-- ABOUT BAND -->
+ <div class="wave" style="background: var(--cream);">
+   <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+@@ -1406,6 +1474,52 @@
+ </section>
+ 
+ <!-- CTA -->
++<!-- PROMISE -->
++<section class="promise-section" id="promise">
++  <div class="section-inner">
++    <div class="section-label">Our promise</div>
++    <h2 class="section-title display">Free, private, and <em>never for sale</em></h2>
++    <div class="promise-grid">
++      <div class="promise-card">
++        <h3>Free, with nothing to unlock</h3>
++        <p>No price, no subscription, no in-app purchases and no ads. Everything in the app is included.</p>
++      </div>
++      <div class="promise-card">
++        <h3>Your data is never sold</h3>
++        <p>Clarity has no accounts and makes no network connections. What you practise stays on your device. It is never collected, never shared and never sold.</p>
++      </div>
++      <div class="promise-card">
++        <h3>Not a business</h3>
++        <p>Clarity is not built to make money. It is a personal project, made to help the people practising and the families beside them.</p>
++      </div>
++    </div>
++  </div>
++</section>
++
++<!-- FROM THE MAKER: written by Nimit, placed word for word. -->
++<section class="maker-section" id="story">
++  <div class="maker-inner">
++    <div class="section-label">Why Clarity exists</div>
++    <h2 class="section-title display">About my <em>mom</em></h2>
++    <img class="maker-lead" src="images/family-2.jpg" alt="My mom and me sitting together on a stone bench" loading="lazy" />
++    <div class="maker-mom">
++      <p>My Mother has been a shining light in our family, extended family and our community for as long as I’ve lived. From the library of Mater Dei High School to the aqua aerobics class at any number of LA Fitnesses, 12+ person sleepovers to pizza parties in the park, she is loved anywhere someone is lucky enough to meet her. She’s the type of person to make friends with you while you’re standing in a line, and it doesn’t even have to be that long. When my father’s colleague casually mentioned that spicy food helps induce labor, and his wife was past her due date, Mom invited them both over and made the spiciest meal I’ve ever had from her kitchen; 12 hours later, the wife was in labor.</p>
++      <p>That’s honestly just one of a million stories I could tell, but the truth is, if you knew my mom you had your own stories and cherish them as I do mine. Her warmth and kindness was only matched by a stern tone when stepping out of line. The volume of her voice is the reason why everyone in our bloodline has to be told to quiet down all the time.  Her disease may have robbed her of a lot, but the booming laughter and love she exudes will never diminish. We hope this app helps you hold onto those special parts of your loved ones as well.</p>
++    </div>
++    <div class="maker-gallery">
++      <img src="images/family-4.jpg" alt="My mom and me standing on a sunny beach" loading="lazy" />
++      <img src="images/family-5.jpg" alt="My mom and me in front of a lit Christmas tree at night" loading="lazy" />
++      <img src="images/family-3.jpg" alt="My mom and me outside a carved stone temple" loading="lazy" />
++      <img src="images/family-1.jpg" alt="My mom in her wheelchair with me behind her, out shopping" loading="lazy" />
++    </div>
++    <div class="maker-me">
++      <h3>About me</h3>
++      <p>I set out to create Clarity as an easy, fun, low-pressure way for my mom to exercise her mind while she deals with Frontotemporal Dementia. With the help of some AI coding tools, I was able to make something she can use every day in order to help keep her mind active. Now, I’d like to share it with as many people as possible and try to allow families to keep their loved ones as long as they can.</p>
++      <p>I have no monetary goals with this app. I never will advertise, never will sell data, and never will use this app for my own personal financial gain. I set out to help people, and  my mom would whoop my ass if I strayed from my morals.</p>
++    </div>
++  </div>
++</section>
++
+ <section class="cta-section" id="download">
+   <h2 class="display" data-i18n="cta_h2">Ready to <em>begin?</em></h2>
+   <p data-i18n="cta_p">Clarity is free and available now on the App Store.</p>
+@@ -1438,6 +1552,7 @@
+     </div>
+   </div>
+   <hr class="footer-divider" />
++  <p class="footer-disclaimer">Clarity is a practice tool. It is not a medical device and is not intended to diagnose, treat, cure or prevent any condition. It does not replace assessment, advice or therapy from a speech-language pathologist, doctor or other qualified professional. If you have concerns about your health or someone else's, please talk to a clinician.</p>
+   <p data-i18n="footer_credit">
+     Built with care for the aphasia and FTD community.<br/>
+     Some activity formats inspired by <em>A Workbook for Aphasia</em> (Cat R. Kenney).<br/><br/>
