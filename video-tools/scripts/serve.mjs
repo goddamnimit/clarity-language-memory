@@ -26,8 +26,10 @@ const TYPES = {
 export function startServer(listenPort = port) {
   const server = createServer((request, response) => {
     const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
-    let file = normalize(join(root, pathname));
-    if (!file.startsWith(root)) {
+    // /__work/ exposes tooling scratch files (stills for social images) to local pages only.
+    const base = pathname.startsWith("/__work/") ? resolve(root, "../video-tools/out/social") : root;
+    let file = normalize(join(base, pathname.replace(/^\/__work/, "")));
+    if (!file.startsWith(base)) {
       response.writeHead(403).end();
       return;
     }
