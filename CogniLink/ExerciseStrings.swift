@@ -32,6 +32,7 @@ enum XS {
             case .amharic: return am
             case .russian: return ru
             case .ukrainian: return uk
+            case .german: return de
             }
         }
 

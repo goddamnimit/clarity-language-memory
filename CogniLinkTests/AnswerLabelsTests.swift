@@ -15,6 +15,13 @@ struct AnswerLabelsTests {
     #expect(AnswerLabels.fact == "Fact" && AnswerLabels.opinion == "Opinion")
   }
 
+  @Test func germanLabels() {
+    #expect(AnswerLabels.yesNo("Yes", in: .german) == "Ja")
+    #expect(AnswerLabels.yesNo("No", in: .german) == "Nein")
+    #expect(AnswerLabels.factOrOpinion("Fact", in: .german) == "Tatsache")
+    #expect(AnswerLabels.factOrOpinion("Opinion", in: .german) == "Meinung")
+  }
+
   @Test func englishAndUnlocalizedLanguagesKeepTheirExistingLabels() {
     #expect(AnswerLabels.yesNo("Yes", in: .english) == "Yes")
     #expect(AnswerLabels.yesNo("No", in: .english) == "No")

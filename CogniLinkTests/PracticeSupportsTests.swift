@@ -484,8 +484,8 @@ extension PracticeSupportsTests {
     #expect(AppLanguage.ukrainian.isPreview)
     #expect(!AppLanguage.visibleCases.contains(.russian))
     #expect(!AppLanguage.visibleCases.contains(.ukrainian))
-    #expect(AppLanguage.visibleCases.count == 16)
-    #expect(AppLanguage.allCases.count == 18)
+    #expect(AppLanguage.visibleCases.count == 17)   // 16 + German (visible, held groups gated)
+    #expect(AppLanguage.allCases.count == 19)
     for language in AppLanguage.visibleCases { #expect(!language.isPreview) }
   }
 

@@ -180,6 +180,7 @@ struct TVOpenEndedView: View {
         case .amharic:    return "የውይይት ርዕስ"
         case .russian:    return "Тема для обсуждения"
         case .ukrainian:    return "Тема для обговорення"
+        case .german:    return "Gesprächsanregung"
         }
     }
 
@@ -203,6 +204,7 @@ struct TVOpenEndedView: View {
         case .amharic:    return "የሞዴል መልስ"
         case .russian:    return "Образец ответа"
         case .ukrainian:    return "Зразок відповіді"
+        case .german:    return "Musterantwort"
         }
     }
 
@@ -226,6 +228,7 @@ struct TVOpenEndedView: View {
         case .amharic:    return "ትክክል ነኝ"
         case .russian:    return "Я ответил(а) верно"
         case .ukrainian:    return "У мене вийшло"
+        case .german:    return "Ich hatte es richtig"
         }
     }
 
@@ -249,6 +252,7 @@ struct TVOpenEndedView: View {
         case .amharic:    return "ተጨማሪ ልምምድ እፈልጋለሁ"
         case .russian:    return "Мне нужно ещё потренироваться"
         case .ukrainian:    return "Мені потрібно більше практики"
+        case .german:    return "Ich muss noch üben"
         }
     }
 
@@ -272,6 +276,7 @@ struct TVOpenEndedView: View {
         case .amharic:    return "መልሱን አሳይ"
         case .russian:    return "Показать ответ"
         case .ukrainian:    return "Показати відповідь"
+        case .german:    return "Antwort anzeigen"
         }
     }
 }

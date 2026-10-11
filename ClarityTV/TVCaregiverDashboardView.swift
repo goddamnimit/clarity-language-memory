@@ -183,6 +183,7 @@ struct TVCaregiverDashboardView: View {
         case .amharic:    return "የእንክብካቤ ሰጪ ማዕከል"
         case .russian:    return "Центр для ухаживающих"
         case .ukrainian:    return "Центр доглядальника"
+        case .german:    return "Betreuungsbereich"
         }
     }
 
@@ -206,6 +207,7 @@ struct TVCaregiverDashboardView: View {
         case .amharic:    return "ክሊኒካዊ ክትትልን እና ግምገማዎችን ያስተዳድሩ"
         case .russian:    return "Отслеживание состояния и оценки"
         case .ukrainian:    return "Керуйте клінічним відстеженням та оцінюваннями"
+        case .german:    return "Klinische Verfolgung und Tests verwalten"
         }
     }
 }

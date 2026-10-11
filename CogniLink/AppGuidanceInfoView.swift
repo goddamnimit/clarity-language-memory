@@ -80,6 +80,7 @@ extension AppLanguage {
         case .amharic:    return "የማገገም እና ሁኔታን ጠብቆ ማቆየት ሁነታዎች"
         case .russian:    return "Режим восстановления и режим поддержания"
         case .ukrainian:    return "Режими «Відновлення» та «Підтримання»"
+        case .german:    return "Genesungs- und Erhaltungsmodus"
         }
     }
 
@@ -103,6 +104,7 @@ extension AppLanguage {
         case .amharic:    return "የማገገም ሁነታ እድገትን ከመሻሻል ጋር ያያይዘዋል — ይህም ትክክለኛነት በጊዜ ሂደት ሲጨምር ወይም ሲቀንስ ግንዛቤዎች ያሳያሉ። በአንጻሩ ሁኔታን ጠብቆ ማቆየት ሁነታ እድገትን ከጥንካሬ ጋር ያያይዘዋል፡ አፈጻጸም ሳይቀያየር በቋሚነት መቀጠሉ መሻሻል አለመኖሩን ብቻ ሳይሆን በራሱ እንደ ጥሩ ውጤት ይቆጠራል።"
         case .russian:    return "Режим «Восстановление» оценивает прогресс как улучшение: подсказки показывают, растёт или снижается точность со временем. Режим «Поддержание» делает акцент на постоянстве: стабильный результат считается хорошим исходом сам по себе, а не просто отсутствием улучшений."
         case .ukrainian:    return "Режим «Відновлення» розглядає прогрес як покращення: спостереження вказують, коли точність з часом зростає чи знижується. Режим «Підтримання» натомість робить акцент на сталості: стабільні результати вважаються позитивним підсумком самі по собі, а не лише відсутністю покращення."
+        case .german:    return "Der Genesungsmodus stellt den Fortschritt als Verbesserung dar – Erkenntnisse weisen darauf hin, wenn die Genauigkeit über die Zeit steigt oder sinkt. Der Erhaltungsmodus stellt stattdessen Beständigkeit in den Vordergrund: Gleichbleibende Leistung gilt für sich genommen als positives Ergebnis und nicht nur als ausbleibende Verbesserung."
         }
     }
 
@@ -126,6 +128,7 @@ extension AppLanguage {
         case .amharic:    return "ይህ ሲበራ፣ በአፈጻጸም ላይ የሚታይ ለውጥ ምልክት ከመደረጉ በፊት በሁለት የተነጠሉ የልምምድ ጊዜያት ላይ በተከታታይ መታየት አለበት። አንድ ያልተለመደ ቀን ብቻውን አዲስ ግንዛቤ አይሰጥም።"
         case .russian:    return "Если это включено, изменение результатов отмечается только тогда, когда оно устойчиво проявляется в двух отдельных периодах занятий. Один необычный день не вызовет подсказки."
         case .ukrainian:    return "Коли цей параметр увімкнено, зміна результатів має стабільно проявитися у двох окремих періодах практики, перш ніж про неї повідомлять. Один незвичайний день сам по собі не викличе спостереження."
+        case .german:    return "Wenn dies aktiviert ist, muss sich eine Veränderung der Leistung über zwei getrennte Übungszeiträume hinweg zeigen, bevor sie gemeldet wird. Ein einzelner ungewöhnlicher Tag löst allein keine Erkenntnis aus."
         }
     }
 
@@ -149,6 +152,7 @@ extension AppLanguage {
         case .amharic:    return "ስለ ቃላት አጠቃቀም ማስታወሻ"
         case .russian:    return "О формулировках"
         case .ukrainian:    return "Примітка щодо формулювань"
+        case .german:    return "Hinweis zur Formulierung"
         }
     }
 
@@ -172,6 +176,7 @@ extension AppLanguage {
         case .amharic:    return "በማገገም እና ሁኔታን ጠብቆ ማቆየት ሁነታዎች ውስጥ ጥቅም ላይ የዋሉት ቃላት አሁንም በባለሙያ ሐኪም እየተገመገሙ ነው። እዚህ ላይ ግራ የሚያጋባ ወይም የሚያስጨንቅ ነገር ካለ፣ እባክዎ እንደ መረጃ ብቻ ይውሰዱት እና በቀጥታ ለ\(patientName) የእንክብካቤ ቡድን ያሳውቁ።"
         case .russian:    return "Формулировки в режимах «Восстановление» и «Поддержание» всё ещё проверяются лицензированным специалистом. Если что-то здесь покажется непонятным или тревожным, воспринимайте это только как справочную информацию и обсудите с лечащей командой: \(patientName)."
         case .ukrainian:    return "Формулювання в режимах «Відновлення» та «Підтримання» ще перевіряє дипломований клініцист. Якщо щось тут здається незрозумілим або тривожним, сприймайте це лише як довідкову інформацію та обговоріть безпосередньо з медичною командою пацієнта (\(patientName))."
+        case .german:    return "Die Formulierungen im Genesungs- und im Erhaltungsmodus werden noch von einer approbierten Fachperson geprüft. Wenn etwas hier verwirrend oder beunruhigend klingt, betrachten Sie es bitte nur als Information und sprechen Sie es direkt mit dem Behandlungsteam von \(patientName) an."
         }
     }
 
@@ -195,6 +200,7 @@ extension AppLanguage {
         case .amharic:    return "የሕክምና ማስተባበያ ማስታወሻ"
         case .russian:    return "Медицинское предупреждение"
         case .ukrainian:    return "Клінічне застереження"
+        case .german:    return "Klinischer Haftungsausschluss"
         }
     }
 }

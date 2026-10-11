@@ -410,6 +410,7 @@ struct TVProgressView: View {
         case .amharic:    return "የእድገት ዳሽቦርድ"
         case .russian:    return "Ваш прогресс"
         case .ukrainian:    return "Панель прогресу"
+        case .german:    return "Fortschrittsübersicht"
         }
     }
 
@@ -433,6 +434,7 @@ struct TVProgressView: View {
         case .amharic:    return "የዕለት ተዕለት ውጤቶችዎን መከታተልዎን ይቀጥሉ!"
         case .russian:    return "Следите за своими ежедневными успехами!"
         case .ukrainian:    return "Продовжуйте відстежувати свої щоденні досягнення!"
+        case .german:    return "Behalten Sie Ihre täglichen Erfolge im Blick!"
         }
     }
 
@@ -456,6 +458,7 @@ struct TVProgressView: View {
         case .amharic:    return "የአሁኑ ተከታታይ ቀናት"
         case .russian:    return "Текущая серия"
         case .ukrainian:    return "Поточна серія"
+        case .german:    return "Aktuelle Serie"
         }
     }
 
@@ -479,6 +482,7 @@ struct TVProgressView: View {
         case .amharic:    return "ረጅሙ ተከታታይ ቀናት"
         case .russian:    return "Самая длинная серия"
         case .ukrainian:    return "Найдовша серія"
+        case .german:    return "Längste Serie"
         }
     }
 
@@ -502,6 +506,7 @@ struct TVProgressView: View {
         case .amharic:    return "የመጀመሪያ ሙከራ ትክክለኛነት"
         case .russian:    return "Точность с первой попытки"
         case .ukrainian:    return "Точність з першої спроби"
+        case .german:    return "Genauigkeit beim ersten Versuch"
         }
     }
 
@@ -525,6 +530,7 @@ struct TVProgressView: View {
         case .amharic:    return "በመጀመሪያው ክፍለ ጊዜ መልሶች ላይ የተመሠረተ"
         case .russian:    return "по первым ответам в занятиях"
         case .ukrainian:    return "за першими відповідями під час занять"
+        case .german:    return "basierend auf den ersten Antworten einer Einheit"
         }
     }
 
@@ -548,6 +554,7 @@ struct TVProgressView: View {
         case .amharic:    return "የሳምንት እንቅስቃሴ"
         case .russian:    return "Активность за неделю"
         case .ukrainian:    return "Активність за тиждень"
+        case .german:    return "Wöchentliche Aktivität"
         }
     }
 
@@ -571,6 +578,7 @@ struct TVProgressView: View {
         case .amharic:    return "ትክክለኛነት በምድብ"
         case .russian:    return "Точность по разделам"
         case .ukrainian:    return "Точність за категоріями"
+        case .german:    return "Genauigkeit nach Kategorie"
         }
     }
 
@@ -594,6 +602,7 @@ struct TVProgressView: View {
         case .amharic:    return "ዛሬ"
         case .russian:    return "Сегодня"
         case .ukrainian:    return "Сьогодні"
+        case .german:    return "Heute"
         }
     }
 
@@ -617,6 +626,7 @@ struct TVProgressView: View {
         case .amharic:    return "ያለፉ ቀናት"
         case .russian:    return "Предыдущие дни"
         case .ukrainian:    return "Попередні дні"
+        case .german:    return "Frühere Tage"
         }
     }
 
@@ -640,6 +650,7 @@ struct TVProgressView: View {
         case .amharic:    return "ማሳሰቢያ፡ የPDF ሪፖርት ወደ ውጪ መላክ የሚደገፈው በሞባይል መተግበሪያ ላይ ብቻ ነው።"
         case .russian:    return "Примечание: экспорт отчёта в PDF доступен только в мобильном приложении."
         case .ukrainian:    return "Примітка: експорт звіту у форматі PDF підтримується лише в мобільному застосунку."
+        case .german:    return "Hinweis: Der PDF-Bericht kann nur in der mobilen App exportiert werden."
         }
     }
 
@@ -704,6 +715,7 @@ struct TVProgressView: View {
         case .amharic:    return "ተከታታይ ቀናት እና ባጆች"
         case .russian:    return "Серии и награды"
         case .ukrainian:    return "Серії та значки"
+        case .german:    return "Serien und Abzeichen"
         }
     }
 
@@ -727,6 +739,7 @@ struct TVProgressView: View {
         case .amharic:    return "ጠቅላላ ክፍለ ጊዜዎች"
         case .russian:    return "Всего занятий"
         case .ukrainian:    return "Усього занять"
+        case .german:    return "Einheiten insgesamt"
         }
     }
 }

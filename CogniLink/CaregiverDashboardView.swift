@@ -582,6 +582,7 @@ extension AppLanguage {
         case .amharic:    return "የግብ አቅጣጫ"
         case .russian:    return "Цель занятий"
         case .ukrainian:    return "Мета терапії"
+        case .german:    return "Zielausrichtung"
         }
     }
 
@@ -607,6 +608,7 @@ extension AppLanguage {
             case .amharic:    return "ማገገም"
             case .russian:    return "Восстановление"
             case .ukrainian:    return "Відновлення"
+            case .german:    return "Genesung"
             }
         case .maintenance:
             switch self {
@@ -628,6 +630,7 @@ extension AppLanguage {
             case .amharic:    return "ሁኔታን ጠብቆ ማቆየት"
             case .russian:    return "Поддержание"
             case .ukrainian:    return "Підтримання"
+            case .german:    return "Erhalt"
             }
         }
     }
@@ -652,6 +655,7 @@ extension AppLanguage {
         case .amharic:    return "ማገገም፡ ዋናው ግብ መሻሻል መሆኑን ያሳያል። ሁኔታን ጠብቆ ማቆየት፡ አፈጻጸም ሳይቀያየር በተመሳሳይ ሁኔታ መቀጠሉን እንደ ጥሩ ውጤት ይቆጥረዋል።"
         case .russian:    return "Восстановление: подразумевается, что цель — улучшение. Поддержание: стабильный результат считается хорошим исходом."
         case .ukrainian:    return "Відновлення: формулювання виходять із того, що мета — покращення. Підтримання: формулювання вважають стабільні результати позитивним підсумком."
+        case .german:    return "Genesung: Die Darstellung geht davon aus, dass Verbesserung das Ziel ist. Erhalt: Die Darstellung wertet gleichbleibende Leistung als positives Ergebnis."
         }
     }
 
@@ -675,6 +679,7 @@ extension AppLanguage {
         case .amharic:    return "የዕለት ተዕለት መለዋወጥን ጠብቅ"
         case .russian:    return "Ожидаются колебания по дням"
         case .ukrainian:    return "Очікувати щоденних коливань"
+        case .german:    return "Tägliche Schwankungen erwarten"
         }
     }
 
@@ -698,6 +703,7 @@ extension AppLanguage {
         case .amharic:    return "የምትወዱት ሰው በሕክምናው ላይ ካለው ሁኔታ ውጭ፣ በሌሎች ምክንያቶች የዕለት ተዕለት መለዋወጥ (መውረድ እና መውጣት) የሚጠበቅ ከሆነ ይህንን ያብሩት።"
         case .russian:    return "Включите, если ежедневные подъёмы и спады ожидаемы по причинам, не связанным с тем, как у вашего близкого идут дела в терапии."
         case .ukrainian:    return "Увімкніть, якщо щоденні підйоми й спади очікувані з причин, не пов'язаних із тим, як ваша близька людина справляється з терапією."
+        case .german:    return "Aktivieren Sie dies, wenn tägliche Schwankungen aus Gründen zu erwarten sind, die nichts damit zu tun haben, wie es Ihrem Angehörigen in der Therapie geht."
         }
     }
 
@@ -721,6 +727,7 @@ extension AppLanguage {
         case .amharic:    return "ስለዚሁ መተግበሪያ መመሪያ"
         case .russian:    return "О рекомендациях приложения"
         case .ukrainian:    return "Про поради застосунку"
+        case .german:    return "Über die Hinweise dieser App"
         }
     }
 
@@ -744,6 +751,7 @@ extension AppLanguage {
         case .amharic:    return "የመመሪያ ባህሪያት"
         case .russian:    return "Подсказки и рекомендации"
         case .ukrainian:    return "Функції порад"
+        case .german:    return "Hinweisfunktionen"
         }
     }
 
@@ -767,6 +775,7 @@ extension AppLanguage {
         case .amharic:    return "ይህ መተግበሪያ አንዳንድ በሙከራ ላይ ያሉ የመመሪያ ባህሪያትን ያካትታል — ዝርዝሩን በማንኛውም ጊዜ ተንከባካቢ ማውጫ ውስጥ «ስለዚሁ መተግበሪያ መመሪያ» በሚለው ስር ይመልከቱ።"
         case .russian:    return "В приложении есть экспериментальные подсказки. Подробности всегда можно найти в меню ухаживающего: [О рекомендациях приложения]."
         case .ukrainian:    return "У цьому застосунку є кілька експериментальних функцій порад. Подробиці завжди можна знайти в меню доглядальника в розділі [Про поради застосунку]."
+        case .german:    return "Diese App enthält einige experimentelle Hinweisfunktionen – Details finden Sie jederzeit unter [Über die Hinweise dieser App] in Ihrem Betreuungsmenü."
         }
     }
 
@@ -790,6 +799,7 @@ extension AppLanguage {
         case .amharic:    return "እሺ"
         case .russian:    return "ОК"
         case .ukrainian:    return "Гаразд"
+        case .german:    return "OK"
         }
     }
 }

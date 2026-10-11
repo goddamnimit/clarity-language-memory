@@ -152,3 +152,17 @@ Combined defective-item rate: Chinese ~75%, Gujarati ~72%, Farsi ~86%, Korean ~6
 
 - **Fixed:** the iOS `YesNoView` compared the displayed label with the stored value `"Yes"`. In every non-English language the "Yes" button read "Sí", so a correct Yes answer was marked wrong. Labels are now mapped at display time (`AnswerLabels`); stored values stay exactly "Yes"/"No" and "Fact"/"Opinion". Regression test: `CogniLinkUITests/YesNoLabelDataTests`.
 - **Still open (follow-up):** only English, German and Italian have localized Yes/No and Fact/Opinion labels. The other 17 languages (Spanish, Hindi, Gujarati, Chinese, Farsi, Korean, Vietnamese, Arabic, Portuguese, Tagalog, Punjabi, Armenian, Japanese, French, Amharic, Russian, Ukrainian) show: Fact/Opinion in English on iOS and tvOS; Yes/No as the Spanish "Sí"/"No" on iOS (correct only for Spanish) and as English "Yes"/"No" on tvOS.
+
+## German and Italian: shipping with native review pending (2026-10-10)
+
+- Content is AI-authored and unreviewed; both ship visible with an in-app notice. Eight groups per language are held back until review clears them (`LanguageReviewStatus.*HeldGroupsReleased`). Hide a language entirely with `LanguageReviewStatus.germanHidden` / `italianHidden`. The reviewer package is in `../CogniLink-review/`.
+
+## Hard-coded English text on exercise screens, in every language (found 2026-10-10)
+
+**Status 2026-10-11 (uncommitted): fixed for everything listed except the Activities-list truncation.** Strings live in `ExerciseStrings.swift` (`XS`, plural-aware `daysInARow`/`personalBestDays`); reviewer CSVs in `CogniLink-review/exercise_strings/`. Non-German/Italian translations need native review.
+
+Seen while screenshotting German and Italian; present in all languages including German and Italian, not new. Follow-up candidates:
+- iOS: "Next Question →" (`ExerciseContainerView.swift:313`), "Try Again" (`MultipleChoiceView`, `MinimalPairsView`, `CategoryCrossOutView`, `SequencingView`), "Check Order", "Available Positions:", "Correct Steps Sequence:" (`SequencingView`), "Remember these words:", "Ready?" (`MultipleChoiceView`), "Type your answer here...", "Clear", "Model Answer", voice-input hints (`OpenEndedView`).
+- tvOS: "Score: n/m", "Replay" (`TVExerciseContainerView`), "Your Score", "New Session", "Change Activity" (`TVCompletionView`).
+- Plural: "days in a row"/"Personal Best: {n} days" are rendered with the count in front, so a count of 1 reads "1 Tage in Folge" (German, seen on screen) and "1 giorni di serie" (Italian, seen on screen); the English source string has the same shape. Needs plural-aware strings.
+- iOS Activities list shows each exercise's instruction on one truncated line (long German/Italian instructions end in "…").

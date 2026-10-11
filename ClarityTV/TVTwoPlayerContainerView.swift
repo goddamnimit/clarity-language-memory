@@ -333,6 +333,7 @@ struct TVTwoPlayerContainerView: View {
         case .amharic:    return "am-ET"
         case .russian:    return "ru-RU"
         case .ukrainian:    return "uk-UA"
+        case .german:    return "de-DE"
         }
     }
 
@@ -358,6 +359,7 @@ struct TVTwoPlayerContainerView: View {
         case .amharic:    return "ሪሞቱን ለ\(name) ይስጡ!"
         case .russian:    return "Передайте пульт: \(name)!"
         case .ukrainian:    return "Передайте пульт: \(name)!"
+        case .german:    return "Geben Sie die Fernbedienung an \(name) weiter!"
         }
     }
 
@@ -381,6 +383,7 @@ struct TVTwoPlayerContainerView: View {
         case .amharic:    return "\(name) ሪሞቱን ሲይዙ ዝግጁ የሚለውን ይጫኑ።"
         case .russian:    return "\(name), нажмите «Готов(а)», когда пульт будет у вас в руках."
         case .ukrainian:    return "\(name), натисніть «Готово», коли пульт буде у ваших руках."
+        case .german:    return "\(name), drücken Sie „Bereit“, wenn Sie die Fernbedienung in der Hand halten."
         }
     }
 
@@ -404,6 +407,7 @@ struct TVTwoPlayerContainerView: View {
         case .amharic:    return "እኔ ዝግጁ ነኝ 🎮"
         case .russian:    return "Я готов(а) 🎮"
         case .ukrainian:    return "Готово 🎮"
+        case .german:    return "Ich bin bereit 🎮"
         }
     }
 }

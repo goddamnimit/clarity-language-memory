@@ -168,6 +168,7 @@ struct TVTwoPlayerResultsView: View {
         case .amharic:    return "ጥሩ ልምምድ፣ ለሁለታችሁም!"
         case .russian:    return "Отличная тренировка, вы оба молодцы!"
         case .ukrainian:    return "Чудова практика, обоє!"
+        case .german:    return "Tolle Übung, ihr beide!"
         }
     }
 
@@ -191,6 +192,7 @@ struct TVTwoPlayerResultsView: View {
         case .amharic:    return "አብረው የማስታወስ እና የቋንቋ ችሎታዎን ማሰልጠንዎን ይቀጥሉ።"
         case .russian:    return "Продолжайте вместе тренировать память и речь."
         case .ukrainian:    return "Продовжуйте разом тренувати пам'ять і мовлення."
+        case .german:    return "Trainieren Sie weiter gemeinsam Ihr Gedächtnis und Ihre Sprachfähigkeiten."
         }
     }
 
@@ -214,6 +216,7 @@ struct TVTwoPlayerResultsView: View {
         case .amharic:    return "እንደገና ይጫወቱ 🔄"
         case .russian:    return "Играть снова 🔄"
         case .ukrainian:    return "Грати знову 🔄"
+        case .german:    return "Noch einmal spielen 🔄"
         }
     }
 
@@ -237,6 +240,7 @@ struct TVTwoPlayerResultsView: View {
         case .amharic:    return "ወደ መነሻ ገጽ ተመለስ"
         case .russian:    return "На главную"
         case .ukrainian:    return "Назад на головну"
+        case .german:    return "Zurück zum Start"
         }
     }
 }

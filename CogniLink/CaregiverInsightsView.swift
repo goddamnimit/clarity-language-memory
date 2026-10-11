@@ -118,6 +118,7 @@ extension AppLanguage {
         case .amharic:    return "ግንዛቤዎች"
         case .russian:    return "Наблюдения"
         case .ukrainian:    return "Спостереження"
+        case .german:    return "Erkenntnisse"
         }
     }
 
@@ -141,6 +142,7 @@ extension AppLanguage {
         case .amharic:    return "እስካሁን በቂ መረጃ የለም"
         case .russian:    return "Пока недостаточно данных"
         case .ukrainian:    return "Даних поки замало"
+        case .german:    return "Noch nicht genügend Daten"
         }
     }
 
@@ -164,6 +166,7 @@ extension AppLanguage {
         case .amharic:    return "ግንዛቤዎች ከ10 ገደማ የልምምድ ክፍለ-ጊዜዎች በኋላ ይታያሉ።"
         case .russian:    return "Наблюдения появятся примерно после 10 занятий."
         case .ukrainian:    return "Спостереження з'являться приблизно після 10 занять."
+        case .german:    return "Erkenntnisse erscheinen nach etwa 10 Übungseinheiten."
         }
     }
 
@@ -187,6 +190,7 @@ extension AppLanguage {
         case .amharic:    return "ሁሉም ነገር የተረጋጋ ነው"
         case .russian:    return "Всё стабильно"
         case .ukrainian:    return "Усе стабільно"
+        case .german:    return "Alles stabil"
         }
     }
 
@@ -210,6 +214,7 @@ extension AppLanguage {
         case .amharic:    return "አሁን ጉልህ ለውጦች የሉም። ተጨማሪ ልምምድ በኋላ እንደገና ይመልከቱ።"
         case .russian:    return "Сейчас заметных изменений нет. Загляните после новых занятий."
         case .ukrainian:    return "Наразі помітних змін немає. Зазирніть знову після додаткової практики."
+        case .german:    return "Derzeit keine nennenswerten Veränderungen. Schauen Sie nach weiterem Üben wieder vorbei."
         }
     }
 
@@ -233,6 +238,7 @@ extension AppLanguage {
         case .amharic:    return "የ\(name) ትክክለኛነት እየቀነሰ ነው"
         case .russian:    return "Точность в разделе «\(name)» снижается"
         case .ukrainian:    return "Знижується точність: «\(name)»"
+        case .german:    return "Die Genauigkeit bei „\(name)“ nimmt ab"
         }
     }
 
@@ -256,6 +262,7 @@ extension AppLanguage {
         case .amharic:    return "ባለፉት 20 ጥያቄዎች ትክክለኛነት ከ\(from)% ወደ \(to)% ቀንሷል።"
         case .russian:    return "Точность снизилась с \(from)% до \(to)% за последние 20 вопросов."
         case .ukrainian:    return "Точність упала з \(from)% до \(to)% за останні 20 запитань."
+        case .german:    return "Die Genauigkeit sank bei den letzten 20 Fragen von \(from) % auf \(to) %."
         }
     }
 
@@ -279,6 +286,7 @@ extension AppLanguage {
         case .amharic:    return "\(name) እየተሻሻለ ነው"
         case .russian:    return "Раздел «\(name)»: есть улучшения"
         case .ukrainian:    return "Є покращення: «\(name)»"
+        case .german:    return "„\(name)“ verbessert sich"
         }
     }
 
@@ -302,6 +310,7 @@ extension AppLanguage {
         case .amharic:    return "ባለፉት 20 ጥያቄዎች ትክክለኛነት ከ\(from)% ወደ \(to)% ጨምሯል።"
         case .russian:    return "Точность выросла с \(from)% до \(to)% за последние 20 вопросов."
         case .ukrainian:    return "Точність зросла з \(from)% до \(to)% за останні 20 запитань."
+        case .german:    return "Die Genauigkeit stieg bei den letzten 20 Fragen von \(from) % auf \(to) %."
         }
     }
 
@@ -325,6 +334,7 @@ extension AppLanguage {
         case .amharic:    return "የቅርብ ጊዜ የ\(name) ልምምድ የለም"
         case .russian:    return "Давно не было занятий: «\(name)»"
         case .ukrainian:    return "Давно не було практики: «\(name)»"
+        case .german:    return "Kein aktuelles Üben bei „\(name)“"
         }
     }
 
@@ -348,6 +358,7 @@ extension AppLanguage {
         case .amharic:    return "ይህ መልመጃ ለ\(days) ቀናት አልተለማመደም።"
         case .russian:    return "Вы не выполняли это упражнение \(days) дн."
         case .ukrainian:    return "Цю вправу не виконували \(days) дн."
+        case .german:    return "Seit \(days) Tagen keine Übung in dieser Aufgabe."
         }
     }
 
@@ -371,6 +382,7 @@ extension AppLanguage {
         case .amharic:    return "\(name) በጣም ቀላል ሊሆን ይችላል"
         case .russian:    return "Раздел «\(name)» может быть слишком лёгким"
         case .ukrainian:    return "Вправа «\(name)» може бути надто легкою"
+        case .german:    return "„\(name)“ ist möglicherweise zu leicht"
         }
     }
 
@@ -394,6 +406,7 @@ extension AppLanguage {
         case .amharic:    return "ትክክለኛነት \(accuracy)% ነው ነገር ግን አስቸጋሪነት በቀላል ላይ ቆይቷል። በሕክምና ቅንብሮች ውስጥ ደረጃውን ማሳደግ ያስቡበት።"
         case .russian:    return "Точность составляет \(accuracy)%, но сложность остаётся на уровне «Лёгкий». Подумайте о повышении уровня в настройках терапии."
         case .ukrainian:    return "Точність становить \(accuracy)%, але складність залишається на рівні «Легкий». Розгляньте підвищення рівня в налаштуваннях терапії."
+        case .german:    return "Die Genauigkeit beträgt \(accuracy) %, aber der Schwierigkeitsgrad ist auf „Leicht“ geblieben. Erwägen Sie, ihn in den Therapieeinstellungen zu erhöhen."
         }
     }
 }

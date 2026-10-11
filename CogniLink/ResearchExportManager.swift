@@ -277,6 +277,7 @@ struct ResearchExportManager {
         case .amharic:    return "amharic"
         case .russian:    return "русский"
         case .ukrainian:    return "Українська"
+        case .german:    return "german"
         }
     }
 }

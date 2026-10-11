@@ -71,8 +71,18 @@ final class YesNoLabelDataTests: XCTestCase {
         assertYesIsMarkedCorrect(language: "Español", exerciseTitle: "Preguntas de Sí o No", yesLabel: "Sí", noLabel: "No")
     }
 
+    @MainActor
+    func testYesAnswerIsMarkedCorrectInGerman() {
+        assertYesIsMarkedCorrect(language: "Deutsch", exerciseTitle: "Ja oder Nein", yesLabel: "Ja", noLabel: "Nein")
+    }
+
     // Fact/Opinion uses the same first-label / other-label logic: tapping the first label is
     // correct exactly when the other label is not announced as the correct answer.
+    @MainActor
+    func testFactAnswerIsMarkedCorrectInGerman() {
+        assertYesIsMarkedCorrect(language: "Deutsch", exerciseTitle: "Tatsache oder Meinung?", yesLabel: "Tatsache", noLabel: "Meinung")
+    }
+
     @MainActor
     func testFactAnswerIsMarkedCorrectInEnglish() {
         assertYesIsMarkedCorrect(language: "English", exerciseTitle: "Fact or Opinion", yesLabel: "Fact", noLabel: "Opinion")

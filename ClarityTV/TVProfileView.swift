@@ -42,6 +42,7 @@ struct TVProfileView: View {
         case .amharic:    return "መገለጫ"
         case .russian:    return "Профиль"
         case .ukrainian:    return "Профіль"
+        case .german:    return "Profil"
         }
     }
 
@@ -65,6 +66,7 @@ struct TVProfileView: View {
         case .amharic:    return "ቋንቋ ይምረጡ"
         case .russian:    return "Выберите язык"
         case .ukrainian:    return "Оберіть мову"
+        case .german:    return "Sprache auswählen"
         }
     }
 
@@ -261,6 +263,7 @@ struct TVProfileView: View {
         case .amharic:    return "ጥያቄዎችን በታላቅ ድምፅ አንብብ"
         case .russian:    return "Читать вопросы вслух"
         case .ukrainian:    return "Озвучувати запитання"
+        case .german:    return "Fragen vorlesen"
         }
     }
 
@@ -284,6 +287,7 @@ struct TVProfileView: View {
         case .amharic:    return "በርቷል"
         case .russian:    return "Вкл."
         case .ukrainian:    return "Увімк."
+        case .german:    return "An"
         }
     }
 
@@ -307,6 +311,7 @@ struct TVProfileView: View {
         case .amharic:    return "ጠፍቷል"
         case .russian:    return "Выкл."
         case .ukrainian:    return "Вимк."
+        case .german:    return "Aus"
         }
     }
 }

@@ -8,6 +8,8 @@ struct AllActivitiesView: View {
     
     var body: some View {
         VStack(spacing: 0) {
+            LanguageDisclosureBanner()
+                .padding([.horizontal, .top])
             List {
                 // MARK: - Language Exercises Section
                 Section(header: Text(sectionHeaderTitle(for: .language))) {
@@ -153,6 +155,7 @@ struct AllActivitiesView: View {
         case .amharic:    return "ሁሉም ተግባራት"
         case .russian:    return "Все занятия"
         case .ukrainian:    return "Усі вправи"
+        case .german:    return "Alle Aktivitäten"
         }
     }
 
@@ -176,6 +179,7 @@ struct AllActivitiesView: View {
         case .amharic:    return "በዚህ ክፍል ውስጥ ምንም መልመጃዎች የሉም።"
         case .russian:    return "В этом разделе пока нет упражнений."
         case .ukrainian:    return "У цьому розділі немає вправ."
+        case .german:    return "In diesem Bereich sind keine Übungen verfügbar."
         }
     }
 
@@ -199,6 +203,7 @@ struct AllActivitiesView: View {
         case .amharic:    return "አስገርመኝ!"
         case .russian:    return "Удивите меня!"
         case .ukrainian:    return "Здивуйте мене!"
+        case .german:    return "Überrasch mich!"
         }
     }
 
@@ -311,6 +316,12 @@ struct AllActivitiesView: View {
             case .language: return "Мова"
             case .cognition: return "Мислення та пам’ять"
             case .functionalSkills: return "Повсякденні навички"
+            }
+        case .german:
+            switch section {
+            case .language: return "Sprache"
+            case .cognition: return "Denken und Gedächtnis"
+            case .functionalSkills: return "Alltagsfähigkeiten"
             }
         }
     }

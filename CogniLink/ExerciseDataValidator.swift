@@ -129,7 +129,13 @@ enum ExerciseDataValidator {
     ("UkrainianCognitionExerciseData", { UkrainianCognitionExerciseData.allExercises }),
     ("UkrainianFunctionalSkillsExerciseData", { UkrainianFunctionalSkillsExerciseData.allExercises }),
     ("UkrainianNewExercisesData", { UkrainianNewExercisesData.allExercises }),
-    ("UkrainianHardExercisesData", { UkrainianHardExercisesData.allExercises })
+    ("UkrainianHardExercisesData", { UkrainianHardExercisesData.allExercises }),
+
+    ("GermanLanguageExerciseData", { GermanLanguageExerciseData.allExercises }),
+    ("GermanCognitionExerciseData", { GermanCognitionExerciseData.allExercises }),
+    ("GermanFunctionalSkillsExerciseData", { GermanFunctionalSkillsExerciseData.allExercises }),
+    ("GermanNewExercisesData", { GermanNewExercisesData.allExercises }),
+    ("GermanHardExercisesData", { GermanHardExercisesData.allExercises }),
   ]
 
   /// Validates every exercise in every catalog.

@@ -29,5 +29,17 @@ enum ReviewGatedLanguages {
                                       "understandingBills", "phoneAndEmergencyInfo", "whatWouldYouDo", "signsAndLabels"]
 
   static let all: [GatedLanguage] = [
+    GatedLanguage(
+      language: .german,
+      rawCatalog: {
+        GermanLanguageExerciseData.allExercises + GermanCognitionExerciseData.allExercises
+          + GermanFunctionalSkillsExerciseData.allExercises + GermanNewExercisesData.allExercises
+          + GermanHardExercisesData.allExercises
+      },
+      detectionTags: ["de", "de-DE", "de-AT", "de-CH", "DE-de"],
+      expectedHeldKeys: heldKeys, expectedHeldItemCount: 150,
+      hiddenConstant: LanguageReviewStatus.germanHidden,
+      heldReleasedConstant: LanguageReviewStatus.germanHeldGroupsReleased,
+      reviewStatus: LanguageReviewStatus.german)
   ]
 }

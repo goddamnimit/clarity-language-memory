@@ -15,6 +15,7 @@ enum AnswerLabels {
     static func yesNo(_ value: String, in language: AppLanguage) -> String {
         let isYes = value == yes
         switch language {
+        case .german: return isYes ? "Ja" : "Nein"
         case .english: return value
         default:
             #if os(tvOS)
@@ -28,6 +29,7 @@ enum AnswerLabels {
     static func factOrOpinion(_ value: String, in language: AppLanguage) -> String {
         let isFact = value == fact
         switch language {
+        case .german: return isFact ? "Tatsache" : "Meinung"
         default: return value                  // English labels for every other language (existing behavior)
         }
     }
@@ -37,5 +39,5 @@ enum AnswerLabels {
     }
 
     /// Languages whose Yes/No and Fact/Opinion buttons are localized.
-    static let localizedLanguages: Set<AppLanguage> = [.english]
+    static let localizedLanguages: Set<AppLanguage> = [.english, .german]
 }

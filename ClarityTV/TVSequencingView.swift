@@ -248,6 +248,7 @@ struct TVSequencingView: View {
         case .amharic:    return "አንድ እርምጃ ይምረጡ፣ ከዚያ የት እንደሚሄድ ይምረጡ"
         case .russian:    return "Выберите шаг, а затем место, куда он должен встать"
         case .ukrainian:    return "Виберіть крок, а потім місце, куди його поставити"
+        case .german:    return "Wählen Sie einen Schritt und dann die Stelle, an die er gehört"
         }
     }
 
@@ -271,6 +272,7 @@ struct TVSequencingView: View {
         case .amharic:    return "አስገባ"
         case .russian:    return "Отправить"
         case .ukrainian:    return "Підтвердити"
+        case .german:    return "Absenden"
         }
     }
 }

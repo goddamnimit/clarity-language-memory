@@ -218,6 +218,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return "ባለ ሁለት ተጫዋች ሁኔታ"
         case .russian:    return "Игра вдвоём"
         case .ukrainian:    return "Режим для двох гравців"
+        case .german:    return "Zwei-Spieler-Modus"
         }
     }
 
@@ -241,6 +242,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return "በተራ ይጫወቱ እና አብረው ይለማመዱ!"
         case .russian:    return "Играйте по очереди и тренируйтесь вместе!"
         case .ukrainian:    return "Грайте по черзі та тренуйтеся разом!"
+        case .german:    return "Wechseln Sie sich ab und üben Sie gemeinsam!"
         }
     }
 
@@ -264,6 +266,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return "ምድብ ይምረጡ"
         case .russian:    return "Выберите категорию"
         case .ukrainian:    return "Оберіть категорію"
+        case .german:    return "Kategorie wählen"
         }
     }
 
@@ -287,6 +290,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return "የተቀላቀለ 🎲"
         case .russian:    return "Случайный набор 🎲"
         case .ukrainian:    return "Випадкова добірка 🎲"
+        case .german:    return "Zufällige Mischung 🎲"
         }
     }
 
@@ -310,6 +314,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return ["ተጫዋች 1", "እናት", "አያት", "ጓደኛ", "ተጫዋች A"]
         case .russian:    return ["Игрок 1", "Мама", "Бабушка", "Друг", "Игрок А"]
         case .ukrainian:  return ["Гравець 1", "Мама", "Бабуся", "Друг", "Гравець А"]
+        case .german:     return ["Spieler 1", "Mama", "Oma", "Freund", "Spieler A"]
         }
     }
 
@@ -333,6 +338,7 @@ struct TVTwoPlayerSetupView: View {
         case .amharic:    return ["ተጫዋች 2", "አባት", "አያት", "ጓደኛ", "ተጫዋች B"]
         case .russian:    return ["Игрок 2", "Папа", "Дедушка", "Друг", "Игрок Б"]
         case .ukrainian:  return ["Гравець 2", "Тато", "Дідусь", "Друг", "Гравець Б"]
+        case .german:     return ["Spieler 2", "Papa", "Opa", "Freund", "Spieler B"]
         }
     }
 }
@@ -358,6 +364,7 @@ fileprivate extension AppLanguage {
         case .amharic:    return "ተጫዋች 1"
         case .russian:    return "Игрок 1"
         case .ukrainian:    return "Гравець 1"
+        case .german:    return "Spieler 1"
         }
     }
     
@@ -381,6 +388,7 @@ fileprivate extension AppLanguage {
         case .amharic:    return "ተጫዋች 2"
         case .russian:    return "Игрок 2"
         case .ukrainian:    return "Гравець 2"
+        case .german:    return "Spieler 2"
         }
     }
     
@@ -404,6 +412,7 @@ fileprivate extension AppLanguage {
         case .amharic:    return "ጨዋታ ጀምር"
         case .russian:    return "Начать игру"
         case .ukrainian:    return "Почати гру"
+        case .german:    return "Spiel starten"
         }
     }
 }

@@ -23,6 +23,9 @@ struct TVActivitiesView: View {
 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 50) {
+                        LanguageDisclosureBanner()
+                            .padding(.horizontal, 80)
+
                         ForEach(AppSection.allCases, id: \.self) { section in
                             let exercises = languageManager.exercisesForSection(section)
                             if !exercises.isEmpty {

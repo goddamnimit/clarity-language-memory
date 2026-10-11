@@ -353,6 +353,12 @@ struct TVHomeView: View {
             } else {
                 return "Вітаємо!"
             }
+        case .german:
+            if hasName {
+                return "Hallo, \(name)!"
+            } else {
+                return "Hallo!"
+            }
         }
     }
 
@@ -376,6 +382,7 @@ struct TVHomeView: View {
         case .amharic:    return "አስገረመኝ! 🎲"
         case .russian:    return "Удивите меня! 🎲"
         case .ukrainian:    return "Здивуйте мене! 🎲"
+        case .german:    return "Überrasch mich! 🎲"
         }
     }
 
@@ -399,6 +406,7 @@ struct TVHomeView: View {
         case .amharic:    return "ባለ ሁለት ተጫዋች 👥"
         case .russian:    return "Игра вдвоём 👥"
         case .ukrainian:    return "Режим для двох гравців 👥"
+        case .german:    return "Zwei-Spieler-Modus 👥"
         }
     }
 
@@ -422,6 +430,7 @@ struct TVHomeView: View {
         case .amharic:    return "ለእርስዎ የሚመከር"
         case .russian:    return "Рекомендуем вам"
         case .ukrainian:    return "Рекомендовано для вас"
+        case .german:    return "Für Sie empfohlen"
         }
     }
 
@@ -432,6 +441,9 @@ struct TVHomeView: View {
 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 50) {
+                        LanguageDisclosureBanner()
+                            .padding(.horizontal, 80)
+
                         // Greeting Header
                         VStack(spacing: 12) {
                             Text(personalizedGreeting)
