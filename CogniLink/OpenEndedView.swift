@@ -35,7 +35,7 @@ struct OpenEndedView: View {
             // Multiline text editor with placeholder overlay
             ZStack(alignment: .topLeading) {
                 if userInput.isEmpty {
-                    Text("Type your answer here...")
+                    Text(XS.typeYourAnswer.text)
                         .font(.body)
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 16)
@@ -68,7 +68,7 @@ struct OpenEndedView: View {
                 Button(action: toggleDictation) {
                     HStack {
                         Image(systemName: speechInput.isRecording ? "mic.fill" : "mic")
-                        Text(speechInput.isRecording ? "Listening… Tap to Stop" : "Speak Your Answer")
+                        Text(speechInput.isRecording ? XS.listeningTapToStop.text : XS.speakYourAnswer.text)
                     }
                     .font(.headline)
                     .foregroundColor(.white)
@@ -79,12 +79,12 @@ struct OpenEndedView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
             } else {
-                Text("Voice input isn't available for this language yet.")
+                Text(XS.voiceUnavailable.text)
                     .font(.footnote)
                     .foregroundColor(.secondary)
             }
             #else
-            Text("Text input not available on this platform.")
+            Text(XS.textInputUnavailable.text)
                 .font(.body)
                 .foregroundColor(.secondary)
                 .frame(minHeight: 80)
@@ -104,7 +104,7 @@ struct OpenEndedView: View {
                 }) {
                     HStack {
                         Image(systemName: "trash")
-                        Text("Clear")
+                        Text(XS.clear.text)
                     }
                     .font(.headline)
                     .foregroundColor(.red)
@@ -114,7 +114,7 @@ struct OpenEndedView: View {
                     .cornerRadius(16)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .accessibilityLabel("Clear")
+                .accessibilityLabel(XS.clear.text)
 
                 // Show Answer button is hidden if there is no hardcoded model answer
                 if !item.correctAnswer.isEmpty {
@@ -124,7 +124,7 @@ struct OpenEndedView: View {
                     }) {
                         HStack {
                             Image(systemName: isAnswerVisible ? "eye.slash" : "eye")
-                            Text(isAnswerVisible ? "Hide Answer" : "Show Answer")
+                            Text(isAnswerVisible ? XS.hideAnswer.text : XS.showAnswer.text)
                         }
                         .font(.headline)
                         .foregroundColor(.white)
@@ -134,7 +134,7 @@ struct OpenEndedView: View {
                         .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    .accessibilityLabel(isAnswerVisible ? "Hide Answer" : "Show Answer")
+                    .accessibilityLabel(isAnswerVisible ? XS.hideAnswer.text : XS.showAnswer.text)
                 }
             }
 
@@ -145,7 +145,7 @@ struct OpenEndedView: View {
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundColor(.green)
                             .accessibilityHidden(true)
-                        Text("Model Answer")
+                        Text(XS.modelAnswer.text)
                             .font(.headline)
                             .foregroundColor(.green)
                     }
@@ -177,7 +177,7 @@ struct OpenEndedView: View {
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
-                Button("Done") {
+                Button(XS.done.text) {
                     isInputActive = false
                 }
             }
@@ -191,15 +191,15 @@ struct OpenEndedView: View {
         .onDisappear {
             speechInput.stop()
         }
-        .alert("Microphone Access Needed", isPresented: $showMicPermissionAlert) {
-            Button("Open Settings") {
+        .alert(XS.micAccessTitle.text, isPresented: $showMicPermissionAlert) {
+            Button(XS.openSettings.text) {
                 if let url = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(url)
                 }
             }
-            Button("Not Now", role: .cancel) {}
+            Button(XS.notNow.text, role: .cancel) {}
         } message: {
-            Text("To speak your answers, please turn on Microphone and Speech Recognition for this app in Settings.")
+            Text(XS.micAccessMessage.text)
         }
         #endif
     }

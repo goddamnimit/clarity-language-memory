@@ -96,6 +96,11 @@ struct Exercise: Identifiable, Hashable {
     let type: ExerciseType
     let trackedType: TrackedExerciseType?
     let difficulty: Difficulty
+    /// Stable authoring key (the Swift property name of the group, e.g. "synonymsEasy"). Empty for
+    /// legacy catalogs, which fall back to `title` in `itemKey(for:)`. Never changes between launches.
+    let groupKey: String
+    /// Authored-but-hidden group awaiting native review; see `LanguageReviewStatus`.
+    let isHeldForReview: Bool
     let items: [ExerciseItem]
 
     let sessionSize = 5
@@ -103,7 +108,7 @@ struct Exercise: Identifiable, Hashable {
     /// Groups with fewer items than this are hidden from users (see LanguageManager).
     static let minimumVisibleItems = 5
 
-    init(id: UUID = UUID(), title: String, instructions: String, section: AppSection, type: ExerciseType, trackedType: TrackedExerciseType? = nil, difficulty: Difficulty, items: [ExerciseItem]) {
+    init(id: UUID = UUID(), title: String, instructions: String, section: AppSection, type: ExerciseType, trackedType: TrackedExerciseType? = nil, difficulty: Difficulty, groupKey: String = "", isHeldForReview: Bool = false, items: [ExerciseItem]) {
         self.id = id
         self.title = title
         self.instructions = instructions
@@ -111,7 +116,16 @@ struct Exercise: Identifiable, Hashable {
         self.type = type
         self.trackedType = trackedType
         self.difficulty = difficulty
+        self.groupKey = groupKey
+        self.isHeldForReview = isHeldForReview
         self.items = items
+    }
+
+    /// Stable, launch-independent identifier for flag triage: "<groupKey or title>|<index in items>".
+    /// (`ExerciseItem.id` and `Exercise.id` are regenerated with `UUID()` on every launch.)
+    func itemKey(for item: ExerciseItem) -> String {
+        let index = items.firstIndex(where: { $0.id == item.id }) ?? -1
+        return "\(groupKey.isEmpty ? title : groupKey)|\(index)"
     }
     
     func randomSession(excluding recentIDs: Set<UUID> = []) -> [ExerciseItem] {

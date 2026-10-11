@@ -1579,26 +1579,6 @@ enum FS {
     }
 
     // MARK: - Home streak card + loading text
-    static var streakDaysLabel: String {
-        L(en: "day streak",
-          es: "días seguidos",
-          hi: "दिन की स्ट्रीक",
-          gu: "દિવસની સ્ટ્રીક",
-          zh: "天连续",
-          fa: "روز متوالی",
-          ko: "일 연속",
-          vi: "ngày liên tiếp",
-          ar: "أيام متتالية",
-          pt: "dias seguidos",
-          tl: "araw na magkakasunod",
-          pa: "ਦਿਨ ਲਗਾਤਾਰ",
-          hy: "օր անընդմեջ",
-          ja: "日連続",
-          fr: "jours d’affilée",
-          am: "ተከታታይ ቀናት",
-          ru: "дн. подряд",
-          uk: "дн. поспіль")
-    }
     static var lastSevenDays: String {
         L(en: "Last 7 Days Progress",
           es: "Últimos 7 días",
@@ -1678,26 +1658,6 @@ enum FS {
           am: "ክፍለ ጊዜ በማዘጋጀት ላይ…",
           ru: "Подготовка занятия…",
           uk: "Підготовка заняття…")
-    }
-    static func personalBestDays(_ n: Int) -> String {
-        L(en: "Personal Best: {n} days",
-          es: "Mejor marca: {n} días",
-          hi: "सर्वश्रेष्ठ: {n} दिन",
-          gu: "શ્રેષ્ઠ: {n} દિવસ",
-          zh: "个人最佳：{n} 天",
-          fa: "بهترین رکورد: {n} روز",
-          ko: "개인 최고 기록: {n}일",
-          vi: "Kỷ lục cá nhân: {n} ngày",
-          ar: "أفضل رقم: {n} أيام",
-          pt: "Melhor marca: {n} dias",
-          tl: "Pinakamahusay: {n} araw",
-          pa: "ਸਭ ਤੋਂ ਵਧੀਆ: {n} ਦਿਨ",
-          hy: "Լավագույն արդյունքը՝ {n} օր",
-          ja: "自己ベスト：{n}日",
-          fr: "Meilleure série : {n} jours",
-          am: "ምርጡ፦ {n} ቀናት",
-          ru: "Лучшая серия: {n} дн.",
-          uk: "Найкраща серія: {n} дн.").replacingOccurrences(of: "{n}", with: String(n))
     }
     static func streakSummaryA11y(_ n: Int, _ m: Int) -> String {
         L(en: "Current practice streak: {n} consecutive days. Personal best is {m} days.",

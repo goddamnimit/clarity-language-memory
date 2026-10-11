@@ -53,7 +53,7 @@ struct TVMultipleChoiceView: View {
             VStack(spacing: 0) {
                 // Top 35% — exercise type label + question prompt
                 VStack(spacing: 12) {
-                    Text(typeLabel)
+                    Text(XS.exerciseTypeLabel(exerciseType).text)
                         .font(.system(size: 28, weight: .light))
                         .foregroundColor(Color.white.opacity(0.45))
                         .tracking(3)
@@ -138,22 +138,6 @@ struct TVMultipleChoiceView: View {
         return .dimmed
     }
 
-    private var typeLabel: String {
-        switch exerciseType {
-        case .multipleChoice:     return "Multiple Choice"
-        case .comparison:         return "Best Value"
-        case .yesNo:              return "Yes or No"
-        case .factOrOpinion:      return "Fact or Opinion"
-        case .sentenceCompletion: return "Fill in the Blank"
-        case .analogyChoice:      return "Analogy"
-        case .homonym:            return "Homonym"
-        case .matching:           return "Matching"
-        case .categoryCrossOut:   return "Category"
-        case .openEnded:          return "Open Ended"
-        case .sequencing:         return "Sequencing"
-        case .minimalPairs:       return "Minimal Pairs"
-        }
-    }
 }
 
 // MARK: - AnswerTile

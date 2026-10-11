@@ -49,11 +49,12 @@ struct ResearchExportManager {
         }
 
         // -- Exercise activity --
-        let plays = UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays")
-                    as? [String: Int] ?? [:]
+        let heldTitles = LanguageManager.shared.unreleasedHeldTitles()
+        let plays = (UserDefaults.standard.dictionary(forKey: "CogniLink_ExercisePlays")
+                    as? [String: Int] ?? [:]).filter { !heldTitles.contains($0.key) }
         let totalSessions       = plays.values.reduce(0, +)
         let totalItemsAttempted = UserProgressStore.shared.getTotalAttempts()
-        let exercisesEverCompleted = ProgressTracker.getCompletedExercises().sorted()
+        let exercisesEverCompleted = ProgressTracker.getCompletedExercises().filter { !heldTitles.contains($0) }.sorted()
         print("[ResearchExport] totalSessions=\(totalSessions), exercises=\(exercisesEverCompleted.count)")
 
         // -- Session dates as day-offsets (no real calendar dates exposed) --

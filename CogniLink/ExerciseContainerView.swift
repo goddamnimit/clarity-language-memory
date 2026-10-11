@@ -310,7 +310,7 @@ struct ExerciseContainerView: View {
                                 Button(action: {
                                     advanceToNext()
                                 }) {
-                                    Text("Next Question →")
+                                    Text(XS.nextQuestion.text)
                                         .font(.headline)
                                         .foregroundColor(.white)
                                         .frame(maxWidth: .infinity)
@@ -318,6 +318,7 @@ struct ExerciseContainerView: View {
                                         .background(Color.blue)
                                         .cornerRadius(12)
                                 }
+                                .accessibilityIdentifier("NextQuestionButton")
                             } else {
                                 Button(action: {
                                     advanceToNext()
@@ -396,6 +397,7 @@ struct ExerciseContainerView: View {
         let record: [String: Any] = [
             "exerciseId": exercise.id.uuidString,
             "exerciseTitle": exercise.title,
+            "itemKey": exercise.itemKey(for: currentItem),
             "questionPreview": String(currentItem.prompt.prefix(50)),
             "exerciseType": ResearchExportManager.string(for: exercise.type),
             "language": ResearchExportManager.string(for: languageManager.currentLanguage),

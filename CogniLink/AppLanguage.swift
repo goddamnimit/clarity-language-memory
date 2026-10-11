@@ -39,7 +39,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     }
 
     /// What users can choose from.
-    static var visibleCases: [AppLanguage] { allCases.filter { !$0.isPreview } }
+    static var visibleCases: [AppLanguage] { visible() }
 
     var displayName: String {
         switch self {
@@ -135,46 +135,7 @@ class LanguageManager: ObservableObject {
         if let savedStr = savedLanguage, let appLang = AppLanguage(rawValue: savedStr) {
             initialLang = appLang
         } else {
-            let systemLanguages = Locale.preferredLanguages
-            if let firstLang = systemLanguages.first?.lowercased() {
-                if firstLang.hasPrefix("zh-hans") || firstLang.hasPrefix("zh-cn") || firstLang.hasPrefix("zh-sg") {
-                    initialLang = .chinese
-                } else if firstLang.hasPrefix("zh") {
-                    initialLang = .chinese
-                } else if firstLang.hasPrefix("es") {
-                    initialLang = .spanish
-                } else if firstLang.hasPrefix("hi") {
-                    initialLang = .hindi
-                } else if firstLang.hasPrefix("gu") {
-                    initialLang = .gujarati
-                } else if firstLang.hasPrefix("fa") {
-                    initialLang = .farsi
-                } else if firstLang.hasPrefix("ko") {
-                    initialLang = .korean
-                } else if firstLang.hasPrefix("vi") {
-                    initialLang = .vietnamese
-                } else if firstLang.hasPrefix("ar") {
-                    initialLang = .arabic
-                } else if firstLang.hasPrefix("pt") {
-                    initialLang = .portuguese
-                } else if firstLang.hasPrefix("fil") || firstLang.hasPrefix("tl") {
-                    initialLang = .tagalog
-                } else if firstLang.hasPrefix("pa") {
-                    initialLang = .punjabi
-                } else if firstLang.hasPrefix("hy") {
-                    initialLang = .armenian
-                } else if firstLang.hasPrefix("ja") {
-                    initialLang = .japanese
-                } else if firstLang.hasPrefix("fr") {
-                    initialLang = .french
-                } else if firstLang.hasPrefix("am") {
-                    initialLang = .amharic
-                } else {
-                    initialLang = .english
-                }
-            } else {
-                initialLang = .english
-            }
+            initialLang = AppLanguage.detect(preferred: Locale.preferredLanguages)
         }
         self.currentLanguage = initialLang
     }
@@ -185,7 +146,38 @@ class LanguageManager: ObservableObject {
     /// raw catalogs are unaffected, so the groups stay checked and come back
     /// automatically when they reach 5 items.
     var allExercises: [AppLanguage: [Exercise]] {
-        rawExercises.mapValues { $0.filter { $0.items.count >= Exercise.minimumVisibleItems } }
+        var visible: [AppLanguage: [Exercise]] = [:]
+        for (language, exercises) in rawExercises {
+            visible[language] = exercises.filter { isVisible($0, in: language) }
+        }
+        return visible
+    }
+
+    /// The single visibility rule for every user-facing list: enough items AND not a
+    /// group held for native review (see `LanguageReviewStatus`). Held groups stay in the
+    /// raw catalogs so the validator still checks them.
+    /// Titles of groups currently held for review in any language. The research export drops
+    /// these as a defensive guard (a held group cannot be played, so it should never appear).
+    func unreleasedHeldTitles() -> Set<String> {
+        var titles = Set<String>()
+        for (language, exercises) in rawExercises where !LanguageReviewStatus.heldGroupsReleased(for: language) {
+            for exercise in exercises where exercise.isHeldForReview { titles.insert(exercise.title) }
+        }
+        return titles
+    }
+
+    private func isVisible(_ exercise: Exercise, in language: AppLanguage) -> Bool {
+        Self.passesGate(exercise, heldReleased: LanguageReviewStatus.heldGroupsReleased(for: language))
+    }
+
+    static func passesGate(_ exercise: Exercise, heldReleased: Bool) -> Bool {
+        exercise.items.count >= Exercise.minimumVisibleItems && (!exercise.isHeldForReview || heldReleased)
+    }
+
+    /// Every user-visible exercise of the current language across the three sections.
+    /// Baseline assessment, the widget and recommendations draw from this pool.
+    func practicePool() -> [Exercise] {
+        exercisesForSection(.language) + exercisesForSection(.cognition) + exercisesForSection(.functionalSkills)
     }
 
     private var rawExercises: [AppLanguage: [Exercise]] {
@@ -303,7 +295,7 @@ class LanguageManager: ObservableObject {
     }
     
     func exercisesForSection(_ section: AppSection) -> [Exercise] {
-        rawExercisesForSection(section).filter { $0.items.count >= Exercise.minimumVisibleItems }
+        rawExercisesForSection(section).filter { isVisible($0, in: currentLanguage) }
     }
 
     private func rawExercisesForSection(_ section: AppSection) -> [Exercise] {
@@ -439,6 +431,36 @@ class LanguageManager: ObservableObject {
                        UkrainianHardExercisesData.allExercises
             return pool.filter { $0.section == section }
         }
+    }
+}
+
+extension AppLanguage {
+    /// System-language auto-detection (prefix matching on `Locale.preferredLanguages`).
+    /// A language that `isHidden` is never auto-selected. Russian and Ukrainian are
+    /// not auto-detected at all (preview languages).
+    static func detect(preferred: [String], isHidden: (AppLanguage) -> Bool = { $0.isPreview }) -> AppLanguage {
+        guard let firstLang = preferred.first?.lowercased() else { return .english }
+        if firstLang.hasPrefix("zh") { return .chinese }
+        if firstLang.hasPrefix("es") { return .spanish }
+        if firstLang.hasPrefix("hi") { return .hindi }
+        if firstLang.hasPrefix("gu") { return .gujarati }
+        if firstLang.hasPrefix("fa") { return .farsi }
+        if firstLang.hasPrefix("ko") { return .korean }
+        if firstLang.hasPrefix("vi") { return .vietnamese }
+        if firstLang.hasPrefix("ar") { return .arabic }
+        if firstLang.hasPrefix("pt") { return .portuguese }
+        if firstLang.hasPrefix("fil") || firstLang.hasPrefix("tl") { return .tagalog }
+        if firstLang.hasPrefix("pa") { return .punjabi }
+        if firstLang.hasPrefix("hy") { return .armenian }
+        if firstLang.hasPrefix("ja") { return .japanese }
+        if firstLang.hasPrefix("fr") { return .french }
+        if firstLang.hasPrefix("am") { return .amharic }
+        return .english
+    }
+
+    /// Languages offered in the picker, given a hidden-ness rule (default: `isPreview`).
+    static func visible(isHidden: (AppLanguage) -> Bool = { $0.isPreview }) -> [AppLanguage] {
+        allCases.filter { !isHidden($0) }
     }
 }
 

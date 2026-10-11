@@ -142,3 +142,13 @@ Combined defective-item rate: Chinese ~75%, Gujarati ~72%, Farsi ~86%, Korean ~6
 - **Warning:** `NumberDrillGenerator.asciiDigits` is flagged as main-actor-isolated when called from a non-isolated context (Swift 6 mode will error).
 - **Repo hygiene:** `ArtworkSource/` 264 MB tracked; `xcuserdata/.../xcschememanagement.plist` tracked.
 - **AppProgressView** is unreachable but holds a unique weekly chart and accordion; decide delete vs port.
+
+## Test failure unrelated to the German/Italian work (found 2026-10-10)
+
+- **`PracticeSupportsTests/targetsAreCappedAndLogHoldsNoText`** fails when `PracticeSupportsTests` is run with `CODE_SIGNING_ALLOWED=NO` on the iOS 26.5 simulator. It fails the same way on a clean checkout of `main` (21fbcb4), so it is not caused by the German/Italian changes. Cause (confirmed in the test log): `SpacedRetrievalStore.targets` stays empty and the `#require` on `targets.first?.id` reports "Keychain round-trip failed in the test host", i.e. the Keychain does not work in an unsigned test host. The other 157 `CogniLinkTests` pass in the same run.
+- To confirm, run the test from a signed build (a normal Xcode Run/Test with a signing team) and check whether it passes there. Not yet verified.
+
+## Yes/No and Fact/Opinion button labels (found and partly fixed 2026-10-10)
+
+- **Fixed:** the iOS `YesNoView` compared the displayed label with the stored value `"Yes"`. In every non-English language the "Yes" button read "Sí", so a correct Yes answer was marked wrong. Labels are now mapped at display time (`AnswerLabels`); stored values stay exactly "Yes"/"No" and "Fact"/"Opinion". Regression test: `CogniLinkUITests/YesNoLabelDataTests`.
+- **Still open (follow-up):** only English, German and Italian have localized Yes/No and Fact/Opinion labels. The other 17 languages (Spanish, Hindi, Gujarati, Chinese, Farsi, Korean, Vietnamese, Arabic, Portuguese, Tagalog, Punjabi, Armenian, Japanese, French, Amharic, Russian, Ukrainian) show: Fact/Opinion in English on iOS and tvOS; Yes/No as the Spanish "Sí"/"No" on iOS (correct only for Spanish) and as English "Yes"/"No" on tvOS.

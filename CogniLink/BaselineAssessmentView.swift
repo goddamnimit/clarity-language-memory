@@ -238,9 +238,7 @@ struct BaselineAssessmentView: View {
     // MARK: - Flow
 
     private func startAssessment() {
-        let pool = languageManager.exercisesForSection(.language) +
-                   languageManager.exercisesForSection(.cognition) +
-                   languageManager.exercisesForSection(.functionalSkills)
+        let pool = languageManager.practicePool()
         questions = BaselineAssessmentEngine.buildAssessment(from: pool)
         guard !questions.isEmpty else {
             skipAssessment()

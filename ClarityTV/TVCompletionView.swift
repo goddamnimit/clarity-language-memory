@@ -42,7 +42,7 @@ struct TVCompletionView: View {
                         .foregroundColor(.white)
                         .monospacedDigit()
 
-                    Text("Your Score")
+                    Text(XS.yourScore.text)
                         .font(.system(size: 40, weight: .regular, design: .rounded))
                         .foregroundColor(Color.white.opacity(0.45))
                 }
@@ -118,7 +118,7 @@ private struct NewSessionButton: View {
     @Environment(\.isFocused) private var isFocused
 
     var body: some View {
-        Text("New Session")
+        Text(XS.newSession.text)
             .font(.system(size: 56, weight: .bold, design: .rounded))
             .foregroundColor(.white)
             .frame(minWidth: 600, minHeight: 90)
@@ -145,7 +145,7 @@ private struct ChangeActivityButton: View {
     @Environment(\.isFocused) private var isFocused
 
     var body: some View {
-        Text("Change Activity")
+        Text(XS.changeActivity.text)
             .font(.system(size: 56, weight: .semibold, design: .rounded))
             .foregroundColor(Color.white.opacity(0.65))
             .frame(minWidth: 600, minHeight: 90)

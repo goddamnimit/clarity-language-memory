@@ -31,13 +31,13 @@ struct StreakWidgetView: View {
                             .lineLimit(1)
                             .minimumScaleFactor(0.7)
                         
-                        Text(FS.streakDaysLabel)
+                        Text(XS.daysInARow(store.profile.currentStreak))
                             .font(.body) // 17pt minimum size
                             .foregroundColor(.secondary)
                             .fontWeight(.semibold)
                     }
                     
-                    Text(FS.personalBestDays(store.profile.longestStreak))
+                    Text(XS.personalBestDays(store.profile.longestStreak))
                         .font(.body)
                         .foregroundColor(.secondary)
                 }

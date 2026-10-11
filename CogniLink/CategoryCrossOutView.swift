@@ -92,7 +92,7 @@ struct CategoryCrossOutView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.clockwise")
-                        Text("Try Again")
+                        Text(XS.tryAgain.text)
                     }
                     .font(.headline)
                     .foregroundColor(.blue)
@@ -107,7 +107,7 @@ struct CategoryCrossOutView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .accessibilityLabel("Try Again")
+                .accessibilityLabel(XS.tryAgain.text)
                 .tvFocusEffect()
             }
         }

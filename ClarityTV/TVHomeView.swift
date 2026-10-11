@@ -440,7 +440,7 @@ struct TVHomeView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal, 40)
                             
-                            Text("Clarity — Language & Memory")
+                            Text(XS.tagline.text)
                                 .font(.system(size: 30, weight: .light))
                                 .foregroundColor(Color.white.opacity(0.55))
                         }

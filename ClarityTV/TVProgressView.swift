@@ -50,7 +50,7 @@ struct TVProgressView: View {
                             id: "current_streak",
                             title: currentStreakTitle,
                             value: "\(profileStore.profile.currentStreak)",
-                            sub: streakDaysLabel,
+                            sub: XS.daysInARow(profileStore.profile.currentStreak),
                             icon: "flame.fill",
                             iconColor: Color(hex: "FF9500")
                         )
@@ -60,7 +60,7 @@ struct TVProgressView: View {
                             id: "longest_streak",
                             title: longestStreakTitle,
                             value: "\(profileStore.profile.longestStreak)",
-                            sub: streakDaysLabel,
+                            sub: XS.daysInARow(profileStore.profile.longestStreak),
                             icon: "crown.fill",
                             iconColor: Color(hex: "FFD700")
                         )
@@ -146,7 +146,7 @@ struct TVProgressView: View {
                                 Text("\(profileStore.profile.currentStreak)")
                                     .font(.system(size: 48, weight: .bold, design: .rounded))
                                     .foregroundColor(Color(hex: "FF9500"))
-                                Text(dayStreakSuffix)
+                                Text(XS.daysInARow(profileStore.profile.currentStreak))
                                     .font(.system(size: 22, weight: .medium))
                                     .foregroundColor(.white.opacity(0.6))
                             }
@@ -505,29 +505,6 @@ struct TVProgressView: View {
         }
     }
 
-    private var streakDaysLabel: String {
-        switch currentLanguage {
-        case .english:    return "days in a row"
-        case .spanish:    return "días seguidos"
-        case .hindi:      return "लगातार दिन"
-        case .gujarati:   return "સળંગ દિવસો"
-        case .chinese:    return "天连续"
-        case .farsi:      return "روز متوالی"
-        case .korean:     return "일 연속"
-        case .vietnamese: return "ngày liên tiếp"
-        case .arabic:     return "يوماً متتالياً"
-        case .portuguese: return "dias seguidos"
-        case .tagalog:    return "araw na sunod-sunod"
-        case .punjabi:    return "ਲਗਾਤਾਰ ਦਿਨ"
-        case .armenian:   return "օր անընդմեջ"
-        case .japanese:   return "日連続"
-        case .french:     return "jours d'affilée"
-        case .amharic:    return "ተከታታይ ቀናት"
-        case .russian:    return "дней подряд"
-        case .ukrainian:    return "днів поспіль"
-        }
-    }
-
     private var firstTryAccuracySub: String {
         switch currentLanguage {
         case .english:    return "based on initial session answers"
@@ -727,29 +704,6 @@ struct TVProgressView: View {
         case .amharic:    return "ተከታታይ ቀናት እና ባጆች"
         case .russian:    return "Серии и награды"
         case .ukrainian:    return "Серії та значки"
-        }
-    }
-
-    private var dayStreakSuffix: String {
-        switch currentLanguage {
-        case .english:    return "day streak"
-        case .spanish:    return "días de racha"
-        case .hindi:      return "दिनों का सिलसिला"
-        case .gujarati:   return "દિવસ સાતત્ય"
-        case .chinese:    return "天连续"
-        case .farsi:      return "روز متوالی"
-        case .korean:     return "일 연속"
-        case .vietnamese: return "ngày liên tiếp"
-        case .arabic:     return "يوماً متتالياً"
-        case .portuguese: return "dias de racha"
-        case .tagalog:    return "araw na streak"
-        case .punjabi:    return "ਦਿਨਾਂ ਦੀ ਲੜੀ"
-        case .armenian:   return "օրվա շարք"
-        case .japanese:   return "日連続"
-        case .french:     return "jours d'affilée"
-        case .amharic:    return "ተከታታይ ቀናት"
-        case .russian:    return "дн. подряд"
-        case .ukrainian:    return "днів поспіль"
         }
     }
 

@@ -125,7 +125,7 @@ struct SequencingView: View {
             #if os(iOS)
             if !hasChecked {
                 VStack(alignment: .center, spacing: 8) {
-                    Text("Available Positions:")
+                    Text(XS.availablePositions.text)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
 
@@ -157,7 +157,7 @@ struct SequencingView: View {
                     Button(action: {
                         checkSequence()
                     }) {
-                        Text("Check Order")
+                        Text(XS.checkOrder.text)
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
@@ -199,7 +199,7 @@ struct SequencingView: View {
                     }) {
                         HStack {
                             Image(systemName: "arrow.clockwise")
-                            Text("Try Again")
+                            Text(XS.tryAgain.text)
                         }
                         .font(.headline)
                         .foregroundColor(.red)
@@ -209,7 +209,7 @@ struct SequencingView: View {
                         .cornerRadius(16)
                     }
                     .buttonStyle(PlainButtonStyle())
-                    .accessibilityLabel("Try Again")
+                    .accessibilityLabel(XS.tryAgain.text)
                     .tvFocusEffect()
                 }
             }
@@ -217,7 +217,7 @@ struct SequencingView: View {
             // Correct sequence revealed
             if isCorrectOrderVisible {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Correct Steps Sequence:")
+                    Text(XS.correctStepsSequence.text)
                         .font(.headline)
                         .foregroundColor(.green)
 

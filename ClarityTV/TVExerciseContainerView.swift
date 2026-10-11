@@ -201,7 +201,7 @@ struct TVExerciseContainerView: View {
 
                     Button(action: { advanceToNext() }) {
                         TVNextButton(
-                            label: currentQuestionAnswered ? "Next Question →" : "Skip →",
+                            label: currentQuestionAnswered ? XS.nextQuestion.text : XS.skipArrow.text,
                             isPrimary: currentQuestionAnswered
                         )
                     }
@@ -243,7 +243,7 @@ struct TVExerciseContainerView: View {
     // MARK: - Score Label
 
     private var scoreLabel: some View {
-        Text("Score: \(score)/\(sessionItems.count)")
+        Text(XS.score(score, of: sessionItems.count))
             .font(.system(size: 36, weight: .medium, design: .rounded))
             .foregroundColor(.white)
     }
@@ -286,6 +286,7 @@ struct TVExerciseContainerView: View {
         let record: [String: Any] = [
             "exerciseId": exercise.id.uuidString,
             "exerciseTitle": exercise.title,
+            "itemKey": exercise.itemKey(for: currentItem),
             "questionPreview": String(currentItem.prompt.prefix(50)),
             "exerciseType": ResearchExportManager.string(for: exercise.type),
             "language": ResearchExportManager.string(for: languageManager.currentLanguage),
@@ -519,7 +520,7 @@ private struct TVReplayButton: View {
         HStack(spacing: 12) {
             Image(systemName: "speaker.wave.2.fill")
                 .font(.system(size: 28, weight: .medium))
-            Text("Replay")
+            Text(XS.replay.text)
                 .font(.system(size: 28, weight: .semibold, design: .rounded))
         }
         .foregroundColor(.white)

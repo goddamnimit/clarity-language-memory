@@ -34,9 +34,7 @@ enum WidgetSnapshotWriter {
     @MainActor
     static func refresh() {
         let languageManager = LanguageManager.shared
-        let pool = languageManager.exercisesForSection(.language) +
-                   languageManager.exercisesForSection(.cognition) +
-                   languageManager.exercisesForSection(.functionalSkills)
+        let pool = languageManager.practicePool()
         guard !pool.isEmpty else { return }
 
         let recommendations = RecommendationEngine.generateRecommendations(

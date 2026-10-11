@@ -112,7 +112,7 @@ struct MinimalPairsView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.clockwise")
-                        Text("Try Again")
+                        Text(XS.tryAgain.text)
                     }
                     .font(.headline)
                     .foregroundColor(.blue)
@@ -127,7 +127,7 @@ struct MinimalPairsView: View {
                     .padding(.top, 10)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .accessibilityLabel("Try Again")
+                .accessibilityLabel(XS.tryAgain.text)
                 .tvFocusEffect()
                 .transition(.move(edge: .bottom).combined(with: .opacity))
             }
