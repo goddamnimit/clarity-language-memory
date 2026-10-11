@@ -19,7 +19,8 @@ struct TVYesNoView: View {
                     prompt: item.prompt,
                     options: yesNoOptions,
                     correctAnswer: item.correctAnswer,
-                    onAnswered: onAnswered
+                    onAnswered: onAnswered,
+                    displayLabel: { AnswerLabels.yesNo($0, in: LanguageManager.shared.currentLanguage) }
                 )
             }
         }

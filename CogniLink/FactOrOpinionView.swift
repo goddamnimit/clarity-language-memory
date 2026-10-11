@@ -5,10 +5,22 @@ struct FactOrOpinionView: View {
     let item: ExerciseItem
     let onAnswered: (Bool) -> Void
 
+    @ObservedObject private var languageManager = LanguageManager.shared
+
     @State private var selectedAnswer: String? = nil
     @State private var hasAnswered = false
     @State private var answeredCorrectly = false
     @State private var factOnLeft = true // Controls which side the "Fact" button is displayed on
+
+    // `title` parameters below are the stored data values ("Fact"/"Opinion"); only the drawn
+    // text and the VoiceOver label are localized, through `displayLabel(_:)`.
+    private func displayLabel(_ value: String) -> String {
+        AnswerLabels.factOrOpinion(value, in: languageManager.currentLanguage)
+    }
+
+    private var tryAgainLabel: String {
+        XS.tryAgain.text(in: languageManager.currentLanguage)
+    }
 
     var body: some View {
         VStack(spacing: 24) {
@@ -25,11 +37,11 @@ struct FactOrOpinionView: View {
             HStack(spacing: 16) {
                 // Displays the buttons dynamically based on factOnLeft boolean state
                 if factOnLeft {
-                    choiceButton(title: "Fact", themeColor: .blue)
-                    choiceButton(title: "Opinion", themeColor: .purple)
+                    choiceButton(title: AnswerLabels.fact, themeColor: .blue)
+                    choiceButton(title: AnswerLabels.opinion, themeColor: .purple)
                 } else {
-                    choiceButton(title: "Opinion", themeColor: .purple)
-                    choiceButton(title: "Fact", themeColor: .blue)
+                    choiceButton(title: AnswerLabels.opinion, themeColor: .purple)
+                    choiceButton(title: AnswerLabels.fact, themeColor: .blue)
                 }
             }
 
@@ -51,7 +63,7 @@ struct FactOrOpinionView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.clockwise")
-                        Text("Try Again")
+                        Text(tryAgainLabel)
                     }
                     .font(.headline)
                     .foregroundColor(.blue)
@@ -66,7 +78,7 @@ struct FactOrOpinionView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .accessibilityLabel("Try Again")
+                .accessibilityLabel(XS.tryAgain.text)
                 .tvFocusEffect()
             }
         }
@@ -87,7 +99,7 @@ struct FactOrOpinionView: View {
             selectAnswer(title)
         }) {
             VStack(spacing: 8) {
-                Text(title.uppercased())
+                Text(displayLabel(title).uppercased())
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundColor(buttonTextColor(for: title, themeColor: themeColor))
@@ -123,15 +135,16 @@ struct FactOrOpinionView: View {
     // Mirrors MultipleChoiceView's accessibilityLabel(for:) fix — conveys
     // selection + correctness to VoiceOver instead of color + a bare icon.
     private func accessibilityLabel(for title: String) -> String {
-        guard hasAnswered else { return title }
+        let label = displayLabel(title)
+        guard hasAnswered else { return label }
         let isSelected = selectedAnswer == title
         let isCorrectOption = title == item.correctAnswer
         if isCorrectOption {
-            return isSelected ? "\(title), selected, correct" : "\(title), correct answer"
+            return isSelected ? "\(label), selected, correct" : "\(label), correct answer"
         } else if isSelected {
-            return "\(title), incorrect"
+            return "\(label), incorrect"
         }
-        return title
+        return label
     }
 
     // MARK: - Logic and Helper Functions

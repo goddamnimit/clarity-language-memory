@@ -13,6 +13,9 @@ struct TVOptionGridView: View {
     let options: [String]
     let correctAnswer: String
     let onAnswered: (Bool) -> Void
+    /// Maps a stored option value to the text drawn on its button (default: the value itself).
+    /// Selection state and correctness always use the stored value.
+    var displayLabel: (String) -> String = { $0 }
 
     @FocusState private var focusedIndex: Int?
     @State private var selectedOption: String? = nil
@@ -86,7 +89,7 @@ struct TVOptionGridView: View {
             selectOption(option)
         } label: {
             TVOptionGridTile(
-                text: option,
+                text: displayLabel(option),
                 revealState: revealState(for: option),
                 correctRevealed: correctRevealed
             )

@@ -19,7 +19,8 @@ struct TVFactOrOpinionView: View {
                     prompt: item.prompt,
                     options: factOrOpinionOptions,
                     correctAnswer: item.correctAnswer,
-                    onAnswered: onAnswered
+                    onAnswered: onAnswered,
+                    displayLabel: { AnswerLabels.factOrOpinion($0, in: LanguageManager.shared.currentLanguage) }
                 )
             }
         }

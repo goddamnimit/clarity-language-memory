@@ -12,13 +12,14 @@ struct YesNoView: View {
     @State private var answeredCorrectly = false
     @State private var yesOnLeft = true // Controls which side the "Yes" button is displayed on
 
-    // Dynamically localizes the button labels based on active language
-    private var yesTitle: String {
-        languageManager.currentLanguage == .english ? "Yes" : "Sí"
-    }
+    // The two buttons carry the stored data values ("Yes"/"No"). Selection state and every
+    // comparison with `item.correctAnswer` use these values; only the text drawn on a
+    // button goes through `displayLabel(_:)`.
+    private var yesTitle: String { AnswerLabels.yes }
+    private var noTitle: String { AnswerLabels.no }
 
-    private var noTitle: String {
-        languageManager.currentLanguage == .english ? "No" : "No"
+    private func displayLabel(_ value: String) -> String {
+        AnswerLabels.yesNo(value, in: languageManager.currentLanguage)
     }
 
     var body: some View {
@@ -62,7 +63,7 @@ struct YesNoView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.clockwise")
-                        Text(languageManager.currentLanguage == .english ? "Try Again" : "Intentar de Nuevo")
+                        Text(AnswerLabels.tryAgain(in: languageManager.currentLanguage))
                     }
                     .font(.headline)
                     .foregroundColor(.blue)
@@ -77,7 +78,7 @@ struct YesNoView: View {
                     .padding(.top, 8)
                 }
                 .buttonStyle(PlainButtonStyle())
-                .accessibilityLabel("Try Again")
+                .accessibilityLabel(XS.tryAgain.text)
                 .tvFocusEffect()
             }
         }
@@ -98,7 +99,7 @@ struct YesNoView: View {
             selectAnswer(title)
         }) {
             VStack(spacing: 10) {
-                Text(title.uppercased())
+                Text(displayLabel(title).uppercased())
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(buttonTextColor(for: title, themeColor: themeColor))
@@ -135,16 +136,18 @@ struct YesNoView: View {
     // MultipleChoiceView's accessibilityLabel(for:) fix — otherwise this
     // state is shown only via color and an icon whose raw SF Symbol name
     // would be announced instead.
-    private func accessibilityLabel(for title: String) -> String {
-        guard hasAnswered else { return title }
+    private func accessibilityLabel(for value: String) -> String {
+        let title = value
+        let label = displayLabel(value)
+        guard hasAnswered else { return label }
         let isSelected = selectedAnswer == title
         let isCorrectOption = title == item.correctAnswer
         if isCorrectOption {
-            return isSelected ? "\(title), selected, correct" : "\(title), correct answer"
+            return isSelected ? "\(label), selected, correct" : "\(label), correct answer"
         } else if isSelected {
-            return "\(title), incorrect"
+            return "\(label), incorrect"
         }
-        return title
+        return label
     }
 
     // MARK: - Logic and Helper Functions
