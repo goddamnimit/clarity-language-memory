@@ -55,7 +55,7 @@ struct MultipleChoiceView: View {
     private var memoryRevealOverlay: some View {
         VStack(spacing: 28) {
             if memoryPhase == .words {
-                Text("Remember these words:")
+                Text(XS.rememberTheseWords.text)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
 
@@ -67,7 +67,7 @@ struct MultipleChoiceView: View {
                     }
                 }
             } else {
-                Text("Ready?")
+                Text(XS.ready.text)
                     .font(.system(size: memoryReadyFontSize, weight: .bold, design: .rounded))
                     .foregroundColor(.accentColor)
             }
@@ -167,6 +167,7 @@ struct MultipleChoiceView: View {
                             }
                         }
                         .padding(.horizontal, 20)
+                        .padding(.vertical, 12)   // multi-line options (long German/Italian answers) must not touch the card border
                         .frame(maxWidth: .infinity)
                         .frame(minHeight: 56)
                         .background(backgroundColor(for: option))
@@ -198,7 +199,7 @@ struct MultipleChoiceView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.clockwise")
-                        Text("Try Again")
+                        Text(XS.tryAgain.text)
                     }
                     .font(.headline)
                     .foregroundColor(.blue)
