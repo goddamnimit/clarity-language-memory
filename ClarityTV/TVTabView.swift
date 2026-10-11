@@ -95,6 +95,7 @@ extension AppLanguage {
         case .russian:    return "Прогресс"
         case .ukrainian:    return "Прогрес"
         case .german:    return "Fortschritt"
+        case .italian:    return "Progressi"
         }
     }
 
@@ -119,6 +120,7 @@ extension AppLanguage {
         case .russian:    return "Главная"
         case .ukrainian:    return "Головна"
         case .german:    return "Start"
+        case .italian:    return "Home"
         }
     }
 
@@ -143,6 +145,7 @@ extension AppLanguage {
         case .russian:    return "Занятия"
         case .ukrainian:    return "Вправи"
         case .german:    return "Aktivitäten"
+        case .italian:    return "Attività"
         }
     }
 
@@ -167,6 +170,7 @@ extension AppLanguage {
         case .russian:    return "Профиль"
         case .ukrainian:    return "Профіль"
         case .german:    return "Profil"
+        case .italian:    return "Profilo"
         }
     }
 }

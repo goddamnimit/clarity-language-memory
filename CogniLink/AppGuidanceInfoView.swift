@@ -81,6 +81,7 @@ extension AppLanguage {
         case .russian:    return "Режим восстановления и режим поддержания"
         case .ukrainian:    return "Режими «Відновлення» та «Підтримання»"
         case .german:    return "Genesungs- und Erhaltungsmodus"
+        case .italian:    return "Modalità Recupero e Mantenimento"
         }
     }
 
@@ -105,6 +106,7 @@ extension AppLanguage {
         case .russian:    return "Режим «Восстановление» оценивает прогресс как улучшение: подсказки показывают, растёт или снижается точность со временем. Режим «Поддержание» делает акцент на постоянстве: стабильный результат считается хорошим исходом сам по себе, а не просто отсутствием улучшений."
         case .ukrainian:    return "Режим «Відновлення» розглядає прогрес як покращення: спостереження вказують, коли точність з часом зростає чи знижується. Режим «Підтримання» натомість робить акцент на сталості: стабільні результати вважаються позитивним підсумком самі по собі, а не лише відсутністю покращення."
         case .german:    return "Der Genesungsmodus stellt den Fortschritt als Verbesserung dar – Erkenntnisse weisen darauf hin, wenn die Genauigkeit über die Zeit steigt oder sinkt. Der Erhaltungsmodus stellt stattdessen Beständigkeit in den Vordergrund: Gleichbleibende Leistung gilt für sich genommen als positives Ergebnis und nicht nur als ausbleibende Verbesserung."
+        case .italian:    return "La modalità Recupero imposta il progresso sul miglioramento: gli approfondimenti segnalano quando la precisione sale o scende nel tempo. La modalità Mantenimento lo imposta invece sulla costanza: un rendimento stabile è considerato di per sé un risultato positivo, non solo l'assenza di miglioramento."
         }
     }
 
@@ -129,6 +131,7 @@ extension AppLanguage {
         case .russian:    return "Если это включено, изменение результатов отмечается только тогда, когда оно устойчиво проявляется в двух отдельных периодах занятий. Один необычный день не вызовет подсказки."
         case .ukrainian:    return "Коли цей параметр увімкнено, зміна результатів має стабільно проявитися у двох окремих періодах практики, перш ніж про неї повідомлять. Один незвичайний день сам по собі не викличе спостереження."
         case .german:    return "Wenn dies aktiviert ist, muss sich eine Veränderung der Leistung über zwei getrennte Übungszeiträume hinweg zeigen, bevor sie gemeldet wird. Ein einzelner ungewöhnlicher Tag löst allein keine Erkenntnis aus."
+        case .italian:    return "Se questa opzione è attiva, una variazione del rendimento deve comparire con costanza in due periodi di esercizio distinti prima di essere segnalata. Un singolo giorno insolito non genera da solo un approfondimento."
         }
     }
 
@@ -153,6 +156,7 @@ extension AppLanguage {
         case .russian:    return "О формулировках"
         case .ukrainian:    return "Примітка щодо формулювань"
         case .german:    return "Hinweis zur Formulierung"
+        case .italian:    return "Nota sulla formulazione"
         }
     }
 
@@ -177,6 +181,7 @@ extension AppLanguage {
         case .russian:    return "Формулировки в режимах «Восстановление» и «Поддержание» всё ещё проверяются лицензированным специалистом. Если что-то здесь покажется непонятным или тревожным, воспринимайте это только как справочную информацию и обсудите с лечащей командой: \(patientName)."
         case .ukrainian:    return "Формулювання в режимах «Відновлення» та «Підтримання» ще перевіряє дипломований клініцист. Якщо щось тут здається незрозумілим або тривожним, сприймайте це лише як довідкову інформацію та обговоріть безпосередньо з медичною командою пацієнта (\(patientName))."
         case .german:    return "Die Formulierungen im Genesungs- und im Erhaltungsmodus werden noch von einer approbierten Fachperson geprüft. Wenn etwas hier verwirrend oder beunruhigend klingt, betrachten Sie es bitte nur als Information und sprechen Sie es direkt mit dem Behandlungsteam von \(patientName) an."
+        case .italian:    return "La formulazione usata nelle modalità Recupero e Mantenimento è ancora in revisione da parte di un clinico abilitato. Se qualcosa risulta poco chiaro o preoccupante, lo consideri solo un'informazione e ne parli direttamente con l'équipe di cura di \(patientName)."
         }
     }
 
@@ -201,6 +206,7 @@ extension AppLanguage {
         case .russian:    return "Медицинское предупреждение"
         case .ukrainian:    return "Клінічне застереження"
         case .german:    return "Klinischer Haftungsausschluss"
+        case .italian:    return "Avvertenza clinica"
         }
     }
 }

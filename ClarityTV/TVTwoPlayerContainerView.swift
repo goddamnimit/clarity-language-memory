@@ -334,6 +334,7 @@ struct TVTwoPlayerContainerView: View {
         case .russian:    return "ru-RU"
         case .ukrainian:    return "uk-UA"
         case .german:    return "de-DE"
+        case .italian:    return "it-IT"
         }
     }
 
@@ -360,6 +361,7 @@ struct TVTwoPlayerContainerView: View {
         case .russian:    return "Передайте пульт: \(name)!"
         case .ukrainian:    return "Передайте пульт: \(name)!"
         case .german:    return "Geben Sie die Fernbedienung an \(name) weiter!"
+        case .italian:    return "Passi il telecomando a \(name)!"
         }
     }
 
@@ -384,6 +386,7 @@ struct TVTwoPlayerContainerView: View {
         case .russian:    return "\(name), нажмите «Готов(а)», когда пульт будет у вас в руках."
         case .ukrainian:    return "\(name), натисніть «Готово», коли пульт буде у ваших руках."
         case .german:    return "\(name), drücken Sie „Bereit“, wenn Sie die Fernbedienung in der Hand halten."
+        case .italian:    return "\(name), prema «Pronto» quando ha in mano il telecomando."
         }
     }
 
@@ -408,6 +411,7 @@ struct TVTwoPlayerContainerView: View {
         case .russian:    return "Я готов(а) 🎮"
         case .ukrainian:    return "Готово 🎮"
         case .german:    return "Ich bin bereit 🎮"
+        case .italian:    return "Ci siamo 🎮"
         }
     }
 }

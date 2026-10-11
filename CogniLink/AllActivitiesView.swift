@@ -156,6 +156,7 @@ struct AllActivitiesView: View {
         case .russian:    return "Все занятия"
         case .ukrainian:    return "Усі вправи"
         case .german:    return "Alle Aktivitäten"
+        case .italian:    return "Tutte le attività"
         }
     }
 
@@ -180,6 +181,7 @@ struct AllActivitiesView: View {
         case .russian:    return "В этом разделе пока нет упражнений."
         case .ukrainian:    return "У цьому розділі немає вправ."
         case .german:    return "In diesem Bereich sind keine Übungen verfügbar."
+        case .italian:    return "Nessun esercizio disponibile in questa sezione."
         }
     }
 
@@ -204,6 +206,7 @@ struct AllActivitiesView: View {
         case .russian:    return "Удивите меня!"
         case .ukrainian:    return "Здивуйте мене!"
         case .german:    return "Überrasch mich!"
+        case .italian:    return "Sorprendimi!"
         }
     }
 
@@ -322,6 +325,12 @@ struct AllActivitiesView: View {
             case .language: return "Sprache"
             case .cognition: return "Denken und Gedächtnis"
             case .functionalSkills: return "Alltagsfähigkeiten"
+            }
+        case .italian:
+            switch section {
+            case .language: return "Linguaggio"
+            case .cognition: return "Pensiero e memoria"
+            case .functionalSkills: return "Abilità quotidiane"
             }
         }
     }

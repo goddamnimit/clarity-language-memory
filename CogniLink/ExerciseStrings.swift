@@ -10,7 +10,7 @@ enum XS {
 
     struct Entry {
         let en, es, hi, gu, zh, fa, ko, vi, ar, pt: String
-        let tl, pa, hy, ja, fr, am, ru, uk, de
+        let tl, pa, hy, ja, fr, am, ru, uk, de, it: String
 
         func text(in language: AppLanguage) -> String {
             switch language {
@@ -33,6 +33,7 @@ enum XS {
             case .russian: return ru
             case .ukrainian: return uk
             case .german: return de
+            case .italian: return it
             }
         }
 

@@ -359,6 +359,12 @@ struct TVHomeView: View {
             } else {
                 return "Hallo!"
             }
+        case .italian:
+            if hasName {
+                return "Ciao, \(name)!"
+            } else {
+                return "Ciao!"
+            }
         }
     }
 
@@ -383,6 +389,7 @@ struct TVHomeView: View {
         case .russian:    return "Удивите меня! 🎲"
         case .ukrainian:    return "Здивуйте мене! 🎲"
         case .german:    return "Überrasch mich! 🎲"
+        case .italian:    return "Sorprendimi! 🎲"
         }
     }
 
@@ -407,6 +414,7 @@ struct TVHomeView: View {
         case .russian:    return "Игра вдвоём 👥"
         case .ukrainian:    return "Режим для двох гравців 👥"
         case .german:    return "Zwei-Spieler-Modus 👥"
+        case .italian:    return "Modalità a due giocatori 👥"
         }
     }
 
@@ -431,6 +439,7 @@ struct TVHomeView: View {
         case .russian:    return "Рекомендуем вам"
         case .ukrainian:    return "Рекомендовано для вас"
         case .german:    return "Für Sie empfohlen"
+        case .italian:    return "Consigliati per lei"
         }
     }
 

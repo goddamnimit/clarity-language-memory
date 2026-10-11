@@ -411,6 +411,7 @@ struct TVProgressView: View {
         case .russian:    return "Ваш прогресс"
         case .ukrainian:    return "Панель прогресу"
         case .german:    return "Fortschrittsübersicht"
+        case .italian:    return "Pannello dei progressi"
         }
     }
 
@@ -435,6 +436,7 @@ struct TVProgressView: View {
         case .russian:    return "Следите за своими ежедневными успехами!"
         case .ukrainian:    return "Продовжуйте відстежувати свої щоденні досягнення!"
         case .german:    return "Behalten Sie Ihre täglichen Erfolge im Blick!"
+        case .italian:    return "Continui a seguire i suoi traguardi quotidiani!"
         }
     }
 
@@ -459,6 +461,7 @@ struct TVProgressView: View {
         case .russian:    return "Текущая серия"
         case .ukrainian:    return "Поточна серія"
         case .german:    return "Aktuelle Serie"
+        case .italian:    return "Serie attuale"
         }
     }
 
@@ -483,6 +486,7 @@ struct TVProgressView: View {
         case .russian:    return "Самая длинная серия"
         case .ukrainian:    return "Найдовша серія"
         case .german:    return "Längste Serie"
+        case .italian:    return "Serie più lunga"
         }
     }
 
@@ -507,6 +511,7 @@ struct TVProgressView: View {
         case .russian:    return "Точность с первой попытки"
         case .ukrainian:    return "Точність з першої спроби"
         case .german:    return "Genauigkeit beim ersten Versuch"
+        case .italian:    return "Precisione al primo tentativo"
         }
     }
 
@@ -531,6 +536,7 @@ struct TVProgressView: View {
         case .russian:    return "по первым ответам в занятиях"
         case .ukrainian:    return "за першими відповідями під час занять"
         case .german:    return "basierend auf den ersten Antworten einer Einheit"
+        case .italian:    return "in base alle prime risposte della sessione"
         }
     }
 
@@ -555,6 +561,7 @@ struct TVProgressView: View {
         case .russian:    return "Активность за неделю"
         case .ukrainian:    return "Активність за тиждень"
         case .german:    return "Wöchentliche Aktivität"
+        case .italian:    return "Attività settimanale"
         }
     }
 
@@ -579,6 +586,7 @@ struct TVProgressView: View {
         case .russian:    return "Точность по разделам"
         case .ukrainian:    return "Точність за категоріями"
         case .german:    return "Genauigkeit nach Kategorie"
+        case .italian:    return "Precisione per categoria"
         }
     }
 
@@ -603,6 +611,7 @@ struct TVProgressView: View {
         case .russian:    return "Сегодня"
         case .ukrainian:    return "Сьогодні"
         case .german:    return "Heute"
+        case .italian:    return "Oggi"
         }
     }
 
@@ -627,6 +636,7 @@ struct TVProgressView: View {
         case .russian:    return "Предыдущие дни"
         case .ukrainian:    return "Попередні дні"
         case .german:    return "Frühere Tage"
+        case .italian:    return "Giorni precedenti"
         }
     }
 
@@ -651,6 +661,7 @@ struct TVProgressView: View {
         case .russian:    return "Примечание: экспорт отчёта в PDF доступен только в мобильном приложении."
         case .ukrainian:    return "Примітка: експорт звіту у форматі PDF підтримується лише в мобільному застосунку."
         case .german:    return "Hinweis: Der PDF-Bericht kann nur in der mobilen App exportiert werden."
+        case .italian:    return "Nota: l'esportazione del rapporto PDF è supportata solo nell'app per dispositivi mobili."
         }
     }
 
@@ -716,6 +727,7 @@ struct TVProgressView: View {
         case .russian:    return "Серии и награды"
         case .ukrainian:    return "Серії та значки"
         case .german:    return "Serien und Abzeichen"
+        case .italian:    return "Serie e badge"
         }
     }
 
@@ -740,6 +752,7 @@ struct TVProgressView: View {
         case .russian:    return "Всего занятий"
         case .ukrainian:    return "Усього занять"
         case .german:    return "Einheiten insgesamt"
+        case .italian:    return "Sessioni totali"
         }
     }
 }

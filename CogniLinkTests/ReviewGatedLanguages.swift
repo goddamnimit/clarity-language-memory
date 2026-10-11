@@ -40,6 +40,18 @@ enum ReviewGatedLanguages {
       expectedHeldKeys: heldKeys, expectedHeldItemCount: 150,
       hiddenConstant: LanguageReviewStatus.germanHidden,
       heldReleasedConstant: LanguageReviewStatus.germanHeldGroupsReleased,
-      reviewStatus: LanguageReviewStatus.german)
+      reviewStatus: LanguageReviewStatus.german),
+    GatedLanguage(
+      language: .italian,
+      rawCatalog: {
+        ItalianLanguageExerciseData.allExercises + ItalianCognitionExerciseData.allExercises
+          + ItalianFunctionalSkillsExerciseData.allExercises + ItalianNewExercisesData.allExercises
+          + ItalianHardExercisesData.allExercises
+      },
+      detectionTags: ["it", "it-IT", "it-CH", "IT-it"],
+      expectedHeldKeys: heldKeys, expectedHeldItemCount: 150,
+      hiddenConstant: LanguageReviewStatus.italianHidden,
+      heldReleasedConstant: LanguageReviewStatus.italianHeldGroupsReleased,
+      reviewStatus: LanguageReviewStatus.italian)
   ]
 }

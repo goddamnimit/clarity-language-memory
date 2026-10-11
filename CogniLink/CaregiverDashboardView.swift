@@ -583,6 +583,7 @@ extension AppLanguage {
         case .russian:    return "Цель занятий"
         case .ukrainian:    return "Мета терапії"
         case .german:    return "Zielausrichtung"
+        case .italian:    return "Orientamento dell'obiettivo"
         }
     }
 
@@ -609,6 +610,7 @@ extension AppLanguage {
             case .russian:    return "Восстановление"
             case .ukrainian:    return "Відновлення"
             case .german:    return "Genesung"
+            case .italian:    return "Recupero"
             }
         case .maintenance:
             switch self {
@@ -631,6 +633,7 @@ extension AppLanguage {
             case .russian:    return "Поддержание"
             case .ukrainian:    return "Підтримання"
             case .german:    return "Erhalt"
+            case .italian:    return "Mantenimento"
             }
         }
     }
@@ -656,6 +659,7 @@ extension AppLanguage {
         case .russian:    return "Восстановление: подразумевается, что цель — улучшение. Поддержание: стабильный результат считается хорошим исходом."
         case .ukrainian:    return "Відновлення: формулювання виходять із того, що мета — покращення. Підтримання: формулювання вважають стабільні результати позитивним підсумком."
         case .german:    return "Genesung: Die Darstellung geht davon aus, dass Verbesserung das Ziel ist. Erhalt: Die Darstellung wertet gleichbleibende Leistung als positives Ergebnis."
+        case .italian:    return "Recupero: l'impostazione presume che il miglioramento sia l'obiettivo. Mantenimento: l'impostazione considera un rendimento costante un risultato positivo."
         }
     }
 
@@ -680,6 +684,7 @@ extension AppLanguage {
         case .russian:    return "Ожидаются колебания по дням"
         case .ukrainian:    return "Очікувати щоденних коливань"
         case .german:    return "Tägliche Schwankungen erwarten"
+        case .italian:    return "Prevedere variazioni da un giorno all'altro"
         }
     }
 
@@ -704,6 +709,7 @@ extension AppLanguage {
         case .russian:    return "Включите, если ежедневные подъёмы и спады ожидаемы по причинам, не связанным с тем, как у вашего близкого идут дела в терапии."
         case .ukrainian:    return "Увімкніть, якщо щоденні підйоми й спади очікувані з причин, не пов'язаних із тим, як ваша близька людина справляється з терапією."
         case .german:    return "Aktivieren Sie dies, wenn tägliche Schwankungen aus Gründen zu erwarten sind, die nichts damit zu tun haben, wie es Ihrem Angehörigen in der Therapie geht."
+        case .italian:    return "Attivi questa opzione se le oscillazioni quotidiane sono attese per motivi che non riguardano l'andamento della terapia del suo familiare."
         }
     }
 
@@ -728,6 +734,7 @@ extension AppLanguage {
         case .russian:    return "О рекомендациях приложения"
         case .ukrainian:    return "Про поради застосунку"
         case .german:    return "Über die Hinweise dieser App"
+        case .italian:    return "Informazioni sulle indicazioni dell'app"
         }
     }
 
@@ -752,6 +759,7 @@ extension AppLanguage {
         case .russian:    return "Подсказки и рекомендации"
         case .ukrainian:    return "Функції порад"
         case .german:    return "Hinweisfunktionen"
+        case .italian:    return "Funzioni di indicazione"
         }
     }
 
@@ -776,6 +784,7 @@ extension AppLanguage {
         case .russian:    return "В приложении есть экспериментальные подсказки. Подробности всегда можно найти в меню ухаживающего: [О рекомендациях приложения]."
         case .ukrainian:    return "У цьому застосунку є кілька експериментальних функцій порад. Подробиці завжди можна знайти в меню доглядальника в розділі [Про поради застосунку]."
         case .german:    return "Diese App enthält einige experimentelle Hinweisfunktionen – Details finden Sie jederzeit unter [Über die Hinweise dieser App] in Ihrem Betreuungsmenü."
+        case .italian:    return "Questa app include alcune funzioni di indicazione sperimentali: per i dettagli consulti in qualsiasi momento [Informazioni sulle indicazioni dell'app] nel menu assistente."
         }
     }
 
@@ -800,6 +809,7 @@ extension AppLanguage {
         case .russian:    return "ОК"
         case .ukrainian:    return "Гаразд"
         case .german:    return "OK"
+        case .italian:    return "OK"
         }
     }
 }

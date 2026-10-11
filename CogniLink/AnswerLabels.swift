@@ -16,6 +16,7 @@ enum AnswerLabels {
         let isYes = value == yes
         switch language {
         case .german: return isYes ? "Ja" : "Nein"
+        case .italian: return isYes ? "Sì" : "No"
         case .english: return value
         default:
             #if os(tvOS)
@@ -30,6 +31,7 @@ enum AnswerLabels {
         let isFact = value == fact
         switch language {
         case .german: return isFact ? "Tatsache" : "Meinung"
+        case .italian: return isFact ? "Fatto" : "Opinione"
         default: return value                  // English labels for every other language (existing behavior)
         }
     }
@@ -39,5 +41,5 @@ enum AnswerLabels {
     }
 
     /// Languages whose Yes/No and Fact/Opinion buttons are localized.
-    static let localizedLanguages: Set<AppLanguage> = [.english, .german]
+    static let localizedLanguages: Set<AppLanguage> = [.english, .german, .italian]
 }

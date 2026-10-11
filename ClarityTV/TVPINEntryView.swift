@@ -160,6 +160,7 @@ struct TVPINEntryView: View {
         case .russian:    return "Режим ухаживающего"
         case .ukrainian:    return "Режим доглядальника"
         case .german:    return "Betreuungsmodus"
+        case .italian:    return "Modalità assistente"
         }
     }
 
@@ -184,6 +185,7 @@ struct TVPINEntryView: View {
         case .russian:    return "Введите 4-значный PIN-код для доступа к настройкам"
         case .ukrainian:    return "Введіть 4-значний пін-код, щоб відкрити налаштування"
         case .german:    return "4-stellige PIN für den Zugriff auf die Einstellungen eingeben"
+        case .italian:    return "Inserisca il PIN di 4 cifre per accedere alle impostazioni"
         }
     }
 
@@ -208,6 +210,7 @@ struct TVPINEntryView: View {
         case .russian:    return "Неверный PIN-код. Попробуйте ещё раз."
         case .ukrainian:    return "Неправильний пін-код. Спробуйте ще раз."
         case .german:    return "Falsche PIN. Bitte versuchen Sie es erneut."
+        case .italian:    return "PIN errato. Riprovi."
         }
     }
 }

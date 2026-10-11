@@ -161,6 +161,7 @@ struct TVSettingsView: View {
         case .russian:    return "Настройки"
         case .ukrainian:    return "Налаштування"
         case .german:    return "Einstellungen"
+        case .italian:    return "Impostazioni"
         }
     }
 
@@ -185,6 +186,7 @@ struct TVSettingsView: View {
         case .russian:    return "Читать вопросы вслух"
         case .ukrainian:    return "Озвучувати запитання"
         case .german:    return "Fragen vorlesen"
+        case .italian:    return "Leggi le domande ad alta voce"
         }
     }
 
@@ -209,6 +211,7 @@ struct TVSettingsView: View {
         case .russian:    return "Читает каждый вопрос вслух с помощью синтеза речи"
         case .ukrainian:    return "Озвучує кожне запитання за допомогою синтезу мовлення"
         case .german:    return "Liest jede Frage per Sprachausgabe vor"
+        case .italian:    return "Legge ogni domanda ad alta voce con la sintesi vocale"
         }
     }
 
@@ -233,6 +236,7 @@ struct TVSettingsView: View {
         case .russian:    return "Звуковые эффекты"
         case .ukrainian:    return "Звукові ефекти"
         case .german:    return "Soundeffekte"
+        case .italian:    return "Effetti sonori"
         }
     }
 
@@ -257,6 +261,7 @@ struct TVSettingsView: View {
         case .russian:    return "Язык"
         case .ukrainian:    return "Мова"
         case .german:    return "Sprache"
+        case .italian:    return "Lingua"
         }
     }
 
@@ -281,6 +286,7 @@ struct TVSettingsView: View {
         case .russian:    return "О приложении"
         case .ukrainian:    return "Про застосунок"
         case .german:    return "Info"
+        case .italian:    return "Informazioni"
         }
     }
 
@@ -305,6 +311,7 @@ struct TVSettingsView: View {
         case .russian:    return "Clarity: речь и память\nСоздано для терапии при афазии и ЛТД.\n© 2024 Clarity App"
         case .ukrainian:    return "Clarity: мова та пам'ять\nРозроблено для терапії при афазії та лобово-скроневій деменції.\n© 2024 застосунок Clarity"
         case .german:    return "Clarity: Sprache & Gedächtnis\nEntwickelt für die Therapie bei Aphasie und FTD.\n© 2024 Clarity App"
+        case .italian:    return "Clarity: Linguaggio e memoria\nProgettata per la terapia dell'afasia e della FTD.\n© 2024 Clarity App"
         }
     }
 
@@ -329,6 +336,7 @@ struct TVSettingsView: View {
         case .russian:    return "Вкл."
         case .ukrainian:    return "Увімк."
         case .german:    return "An"
+        case .italian:    return "Sì"
         }
     }
 
@@ -353,6 +361,7 @@ struct TVSettingsView: View {
         case .russian:    return "Выкл."
         case .ukrainian:    return "Вимк."
         case .german:    return "Aus"
+        case .italian:    return "No"
         }
     }
 }

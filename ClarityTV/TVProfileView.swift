@@ -43,6 +43,7 @@ struct TVProfileView: View {
         case .russian:    return "Профиль"
         case .ukrainian:    return "Профіль"
         case .german:    return "Profil"
+        case .italian:    return "Profilo"
         }
     }
 
@@ -67,6 +68,7 @@ struct TVProfileView: View {
         case .russian:    return "Выберите язык"
         case .ukrainian:    return "Оберіть мову"
         case .german:    return "Sprache auswählen"
+        case .italian:    return "Selezioni la lingua"
         }
     }
 
@@ -264,6 +266,7 @@ struct TVProfileView: View {
         case .russian:    return "Читать вопросы вслух"
         case .ukrainian:    return "Озвучувати запитання"
         case .german:    return "Fragen vorlesen"
+        case .italian:    return "Leggi le domande ad alta voce"
         }
     }
 
@@ -288,6 +291,7 @@ struct TVProfileView: View {
         case .russian:    return "Вкл."
         case .ukrainian:    return "Увімк."
         case .german:    return "An"
+        case .italian:    return "Sì"
         }
     }
 
@@ -312,6 +316,7 @@ struct TVProfileView: View {
         case .russian:    return "Выкл."
         case .ukrainian:    return "Вимк."
         case .german:    return "Aus"
+        case .italian:    return "No"
         }
     }
 }

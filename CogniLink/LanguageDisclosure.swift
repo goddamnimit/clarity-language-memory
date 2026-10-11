@@ -8,6 +8,8 @@ enum LanguageDisclosure {
         switch language {
         case .german:
             return "Diese Sprache wurde maschinell mit KI übersetzt und wird derzeit von Muttersprachlern geprüft. Wenn Sie einen Fehler sehen, nutzen Sie bitte die Flaggen-Schaltfläche."
+        case .italian:
+            return "Questa lingua è stata tradotta automaticamente con l'IA ed è in fase di revisione da parte di madrelingua. Se nota un errore, usi il pulsante con la bandierina."
         default:
             return nil
         }

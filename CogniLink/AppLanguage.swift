@@ -22,6 +22,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     case russian = "Русский"
     case ukrainian = "Українська"
     case german = "Deutsch"
+    case italian = "Italiano"
 
 
 
@@ -36,6 +37,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         switch self {
         case .russian, .ukrainian: return true
         case .german: return LanguageReviewStatus.germanHidden
+        case .italian: return LanguageReviewStatus.italianHidden
         default: return false
         }
     }
@@ -64,6 +66,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .russian: return "Русский"
         case .ukrainian: return "Українська"
         case .german: return "Deutsch"
+        case .italian: return "Italiano"
 
 
 
@@ -91,6 +94,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .russian: return "🇷🇺"
         case .ukrainian: return "🇺🇦"
         case .german: return "🇩🇪"
+        case .italian: return "🇮🇹"
 
 
 
@@ -118,6 +122,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .russian: return "ru_RU"
         case .ukrainian: return "uk_UA"
         case .german: return "de_DE"
+        case .italian: return "it_IT"
 
 
 
@@ -303,6 +308,11 @@ class LanguageManager: ObservableObject {
                      GermanNewExercisesData.allExercises +
                      GermanHardExercisesData.allExercises,
 
+            .italian: ItalianLanguageExerciseData.allExercises +
+                      ItalianCognitionExerciseData.allExercises +
+                      ItalianFunctionalSkillsExerciseData.allExercises +
+                      ItalianNewExercisesData.allExercises +
+                      ItalianHardExercisesData.allExercises
         ]
     }
     
@@ -449,6 +459,13 @@ class LanguageManager: ObservableObject {
                        GermanNewExercisesData.allExercises +
                        GermanHardExercisesData.allExercises
             return pool.filter { $0.section == section }
+        case .italian:
+            let pool = ItalianLanguageExerciseData.allExercises +
+                       ItalianCognitionExerciseData.allExercises +
+                       ItalianFunctionalSkillsExerciseData.allExercises +
+                       ItalianNewExercisesData.allExercises +
+                       ItalianHardExercisesData.allExercises
+            return pool.filter { $0.section == section }
         }
     }
 }
@@ -475,6 +492,7 @@ extension AppLanguage {
         if firstLang.hasPrefix("fr") { return .french }
         if firstLang.hasPrefix("am") { return .amharic }
         if firstLang.hasPrefix("de") && !isHidden(.german) { return .german }
+        if firstLang.hasPrefix("it") && !isHidden(.italian) { return .italian }
         return .english
     }
 
@@ -510,6 +528,7 @@ extension AppLanguage {
         case .russian:    return "Отметить этот вопрос"
         case .ukrainian:    return "Позначити це запитання"
         case .german:    return "Diese Frage melden"
+        case .italian:    return "Segnala questa domanda"
         }
     }
 
@@ -534,6 +553,7 @@ extension AppLanguage {
         case .russian:    return "Отметить этот вопрос для проверки?"
         case .ukrainian:    return "Позначити це запитання для перегляду?"
         case .german:    return "Diese Frage zur Überprüfung melden?"
+        case .italian:    return "Segnalare questa domanda per la revisione?"
         }
     }
 
@@ -558,6 +578,7 @@ extension AppLanguage {
         case .russian:    return "Будет сохранена локальная заметка для проверки ухаживающим. Личные данные не включаются."
         case .ukrainian:    return "Це збереже локальну нотатку, яку перегляне ваш доглядальник. Особисті дані не включаються."
         case .german:    return "Dadurch wird eine lokale Notiz gespeichert, die Ihre Betreuungsperson prüfen kann. Es werden keine persönlichen Daten aufgenommen."
+        case .italian:    return "Verrà salvata una nota locale che il suo assistente potrà rivedere. Non vengono inclusi dati personali."
         }
     }
 
@@ -582,6 +603,7 @@ extension AppLanguage {
         case .russian:    return "Отметить"
         case .ukrainian:    return "Позначити"
         case .german:    return "Melden"
+        case .italian:    return "Segnala"
         }
     }
 
@@ -606,6 +628,7 @@ extension AppLanguage {
         case .russian:    return "Отмена"
         case .ukrainian:    return "Скасувати"
         case .german:    return "Abbrechen"
+        case .italian:    return "Annulla"
         }
     }
 
@@ -630,6 +653,7 @@ extension AppLanguage {
         case .russian:    return "Отмечено для проверки"
         case .ukrainian:    return "Позначено для перегляду"
         case .german:    return "Zur Überprüfung gemeldet"
+        case .italian:    return "Segnalata per la revisione"
         }
     }
 
@@ -654,6 +678,7 @@ extension AppLanguage {
         case .russian:    return "Отмеченные вопросы"
         case .ukrainian:    return "Позначений вміст"
         case .german:    return "Gemeldete Inhalte"
+        case .italian:    return "Contenuti segnalati"
         }
     }
 
@@ -678,6 +703,7 @@ extension AppLanguage {
         case .russian:    return "Отмеченных вопросов пока нет"
         case .ukrainian:    return "Позначених запитань поки немає"
         case .german:    return "Noch keine gemeldeten Einträge"
+        case .italian:    return "Ancora nessun elemento segnalato"
         }
     }
 
@@ -702,6 +728,7 @@ extension AppLanguage {
         case .russian:    return "Копировать всё как текст"
         case .ukrainian:    return "Копіювати все як текст"
         case .german:    return "Alles als Text kopieren"
+        case .italian:    return "Copia tutto come testo"
         }
     }
 
@@ -726,6 +753,7 @@ extension AppLanguage {
         case .russian:    return "Экспорт в JSON"
         case .ukrainian:    return "Експортувати як JSON"
         case .german:    return "Als JSON exportieren"
+        case .italian:    return "Esporta come JSON"
         }
     }
 
@@ -750,6 +778,7 @@ extension AppLanguage {
         case .russian:    return "Скопировано в буфер обмена"
         case .ukrainian:    return "Скопійовано в буфер обміну"
         case .german:    return "In die Zwischenablage kopiert"
+        case .italian:    return "Copiato negli appunti"
         }
     }
 }
@@ -778,6 +807,7 @@ extension AppLanguage {
         case .russian: return "Введите своё имя"
         case .ukrainian: return "Введіть своє ім'я"
         case .german: return "Geben Sie Ihren Namen ein"
+        case .italian: return "Inserisca il suo nome"
         }
     }
 
@@ -802,6 +832,7 @@ extension AppLanguage {
         case .russian: return "Диагноз"
         case .ukrainian: return "Діагноз"
         case .german: return "Diagnose"
+        case .italian: return "Diagnosi"
         }
     }
 
@@ -826,6 +857,7 @@ extension AppLanguage {
         case .russian: return "Не указан"
         case .ukrainian: return "Не вказано"
         case .german: return "Nicht festgelegt"
+        case .italian: return "Non impostato"
         }
     }
 
@@ -850,6 +882,7 @@ extension AppLanguage {
         case .russian: return "Терапевт"
         case .ukrainian: return "Фахівець із терапії"
         case .german: return "Therapeut/in"
+        case .italian: return "Terapista"
         }
     }
 
@@ -874,6 +907,7 @@ extension AppLanguage {
         case .russian: return "Пользуетесь с"
         case .ukrainian: return "Користуєтеся з"
         case .german: return "Nutzung seit"
+        case .italian: return "In uso dal"
         }
     }
 
@@ -898,6 +932,7 @@ extension AppLanguage {
         case .russian: return "Заметки"
         case .ukrainian: return "Нотатки"
         case .german: return "Notizen"
+        case .italian: return "Note"
         }
     }
 
@@ -922,6 +957,7 @@ extension AppLanguage {
         case .russian: return "Занятия"
         case .ukrainian: return "Заняття"
         case .german: return "Einheiten"
+        case .italian: return "Sessioni"
         }
     }
 
@@ -946,6 +982,7 @@ extension AppLanguage {
         case .russian: return "Завершено"
         case .ukrainian: return "Завершено"
         case .german: return "Abgeschlossen"
+        case .italian: return "Completato"
         }
     }
 
@@ -970,6 +1007,7 @@ extension AppLanguage {
         case .russian: return "Активных дней"
         case .ukrainian: return "Активних днів"
         case .german: return "Aktive Tage"
+        case .italian: return "Giorni attivi"
         }
     }
 
@@ -994,6 +1032,7 @@ extension AppLanguage {
         case .russian: return "Точность"
         case .ukrainian: return "Точність"
         case .german: return "Genauigkeit"
+        case .italian: return "Precisione"
         }
     }
 
@@ -1018,6 +1057,7 @@ extension AppLanguage {
         case .russian: return "Язык"
         case .ukrainian: return "Мова"
         case .german: return "Sprache"
+        case .italian: return "Lingua"
         }
     }
 
@@ -1042,6 +1082,7 @@ extension AppLanguage {
         case .russian: return "Приложение будет показывать все упражнения на выбранном языке."
         case .ukrainian: return "Застосунок показуватиме всі вправи обраною мовою."
         case .german: return "Die App zeigt alle Übungen in der ausgewählten Sprache an."
+        case .italian: return "L'app mostrerà tutti gli esercizi nella lingua selezionata."
         }
     }
 
@@ -1066,6 +1107,7 @@ extension AppLanguage {
         case .russian: return "Достижения"
         case .ukrainian: return "Досягнення"
         case .german: return "Erfolge"
+        case .italian: return "Traguardi"
         }
     }
 
@@ -1090,6 +1132,7 @@ extension AppLanguage {
         case .russian: return "Мои награды"
         case .ukrainian: return "Мої значки"
         case .german: return "Meine Abzeichen"
+        case .italian: return "I miei badge"
         }
     }
 
@@ -1114,6 +1157,7 @@ extension AppLanguage {
         case .russian: return "Исследование"
         case .ukrainian: return "Дослідження"
         case .german: return "Forschung"
+        case .italian: return "Ricerca"
         }
     }
 
@@ -1138,6 +1182,7 @@ extension AppLanguage {
         case .russian: return "Экспортируются только анонимные данные об успехах. Личные данные (имя, фото, контакты) не включаются. Можно передать исследователям или терапевтам."
         case .ukrainian: return "Експортуються лише знеособлені дані про результати. Особисті дані (ім'я, фото чи контакти) не включаються. Можна передати дослідникам або фахівцям із терапії."
         case .german: return "Es werden ausschließlich anonyme Leistungsdaten exportiert. Persönliche Angaben (Name, Foto oder Kontaktdaten) sind nicht enthalten. Zur Weitergabe an Forschende oder Therapeutinnen und Therapeuten."
+        case .italian: return "Vengono esportati solo dati anonimi sulle prestazioni. Non sono inclusi dati personali (nome, foto o recapiti). Da condividere con ricercatori o terapisti."
         }
     }
 
@@ -1162,6 +1207,7 @@ extension AppLanguage {
         case .russian: return "Экспорт данных для исследования"
         case .ukrainian: return "Експортувати дані для досліджень"
         case .german: return "Forschungsdaten exportieren"
+        case .italian: return "Esporta i dati per la ricerca"
         }
     }
 
@@ -1186,6 +1232,7 @@ extension AppLanguage {
         case .russian: return "О рекомендациях приложения"
         case .ukrainian: return "Про поради застосунку"
         case .german: return "Über die Hinweise dieser App"
+        case .italian: return "Informazioni sulle indicazioni dell'app"
         }
     }
 
@@ -1210,6 +1257,7 @@ extension AppLanguage {
         case .russian: return "Сбросить профиль"
         case .ukrainian: return "Скинути профіль"
         case .german: return "Profil zurücksetzen"
+        case .italian: return "Reimposta il profilo"
         }
     }
 
@@ -1234,6 +1282,7 @@ extension AppLanguage {
         case .russian: return "Сбросить профиль?"
         case .ukrainian: return "Скинути профіль?"
         case .german: return "Profil zurücksetzen?"
+        case .italian: return "Reimpostare il profilo?"
         }
     }
 
@@ -1258,6 +1307,7 @@ extension AppLanguage {
         case .russian: return "Отмена"
         case .ukrainian: return "Скасувати"
         case .german: return "Abbrechen"
+        case .italian: return "Annulla"
         }
     }
 
@@ -1282,6 +1332,7 @@ extension AppLanguage {
         case .russian: return "Сбросить"
         case .ukrainian: return "Скинути"
         case .german: return "Zurücksetzen"
+        case .italian: return "Ripristina"
         }
     }
 
@@ -1306,6 +1357,7 @@ extension AppLanguage {
         case .russian: return "Будут удалены ваше имя, фото, диагноз и заметки. История занятий и количество занятий сохранятся, но серия обнулится."
         case .ukrainian: return "Буде видалено ваше ім'я, фото, діагноз і нотатки. Історія вправ і кількість занять не зміняться, але серія днів обнулиться."
         case .german: return "Dadurch werden Ihr Name, Foto, Ihre Diagnose und Notizen gelöscht. Ihr Übungsverlauf und die Anzahl der Einheiten bleiben erhalten, aber Ihre Serie wird auf null zurückgesetzt."
+        case .italian: return "Verranno cancellati nome, foto, diagnosi e note. La cronologia degli esercizi e il numero di sessioni non cambiano, ma la serie tornerà a zero."
         }
     }
 
@@ -1330,6 +1382,7 @@ extension AppLanguage {
         case .russian: return "Мой профиль"
         case .ukrainian: return "Мій профіль"
         case .german: return "Mein Profil"
+        case .italian: return "Il mio profilo"
         }
     }
 
@@ -1354,6 +1407,7 @@ extension AppLanguage {
         case .russian: return "Совет по клавиатуре"
         case .ukrainian: return "Порада щодо клавіатури"
         case .german: return "Tastatur-Tipp"
+        case .italian: return "Suggerimento sulla tastiera"
         }
     }
 
@@ -1378,6 +1432,7 @@ extension AppLanguage {
         case .russian: return "Понятно"
         case .ukrainian: return "Зрозуміло"
         case .german: return "Verstanden"
+        case .italian: return "Ho capito"
         }
     }
 
@@ -1402,6 +1457,7 @@ extension AppLanguage {
         case .russian: return "Открыть настройки"
         case .ukrainian: return "Відкрити налаштування"
         case .german: return "Einstellungen öffnen"
+        case .italian: return "Apri Impostazioni"
         }
     }
 
@@ -1426,6 +1482,7 @@ extension AppLanguage {
         case .russian: return "Для удобной работы с языком «\(languageName)» добавьте клавиатуру в настройках iPhone: Основные → Клавиатура → Клавиатуры → Новые клавиатуры."
         case .ukrainian: return "Щоб зручніше користуватися мовою «\(languageName)», додайте клавіатуру в налаштуваннях iPhone: Загальні → Клавіатура → Клавіатури → Нова клавіатура."
         case .german: return "Für die beste Erfahrung mit \(languageName) fügen Sie die Tastatur in den iPhone-Einstellungen hinzu: Allgemein → Tastatur → Tastaturen → Neue Tastatur hinzufügen."
+        case .italian: return "Per un'esperienza ottimale con \(languageName), aggiunga la tastiera in Impostazioni di iPhone → Generali → Tastiera → Tastiere → Aggiungi nuova tastiera."
         }
     }
 
@@ -1450,6 +1507,7 @@ extension AppLanguage {
         case .russian: return "Пожалуйста, уточните"
         case .ukrainian: return "Уточніть, будь ласка"
         case .german: return "Bitte angeben"
+        case .italian: return "Specifichi"
         }
     }
 
@@ -1474,6 +1532,7 @@ extension AppLanguage {
         case .russian: return "Сохранить"
         case .ukrainian: return "Зберегти"
         case .german: return "Speichern"
+        case .italian: return "Salva"
         }
     }
 
@@ -1498,6 +1557,7 @@ extension AppLanguage {
         case .russian: return "Имя терапевта"
         case .ukrainian: return "Ім'я фахівця із терапії"
         case .german: return "Name der Therapeutin / des Therapeuten"
+        case .italian: return "Nome del terapista"
         }
     }
 
@@ -1522,6 +1582,7 @@ extension AppLanguage {
         case .russian: return "Заметок нет."
         case .ukrainian: return "Немає нотаток."
         case .german: return "Keine Notizen."
+        case .italian: return "Nessuna nota."
         }
     }
 }

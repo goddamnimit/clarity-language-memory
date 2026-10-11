@@ -181,6 +181,7 @@ struct TVOpenEndedView: View {
         case .russian:    return "Тема для обсуждения"
         case .ukrainian:    return "Тема для обговорення"
         case .german:    return "Gesprächsanregung"
+        case .italian:    return "Spunto di conversazione"
         }
     }
 
@@ -205,6 +206,7 @@ struct TVOpenEndedView: View {
         case .russian:    return "Образец ответа"
         case .ukrainian:    return "Зразок відповіді"
         case .german:    return "Musterantwort"
+        case .italian:    return "Risposta di esempio"
         }
     }
 
@@ -229,6 +231,7 @@ struct TVOpenEndedView: View {
         case .russian:    return "Я ответил(а) верно"
         case .ukrainian:    return "У мене вийшло"
         case .german:    return "Ich hatte es richtig"
+        case .italian:    return "Ho risposto bene"
         }
     }
 
@@ -253,6 +256,7 @@ struct TVOpenEndedView: View {
         case .russian:    return "Мне нужно ещё потренироваться"
         case .ukrainian:    return "Мені потрібно більше практики"
         case .german:    return "Ich muss noch üben"
+        case .italian:    return "Ho bisogno di più esercizio"
         }
     }
 
@@ -277,6 +281,7 @@ struct TVOpenEndedView: View {
         case .russian:    return "Показать ответ"
         case .ukrainian:    return "Показати відповідь"
         case .german:    return "Antwort anzeigen"
+        case .italian:    return "Mostra la risposta"
         }
     }
 }

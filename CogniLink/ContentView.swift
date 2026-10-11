@@ -108,6 +108,7 @@ struct ContentView: View {
         case .russian:    return "Главная"
         case .ukrainian:    return "Головна"
         case .german:    return "Start"
+        case .italian:    return "Home"
         }
     }
 
@@ -132,6 +133,7 @@ struct ContentView: View {
         case .russian:    return "Занятия"
         case .ukrainian:    return "Вправи"
         case .german:    return "Aktivitäten"
+        case .italian:    return "Attività"
         }
     }
 
@@ -163,6 +165,7 @@ fileprivate func profileTitle(for language: AppLanguage) -> String {
     case .russian:    return "Профиль"
     case .ukrainian:    return "Профіль"
     case .german:    return "Profil"
+    case .italian:    return "Profilo"
     }
 }
 
@@ -831,6 +834,27 @@ struct HomeView: View {
                 ]
                 return greetings[dayOfYear % greetings.count]
             }
+        case .italian:
+            if hasName {
+                let greetings = [
+                    "Che piacere rivederla, \(name)!",
+                    "Vogliamo iniziare, \(name)?",
+                    "Siamo contenti di rivederla, \(name)!",
+                    "Cominciamo, \(name)!",
+                    "Che bello averla qui, \(name)!",
+                    "È il suo momento, \(name)!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            } else {
+                let greetings = [
+                    "Benvenuti in Clarity!",
+                    "Vogliamo iniziare?",
+                    "Cominciamo!",
+                    "Che bello averla qui!",
+                    "È il momento di brillare!"
+                ]
+                return greetings[dayOfYear % greetings.count]
+            }
         }
     }
 
@@ -855,6 +879,7 @@ struct HomeView: View {
         case .russian:    return "Удивите меня! 🎲"
         case .ukrainian:    return "Здивуйте мене! 🎲"
         case .german:    return "Überrasch mich! 🎲"
+        case .italian:    return "Sorprendimi! 🎲"
         }
     }
 
@@ -918,6 +943,12 @@ struct HomeView: View {
             #else
             return "Tippen Sie für eine zufällige Aktivität"
             #endif
+        case .italian:
+            #if os(tvOS)
+            return "Scelga un'attività a caso"
+            #else
+            return "Tocchi per un'attività a caso"
+            #endif
         }
     }
 
@@ -942,6 +973,7 @@ struct HomeView: View {
         case .russian:    return "Язык"
         case .ukrainian:    return "Мова"
         case .german:    return "Sprache"
+        case .italian:    return "Lingua"
         }
     }
 
@@ -966,6 +998,7 @@ struct HomeView: View {
         case .russian:    return "Когнитивные навыки"
         case .ukrainian:    return "Когнітивні вправи"
         case .german:    return "Kognition"
+        case .italian:    return "Cognizione"
         }
     }
 
@@ -990,6 +1023,7 @@ struct HomeView: View {
         case .russian:    return "Бытовые навыки"
         case .ukrainian:    return "Функціональні навички"
         case .german:    return "Alltagsfähigkeiten"
+        case .italian:    return "Abilità quotidiane"
         }
     }
 
@@ -1026,6 +1060,7 @@ struct HomeView: View {
         case .russian:    return "Занятий проведено: \(sessionsCount)"
         case .ukrainian:  return "Проведено занять: \(sessionsCount)"
         case .german:     return "\(sessionsCount) Einheiten absolviert"
+        case .italian:    return "\(sessionsCount) sessioni svolte"
         }
     }
 
@@ -1277,6 +1312,13 @@ extension AppLanguage {
                 "Ihre Serie wartet auf Sie – bleiben Sie dran.",
                 "Wenn Sie bereit sind, öffnen Sie Clarity."
             ]
+        case .italian:
+            return [
+                hasName ? "\(name), è il momento del suo esercizio con Clarity." : "È il momento del suo esercizio con Clarity.",
+                "Anche pochi minuti di esercizio fanno la differenza.",
+                "La sua serie la aspetta: continui così.",
+                "Quando vuole, apra Clarity."
+            ]
         }
     }
 
@@ -1359,6 +1401,10 @@ extension AppLanguage {
             return hasName
                 ? "\(name), Ihre Serie von \(days) Tagen endet um Mitternacht. Üben Sie jetzt, um sie fortzusetzen."
                 : "Ihre Serie von \(days) Tagen endet um Mitternacht. Üben Sie jetzt, um sie fortzusetzen."
+        case .italian:
+            return hasName
+                ? "\(name), la sua serie di \(days) giorni termina a mezzanotte. Si eserciti ora per continuarla."
+                : "La sua serie di \(days) giorni termina a mezzanotte. Si eserciti ora per continuarla."
         }
     }
 
@@ -1383,6 +1429,7 @@ extension AppLanguage {
         case .russian:    return "Прошло несколько дней. Clarity ждёт вас, когда вы будете готовы."
         case .ukrainian:    return "Минуло кілька днів. Clarity чекає на вас, коли ви будете готові."
         case .german:    return "Es ist ein paar Tage her. Clarity ist da, sobald Sie bereit sind."
+        case .italian:    return "Sono passati alcuni giorni. Clarity è qui quando vuole riprendere."
         }
     }
 }
@@ -1411,6 +1458,7 @@ extension AppLanguage {
         case .russian:    return "Начальная оценка"
         case .ukrainian:    return "Початкове оцінювання"
         case .german:    return "Eingangstest"
+        case .italian:    return "Valutazione iniziale"
         }
     }
 
@@ -1435,6 +1483,7 @@ extension AppLanguage {
         case .russian:    return "Ответьте на 15 коротких вопросов, чтобы мы подобрали подходящий начальный уровень занятий. Это займёт около 10 минут."
         case .ukrainian:    return "Дайте відповідь на 15 коротких запитань, щоб ми визначили для вас відповідний початковий рівень практики. Це займе близько 10 хвилин."
         case .german:    return "Beantworten Sie 15 kurze Fragen, damit wir die passende Startstufe für Ihr Training festlegen können. Das dauert etwa 10 Minuten."
+        case .italian:    return "Risponda a 15 brevi domande per permetterci di impostare il livello di partenza adatto al suo esercizio. Richiede circa 10 minuti."
         }
     }
 
@@ -1459,6 +1508,7 @@ extension AppLanguage {
         case .russian:    return "Вопрос \(current) из \(total)"
         case .ukrainian:    return "Запитання \(current) із \(total)"
         case .german:    return "Frage \(current) von \(total)"
+        case .italian:    return "Domanda \(current) di \(total)"
         }
     }
 
@@ -1483,6 +1533,7 @@ extension AppLanguage {
         case .russian:    return "Далее"
         case .ukrainian:    return "Далі"
         case .german:    return "Weiter"
+        case .italian:    return "Avanti"
         }
     }
 
@@ -1507,6 +1558,7 @@ extension AppLanguage {
         case .russian:    return "Начать оценку"
         case .ukrainian:    return "Почати оцінювання"
         case .german:    return "Test starten"
+        case .italian:    return "Inizia la valutazione"
         }
     }
 
@@ -1531,6 +1583,7 @@ extension AppLanguage {
         case .russian:    return "Пропустить"
         case .ukrainian:    return "Пропустити зараз"
         case .german:    return "Vorerst überspringen"
+        case .italian:    return "Salta per ora"
         }
     }
 
@@ -1555,6 +1608,7 @@ extension AppLanguage {
         case .russian:    return "Оценка завершена."
         case .ukrainian:    return "Оцінювання завершено."
         case .german:    return "Test abgeschlossen."
+        case .italian:    return "Valutazione completata."
         }
     }
 
@@ -1579,6 +1633,7 @@ extension AppLanguage {
         case .russian:    return "Мы настроили занятия с учётом ваших ответов."
         case .ukrainian:    return "Ми налаштували вашу практику відповідно до ваших відповідей."
         case .german:    return "Wir haben Ihr Training anhand Ihrer Antworten eingerichtet."
+        case .italian:    return "Abbiamo impostato il suo esercizio in base alle sue risposte."
         }
     }
 
@@ -1603,6 +1658,7 @@ extension AppLanguage {
         case .russian:    return "Готово"
         case .ukrainian:    return "Готово"
         case .german:    return "Fertig"
+        case .italian:    return "Fine"
         }
     }
 }
@@ -1633,6 +1689,7 @@ extension AppLanguage {
             case .russian:    return "Язык"
             case .ukrainian:    return "Мова"
             case .german:    return "Sprache"
+            case .italian:    return "Lingua"
             }
         case .cognition:
             switch self {
@@ -1655,6 +1712,7 @@ extension AppLanguage {
             case .russian:    return "Когнитивные навыки"
             case .ukrainian:    return "Когнітивні вправи"
             case .german:    return "Kognition"
+            case .italian:    return "Cognizione"
             }
         case .functionalSkills:
             switch self {
@@ -1677,6 +1735,7 @@ extension AppLanguage {
             case .russian:    return "Бытовые навыки"
             case .ukrainian:    return "Функціональні навички"
             case .german:    return "Alltagsfähigkeiten"
+            case .italian:    return "Abilità quotidiane"
             }
         }
     }
@@ -1702,6 +1761,7 @@ extension AppLanguage {
         case .russian:    return "Назад: \(exerciseName)"
         case .ukrainian:    return "Назад до «\(exerciseName)»"
         case .german:    return "Zurück zu „\(exerciseName)“"
+        case .italian:    return "Torna a «\(exerciseName)»"
         }
     }
 
@@ -1726,6 +1786,7 @@ extension AppLanguage {
         case .russian:    return "Вы не занимались \(days) дн."
         case .ukrainian:    return "Ви не займалися вже \(days) дн."
         case .german:    return "Sie haben seit \(days) Tagen nicht geübt"
+        case .italian:    return "Non si esercita da \(days) giorni"
         }
     }
 
@@ -1750,6 +1811,7 @@ extension AppLanguage {
         case .russian:    return "Нужно уделить внимание: \(exerciseName)"
         case .ukrainian:    return "Вправа «\(exerciseName)» потребує уваги"
         case .german:    return "„\(exerciseName)“ braucht Aufmerksamkeit"
+        case .italian:    return "«\(exerciseName)» richiede attenzione"
         }
     }
 
@@ -1774,6 +1836,7 @@ extension AppLanguage {
         case .russian:    return "Точность недавно снизилась"
         case .ukrainian:    return "Нещодавно точність знизилася"
         case .german:    return "Die Genauigkeit ist zuletzt gesunken"
+        case .italian:    return "La precisione è calata di recente"
         }
     }
 
@@ -1798,6 +1861,7 @@ extension AppLanguage {
         case .russian:    return "Попробуйте что-нибудь новое"
         case .ukrainian:    return "Спробуйте щось нове"
         case .german:    return "Probieren Sie etwas Neues"
+        case .italian:    return "Provi qualcosa di nuovo"
         }
     }
 
@@ -1822,6 +1886,7 @@ extension AppLanguage {
         case .russian:    return "На этой неделе вы не занимались в разделе «\(sectionName)»"
         case .ukrainian:    return "Цього тижня ви не торкалися розділу «\(sectionName)»"
         case .german:    return "Sie haben diese Woche „\(sectionName)“ noch nicht geübt"
+        case .italian:    return "Questa settimana non ha ancora svolto «\(sectionName)»"
         }
     }
 
@@ -1846,6 +1911,7 @@ extension AppLanguage {
         case .russian:    return "Готовы к новой задаче?"
         case .ukrainian:    return "Готові до виклику?"
         case .german:    return "Bereit für eine Herausforderung?"
+        case .italian:    return "Vuole una sfida?"
         }
     }
 
@@ -1870,6 +1936,7 @@ extension AppLanguage {
         case .russian:    return "Вы стабильно отлично справляетесь: \(exerciseName)"
         case .ukrainian:    return "Ви стабільно блискуче виконуєте вправу «\(exerciseName)»"
         case .german:    return "„\(exerciseName)“ gelingt Ihnen durchgehend"
+        case .italian:    return "In «\(exerciseName)» ottiene sempre ottimi risultati"
         }
     }
 }
@@ -1897,6 +1964,7 @@ extension AppLanguage {
         case .russian:    return "Настройки терапии"
         case .ukrainian:    return "Налаштування терапії"
         case .german:    return "Therapieeinstellungen"
+        case .italian:    return "Impostazioni della terapia"
         }
     }
     
@@ -1921,6 +1989,7 @@ extension AppLanguage {
         case .russian:    return "Адаптивная сложность"
         case .ukrainian:    return "Адаптивна складність"
         case .german:    return "Adaptiver Schwierigkeitsgrad"
+        case .italian:    return "Difficoltà adattiva"
         }
     }
 
@@ -1945,6 +2014,7 @@ extension AppLanguage {
         case .russian:    return "Автоматически подбирает сложность вопросов по вашим результатам"
         case .ukrainian:    return "Автоматично змінює складність запитань залежно від результатів"
         case .german:    return "Passt den Schwierigkeitsgrad der Fragen automatisch an die Leistung an"
+        case .italian:    return "Regola automaticamente la difficoltà delle domande in base ai risultati"
         }
     }
 
@@ -1969,6 +2039,7 @@ extension AppLanguage {
         case .russian:    return "Сложность с учётом связанных упражнений"
         case .ukrainian:    return "Складність із перехресним врахуванням"
         case .german:    return "Übergreifender Schwierigkeitsgrad"
+        case .italian:    return "Difficoltà incrociata"
         }
     }
 
@@ -1993,6 +2064,7 @@ extension AppLanguage {
         case .russian:    return "Общая настройка: хорошие результаты в связанном, хорошо освоенном типе упражнений могут немного облегчить переход на следующий уровень в малотренированном родственном типе. Не зависит от настроек отдельных упражнений выше."
         case .ukrainian:    return "Системне налаштування: добрі результати в схожому, добре відпрацьованому типі вправ можуть трохи полегшити перехід на вищий рівень у менш відпрацьованому схожому типі. Окремо від індивідуальних налаштувань вправ вище."
         case .german:    return "Systemeinstellung: Gute Ergebnisse in einer verwandten, gut geübten Aufgabenart können den Aufstieg in einer wenig geübten, verwandten Art leicht erleichtern. Unabhängig von den oben genannten Einstellungen je Übung."
+        case .italian:    return "Impostazione di sistema: buoni risultati in un tipo di esercizio affine e ben praticato possono facilitare leggermente il passaggio di livello in un tipo affine poco praticato. Indipendente dalle impostazioni per singolo esercizio indicate sopra."
         }
     }
 
@@ -2017,6 +2089,7 @@ extension AppLanguage {
         case .russian:    return "Сбросить прогресс сложности"
         case .ukrainian:    return "Скинути прогрес складності"
         case .german:    return "Schwierigkeitsfortschritt zurücksetzen"
+        case .italian:    return "Azzera i progressi di difficoltà"
         }
     }
 
@@ -2041,6 +2114,7 @@ extension AppLanguage {
         case .russian:    return "Возвращает все упражнения на лёгкий уровень и очищает историю результатов"
         case .ukrainian:    return "Повертає всі вправи на легкий рівень і очищує історію результатів"
         case .german:    return "Setzt alle Übungen auf „Leicht“ zurück und löscht den Leistungsverlauf"
+        case .italian:    return "Riporta tutti gli esercizi a «Facile» e cancella la cronologia dei risultati"
         }
     }
 
@@ -2065,6 +2139,7 @@ extension AppLanguage {
         case .russian:    return "Сбросить прогресс сложности?"
         case .ukrainian:    return "Скинути прогрес складності?"
         case .german:    return "Schwierigkeitsfortschritt zurücksetzen?"
+        case .italian:    return "Azzerare i progressi di difficoltà?"
         }
     }
 
@@ -2089,6 +2164,7 @@ extension AppLanguage {
         case .russian:    return "Будет очищена история точности и все упражнения вернутся на уровень «Авто/Лёгкий». Это действие нельзя отменить."
         case .ukrainian:    return "Буде очищено історію поточної точності, а всі вправи повернуться на рівень «Авто»/«Легкий». Цю дію неможливо скасувати."
         case .german:    return "Dadurch wird Ihr gleitender Genauigkeitsverlauf gelöscht und alle Übungen werden auf Auto/Leicht zurückgesetzt. Dies kann nicht rückgängig gemacht werden."
+        case .italian:    return "Verrà cancellata la cronologia mobile della precisione e tutti gli esercizi torneranno ad Auto/Facile. L'operazione non può essere annullata."
         }
     }
 
@@ -2113,6 +2189,7 @@ extension AppLanguage {
         case .russian:    return "Авто"
         case .ukrainian:    return "Авто"
         case .german:    return "Auto"
+        case .italian:    return "Auto"
         }
     }
 
@@ -2137,6 +2214,7 @@ extension AppLanguage {
         case .russian:    return "Лёгкий"
         case .ukrainian:    return "Легкий"
         case .german:    return "Leicht"
+        case .italian:    return "Facile"
         }
     }
 
@@ -2161,6 +2239,7 @@ extension AppLanguage {
         case .russian:    return "Средний"
         case .ukrainian:    return "Середній"
         case .german:    return "Mittel"
+        case .italian:    return "Medio"
         }
     }
 
@@ -2185,6 +2264,7 @@ extension AppLanguage {
         case .russian:    return "Сложный"
         case .ukrainian:    return "Складний"
         case .german:    return "Schwer"
+        case .italian:    return "Difficile"
         }
     }
 }

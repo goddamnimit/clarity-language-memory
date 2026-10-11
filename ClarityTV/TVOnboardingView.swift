@@ -278,6 +278,7 @@ extension AppLanguage {
         case .russian:    return "Добро пожаловать в Clarity"
         case .ukrainian:    return "Ласкаво просимо до Clarity"
         case .german:    return "Willkommen bei Clarity"
+        case .italian:    return "Benvenuti in Clarity"
         }
     }
     
@@ -302,6 +303,7 @@ extension AppLanguage {
         case .russian:    return "Выполняйте упражнения для речи и памяти дома."
         case .ukrainian:    return "Виконуйте вправи для мовлення та пам'яті вдома."
         case .german:    return "Üben Sie Sprach- und Gedächtnisübungen zu Hause."
+        case .italian:    return "Eserciti linguaggio e memoria a casa."
         }
     }
     
@@ -326,6 +328,7 @@ extension AppLanguage {
         case .russian:    return "Начать"
         case .ukrainian:    return "Почати"
         case .german:    return "Los geht’s"
+        case .italian:    return "Iniziamo"
         }
     }
     
@@ -350,6 +353,7 @@ extension AppLanguage {
         case .russian:    return "Как это работает"
         case .ukrainian:    return "Як це працює"
         case .german:    return "So funktioniert es"
+        case .italian:    return "Come funziona"
         }
     }
     
@@ -374,6 +378,7 @@ extension AppLanguage {
         case .russian:    return "Выберите упражнение на вкладке «Занятия»"
         case .ukrainian:    return "Оберіть вправу на вкладці «Вправи»"
         case .german:    return "Wählen Sie eine Übung im Reiter „Aktivitäten“"
+        case .italian:    return "Scelga un esercizio dalla scheda Attività"
         }
     }
     
@@ -398,6 +403,7 @@ extension AppLanguage {
         case .russian:    return "Отвечайте на 5 вопросов за занятие"
         case .ukrainian:    return "Відповідайте на 5 запитань за одне заняття"
         case .german:    return "Beantworten Sie 5 Fragen pro Einheit"
+        case .italian:    return "Risponda a 5 domande per sessione"
         }
     }
     
@@ -422,6 +428,7 @@ extension AppLanguage {
         case .russian:    return "Следите за своим прогрессом"
         case .ukrainian:    return "Стежте за своїм прогресом із часом"
         case .german:    return "Verfolgen Sie Ihren Fortschritt im Zeitverlauf"
+        case .italian:    return "Segua i suoi progressi nel tempo"
         }
     }
     
@@ -446,6 +453,7 @@ extension AppLanguage {
         case .russian:    return "Далее"
         case .ukrainian:    return "Далі"
         case .german:    return "Weiter"
+        case .italian:    return "Avanti"
         }
     }
     
@@ -470,6 +478,7 @@ extension AppLanguage {
         case .russian:    return "Выберите язык"
         case .ukrainian:    return "Оберіть свою мову"
         case .german:    return "Wählen Sie Ihre Sprache"
+        case .italian:    return "Scelga la lingua"
         }
     }
     
@@ -494,6 +503,7 @@ extension AppLanguage {
         case .russian:    return "Начать занятия"
         case .ukrainian:    return "Почати практику"
         case .german:    return "Mit dem Üben beginnen"
+        case .italian:    return "Inizia a esercitarti"
         }
     }
 }

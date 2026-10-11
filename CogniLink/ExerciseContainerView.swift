@@ -715,6 +715,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Отличный результат! 🎉"
         case .ukrainian:    return "Ідеальний результат! 🎉"
         case .german:    return "Volle Punktzahl! 🎉"
+        case .italian:    return "Punteggio pieno! 🎉"
         }
     }
 
@@ -739,6 +740,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Занятие завершено!"
         case .ukrainian:    return "Заняття завершено!"
         case .german:    return "Einheit abgeschlossen!"
+        case .italian:    return "Sessione completata!"
         }
     }
 
@@ -763,6 +765,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Результат"
         case .ukrainian:    return "Результат"
         case .german:    return "Punkte"
+        case .italian:    return "Punteggio"
         }
     }
 
@@ -787,6 +790,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Новое занятие"
         case .ukrainian:    return "Нове заняття"
         case .german:    return "Neue Einheit"
+        case .italian:    return "Nuova sessione"
         }
     }
 
@@ -811,6 +815,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "К упражнениям"
         case .ukrainian:    return "Назад до вправ"
         case .german:    return "Zurück zu den Übungen"
+        case .italian:    return "Torna agli esercizi"
         }
     }
 
@@ -835,6 +840,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Вопрос"
         case .ukrainian:    return "Запитання"
         case .german:    return "Frage"
+        case .italian:    return "Domanda"
         }
     }
 
@@ -859,6 +865,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "из"
         case .ukrainian:    return "із"
         case .german:    return "von"
+        case .italian:    return "di"
         }
     }
 
@@ -883,6 +890,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Назад"
         case .ukrainian:    return "Попереднє"
         case .german:    return "Zurück"
+        case .italian:    return "Indietro"
         }
     }
 
@@ -907,6 +915,7 @@ struct ExerciseContainerView: View {
         case .russian:    return "Пропустить"
         case .ukrainian:    return "Пропустити"
         case .german:    return "Überspringen"
+        case .italian:    return "Salta"
         }
     }
 }
