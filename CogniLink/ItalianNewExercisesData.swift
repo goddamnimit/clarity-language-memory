@@ -424,7 +424,7 @@ struct ItalianNewExercisesData {
             ExerciseItem(id: UUID(), prompt: "Acquisto a rate\nTotale: 150,00 €\nPagamento in 3 rate uguali\n\nQuanto è ogni rata?", options: ["75,00 €", "50,00 €", "450,00 €", "30,00 €"], correctAnswer: "50,00 €", explanation: "Si divide il totale per le rate: 150,00 : 3 = 50,00 €."),
             ExerciseItem(id: UUID(), prompt: "Telefono cellulare\nCredito residuo: 3,50 €\nRicarica: 10,00 €\n\nQuanto credito ha dopo la ricarica?", options: ["6,50 €", "10,00 €", "13,50 €", "14,50 €"], correctAnswer: "13,50 €", explanation: "La ricarica si aggiunge al credito: 3,50 + 10,00 = 13,50 €."),
             ExerciseItem(id: UUID(), prompt: "Bolletta\nEmessa il: 10 settembre\nPagamento entro 30 giorni dall'emissione\n\nQual è l'ultimo giorno per pagare?", options: ["30 settembre", "10 novembre", "9 ottobre", "10 ottobre"], correctAnswer: "10 ottobre", explanation: "Settembre ha 30 giorni: dal 10 settembre, 30 giorni dopo si arriva al 10 ottobre."),
-            ExerciseItem(id: UUID(), prompt: "Scontrino\nPasta: 1,40 € al pacco (3 confezioni)\nOlio: 6,00 €\n\nQuanto è il totale?", options: ["7,40 €", "10,20 €", "9,60 €", "11,20 €"], correctAnswer: "10,20 €", explanation: "Pasta: 3 x 1,40 = 4,20 €. Con l'olio: 4,20 + 6,00 = 10,20 €.")
+            ExerciseItem(id: UUID(), prompt: "Scontrino\nPasta: 3 pacchi da 1,40 € ciascuno\nOlio: 6,00 €\n\nQuanto è il totale?", options: ["7,40 €", "10,20 €", "9,60 €", "11,20 €"], correctAnswer: "10,20 €", explanation: "Pasta: 3 x 1,40 = 4,20 €. Con l'olio: 4,20 + 6,00 = 10,20 €.")
         ]
     )
 
