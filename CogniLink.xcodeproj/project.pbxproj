@@ -84,11 +84,21 @@
 			);
 			target = C1A211D000000000000000D1 /* ClarityWidget */;
 		};
+		C1A211D000000000000000C3 /* Exceptions for "CogniLink" folder in "ClarityTV" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PrivacyInfo.xcprivacy,
+			);
+			target = 09987EB62FE46B5300EDF7C1 /* ClarityTV */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		096B03FC2FCD05D9004A96A3 /* CogniLink */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C1A211D000000000000000C3 /* Exceptions for "CogniLink" folder in "ClarityTV" target */,
+			);
 			path = CogniLink;
 			sourceTree = "<group>";
 		};
@@ -703,7 +713,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CogniLink/CogniLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -743,7 +753,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CogniLink/CogniLink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -868,7 +878,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClarityTV/ClarityTV.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -903,7 +913,7 @@
 				CODE_SIGN_ENTITLEMENTS = ClarityTV/ClarityTV.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1025,7 +1035,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ClarityWidget/ClarityWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClarityWidget/Info.plist;
@@ -1051,7 +1061,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ClarityWidget/ClarityWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 101;
+				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = 457KDWNT7S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClarityWidget/Info.plist;
