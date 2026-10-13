@@ -24,13 +24,36 @@ final class YesNoLabelDataTests: XCTestCase {
     }
 
     private func openExercise(_ app: XCUIApplication, titled title: String) {
-        app.tabBars.buttons.element(boundBy: 1).tap() // Activities
+        // Activities tab: a tap can be dropped on a slow machine, so retry the tap (only the tap)
+        // until the tab reports Selected.
+        let activitiesTab = app.tabBars.buttons.element(boundBy: 1)
+        for _ in 0..<3 {
+            activitiesTab.tap()
+            let selected = NSPredicate(format: "isSelected == true")
+            if XCTWaiter().wait(for: [expectation(for: selected, evaluatedWith: activitiesTab)], timeout: 5) == .completed { break }
+        }
+        XCTAssertTrue(activitiesTab.isSelected, "Activities tab never reported Selected")
         let row = app.descendants(matching: .any).matching(NSPredicate(format: "label CONTAINS %@", title)).firstMatch
-        // The list is lazy: scroll down in small steps, then back up, until the row is on screen.
-        for _ in 0..<40 where !(row.exists && row.isHittable) { app.swipeUp(velocity: .slow); Thread.sleep(forTimeInterval: 0.2) }
-        for _ in 0..<40 where !(row.exists && row.isHittable) { app.swipeDown(velocity: .slow); Thread.sleep(forTimeInterval: 0.2) }
+        // The list is lazy and load-sensitive: give the row time to exist, then sweep down and
+        // back up against a deadline (not a fixed swipe count) until it is on screen.
+        _ = row.waitForExistence(timeout: 10)
+        let deadline = Date().addingTimeInterval(120)
+        var swipeDown = false
+        var swipesInDirection = 0
+        while !(row.exists && row.isHittable) && Date() < deadline {
+            if swipeDown { app.swipeDown(velocity: .slow) } else { app.swipeUp(velocity: .slow) }
+            _ = row.waitForExistence(timeout: 0.5)
+            swipesInDirection += 1
+            if swipesInDirection >= 40 { swipeDown.toggle(); swipesInDirection = 0 }
+        }
         XCTAssertTrue(row.exists && row.isHittable, "\(title) exercise row not found")
         row.tap()
+    }
+
+    /// Waits for the progress header ("Question N of 5" and its localized equivalents) of question `n`.
+    private func waitForQuestionHeader(_ app: XCUIApplication, _ n: Int) -> Bool {
+        let header = app.staticTexts.matching(NSPredicate(format: "label MATCHES %@", "^\\D*\\b\(n)\\b\\D+\\d+$")).firstMatch
+        return header.waitForExistence(timeout: 10)
     }
 
     /// Taps the "yes" button on up to 5 questions. Whenever the item's true answer is Yes
@@ -47,10 +70,18 @@ final class YesNoLabelDataTests: XCTestCase {
 
         var yesItemsSeen = 0
         for question in 1...5 {
+            XCTAssertTrue(waitForQuestionHeader(app, question), "question \(question): progress header not shown")
             let yes = app.buttons[yesLabel]
             XCTAssertTrue(yes.waitForExistence(timeout: 5), "question \(question): '\(yesLabel)' button not found")
             yes.tap()
-            Thread.sleep(forTimeInterval: 0.4)
+            // Wait for the answer feedback ("... correct answer", "..., selected, correct" or
+            // "..., incorrect"). If the UI is still unanswered, the tap was dropped: tap once more.
+            // Only the tap is retried, never the assertions below.
+            let feedback = app.buttons.matching(NSPredicate(format: "label CONTAINS %@", "correct")).firstMatch
+            if !feedback.waitForExistence(timeout: 5), yes.exists {
+                yes.tap()
+                _ = feedback.waitForExistence(timeout: 5)
+            }
             let noIsCorrectAnswer = app.buttons["\(noLabel), correct answer"].exists
             if !noIsCorrectAnswer {
                 yesItemsSeen += 1
@@ -61,7 +92,6 @@ final class YesNoLabelDataTests: XCTestCase {
             let next = app.buttons["NextQuestionButton"]
             let skip = app.buttons["Skip question"]
             if next.exists { next.tap() } else if skip.exists { skip.tap() }
-            Thread.sleep(forTimeInterval: 0.6)
         }
         XCTAssertGreaterThan(yesItemsSeen, 0, "no item with the answer Yes appeared in 5 questions; rerun")
     }
