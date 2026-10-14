@@ -720,8 +720,8 @@
 				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text so you can answer exercises out loud instead of typing.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them. Your speech is processed on your device.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text on your device so you can answer exercises out loud instead of typing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -760,8 +760,8 @@
 				INFOPLIST_FILE = "CogniLink-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Clarity;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text so you can answer exercises out loud instead of typing.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Clarity uses your microphone so you can speak your answers instead of typing them. Your speech is processed on your device.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Clarity turns your speech into text on your device so you can answer exercises out loud instead of typing.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

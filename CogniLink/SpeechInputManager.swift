@@ -34,12 +34,15 @@ final class SpeechInputManager: ObservableObject {
         localeIdentifier.replacingOccurrences(of: "_", with: "-")
     }
 
-    /// Returns true if on-device speech recognition is available for the
-    /// given app locale identifier (underscore or hyphenated, either works).
-    static func isRecognitionAvailable(forLocaleIdentifier localeIdentifier: String) -> Bool {
+    /// Returns true only if this device can transcribe the given app locale
+    /// entirely on-device (underscore or hyphenated identifier, either works).
+    /// A recognizer that exists and `isAvailable` may still be server-backed,
+    /// so `supportsOnDeviceRecognition` is required. Voice input is never
+    /// offered, and no request is ever made, for a locale that fails this check.
+    static func isOnDeviceRecognitionAvailable(forLocaleIdentifier localeIdentifier: String) -> Bool {
         let locale = Locale(identifier: bcp47Identifier(from: localeIdentifier))
         guard let recognizer = SFSpeechRecognizer(locale: locale) else { return false }
-        return recognizer.isAvailable
+        return recognizer.isAvailable && recognizer.supportsOnDeviceRecognition
     }
 
     /// Requests both microphone and speech-recognition permission. Calls
@@ -62,8 +65,9 @@ final class SpeechInputManager: ObservableObject {
         stop() // Ensure any previous session is fully torn down first.
 
         let locale = Locale(identifier: Self.bcp47Identifier(from: localeIdentifier))
-        guard let recognizer = SFSpeechRecognizer(locale: locale), recognizer.isAvailable else {
-            print("SpeechInputManager: no available SFSpeechRecognizer for locale \(localeIdentifier)")
+        guard let recognizer = SFSpeechRecognizer(locale: locale),
+              recognizer.isAvailable, recognizer.supportsOnDeviceRecognition else {
+            print("SpeechInputManager: no on-device recognition for locale \(localeIdentifier)")
             return
         }
         self.recognizer = recognizer
@@ -79,6 +83,7 @@ final class SpeechInputManager: ObservableObject {
 
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
+        request.requiresOnDeviceRecognition = true // never fall back to server recognition
         recognitionRequest = request
 
         let inputNode = audioEngine.inputNode

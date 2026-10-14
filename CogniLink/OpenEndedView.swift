@@ -221,7 +221,7 @@ struct OpenEndedView: View {
 
     #if os(iOS)
     private var isSpeechAvailableForCurrentLanguage: Bool {
-        SpeechInputManager.isRecognitionAvailable(
+        SpeechInputManager.isOnDeviceRecognitionAvailable(
             forLocaleIdentifier: languageManager.currentLanguage.localeIdentifier)
     }
 
