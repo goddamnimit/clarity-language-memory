@@ -1,4 +1,4 @@
-// Scene 4 (0:26-0:36). Sixteen language chips circle the phone in a tilted halo.
+// Scene 4 (0:26-0:36). Eighteen language chips circle the phone in a tilted halo.
 // The halo settles with Farsi and Arabic at the top, the phone turns once, and
 // the same kind of question comes back laid out right to left, using one item
 // copied from the app's own Farsi catalog.
@@ -24,6 +24,8 @@ export const LANGUAGES = [
   '日本語',
   'Français',
   'አማርኛ',
+  'Deutsch',
+  'Italiano',
 ];
 export const RIGHT_TO_LEFT = [5, 6];
 

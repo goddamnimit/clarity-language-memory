@@ -59,9 +59,10 @@ async function stills() {
 const POSTS = [
   { id: "1-welcome", label: "Clarity: Language & Memory", head: "Words, one <em>gentle</em> step<br>at a time.", sub: "Language and memory practice, at your own pace.", still: "phone", stillHeight: 640 },
   { id: "2-private", label: "Our promise", head: "Free. No ads.<br><em>Never sells your data.</em>", sub: "No accounts. No tracking. What you practice stays on your device.", points: ["Free on the App Store", "Works fully offline", "Nothing to unlock"] },
-  { id: "3-languages", label: "16 languages", head: "<em>16 languages,</em> one app.", sub: "Including right-to-left layouts for Farsi and Arabic.", still: "languages", stillHeight: 620 },
+  { id: "3-languages", label: "18 languages", head: "<em>18 languages,</em> one app.", sub: "And always adding more. Right-to-left layouts for Farsi and Arabic.", still: "languages", stillHeight: 620 },
   { id: "4-adapts", label: "Adapts quietly", head: "Difficulty adapts <em>quietly</em><br>in the background.", sub: "No settings to fuss with. A short Baseline Assessment sets a starting level.", still: "dial", stillHeight: 560 },
   { id: "5-caregivers", label: "For caregivers", head: "Built for <em>caregivers</em> too.", sub: "PIN-protected Caregiver Mode, plain-language insights, a PDF progress report and gentle reminders.", still: "caregivers", stillHeight: 470 },
+  { id: "7-reviewers", label: "Help wanted", head: "Speak one of our<br><em>18 languages?</em>", sub: "We're always adding more, and always looking for native speakers to help review them.", points: ["Read through the questions", "Flag anything that sounds off", "Message us on Instagram"] },
   { id: "6-together", label: "Apple TV", head: "<em>Together</em> on Apple TV.", sub: "Two Player Mode: take turns with one remote.", still: "tv", stillHeight: 560 },
 ];
 
@@ -120,7 +121,7 @@ const END_SECONDS = 3;
 // Type reels: every element with data-at fades up at that second.
 const REELS = [
   { id: "1-session", from: 6.6, to: 17.9, centre: 0.7167, label: "The app", head: "Five questions <em>at a time.</em>", sub: "Tap an answer, or say it aloud." },
-  { id: "2-languages", from: 27.0, to: 35.9, centre: 0.5, label: "16 languages", head: "<em>16 languages,</em> one app.", sub: "Farsi and Arabic read right to left. So does Clarity." },
+  { id: "2-languages", from: 27.0, to: 35.9, centre: 0.5, label: "18 languages", head: "<em>18 languages,</em> one app.", sub: "And always adding more. Farsi and Arabic read right to left." },
   { id: "3-adapts", from: 18.3, to: 25.8, centre: 0.735, music: 1, label: "Adapts quietly", head: "Difficulty adapts <em>quietly.</em>", sub: "A short Baseline Assessment sets a starting level." },
   { id: "4-caregivers", from: 37.6, to: 45.9, centre: 0.5, span: 0.78, music: 2, label: "For caregivers", head: "Built for <em>caregivers</em> too.", foot: "PIN-protected Caregiver Mode.<br>Plain-language insights and a PDF progress report.<br>Gentle reminders and a Home Screen widget." },
   { id: "5-together", from: 47.4, to: 52.8, centre: 0.5, span: 0.82, music: 3, label: "Apple TV", head: "<em>Together</em> on Apple TV.", foot: "Two Player Mode:<br>take turns with one remote." },
@@ -135,7 +136,7 @@ const REELS = [
     id: "7-inside", seconds: 9.6, music: 1,
     html: `<div class="label" data-at="0.2">What's inside</div>
 <h1 style="font-size:132px;margin-top:50px" data-at="0.6">All of it, <em>free.</em></h1>
-<ul class="pills" style="margin-top:80px">${["16 languages", "18,000+ practice questions", "Works fully offline", "Caregiver Mode with a PIN", "Two Player Mode on Apple TV", "Nothing to unlock"].map((p, i) => `<li data-at="${(1.6 + i * 1.0).toFixed(1)}">${p}</li>`).join("")}</ul>`,
+<ul class="pills" style="margin-top:80px">${["18 languages", "18,000+ practice questions", "Works fully offline", "Caregiver Mode with a PIN", "Two Player Mode on Apple TV", "Nothing to unlock"].map((p, i) => `<li data-at="${(1.6 + i * 1.0).toFixed(1)}">${p}</li>`).join("")}</ul>`,
   },
   {
     id: "8-gentle", seconds: 7.6, music: 3,

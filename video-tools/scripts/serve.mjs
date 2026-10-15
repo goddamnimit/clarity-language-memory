@@ -27,8 +27,11 @@ export function startServer(listenPort = port) {
   const server = createServer((request, response) => {
     const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
     // /__work/ exposes tooling scratch files (stills for social images) to local pages only.
-    const base = pathname.startsWith("/__work/") ? resolve(root, "../video-tools/out/social") : root;
-    let file = normalize(join(base, pathname.replace(/^\/__work/, "")));
+    // /__ads/ serves the Instagram ad spots, which import the film's own modules.
+    const local = { "/__work/": "../video-tools/out/social", "/__ads/": "../video-tools/ads" };
+    const prefix = Object.keys(local).find((key) => pathname.startsWith(key));
+    const base = prefix ? resolve(root, local[prefix]) : root;
+    let file = normalize(join(base, prefix ? pathname.slice(prefix.length - 1) : pathname));
     if (!file.startsWith(base)) {
       response.writeHead(403).end();
       return;

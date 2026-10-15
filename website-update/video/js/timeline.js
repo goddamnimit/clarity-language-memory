@@ -24,7 +24,7 @@ export const COPY = [
   { at: [22.1, 25.8], kind: 'caption', layout: 'left', text: 'Then difficulty adapts *quietly* in the background.' },
 
   { at: [27.1, 35.9], kind: 'eyebrow', layout: 'bottom', text: 'Languages' },
-  { at: [27.2, 29.8], kind: 'caption', layout: 'bottom', text: '*16 languages,* one app.' },
+  { at: [27.2, 29.8], kind: 'caption', layout: 'bottom', text: '*18 languages,* one app.' },
   { at: [30.0, 32.6], kind: 'caption', layout: 'bottom', text: 'More than *18,000* practice questions.' },
   { at: [32.8, 35.9], kind: 'caption', layout: 'bottom', text: 'Farsi and Arabic read *right to left.* So does Clarity.' },
 
