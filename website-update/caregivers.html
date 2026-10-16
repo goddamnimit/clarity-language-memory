@@ -942,7 +942,7 @@
 
     /* ── CAREGIVERS PAGE ─────────────────────────────────── */
     .cg-hero {
-      padding: 160px 40px 90px;
+      padding: 160px 40px 36px;
       text-align: center;
       background: linear-gradient(180deg, var(--sage-pale) 0%, var(--cream) 100%);
     }
@@ -953,7 +953,7 @@
       margin: 14px 0 22px;
     }
     .cg-hero h1 em { color: var(--sage); font-style: italic; }
-    .cg-hero p.lead { font-size: 1.12rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 34px; }
+    .cg-hero p.lead { font-size: 1.12rem; color: var(--ink-light); line-height: 1.8; margin-bottom: 0; }
     .cg-subnav {
       display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
       margin-top: 36px;
@@ -988,8 +988,10 @@
     .cg-foryou .feature-card p { color: rgba(247,243,238,0.74); }
     .cg-foryou .cg-note { background: rgba(255,255,255,0.08); color: rgba(247,243,238,0.8); }
     .cg-foryou a { color: var(--sage-light); }
+    #together.section { padding-top: 56px; }
     @media (max-width: 768px) {
-      .cg-hero { padding: 120px 24px 60px; }
+      #together.section { padding-top: 40px; }
+      .cg-hero { padding: 120px 24px 28px; }
       .cg-foryou { padding: 72px 24px; }
     }
   </style>
@@ -1013,10 +1015,6 @@
     <div class="section-label">Clarity for caregivers</div>
     <h1 class="display">You do so much. <em>Clarity is here to help,</em> and to look after you too.</h1>
     <p class="lead">Whether you are a spouse, a son or daughter, a friend, or a professional, caring for someone with aphasia or early dementia is real, daily work. This page walks through everything in Clarity that is built for you.</p>
-    <div class="hero-actions">
-      <a href="https://apps.apple.com/us/app/clarity-language-memory/id6775391538" class="btn-primary">Download on the App Store</a>
-      <a href="#for-you" class="btn-secondary">A space just for you</a>
-    </div>
     <div class="cg-subnav" role="navigation" aria-label="On this page">
       <a href="#together">Practice together</a>
       <a href="#caregiver-mode">Caregiver Mode</a>
